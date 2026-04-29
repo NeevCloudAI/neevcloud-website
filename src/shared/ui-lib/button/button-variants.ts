@@ -1,0 +1,77 @@
+import { cva } from "class-variance-authority";
+
+export const buttonVariants = cva(
+  "rounded-md cursor-pointer w-fit whitespace-nowrap",
+  {
+    variants: {
+      variant: {
+        default: `bg-primary`,
+        secondary: `bg-secondary`,
+        tertiary: `bg-tertiary`,
+        outline: `border border-black`,
+        "outline-primary": `bg-white`,
+      },
+      size: {
+        default: "text-sm",
+        sm: "text-sm",
+        md: "text-md",
+        xs: "text-xs",
+        lg: "text-lg",
+        xl: "text-xl",
+        xxl: "text-2xl",
+        full: "w-full text-sm",
+        none: "text-sm",
+      },
+      weight: {
+        default: "font-normal",
+        medium: "font-medium",
+        normal: "font-normal",
+        semibold: "font-semibold",
+        bold: "font-bold",
+      },
+      spacing: {
+        none: "p-0",
+        default: "px-3 py-2",
+        xs: "px-2 py-1",
+        sm: "px-3 py-1.5",
+        md: "px-4 py-2",
+        lg: "px-8 py-2",
+      },
+      textColor: {
+        default: "text-white",
+        primary: "text-primary",
+        secondary: "text-secondary",
+        destructive: "text-destructive",
+        outline: "text-gray-10",
+        blue: "text-blue-40",
+        black: "text-black",
+        ghost: "text-black-80",
+      },
+      backgroundColor: {
+        default: "bg-white",
+        primary: "bg-primary",
+        secondary: "bg-secondary",
+        destructive: "bg-destructive",
+        outline: "bg-white",
+        blue: "bg-blue-40",
+        ghost: "bg-black-80",
+        transparent: "bg-transparent",
+      },
+      borderRadius: {
+        default: "rounded-md",
+        sm: "rounded-sm",
+        xs: "rounded-xs",
+        lg: "rounded-lg",
+        xl: "rounded-xl",
+        full: "rounded-full",
+        none: "rounded-none",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+      spacing: "md",
+      textColor: "default",
+    },
+  }
+);

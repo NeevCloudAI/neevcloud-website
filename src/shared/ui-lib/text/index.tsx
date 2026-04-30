@@ -6,7 +6,13 @@ import { textVariants } from "./text-variants";
 interface TextProps
   extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof textVariants> {
   as?: keyof HTMLElementTagNameMap;
-  textColor?: "default" | "primary" | "secondary" | "tertiary";
+  textColor?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "white"
+    | "black";
 }
 
 function Text({

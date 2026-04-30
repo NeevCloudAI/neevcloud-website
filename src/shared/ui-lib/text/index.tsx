@@ -28,7 +28,7 @@ function Text({
     <Component
       data-slot="text"
       className={cn(
-        textVariants({ variant, align, weight, className, textColor })
+        textVariants({ variant, align, weight, className, textColor }),
       )}
       {...props}
     />

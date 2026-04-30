@@ -73,5 +73,5 @@ export const buttonVariants = cva(
       spacing: "md",
       textColor: "default",
     },
-  }
+  },
 );

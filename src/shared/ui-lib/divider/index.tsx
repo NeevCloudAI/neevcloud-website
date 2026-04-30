@@ -14,7 +14,7 @@ const Divider = ({
         orientation === "vertical"
           ? "h-full min-h-4 w-px"
           : "w-full min-w-4 h-px",
-        className
+        className,
       )}
     />
   );

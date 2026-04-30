@@ -25,7 +25,7 @@ export default function Container({
       className={cn(
         "mx-auto w-full px-4 sm:px-6 md:px-8",
         MAX_WIDTH_CLASS[maxWidth],
-        className
+        className,
       )}
     >
       {children}

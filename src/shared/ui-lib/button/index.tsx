@@ -29,7 +29,7 @@ function Button({
           spacing,
           className,
           backgroundColor,
-        })
+        }),
       )}
       {...props}
     />

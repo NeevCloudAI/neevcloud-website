@@ -64,7 +64,7 @@ const HeaderComponent = () => {
 
   const toggleMenuDropdown = (label: string) => {
     setOpenMenuDropdown((currentValue) =>
-      currentValue === label ? null : label
+      currentValue === label ? null : label,
     );
   };
 

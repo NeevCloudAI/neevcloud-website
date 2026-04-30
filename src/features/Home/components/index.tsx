@@ -3,7 +3,7 @@ import AnnouncementSection from "./AnnouncementSection";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "./HeroSection";
 import NeevcloudSection from "./NeevcloudSection";
-import ComparisionSection from "./ComparisionSection";
+import ComparisonSection from "./ComparisonSection";
 
 const HomeComponent = () => {
   return (
@@ -17,7 +17,8 @@ const HomeComponent = () => {
       {/* <StackSection /> */}
       <NeevcloudSection />
       {/* <ModuleSection /> */}
-      <ComparisionSection />
+      <ComparisonSection />
+      {/* <NounSection /> */}
     </div>
   );
 };

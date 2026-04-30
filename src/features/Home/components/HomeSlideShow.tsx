@@ -14,7 +14,6 @@ const HomeSlideShow = () => {
       { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
       { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
       { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
-      { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
     ],
     []
   );

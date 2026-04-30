@@ -1,5 +1,5 @@
 {
-//   // --- Formatting ---
+  //   // --- Formatting ---
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
@@ -25,17 +25,17 @@
     "**/.turbo": true
   },
 
-//   // --- ESLint Auto-fix ---
-//   "editor.codeActionsOnSave": {
-//     "source.fixAll": true,
-//     "source.fixAll.eslint": true
-//   },
+  //   // --- ESLint Auto-fix ---
+  //   "editor.codeActionsOnSave": {
+  //     "source.fixAll": true,
+  //     "source.fixAll.eslint": true
+  //   },
 
-//   // --- File Imports ---
+  //   // --- File Imports ---
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
 
-//   // --- Language-specific formatters ---
+  //   // --- Language-specific formatters ---
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -48,7 +48,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-    "[css]": {
+  "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
@@ -58,15 +58,16 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-//   // --- File Exclusions ---
+  //   // --- File Exclusions ---
   "files.exclude": {
     "**/.next": true,
     "**/node_modules": true,
     "**/dist": true
   },
 
-//   // --- Misc ---
+  //   // --- Misc ---
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": ["Neevcloud"]
 }

@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-space-mono: var(--font-space-mono);
+
   --color-primary: var(--primary);
   --color-primary-10: var(--primary-10);
+  --color-primary-100: var(--primary-100);
+
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
   --color-gray-10: var(--gray-10);
   --color-gray-90: var(--gray-90);
   --color-gray-100: var(--gray-100);
   --color-black-10: var(--black-10);
+  --color-black-50: var(--black-50);
+  --color-black-80: var(--black-80);
+  --color-black-90: var(--black-90);
   --color-white: var(--white);
+  --color-white-50: var(--white-50);
   --color-white-10: var(--white-10);
   --color-gray-50: var(--gray-50);
 
@@ -21,21 +29,26 @@
   --breakpoint-header-product: 1020px;
   --breakpoint-header-inference: 950px;
   --breakpoint-header-buttons: 850px;
+  --breakpoint-header-1xl: 1531px;
+  --breakpoint-1xl: 1360px;
 }
 
 :root {
-  --font-poppins: var(--font-poppins);
-  /* Core brand colours */
   --primary: #00a78b;
   --primary-10: #ebf5f5;
+  --primary-100: #58d6a6;
 
   --secondary: #005150;
   --tertiary: #022c3c;
 
   --white-10: #ffffff1f;
+  --white-50: #ffffff9e;
   --white: #ffffff;
 
   --black-10: #0000001f;
+  --black-50: #00000052;
+  --black-80: #0f0f0f;
+  --black-90: #0000009e;
 
   --gray-10: #eaf4f4;
   --gray-50: #d9d9d9;
@@ -51,9 +64,18 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins);
+  /* font-family: var(--font-space-mono); */
 }
 
 @layer base {
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: inherit;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+  }
   html {
     scroll-behavior: smooth;
   }
@@ -63,7 +85,7 @@ body {
     @apply w-full h-dvh overflow-x-hidden overflow-y-auto;
   }
   h1 {
-    @apply text-xl sm:text-2xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold;
   }
   h2 {
     @apply text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold;

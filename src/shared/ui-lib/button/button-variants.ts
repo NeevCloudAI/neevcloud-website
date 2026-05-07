@@ -9,7 +9,10 @@ export const buttonVariants = cva(
         secondary: `bg-secondary`,
         tertiary: `bg-tertiary`,
         outline: `border border-black`,
+        black: `bg-black text-white`,
         "outline-primary": `bg-white`,
+        "white-outline-right": `border-r border-white-10`,
+        ghost: `bg-transparent`,
       },
       size: {
         default: "text-sm",
@@ -46,6 +49,10 @@ export const buttonVariants = cva(
         blue: "text-blue-40",
         black: "text-black",
         ghost: "text-black-80",
+        gray: "text-gray-90",
+      },
+      fontFamily: {
+        spaceMono: "font-space-mono",
       },
       backgroundColor: {
         default: "bg-white",
@@ -64,6 +71,8 @@ export const buttonVariants = cva(
         lg: "rounded-lg",
         xl: "rounded-xl",
         full: "rounded-full",
+        left: "rounded-l-md rounded-r-none",
+        right: "rounded-r-md rounded-l-none",
         none: "rounded-none",
       },
     },
@@ -73,5 +82,5 @@ export const buttonVariants = cva(
       spacing: "md",
       textColor: "default",
     },
-  },
+  }
 );

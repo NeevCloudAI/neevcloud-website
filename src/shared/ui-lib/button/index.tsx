@@ -13,6 +13,7 @@ function Button({
   weight,
   spacing,
   backgroundColor,
+  fontFamily,
   ...props
 }: React.ComponentProps<"button"> & VariantProps<typeof buttonVariants>) {
   return (
@@ -29,7 +30,8 @@ function Button({
           spacing,
           className,
           backgroundColor,
-        }),
+          fontFamily,
+        })
       )}
       {...props}
     />

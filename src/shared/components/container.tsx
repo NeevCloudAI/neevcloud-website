@@ -3,7 +3,8 @@ import { cn } from "@/lib/utils";
 export type ContainerProps = {
   children: React.ReactNode;
   className?: string;
-  maxWidth?: "sm" | "md" | "lg" | "xl" | "xxl" | "full";
+  maxWidth?: "sm" | "md" | "lg" | "xl" | "1xl" | "xxl" | "full";
+  alignRight?: boolean;
 };
 
 const MAX_WIDTH_CLASS = {
@@ -11,6 +12,7 @@ const MAX_WIDTH_CLASS = {
   md: "max-w-screen-md",
   lg: "max-w-screen-lg",
   xl: "max-w-screen-xl",
+  "1xl": "max-w-screen-1xl",
   xxl: "max-w-screen-2xl",
   full: "max-w-full",
 } as const;
@@ -18,14 +20,17 @@ const MAX_WIDTH_CLASS = {
 export default function Container({
   children,
   className,
-  maxWidth = "xxl",
+  maxWidth = "1xl",
+  alignRight = false,
 }: ContainerProps) {
   return (
     <div
       className={cn(
-        "mx-auto w-full px-4 sm:px-6 md:px-8",
+        alignRight
+          ? "mx-auto w-full px-4 sm:px-6 md:px-8"
+          : "mx-auto w-full px-4 sm:px-6 md:px-8",
         MAX_WIDTH_CLASS[maxWidth],
-        className,
+        className
       )}
     >
       {children}

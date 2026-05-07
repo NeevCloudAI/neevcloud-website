@@ -7,6 +7,7 @@ import Container from "./container";
 import { Menu } from "lucide-react";
 
 type NavItem = {
+  id: string;
   label: string;
   items: string[];
   desktopVisibilityClass: string;
@@ -15,42 +16,49 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   {
+    id: "inference-hub",
     label: "Inference Hub",
     items: ["Serverless Inference", "Dedicated Endpoints", "Model Library"],
     desktopVisibilityClass: "hidden header-inference:block",
     menuVisibilityClass: "header-inference:hidden",
   },
   {
+    id: "product",
     label: "Product",
     items: ["GPU Cloud", "CPU Cloud", "Kubernetes", "Storage"],
     desktopVisibilityClass: "hidden header-product:block",
     menuVisibilityClass: "header-product:hidden",
   },
   {
+    id: "solutions",
     label: "Solutions",
     items: ["Startups", "Enterprises", "Research Labs"],
     desktopVisibilityClass: "hidden header-solutions:block",
     menuVisibilityClass: "header-solutions:hidden",
   },
   {
+    id: "pricing",
     label: "Pricing",
     items: ["GPU Pricing", "CPU Pricing", "Enterprise Plans"],
     desktopVisibilityClass: "hidden header-pricing:block",
     menuVisibilityClass: "header-pricing:hidden",
   },
   {
+    id: "developers",
     label: "Developers",
     items: ["Docs", "API Reference", "SDKs", "Status"],
     desktopVisibilityClass: "hidden header-developers:block",
     menuVisibilityClass: "header-developers:hidden",
   },
   {
+    id: "resources",
     label: "Resources",
     items: ["Blog", "Case Studies", "Guides"],
     desktopVisibilityClass: "hidden header-resource:block",
     menuVisibilityClass: "header-resource:hidden",
   },
   {
+    id: "company",
     label: "Company",
     items: ["About Us", "Careers", "Contact"],
     desktopVisibilityClass: "hidden header-company:block",
@@ -64,7 +72,7 @@ const HeaderComponent = () => {
 
   const toggleMenuDropdown = (label: string) => {
     setOpenMenuDropdown((currentValue) =>
-      currentValue === label ? null : label,
+      currentValue === label ? null : label
     );
   };
 
@@ -73,13 +81,16 @@ const HeaderComponent = () => {
       <div className="flex w-full items-center justify-between md:w-auto md:justify-start">
         <div className="flex items-center gap-3 md:gap-4">
           <Image
-            src={"/icons/logo.svg"}
+            src={"/icons/logo-black.svg"}
             alt="logo"
             width={120}
             height={120}
             className="h-8 w-auto md:h-10"
           />
-          <Text weight="semibold" className="text-sm md:ml-8 md:text-base">
+          <Text
+            weight="semibold"
+            className="text-sm md:text-base whitespace-nowrap"
+          >
             AI SuperCloud
           </Text>
           <Divider className="min-h-8 hidden header-buttons:block" />
@@ -89,22 +100,27 @@ const HeaderComponent = () => {
                 key={navItem.label}
                 className={`group relative ${navItem.desktopVisibilityClass}`}
               >
-                <button
-                  type="button"
-                  className="cursor-pointer text-sm text-black"
-                >
+                <Button variant="ghost" textColor="black" spacing="none">
                   {navItem.label}
-                </button>
-                <div className="invisible absolute left-0 top-full z-20 mt-2 w-52 rounded-md border border-gray-200 bg-white p-2 opacity-0 shadow-md transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                  {navItem.items.map((dropdownItem) => (
-                    <button
+                </Button>
+                <div className="invisible absolute left-0 top-full z-20 mt-2 rounded-md border border-gray-200 bg-white p-2 opacity-0 shadow-md duration-200 group-hover:visible group-hover:opacity-100">
+                  {navItem.id === "product" ? (
+                    <div className="flex flex-col gap-2 p-8">
+                      <p>mAk</p>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                  {/* {navItem.items.map((dropdownItem) => (
+                    <Button
+                      variant="ghost"
+                      textColor="black"
+                      spacing="sm"
                       key={dropdownItem}
-                      type="button"
-                      className="block w-full rounded px-2 py-2 text-left text-sm text-black transition-colors hover:bg-gray-100"
                     >
                       {dropdownItem}
-                    </button>
-                  ))}
+                    </Button>
+                  ))} */}
                 </div>
               </div>
             ))}
@@ -136,10 +152,10 @@ const HeaderComponent = () => {
       {isMobileMenuOpen && (
         <nav
           id="responsive-navigation-menu"
-          className="absolute left-0 right-0 top-full z-20 mt-1 flex max-h-[70vh] flex-col gap-2 overflow-y-auto rounded-md border border-gray-10  bg-white p-2 shadow-md header-company:hidden"
+          className="absolute left-0 right-0 top-full z-20 mt-1 flex max-h-[70vh] flex-col gap-2 overflow-y-auto rounded-md border border-gray-10 bg-white p-2 shadow-md header-company:hidden"
           aria-label="Responsive navigation"
         >
-          <div className="w-full items-center gap-2  flex header-buttons:hidden ">
+          <div className="w-full items-center gap-2 flex header-buttons:hidden ">
             <Button variant="secondary" className="flex-1 whitespace-nowrap">
               Login to CPU Cloud
             </Button>

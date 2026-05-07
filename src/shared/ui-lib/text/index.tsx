@@ -6,13 +6,16 @@ import { textVariants } from "./text-variants";
 interface TextProps
   extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof textVariants> {
   as?: keyof HTMLElementTagNameMap;
+  lineHeight?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
   textColor?:
     | "default"
     | "primary"
     | "secondary"
     | "tertiary"
     | "white"
-    | "black";
+    | "black"
+    | "white-50"
+    | "gray-10";
 }
 
 function Text({
@@ -22,13 +25,21 @@ function Text({
   weight,
   align,
   textColor,
+  lineHeight,
   ...props
 }: TextProps) {
   return (
     <Component
       data-slot="text"
       className={cn(
-        textVariants({ variant, align, weight, className, textColor }),
+        textVariants({
+          variant,
+          align,
+          weight,
+          className,
+          textColor,
+          lineHeight,
+        })
       )}
       {...props}
     />

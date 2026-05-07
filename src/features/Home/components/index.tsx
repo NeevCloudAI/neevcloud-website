@@ -4,6 +4,12 @@ import HeaderComponent from "@/shared/components/header";
 import HeroSection from "./HeroSection";
 import NeevcloudSection from "./NeevcloudSection";
 import ComparisonSection from "./ComparisonSection";
+import NounSection from "./NounSection";
+import FooterComponent from "@/shared/components/footer";
+import ModelBuilderSection from "./ModelBuilderSection";
+import StackSection from "./StackSection";
+import InfrastructureSection from "./InfrastructureSection";
+import ReviewsSection from "./ReviewsSection";
 
 const HomeComponent = () => {
   return (
@@ -14,11 +20,15 @@ const HomeComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection />
       </div>
-      {/* <StackSection /> */}
+      <StackSection />
       <NeevcloudSection />
       {/* <ModuleSection /> */}
+      <ModelBuilderSection />
       <ComparisonSection />
-      {/* <NounSection /> */}
+      <InfrastructureSection />
+      <ReviewsSection />
+      <NounSection />
+      <FooterComponent />
     </div>
   );
 };

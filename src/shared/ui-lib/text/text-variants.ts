@@ -7,6 +7,7 @@ export const textVariants = cva("h-fit", {
       link: "underline decoration cursor-pointer",
     },
     weight: {
+      regular: "font-regular",
       normal: "font-normal",
       medium: "font-medium",
       semibold: "font-semibold",
@@ -25,6 +26,19 @@ export const textVariants = cva("h-fit", {
       tertiary: "text-tertiary",
       white: "text-white",
       black: "text-black",
+      "white-50": "text-white-50",
+      "gray-10": "text-gray-10",
+      "blue-40": "text-blue-40",
+      "gray-60": "text-gray-60",
+      "primary-60": "text-primary-60",
+    },
+    lineHeight: {
+      xs: "leading-5",
+      sm: "leading-6",
+      md: "leading-8",
+      lg: "leading-10",
+      xl: "leading-12",
+      xxl: "leading-14",
     },
   },
   defaultVariants: {

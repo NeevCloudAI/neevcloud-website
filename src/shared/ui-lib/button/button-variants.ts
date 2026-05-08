@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const buttonVariants = cva(
-  "rounded-md cursor-pointer w-fit whitespace-nowrap",
+  "rounded-md cursor-pointer w-fit whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
@@ -9,7 +9,11 @@ export const buttonVariants = cva(
         secondary: `bg-secondary`,
         tertiary: `bg-tertiary`,
         outline: `border border-black`,
+        black: `bg-black text-white`,
         "outline-primary": `bg-white`,
+        white: `bg-white`,
+        "white-outline-right": `border-r border-white-10`,
+        ghost: `bg-transparent`,
       },
       size: {
         default: "text-sm",
@@ -19,7 +23,7 @@ export const buttonVariants = cva(
         lg: "text-lg",
         xl: "text-xl",
         xxl: "text-2xl",
-        full: "w-full text-sm",
+        full: "w-full",
         none: "text-sm",
       },
       weight: {
@@ -46,6 +50,10 @@ export const buttonVariants = cva(
         blue: "text-blue-40",
         black: "text-black",
         ghost: "text-black-80",
+        gray: "text-gray-90",
+      },
+      fontFamily: {
+        spaceMono: "font-space-mono",
       },
       backgroundColor: {
         default: "bg-white",
@@ -55,6 +63,7 @@ export const buttonVariants = cva(
         outline: "bg-white",
         blue: "bg-blue-40",
         ghost: "bg-black-80",
+        "cloud-gray": "bg-gray-10",
         transparent: "bg-transparent",
       },
       borderRadius: {
@@ -64,6 +73,8 @@ export const buttonVariants = cva(
         lg: "rounded-lg",
         xl: "rounded-xl",
         full: "rounded-full",
+        left: "rounded-l-md rounded-r-none",
+        right: "rounded-r-md rounded-l-none",
         none: "rounded-none",
       },
     },
@@ -73,5 +84,5 @@ export const buttonVariants = cva(
       spacing: "md",
       textColor: "default",
     },
-  },
+  }
 );

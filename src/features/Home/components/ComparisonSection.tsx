@@ -28,7 +28,7 @@ const ComparisonCard = ({
       <Text as="h1">{title}</Text>
       <div className="flex flex-col gap-2">
         <Text as="small">{subtitle}</Text>
-        <Text as="h6" weight={"semibold"}>
+        <Text as="h6" weight="semibold">
           {subtitle2}
         </Text>
       </div>
@@ -62,7 +62,7 @@ const ComparisonSection = () => {
           </div>
           <Text
             textColor={comparisonStatus ? "black" : "white"}
-            align={"center"}
+            align="center"
             className="mt-2"
           >
             Get rid of tedious cloud cost management with automation that works
@@ -86,7 +86,7 @@ const ComparisonSection = () => {
             With NeevCloud
           </Button>
         </div>
-        <div className="mt-4 flex flex-col md:flex-row items-center gap-4 w-full">
+        <div className="mt-4 flex flex-col md:flex-row items-center gap-8 md:gap-4 w-full">
           <div
             className={`flex md:flex-2 flex-col ${comparisonStatus ? "bg-primary" : "bg-gray-100"} p-4 md:p-8 rounded-md w-full gap-4`}
           >
@@ -128,7 +128,7 @@ const ComparisonSection = () => {
             </Text>
             <Text
               as="h3"
-              weight={"normal"}
+              weight="normal"
               textColor={comparisonStatus ? "black" : "white"}
             >
               AI-First by design

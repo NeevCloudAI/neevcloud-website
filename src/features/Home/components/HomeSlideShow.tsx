@@ -4,18 +4,22 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/shared/ui-lib";
 
-const AUTOPLAY_INTERVAL = 3000;
+const AUTOPLAY_INTERVAL = 4500;
 
-const HomeSlideShow = () => {
+type HomeSlideShowProps = {
+  onSlideChange?: (index: number) => void;
+};
+
+const HomeSlideShow = ({ onSlideChange }: HomeSlideShowProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = useMemo(
     () => [
       { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
-      { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
-      { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
+      { src: "/images/slide-show2.png", alt: "NeevCloud platform overview" },
+      // { src: "/images/slide-show3.png", alt: "NeevCloud platform overview" },
     ],
-    [],
+    []
   );
 
   useEffect(() => {
@@ -28,12 +32,16 @@ const HomeSlideShow = () => {
     return () => window.clearInterval(interval);
   }, [slides]);
 
+  useEffect(() => {
+    onSlideChange?.(activeIndex);
+  }, [activeIndex, onSlideChange]);
+
   return (
     <div className="absolute bottom-0 left-0 w-full h-full overflow-hidden z-[-1]">
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-700 ${
+          className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
           aria-hidden={index !== activeIndex}

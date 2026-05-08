@@ -29,7 +29,7 @@ function StackPanel({
   return (
     <article
       className={cn(
-        "flex flex-col rounded-lg p-2 text-gray-100",
+        "flex flex-col rounded-lg p-2 text-gray-90",
         isActive ? "opacity-100" : "opacity-50",
         className
       )}
@@ -101,7 +101,9 @@ const StackSection = () => {
   const [activeItemId, setActiveItemId] = useState<string>(initialActiveItemId);
 
   const handleToggleItem = (itemId: string) => {
-    setActiveItemId((currentItemId) => (currentItemId === itemId ? "" : itemId));
+    setActiveItemId((currentItemId) =>
+      currentItemId === itemId ? "" : itemId
+    );
   };
 
   const resolvedActivePanelIndex = (() => {

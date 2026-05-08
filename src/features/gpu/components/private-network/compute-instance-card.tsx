@@ -34,7 +34,7 @@ export function ComputeInstanceCard({
   transferHint,
 }: ComputeInstance) {
   return (
-    <div className="flex-1 space-y-3 rounded-xl bg-gray-100 p-4 md:p-8">
+    <div className="flex-1 space-y-3 rounded-xl bg-gray-90 p-4 md:p-8">
       <div className="flex items-center gap-4">
         <ComputePill label={typeLabel} variant={variant} />
         <Text as="h4" weight="semibold" textColor="white">

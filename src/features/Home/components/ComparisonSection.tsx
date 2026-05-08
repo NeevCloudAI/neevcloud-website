@@ -72,7 +72,7 @@ const ComparisonSection = () => {
         <div className="flex items-center">
           <Button
             variant="outline-primary"
-            className={`rounded-r-none ${comparisonStatus ? "bg-white" : "bg-gray-90 text-white"}`}
+            className={`rounded-r-none ${comparisonStatus ? "bg-white" : "bg-gray-80 text-white"}`}
             textColor="black"
             weight="semibold"
             onClick={() => setComparisonStatus(false)}
@@ -80,7 +80,7 @@ const ComparisonSection = () => {
             Without NeevCloud
           </Button>
           <Button
-            className={`rounded-l-none ${comparisonStatus ? "" : "bg-gray-100 text-white"}`}
+            className={`rounded-l-none ${comparisonStatus ? "" : "bg-gray-90 text-white"}`}
             onClick={() => setComparisonStatus(true)}
           >
             With NeevCloud
@@ -88,7 +88,7 @@ const ComparisonSection = () => {
         </div>
         <div className="mt-4 flex flex-col md:flex-row items-center gap-8 md:gap-4 w-full">
           <div
-            className={`flex md:flex-2 flex-col ${comparisonStatus ? "bg-primary" : "bg-gray-100"} p-4 md:p-8 rounded-md w-full gap-4`}
+            className={`flex md:flex-2 flex-col ${comparisonStatus ? "bg-primary" : "bg-gray-90"} p-4 md:p-8 rounded-md w-full gap-4`}
           >
             <ComparisonCard
               title="73%"
@@ -96,7 +96,7 @@ const ComparisonSection = () => {
               subtitle2="vs. hyperscale on-demand"
               description="Committed capacity plus idle reclamation."
               description2="Your finance team will notice."
-              bgColor={comparisonStatus ? "white" : "gray-90"}
+              bgColor={comparisonStatus ? "white" : "gray-80"}
               comparisonStatus={comparisonStatus}
             />
             <ComparisonCard
@@ -105,7 +105,7 @@ const ComparisonSection = () => {
               subtitle2="Faster iteration on large runs"
               description="Deterministic interconnect eliminates"
               description2="straggler nodes in distributed training."
-              bgColor={comparisonStatus ? "white" : "gray-90"}
+              bgColor={comparisonStatus ? "white" : "gray-80"}
               comparisonStatus={comparisonStatus}
             />
             <ComparisonCard
@@ -114,7 +114,7 @@ const ComparisonSection = () => {
               subtitle2="Guaranteed Reduction"
               description="Removing the limits of geography and"
               description2="latency to redefine how AI is deployed and scaled."
-              bgColor={comparisonStatus ? "white" : "gray-90"}
+              bgColor={comparisonStatus ? "white" : "gray-80"}
               comparisonStatus={comparisonStatus}
             />
           </div>

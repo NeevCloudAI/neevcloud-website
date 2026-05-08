@@ -50,7 +50,7 @@ export const buttonVariants = cva(
         blue: "text-blue-40",
         black: "text-black",
         ghost: "text-black-80",
-        gray: "text-gray-90",
+        gray: "text-gray-80",
       },
       fontFamily: {
         spaceMono: "font-space-mono",

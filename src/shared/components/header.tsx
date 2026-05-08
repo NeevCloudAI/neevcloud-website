@@ -185,7 +185,7 @@ const HeaderComponent = () => {
                     <button
                       key={dropdownItem}
                       type="button"
-                      className="block w-full rounded px-2 py-2 text-left text-sm transition-colors hover:bg-gray-100"
+                      className="block w-full rounded px-2 py-2 text-left text-sm transition-colors hover:bg-gray-90"
                     >
                       {dropdownItem}
                     </button>

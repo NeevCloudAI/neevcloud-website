@@ -83,7 +83,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
           <Star key={i} className="size-10 fill-primary-100" strokeWidth={0} />
         ))}
       </div>
-      <Text className="mt-2 text-gray-90">{card.reviewCountLabel}</Text>
+      <Text className="mt-2 text-gray-80">{card.reviewCountLabel}</Text>
       <Image
         src="/icons/google-wordmark.svg"
         alt="Google"

@@ -13,8 +13,11 @@
   --color-tertiary: var(--tertiary);
   --color-gray-10: var(--gray-10);
   --color-gray-60: var(--gray-60);
-  --color-gray-90: var(--gray-90);
+  --color-gray-80: var(--gray-80);
   --color-blue-40: var(--blue-40);
+  --color-gray-60: var(--gray-60);
+  --color-gray-90: var(--gray-90);
+  --color-gray-95: var(--gray-95);
   --color-gray-100: var(--gray-100);
   --color-black-10: var(--black-10);
   --color-black-50: var(--black-50);
@@ -61,8 +64,11 @@
   --gray-10: #eaf4f4;
   --gray-50: #d9d9d9;
   --gray-60: #bdc9cc;
-  --gray-90: #545f66;
-  --gray-100: #384245;
+  --gray-60: #6e7b80;
+  --gray-80: #545f66;
+  --gray-90: #384245;
+  --gray-95: #2f2f2f;
+  --gray-100: #121313;
 
   --red-50: #ff4d48;
 

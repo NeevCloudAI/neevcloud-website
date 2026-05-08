@@ -14,11 +14,10 @@ const HomeComponent = () => {
         <HeaderComponent />
         <Divider orientation="horizontal" />
         <HeroSection />
-        <ClusterFeaturesSection/>
-        <UseCasesSection/>
-        <FaqSection/>
+        <ClusterFeaturesSection />
+        <UseCasesSection />
+        <FaqSection />
       </div>
-  
     </div>
   );
 };

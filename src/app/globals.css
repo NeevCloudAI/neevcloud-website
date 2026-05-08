@@ -6,41 +6,95 @@
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
   --color-gray-10: var(--gray-10);
+  --color-gray-50: var(--gray-50);
   --color-gray-90: var(--gray-90);
   --color-gray-100: var(--gray-100);
   --color-black-10: var(--black-10);
   --color-white: var(--white);
   --color-white-10: var(--white-10);
-  --color-gray-50: var(--gray-50);
 
-  --breakpoint-header-company: 1430px;
-  --breakpoint-header-resource: 1340px;
-  --breakpoint-header-developers: 1250px;
-  --breakpoint-header-pricing: 1160px;
-  --breakpoint-header-solutions: 1100px;
-  --breakpoint-header-product: 1020px;
-  --breakpoint-header-inference: 950px;
-  --breakpoint-header-buttons: 850px;
+  /* Status */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  /* Dark surfaces (ClusterFeaturesSection) */
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-darker: var(--surface-darker);
+  --color-surface-terminal: var(--surface-terminal);
+
+  /* UseCasesSection */
+  --color-border-muted: var(--border-muted);
+  --color-border-card: var(--border-card);
+  --color-text-muted: var(--text-muted);
+  --color-text-near-black: var(--text-near-black);
+  --color-tab-active: var(--tab-active);
+  --color-tag-default: var(--tag-default);
+
+  /* FaqSection */
+  --color-text-dim: var(--text-dim);
+  --color-surface-faq: var(--surface-faq);
+  --color-surface-chip: var(--surface-chip);
+  --color-border-faint: var(--border-faint);
+  --color-border-primary-faint: var(--border-primary-faint);
+  --color-border-chip: var(--border-chip);
+  --color-border-card-dark: var(--border-card-dark);
 }
 
 :root {
   --font-poppins: var(--font-poppins);
+
   /* Core brand colours */
   --primary: #00a78b;
   --primary-10: #ebf5f5;
-
   --secondary: #005150;
   --tertiary: #022c3c;
 
-  --white-10: #ffffff1f;
   --white: #ffffff;
-
+  --white-10: #ffffff1f;
   --black-10: #0000001f;
 
   --gray-10: #eaf4f4;
   --gray-50: #d9d9d9;
   --gray-90: #545f66;
   --gray-100: #384245;
+
+  /* Status */
+  --success: #58d7a7;
+  --warning: #d29922;
+
+  /* Dark surfaces */
+  --surface-dark: #05080a;
+  --surface-darker: #1c1c1e;
+  --surface-terminal: #0d1117;
+
+  /* UseCasesSection tokens */
+  --border-muted: #bdc9cc;
+  --border-card: #e2e8f0;
+  --text-muted: #6e7b80;
+  --text-near-black: #1a202c;
+  --tab-active: #022c3b;
+  --tag-default: #475569;
+
+  /* FaqSection tokens */
+  --text-dim: #9aa4aa;
+  --surface-faq: #161d25;
+  --surface-chip: #2a3540;
+  --border-faint: #ffffff18;
+  --border-primary-faint: #00a78b44;
+  --border-chip: #6e7b8055;
+  --border-card-dark: #ffffff0d;
+
+  /* Glow colours (ClusterFeaturesSection) */
+  --glow-teal-1: rgba(0, 60, 52, 0.6);
+  --glow-teal-2: rgba(0, 40, 35, 0.3);
+  --glow-terminal-1: rgba(0, 167, 138, 0.18);
+  --glow-terminal-2: rgba(0, 130, 100, 0.09);
+  --terminal-border: rgba(255, 255, 255, 0.08);
+  --terminal-shadow: rgba(0, 0, 0, 0.6);
+
+  /* FaqSection glow colours */
+  --glow-faq-1: #0d3028;
+  --glow-faq-2: #0a2218;
 
   --background: #ffffff;
   --foreground: #000000;
@@ -99,3 +153,33 @@ body {
   }
 }
 
+@layer utilities {
+  .bg-glow-teal {
+    background: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      var(--glow-teal-1) 0%,
+      var(--glow-teal-2) 50%,
+      transparent 75%
+    );
+  }
+  .bg-glow-terminal {
+    background: radial-gradient(
+      ellipse 100% 100% at 50% 50%,
+      var(--glow-terminal-1) 0%,
+      var(--glow-terminal-2) 45%,
+      transparent 72%
+    );
+  }
+  .terminal-card {
+    border: 1px solid var(--terminal-border);
+    box-shadow: 0 4px 40px var(--terminal-shadow);
+  }
+  .bg-glow-faq {
+    background: radial-gradient(
+      ellipse at center,
+      var(--glow-faq-1) 0%,
+      var(--glow-faq-2) 45%,
+      transparent 70%
+    );
+  }
+}

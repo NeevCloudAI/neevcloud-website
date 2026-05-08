@@ -1,6 +1,7 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import HeaderComponent from "@/shared/components/header";
 import OSImageSection from "./OSImageSection";
+import PrivateNetworkSection from "./PrivateNetworkSection";
 
 const GpuComponent = () => {
   return (
@@ -8,6 +9,7 @@ const GpuComponent = () => {
       <AnnouncementSection />
       <HeaderComponent />
       <OSImageSection />
+      <PrivateNetworkSection />
     </>
   );
 };

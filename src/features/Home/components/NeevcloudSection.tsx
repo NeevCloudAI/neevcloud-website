@@ -31,7 +31,7 @@ const CloudComparisonCard = ({
   );
 };
 
-const NeevcloudSection = () => {
+const NeevcloudSection: React.FC = () => {
   return (
     <Container className="flex flex-col items-center justify-between gap-2 py-[3vh] md:py-[7vh]">
       <div className="flex justify-center gap-1 md:gap-2">

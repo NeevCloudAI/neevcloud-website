@@ -13,7 +13,7 @@ import ReviewsSection from "./ReviewsSection";
 
 const HomeComponent = () => {
   return (
-    <div>
+    <>
       <div className="flex flex-col bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat min-h-screen ">
         <AnnouncementSection />
         <HeaderComponent />
@@ -29,7 +29,7 @@ const HomeComponent = () => {
       <ReviewsSection />
       <NounSection />
       <FooterComponent />
-    </div>
+    </>
   );
 };
 

@@ -15,7 +15,8 @@ interface TextProps
     | "white"
     | "black"
     | "white-50"
-    | "gray-10";
+    | "gray-10"
+    | "blue-40";
 }
 
 function Text({

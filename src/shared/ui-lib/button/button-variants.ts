@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const buttonVariants = cva(
-  "rounded-md cursor-pointer w-fit whitespace-nowrap",
+  "rounded-md cursor-pointer w-fit whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
@@ -11,6 +11,7 @@ export const buttonVariants = cva(
         outline: `border border-black`,
         black: `bg-black text-white`,
         "outline-primary": `bg-white`,
+        white: `bg-white`,
         "white-outline-right": `border-r border-white-10`,
         ghost: `bg-transparent`,
       },
@@ -22,7 +23,7 @@ export const buttonVariants = cva(
         lg: "text-lg",
         xl: "text-xl",
         xxl: "text-2xl",
-        full: "w-full text-sm",
+        full: "w-full",
         none: "text-sm",
       },
       weight: {
@@ -62,6 +63,7 @@ export const buttonVariants = cva(
         outline: "bg-white",
         blue: "bg-blue-40",
         ghost: "bg-black-80",
+        "cloud-gray": "bg-gray-10",
         transparent: "bg-transparent",
       },
       borderRadius: {

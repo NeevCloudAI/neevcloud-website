@@ -28,6 +28,7 @@ export const textVariants = cva("h-fit", {
       black: "text-black",
       "white-50": "text-white-50",
       "gray-10": "text-gray-10",
+      "blue-40": "text-blue-40",
     },
     lineHeight: {
       xs: "leading-5",

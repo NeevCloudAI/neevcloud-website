@@ -55,9 +55,13 @@ const ComparisonSection = () => {
           <div className="flex items-center gap-1 md:gap-2">
             <Text as="h2" textColor={comparisonStatus ? "black" : "white"}>
               to
-            </Text>
-            <Text as="h2" textColor={comparisonStatus ? "primary" : "white"}>
-              AI-scale leverage
+              <Text
+                as="span"
+                variant="h2"
+                textColor={comparisonStatus ? "primary" : "white"}
+              >
+                AI-scale leverage
+              </Text>
             </Text>
           </div>
           <Text

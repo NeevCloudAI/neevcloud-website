@@ -17,6 +17,9 @@ const ModelBuilderSection = () => {
         </Text>
         <Text as="h2" textColor="primary" weight={"semibold"}>
           {MODEL_BUILDER_COPY.titleHighlight}
+          <Text as="span" variant="h2" textColor="white" weight={"semibold"}>
+            {MODEL_BUILDER_COPY.titleSuffix}
+          </Text>
         </Text>
         <Text
           textColor="gray-10"

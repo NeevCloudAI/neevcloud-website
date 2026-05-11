@@ -25,7 +25,8 @@ export const MODEL_BUILDER_FEATURES: ModelFeature[] = [
 
 export const MODEL_BUILDER_COPY = {
   titlePrefix: "The AI cloud built for",
-  titleHighlight: "Frontier model builders.",
+  titleHighlight: "Frontier",
+  titleSuffix: "model builders.",
   description1:
     "No ticket-driven DevEx. A single CLI, typed SDKs for every runtime,",
   description2: "and infrastructure that respects your repo structure.",
@@ -56,7 +57,12 @@ export const CLI_CODE_LINES: CodeToken[][] = [
       variant: "flag",
     },
   ],
-  [{ text: "# provisioning avatar ............ ready in 94s", variant: "muted" }],
+  [
+    {
+      text: "# provisioning avatar ............ ready in 94s",
+      variant: "muted",
+    },
+  ],
   [{ text: "# 64 × B200 · 3.2 Tb/s per node · DLC", variant: "muted" }],
   [],
   [

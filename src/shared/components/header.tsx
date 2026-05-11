@@ -68,13 +68,6 @@ const NAV_ITEMS: NavItem[] = [
 
 const HeaderComponent = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openMenuDropdown, setOpenMenuDropdown] = useState<string | null>(null);
-
-  const toggleMenuDropdown = (label: string) => {
-    setOpenMenuDropdown((currentValue) =>
-      currentValue === label ? null : label
-    );
-  };
 
   return (
     <Container className="relative flex min-h-16 gap-3 py-3 md:min-h-20 items-center justify-between md:py-0">
@@ -103,25 +96,6 @@ const HeaderComponent = () => {
                 <Button variant="ghost" textColor="black" spacing="none">
                   {navItem.label}
                 </Button>
-                <div className="invisible absolute left-0 top-full z-20 mt-2 rounded-md border border-gray-200 bg-white p-2 opacity-0 shadow-md duration-200 group-hover:visible group-hover:opacity-100">
-                  {navItem.id === "product" ? (
-                    <div className="flex flex-col gap-2 p-8">
-                      <p>mAk</p>
-                    </div>
-                  ) : (
-                    <></>
-                  )}
-                  {/* {navItem.items.map((dropdownItem) => (
-                    <Button
-                      variant="ghost"
-                      textColor="black"
-                      spacing="sm"
-                      key={dropdownItem}
-                    >
-                      {dropdownItem}
-                    </Button>
-                  ))} */}
-                </div>
               </div>
             ))}
           </div>
@@ -146,7 +120,6 @@ const HeaderComponent = () => {
         aria-controls="responsive-navigation-menu"
         onClick={() => {
           setIsMobileMenuOpen((prevState) => !prevState);
-          setOpenMenuDropdown(null);
         }}
       />
       {isMobileMenuOpen && (
@@ -171,27 +144,9 @@ const HeaderComponent = () => {
               <button
                 type="button"
                 className="flex w-full items-center justify-between px-3 py-2 text-left text-sm"
-                aria-expanded={openMenuDropdown === navItem.label}
-                onClick={() => toggleMenuDropdown(navItem.label)}
               >
                 {navItem.label}
-                <span className="text-xs">
-                  {openMenuDropdown === navItem.label ? "−" : "+"}
-                </span>
               </button>
-              {openMenuDropdown === navItem.label ? (
-                <div className="border-t border-gray-200 p-1">
-                  {navItem.items.map((dropdownItem) => (
-                    <button
-                      key={dropdownItem}
-                      type="button"
-                      className="block w-full rounded px-2 py-2 text-left text-sm transition-colors hover:bg-gray-90"
-                    >
-                      {dropdownItem}
-                    </button>
-                  ))}
-                </div>
-              ) : null}
             </div>
           ))}
         </nav>

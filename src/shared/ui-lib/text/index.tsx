@@ -6,7 +6,7 @@ import { textVariants } from "./text-variants";
 interface TextProps
   extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof textVariants> {
   as?: keyof HTMLElementTagNameMap;
-  lineHeight?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+  lineHeight?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl";
   textColor?:
     | "default"
     | "primary"

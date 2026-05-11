@@ -120,20 +120,10 @@ const StackSection = () => {
           <div className="flex flex-row">
             <Text as="h2" weight="semibold">
               One
-            </Text>
-            <Text
-              as="h2"
-              textColor="primary"
-              weight="semibold"
-              className="ml-1 md:ml-2"
-            >
-              Vertical Stack
-            </Text>
-            <Text as="h2" weight="semibold">
-              .
-            </Text>
-            <Text as="h2" weight="semibold" className="ml-1 md:ml-2">
-              Silicon to endpoint.
+              <Text as="span" textColor="primary" variant="h2">
+                Vertical Stack
+              </Text>
+              . Silicon to endpoint.
             </Text>
           </div>
           <Text as="h6" textColor="black">

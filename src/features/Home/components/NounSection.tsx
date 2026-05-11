@@ -62,25 +62,17 @@ const NounSection = () => {
         <Text as="h3" weight="semibold" textColor="white">
           If NeevCloud is the Foundation,
         </Text>
-        <div className="flex">
-          <Text weight="semibold" textColor="primary" as="h3">
-            Project Noun
-          </Text>
-          <Text
-            weight="semibold"
-            textColor="white"
-            as="h3"
-            className="mx-1 md:mx-2"
-          >
+
+        <Text weight="semibold" textColor="primary" as="h3">
+          Project Noun
+          <Text weight="semibold" textColor="white" as="span" variant="h3">
             is the
           </Text>
-          <Text weight="semibold" textColor="primary" as="h3">
-            Horizon
-          </Text>
-          <Text weight="semibold" textColor="white" as="h3">
+          Horizon
+          <Text weight="semibold" textColor="white" as="span" variant="h3">
             .
           </Text>
-        </div>
+        </Text>
         <Divider
           orientation="horizontal"
           className="bg-linear-to-r from-primary to-transparent my-4 w-full md:w-1/3"

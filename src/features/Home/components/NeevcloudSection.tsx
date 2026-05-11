@@ -37,11 +37,9 @@ const NeevcloudSection: React.FC = () => {
       <div className="flex justify-center gap-1 md:gap-2">
         <Text as="h2" weight="semibold">
           Why the
-        </Text>
-        <Text as="h2" weight="semibold" textColor="primary">
-          world
-        </Text>
-        <Text as="h2" weight="semibold">
+          <Text as="span" variant="h2" textColor="primary">
+            world
+          </Text>
           Needs NeevCloud?
         </Text>
       </div>
@@ -164,9 +162,14 @@ const NeevcloudSection: React.FC = () => {
           <div className="flex gap-2">
             <Text as="h3" weight="semibold">
               India&apos;s First
-            </Text>
-            <Text as="h3" weight="semibold" textColor="primary">
-              AI Supercloud
+              <Text
+                as="span"
+                variant="h3"
+                weight="semibold"
+                textColor="primary"
+              >
+                AI Supercloud
+              </Text>
             </Text>
           </div>
           <Text as="h6">

@@ -95,11 +95,11 @@ export default function InfrastructureSectionContent() {
       ></div>
       <Container className="flex flex-col py-[3vh] md:py-[7vh]">
         <div className="flex justify-center">
-          <Text as="h2" className="mr-2">
+          <Text as="h2">
             Infrastructure That
-          </Text>
-          <Text as="h2" textColor="primary">
-            Removes Barriers
+            <Text as="span" variant="h2" textColor="primary">
+              Removes Barriers
+            </Text>
           </Text>
           <Text as="h2">,</Text>
         </div>

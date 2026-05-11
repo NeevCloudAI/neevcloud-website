@@ -18,17 +18,13 @@ const ReviewsSection = () => {
     >
       <Container className="relative z-10" alignRight>
         <header className="text-center flex flex-col items-center">
-          <div className="flex gap-1 md:gap-2">
-            <Text as="h2" weight="semibold">
-              {REVIEWS_SECTION_TITLE_PREFIX}
-            </Text>
-            <Text as="h2" weight="semibold" textColor="primary">
+          <Text as="h2" weight="semibold">
+            {REVIEWS_SECTION_TITLE_PREFIX}
+            <Text as="span" variant="h2" textColor="primary">
               {REVIEWS_SECTION_TITLE_HIGHLIGHT}
             </Text>
-            <Text as="h2" weight="semibold">
-              {REVIEWS_SECTION_TITLE_SUFFIX}
-            </Text>
-          </div>
+            {REVIEWS_SECTION_TITLE_SUFFIX}
+          </Text>
           <Text as="h2" weight="semibold">
             {REVIEWS_SECTION_TITLE_SUFFIX_2}
           </Text>

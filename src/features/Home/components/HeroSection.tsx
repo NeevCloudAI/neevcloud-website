@@ -54,18 +54,26 @@ const HeroSection = () => {
           <>
             <Text as="h1" textColor={activeHeroSlide.accentColor}>
               {activeHeroSlide.accentText}
-            </Text>
-            <Text as="h1" textColor={activeHeroSlide.textColor}>
-              {activeHeroSlide.leadText}
+              <Text
+                as="span"
+                variant="h1"
+                textColor={activeHeroSlide.textColor}
+              >
+                {activeHeroSlide.leadText}
+              </Text>
             </Text>
           </>
         ) : (
           <>
             <Text as="h1" textColor={activeHeroSlide.textColor}>
               {activeHeroSlide.leadText}
-            </Text>
-            <Text as="h1" textColor={activeHeroSlide.accentColor}>
-              {activeHeroSlide.accentText}
+              <Text
+                as="span"
+                variant="h1"
+                textColor={activeHeroSlide.accentColor}
+              >
+                {activeHeroSlide.accentText}
+              </Text>
             </Text>
           </>
         )}

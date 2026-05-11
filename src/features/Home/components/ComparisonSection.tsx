@@ -28,7 +28,7 @@ const ComparisonCard = ({
       <Text as="h1">{title}</Text>
       <div className="flex flex-col gap-2">
         <Text as="small">{subtitle}</Text>
-        <Text as="h6" weight={"semibold"}>
+        <Text as="h6" weight="semibold">
           {subtitle2}
         </Text>
       </div>
@@ -55,14 +55,18 @@ const ComparisonSection = () => {
           <div className="flex items-center gap-1 md:gap-2">
             <Text as="h2" textColor={comparisonStatus ? "black" : "white"}>
               to
-            </Text>
-            <Text as="h2" textColor={comparisonStatus ? "primary" : "white"}>
-              AI-scale leverage
+              <Text
+                as="span"
+                variant="h2"
+                textColor={comparisonStatus ? "primary" : "white"}
+              >
+                AI-scale leverage
+              </Text>
             </Text>
           </div>
           <Text
             textColor={comparisonStatus ? "black" : "white"}
-            align={"center"}
+            align="center"
             className="mt-2"
           >
             Get rid of tedious cloud cost management with automation that works
@@ -72,7 +76,7 @@ const ComparisonSection = () => {
         <div className="flex items-center">
           <Button
             variant="outline-primary"
-            className={`rounded-r-none ${comparisonStatus ? "bg-white" : "bg-gray-90 text-white"}`}
+            className={`rounded-r-none ${comparisonStatus ? "bg-white" : "bg-gray-80 text-white"}`}
             textColor="black"
             weight="semibold"
             onClick={() => setComparisonStatus(false)}
@@ -80,15 +84,15 @@ const ComparisonSection = () => {
             Without NeevCloud
           </Button>
           <Button
-            className={`rounded-l-none ${comparisonStatus ? "" : "bg-gray-100 text-white"}`}
+            className={`rounded-l-none ${comparisonStatus ? "" : "bg-gray-90 text-white"}`}
             onClick={() => setComparisonStatus(true)}
           >
             With NeevCloud
           </Button>
         </div>
-        <div className="mt-4 flex flex-col md:flex-row items-center gap-4 w-full">
+        <div className="mt-4 flex flex-col md:flex-row items-center gap-8 md:gap-4 w-full">
           <div
-            className={`flex md:flex-2 flex-col ${comparisonStatus ? "bg-primary" : "bg-gray-100"} p-4 md:p-8 rounded-md w-full gap-4`}
+            className={`flex md:flex-2 flex-col ${comparisonStatus ? "bg-primary" : "bg-gray-90"} p-4 md:p-8 rounded-md w-full gap-4`}
           >
             <ComparisonCard
               title="73%"
@@ -96,7 +100,7 @@ const ComparisonSection = () => {
               subtitle2="vs. hyperscale on-demand"
               description="Committed capacity plus idle reclamation."
               description2="Your finance team will notice."
-              bgColor={comparisonStatus ? "white" : "gray-90"}
+              bgColor={comparisonStatus ? "white" : "gray-80"}
               comparisonStatus={comparisonStatus}
             />
             <ComparisonCard
@@ -105,7 +109,7 @@ const ComparisonSection = () => {
               subtitle2="Faster iteration on large runs"
               description="Deterministic interconnect eliminates"
               description2="straggler nodes in distributed training."
-              bgColor={comparisonStatus ? "white" : "gray-90"}
+              bgColor={comparisonStatus ? "white" : "gray-80"}
               comparisonStatus={comparisonStatus}
             />
             <ComparisonCard
@@ -114,7 +118,7 @@ const ComparisonSection = () => {
               subtitle2="Guaranteed Reduction"
               description="Removing the limits of geography and"
               description2="latency to redefine how AI is deployed and scaled."
-              bgColor={comparisonStatus ? "white" : "gray-90"}
+              bgColor={comparisonStatus ? "white" : "gray-80"}
               comparisonStatus={comparisonStatus}
             />
           </div>
@@ -128,7 +132,7 @@ const ComparisonSection = () => {
             </Text>
             <Text
               as="h3"
-              weight={"normal"}
+              weight="normal"
               textColor={comparisonStatus ? "black" : "white"}
             >
               AI-First by design

@@ -16,6 +16,10 @@ const ReviewsSection = () => {
       className="relative overflow-hidden bg-gray-10 py-6 md:py-24"
       aria-labelledby="reviews-section-heading"
     >
+      <div
+        className="pointer-events-none absolute inset-0 bg-radial-[at_60%_40%] from-teal-300/30 via-transparent to-transparent blur-xl"
+        aria-hidden="true"
+      />
       <Container className="relative z-10" alignRight>
         <header className="text-center flex flex-col items-center">
           <Text as="h2" weight="semibold">

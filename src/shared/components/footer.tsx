@@ -1,38 +1,20 @@
 import Image from "next/image";
-import { Button, Text } from "../ui-lib";
+import { Text } from "../ui-lib";
 import Container from "./container";
+import FooterCard from "./footer-card";
 
 const FooterComponent = () => {
   return (
     <div className="bg-black py-4 md:py-16">
       <Container className="flex flex-col gap-12 md:gap-16">
-        <div className="relative rounded-md bg-primary-100 py-[2vh] md:py-[10vh] px-4 md:px-8 flex flex-col gap-1 overflow-hidden">
-          <Text as="h2" weight={"medium"}>
-            Start Building on
-          </Text>
-          <Text as="h2" weight={"medium"}>
-            NeevCloud Today
-          </Text>
-          <Text className="z-2">
-            Sign up in 60 seconds. $200 in compute credits, no commitment. Your
-            first
-          </Text>
-          <Text>B200 is already warming up.</Text>
-          <div className="mt-2 md:mt-6 flex gap-4 z-1">
-            <Button
-              variant="outline-primary"
-              textColor="black"
-              spacing="md"
-              weight="semibold"
-            >
-              Get Started Free
-            </Button>
-            <Button variant={"black"} spacing="md">
-              Talk to Our Team
-            </Button>
-          </div>
-          <div className=" absolute w-[40%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat"></div>
-        </div>
+        <FooterCard
+          title1="Start Building on"
+          title2="NeevCloud Today"
+          description1="Sign up in 60 seconds. $200 in compute credits, no commitment. Your first"
+          description2="B200 is already warming up."
+          button1Text="Get Started Free"
+          button2Text="Talk to Our Team"
+        />
 
         <div className="mb-4 md:mb-16 w-full flex flex-col md:flex-row gap-8 md:gap-16 text-white">
           <div className="flex flex-col gap-6">

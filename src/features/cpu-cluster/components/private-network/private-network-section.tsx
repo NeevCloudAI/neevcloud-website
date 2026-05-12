@@ -16,7 +16,11 @@ import { FeatureCard } from "@/shared/components/feature-card";
 
 function PrivateNetworkSection() {
   return (
-    <div className="bg-gray-10">
+    <div className="relative bg-gray-10">
+      <div
+        className="pointer-events-none absolute inset-0 bg-radial-[at_50%_0%] from-teal-300/30 via-transparent to-transparent blur-xs"
+        aria-hidden="true"
+      />
       <Container className="py-[3vh] md:py-[7vh]">
         <Text as="h2" weight="semibold" align="center">
           Same Private Network,

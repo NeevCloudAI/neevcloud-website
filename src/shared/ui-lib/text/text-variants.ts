@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 
-export const textVariants = cva("h-fit", {
+export const textVariants = cva("h-fit ", {
   variants: {
     variant: {
       default: "",
@@ -39,7 +39,12 @@ export const textVariants = cva("h-fit", {
       "blue-40": "text-blue-40",
       "gray-60": "text-gray-60",
       "gray-65": "text-gray-65",
+      "gray-75": "text-gray-75",
+      "gray-90": "text-gray-90",
+      "red-50": "text-red-50",
+      "green-50": "text-green-50",
       "primary-60": "text-primary-60",
+      "green-100": "text-green-100",
     },
     lineHeight: {
       xs: "leading-5",
@@ -49,6 +54,10 @@ export const textVariants = cva("h-fit", {
       xl: "leading-12",
       xxl: "leading-14",
       xxxl: "leading-16",
+    },
+    fontFamily: {
+      poppins: "font-poppins",
+      spaceMono: "font-space-mono",
     },
   },
   defaultVariants: {

@@ -30,7 +30,7 @@ export default function FaqTopicSidebar({
                 size="full"
                 onClick={() => onTopicChange(label)}
                 aria-pressed={isActive}
-                className="border border-white-10 bg-gray-100 flex items-center justify-between p-4 rounded-xl"
+                className="border border-white-10 bg-gray-110 flex items-center justify-between p-4 rounded-xl"
               >
                 <Text as="h4" weight="semibold">
                   {label}

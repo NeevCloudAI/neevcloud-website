@@ -18,7 +18,13 @@ interface TextProps
     | "gray-10"
     | "blue-40"
     | "gray-60"
-    | "primary-60";
+    | "gray-75"
+    | "red-50"
+    | "primary-60"
+    | "gray-90"
+    | "green-50"
+    | "green-100";
+  fontFamily?: "poppins" | "spaceMono";
 }
 
 function Text({
@@ -29,6 +35,7 @@ function Text({
   align,
   textColor,
   lineHeight,
+  fontFamily,
   ...props
 }: TextProps) {
   return (
@@ -42,6 +49,7 @@ function Text({
           className,
           textColor,
           lineHeight,
+          fontFamily,
         })
       )}
       {...props}

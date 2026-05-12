@@ -7,7 +7,7 @@ type FaqItemCardProps = {
 
 export default function FaqItemCard({ faq }: FaqItemCardProps) {
   return (
-    <article className="rounded-lg p-2 md:p-8 bg-gray-100 flex flex-col gap-2">
+    <article className="rounded-lg p-2 md:p-8 bg-gray-110 flex flex-col gap-2">
       <Text
         as="small"
         textColor="white"

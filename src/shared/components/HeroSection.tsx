@@ -9,6 +9,7 @@ const trustBadges = [
   "DDoS protection included",
   "99.9% uptime SLA",
 ];
+
 const HeroSection = ({
   title,
   description1,
@@ -22,7 +23,7 @@ const HeroSection = ({
   title: React.ReactNode;
   description1: string;
   description2: string;
-  description3: string;
+  description3?: string;
   button1Text: string;
   button2Text: string;
   badgeText: string;
@@ -50,9 +51,11 @@ const HeroSection = ({
       <Text as="h6" className="hidden md:block">
         {description2}
       </Text>
-      <Text as="h6" className="hidden md:block">
-        {description3}
-      </Text>
+      {description3 && (
+        <Text as="h6" className="hidden md:block">
+          {description3}
+        </Text>
+      )}
 
       <div className="flex gap-4 mt-4 md:mt-8 z-10">
         <Button>{button1Text}</Button>
@@ -74,12 +77,12 @@ const HeroSection = ({
         ))}
       </div>
 
-      <div className="w-full min-h-50 md:min-h-dvh mt-6 md:mt-12 rounded-2xl overflow-hidden relative px-6 pt-8 sm:px-10 sm:pt-20 md:px-40 md:pt-25">
+      <div className="w-full min-h-50 md:min-h-dvh mt-6 rounded-2xl overflow-hidden relative">
         <Image
           src={image}
           alt="Gradient Background"
           fill
-          className="object-cover object-center"
+          className="object-contain object-center"
           priority
         />
       </div>

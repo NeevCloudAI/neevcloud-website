@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Text } from "@/shared/ui-lib";
 import { REVIEWS_SECTION_CARDS } from "@/features/Home/constants/reviews-section.constants";

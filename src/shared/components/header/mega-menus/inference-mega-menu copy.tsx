@@ -24,12 +24,14 @@ const INFERENCE_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconAlt: "Serverless inference",
             title: "Serverless inference",
             description: "Pay-per-Token Endpoints, Autoscale",
+            href: "/serverless-inference",
           },
           {
             iconSrc: "/icons/model-playground.svg",
             iconAlt: "Model playground",
             title: "Model playground",
             description: "Test Prompts in your Browser",
+            href: "/model-playground",
           },
           {
             iconSrc: "/icons/code.svg",

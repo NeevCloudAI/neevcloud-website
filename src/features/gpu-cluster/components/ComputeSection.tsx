@@ -21,6 +21,7 @@ const ComputeSection = () => {
               title={feature.title}
               description={feature.description}
               theme="dark"
+              className="bg-gray-120 backdrop-blur-xs"
             />
           ))}
         </div>

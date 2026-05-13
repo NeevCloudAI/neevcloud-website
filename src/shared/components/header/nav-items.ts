@@ -1,4 +1,5 @@
 export type HeaderNavId =
+  | "ai-supercloud"
   | "inference-hub"
   | "product"
   | "solutions"
@@ -15,6 +16,12 @@ export type NavItem = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
+  {
+    id: "ai-supercloud",
+    label: "AI SuperCloud",
+    desktopVisibilityClass: "hidden",
+    menuVisibilityClass: "",
+  },
   {
     id: "inference-hub",
     label: "Inference Hub",

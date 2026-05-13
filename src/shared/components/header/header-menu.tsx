@@ -11,12 +11,15 @@ import ProductMegaMenu from "./mega-menus/product-mega-menu";
 import SolutionsMegaMenu from "./mega-menus/solutions-mega-menu";
 import DevelopersMegaMenu from "./mega-menus/developers-mega-menu";
 import CompanyMegaMenu from "./mega-menus/company-mega-menu";
+import AiSupercloudMegaMenu from "./mega-menus/ai-supercloud-mega-menu";
 import InferenceMegaMenu from "./mega-menus/inference-mega-menu copy";
 import PricingMegaMenu from "./mega-menus/pricing-mega-menu";
 import ResourcesMegaMenu from "./mega-menus/resources-mega-menu";
 
 function getHeaderMegaMenu(navId: HeaderNavId): ComponentType | undefined {
   switch (navId) {
+    case "ai-supercloud":
+      return AiSupercloudMegaMenu;
     case "resources":
       return ResourcesMegaMenu;
     case "pricing":
@@ -61,7 +64,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                 megaMenuPanel = (
                   <div
                     className={cn(
-                      "pointer-events-none absolute left-1/2 top-[72%] z-100",
+                      "pointer-events-none absolute left-1/2 top-[65%] z-100",
                       "w-full max-w-[min(1200px,calc(100vw-2rem))]",
                       "-translate-x-1/2",
                       "rounded-b-md bg-white opacity-0 shadow-md",
@@ -80,7 +83,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   key={navItem.label}
                   className={cn("group", navItem.desktopVisibilityClass)}
                 >
-                  <div className="relative pb-2 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100">
+                  <div className="relative after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100">
                     <Button variant="ghost" textColor="black" spacing="none">
                       {navItem.label}
                     </Button>
@@ -121,7 +124,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
       {isMobileMenuOpen && (
         <nav
           id="responsive-navigation-menu"
-          className="header-company:hidden absolute left-0 right-0 top-full z-20 mt-1 flex max-h-[70vh] flex-col gap-2 overflow-y-auto rounded-md border border-gray-10 bg-white p-2 shadow-md"
+          className="header-company:hidden absolute left-0 right-0 top-full z-20 mt-1 flex max-h-[80vh] flex-col gap-2 overflow-auto rounded-md border border-gray-10 bg-white p-2 shadow-md"
           aria-label="Responsive navigation"
         >
           <div className="header-buttons:hidden flex w-full items-center gap-2">

@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider } from "@/shared/ui-lib";
 import Container from "../container";
+import AiSupercloudDesktopTrigger from "./ai-supercloud-desktop-trigger";
 import HeaderMenu from "./header-menu";
 
 const HeaderComponent = () => {
@@ -14,9 +15,7 @@ const HeaderComponent = () => {
           height={100}
           className="h-7 w-auto"
         />
-        <Text weight="semibold" className="ml-2 whitespace-nowrap md:ml-4">
-          AI SuperCloud
-        </Text>
+        <AiSupercloudDesktopTrigger />
         <Divider className="min-h-8 hidden header-buttons:block" />
       </HeaderMenu>
     </Container>

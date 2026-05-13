@@ -90,7 +90,7 @@ export default function InfrastructureSectionContent() {
   return (
     <div className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black text-white">
       <div
-        className="absolute inset-0 z-10 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"
+        className="pointer-events-none absolute inset-0 z-10 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"
         aria-hidden="true"
       ></div>
       <Container className="flex flex-col py-[3vh] md:py-[7vh]">

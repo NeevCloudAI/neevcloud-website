@@ -6,6 +6,7 @@ import HeroSection from "@/shared/components/HeroSection";
 import { Divider, Text } from "@/shared/ui-lib";
 import ExploreModelsSection from "./ExploreModelsSection";
 import ExperimentationSection from "./ExperimentationSection";
+import AvailableModelsSection from "./AvailableModelsSection";
 
 const ModelPlaygroundComponent = () => {
   return (
@@ -42,6 +43,7 @@ const ModelPlaygroundComponent = () => {
           image="/images/playground.png"
         />
       </section>
+      <AvailableModelsSection />
       <ExperimentationSection />
       <ExploreModelsSection />
       <FaqSection />

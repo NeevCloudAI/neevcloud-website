@@ -5,7 +5,7 @@ import Container from "@/shared/components/container";
 import FooterCard from "@/shared/components/footer-card";
 import { EXPLORE_MODELS_STEPS } from "@/features/model-playground/data/explore-models-steps";
 import ExploreModelsStepPreview from "@/features/model-playground/components/ExploreModelsStepPreview";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Button, Divider, Text } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
 
 const STEP_TAB_IDS = EXPLORE_MODELS_STEPS.map(
@@ -21,10 +21,10 @@ const ExploreModelsSection = () => {
 
   return (
     <section className="relative bg-gray-10 py-[3vh] md:py-[10vh]">
-      <div
+      {/* <div
         className="pointer-events-none absolute inset-0 z-1 bg-radial-[at_50%_0%] from-teal-300/30 via-transparent to-transparent blur-xs"
         aria-hidden="true"
-      />
+      /> */}
 
       <Container className="flex flex-col items-center justify-center">
         <Text as="h2" weight={"semibold"} align="center">
@@ -45,8 +45,8 @@ const ExploreModelsSection = () => {
         >
           {EXPLORE_MODELS_STEPS.map((_, index) => (
             <div key={STEP_TAB_IDS[index]} className="flex items-center">
-              <button
-                type="button"
+              <Button
+                variant="ghost"
                 role="tab"
                 id={STEP_TAB_IDS[index]}
                 aria-selected={activeStep === index}
@@ -61,7 +61,7 @@ const ExploreModelsSection = () => {
                 )}
               >
                 {index + 1}
-              </button>
+              </Button>
               {index < EXPLORE_MODELS_STEPS.length - 1 ? (
                 <Divider
                   orientation="horizontal"

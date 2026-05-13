@@ -2,7 +2,8 @@ export type FaqCategory =
   | "Getting Started"
   | "Networking"
   | "Billing"
-  | "Scaling";
+  | "Scaling"
+  | "Security";
 
 export type FaqTopic = "All" | FaqCategory;
 

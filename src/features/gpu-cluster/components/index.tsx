@@ -4,9 +4,10 @@ import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
 import { Divider, Text } from "@/shared/ui-lib";
-import PricingSection from "./PricingSection";
+import PricingSection from "@/shared/components/pricing/Pricingsection";
 import ComputeSection from "./ComputeSection";
 import UseCasesSection from "./UseCasesSection";
+import { GPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 
 const GpuClusterComponent = () => {
   return (
@@ -45,10 +46,24 @@ const GpuClusterComponent = () => {
           image="/images/gpu.png"
         />
       </section>
-      <PricingSection />
+      <PricingSection
+        headingLine1="Every Workload"
+        headingLine2Primary="Flat rate."
+        headingLine2White="Unmetered."
+        subText="Commit and Save. The Longer the Plan, the Lower the Rate."
+        imageSrc="/images/pricing.png"
+        buttons={[
+          { label: "View Complete Pricing" },
+          {
+            label: "Contact for Custom Plans",
+            variant: "white",
+            textColor: "black",
+          },
+        ]}
+      />
       <ComputeSection />
       <UseCasesSection />
-      <FaqSection />
+      <FaqSection items={GPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

@@ -6,10 +6,11 @@ import NeevcloudSection from "./NeevcloudSection";
 import ComparisonSection from "./ComparisonSection";
 import NounSection from "./NounSection";
 import FooterComponent from "@/shared/components/footer";
-import ModelBuilderSection from "./ModelBuilderSection";
 import StackSection from "./StackSection";
 import InfrastructureSection from "./InfrastructureSection";
 import ReviewsSection from "./ReviewsSection";
+import { HOME_MODEL_BUILDER_PROPS } from "../constants/home-model-builder";
+import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 
 const HomeComponent = () => {
   return (
@@ -23,7 +24,7 @@ const HomeComponent = () => {
       <StackSection />
       <NeevcloudSection />
       {/* <ModuleSection /> */}
-      <ModelBuilderSection />
+      <ModelBuilderSection {...HOME_MODEL_BUILDER_PROPS} />
       <ComparisonSection />
       <InfrastructureSection />
       <ReviewsSection />

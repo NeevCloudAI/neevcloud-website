@@ -8,6 +8,8 @@ import FaqSection from "@/shared/components/faq/faq-section";
 import HeroSection from "@/shared/components/HeroSection";
 import DeployInstanceSection from "./DeployInstanceSection";
 import AIStackSection from "./AIStackSection";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import PricingSection from "@/shared/components/pricing/Pricingsection";
 
 const CpuClusterComponent = () => {
   return (
@@ -42,11 +44,22 @@ const CpuClusterComponent = () => {
           image="/images/cpu.png"
         />
       </section>
-      <DeployInstanceSection />
+      <PricingSection
+        headingLine1="Every Workload"
+        headingLine2Primary="Flat rate."
+        headingLine2White="Unmetered."
+        subText="Commit and Save. The Longer the Plan, the Lower the Rate."
+        imageSrc="/images/deploy-instance.png"
+        buttons={[
+          { label: "Deploy Instance" },
+          
+        ]}
+      />
+
       <AIStackSection />
       <OSImageSection />
       <PrivateNetworkSection />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

@@ -35,6 +35,7 @@
   --color-gray-50: var(--gray-50);
   --color-green-50: var(--green-50);
   --color-green-100: var(--green-100);
+  --color-green-10: var(--green-10);
   --color-gray-110: var(--gray-110);
   --color-gray-120: var(--gray-120);
   --color-gray-125: var(--gray-125);
@@ -89,6 +90,7 @@
   --gray-120: #101010;
   --gray-125: #171a1c;
 
+  --green-10: #005150;
   --green-50: #002e27;
   --green-100: #001411;
 

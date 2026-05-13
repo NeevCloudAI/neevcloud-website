@@ -20,6 +20,7 @@ interface TextProps
     | "gray-60"
     | "gray-75"
     | "red-50"
+    | "green-10"
     | "primary-60"
     | "gray-90"
     | "green-50"

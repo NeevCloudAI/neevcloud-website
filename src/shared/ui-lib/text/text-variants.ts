@@ -43,6 +43,7 @@ export const textVariants = cva("h-fit ", {
       "gray-90": "text-gray-90",
       "red-50": "text-red-50",
       "green-50": "text-green-50",
+      "green-10": "text-green-10",
       "primary-60": "text-primary-60",
       "green-100": "text-green-100",
     },

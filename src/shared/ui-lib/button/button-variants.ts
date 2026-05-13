@@ -13,6 +13,7 @@ export const buttonVariants = cva(
         "outline-primary": `bg-white`,
         white: `bg-white`,
         "white-outline-right": `border-r border-white-10`,
+        "white-outline": `border border-white`,
         ghost: `bg-transparent`,
       },
       size: {

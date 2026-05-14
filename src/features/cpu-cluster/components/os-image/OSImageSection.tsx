@@ -20,7 +20,7 @@ const OSImageSection = () => {
 
   const selectedImage = useMemo(
     () => imageList.find((item) => item.title === selectedImageTitle),
-    [imageList, selectedImageTitle]
+    [imageList, selectedImageTitle],
   );
 
   const handleSectionChange = useCallback((section: OsSectionId) => {

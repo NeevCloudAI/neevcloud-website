@@ -13,7 +13,7 @@ const TOPIC_DISPLAY_ORDER: readonly FaqCategory[] = [
 ];
 
 export function buildFaqTopicSummaries(
-  items: readonly FaqItem[]
+  items: readonly FaqItem[],
 ): FaqTopicSummary[] {
   const counts = new Map<FaqCategory, number>();
   for (const item of items) {

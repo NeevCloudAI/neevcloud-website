@@ -1,5 +1,7 @@
 import { Button, Divider, Text } from "@/shared/ui-lib";
-import MegaMenuLinkRow, { type MegaMenuLinkRowProps } from "./mega-menu-link-row";
+import MegaMenuLinkRow, {
+  type MegaMenuLinkRowProps,
+} from "./mega-menu-link-row";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -92,7 +94,10 @@ export default function ProductMegaMenu() {
     <div className="flex w-full flex-col gap-4 p-8 shadow-sm">
       <div className="flex flex-col gap-6 md:flex-row md:gap-8">
         {PRODUCT_MEGA_MENU_COLUMNS.map((column, columnIndex) => (
-          <div key={columnIndex} className="min-w-0 w-full md:min-w-[280px] lg:min-w-[350px]">
+          <div
+            key={columnIndex}
+            className="min-w-0 w-full md:min-w-[280px] lg:min-w-[350px]"
+          >
             {column.sections.map((section, sectionIndex) => (
               <div key={section.heading}>
                 <Text
@@ -101,10 +106,7 @@ export default function ProductMegaMenu() {
                 >
                   {section.heading}
                 </Text>
-                <Divider
-                  orientation="horizontal"
-                  className="my-2 bg-gray-60"
-                />
+                <Divider orientation="horizontal" className="my-2 bg-gray-60" />
                 {section.links.map((link) => (
                   <MegaMenuLinkRow
                     key={`${section.heading}-${link.title}`}

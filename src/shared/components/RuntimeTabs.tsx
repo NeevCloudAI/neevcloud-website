@@ -51,12 +51,15 @@ const RuntimeTabs = () => {
   const highlightedLines = useMemo(() => {
     if (activeTab === "CLI") {
       return CLI_CODE_LINES.map((tokens, lineIdx) =>
-        renderLineTokens(tokens, `cli-${lineIdx}`)
+        renderLineTokens(tokens, `cli-${lineIdx}`),
       );
     }
     const lines = RUNTIME_CODE[activeTab];
     return lines.map((line, lineIdx) =>
-      renderLineTokens(tokenizeGenericCodeLine(line), `${activeTab}-${lineIdx}`)
+      renderLineTokens(
+        tokenizeGenericCodeLine(line),
+        `${activeTab}-${lineIdx}`,
+      ),
     );
   }, [activeTab]);
 

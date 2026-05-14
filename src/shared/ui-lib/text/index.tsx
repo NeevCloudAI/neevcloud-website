@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 import { textVariants } from "./text-variants";
 
 interface TextProps
-  extends React.HTMLAttributes<HTMLElement>,
-    VariantProps<typeof textVariants> {
+  extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof textVariants> {
   as?: keyof HTMLElementTagNameMap;
 }
 
@@ -32,7 +31,7 @@ function Text({
           textColor,
           lineHeight,
           fontFamily,
-        })
+        }),
       )}
       {...props}
     />

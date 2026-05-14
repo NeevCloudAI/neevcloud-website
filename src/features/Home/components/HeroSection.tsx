@@ -41,7 +41,7 @@ const HeroSection = () => {
           "Run AI workloads with sovereign control, security, and scalability.",
       },
     ],
-    []
+    [],
   );
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);

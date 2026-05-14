@@ -54,7 +54,10 @@ export default function ResourcesMegaMenu() {
       <div className="flex flex-col gap-6 md:flex-row md:gap-8">
         <div className="flex flex-col gap-6 md:flex-row md:gap-8">
           {RESOURCES_MEGA_MENU_COLUMNS.map((column, columnIndex) => (
-            <div key={columnIndex} className="min-w-0 w-full md:min-w-[280px] lg:min-w-[350px]">
+            <div
+              key={columnIndex}
+              className="min-w-0 w-full md:min-w-[280px] lg:min-w-[350px]"
+            >
               {column.sections.map((section, sectionIndex) => (
                 <div key={section.heading}>
                   <Text

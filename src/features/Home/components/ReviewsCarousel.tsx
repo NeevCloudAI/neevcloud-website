@@ -130,7 +130,7 @@ export default function ReviewsCarousel() {
           type="button"
           className={cn(
             "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
           )}
           aria-label="Show previous reviews"
           onClick={() => scrollByDirection("left")}
@@ -141,7 +141,7 @@ export default function ReviewsCarousel() {
           type="button"
           className={cn(
             "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
           )}
           aria-label="Show next reviews"
           onClick={() => scrollByDirection("right")}

@@ -3,7 +3,7 @@ import { useMemo } from "react";
 
 export function useFilteredFaqs(
   items: readonly FaqItem[],
-  activeTopic: FaqTopic
+  activeTopic: FaqTopic,
 ): FaqItem[] {
   return useMemo(() => {
     if (activeTopic === "All") {

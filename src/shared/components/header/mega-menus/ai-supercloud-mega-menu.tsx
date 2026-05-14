@@ -2,7 +2,6 @@ import { Button, Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
-import Image from "next/image";
 
 type MegaMenuSectionBlock = {
   heading: string;

@@ -10,7 +10,7 @@ const StepContent = ({ step }: StepContentProps) => {
   return (
     <div>
       {/* Big faded step number */}
-      <p className="text-[7rem] md:text-[9rem] font-bold leading-none text-[var(--gray-60)] select-none">
+      <p className="text-[7rem] md:text-[9rem] font-bold leading-none text-gray-60 select-none">
         {step.number}
       </p>
 

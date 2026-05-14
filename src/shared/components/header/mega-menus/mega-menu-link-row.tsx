@@ -21,7 +21,7 @@ export default function MegaMenuLinkRow({
   const rowClassName = cn(
     "p-2 mt-2 flex items-center gap-2 rounded-md",
     href &&
-      "p-2 outline-offset-2 transition-colors hover:bg-gray-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+      "p-2 outline-offset-2 transition-colors hover:bg-gray-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
   );
 
   const content = (

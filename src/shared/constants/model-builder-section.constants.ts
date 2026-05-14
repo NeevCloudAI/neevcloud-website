@@ -3,7 +3,7 @@ import {
   ModelFeature,
   RuntimeCodeMap,
   RuntimeTab,
-} from "../types/model-builder-section.types";
+} from "@/shared/types/model-builder-section.types";
 
 export const MODEL_BUILDER_FEATURES: ModelFeature[] = [
   {

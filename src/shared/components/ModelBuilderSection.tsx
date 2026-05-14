@@ -3,8 +3,8 @@ import { Text } from "@/shared/ui-lib";
 import {
   MODEL_BUILDER_COPY,
   MODEL_BUILDER_FEATURES,
-} from "../constants/model-builder-section.constants";
-import RuntimeTabs from "./RuntimeTabs";
+} from "@/shared/constants/model-builder-section.constants";
+import RuntimeTabs from "@/shared/components/RuntimeTabs";
 
 const ModelBuilderSection = () => {
   return (

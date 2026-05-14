@@ -1,4 +1,4 @@
-import type { CodeToken } from "../types/model-builder-section.types";
+import type { CodeToken } from "@/shared/types/model-builder-section.types";
 
 /** Light syntax pass for non-CLI tabs: strings, `#` / `//` comments, rest default. */
 export function tokenizeGenericCodeLine(line: string): CodeToken[] {

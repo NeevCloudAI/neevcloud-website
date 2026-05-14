@@ -6,7 +6,7 @@ import NeevcloudSection from "./NeevcloudSection";
 import ComparisonSection from "./ComparisonSection";
 import NounSection from "./NounSection";
 import FooterComponent from "@/shared/components/footer";
-import ModelBuilderSection from "./ModelBuilderSection";
+import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 import StackSection from "./StackSection";
 import InfrastructureSection from "./InfrastructureSection";
 import ReviewsSection from "./ReviewsSection";
@@ -22,7 +22,6 @@ const HomeComponent = () => {
       </div>
       <StackSection />
       <NeevcloudSection />
-      {/* <ModuleSection /> */}
       <ModelBuilderSection />
       <ComparisonSection />
       <InfrastructureSection />

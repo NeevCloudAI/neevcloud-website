@@ -1,8 +1,8 @@
 import type {
   ComputeInstance,
   ComputePillVariant,
-  NetworkingFeature,
 } from "@/features/cpu-cluster/data/private-network-section-types";
+import { FeatureCardProps } from "@/shared/components/feature-card";
 
 export const FLOW_ARROW_COUNT = 5;
 export const INSTANCE_STAT_SEPARATOR = ".";
@@ -17,7 +17,7 @@ export const ZERO_EGRESS_DESCRIPTION_LINES = [
   "Build complex AI infrastructure without worrying about bandwidth costs.",
 ];
 
-export const NETWORKING_FEATURES: NetworkingFeature[] = [
+export const NETWORKING_FEATURES: FeatureCardProps[] = [
   {
     title: "Private VPC",
     description: "Isolated virtual networks per project.",

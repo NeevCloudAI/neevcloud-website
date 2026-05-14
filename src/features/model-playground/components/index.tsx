@@ -7,6 +7,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 import ExploreModelsSection from "./ExploreModelsSection";
 import ExperimentationSection from "./ExperimentationSection";
 import AvailableModelsSection from "./AvailableModelsSection";
+import ModelsSection from "./ModelsSection";
 
 const ModelPlaygroundComponent = () => {
   return (
@@ -43,6 +44,7 @@ const ModelPlaygroundComponent = () => {
           image="/images/playground.png"
         />
       </section>
+      <ModelsSection />
       <AvailableModelsSection />
       <ExperimentationSection />
       <ExploreModelsSection />

@@ -1,6 +1,9 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import { Languages } from "lucide-react";
+import {
+  AVAILABLE_MODEL_CATEGORIES,
+  type AvailableModelCategory,
+} from "@/features/model-playground/data/available-models";
 
 const AvailableModelsSection = () => {
   return (
@@ -12,64 +15,66 @@ const AvailableModelsSection = () => {
             Across Categories
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black" className="mt-2">
+        <Text align="center" textColor="black" className="mt-2 block md:hidden">
           Access a curated collection of state-of-the-art models spanning
           language understanding, computer vision, audio processing, and
           specialized domains. Each model includes interactive demos and clear
           documentation.
         </Text>
-        <div>
-          <div className="w-full bg-gray-10 p-4 md:p-8">
-            <div className="p-3 bg-white w-fit rounded-md">
-              <Languages size={30} className="shrink-0 text-primary pr-1" />
-            </div>
-            <Text as="h5">Text · Language</Text>
-
-            <Text as="h3" weight="semibold">
-              Language
-            </Text>
-            <Text as="h6">
-              Generate text, answer questions, summarize documents, and
-              understand context across 100+ languages.
-            </Text>
-            <ul className="flex list-none flex-col gap-1.5 mt-4 md:mt-8">
-              <li className="flex gap-2 rounded-md bg-white px-4 py-2">
-                <Text as="h6" textColor="primary" className="shrink-0">
-                  •
-                </Text>
-                <Text as="h6" textColor="gray-90">
-                  GPT-style models for open-ended generation
-                </Text>
-              </li>
-              <li className="flex gap-2 rounded-md bg-white px-4 py-2">
-                <Text as="h6" textColor="primary" className="shrink-0">
-                  •
-                </Text>
-                <Text as="h6" textColor="gray-90">
-                  Instruction-tuned models for task completion
-                </Text>
-              </li>
-              <li className="flex gap-2 rounded-md bg-white px-4 py-2">
-                <Text as="h6" textColor="primary" className="shrink-0">
-                  •
-                </Text>
-                <Text as="h6" textColor="gray-90">
-                  Specialized models for code generation
-                </Text>
-              </li>
-              <li className="flex gap-2 rounded-md bg-white px-4 py-2">
-                <Text as="h6" textColor="primary" className="shrink-0">
-                  •
-                </Text>
-                <Text as="h6" textColor="gray-90">
-                  Multilingual models supporting 100+ languages{" "}
-                </Text>
-              </li>
-            </ul>
-          </div>
+        <Text align="center" textColor="black" className="mt-2 hidden md:block">
+          Access a curated collection of state-of-the-art models spanning
+          language understanding,
+        </Text>
+        <Text align="center" textColor="black" className="hidden md:block mt-2">
+          computer vision, audio processing, and specialized domains. Each model
+          includes interactive
+        </Text>
+        <Text align="center" textColor="black" className="hidden md:block mt-2">
+          demos and clear documentation.
+        </Text>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 md:pt-8">
+          {AVAILABLE_MODEL_CATEGORIES.map((category) => (
+            <ModelCategoryCard key={category.title} category={category} />
+          ))}
         </div>
       </Container>
     </section>
+  );
+};
+
+type ModelCategoryCardProps = {
+  category: AvailableModelCategory;
+};
+
+const ModelCategoryCard = ({ category }: ModelCategoryCardProps) => {
+  const Icon = category.icon;
+
+  return (
+    <article className="w-full bg-gray-10 p-4 md:p-8 rounded-md flex flex-col gap-2">
+      <div className="p-3 bg-white w-fit rounded-md">
+        <Icon size={30} className="shrink-0 text-primary pr-1" />
+      </div>
+      <Text as="h5">{category.badgeLabel}</Text>
+      <Text as="h3" weight="semibold">
+        {category.title}
+      </Text>
+      <Text as="h6">{category.description}</Text>
+      <ul className="flex list-none flex-col gap-1.5 mt-2 md:mt-4">
+        {category.features.map((feature) => (
+          <li
+            key={feature}
+            className="flex gap-2 rounded-md bg-white px-4 py-2"
+          >
+            <Text as="h6" textColor="primary" className="shrink-0">
+              •
+            </Text>
+            <Text as="h6" textColor="gray-90">
+              {feature}
+            </Text>
+          </li>
+        ))}
+      </ul>
+    </article>
   );
 };
 

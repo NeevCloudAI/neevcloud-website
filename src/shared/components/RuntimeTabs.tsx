@@ -8,13 +8,13 @@ import {
   MODEL_BUILDER_COPY,
   RUNTIME_CODE,
   RUNTIME_TABS,
-} from "../constants/model-builder-section.constants";
+} from "@/shared/constants/model-builder-section.constants";
 import type {
   CodeToken,
   CodeTokenVariant,
   RuntimeTab,
-} from "../types/model-builder-section.types";
-import { tokenizeGenericCodeLine } from "../utils/model-builder-section.utils";
+} from "@/shared/types/model-builder-section.types";
+import { tokenizeGenericCodeLine } from "@/shared/utils/model-builder-section.utils";
 
 const TOKEN_CLASS: Record<CodeTokenVariant, string> = {
   accent: "text-primary",

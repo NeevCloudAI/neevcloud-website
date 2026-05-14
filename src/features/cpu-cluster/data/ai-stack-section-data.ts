@@ -1,6 +1,6 @@
-import { AIStackSectionFeature } from "../types/ai-stack-types";
+import { FeatureCardProps } from "@/shared/components/feature-card";
 
-export const AI_STACK_SECTION_FEATURES: AIStackSectionFeature[] = [
+export const AI_STACK_SECTION_FEATURES: FeatureCardProps[] = [
   {
     title: "Model API Gateway",
     description:

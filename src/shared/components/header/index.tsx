@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeaderComponent = () => {
   return (
-    <Container className="relative flex min-h-16 flex-wrap items-center gap-3 py-3 md:min-h-20 md:flex-nowrap md:py-0">
+    <Container className="relative flex flex-wrap items-center gap-3 py-3 md:flex-nowrap md:py-0">
       <HeaderMenu>
         <Link href="/">
           <Image

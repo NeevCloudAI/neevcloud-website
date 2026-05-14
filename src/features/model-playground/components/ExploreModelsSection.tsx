@@ -39,7 +39,7 @@ const ExploreModelsSection = () => {
         </Text>
 
         <div
-          className="my-4 flex z-2 flex-row flex-wrap items-center justify-center gap-0 md:my-8"
+          className="my-4 flex z-2 flex-row flex-wrap items-center justify-center gap-4 md:gap-0 md:my-8"
           role="tablist"
           aria-label="Model playground setup steps"
         >

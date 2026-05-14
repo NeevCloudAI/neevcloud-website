@@ -1,13 +1,11 @@
 import Container from "@/shared/components/container";
-import { FeatureCard } from "@/shared/components/feature-card";
+import {
+  FeatureCard,
+  FeatureCardProps,
+} from "@/shared/components/feature-card";
 import { Text } from "@/shared/ui-lib";
 
-export type ExperimentationSectionFeature = {
-  title: string;
-  description: string;
-};
-
-const EXPERIMENTATION_SECTION_FEATURES: ExperimentationSectionFeature[] = [
+const EXPERIMENTATION_SECTION_FEATURES: FeatureCardProps[] = [
   {
     title: "Interactive Testing Interface",
     description:

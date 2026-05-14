@@ -1,6 +1,6 @@
-import { PricingFeature } from "../types/pricing-types";
+import { FeatureCardProps } from "@/shared/components/feature-card";
 
-export const PRICING_FEATURES: PricingFeature[] = [
+export const PRICING_FEATURES: FeatureCardProps[] = [
   {
     title: "Private VPC",
     description: "Isolated virtual networks per project.",

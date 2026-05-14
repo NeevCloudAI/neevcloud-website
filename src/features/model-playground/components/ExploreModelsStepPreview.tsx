@@ -28,7 +28,7 @@ function Step1Preview() {
       <Text textColor="gray-75" fontFamily="spaceMono">
         STEP 1 - CHOOSE A CATEGORY
       </Text>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <div className="border border-green-50 bg-green-100 rounded-md p-3 md:p-4 flex items-center justify-between gap-2">
           <div className="flex min-w-0 items-center gap-2">
             <Languages size={22} className="shrink-0 text-primary pr-1" />

@@ -235,7 +235,7 @@ const UseCasesSection = () => {
         </Text>
       </Text>
       <Text className="mt-2">Built for Every AI Workload</Text>
-      <div className="w-full flex border-b border-gray-60 items-center justify-center mt-4 md:mt-8">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b border-gray-60 items-center justify-center mt-4 md:mt-8">
         {USE_CASES.map((tab) => (
           <Button
             key={tab.id}
@@ -252,7 +252,7 @@ const UseCasesSection = () => {
           </Button>
         ))}
       </div>
-      <div className="relative bg-gray-10 w-full p-4 md:p-8 flex gap-4 overflow-hidden">
+      <div className="relative bg-gray-10 w-full p-4 md:p-8 flex flex-col md:flex-row gap-4 overflow-hidden">
         <div>
           <div className="absolute bottom-[-58%] left-0">
             <Image
@@ -284,7 +284,7 @@ const UseCasesSection = () => {
             ))}
           </div>
         </div>
-        <div className="bg-primary p-4 rounded-lg w-full lg:w-[30%] flex flex-col gap-4 shrink-0">
+        <div className="bg-primary p-4 rounded-lg md:w-[30%] flex flex-col gap-4 shrink-0">
           {activeCase.summary.map((block) => (
             <div key={block.label} className="bg-white p-6 rounded-lg">
               <Text as="small" textColor="gray-60">

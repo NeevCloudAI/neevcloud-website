@@ -1,10 +1,5 @@
 export type FlowDirection = "forward" | "backward";
 
-export type NetworkingFeature = {
-  title: string;
-  description: string;
-};
-
 export type ComputePillVariant = "cpu" | "gpu";
 
 export type ComputeInstance = {

@@ -6,7 +6,7 @@ import FooterComponent from "@/shared/components/footer";
 import { Divider, Text } from "@/shared/ui-lib";
 import FaqSection from "@/shared/components/faq/faq-section";
 import HeroSection from "@/shared/components/HeroSection";
-import DeployInstanceSection from "./DeployInstanceSection";
+import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import AIStackSection from "./AIStackSection";
 
 const CpuClusterComponent = () => {
@@ -42,7 +42,39 @@ const CpuClusterComponent = () => {
           image="/images/cpu.png"
         />
       </section>
-      <DeployInstanceSection />
+      <DeployInstanceSection
+        title={
+          <div className="flex flex-row md:flex-col items-center justify-center gap-1 md:gap-2">
+            <Text
+              as="h2"
+              textColor="white"
+              weight={"semibold"}
+              className="md:leading-12"
+            >
+              Every Workload
+            </Text>
+            <Text as="h2" weight={"semibold"} textColor="primary">
+              Flat rate.
+              <Text
+                as="span"
+                variant="h2"
+                textColor="white"
+                weight={"semibold"}
+              >
+                Unmetered.
+              </Text>
+            </Text>
+          </div>
+        }
+        description1="Commit and Save. The Longer the Plan, the Lower the Rate."
+        image={{
+          src: "/images/deploy-instance.png",
+          alt: "Pricing",
+          width: 1000,
+          height: 1000,
+        }}
+        buttonText1="Deploy Instance"
+      />
       <AIStackSection />
       <OSImageSection />
       <PrivateNetworkSection />

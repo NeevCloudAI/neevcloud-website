@@ -6,6 +6,7 @@ export type DeployInstanceImage = {
 };
 
 export type DeployInstanceSectionProps = {
+  showBorder?: boolean;
   showBGImage?: boolean;
   showLogo?: boolean;
   showBlur?: boolean;

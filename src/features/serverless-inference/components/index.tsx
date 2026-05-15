@@ -22,7 +22,7 @@ const ServerlessInferenceComponent = () => {
             <Text
               as="h1"
               weight="semibold"
-              className="max-w-4xl text-center mt-4 md:mt-6 md:leading-16"
+              className="max-w-4xl text-center mt-4 md:mt-6"
             >
               Run Any Model. Pay Per Token.
               <Text as="span" variant="h1" textColor="primary">

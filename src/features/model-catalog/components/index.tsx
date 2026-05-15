@@ -20,7 +20,7 @@ const ModelCatalogComponent = () => {
               as="h1"
               align="center"
               weight="semibold"
-              className="md:leading-16 max-w-4xl mt-4 md:mt-6"
+              className="max-w-4xl mt-4 md:mt-6"
             >
               20+ production-Ready AI models.
               <Text variant="h1" as="span" textColor="primary">
@@ -71,19 +71,6 @@ const ModelCatalogComponent = () => {
       />
       <DeployInstanceSection
         title={
-          // <div className="flex flex-row md:flex-col items-center justify-center gap-1 md:gap-2">
-          //   <Text
-          //     as="h2"
-          //     textColor="white"
-          //     weight={"semibold"}
-          //     className="md:leading-12"
-          //   >
-          //     Find the right model
-          //   </Text>
-          //   <Text as="h2" weight={"semibold"} textColor="primary">
-          //     for your use case.
-          //   </Text>
-          // </div>
           <Text
             as="h2"
             textColor="white"

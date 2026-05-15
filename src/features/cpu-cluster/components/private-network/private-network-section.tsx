@@ -28,12 +28,7 @@ function PrivateNetworkSection() {
         <Text as="h2" weight="semibold" align="center" textColor="primary">
         as your GPU Cluster.
         </Text> */}
-        <Text
-          as="h2"
-          weight="semibold"
-          align="center"
-          className="max-w-5xl md:leading-12"
-        >
+        <Text as="h2" weight="semibold" align="center" className="max-w-5xl">
           Same Private Network,
           <Text as="span" variant="h2" textColor="primary" weight="semibold">
             as your GPU Cluster.

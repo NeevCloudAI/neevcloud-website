@@ -22,7 +22,7 @@ const ModelPlaygroundComponent = () => {
               as="h1"
               align="center"
               weight="semibold"
-              className=" md:leading-16 max-w-3xl mt-4"
+              className="max-w-3xl mt-4"
               textColor="primary"
             >
               Experience

@@ -5,6 +5,7 @@ import type { DeployInstanceSectionProps } from "@/shared/types/deploy-instance-
 
 const DeployInstanceSection = ({
   title,
+  showBorder = true,
   description,
   image,
   buttonText1,
@@ -18,7 +19,7 @@ const DeployInstanceSection = ({
       className={`relative ${showBGImage ? 'bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black' : "bg-gray-10"} py-[3vh] md:py-[7vh]`}
     >
       {showLogo && (
-        <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
+        <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-full top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
       )}
       {showBlur && (
         <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
@@ -33,7 +34,9 @@ const DeployInstanceSection = ({
           {description}
         </Text>
 
-        <div className="bg-transparent backdrop-blur-sm border border-white-10 p-2 rounded-md mt-4 md:mt-8">
+        <div
+          className={`bg-transparent backdrop-blur-sm ${showBorder ? "border border-white-10" : ""} p-2 rounded-md mt-4 md:mt-8`}
+        >
           <Image
             src={image.src}
             alt={image.alt}

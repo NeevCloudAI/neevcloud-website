@@ -11,3 +11,8 @@ Make it:
 
 1. SEO friendly
 2. Accessibility friendly
+
+- hero image
+- FAQ of every page
+- line height
+- section spacing

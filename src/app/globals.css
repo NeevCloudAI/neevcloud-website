@@ -156,10 +156,10 @@ body {
     @apply text-xs sm:text-xs md:text-sm lg:text-base font-normal;
   }
   p {
-    @apply text-sm;
+    @apply text-sm font-normal;
   }
   small {
-    @apply text-xs block;
+    @apply text-xs block font-normal;
   }
   input {
     background-color: var(--white);

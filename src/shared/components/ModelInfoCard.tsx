@@ -19,7 +19,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
     <article
       className={cn(
         "flex flex-col justify-center bg-gray-10 p-4 rounded-md",
-        className
+        className,
       )}
     >
       <div className="flex items-center justify-between gap-2">
@@ -55,7 +55,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
               className={cn(
                 "flex flex-col p-4 border-gray-60",
                 !isLastRow && "border-b",
-                !isRightColumn && "md:border-r"
+                !isRightColumn && "md:border-r",
               )}
             >
               <Text as="small" textColor="gray-75">

@@ -21,7 +21,7 @@ const CpuClusterComponent = () => {
             <Text
               as="h1"
               weight="semibold"
-              className="max-w-7xl text-center mt-4 md:mt-6 md:leading-16"
+              className="max-w-7xl text-center mt-4 md:mt-6 "
             >
               The
               <Text as="span" variant="h1" textColor="primary">
@@ -43,7 +43,7 @@ const CpuClusterComponent = () => {
             as="h2"
             textColor="white"
             weight="semibold"
-            className="max-w-3xl md:leading-12"
+            className="max-w-3xl"
           >
             Every Workload
             <Text as="span" variant="h2" textColor="primary">

@@ -13,7 +13,7 @@ const AIStackSection = () => {
           textColor="white"
           weight="semibold"
           align="center"
-          className="max-w-2xl md:leading-12"
+          className="max-w-2xl"
         >
           Where CPU Fits in an
           <Text as="span" variant="h2" textColor="primary" weight="semibold">

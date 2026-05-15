@@ -20,7 +20,7 @@ const ModelApiComponent = () => {
               align="center"
               textColor="primary"
               weight="semibold"
-              className="md:leading-16 max-w-4xl mt-4 md:mt-6"
+              className="max-w-4xl mt-4 md:mt-6"
             >
               Production-Ready
               <Text variant="h1" as="span" textColor="black">

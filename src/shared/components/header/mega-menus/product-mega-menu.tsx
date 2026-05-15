@@ -56,6 +56,7 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconSrc: "/icons/nvme.svg",
             iconAlt: "NVMe storage",
             title: "High-Performance NVMe",
+            href: "/nvme",
             description: "Sub-Millisecond Latency",
           },
           {

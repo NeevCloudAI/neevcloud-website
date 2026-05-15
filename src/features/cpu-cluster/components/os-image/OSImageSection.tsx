@@ -34,12 +34,7 @@ const OSImageSection = () => {
 
   return (
     <Container className="py-[3vh] md:py-[7vh] flex flex-col items-center justify-center">
-      <Text
-        as="h2"
-        align="center"
-        weight="semibold"
-        className="max-w-4xl md:leading-12"
-      >
+      <Text as="h2" align="center" weight="semibold" className="max-w-4xl">
         Pre-built OS, and Images,
         <Text as="span" variant="h2" textColor="primary" weight="semibold">
           Ready to Deploy

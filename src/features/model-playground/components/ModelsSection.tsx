@@ -4,36 +4,24 @@ import { Divider, Text } from "@/shared/ui-lib";
 const ModelsSection = () => {
   return (
     <section className="relative bg-gray-10 py-[3vh] md:py-[10vh]">
-      <Container className="flex flex-col justify-center">
-        <Text as="h2" weight="semibold" align="center">
-          See Models in Action
+      <Container className="flex flex-col items-center justify-center">
+        <Text as="h2" weight="semibold" align="center" className="max-w-4xl">
+          See Models in Action,
           <Text
             as="span"
             variant="h2"
             weight="semibold"
             align="center"
             textColor="primary"
-            className="md:block"
           >
             Not Just in Theory
           </Text>
         </Text>
-        <Text align="center" textColor="black" className="mt-2 block md:hidden">
+        <Text align="center" textColor="black" className="mt-2 max-w-2xl">
           Understanding what a model can do is easier when you can actually use
           it. Our Model Playground gives you hands-on access to test prompts,
           upload images, analyze text, and explore capabilities before writing a
           single line of code.
-        </Text>
-        <Text align="center" textColor="black" className="mt-2 hidden md:block">
-          Understanding what a model can do is easier when you can actually use
-          it. Our Model Playground
-        </Text>
-        <Text align="center" textColor="black" className="hidden md:block mt-2">
-          gives you hands-on access to test prompts, upload images, analyze
-          text, and explore capabilities
-        </Text>
-        <Text align="center" textColor="black" className="hidden md:block mt-2">
-          before writing a single line of code.
         </Text>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 items-center mt-4 md:mt-8">

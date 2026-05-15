@@ -21,7 +21,9 @@ export function FeatureCard({
       <Text as="h3" weight="semibold" className="mt-4">
         {title}
       </Text>
-      <Text>{description}</Text>
+      <Text textColor={theme === "dark" ? "gray-10" : "black"} className="mt-2">
+        {description}
+      </Text>
     </div>
   );
 }

@@ -6,11 +6,12 @@ export type DeployInstanceImage = {
 };
 
 export type DeployInstanceSectionProps = {
+  showBGImage?: boolean;
+  showLogo?: boolean;
+  showBlur?: boolean;
   title: React.ReactNode;
-  description1: string;
-  description2?: string;
-  description3?: string;
+  description: string;
   image: DeployInstanceImage;
-  buttonText1: string;
+  buttonText1?: string;
   buttonText2?: string;
 };

@@ -20,7 +20,7 @@ const OSImageSection = () => {
 
   const selectedImage = useMemo(
     () => imageList.find((item) => item.title === selectedImageTitle),
-    [imageList, selectedImageTitle],
+    [imageList, selectedImageTitle]
   );
 
   const handleSectionChange = useCallback((section: OsSectionId) => {
@@ -33,12 +33,17 @@ const OSImageSection = () => {
   }, []);
 
   return (
-    <Container className="py-[3vh] md:py-[7vh]">
-      <Text as="h2" align="center" weight="semibold">
-        Pre-built OS, and Images
-      </Text>
-      <Text as="h2" align="center" weight="semibold" textColor="primary">
-        Ready to Deploy
+    <Container className="py-[3vh] md:py-[7vh] flex flex-col items-center justify-center">
+      <Text
+        as="h2"
+        align="center"
+        weight="semibold"
+        className="max-w-4xl md:leading-12"
+      >
+        Pre-built OS, and Images,
+        <Text as="span" variant="h2" textColor="primary" weight="semibold">
+          Ready to Deploy
+        </Text>
       </Text>
       <Text as="h6" align="center" textColor="black" className="mt-2">
         Boot in seconds with curated stacks, or upload your own ISO.
@@ -59,7 +64,7 @@ const OSImageSection = () => {
           </Button>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
         {imageList.map((item) => (
           <OSImageCard
             key={item.title}
@@ -69,7 +74,7 @@ const OSImageSection = () => {
           />
         ))}
       </div>
-      <div className="mt-6 rounded-lg bg-tertiary p-4 md:px-8 md:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="mt-6 w-full rounded-lg bg-tertiary p-4 md:px-8 md:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         {selectedImage ? (
           <div className="flex items-center gap-1">
             <Text as="h4" textColor="blue-40" weight="normal">

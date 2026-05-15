@@ -1,7 +1,10 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
+import FaqSection from "@/shared/components/faq/faq-section";
+import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
 import { Divider, Text } from "@/shared/ui-lib";
+import ExploreApiSection from "./ExploreApiSection";
 
 const ModelApiComponent = () => {
   return (
@@ -12,32 +15,36 @@ const ModelApiComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <div className="flex flex-col items-center justify-center gap-1 md:gap-2 mt-4 md:mt-6">
-              <Text
-                as="h1"
-                align="center"
-                textColor="primary"
-                weight="semibold"
-                className=" md:leading-16"
-              >
-                Production-Ready
-                <Text variant="h1" as="span" textColor="black">
-                  AI Models
-                </Text>
+            <Text
+              as="h1"
+              align="center"
+              textColor="primary"
+              weight="semibold"
+              className="md:leading-16 max-w-4xl mt-4 md:mt-6"
+            >
+              Production-Ready
+              <Text variant="h1" as="span" textColor="black">
+                AI Models Through Simple APIs
               </Text>
-              <Text as="h1" align="center" weight="semibold">
-                Through Simple APIs
-              </Text>
-            </div>
+            </Text>
           }
-          description1="Integrate modern AI models into your applications with clean, well-documented APIs. From "
-          description2="prototype to production in minutes, not weeks."
+          description="Integrate modern AI models into your applications with clean, well-documented APIs. From prototype to production in minutes, not weeks."
           button1Text="Request API Access"
           button2Text="View Documentation"
           badgeText="Production AI Models"
           image="/images/gpu.png"
+          trustBadges={[
+            "Sub-100ms Latency",
+            "RESTful APIs",
+            "SOC 2 Type II",
+            "Multi-Framework Support",
+            "99.9% uptime SLA",
+          ]}
         />
       </section>
+      <ExploreApiSection />
+      <FaqSection />
+      <FooterComponent />
     </>
   );
 };

@@ -93,28 +93,25 @@ export default function InfrastructureSectionContent() {
         className="pointer-events-none absolute inset-0 z-10 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"
         aria-hidden="true"
       ></div>
-      <Container className="flex flex-col py-[3vh] md:py-[7vh]">
-        <div className="flex justify-center">
-          <Text as="h2">
-            Infrastructure That
-            <Text as="span" variant="h2" textColor="primary">
-              Removes Barriers
-            </Text>
+      <Container className="flex flex-col items-center py-[3vh] md:py-[7vh]">
+        <Text as="h2" weight="semibold" align="center" className="max-w-3xl">
+          Infrastructure That
+          <Text
+            as="span"
+            variant="h2"
+            textColor="primary"
+            className="w-full max-w-3xl mr-0 md:mr-0"
+          >
+            Removes Barriers
           </Text>
-          <Text as="h2">,</Text>
-        </div>
-
-        <Text as="h2" align="center">
-          Not Adds Them
+          , Not Adds Them
         </Text>
 
-        <div className="flex flex-col items-center my-4">
-          <Text>
-            We built NeevCloud to give every innovator access to world-class AI
-            infrastructure without the
-          </Text>
-          <Text>traditional limits of cost, complexity, or control.</Text>
-        </div>
+        <Text className="mt-2 max-w-2xl" align="center">
+          We built NeevCloud to give every innovator access to world-class AI
+          infrastructure without the traditional limits of cost, complexity, or
+          control.
+        </Text>
 
         <div className="flex flex-col md:flex-row mt-2 md:mt-8 gap-4">
           <div className="flex-2 bg-black-80 rounded-md">

@@ -31,7 +31,7 @@ function StackPanel({
       className={cn(
         "flex flex-col rounded-lg p-2 text-gray-90",
         isActive ? "opacity-100" : "opacity-50",
-        className,
+        className
       )}
       aria-labelledby={`stack-panel-${panel.id}-title`}
     >
@@ -59,7 +59,7 @@ function StackPanel({
               <span
                 className={cn(
                   " text-2xl font-normal leading-none transition-transform duration-200 select-none",
-                  activeItemId === item.id && "rotate-45",
+                  activeItemId === item.id && "rotate-45"
                 )}
                 aria-hidden
               >
@@ -75,7 +75,7 @@ function StackPanel({
                 "grid transition-[grid-template-rows,opacity] duration-300 ease-out",
                 activeItemId === item.id
                   ? "grid-rows-[1fr] opacity-100"
-                  : "grid-rows-[0fr] opacity-0",
+                  : "grid-rows-[0fr] opacity-0"
               )}
               aria-labelledby={`stack-item-button-${panel.id}-${item.id}`}
             >
@@ -102,13 +102,13 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId,
+      currentItemId === itemId ? "" : itemId
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId),
+      panel.items.some((item) => item.id === activeItemId)
     );
     return idx === -1 ? 0 : idx;
   })();
@@ -117,15 +117,18 @@ const StackSection = () => {
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat overflow-hidden bg-gray-10 py-[3vh] md:py-[7vh]">
       <Container className="relative flex flex-col gap-4 md:gap-12">
         <header className="flex flex-col items-center gap-1 md:gap-3 text-center">
-          <div className="flex flex-row">
-            <Text as="h2" weight="semibold">
-              One
-              <Text as="span" textColor="primary" variant="h2">
-                Vertical Stack
-              </Text>
-              . Silicon to endpoint.
+          <Text as="h2" weight="semibold">
+            One
+            <Text
+              as="span"
+              textColor="primary"
+              variant="h2"
+              className="mr-0 md:mr-0 max-w-5xl"
+            >
+              Vertical Stack
             </Text>
-          </div>
+            . Silicon to endpoint.
+          </Text>
           <Text as="h6" textColor="black">
             Deploy AI on infrastructure designed for scale, resilience, and
             speed.

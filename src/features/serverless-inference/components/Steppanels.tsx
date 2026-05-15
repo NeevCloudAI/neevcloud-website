@@ -1,17 +1,16 @@
+import { Text } from "@/shared/ui-lib";
 import {
   STEP_ONE_FILTERS,
   STEP_ONE_MODELS,
   STEP_THREE_BILLING,
-  STEP_TWO_CODE_LINES,
   STEP_TWO_TERMINAL_PATH,
 } from "../data/three-steps-data";
 import Image from "next/image";
-
-// ─── Step 1: Model picker ─────────────────────────────────────────────────────
+import { Search } from "lucide-react";
 
 export function StepOnePanel() {
   return (
-    <div className="bg-white rounded-xl p-4 w-full shadow-sm relative overflow-hidden">
+    <div className="bg-white rounded-xl w-full relative overflow-hidden">
       <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
         <Image
           src="/icons/logo.svg"
@@ -22,37 +21,22 @@ export function StepOnePanel() {
           style={{ filter: "brightness(0)" }}
         />
       </div>
-      {/* Search bar */}
-      <div className="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2 mb-3">
-        <svg
-          className="w-4 h-4 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
-          />
-        </svg>
-        <span className="text-gray-400 text-sm">Search 20+ models...</span>
+
+      <div className="px-4 pt-4">
+        <div className="flex items-center gap-2 border border-gray-60 rounded-md px-3 py-2 mb-3">
+          <Search size={16} className="text-gray-85" />
+          <span className="text-gray-85 text-sm">Search 20+ models...</span>
+        </div>
       </div>
 
-      {/* Filter chips */}
-      <div className="flex gap-2 mb-3 flex-wrap">
+      <div className="flex gap-2 mb-3 px-4 flex-wrap">
         {STEP_ONE_FILTERS.map((f) => (
-          <span
+          <Text
             key={f}
-            className={`text-xs px-3 py-1 rounded-full cursor-pointer font-medium ${
-              f === "All"
-                ? "bg-black text-white"
-                : "bg-gray-200 text-gray-600 hover:bg-gray-200"
-            }`}
+            className={`px-3 py-1 rounded-full cursor-pointer font-medium ${f === "All" ? "bg-black text-white" : "bg-gray-60 text-gray-75"}`}
           >
             {f}
-          </span>
+          </Text>
         ))}
       </div>
 
@@ -61,19 +45,21 @@ export function StepOnePanel() {
         {STEP_ONE_MODELS.map((m, i) => (
           <div
             key={i}
-            className={`flex items-center justify-between py-3 pl-3 ${
+            className={`flex items-center justify-between p-4 ${
               i === 0
-                ? "border-l-3 border-l-teal-500 border-b border-b-gray-200 rounded-sm [background:linear-gradient(to_right,#e6f7f5,transparent)]"
-                : "border-b border-b-gray-200"
+                ? "border-l-3 border-l-primary border-b border-b-gray-200 [background:linear-gradient(to_right,#e6f7f5,transparent)]"
+                : "border-b border-b-gray-60"
             }`}
           >
             <div>
-              <p className="text-sm font-semibold text-gray-900">{m.name}</p>
-              <p className="text-xs mt-0.5">{m.meta}</p>
+              <Text weight="semibold">{m.name}</Text>
+              <Text textColor="gray-85" as="h6">
+                {m.meta}
+              </Text>
             </div>
-            <p className="text-sm font-semibold text-teal-600 ml-4 whitespace-nowrap">
+            <Text as="h6" weight="semibold" textColor="primary">
               {m.price}
-            </p>
+            </Text>
           </div>
         ))}
       </div>
@@ -81,12 +67,9 @@ export function StepOnePanel() {
   );
 }
 
-// ─── Step 2: Code snippet ─────────────────────────────────────────────────────
-
 export function StepTwoPanel() {
   return (
-    <div className="bg-[#111] rounded-xl overflow-hidden w-full shadow-sm">
-      {/* Terminal top bar */}
+    <div className="bg-black rounded-xl overflow-hidden w-full shadow-sm">
       <div className="flex items-center gap-2 px-4 py-3 bg-[#1a1a1a] border-b border-white/10">
         <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
         <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
@@ -97,65 +80,221 @@ export function StepTwoPanel() {
       </div>
 
       {/* Code */}
-      <div className="p-5 font-mono text-sm leading-7">
-        {STEP_TWO_CODE_LINES.map((line, i) => {
-          if (line.type === "comment")
-            return (
-              <div key={i} className="text-white/35">
-                {line.text}
-              </div>
-            );
-
-          if (line.type === "keyword")
-            return (
-              <div key={i}>
-                {/* from / import are RED as shown in image */}
-                <span className="text-red-400">{line.text}</span>
-                <span className="text-white/80">{line.rest}</span>
-                <span className="text-red-400">{line.keyword2}</span>
-                <span className="text-white/80">{line.rest2}</span>
-              </div>
-            );
-
-          if (line.type === "var")
-            return (
-              <div key={i}>
-                <span className="text-teal-400">{line.text}</span>
-                <span className="text-white/70">{line.rest}</span>
-                {line.highlight && (
-                  <span className="text-teal-400">{line.highlight}</span>
-                )}
-                <span className="text-white/70">{line.rest2}</span>
-              </div>
-            );
-
-          if (line.type === "fn")
-            return (
-              <div key={i}>
-                <span className="text-teal-400">{line.text}</span>
-                <span className="text-white/70">{line.rest}</span>
-              </div>
-            );
-
-          return (
-            <div key={i} className="text-white/70">
-              {line.text}
-            </div>
-          );
-        })}
+      <div className="px-2 md:px-5 py-2 md:py-8 font-mono">
+        <Text fontFamily="spaceMono" textColor="gray-75">
+          # Two-line integration
+        </Text>
+        <pre>
+          <code>
+            <Text
+              fontFamily="spaceMono"
+              textColor="red-50"
+              className="leading-6"
+            >
+              from
+              <Text
+                as="span"
+                textColor="white"
+                variant="p"
+                className="mx-0 ml-1 md:mx-0 md:ml-1.5"
+              >
+                NeevCloud
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                className="mx-0 ml-1 md:mx-0 md:ml-1.5"
+              >
+                import
+              </Text>
+              <Text
+                as="span"
+                textColor="white"
+                variant="p"
+                className="mx-0 ml-1 md:mx-0 md:ml-1.5"
+              >
+                NeevCloud
+              </Text>
+            </Text>
+            <Text
+              fontFamily="spaceMono"
+              textColor="white"
+              className="leading-6"
+            >
+              client =
+              <Text
+                as="span"
+                textColor="green-10"
+                variant="p"
+                className="mx-0 ml-1 md:mx-0 md:ml-1.5"
+              >
+                NeevCloud
+              </Text>
+              <Text as="span" variant="p" className="mx-0 md:mx-0">
+                {`( api_key="sk-neev-...",`}
+              </Text>
+            </Text>
+            <Text
+              fontFamily="spaceMono"
+              textColor="white"
+              className="leading-6"
+            >
+              {`base_url="`}
+              <Text
+                as="span"
+                textColor="blue-40"
+                variant="p"
+                className="mx-0 md:mx-0"
+              >
+                https://api.neevcloud.com/v1
+              </Text>
+              <Text as="span" variant="p" className="mx-0 md:mx-0">
+                {`")`}
+              </Text>
+            </Text>
+            <Text
+              fontFamily="spaceMono"
+              textColor="white"
+              className="leading-6"
+            >
+              {`response = client.chat.completion.`}
+              <Text
+                as="span"
+                textColor="green-10"
+                variant="p"
+                className="mx-0 md:mx-0"
+              >
+                create
+              </Text>
+              <Text as="span" variant="p" className="mx-0 md:mx-0">
+                {`(`}
+              </Text>
+            </Text>
+            <Text
+              fontFamily="spaceMono"
+              textColor="white"
+              className="leading-6"
+            >
+              &nbsp; {`model=`}
+              <Text
+                as="span"
+                textColor="primary"
+                variant="p"
+                className="mx-0 md:mx-0"
+              >
+                {`"meta-llama-3.1-70b-instruct"`}
+              </Text>
+              <Text as="span" variant="p" className="mx-0 md:mx-0">
+                {`,`}
+              </Text>
+            </Text>
+            <Text
+              fontFamily="spaceMono"
+              textColor="white"
+              className="leading-6"
+            >
+              &nbsp; {`messages=[{ `}
+              <Text
+                as="span"
+                variant="p"
+                textColor="primary"
+                className="mx-0 md:mx-0"
+              >
+                {`"role"`}
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                textColor="white"
+                className="mx-0 md:mx-0"
+              >
+                {`:`}
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                textColor="primary"
+                className="mr-0 md:mr-0"
+              >
+                {`"user"`}
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                textColor="white"
+                className="mx-0 md:mx-0"
+              >
+                {`,`}
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                textColor="primary"
+                className="mr-0 md:mr-0"
+              >
+                {`"content"`}
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                textColor="white"
+                className="mx-0 md:mx-0"
+              >
+                {`,`}
+              </Text>
+              <Text
+                as="span"
+                variant="p"
+                textColor="primary"
+                className="mr-0 md:mr-0"
+              >
+                {`"Explain`}
+              </Text>
+            </Text>
+            <Text textColor="primary" className="mx-0 md:mx-0 leading-6">
+              {`serverless inference."`}
+              <Text as="span" variant="p" textColor="white">
+                {`}] )`}
+              </Text>
+            </Text>
+            <Text
+              as="span"
+              textColor="green-10"
+              variant="p"
+              className="mx-0 md:mx-0 leading-6"
+            >
+              Print
+              <Text
+                as="span"
+                variant="p"
+                fontFamily="spaceMono"
+                textColor="white"
+                className="mx-0 md:mx-0"
+              >
+                (response.choices[0].message.content)
+              </Text>
+            </Text>
+            <Text
+              fontFamily="spaceMono"
+              textColor="gray-75"
+              className="leading-6"
+            >
+              # ✓ 200 OK · 412ms · 30 tokens # Your existing OpenAI code just
+              works.
+            </Text>
+          </code>
+        </pre>
       </div>
     </div>
   );
 }
-
-// ─── Step 3: Billing summary ──────────────────────────────────────────────────
 
 export function StepThreePanel() {
   const { title, subtitle, rows, total, totalLabel, totalSub } =
     STEP_THREE_BILLING;
 
   return (
-    <div className="bg-white rounded-xl w-full shadow-sm  relative overflow-hidden">
+    <div className="bg-white rounded-xl w-full shadow-sm relative overflow-hidden">
       <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
         <Image
           src="/icons/logo.svg"
@@ -167,47 +306,52 @@ export function StepThreePanel() {
         />
       </div>
       {/* Header */}
-      <div className="px-5 pt-5 pb-4 border-b border-[var(--gray-60)]">
-        <p className="text-base font-bold text-gray-900">{title}</p>
-        <p className="text-xs text-gray-400 mt-0.5">{subtitle}</p>
+      <div className="px-5 pt-5 pb-4 border-b border-gray-60">
+        <Text as="h4" weight="semibold">
+          {title}
+        </Text>
+        <Text textColor="gray-85" className="my-1">
+          {subtitle}
+        </Text>
       </div>
 
       {/* Rows */}
-      <div className="flex flex-col divide-y divide-gray-100 px-5 mb-5">
+      <div className="flex flex-col px-5 mb-5">
         {rows.map((row, i) => (
           <div
             key={i}
-            className="flex items-start justify-between py-4 border-b border-[var(--gray-60)] "
+            className="flex items-center justify-between py-4 border-b border-gray-60 "
           >
             <div>
-              <p className="text-sm font-semibold text-gray-900">{row.label}</p>
-              <p className="text-xs text-gray-400 mt-0.5">{row.sub}</p>
+              <Text as="h6" weight="semibold">
+                {row.label}
+              </Text>
+              <Text textColor="gray-85" as="small">
+                {row.sub}
+              </Text>
             </div>
-            {/* Discount in teal, others in black */}
-            <p
-              className={`text-sm font-semibold ml-4 whitespace-nowrap ${
-                row.neg ? "text-teal-600" : "text-gray-900"
-              }`}
-            >
+            <Text as="h6" textColor={row.neg ? "primary" : "black"}>
               {row.value}
-            </p>
+            </Text>
           </div>
         ))}
       </div>
 
       {/* Total box — light teal background as in image */}
-      <div className="mx-5 mb-5 bg-teal-50 border border-[#00A78A3D] rounded-lg p-4 text-center">
-        <p className="text-xs font-bold tracking-widest uppercase">
+      <div className="mx-5 mb-5 bg-primary-40 border border-primary-50 rounded-lg p-4 text-center">
+        <Text as="small" weight="semibold">
           {totalLabel}
-        </p>
-        <p className="text-3xl font-bold text-gray-900 mt-1">{total}</p>
-        <p className="text-xs text-gray-400 mt-1">{totalSub}</p>
+        </Text>
+        <Text as="h4" weight="semibold">
+          {total}
+        </Text>
+        <Text textColor="gray-85" as="small">
+          {totalSub}
+        </Text>
       </div>
     </div>
   );
 }
-
-// ─── Panel registry ───────────────────────────────────────────────────────────
 
 export const STEP_PANELS = [
   <StepOnePanel key="step-1" />,

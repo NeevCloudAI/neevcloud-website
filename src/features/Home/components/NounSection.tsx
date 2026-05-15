@@ -30,7 +30,7 @@ const NounSection = () => {
         </div>
 
         <div className="flex flex-col gap-2 md:gap-4 w-full md:w-1/2">
-          <div className="flex flex-wrap flex-row md:flex-col whitespace-nowrap  gap-1 md:gap-4">
+          <div className="flex flex-wrap flex-row md:flex-col whitespace-nowrap gap-1 md:gap-4">
             <Text as="h1" textColor="white">
               Introducing
             </Text>
@@ -65,11 +65,23 @@ const NounSection = () => {
 
         <Text weight="semibold" textColor="primary" as="h3">
           Project Noun
-          <Text weight="semibold" textColor="white" as="span" variant="h3">
+          <Text
+            weight="semibold"
+            textColor="white"
+            as="span"
+            variant="h3"
+            className="mx-1 md:mx-2"
+          >
             is the
           </Text>
           Horizon
-          <Text weight="semibold" textColor="white" as="span" variant="h3">
+          <Text
+            weight="semibold"
+            textColor="white"
+            as="span"
+            variant="h3"
+            className="mx-0 md:mx-0"
+          >
             .
           </Text>
         </Text>

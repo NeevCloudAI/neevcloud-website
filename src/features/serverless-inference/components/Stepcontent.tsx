@@ -1,6 +1,6 @@
-import { Text } from "@/shared/ui-lib";
 import { SquareCheck, Clock } from "lucide-react";
 import type { Step } from "../data/three-steps-data";
+import { Text } from "@/shared/ui-lib";
 
 interface StepContentProps {
   step: Step;
@@ -9,41 +9,50 @@ interface StepContentProps {
 const StepContent = ({ step }: StepContentProps) => {
   return (
     <div>
-      {/* Big faded step number */}
-      <p className="text-[7rem] md:text-[9rem] font-bold leading-none text-gray-60 select-none">
+      <Text
+        as="h1"
+        weight="semibold"
+        textColor="gray-60"
+        className="text-[7rem]"
+      >
         {step.number}
-      </p>
+      </Text>
 
-      {/* Badge pill */}
-      <span className="inline-block mt-3 text-xs font-semibold tracking-widest text-[var(--gray-90)] bg-[var(--gray-60)] rounded-full px-3 py-1 uppercase">
+      <Text className="bg-gray-60 text-gray-90 rounded-full px-4 py-1 w-fit">
         {step.badge}
-      </span>
+      </Text>
 
-      {/* Description — supports inline teal links via dangerouslySetInnerHTML if needed */}
-      <p className="mt-4 text-sm leading-relaxed">
+      <Text className="mt-4" as="h6">
         {step.description}
         {step.descriptionHighlight && (
-          <span className="text-primary font-medium">
+          <Text
+            as="span"
+            variant="h6"
+            textColor="primary"
+            weight="semibold"
+            className="ml-0 md:ml-0"
+          >
             {step.descriptionHighlight}
-          </span>
+          </Text>
         )}
         {step.descriptionSuffix}
-      </p>
+      </Text>
 
       {/* Check items */}
       <ul className="mt-4 flex flex-col gap-2">
         {step.checkItems.map((item, i) => (
           <li key={i} className="flex items-center gap-2">
             {item.type === "check" ? (
-              <SquareCheck className="w-4 h-4 text-primary flex-shrink-0" />
+              <SquareCheck className="w-4.5 h-4.5 text-primary shrink-0" />
             ) : (
-              <Clock className="w-4 h-4 text-gray-400 flex-shrink-0" />
+              <Clock className="w-4.5 h-4.5 text-blue-40 shrink-0" />
             )}
-            <span
-              className={`text-sm ${item.type === "check" ? "" : "text-gray-400"}`}
+            <Text
+              as="h6"
+              textColor={item.type === "check" ? "black" : "blue-40"}
             >
               {item.text}
-            </span>
+            </Text>
           </li>
         ))}
       </ul>

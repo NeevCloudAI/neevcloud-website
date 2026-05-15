@@ -1,12 +1,12 @@
 import { cva } from "class-variance-authority";
 
-export const textVariants = cva("h-fit ", {
+export const textVariants = cva("h-fit", {
   variants: {
     variant: {
       default: "",
       link: "underline decoration cursor-pointer",
-      h1: "text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold mx-5 md:mx-5",
-      h2: "text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mx-1 md:mx-1.5",
+      h1: "text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold mx-1 md:mx-2.5",
+      h2: "text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mx-1 md:mx-2",
       h3: "text-base sm:text-lg md:text-xl lg:text-2xl font-medium mx-1 md:mx-5",
       h4: "text-sm sm:text-base md:text-lg lg:text-xl font-medium mx-1 md:mx-1.5",
       h5: "text-xs sm:text-sm md:text-base lg:text-lg font-normal mx-1 md:mx-1.5",

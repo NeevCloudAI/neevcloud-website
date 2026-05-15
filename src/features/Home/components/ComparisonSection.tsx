@@ -47,33 +47,34 @@ const ComparisonSection = () => {
     <div
       className={`${comparisonStatus ? "bg-gray-10 " : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"}`}
     >
-      <Container className="flex flex-col py-[3vh] md:py-[7vh] items-center gap-8">
-        <div className="flex flex-col items-center w-full">
-          <Text as="h2" textColor={comparisonStatus ? "black" : "white"}>
-            From manual toil
-          </Text>
-          <div className="flex items-center gap-1 md:gap-2">
-            <Text as="h2" textColor={comparisonStatus ? "black" : "white"}>
-              to
-              <Text
-                as="span"
-                variant="h2"
-                textColor={comparisonStatus ? "primary" : "white"}
-              >
-                AI-scale leverage
-              </Text>
-            </Text>
-          </div>
+      <Container className="flex flex-col py-[3vh] md:py-[7vh] items-center">
+        <Text
+          as="h2"
+          weight="semibold"
+          align="center"
+          className="max-w-sm"
+          textColor={comparisonStatus ? "black" : "white"}
+        >
+          From manual toil to
           <Text
-            textColor={comparisonStatus ? "black" : "white"}
-            align="center"
-            className="mt-2"
+            as="span"
+            variant="h2"
+            textColor={comparisonStatus ? "primary" : "white"}
+            weight="semibold"
+            className="max-w-3xl"
           >
-            Get rid of tedious cloud cost management with automation that works
-            in real time.
+            AI-scale leverage
           </Text>
-        </div>
-        <div className="flex items-center">
+        </Text>
+        <Text
+          textColor={comparisonStatus ? "black" : "white"}
+          align="center"
+          className="mt-2"
+        >
+          Get rid of tedious cloud cost management with automation that works in
+          real time.
+        </Text>
+        <div className="flex items-center mt-6 mb-8">
           <Button
             variant="outline-primary"
             className={`rounded-r-none ${comparisonStatus ? "bg-white" : "bg-gray-80 text-white"}`}

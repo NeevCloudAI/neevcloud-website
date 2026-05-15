@@ -1,19 +1,5 @@
 import type { ReviewSectionCard } from "@/features/Home/types/reviews-section.types";
 
-export const REVIEWS_SECTION_TITLE_PREFIX = "Powering ";
-
-export const REVIEWS_SECTION_TITLE_HIGHLIGHT = "AI Breakthroughs";
-
-export const REVIEWS_SECTION_TITLE_SUFFIX = " Across";
-
-export const REVIEWS_SECTION_TITLE_SUFFIX_2 = "Industries";
-
-export const REVIEWS_SECTION_SUBTITLE =
-  "From startups building their first models to enterprises deploying AI at scale, teams choose";
-
-export const REVIEWS_SECTION_SUBTITLE_2 =
-  "NeevCloud for reliable performance and transparent operations.";
-
 export const REVIEWS_SECTION_CARDS: ReviewSectionCard[] = [
   {
     type: "stats",

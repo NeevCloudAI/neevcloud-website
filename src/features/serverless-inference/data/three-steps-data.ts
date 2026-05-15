@@ -92,41 +92,6 @@ export const STEP_ONE_FILTERS = ["All", "Chat", "Code", "Embedding", "Vision"];
 export const STEP_TWO_TERMINAL_PATH =
   "console.ai.neevcloud.com/ai-inference/playground";
 
-export const STEP_TWO_CODE_LINES = [
-  { type: "comment", text: "# Two-line integration" },
-  {
-    type: "keyword",
-    text: "from",
-    rest: " NeevCloud ",
-    keyword2: "import",
-    rest2: " NeevCloud",
-  },
-  {
-    type: "var",
-    text: "client",
-    rest: " = ",
-    highlight: "NeevCloud",
-    rest2: '( api_key="sk-neev-...",',
-  },
-  { type: "plain", text: '  base_url="https://api.neevcloud.com/v1" )' },
-  {
-    type: "var",
-    text: "response",
-    rest: " = client.chat.completions.",
-    highlight: "create",
-    rest2: "(",
-  },
-  { type: "plain", text: '  model="meta-llama-3.1-70b-instruct",' },
-  { type: "plain", text: '  messages=[{ "role": "user", "content": "Explain' },
-  { type: "plain", text: '  serverless inference." }] )' },
-  { type: "fn", text: "print", rest: "(response.choices[0].message.content)" },
-  {
-    type: "comment",
-    text: "# ✓ 200 OK · 412ms · 30 tokens # Your existing OpenAI",
-  },
-  { type: "comment", text: "# code just works." },
-];
-
 export const STEP_THREE_BILLING = {
   title: "December usage · Llama 3.1 70B",
   subtitle: "Billing period · Dec 1 to Dec 31",
@@ -151,6 +116,6 @@ export const STEP_THREE_BILLING = {
     },
   ],
   total: "₹5,137.04",
-  totalLabel: "December Total",
+  totalLabel: "DECEMBER TOTAL",
   totalSub: "~₹0.0002 per call · paid in INR · no surprises",
 };

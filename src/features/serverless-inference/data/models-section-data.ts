@@ -20,7 +20,7 @@ export const MODELS: readonly ModelCardData[] = [
     tags: [
       { name: "chat", color: "gray-60" },
       { name: "code", color: "blue-40" },
-      { name: "reasoning", color: "gray-75" },
+      { name: "reasoning", color: "gray-85" },
     ],
     context: "128k",
     price: "₹42.00",

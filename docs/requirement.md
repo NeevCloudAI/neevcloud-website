@@ -4,3 +4,10 @@
 4. SEO
 5. Accessibility
 6. All text in one file
+
+Refactor: Three steps to Production
+
+Make it:
+
+1. SEO friendly
+2. Accessibility friendly

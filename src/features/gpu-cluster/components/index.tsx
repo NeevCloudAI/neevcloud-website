@@ -17,28 +17,14 @@ const GpuClusterComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <div className="flex flex-row md:flex-col items-center justify-center gap-1 md:gap-2 mt-4 md:mt-6">
-              <Text
-                as="h1"
-                align="center"
-                weight="semibold"
-                className=" md:leading-16"
-              >
-                The Right GPU for Every
-              </Text>
-              <Text
-                as="h1"
-                align="center"
-                weight="semibold"
-                textColor="primary"
-              >
+            <Text as="h1" className="mt-4 md:mt-6 max-w-3xl text-center">
+              The Right GPU for Every
+              <Text as="span" variant="h1" textColor="primary">
                 AI Workload
               </Text>
-            </div>
+            </Text>
           }
-          description1="One platform. On-demand, reserved, or spot, all on India-sovereign infrastructure. Every instance"
-          description2="includes InfiniBand networking, NVMe-attached storage, and pre-built ML images. Live within"
-          description3="minutes."
+          description="One platform. On-demand, reserved, or spot, all on India-sovereign infrastructure. Every instance includes InfiniBand networking, NVMe-attached storage, and pre-built ML images. Live within minutes."
           button1Text="Configure Now"
           button2Text="Compare GPUs"
           badgeText="Bare GPU Compute - Billed in INR"

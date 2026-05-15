@@ -1,20 +1,20 @@
 import FooterCard from "@/shared/components/footer-card";
 import StepsTabsSection from "@/shared/components/StepsTabsSection";
-import { EXPLORE_MODELS_STEPS } from "@/features/model-playground/data/explore-models-steps";
-import ExploreModelsStepPreview from "@/features/model-playground/components/ExploreModelsStepPreview";
+import { EXPLORE_API_STEPS } from "@/features/model-api/data/explore-api-steps";
+import ExploreApiStepPreview from "@/features/model-api/components/ExploreApiStepPreview";
 import { Text } from "@/shared/ui-lib";
 
-const EXPLORE_MODELS_PREVIEWS = EXPLORE_MODELS_STEPS.map((_, index) => (
-  <ExploreModelsStepPreview key={index} stepIndex={index} />
+const EXPLORE_API_PREVIEWS = EXPLORE_API_STEPS.map((_, index) => (
+  <ExploreApiStepPreview key={index} stepIndex={index} />
 ));
 
-const ExploreModelsSection = () => {
+const ExploreApiSection = () => {
   return (
     <StepsTabsSection
-      ariaLabel="Model playground setup steps"
-      tabIdPrefix="explore-models"
-      steps={EXPLORE_MODELS_STEPS}
-      previews={EXPLORE_MODELS_PREVIEWS}
+      ariaLabel="Model API setup steps"
+      tabIdPrefix="explore-api"
+      steps={EXPLORE_API_STEPS}
+      previews={EXPLORE_API_PREVIEWS}
       heading={
         <Text as="h2" weight="semibold" align="center">
           Start Exploring
@@ -39,4 +39,4 @@ const ExploreModelsSection = () => {
   );
 };
 
-export default ExploreModelsSection;
+export default ExploreApiSection;

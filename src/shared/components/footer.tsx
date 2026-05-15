@@ -16,10 +16,8 @@ const FooterComponent = () => {
     <footer className="bg-black py-4 md:py-16">
       <Container className="flex flex-col gap-12 md:gap-16">
         <FooterCard
-          title1={FOOTER_CTA.title1}
-          title2={FOOTER_CTA.title2}
-          description1={FOOTER_CTA.description1}
-          description2={FOOTER_CTA.description2}
+          title={FOOTER_CTA.title}
+          description={FOOTER_CTA.description}
           button1Text={FOOTER_CTA.button1Text}
           button2Text={FOOTER_CTA.button2Text}
         />

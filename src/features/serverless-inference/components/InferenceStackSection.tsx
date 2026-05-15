@@ -7,13 +7,7 @@ const InferenceStackSection = () => {
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black pb-[3vh] md:pb-[7vh]">
       <Container className="flex flex-col items-center justify-center">
-        <Text
-          as="h2"
-          textColor="white"
-          weight={"semibold"}
-          lineHeight="xl"
-          className="hidde<DeployInstanceSectionn md:block"
-        >
+        <Text as="h2" textColor="white" weight="semibold">
           Real Applications,
           <Text as="span" variant="h2" textColor="primary" weight={"semibold"}>
             Production Ready

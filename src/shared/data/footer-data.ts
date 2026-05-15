@@ -13,11 +13,9 @@ export const FOOTER_BRANDING: FooterBranding = {
 };
 
 export const FOOTER_CTA: FooterCtaContent = {
-  title1: "Start Building on",
-  title2: "NeevCloud Today",
-  description1:
-    "Sign up in 60 seconds. $200 in compute credits, no commitment. Your first",
-  description2: "B200 is already warming up.",
+  title: "Start Building on NeevCloud Today",
+  description:
+    "Sign up in 60 seconds. $200 in compute credits, no commitment. Your first B200 is already warming up.",
   button1Text: "Get Started Free",
   button2Text: "Talk to Our Team",
 };

@@ -17,21 +17,32 @@ import { FeatureCard } from "@/shared/components/feature-card";
 function PrivateNetworkSection() {
   return (
     <div className="relative bg-gray-10">
-      <div
+      {/* <div
         className="pointer-events-none absolute inset-0 bg-radial-[at_50%_0%] from-teal-300/30 via-transparent to-transparent blur-xs"
         aria-hidden="true"
-      />
-      <Container className="py-[3vh] md:py-[7vh]">
-        <Text as="h2" weight="semibold" align="center">
+      /> */}
+      <Container className="py-[3vh] md:py-[7vh] flex flex-col items-center justify-center">
+        {/* <Text as="h2" weight="semibold" align="center">
           Same Private Network,
         </Text>
         <Text as="h2" weight="semibold" align="center" textColor="primary">
-          as your GPU Cluster.
+        as your GPU Cluster.
+        </Text> */}
+        <Text
+          as="h2"
+          weight="semibold"
+          align="center"
+          className="max-w-5xl md:leading-12"
+        >
+          Same Private Network,
+          <Text as="span" variant="h2" textColor="primary" weight="semibold">
+            as your GPU Cluster.
+          </Text>
         </Text>
         <Text as="h6" align="center" textColor="black" className="mt-2">
           Boot in seconds with curated stacks, or upload your own ISO.
         </Text>
-        <div className="mt-4 flex flex-col items-stretch justify-between md:mt-8 md:flex-row">
+        <div className="w-full mt-4 flex flex-col items-stretch justify-between md:mt-8 md:flex-row">
           <ComputeInstanceCard {...COMPUTE_INSTANCES[0]} />
           <NetworkFlowSummary />
           <ComputeInstanceCard {...COMPUTE_INSTANCES[1]} />
@@ -44,7 +55,7 @@ function PrivateNetworkSection() {
         >
           Networking Features
         </Text>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           {NETWORKING_FEATURES.map((feature) => (
             <FeatureCard
               key={feature.title}

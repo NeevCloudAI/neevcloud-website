@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button, Text } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
 
-const trustBadges = [
+const trustBadgesData = [
   "Data residency in India",
   "DPDP Act compliant",
   "ISO 27001",
@@ -12,22 +12,20 @@ const trustBadges = [
 
 const HeroSection = ({
   title,
-  description1,
-  description2,
-  description3,
+  description,
   button1Text,
   button2Text,
   badgeText,
   image,
+  trustBadges = trustBadgesData,
 }: {
   title: React.ReactNode;
-  description1: string;
-  description2: string;
-  description3?: string;
+  description: string;
   button1Text: string;
   button2Text: string;
   badgeText: string;
   image: string;
+  trustBadges?: string[];
 }) => {
   return (
     <Container className="flex flex-col items-center justify-center pt-[3vh] md:pt-[10vh]">
@@ -41,21 +39,9 @@ const HeroSection = ({
 
       {title}
 
-      <Text as="h6" className="mt-4 block md:hidden" align="center">
-        {description1} {description2} {description3}
+      <Text as="h6" className="mt-4 max-w-3xl" align="center">
+        {description}
       </Text>
-
-      <Text as="h6" className="mt-4 hidden md:block">
-        {description1}
-      </Text>
-      <Text as="h6" className="hidden md:block">
-        {description2}
-      </Text>
-      {description3 && (
-        <Text as="h6" className="hidden md:block">
-          {description3}
-        </Text>
-      )}
 
       <div className="flex gap-4 mt-4 md:mt-8 z-10">
         <Button>{button1Text}</Button>

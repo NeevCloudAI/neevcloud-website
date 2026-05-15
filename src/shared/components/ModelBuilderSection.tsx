@@ -9,36 +9,26 @@ import RuntimeTabs from "@/shared/components/RuntimeTabs";
 const ModelBuilderSection = () => {
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-[3vh] md:py-[7vh]">
-      <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full  md:w-[30%] h-[80%] top-20 right-[-5%] opacity-40 md:opacity-100"></div>
+      <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
       <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" textColor="white" weight={"semibold"}>
-          {MODEL_BUILDER_COPY.titlePrefix}
-        </Text>
-        <Text as="h2" textColor="primary" weight={"semibold"}>
-          {MODEL_BUILDER_COPY.titleHighlight}
-          <Text as="span" variant="h2" textColor="white" weight={"semibold"}>
-            {MODEL_BUILDER_COPY.titleSuffix}
-          </Text>
-        </Text>
         <Text
-          textColor="gray-10"
-          align={"center"}
-          className="mt-2 block md:hidden"
+          as="h2"
+          textColor="white"
+          weight="semibold"
+          align="center"
+          className="max-w-4xl"
         >
-          {MODEL_BUILDER_COPY.description1} {MODEL_BUILDER_COPY.description2}
+          The AI cloud built for
+          <Text as="span" textColor="primary" weight="semibold" variant="h2">
+            Frontier
+          </Text>
+          model builders.
+        </Text>
+        <Text textColor="gray-10" align={"center"} className="mt-2 max-w-xl">
+          {MODEL_BUILDER_COPY.description}
         </Text>
 
-        <Text
-          textColor="gray-10"
-          align={"center"}
-          className="mt-2 hidden md:block"
-        >
-          {MODEL_BUILDER_COPY.description1}
-        </Text>
-        <Text textColor="gray-10" align={"center"} className="hidden md:block">
-          {MODEL_BUILDER_COPY.description2}
-        </Text>
         <div className="w-full flex flex-col items-center md:flex-row gap-4 mt-4 md:mt-8">
           <aside className="flex-1 space-y-6 md:space-y-8">
             {MODEL_BUILDER_FEATURES.map((feature) => (

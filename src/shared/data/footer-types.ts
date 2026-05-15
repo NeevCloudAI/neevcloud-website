@@ -22,10 +22,8 @@ export type FooterBranding = {
 };
 
 export type FooterCtaContent = {
-  title1: string;
-  title2: string;
-  description1: string;
-  description2: string;
+  title: string;
+  description: string;
   button1Text: string;
   button2Text?: string;
 };

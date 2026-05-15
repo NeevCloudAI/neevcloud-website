@@ -19,31 +19,19 @@ const ServerlessInferenceComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <div className="flex flex-col items-center justify-center gap-1 md:gap-2 mt-4 md:mt-6">
-              <Text
-                as="h1"
-                align="center"
-                weight="semibold"
-                className="md:leading-16"
-              >
-                Run Any Model. Pay Per Token.
-              </Text>
-              <Text
-                as="h1"
-                align="center"
-                weight="semibold"
-                textColor="primary"
-              >
+            <Text
+              as="h1"
+              weight="semibold"
+              className="max-w-4xl text-center mt-4 md:mt-6 md:leading-16"
+            >
+              Run Any Model. Pay Per Token.
+              <Text as="span" variant="h1" textColor="primary">
                 No GPUs
-                <Text variant="h1" as="span" textColor="black">
-                  to Manage
-                </Text>
               </Text>
-            </div>
+              to Manage.
+            </Text>
           }
-          description1="NeevCloud Serverless Inference gives you instant API access to 20+ production-ready open-source"
-          description2="models. OpenAI-compatible, sub-50ms latency, billed in INR, with every request processed inside"
-          description3="India."
+          description="NeevCloud Serverless Inference gives you instant API access to 20+ production-ready open-source models. OpenAI-compatible, sub-50ms latency, billed in INR, with every request processed India."
           button1Text="Try in Playground"
           button2Text="View Pricing"
           badgeText="India's Sovereign Inference Cloud"
@@ -56,7 +44,12 @@ const ServerlessInferenceComponent = () => {
       <DeployInstanceSection
         title={
           <>
-            <Text as="h2" weight={"semibold"} textColor="white">
+            <Text
+              as="h2"
+              weight="semibold"
+              textColor="white"
+              className="max-w-4xl"
+            >
               Token Pricing.
               <Text
                 as="span"
@@ -69,9 +62,7 @@ const ServerlessInferenceComponent = () => {
             </Text>
           </>
         }
-        description1="Pay per token, input and output billed separately. All charges in INR. Volume discounts unlock"
-        description2="automatically above 10M tokens per month. Reserved inference capacity available for high-volume"
-        description3="workloads."
+        description="Pay per token, input and output billed separately. All charges in INR. Volume discounts unlock automatically above 10M tokens per month. Reserved inference capacity available for high-volume workloads."
         image={{
           src: "/images/token-pricing.png",
           alt: "Pricing",

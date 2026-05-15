@@ -7,9 +7,9 @@ const ComputeSection = () => {
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black pb-[3vh] md:pb-[7vh]">
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h3" textColor="white">
+        <Text as="h2" textColor="white">
           Every Instance
-          <Text as="span" weight="semibold" variant="h3" textColor="primary">
+          <Text as="span" weight="semibold" variant="h2" textColor="primary">
             Includes.
           </Text>
         </Text>

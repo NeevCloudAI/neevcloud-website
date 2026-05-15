@@ -1,13 +1,5 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import {
-  REVIEWS_SECTION_SUBTITLE,
-  REVIEWS_SECTION_SUBTITLE_2,
-  REVIEWS_SECTION_TITLE_HIGHLIGHT,
-  REVIEWS_SECTION_TITLE_PREFIX,
-  REVIEWS_SECTION_TITLE_SUFFIX,
-  REVIEWS_SECTION_TITLE_SUFFIX_2,
-} from "@/features/Home/constants/reviews-section.constants";
 import ReviewsCarousel from "./ReviewsCarousel";
 
 const ReviewsSection = () => {
@@ -22,24 +14,17 @@ const ReviewsSection = () => {
       />
       <Container className="relative z-10" alignRight>
         <header className="text-center flex flex-col items-center">
-          <Text as="h2" weight="semibold">
-            {REVIEWS_SECTION_TITLE_PREFIX}
+          <Text as="h2" weight="semibold" className="max-w-3xl">
+            Powering
             <Text as="span" variant="h2" textColor="primary">
-              {REVIEWS_SECTION_TITLE_HIGHLIGHT}
+              AI Breakthroughs
             </Text>
-            {REVIEWS_SECTION_TITLE_SUFFIX}
+            Across Industries
           </Text>
-          <Text as="h2" weight="semibold">
-            {REVIEWS_SECTION_TITLE_SUFFIX_2}
-          </Text>
-          <Text as="h6" align="center" className="block md:hidden">
-            {REVIEWS_SECTION_SUBTITLE} {REVIEWS_SECTION_SUBTITLE_2}
-          </Text>
-          <Text as="h6" align="center" className="mt-4 hidden md:block">
-            {REVIEWS_SECTION_SUBTITLE}
-          </Text>
-          <Text as="h6" align="center" className="hidden md:block">
-            {REVIEWS_SECTION_SUBTITLE_2}
+          <Text as="h6" align="center" className="mt-2 max-w-2xl">
+            From startups building their first models to enterprises deploying
+            AI at scale, teams choose NeevCloud for reliable performance and
+            transparent operations.{" "}
           </Text>
         </header>
       </Container>

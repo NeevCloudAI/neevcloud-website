@@ -27,9 +27,8 @@ export const MODEL_BUILDER_COPY = {
   titlePrefix: "The AI cloud built for",
   titleHighlight: "Frontier",
   titleSuffix: "model builders.",
-  description1:
-    "No ticket-driven DevEx. A single CLI, typed SDKs for every runtime,",
-  description2: "and infrastructure that respects your repo structure.",
+  description:
+    "No ticket-driven DevEx. A single CLI, typed SDKs for every runtime, and infrastructure that respects your repo structure.",
   terminalPath: "~/models/avatar · zsh",
 } as const;
 

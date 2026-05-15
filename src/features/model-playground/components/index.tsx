@@ -18,30 +18,31 @@ const ModelPlaygroundComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <div className="flex flex-row md:flex-col items-center justify-center gap-1 md:gap-2 mt-4 md:mt-6">
-              <Text
-                as="h1"
-                align="center"
-                weight="semibold"
-                className=" md:leading-16"
-                textColor="primary"
-              >
-                Experience
-                <Text variant="h1" as="span" textColor="black">
-                  AI Models
-                </Text>
+            <Text
+              as="h1"
+              align="center"
+              weight="semibold"
+              className=" md:leading-16 max-w-3xl mt-4"
+              textColor="primary"
+            >
+              Experience
+              <Text variant="h1" as="span" textColor="black">
+                AI Models Before You Deploy
               </Text>
-              <Text as="h1" textColor="black">
-                Before You Deploy
-              </Text>
-            </div>
+            </Text>
           }
-          description1="Test and explore production-ready AI models through an interactive interface. No code required, no"
-          description2="setup needed, just instant access to see what's possible."
+          description="Test and explore production-ready AI models through an interactive interface. No code required, no setup needed, just instant access to see what's possible."
           button1Text="Try in Playground"
           button2Text="View ALL Models"
           badgeText="Test AI Models Free"
           image="/images/playground.png"
+          trustBadges={[
+            "Data residency in India",
+            "DPDP Act compliant",
+            "SOC 2 Type II",
+            "Data never used for training",
+            "99.9% uptime SLA",
+          ]}
         />
       </section>
       <ModelsSection />

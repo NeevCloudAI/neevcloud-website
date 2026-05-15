@@ -9,28 +9,17 @@ const AvailableModelsSection = () => {
   return (
     <section className="relative bg-white py-[3vh] md:py-[10vh]">
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" weight={"semibold"} align="center">
+        <Text as="h2" weight="semibold" align="center" className="max-w-4xl">
           Available Models
-          <Text as="span" variant="h2" textColor="primary" weight={"semibold"}>
+          <Text as="span" variant="h2" textColor="primary" weight="semibold">
             Across Categories
           </Text>
         </Text>
-        <Text align="center" textColor="black" className="mt-2 block md:hidden">
+        <Text align="center" textColor="black" className="mt-2 max-w-2xl">
           Access a curated collection of state-of-the-art models spanning
           language understanding, computer vision, audio processing, and
           specialized domains. Each model includes interactive demos and clear
           documentation.
-        </Text>
-        <Text align="center" textColor="black" className="mt-2 hidden md:block">
-          Access a curated collection of state-of-the-art models spanning
-          language understanding,
-        </Text>
-        <Text align="center" textColor="black" className="hidden md:block mt-2">
-          computer vision, audio processing, and specialized domains. Each model
-          includes interactive
-        </Text>
-        <Text align="center" textColor="black" className="hidden md:block mt-2">
-          demos and clear documentation.
         </Text>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 md:pt-8">
           {AVAILABLE_MODEL_CATEGORIES.map((category) => (

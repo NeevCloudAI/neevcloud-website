@@ -24,7 +24,7 @@ function ThreeStepsSection() {
       <Container className="py-[3vh] md:py-[7vh] relative">
         {/* Heading */}
         <Text as="h2" weight="semibold" align="center">
-          {THREE_STEPS_HEADING_BLACK}{" "}
+          {THREE_STEPS_HEADING_BLACK}
           <Text as="span" variant="h2" textColor="primary" weight="semibold">
             {THREE_STEPS_HEADING_PRIMARY}
           </Text>
@@ -49,20 +49,16 @@ function ThreeStepsSection() {
                     : "bg-white border-gray-200"
                 }`}
               >
-                <p
-                  className={`text-base tracking-widest uppercase ${
-                    activeStep === i ? "text-white" : "text-gray-500"
-                  }`}
-                >
+                <Text textColor={activeStep === i ? "gray-10" : "gray-90"}>
                   {s.label}
-                </p>
-                <p
-                  className={`text-2xl font-semibold mt-0.5 ${
-                    activeStep === i ? "text-white" : "text-black"
-                  }`}
+                </Text>
+                <Text
+                  as="h3"
+                  weight="semibold"
+                  textColor={activeStep === i ? "white" : "black"}
                 >
                   {s.title}
-                </p>
+                </Text>
               </button>
             ))}
           </div>

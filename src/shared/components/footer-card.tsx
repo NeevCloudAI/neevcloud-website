@@ -1,32 +1,24 @@
 import { Button, Text } from "../ui-lib";
 
 interface FooterCardProps {
-  title1: string;
-  title2: string;
-  description1: string;
-  description2: string;
+  title: string;
+  description: string;
   button1Text: string;
   button2Text?: string;
 }
 
 const FooterCard = ({
-  title1,
-  title2,
-  description1,
-  description2,
+  title,
+  description,
   button1Text,
   button2Text,
 }: FooterCardProps) => {
   return (
     <div className="relative w-full rounded-md bg-primary-100 py-[2vh] md:py-[10vh] px-4 md:px-8 flex flex-col gap-1 overflow-hidden">
-      <Text as="h2" weight={"medium"}>
-        {title1}
+      <Text as="h2" weight="medium" className="max-w-sm">
+        {title}
       </Text>
-      <Text as="h2" weight={"medium"}>
-        {title2}
-      </Text>
-      <Text className="z-2">{description1}</Text>
-      <Text>{description2}</Text>
+      <Text className="z-2 mt-2 max-w-lg">{description}</Text>
       <div className="mt-2 md:mt-6 flex gap-4 z-1">
         <Button
           variant="outline-primary"

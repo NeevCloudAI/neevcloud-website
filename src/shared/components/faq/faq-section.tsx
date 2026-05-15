@@ -19,10 +19,10 @@ export default function FaqSection() {
 
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-[3vh] md:py-[7vh]">
-      <div
+      {/* <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"
-      />
+      /> */}
 
       <Container className="flex flex-col items-center justify-center">
         <FaqSectionHeader />

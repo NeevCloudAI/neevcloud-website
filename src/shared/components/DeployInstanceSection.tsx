@@ -5,39 +5,32 @@ import type { DeployInstanceSectionProps } from "@/shared/types/deploy-instance-
 
 const DeployInstanceSection = ({
   title,
-  description1,
-  description2,
-  description3,
+  description,
   image,
   buttonText1,
   buttonText2,
+  showBGImage = true,
+  showLogo = true,
+  showBlur = true,
 }: DeployInstanceSectionProps) => {
   return (
-    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-[3vh] md:py-[7vh]">
-      <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full  md:w-[30%] h-[55%] top-20 right-[-5%] opacity-40 md:opacity-100"></div>
-      <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
+    <section
+      className={`relative ${showBGImage ? 'bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black' : "bg-gray-10"} py-[3vh] md:py-[7vh]`}
+    >
+      {showLogo && (
+        <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
+      )}
+      {showBlur && (
+        <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
+      )}
       <Container className="flex flex-col items-center justify-center">
         {title}
         <Text
-          textColor="gray-10"
+          textColor={showBGImage ? "gray-10" : "black"}
           align="center"
-          className="mt-2 block md:hidden"
+          className="mt-2 max-w-2xl"
         >
-          {description1} {description2} {description3}
-        </Text>
-
-        <Text
-          textColor="gray-10"
-          align="center"
-          className="mt-2 md:mt-4 hidden md:block"
-        >
-          {description1}
-        </Text>
-        <Text textColor="gray-10" align="center" className="hidden md:block">
-          {description2}
-        </Text>
-        <Text textColor="gray-10" align="center" className="hidden md:block">
-          {description3}
+          {description}
         </Text>
 
         <div className="bg-transparent backdrop-blur-sm border border-white-10 p-2 rounded-md mt-4 md:mt-8">
@@ -49,14 +42,16 @@ const DeployInstanceSection = ({
           />
         </div>
 
-        <div className="flex gap-4 flex-col md:flex-row items-center justify-center mt-4 md:mt-16 mb-2 md:mb-8">
-          <Button weight="semibold">{buttonText1}</Button>
-          {buttonText2 && (
-            <Button weight="semibold" variant="white" textColor="black">
-              {buttonText2}
-            </Button>
-          )}
-        </div>
+        {(buttonText1 || buttonText2) && (
+          <div className="flex gap-4 flex-col md:flex-row items-center justify-center mt-4 md:mt-16 mb-2 md:mb-8">
+            {buttonText1 && <Button weight="semibold">{buttonText1}</Button>}
+            {buttonText2 && (
+              <Button weight="semibold" variant="white" textColor="black">
+                {buttonText2}
+              </Button>
+            )}
+          </div>
+        )}
       </Container>
     </section>
   );

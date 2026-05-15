@@ -38,11 +38,13 @@ const INFERENCE_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconAlt: "Model APIs",
             title: "Model APIs",
             description: "REST & OpenAI-compatible",
+            href: "/model-api",
           },
           {
             iconSrc: "/icons/model-catalog.svg",
             iconAlt: "Model catalog",
             title: "Model Catalog",
+            href: "/model-catalog",
             description: "gpt-oss · Kimi · GLM · Hermes",
           },
         ],

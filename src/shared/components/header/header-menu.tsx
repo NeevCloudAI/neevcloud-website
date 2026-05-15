@@ -12,7 +12,7 @@ import SolutionsMegaMenu from "./mega-menus/solutions-mega-menu";
 import DevelopersMegaMenu from "./mega-menus/developers-mega-menu";
 import CompanyMegaMenu from "./mega-menus/company-mega-menu";
 import AiSupercloudMegaMenu from "./mega-menus/ai-supercloud-mega-menu";
-import InferenceMegaMenu from "./mega-menus/inference-mega-menu copy";
+import InferenceMegaMenu from "./mega-menus/inference-mega-menu";
 import PricingMegaMenu from "./mega-menus/pricing-mega-menu";
 import ResourcesMegaMenu from "./mega-menus/resources-mega-menu";
 
@@ -70,7 +70,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                       "rounded-b-md bg-white opacity-0 shadow-md",
                       "transition-opacity duration-150",
                       "group-hover:pointer-events-auto group-hover:opacity-100",
-                      "group-focus-within:pointer-events-auto group-focus-within:opacity-100",
+                      "group-focus-within:pointer-events-auto group-focus-within:opacity-100"
                     )}
                     role="presentation"
                   >
@@ -154,12 +154,12 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }
                   className={cn(
                     "flex w-full items-center justify-between px-3 py-2.5 text-left text-sm",
-                    hasMegaMenu ? "gap-2 font-medium text-black-80" : undefined,
+                    hasMegaMenu ? "gap-2 font-medium text-black-80" : undefined
                   )}
                   onClick={() => {
                     if (!hasMegaMenu) return;
                     setMobileExpandedNavId((prev) =>
-                      prev === navItem.id ? null : navItem.id,
+                      prev === navItem.id ? null : navItem.id
                     );
                   }}
                 >
@@ -169,7 +169,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                       size={18}
                       className={cn(
                         "shrink-0 text-gray-75 transition-transform duration-200",
-                        isExpanded && "rotate-180",
+                        isExpanded && "rotate-180"
                       )}
                       aria-hidden
                     />

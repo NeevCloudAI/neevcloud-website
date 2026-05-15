@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import { FeatureCard } from "@/shared/components/feature-card";
 import { Text } from "@/shared/ui-lib";
@@ -10,45 +11,28 @@ const AIStackSection = () => {
         <Text
           as="h2"
           textColor="white"
-          weight={"semibold"}
-          lineHeight="xl"
-          className="hidden md:block"
-        >
-          Where CPU Fits in
-        </Text>
-        <Text
-          as="h2"
-          weight={"semibold"}
-          textColor="white"
-          className="hidden md:block"
-        >
-          an
-          <Text as="span" variant="h2" textColor="primary" weight={"semibold"}>
-            AI Stack.
-          </Text>
-        </Text>
-
-        <Text
-          as="h2"
-          textColor="white"
-          weight={"semibold"}
-          lineHeight="xl"
-          className="block md:hidden"
+          weight="semibold"
+          align="center"
+          className="max-w-2xl md:leading-12"
         >
           Where CPU Fits in an
-          <Text as="span" variant="h2" textColor="primary" weight={"semibold"}>
+          <Text as="span" variant="h2" textColor="primary" weight="semibold">
             AI Stack.
           </Text>
         </Text>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 md:mt-8">
-          {AI_STACK_SECTION_FEATURES.map((feature) => (
+        <div className="w-full grid grid-cols-1 md:grid-cols-6 gap-4 mt-4 md:mt-8">
+          {AI_STACK_SECTION_FEATURES.map((feature, index) => (
             <FeatureCard
               key={feature.title}
               title={feature.title}
               description={feature.description}
               theme="dark"
-              className="bg-gray-120 backdrop-blur-xs"
+              className={cn(
+                "bg-gray-120 backdrop-blur-xs md:col-span-2",
+                index === 3 && "md:col-start-2",
+                index === 4 && "md:col-start-4"
+              )}
             />
           ))}
         </div>

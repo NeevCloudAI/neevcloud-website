@@ -1,14 +1,8 @@
-export type FaqCategory =
-  | "Getting Started"
-  | "Networking"
-  | "Billing"
-  | "Scaling";
-
-export type FaqTopic = "All" | FaqCategory;
+export type FaqTopic = "All" | string;
 
 export type FaqItem = {
   id: number;
-  category: FaqCategory;
+  category: string;
   question: string;
   answer: string;
 };

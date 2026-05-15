@@ -32,7 +32,7 @@ const ModelCatalogComponent = () => {
           button1Text="Try Models Free"
           button2Text="Get API Access"
           badgeText="Production AI Models"
-          image="/images/gpu.png"
+          image="/images/playground.png"
           trustBadges={[
             "Sub-100ms Latency",
             "RESTful APIs",

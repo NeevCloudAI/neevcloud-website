@@ -1,6 +1,7 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FaqSection from "@/shared/components/faq/faq-section";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -73,7 +74,7 @@ const ServerlessInferenceComponent = () => {
         buttonText2="Contact for Custom Plans"
       />
       <InferenceStackSection />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

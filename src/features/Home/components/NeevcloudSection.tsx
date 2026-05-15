@@ -34,7 +34,7 @@ const CloudComparisonCard = ({
 const NeevcloudSection: React.FC = () => {
   return (
     <Container className="flex flex-col items-center justify-between gap-2 py-[3vh] md:py-[7vh]">
-      <Text as="h2" weight="semibold" className="max-w-5xl">
+      <Text as="h2" weight="semibold" className="max-w-4xl">
         Why the
         <Text as="span" variant="h2" textColor="primary">
           world

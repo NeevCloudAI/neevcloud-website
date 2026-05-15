@@ -1,5 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -32,7 +33,7 @@ const ModelApiComponent = () => {
           button1Text="Request API Access"
           button2Text="View Documentation"
           badgeText="Production AI Models"
-          image="/images/gpu.png"
+          image="/images/playground.png"
           trustBadges={[
             "Sub-100ms Latency",
             "RESTful APIs",
@@ -43,7 +44,7 @@ const ModelApiComponent = () => {
         />
       </section>
       <ExploreApiSection />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

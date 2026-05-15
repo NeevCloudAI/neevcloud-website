@@ -13,7 +13,7 @@ const PricingSection = () => {
           textColor="white"
           weight="semibold"
           align="center"
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
           Every Workload
           <Text as="span" variant="h2" textColor="primary" weight="semibold">

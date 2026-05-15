@@ -1,6 +1,6 @@
 import type { FaqItem } from "./faq-section-types";
 
-export const CPU_CLUSTER_FAQ_ITEMS: readonly FaqItem[] = [
+export const CPU_CLUSTER_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
     category: "Networking",

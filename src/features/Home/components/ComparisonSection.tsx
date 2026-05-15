@@ -52,7 +52,7 @@ const ComparisonSection = () => {
           as="h2"
           weight="semibold"
           align="center"
-          className="max-w-sm"
+          className="max-w-4xl"
           textColor={comparisonStatus ? "black" : "white"}
         >
           From manual toil to
@@ -61,7 +61,7 @@ const ComparisonSection = () => {
             variant="h2"
             textColor={comparisonStatus ? "primary" : "white"}
             weight="semibold"
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             AI-scale leverage
           </Text>

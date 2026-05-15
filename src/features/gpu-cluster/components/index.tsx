@@ -1,5 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -17,7 +18,7 @@ const GpuClusterComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <Text as="h1" className="mt-4 md:mt-6 max-w-3xl text-center">
+            <Text as="h1" className="mt-4 md:mt-6 max-w-4xl text-center">
               The Right GPU for Every
               <Text as="span" variant="h1" textColor="primary">
                 AI Workload
@@ -34,7 +35,7 @@ const GpuClusterComponent = () => {
       <PricingSection />
       <ComputeSection />
       <UseCasesSection />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

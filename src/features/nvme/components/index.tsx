@@ -1,6 +1,7 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FaqSection from "@/shared/components/faq/faq-section";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -34,7 +35,7 @@ const NvmeComponent = () => {
           button1Text="Deploy with NVMe"
           button2Text="View Storage Pricing"
           badgeText="High-Performance NVMe Storage"
-          image="/images/gpu.png"
+          image="/images/nvme.png"
           trustBadges={[
             "Sub-millisecond latency",
             "High sequential throughput",
@@ -71,7 +72,7 @@ const NvmeComponent = () => {
           height: 1000,
         }}
       />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

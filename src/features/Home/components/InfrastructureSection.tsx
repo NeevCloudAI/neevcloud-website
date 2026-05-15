@@ -94,13 +94,13 @@ export default function InfrastructureSectionContent() {
         aria-hidden="true"
       ></div>
       <Container className="flex flex-col items-center py-[3vh] md:py-[7vh]">
-        <Text as="h2" weight="semibold" align="center" className="max-w-3xl">
+        <Text as="h2" weight="semibold" align="center" className="max-w-4xl">
           Infrastructure That
           <Text
             as="span"
             variant="h2"
             textColor="primary"
-            className="w-full max-w-3xl mr-0 md:mr-0"
+            className="w-full max-w-4xl mr-0 md:mr-0"
           >
             Removes Barriers
           </Text>

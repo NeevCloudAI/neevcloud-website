@@ -5,6 +5,7 @@ import PrivateNetworkSection from "./private-network/private-network-section";
 import FooterComponent from "@/shared/components/footer";
 import { Divider, Text } from "@/shared/ui-lib";
 import FaqSection from "@/shared/components/faq/faq-section";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import HeroSection from "@/shared/components/HeroSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import AIStackSection from "./AIStackSection";
@@ -43,7 +44,7 @@ const CpuClusterComponent = () => {
             as="h2"
             textColor="white"
             weight="semibold"
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             Every Workload
             <Text as="span" variant="h2" textColor="primary">
@@ -64,7 +65,7 @@ const CpuClusterComponent = () => {
       <AIStackSection />
       <OSImageSection />
       <PrivateNetworkSection />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

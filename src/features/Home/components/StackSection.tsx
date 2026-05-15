@@ -123,7 +123,7 @@ const StackSection = () => {
               as="span"
               textColor="primary"
               variant="h2"
-              className="mr-0 md:mr-0 max-w-5xl"
+              className="mr-0 md:mr-0 max-w-4xl"
             >
               Vertical Stack
             </Text>

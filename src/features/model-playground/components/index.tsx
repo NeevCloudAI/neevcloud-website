@@ -1,5 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
+import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -22,7 +23,7 @@ const ModelPlaygroundComponent = () => {
               as="h1"
               align="center"
               weight="semibold"
-              className="max-w-3xl mt-4"
+              className="max-w-4xl mt-4"
               textColor="primary"
             >
               Experience
@@ -49,7 +50,7 @@ const ModelPlaygroundComponent = () => {
       <AvailableModelsSection />
       <ExperimentationSection />
       <ExploreModelsSection />
-      <FaqSection />
+      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent />
     </>
   );

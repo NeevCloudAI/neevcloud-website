@@ -24,9 +24,6 @@ export const MODEL_BUILDER_FEATURES: ModelFeature[] = [
 ];
 
 export const MODEL_BUILDER_COPY = {
-  titlePrefix: "The AI cloud built for",
-  titleHighlight: "Frontier",
-  titleSuffix: "model builders.",
   description:
     "No ticket-driven DevEx. A single CLI, typed SDKs for every runtime, and infrastructure that respects your repo structure.",
   terminalPath: "~/models/avatar · zsh",

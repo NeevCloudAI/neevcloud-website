@@ -14,7 +14,7 @@ const ReviewsSection = () => {
       />
       <Container className="relative z-10" alignRight>
         <header className="text-center flex flex-col items-center">
-          <Text as="h2" weight="semibold" className="max-w-3xl">
+          <Text as="h2" weight="semibold" className="max-w-4xl">
             Powering
             <Text as="span" variant="h2" textColor="primary">
               AI Breakthroughs

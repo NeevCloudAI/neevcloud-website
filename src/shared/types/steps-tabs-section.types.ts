@@ -4,7 +4,7 @@ export type StepsTabsSectionStep = {
   badgeLabel: string;
   title: string;
   description: string;
-  features: readonly string[];
+  features?: readonly string[];
 };
 
 export type StepsTabsSectionProps = {

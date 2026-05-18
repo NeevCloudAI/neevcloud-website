@@ -75,7 +75,12 @@ const ServerlessInferenceComponent = () => {
       />
       <InferenceStackSection />
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
-      <FooterComponent />
+      <FooterComponent
+        title="Ready to Run Your First Inference?"
+        description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."
+        button1Text="Get Free API Key"
+        button2Text="Read the Docs"
+      />
     </>
   );
 };

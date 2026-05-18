@@ -36,7 +36,12 @@ const GpuClusterComponent = () => {
       <ComputeSection />
       <UseCasesSection />
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
-      <FooterComponent />
+      <FooterComponent
+        title="Launch Your First GPU Instance"
+        description="Deploy H100, A100, RTX 5090, or other GPUs in minutes. On-demand flexibility or reserved savings."
+        button1Text="Configure Now"
+        button2Text="Talk to Our Team"
+      />
     </>
   );
 };

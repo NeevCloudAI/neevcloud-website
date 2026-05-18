@@ -34,7 +34,7 @@ const StoragePerformanceFeatureItem = ({
 const StoragePerformanceCard = ({ card }: StoragePerformanceCardProps) => {
   return (
     <article className="flex w-full flex-col gap-2 rounded-md bg-white p-4 md:p-8">
-      <div className="flex gap-4">
+      <div className="flex gap-4 items-center">
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-blue-40"></div>
         <div className="flex flex-col">
           <Text as="h3" weight="semibold">

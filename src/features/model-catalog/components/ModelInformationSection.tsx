@@ -5,7 +5,7 @@ import { MODEL_INFORMATION } from "@/features/model-catalog/data/model-informati
 
 const ModelInformationSection = () => {
   return (
-    <section className="relative bg-white py-[3vh] md:py-[10vh]">
+    <section className="relative bg-white py-[3vh] md:py-[7vh]">
       <Container className="flex flex-col gap-6 md:gap-10">
         <Text as="h2" weight="semibold" align="center">
           Detailed Model Information

@@ -116,7 +116,7 @@ const StackSection = () => {
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat overflow-hidden bg-gray-10 py-[3vh] md:py-[7vh]">
       <Container className="relative flex flex-col gap-4 md:gap-12">
-        <header className="flex flex-col items-center gap-1 md:gap-3 text-center">
+        <header className="flex flex-col items-center text-center">
           <Text as="h2" weight="semibold">
             One
             <Text
@@ -129,7 +129,7 @@ const StackSection = () => {
             </Text>
             . Silicon to endpoint.
           </Text>
-          <Text as="h6" textColor="black">
+          <Text as="h6" textColor="black-5">
             Deploy AI on infrastructure designed for scale, resilience, and
             speed.
           </Text>

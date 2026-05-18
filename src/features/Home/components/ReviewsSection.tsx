@@ -5,7 +5,7 @@ import ReviewsCarousel from "./ReviewsCarousel";
 const ReviewsSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-gray-10 py-6 md:py-24"
+      className="relative overflow-hidden bg-gray-10 py-[3vh] md:py-[7vh]"
       aria-labelledby="reviews-section-heading"
     >
       <div
@@ -21,7 +21,12 @@ const ReviewsSection = () => {
             </Text>
             Across Industries
           </Text>
-          <Text as="h6" align="center" className="mt-2 max-w-2xl">
+          <Text
+            as="h6"
+            align="center"
+            textColor="black-5"
+            className="max-w-2xl"
+          >
             From startups building their first models to enterprises deploying
             AI at scale, teams choose NeevCloud for reliable performance and
             transparent operations.{" "}

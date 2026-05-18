@@ -51,7 +51,12 @@ const ModelPlaygroundComponent = () => {
       <ExperimentationSection />
       <ExploreModelsSection />
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
-      <FooterComponent />
+      <FooterComponent
+        title="Launch Your First CPU Instance"
+        description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."
+        button1Text="Configure Now"
+        button2Text="Talk to Our Team"
+      />
     </>
   );
 };

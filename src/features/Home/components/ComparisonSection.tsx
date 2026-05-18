@@ -45,9 +45,9 @@ const ComparisonSection = () => {
 
   return (
     <div
-      className={`${comparisonStatus ? "bg-gray-10 " : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"}`}
+      className={`py-[3vh] md:py-[7vh] ${comparisonStatus ? "bg-gray-10" : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"}`}
     >
-      <Container className="flex flex-col py-[3vh] md:py-[7vh] items-center">
+      <Container className="flex flex-col items-center">
         <Text
           as="h2"
           weight="semibold"
@@ -66,11 +66,7 @@ const ComparisonSection = () => {
             AI-scale leverage
           </Text>
         </Text>
-        <Text
-          textColor={comparisonStatus ? "black" : "white"}
-          align="center"
-          className="mt-2"
-        >
+        <Text textColor={comparisonStatus ? "black-5" : "white"} align="center">
           Get rid of tedious cloud cost management with automation that works in
           real time.
         </Text>
@@ -123,60 +119,52 @@ const ComparisonSection = () => {
               comparisonStatus={comparisonStatus}
             />
           </div>
-          <div className="flex flex-col md:flex-1 w-full">
-            <Text
-              as="h3"
-              weight="semibold"
-              textColor={comparisonStatus ? "black" : "white"}
-            >
-              With NeevCloud
-            </Text>
-            <Text
-              as="h3"
-              weight="normal"
-              textColor={comparisonStatus ? "black" : "white"}
-            >
-              AI-First by design
-            </Text>
-            <Text
-              className="mt-8"
-              textColor={comparisonStatus ? "black" : "white"}
-            >
-              Purpose-built for AI workloads
-            </Text>
-            <Divider
-              orientation="horizontal"
-              className={`${comparisonStatus ? "bg-black-10" : "bg-white-10"} my-4`}
-            />
-            <Text textColor={comparisonStatus ? "black" : "white"}>
-              Purpose-built for AI workloads
-            </Text>
-            <Divider
-              orientation="horizontal"
-              className={`${comparisonStatus ? "bg-black-10" : "bg-white-10"} my-4`}
-            />
-            <Text textColor={comparisonStatus ? "black" : "white"}>
-              Purpose-built for AI workloads
-            </Text>
-            <Divider
-              orientation="horizontal"
-              className={`${comparisonStatus ? "bg-black-10" : "bg-white-10"} my-4`}
-            />
-            <Text textColor={comparisonStatus ? "black" : "white"}>
-              Purpose-built for AI workloads
-            </Text>
-            <Divider
-              orientation="horizontal"
-              className={`${comparisonStatus ? "bg-black-10" : "bg-white-10"} my-4`}
-            />
-            <Text textColor={comparisonStatus ? "black" : "white"}>
-              Purpose-built for AI workloads
-            </Text>
-            <Divider
-              orientation="horizontal"
-              className={`${comparisonStatus ? "bg-black-10" : "bg-white-10"} my-4`}
-            />
-          </div>
+          {comparisonStatus ? (
+            <div className="flex flex-col md:flex-1 w-full">
+              <Text as="h3" weight="semibold">
+                With NeevCloud
+              </Text>
+              <Text as="h2" weight="normal">
+                AI-First by design
+              </Text>
+              <Text
+                className="mt-8"
+                textColor={comparisonStatus ? "black" : "white"}
+              >
+                Purpose-built for AI workloads
+              </Text>
+              <Divider orientation="horizontal" className="bg-black-10 my-4" />
+              <Text>Transparent, predictable pricing</Text>
+              <Divider orientation="horizontal" className="bg-black-10 my-4" />
+              <Text>Open standards, full portability</Text>
+              <Divider orientation="horizontal" className="bg-black-10 my-4" />
+              <Text>Data sovereignty controls</Text>
+              <Divider orientation="horizontal" className="bg-black-10 my-4" />
+              <Text>GPU access in minutes</Text>
+              <Divider orientation="horizontal" className="bg-black-10 my-4" />
+            </div>
+          ) : (
+            <div className="flex flex-col md:flex-1 w-full">
+              <Text as="h3" weight="semibold" textColor="white">
+                Global Hyperscalers
+              </Text>
+              <Text as="h2" weight="normal" textColor="white">
+                Scale Without Focus
+              </Text>
+              <Text className="mt-8" textColor="white">
+                General cloud adapted for AI
+              </Text>
+              <Divider orientation="horizontal" className="bg-white-10 my-4" />
+              <Text textColor="white">Complex pricing with hidden costs</Text>
+              <Divider orientation="horizontal" className="bg-white-10 my-4" />
+              <Text textColor="white">Proprietary lock-in</Text>
+              <Divider orientation="horizontal" className="bg-white-10 my-4" />
+              <Text textColor="white">Data scattered globally</Text>
+              <Divider orientation="horizontal" className="bg-white-10 my-4" />
+              <Text textColor="white">Weeks for GPU access</Text>
+              <Divider orientation="horizontal" className="bg-white-10 my-4" />
+            </div>
+          )}
         </div>
       </Container>
     </div>

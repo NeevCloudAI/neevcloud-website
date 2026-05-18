@@ -34,19 +34,21 @@ const CloudComparisonCard = ({
 const NeevcloudSection: React.FC = () => {
   return (
     <Container className="flex flex-col items-center justify-between gap-2 py-[3vh] md:py-[7vh]">
-      <Text as="h2" weight="semibold" className="max-w-4xl">
-        Why the
-        <Text as="span" variant="h2" textColor="primary">
-          world
+      <div>
+        <Text as="h2" weight="semibold" className="max-w-4xl" align="center">
+          Why the
+          <Text as="span" variant="h2" textColor="primary">
+            world
+          </Text>
+          Needs NeevCloud?
         </Text>
-        Needs NeevCloud?
-      </Text>
-      <Text as="h6" align="center" className="max-w-3xl">
-        Legacy cloud providers and expensive &quot;neoclouds&quot; often force a
-        choice between performance and price. We believe you should have both.
-        NeevCloud is India’s first AI Supercloud, built from the ground up to
-        make intelligence accessible to everyone.
-      </Text>
+        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+          Legacy cloud providers and expensive &quot;neoclouds&quot; often force
+          a choice between performance and price. We believe you should have
+          both. NeevCloud is India’s first AI Supercloud, built from the ground
+          up to make intelligence accessible to everyone.
+        </Text>
+      </div>
       <div className=" flex justify-center lg:flex-row flex-col w-full gap-4 mt-4 md:mt-8">
         <div className="relative flex-1">
           <Image

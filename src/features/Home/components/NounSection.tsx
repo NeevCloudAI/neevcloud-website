@@ -5,7 +5,7 @@ import Image from "next/image";
 const NounSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-black"
+      className="relative overflow-hidden bg-black py-[3vh] md:py-[7vh]"
       aria-labelledby="noun-section-heading"
     >
       <div
@@ -17,7 +17,7 @@ const NounSection = () => {
         aria-hidden
       />
 
-      <Container className="relative z-10 py-[3vh] md:py-[7vh]">
+      <Container className="relative z-10">
         <div className="flex items-center gap-2 md:gap-2 mb-4 md:mb-10 nowrap">
           <Image src="/icons/noun.svg" alt="Noun" width={25} height={25} />
           <Text as="h6" textColor="primary">
@@ -45,7 +45,7 @@ const NounSection = () => {
             </Text>
           </div>
 
-          <Text textColor="white" className="my-2 md:my-6">
+          <Text textColor="gray-10" className="my-2 md:my-6">
             Project Noun is NeevCloud&apos;s leap beyond traditional
             infrastructure, removing the limits of geography and latency to
             redefine how AI is deployed and scaled. Built as a next-gen layer,

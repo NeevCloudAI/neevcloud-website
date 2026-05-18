@@ -20,7 +20,10 @@
 
   --color-blue-40: var(--blue-40);
   --color-gray-60: var(--gray-60);
+  --color-gray-05: var(--gray-05);
   --color-green-20: var(--green-20);
+  --color-primary-5: var(--primary-5);
+  --color-black-5: var(--black-5);
   --color-gray-65: var(--gray-65);
   --color-gray-70: var(--gray-70);
   --color-gray-75: var(--gray-75);
@@ -28,21 +31,25 @@
   --color-gray-90: var(--gray-90);
   --color-gray-85: var(--gray-85);
   --color-gray-95: var(--gray-95);
+  --color-gray-55: var(--gray-55);
   --color-gray-100: var(--gray-100);
   --color-black-10: var(--black-10);
   --color-black-50: var(--black-50);
   --color-black-80: var(--black-80);
   --color-black-90: var(--black-90);
   --color-white: var(--white);
+  --color-red-100: var(--red-100);
   --color-white-50: var(--white-50);
   --color-white-10: var(--white-10);
   --color-gray-50: var(--gray-50);
+  --color-white-5: var(--white-5);
   --color-green-50: var(--green-50);
   --color-green-100: var(--green-100);
   --color-green-10: var(--green-10);
   --color-gray-110: var(--gray-110);
   --color-gray-120: var(--gray-120);
   --color-gray-125: var(--gray-125);
+  --color-black-15: var(--black-15);
 
   --breakpoint-header-company: 1430px;
   --breakpoint-header-resource: 1340px;
@@ -59,6 +66,7 @@
 
 :root {
   --primary: #00a78b;
+  --primary-5: #f4f9f9;
   --primary-10: #ebf5f5;
   --primary-20: #f0faf8;
   --primary-30: #d3f0eb;
@@ -70,20 +78,27 @@
   --secondary: #005150;
   --tertiary: #022c3c;
 
+  --white-5: #ffffff0d;
   --white-10: #ffffff1f;
   --white-50: #ffffff9e;
   --white: #ffffff;
 
+  --black-5: #2e2e2e;
   --black-10: #0000001f;
+  --black-15: #292c2b;
   --black-50: #00000052;
   --black-80: #0f0f0f;
   --black-90: #0000009e;
 
   --blue-40: #a0adb2;
 
+  --red-100: #271213;
+
+  --gray-05: #e6e6e6;
   --gray-10: #eaf4f4;
   --gray-20: #eceff0;
   --gray-50: #d9d9d9;
+  --gray-55: #afafaf;
   --gray-60: #bdc9cc;
   --gray-65: #6e7b80;
   --gray-70: #9fa6a6;
@@ -114,7 +129,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins);
-  /* font-family: var(--font-space-mono); */
 }
 
 @layer base {
@@ -172,4 +186,82 @@ body {
 }
 
 @layer utilities {
+}
+
+@layer components {
+  .pricing-calculator input[type="range"].pricing-calculator-slider {
+    appearance: none;
+    height: 0.5rem;
+    border: 0;
+    border-radius: 9999px;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    --slider-track: var(--gray-60);
+    --slider-fill: var(--primary);
+    --slider-thumb: var(--primary);
+    --slider-thumb-size: 1rem;
+  }
+
+  .pricing-calculator-slider--neutral {
+    --slider-fill: var(--gray-50);
+    --slider-thumb: var(--black-5);
+    --slider-thumb-size: 0.875rem;
+  }
+
+  .pricing-calculator input[type="range"].pricing-calculator-slider:focus {
+    outline: none;
+    box-shadow: none;
+    --tw-ring-color: transparent;
+  }
+
+  .pricing-calculator
+    input[type="range"].pricing-calculator-slider::-webkit-slider-runnable-track {
+    height: 0.25rem;
+    border-radius: 9999px;
+    background: linear-gradient(
+      to right,
+      var(--slider-fill) 0%,
+      var(--slider-fill) var(--slider-progress, 50%),
+      var(--slider-track) var(--slider-progress, 50%),
+      var(--slider-track) 100%
+    );
+  }
+
+  .pricing-calculator
+    input[type="range"].pricing-calculator-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: var(--slider-thumb-size);
+    height: var(--slider-thumb-size);
+    margin-top: calc((0.25rem - var(--slider-thumb-size)) / 2);
+    border: 0;
+    border-radius: 9999px;
+    background: var(--slider-thumb);
+    box-shadow: 0 0 0 2px var(--white);
+  }
+
+  .pricing-calculator
+    input[type="range"].pricing-calculator-slider::-moz-range-track {
+    height: 0.25rem;
+    border: 0;
+    border-radius: 9999px;
+    background: var(--slider-track);
+  }
+
+  .pricing-calculator
+    input[type="range"].pricing-calculator-slider::-moz-range-progress {
+    height: 0.25rem;
+    border-radius: 9999px;
+    background: var(--slider-fill);
+  }
+
+  .pricing-calculator
+    input[type="range"].pricing-calculator-slider::-moz-range-thumb {
+    width: var(--slider-thumb-size);
+    height: var(--slider-thumb-size);
+    border: 0;
+    border-radius: 9999px;
+    background: var(--slider-thumb);
+    box-shadow: 0 0 0 2px var(--white);
+  }
 }

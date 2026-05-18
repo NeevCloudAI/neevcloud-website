@@ -1,16 +1,10 @@
+import { StorageComparisonMetric } from "@/shared/components/StorageComparisonBar";
+
 export type StorageMetricsCardType = {
   id: string;
   title: string;
   badge: string;
   metrics: StorageComparisonMetric[];
-};
-
-export type StorageComparisonMetric = {
-  id: string;
-  label: string;
-  displayValue: string;
-  seconds: number;
-  valueColor: "primary" | "red-50";
 };
 
 export const STORAGE_METRICS_CARD: StorageMetricsCardType[] = [
@@ -23,15 +17,17 @@ export const STORAGE_METRICS_CARD: StorageMetricsCardType[] = [
         id: "nvme-local",
         label: "NVMe Local",
         displayValue: "1.4 seconds",
-        seconds: 0.8,
+        seconds: 8,
         valueColor: "primary",
+        barColor: "bg-primary",
       },
       {
         id: "network-storage",
         label: "Network Storage",
         displayValue: "8.5 seconds",
-        seconds: 6,
+        seconds: 60,
         valueColor: "red-50",
+        barColor: "bg-red-50",
       },
     ],
   },
@@ -44,15 +40,17 @@ export const STORAGE_METRICS_CARD: StorageMetricsCardType[] = [
         id: "nvme-local",
         label: "NVMe Local",
         displayValue: "7 seconds",
-        seconds: 1.2,
+        seconds: 12,
         valueColor: "primary",
+        barColor: "bg-primary",
       },
       {
         id: "network-storage",
         label: "Network Storage",
         displayValue: "45 seconds",
-        seconds: 7,
+        seconds: 70,
         valueColor: "red-50",
+        barColor: "bg-red-50",
       },
     ],
   },
@@ -65,15 +63,17 @@ export const STORAGE_METRICS_CARD: StorageMetricsCardType[] = [
         id: "nvme-local",
         label: "NVMe Local",
         displayValue: "<100μs latency",
-        seconds: 0.35,
+        seconds: 35,
         valueColor: "primary",
+        barColor: "bg-primary",
       },
       {
         id: "network-storage",
         label: "Network Storage",
         displayValue: "2-5ms latency",
-        seconds: 5,
+        seconds: 50,
         valueColor: "red-50",
+        barColor: "bg-red-50",
       },
     ],
   },
@@ -86,15 +86,17 @@ export const STORAGE_METRICS_CARD: StorageMetricsCardType[] = [
         id: "nvme-local",
         label: "NVMe Local",
         displayValue: "<1% GPU waiting",
-        seconds: 0.6,
+        seconds: 60,
         valueColor: "primary",
+        barColor: "bg-primary",
       },
       {
         id: "network-storage",
         label: "Network Storage",
         displayValue: "15% GPU waiting",
-        seconds: 9.5,
+        seconds: 95,
         valueColor: "red-50",
+        barColor: "bg-red-50",
       },
     ],
   },

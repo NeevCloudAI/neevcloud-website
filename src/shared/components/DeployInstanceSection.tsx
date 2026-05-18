@@ -27,9 +27,9 @@ const DeployInstanceSection = ({
       <Container className="flex flex-col items-center justify-center">
         {title}
         <Text
-          textColor={showBGImage ? "gray-10" : "black"}
+          textColor={showBGImage ? "gray-10" : "black-5"}
           align="center"
-          className="mt-2 max-w-2xl"
+          className="max-w-2xl"
         >
           {description}
         </Text>

@@ -58,13 +58,14 @@ const NvmeComponent = () => {
             weight="semibold"
             className="max-w-4xl"
           >
-            Find the right model
+            Simple,
             <Text as="span" variant="h2" textColor="primary">
-              for your use case.
+              Transparent
             </Text>
+            Pricing
           </Text>
         }
-        description="Every model row links to docs, the playground, and a one-click deploy template."
+        description="25GB included free with every GPU instance. Pay only for additional capacity you provision."
         image={{
           src: "/images/transparent-pricing.png",
           alt: "Pricing",
@@ -73,7 +74,12 @@ const NvmeComponent = () => {
         }}
       />
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
-      <FooterComponent />
+      <FooterComponent
+        title="Start GPU Compute with NVMe"
+        description="Sub-millisecond latency, 7 GB/s throughput. Keep your GPUs saturated, not waiting. 25GB is included free with every GPU instance."
+        button1Text="Deploy with NVMe"
+        button2Text="View Storage Pricing"
+      />
     </>
   );
 };

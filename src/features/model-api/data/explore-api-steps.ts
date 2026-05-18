@@ -2,63 +2,31 @@ export type ExploreApiStep = {
   badgeLabel: string;
   title: string;
   description: string;
-  features: readonly string[];
 };
 
-export const EXPLORE_API_STEPS: readonly ExploreApiStep[] = [
+export const EXPLORE_API_STEPS: ExploreApiStep[] = [
   {
-    badgeLabel: "Browse",
-    title: "Choose a Model Category",
+    badgeLabel: "Step 1 - Get API Credentials",
+    title: "Request Access and Receive Your Key",
     description:
-      "Browse available models by category: language, vision, audio, or specialized. Each category shows model descriptions and typical use cases.",
-    features: [
-      "No signup required to browse",
-      "Descriptions for every model",
-      "4 categories, 26+ models",
-    ],
+      "Sign up for API access and receive your authentication credentials instantly. API keys work immediately, no waiting for approval or manual provisioning.",
   },
   {
-    badgeLabel: "Select",
-    title: "Select a Specific Model",
+    badgeLabel: "Step 2 - Choose Your Model",
+    title: "Browse available Models",
     description:
-      "Within each category, choose a model that matches your needs. Model cards explain capabilities, limitations, and ideal applications.",
-    features: [
-      "Capabilities & limitations listed",
-      "Price shown per 1M tokens (INR)",
-      "Free tier models highlighted",
-    ],
+      "Pick from text, vision, and audio models. Every model card lists capabilities, latency, pricing, and example payloads.",
   },
   {
-    badgeLabel: "Run",
-    title: "Try It Out",
+    badgeLabel: "Step 3 - Make Your First Request",
+    title: "Send Data, Get Predictions",
     description:
-      "Enter your input, text, image, audio, or other format, depending on the model. Adjust parameters if desired, then run the model to see results.",
-    features: [
-      "Text, image, audio inputs supported",
-      "Adjustable temperature & params",
-      "Latency & token cost shown",
-    ],
+      "A single POST to /v1/predict with your model name and input. Streaming, batching, and async webhooks supported out of the box.",
   },
   {
-    badgeLabel: "Compare",
-    title: "Iterate and Compare",
+    badgeLabel: "Step 4 - Handle Responses",
+    title: "Structured, Predictable Output",
     description:
-      "Run the same prompt across models or compare outputs side by side. Use metrics and cost to pick the best fit before you commit.",
-    features: [
-      "Side-by-side model comparison",
-      "Latency, tokens, and cost surfaced",
-      "Quality signals to guide selection",
-    ],
-  },
-  {
-    badgeLabel: "Ship",
-    title: "Move to Production",
-    description:
-      "Once you find a model that fits your use case, deployment is simple—the same models from the Playground are available via our inference API for production.",
-    features: [
-      "One line change from playground to prod",
-      "Same models and parameters as the UI",
-      "OpenAI-compatible · zero rewrite",
-    ],
+      "API responses include the prediction plus useful metadata: confidence scores, processing time, model version, and request ID for debugging.",
   },
 ] as const;

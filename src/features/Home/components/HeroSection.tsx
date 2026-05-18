@@ -23,8 +23,17 @@ const HeroSection = () => {
             Built to Scale Fearlessly
           </Text>
         ),
-        subtitle:
-          "Run AI workloads with sovereign control, security, and scalability.",
+        subtitle: (
+          <Text as="h6" align="center">
+            Run AI workloads with sovereign control, security, and scalability.,
+          </Text>
+        ),
+        button1: <Button>Explore Platform</Button>,
+        button2: (
+          <Button variant="outline" textColor="black">
+            Contact Sales
+          </Button>
+        ),
       },
       {
         title: (
@@ -41,8 +50,17 @@ const HeroSection = () => {
             </Text>
           </Text>
         ),
-        subtitle:
-          "Provision high-performance GPU clusters with dependable uptime.",
+        subtitle: (
+          <Text as="h6" align="center" textColor="white">
+            Provision high-performance GPU clusters with dependable uptime.,
+          </Text>
+        ),
+        button1: <Button>Explore Platform</Button>,
+        button2: (
+          <Button variant="white" textColor="black">
+            Contact Sales
+          </Button>
+        ),
       },
       {
         title: (
@@ -60,11 +78,20 @@ const HeroSection = () => {
             Built to Scale Fearlessly
           </Text>
         ),
-        subtitle:
-          "Run AI workloads with sovereign control, security, and scalability.",
+        subtitle: (
+          <Text as="h6" align="center">
+            Run AI workloads with sovereign control, security, and scalability.,
+          </Text>
+        ),
+        button1: <Button>Explore Platform</Button>,
+        button2: (
+          <Button variant="outline" textColor="black">
+            Contact Sales
+          </Button>
+        ),
       },
     ],
-    [],
+    []
   );
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -73,18 +100,10 @@ const HeroSection = () => {
   return (
     <div className="relative flex-1 flex flex-col items-center gap-2 md:gap-4 pt-[10vh] px-4 sm:px-6 md:px-8">
       {activeHeroSlide.title}
-      <Text
-        as="h6"
-        align="center"
-        textColor={`${activeSlideIndex === 0 ? "black" : "white"}`}
-      >
-        {activeHeroSlide.subtitle}
-      </Text>
+      {activeHeroSlide.subtitle}
       <div className="flex gap-4 mt-4 z-10">
-        <Button>Explore Platform</Button>
-        <Button variant="outline" textColor="black">
-          Contact Sales
-        </Button>
+        {activeHeroSlide.button1}
+        {activeHeroSlide.button2}
       </div>
       <HomeSlideShow onSlideChange={setActiveSlideIndex} />
     </div>

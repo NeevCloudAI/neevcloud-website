@@ -16,25 +16,15 @@ import { FeatureCard } from "@/shared/components/feature-card";
 
 function PrivateNetworkSection() {
   return (
-    <div className="relative bg-gray-10">
-      {/* <div
-        className="pointer-events-none absolute inset-0 bg-radial-[at_50%_0%] from-teal-300/30 via-transparent to-transparent blur-xs"
-        aria-hidden="true"
-      /> */}
-      <Container className="py-[3vh] md:py-[7vh] flex flex-col items-center justify-center">
-        {/* <Text as="h2" weight="semibold" align="center">
-          Same Private Network,
-        </Text>
-        <Text as="h2" weight="semibold" align="center" textColor="primary">
-        as your GPU Cluster.
-        </Text> */}
+    <div className="relative bg-gray-10 py-[3vh] md:py-[7vh]">
+      <Container className="flex flex-col items-center justify-center">
         <Text as="h2" weight="semibold" align="center" className="max-w-5xl">
           Same Private Network,
           <Text as="span" variant="h2" textColor="primary" weight="semibold">
             as your GPU Cluster.
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black" className="mt-2">
+        <Text as="h6" align="center" textColor="black-5">
           Boot in seconds with curated stacks, or upload your own ISO.
         </Text>
         <div className="w-full mt-4 flex flex-col items-stretch justify-between md:mt-8 md:flex-row">

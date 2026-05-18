@@ -28,7 +28,7 @@ const HeroSection = ({
   trustBadges?: string[];
 }) => {
   return (
-    <Container className="flex flex-col items-center justify-center pt-[3vh] md:pt-[10vh]">
+    <Container className="flex flex-col items-center justify-center pt-[3vh] md:pt-[7vh]">
       <Text
         as="small"
         textColor="primary"
@@ -63,12 +63,12 @@ const HeroSection = ({
         ))}
       </div>
 
-      <div className="w-full min-h-50 md:min-h-dvh mt-6 rounded-2xl overflow-hidden relative">
+      <div className="w-full min-h-50 md:min-h-dvh 2xl:min-h-[50vh] mt-6 rounded-2xl overflow-hidden relative">
         <Image
           src={image}
           alt="Gradient Background"
           fill
-          className="object-contain object-center"
+          className="object-contain"
           priority
         />
       </div>

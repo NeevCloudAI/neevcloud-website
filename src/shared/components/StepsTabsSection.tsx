@@ -28,7 +28,7 @@ const StepsTabsSection = ({
 
   return (
     <section
-      className={cn("relative bg-gray-10 py-[3vh] md:py-[10vh]", className)}
+      className={cn("relative bg-gray-10 py-[3vh] md:py-[7vh]", className)}
     >
       <Container className="flex flex-col items-center justify-center">
         {heading}
@@ -57,7 +57,7 @@ const StepsTabsSection = ({
                     "flex h-12 w-12 shrink-0 items-center justify-center rounded-md text-lg font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white",
+                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white"
                   )}
                 >
                   {index + 1}
@@ -92,7 +92,7 @@ const StepsTabsSection = ({
               </Text>
               <Text as="h6">{current.description}</Text>
               <ul className="mt-4 flex list-none flex-col gap-4 md:mt-8">
-                {current.features.map((feature) => (
+                {current.features?.map((feature) => (
                   <li
                     key={feature}
                     className="flex gap-2 rounded-md bg-gray-20 px-4 py-2"

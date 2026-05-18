@@ -7,7 +7,7 @@ import {
 
 const AvailableModelsSection = () => {
   return (
-    <section className="relative bg-white py-[3vh] md:py-[10vh]">
+    <section className="relative bg-white py-[3vh] md:py-[7vh]">
       <Container className="flex flex-col items-center justify-center">
         <Text as="h2" weight="semibold" align="center" className="max-w-4xl">
           Available Models
@@ -15,7 +15,7 @@ const AvailableModelsSection = () => {
             Across Categories
           </Text>
         </Text>
-        <Text align="center" textColor="black" className="mt-2 max-w-2xl">
+        <Text align="center" textColor="black-5" className="max-w-2xl">
           Access a curated collection of state-of-the-art models spanning
           language understanding, computer vision, audio processing, and
           specialized domains. Each model includes interactive demos and clear

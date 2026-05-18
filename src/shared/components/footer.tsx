@@ -9,17 +9,22 @@ import {
   FOOTER_LINK_GROUPS,
   FOOTER_SOCIAL_LINKS,
 } from "../data/footer-data";
-import type { FooterLinkGroup } from "../data/footer-types";
+import type { FooterCtaContent, FooterLinkGroup } from "../data/footer-types";
 
-const FooterComponent = () => {
+const FooterComponent = ({
+  title,
+  description,
+  button1Text,
+  button2Text,
+}: FooterCtaContent) => {
   return (
-    <footer className="bg-black py-4 md:py-16">
+    <footer className="bg-black py-[3vh] md:py-[7vh]">
       <Container className="flex flex-col gap-12 md:gap-16">
         <FooterCard
-          title={FOOTER_CTA.title}
-          description={FOOTER_CTA.description}
-          button1Text={FOOTER_CTA.button1Text}
-          button2Text={FOOTER_CTA.button2Text}
+          title={title || FOOTER_CTA.title || ""}
+          description={description || FOOTER_CTA.description || ""}
+          button1Text={button1Text || FOOTER_CTA.button1Text || ""}
+          button2Text={button2Text || FOOTER_CTA.button2Text || ""}
         />
 
         <div className="mb-4 md:mb-16 w-full flex flex-col md:flex-row gap-8 md:gap-16 text-white">

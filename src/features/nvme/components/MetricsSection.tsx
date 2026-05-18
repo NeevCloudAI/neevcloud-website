@@ -15,7 +15,7 @@ const MetricsSection = () => {
             Performance Metrics
           </Text>
         </Text>
-        <Text className="mt-2 max-w-2xl" align="center">
+        <Text textColor="black-5" className="max-w-2xl" align="center">
           Measured with typical AI workloads, model training, checkpoint saves,
           and dataset streaming.
         </Text>

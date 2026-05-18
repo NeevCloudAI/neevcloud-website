@@ -93,7 +93,12 @@ const ModelCatalogComponent = () => {
       />
       <ModelInformationSection />
       <UseModelSection />
-      <FooterComponent />
+      <FooterComponent
+        title="Start Building with Model APIs Today"
+        description="Create an account and receive 10,000 free API requests. No credit card required."
+        button1Text="Request API Access"
+        button2Text="View Documentation"
+      />
     </>
   );
 };

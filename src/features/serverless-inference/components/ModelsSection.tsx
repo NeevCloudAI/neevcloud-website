@@ -5,7 +5,7 @@ import ModelCard from "./ModelCard";
 
 const ModelsSection = () => {
   return (
-    <section className="relative bg-white py-[3vh] md:py-[10vh] bg-glow-terminal">
+    <section className="relative bg-white py-[3vh] md:py-[7vh] bg-glow-terminal">
       <Container className="flex flex-col items-center justify-center">
         <Text as="h2" weight="semibold" align="center" className="max-w-4xl">
           20+ Models. One Endpoint.
@@ -14,7 +14,7 @@ const ModelsSection = () => {
           </Text>
         </Text>
 
-        <Text align="center" className="mt-2 max-w-2xl">
+        <Text align="center" textColor="black-5" className="max-w-2xl">
           From Kimi K2 to Llama 3 405B to GLM 4.5, every model runs on
           NeevCloud&apos;s GPU clusters in India and is served through a unified
           API. Switch models with a single parameter change.

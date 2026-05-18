@@ -24,7 +24,7 @@ const ExploreModelsSection = () => {
         </Text>
       }
       description={
-        <Text as="h6" align="center" textColor="black" className="mt-2">
+        <Text as="h6" align="center" textColor="black-5">
           Getting started is simple, five steps from first browse to production
           deployment.
         </Text>

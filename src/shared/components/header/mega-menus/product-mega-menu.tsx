@@ -42,6 +42,7 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconAlt: "Managed Kubernetes",
             title: "Managed Kubernetes",
             description: "NKE · GPU-aware scheduling",
+            href: "/managed-kubernetes",
           },
         ],
       },

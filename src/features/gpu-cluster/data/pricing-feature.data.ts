@@ -2,27 +2,27 @@ import { FeatureCardProps } from "@/shared/components/feature-card";
 
 export const PRICING_FEATURES: FeatureCardProps[] = [
   {
-    title: "Private VPC",
-    description: "Isolated virtual networks per project.",
+    title: "InfiniBand Networking",
+    description: "High-bandwidth inter-GPU communication",
   },
   {
-    title: "Floating IPs",
-    description: "Reattach instantly between instances.",
+    title: "NVMe-Attached Storage",
+    description: "Fast local storage for datasets",
   },
   {
-    title: "L4 & L7 load balancers",
-    description: "TCP, HTTP, gRPC, your choice.",
+    title: "Pre-Built ML Images",
+    description: "PyTorch 2.8, TensorFlow, CUDA 12.9",
   },
   {
-    title: "VPN gateway",
-    description: "IPsec / WireGuard site-to-site",
+    title: "DDoS Protection",
+    description: "Included at no additional cost",
   },
   {
-    title: "DDoS protection",
-    description: "Always on, no extra cost",
+    title: "India Data Centers",
+    description: "Complete data sovereignty",
   },
   {
-    title: "1 & 10 Gbps ports",
-    description: "Dedicated bandwidth tiers",
+    title: "99.9% Uptime SLA",
+    description: "Enterprise-grade reliability",
   },
 ];

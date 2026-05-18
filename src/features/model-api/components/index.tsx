@@ -6,6 +6,8 @@ import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
 import { Divider, Text } from "@/shared/ui-lib";
 import ExploreApiSection from "./ExploreApiSection";
+import IntelligenceSection from "./IntelligenceSection";
+import PaySection from "./PaySection";
 
 const ModelApiComponent = () => {
   return (
@@ -43,9 +45,16 @@ const ModelApiComponent = () => {
           ]}
         />
       </section>
+      <IntelligenceSection />
       <ExploreApiSection />
+      <PaySection />
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
-      <FooterComponent />
+      <FooterComponent
+        title="Start Building with Model APIs Today"
+        description="Create an account and receive 10,000 free API requests. No credit card required."
+        button1Text="Request API Access"
+        button2Text="View Documentation"
+      />
     </>
   );
 };

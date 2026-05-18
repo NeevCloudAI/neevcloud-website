@@ -10,7 +10,7 @@ const ModelBuilderSection = () => {
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-[3vh] md:py-[7vh]">
       <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
-      <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
+      <div className="pointer-events-none absolute inset-0 z-1 bg-radial-[at_50%_50%] from-teal-300/30 via-transparent to-transparent blur-xs scale-85"></div>
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="h2"
@@ -25,7 +25,7 @@ const ModelBuilderSection = () => {
           </Text>
           model builders.
         </Text>
-        <Text textColor="gray-10" align={"center"} className="mt-2 max-w-xl">
+        <Text textColor="gray-10" align="center" className="max-w-xl">
           {MODEL_BUILDER_COPY.description}
         </Text>
 

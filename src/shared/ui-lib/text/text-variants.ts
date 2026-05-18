@@ -12,7 +12,7 @@ export const textVariants = cva("h-fit", {
       h5: "text-xs sm:text-sm md:text-base lg:text-lg font-normal mx-1 md:mx-1.5",
       h6: "text-xs sm:text-xs md:text-sm lg:text-base font-normal mx-1 md:mx-1.5",
       p: "text-sm mx-1 md:mx-1.5",
-      small: "text-xs block mx-1 md:mx-1.5",
+      small: "text-xs inline-block mx-1 md:mx-1.5",
     },
     weight: {
       regular: "font-regular",
@@ -47,6 +47,8 @@ export const textVariants = cva("h-fit", {
       "green-50": "text-green-50",
       "green-100": "text-green-100",
       "primary-60": "text-primary-60",
+      "black-5": "text-black-5",
+      "primary-gradient": "text-gradient-to-r from-[#59D8A7] to-[#022C3C]",
     },
     lineHeight: {
       xs: "leading-5",

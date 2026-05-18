@@ -40,7 +40,7 @@ const OSImageSection = () => {
           Ready to Deploy
         </Text>
       </Text>
-      <Text as="h6" align="center" textColor="black" className="mt-2">
+      <Text as="h6" align="center" textColor="black-5">
         Boot in seconds with curated stacks, or upload your own ISO.
       </Text>
       <div className="flex items-center justify-center mt-6 md:mt-12 mb-4 md:mb-8">

@@ -5,14 +5,16 @@
 5. Accessibility
 6. All text in one file
 
-Refactor: Three steps to Production
-
 Make it:
 
 1. SEO friendly
 2. Accessibility friendly
 
-- hero image
 - FAQ of every page
-- line height
-- section spacing
+- bg gradient
+- main heading line height is more
+- vertical stack section
+  <!-- - section spacing -->
+  <!-- - hero image -->
+  <!-- - main subheading should have -->
+  <!-- - Refactor: Three steps to Production -->

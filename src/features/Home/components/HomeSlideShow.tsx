@@ -19,7 +19,7 @@ const HomeSlideShow = ({ onSlideChange }: HomeSlideShowProps) => {
       { src: "/images/slide-show2.png", alt: "NeevCloud platform overview" },
       { src: "/images/slide-show3.png", alt: "NeevCloud platform overview" },
     ],
-    [],
+    []
   );
 
   useEffect(() => {

@@ -223,7 +223,7 @@ const UseCasesSection = () => {
 
   const activeCase = useMemo(
     () => USE_CASES.find((u) => u.id === activeTab) ?? USE_CASES[0],
-    [activeTab],
+    [activeTab]
   );
 
   return (
@@ -234,7 +234,7 @@ const UseCasesSection = () => {
           Cases
         </Text>
       </Text>
-      <Text className="mt-2">Built for Every AI Workload</Text>
+      <Text textColor="black-5">Built for Every AI Workload</Text>
       <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b border-gray-60 items-center justify-center mt-4 md:mt-8">
         {USE_CASES.map((tab) => (
           <Button

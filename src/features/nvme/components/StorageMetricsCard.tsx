@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
 import { StorageMetricsCardType } from "../data/storage-comparison-data";
-import StorageComparisonBar from "./StorageComparisonBar";
+import StorageComparisonBar from "@/shared/components/StorageComparisonBar";
 
 const StorageMetricsCard = ({ card }: { card: StorageMetricsCardType }) => {
   return (
@@ -19,11 +19,7 @@ const StorageMetricsCard = ({ card }: { card: StorageMetricsCardType }) => {
       </div>
       <div className="mt-4 flex flex-col gap-4">
         {card.metrics.map((metric) => (
-          <StorageComparisonBar
-            key={metric.id}
-            metric={metric}
-            maxSeconds={10}
-          />
+          <StorageComparisonBar key={metric.id} metric={metric} />
         ))}
       </div>
     </div>

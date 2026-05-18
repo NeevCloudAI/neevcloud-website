@@ -107,7 +107,7 @@ export default function InfrastructureSectionContent() {
           , Not Adds Them
         </Text>
 
-        <Text className="mt-2 max-w-2xl" align="center">
+        <Text className="mt-2 max-w-2xl" textColor="gray-10" align="center">
           We built NeevCloud to give every innovator access to world-class AI
           infrastructure without the traditional limits of cost, complexity, or
           control.

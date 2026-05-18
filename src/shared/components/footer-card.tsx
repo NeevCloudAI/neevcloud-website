@@ -14,8 +14,8 @@ const FooterCard = ({
   button2Text,
 }: FooterCardProps) => {
   return (
-    <div className="relative w-full rounded-md bg-primary-100 py-[2vh] md:py-[10vh] px-4 md:px-8 flex flex-col gap-1 overflow-hidden">
-      <Text as="h2" weight="medium" className="max-w-sm">
+    <section className="relative w-full rounded-md bg-primary-100 py-[2vh] md:py-[10vh] px-4 md:px-12 flex flex-col  overflow-hidden">
+      <Text as="h1" weight="medium" className="max-w-2xl">
         {title}
       </Text>
       <Text className="z-2 mt-2 max-w-lg">{description}</Text>
@@ -35,7 +35,7 @@ const FooterCard = ({
         )}
       </div>
       <div className=" absolute w-[40%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat"></div>
-    </div>
+    </section>
   );
 };
 

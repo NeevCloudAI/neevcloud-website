@@ -13,7 +13,7 @@ const StepContent = ({ step }: StepContentProps) => {
         as="h1"
         weight="semibold"
         textColor="gray-60"
-        className="text-[7rem]"
+        className="text-[5rem]"
       >
         {step.number}
       </Text>

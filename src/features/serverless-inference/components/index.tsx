@@ -1,7 +1,7 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { SERVERLESS_INFERENCE_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -37,6 +37,13 @@ const ServerlessInferenceComponent = () => {
           button2Text="View Pricing"
           badgeText="India's Sovereign Inference Cloud"
           image="/images/serverless.png"
+          trustBadges={[
+            "Data residency in India",
+            "DPDP Act compliant",
+            "SOC 2 Type II",
+            "Data never used for training",
+            "99.9% uptime SLA",
+          ]}
         />
       </section>
       <ThreeStepsSection />
@@ -74,7 +81,7 @@ const ServerlessInferenceComponent = () => {
         buttonText2="Contact for Custom Plans"
       />
       <InferenceStackSection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection items={SERVERLESS_INFERENCE_FAQ_ITEMS} />
       <FooterComponent
         title="Ready to Run Your First Inference?"
         description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."

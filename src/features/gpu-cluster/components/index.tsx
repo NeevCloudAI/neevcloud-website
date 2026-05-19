@@ -1,6 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { GPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -35,7 +35,7 @@ const GpuClusterComponent = () => {
       <PricingSection />
       <ComputeSection />
       <UseCasesSection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection items={GPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent
         title="Launch Your First GPU Instance"
         description="Deploy H100, A100, RTX 5090, or other GPUs in minutes. On-demand flexibility or reserved savings."

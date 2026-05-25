@@ -170,7 +170,7 @@ export function StepOnePanel() {
           />
         ))}
       </div>
-      <div className="border border-primary-45 bg-primary-40/60 backdrop-blur-sm rounded-xl p-4 md:px-5 md:py-3.75 mt-4 md:mt-7.5 space-y-2 z-1 relative">
+      <div className="border border-primary-45 bg-primary-40/60 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-4 md:mt-7.5 space-y-2 z-1 relative">
         <Text
           fontFamily="spaceMono"
           textColor="gray-90"
@@ -215,7 +215,7 @@ export function StepTwoPanel() {
         ))}
       </div>
 
-      <div className="border-gray-55 bg-gray-05/80 backdrop-blur-xs rounded-xl p-4 md:px-5 md:py-3.75 mt-5 flex items-center justify-between flex-col">
+      <div className="border-gray-55 bg-gray-05/80 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-5 flex items-center justify-between flex-col">
         <Text fontFamily="spaceMono" textColor="primary" as="h3">
           ≤ 60s
         </Text>
@@ -294,7 +294,7 @@ export function StepThreePanel() {
         </div>
       </div>
 
-      <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 md:px-5 md:py-3.75 mt-3.25 space-y-1">
+      <div className="bg-black/80 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-3.25 space-y-1">
         <Text fontFamily="spaceMono" textColor="gray-90">
           # one line change
         </Text>

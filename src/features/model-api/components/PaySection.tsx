@@ -14,7 +14,7 @@ const PaySection = () => {
           </Text>
         </Text>
         <div className="flex flex-col md:flex-row gap-4 mt-4 md:mt-12.5 w-full">
-          <div className="bg-white-5 rounded-xl w-full shadow-sm font-mono border border-white-10 backdrop-blur-sm">
+          <div className="bg-white-5 rounded-xl w-full shadow-sm font-mono border border-white-10 backdrop-blur-md">
             <div className="flex items-center gap-2 p-3.75 border-b border-black-5">
               <div className="flex items-center gap-1.25">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />

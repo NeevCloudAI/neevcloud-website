@@ -18,7 +18,7 @@ const ControlPlaneSection = () => {
           only for GPU and CPU nodes in your cluster.
         </Text>
         <div className="flex flex-col md:flex-row gap-5 mt-4 md:mt-8 w-full">
-          <div className="bg-white-5 backdrop-blur-sm rounded-lg w-full shadow-sm font-mono border border-white-10">
+          <div className="bg-white-5 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white-10">
             <div className="flex items-center gap-2 px-4 py-3 border-b border-black-5">
               <div className="flex items-center gap-1.5" aria-hidden>
                 <span className="size-2.5 rounded-full bg-[#ff5f57]" />

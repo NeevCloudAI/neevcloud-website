@@ -146,5 +146,5 @@ export const CPU_INSTANCE_FAMILIES: CpuInstanceFamily[] = [
 ];
 
 export const CPU_INSTANCE_FAMILY_BY_ID = Object.fromEntries(
-  CPU_INSTANCE_FAMILIES.map((family) => [family.id, family])
+  CPU_INSTANCE_FAMILIES.map((family) => [family.id, family]),
 ) as Record<CpuInstanceFamilyId, CpuInstanceFamily>;

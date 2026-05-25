@@ -22,14 +22,17 @@ export type AmbitionDetailCardProps = {
   className?: string;
 };
 
-export function AmbitionDetailCard({ item, className }: AmbitionDetailCardProps) {
+export function AmbitionDetailCard({
+  item,
+  className,
+}: AmbitionDetailCardProps) {
   const { label, iconSrc, iconAlt, title, description, bullets } = item;
 
   return (
     <article
       className={cn(
         "flex flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
-        className
+        className,
       )}
     >
       <Text textColor="gray-85">{label}</Text>

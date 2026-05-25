@@ -56,7 +56,7 @@ const ExperimentationSection = () => {
               title={feature.title}
               description={feature.description}
               theme="transparent"
-              className="bg-gray-120 backdrop-blur-xs"
+              className="bg-gray-120 backdrop-blur-md"
             />
           ))}
         </div>

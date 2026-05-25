@@ -1,12 +1,8 @@
 import type { CategoryFeatureItem } from "@/shared/components/category-feature-card";
-import BrainIcon from "../components/BrainIcon";
-import PersonIcon from "../components/PersonIcon";
-import SparkIcon from "../components/SparkIcon";
-import MicroScopeIcon from "../components/MicroScopeIcon";
 
 export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
   {
-    icon: SparkIcon,
+    icon: "/icons/spark.svg",
     badgeLabel: "pillar 01 - access",
     title: "Democratizing AI Access",
     description:
@@ -33,7 +29,7 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
     ],
   },
   {
-    icon: BrainIcon,
+    icon: "/icons/brain.svg",
     badgeLabel: "Pillar 02 · Capability",
     title: "Building Indigenous Capabilities",
     description:
@@ -60,7 +56,7 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
     ],
   },
   {
-    icon: PersonIcon,
+    icon: "/icons/person.svg",
     badgeLabel: "Pillar 03 · Innovation",
     title: "Enabling Innovation Across Sectors",
     description:
@@ -87,7 +83,7 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
     ],
   },
   {
-    icon: MicroScopeIcon,
+    icon: "/icons/microscope.svg",
     badgeLabel: "Pillar 04 · Research",
     title: "Research & Skill Development",
     description:

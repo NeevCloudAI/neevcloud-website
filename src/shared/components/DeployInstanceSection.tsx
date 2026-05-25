@@ -32,7 +32,7 @@ const DeployInstanceSection = ({
         </Text>
 
         <div
-          className={`bg-transparent backdrop-blur-sm ${showBorder ? "border border-white-10" : ""} p-2 rounded-md mt-4 md:mt-8`}
+          className={`bg-transparent backdrop-blur-md ${showBorder ? "border border-white-10" : ""} p-2 rounded-md mt-4 md:mt-8`}
         >
           <Image
             src={image.src}

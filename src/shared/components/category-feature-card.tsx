@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-import { LucideIconGlyph } from "@/shared/icons/lucide-icon-glyph";
-import type { LucideIconName } from "@/shared/icons/lucide-icon-map";
 import { Button, Text } from "@/shared/ui-lib";
 import { SquareCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -14,7 +12,7 @@ export type CategoryFeatureHoverDetail = {
 };
 
 export type CategoryFeatureItem = {
-  icon: LucideIconName | LucideIcon;
+  icon: string;
   badgeLabel: string;
   title: string;
   description: string;
@@ -60,10 +58,11 @@ export function CategoryFeatureCard({
         )}
       >
         <div className="w-fit rounded-md bg-white p-3.75">
-          <LucideIconGlyph
-            icon={category.icon}
-            size={iconSize}
-            className="shrink-0 text-primary"
+          <Image
+            src={category.icon}
+            alt={title}
+            width={iconSize}
+            height={iconSize}
           />
         </div>
         <Text as="h5" className="pt-5">
@@ -113,7 +112,7 @@ export function CategoryFeatureCard({
       {showHoverOverlay ? (
         <div
           className={cn(
-            "absolute inset-0 flex translate-y-full flex-col bg-primary/92 p-4 backdrop-blur-xs transition-transform duration-500 ease-out md:py-25 md:px-10",
+            "absolute inset-0 flex translate-y-full flex-col bg-primary/92 p-4 backdrop-blur-md transition-transform duration-500 ease-out md:py-25 md:px-10",
             "group-hover:translate-y-0 group-focus-within:translate-y-0"
           )}
         >

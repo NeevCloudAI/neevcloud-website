@@ -49,7 +49,7 @@ export default function FaqSection({
     <section
       className={cn(
         "bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-8 md:py-16 2xl:py-25",
-        className
+        className,
       )}
     >
       <Container className="flex flex-col items-center justify-center">

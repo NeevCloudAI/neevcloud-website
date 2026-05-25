@@ -29,7 +29,7 @@ const FooterCard = ({
       <Text as="h6" className="z-2 mt-2.5 max-w-xl">
         {description}
       </Text>
-      <div className="mt-2 md:mt-7.5 flex gap-4">
+      <div className="mt-2 md:mt-7.5 flex gap-4 z-1">
         <Button
           variant="outline-primary"
           textColor="black"
@@ -44,7 +44,7 @@ const FooterCard = ({
           </Button>
         )}
       </div>
-      <div className="absolute w-[50%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute w-[50%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat opacity-50"></div>
     </section>
   );
 };

@@ -223,7 +223,7 @@ const UseCasesSection = () => {
 
   const activeCase = useMemo(
     () => USE_CASES.find((u) => u.id === activeTab) ?? USE_CASES[0],
-    [activeTab]
+    [activeTab],
   );
 
   return (

@@ -22,10 +22,10 @@ export const RUNTIME_TAB_ENTRIES: RuntimeTabEntry[] = [
 ];
 
 export const RUNTIME_TABS: RuntimeTab[] = RUNTIME_TAB_ENTRIES.map(
-  (entry) => entry.id
+  (entry) => entry.id,
 );
 
 export const RUNTIME_TAB_BY_ID: Record<RuntimeTab, RuntimeTabEntry> =
   Object.fromEntries(
-    RUNTIME_TAB_ENTRIES.map((entry) => [entry.id, entry])
+    RUNTIME_TAB_ENTRIES.map((entry) => [entry.id, entry]),
   ) as Record<RuntimeTab, RuntimeTabEntry>;

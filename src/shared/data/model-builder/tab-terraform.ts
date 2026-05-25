@@ -61,7 +61,12 @@ function tokenizeTerraformLine(line: string): CodeToken[] {
     }
 
     let j = i;
-    while (j < line.length && line[j] !== '"' && line[j] !== "'" && line[j] !== "#") {
+    while (
+      j < line.length &&
+      line[j] !== '"' &&
+      line[j] !== "'" &&
+      line[j] !== "#"
+    ) {
       j += 1;
     }
     if (j > i) {

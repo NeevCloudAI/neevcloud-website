@@ -1,5 +1,4 @@
 import type { MetricCardData } from "@/features/nvme/data/metrics-data";
-import { LucideIconGlyph } from "@/shared/icons/lucide-icon-glyph";
 import { Text } from "@/shared/ui-lib";
 
 export type MetricCardProps = {
@@ -9,11 +8,7 @@ export type MetricCardProps = {
 const MetricCard = ({ metric }: MetricCardProps) => {
   return (
     <article className="flex flex-col items-center rounded-md bg-gray-10 px-4 py-7.5">
-      <LucideIconGlyph
-        icon={metric.icon}
-        size={14}
-        className={`text-${metric.valueColor}`}
-      />
+      <metric.icon size={14} className={`text-${metric.valueColor}`} />
       <Text
         as="h3"
         weight="semibold"

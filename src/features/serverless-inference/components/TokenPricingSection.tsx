@@ -31,7 +31,7 @@ const TokenPricingSection = () => {
           Reserved inference capacity available for high-volume workloads.
         </Text>
 
-        <div className="bg-white-5 backdrop-blur-sm rounded-lg w-full shadow-sm font-mono border border-white-10 mt-4 md:mt-12.5">
+        <div className="bg-white-5 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white-10 mt-4 md:mt-12.5">
           <div className="flex items-center border-b border-gray-95 p-3.5">
             <div className="flex items-center gap-1.5" aria-hidden>
               <span className="size-2.5 rounded-full bg-[#ff5f57]" />

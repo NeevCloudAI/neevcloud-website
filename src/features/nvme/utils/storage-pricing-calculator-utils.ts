@@ -8,11 +8,17 @@ export function formatCurrency(value: number): string {
   return `₹${Math.round(value).toLocaleString("en-IN")}`;
 }
 
-export function calculateMonthlyStorageCost(additionalStorageGb: number): number {
+export function calculateMonthlyStorageCost(
+  additionalStorageGb: number,
+): number {
   return additionalStorageGb * PRICE_PER_GB_MONTH;
 }
 
-export function storageToSlider(storageGb: number, minGb: number, maxGb: number): number {
+export function storageToSlider(
+  storageGb: number,
+  minGb: number,
+  maxGb: number,
+): number {
   if (maxGb === minGb) {
     return 0;
   }

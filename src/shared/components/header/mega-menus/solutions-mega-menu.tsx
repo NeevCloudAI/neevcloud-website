@@ -29,6 +29,7 @@ const SOLUTIONS_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconSrc: "",
             iconAlt: "BFSI",
             title: "BFSI",
+            href: "/bfsi",
             description: "Compliance-Ready AI Infra",
           },
           {

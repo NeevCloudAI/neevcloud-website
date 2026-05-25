@@ -78,7 +78,7 @@ const HeroSection = () => {
         ),
       },
     ],
-    []
+    [],
   );
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);

@@ -27,7 +27,7 @@ const FooterComponent = ({
         hasBGImage
           ? "bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"
           : "",
-        className
+        className,
       )}
     >
       <Container className="flex flex-col gap-6 md:gap-25">

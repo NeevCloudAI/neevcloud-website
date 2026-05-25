@@ -29,7 +29,7 @@ const OSImageCard = memo(function OSImageCard({
     <div
       className={cn(
         "relative rounded-xl p-8 flex flex-col overflow-hidden text-left cursor-pointer",
-        isSelected ? "bg-primary text-white" : "bg-gray-10"
+        isSelected ? "bg-primary text-white" : "bg-gray-10",
       )}
       onClick={() => onSelect(title)}
       aria-pressed={isSelected}
@@ -72,7 +72,7 @@ const OSImageCard = memo(function OSImageCard({
                   ? "bg-primary text-white px-2.5 py-1 rounded-full"
                   : isSelected
                     ? "bg-white/20 text-white px-2.5 py-1 rounded-full"
-                    : "bg-gray-60 px-2.5 py-1 rounded-full"
+                    : "bg-gray-60 px-2.5 py-1 rounded-full",
             )}
           >
             {card.name}

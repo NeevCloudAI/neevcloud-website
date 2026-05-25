@@ -60,7 +60,7 @@ const RightModelSection = () => {
           template.
         </Text>
 
-        <div className="mt-4 w-full rounded-lg border border-white-10 bg-white-5 font-mono shadow-sm backdrop-blur-sm md:mt-12.5">
+        <div className="mt-4 w-full rounded-lg border border-white-10 bg-white-5 font-mono shadow-sm backdrop-blur-md md:mt-12.5">
           <div className="flex items-center border-b border-gray-95 p-3.5">
             <div className="flex items-center gap-1.5" aria-hidden>
               <span className="size-2.5 rounded-full bg-[#ff5f57]" />

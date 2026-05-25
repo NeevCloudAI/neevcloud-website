@@ -15,7 +15,7 @@ export function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div
-      className={`flex w-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white-5 backdrop-blur-sm" : theme === "dark" ? "bg-gray-105 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
+      className={`flex w-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white-5 backdrop-blur-md" : theme === "dark" ? "bg-gray-105 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
     >
       <div className="h-7.5 w-7.5 shrink-0 bg-gray-50"></div>
       <Text

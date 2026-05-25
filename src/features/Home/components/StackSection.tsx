@@ -31,7 +31,7 @@ function StackPanel({
       className={cn(
         "flex flex-col rounded-lg p-2 text-gray-90",
         isActive ? "opacity-100" : "opacity-50",
-        className
+        className,
       )}
       aria-labelledby={`stack-panel-${panel.id}-title`}
     >
@@ -70,7 +70,7 @@ function StackPanel({
                 "grid transition-[grid-template-rows,opacity] duration-300 ease-out",
                 activeItemId === item.id
                   ? "grid-rows-[1fr] opacity-100"
-                  : "grid-rows-[0fr] opacity-0"
+                  : "grid-rows-[0fr] opacity-0",
               )}
               aria-labelledby={`stack-item-button-${panel.id}-${item.id}`}
             >
@@ -97,13 +97,13 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId
+      currentItemId === itemId ? "" : itemId,
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId)
+      panel.items.some((item) => item.id === activeItemId),
     );
     return idx === -1 ? 0 : idx;
   })();

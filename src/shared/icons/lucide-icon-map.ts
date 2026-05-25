@@ -32,7 +32,7 @@ export const LUCIDE_ICONS = {
 export type LucideIconName = keyof typeof LUCIDE_ICONS;
 
 export function resolveLucideIcon(
-  icon: LucideIconName | LucideIcon
+  icon: LucideIconName | LucideIcon,
 ): LucideIcon {
   return typeof icon === "string" ? LUCIDE_ICONS[icon] : icon;
 }

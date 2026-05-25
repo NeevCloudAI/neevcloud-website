@@ -88,7 +88,7 @@ function FlowCard({ node, className }: FlowCardProps) {
     <div
       className={cn(
         "z-3 flex flex-col items-center gap-1 bg-white rounded-lg p-4 md:px-24",
-        className
+        className,
       )}
     >
       {node.badge && (

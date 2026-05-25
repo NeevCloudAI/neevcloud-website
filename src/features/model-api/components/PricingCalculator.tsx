@@ -50,7 +50,7 @@ function CalculatorSlider({
         "pricing-calculator-slider w-full",
         variant === "primary"
           ? "pricing-calculator-slider--primary"
-          : "pricing-calculator-slider--neutral"
+          : "pricing-calculator-slider--neutral",
       )}
     />
   );
@@ -96,7 +96,7 @@ const PricingCalculator = () => {
   const formattedRequests = formatRequests(totalRequests);
   const monthlyCost = useMemo(
     () => calculateMonthlyCost(totalRequests, mix),
-    [totalRequests, mix]
+    [totalRequests, mix],
   );
 
   const categoryCosts = useMemo(
@@ -106,9 +106,9 @@ const PricingCalculator = () => {
           acc[id] = calculateCategoryCost(totalRequests, mix[id], id);
           return acc;
         },
-        {} as Record<WorkloadCategoryId, number>
+        {} as Record<WorkloadCategoryId, number>,
       ),
-    [totalRequests, mix]
+    [totalRequests, mix],
   );
 
   const handleMixChange = (category: WorkloadCategoryId, value: number) => {

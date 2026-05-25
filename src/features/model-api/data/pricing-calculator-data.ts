@@ -19,7 +19,13 @@ export const WORKLOAD_CATEGORIES: ReadonlyArray<{
   { id: "specialized", label: "Specialized" },
 ];
 
-export const REQUEST_SCALE_LABELS = ["10K", "100K", "1M", "10M", "50M"] as const;
+export const REQUEST_SCALE_LABELS = [
+  "10K",
+  "100K",
+  "1M",
+  "10M",
+  "50M",
+] as const;
 
 export const MIN_REQUESTS = 10_000;
 export const MAX_REQUESTS = 50_000_000;

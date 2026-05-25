@@ -2,8 +2,6 @@ import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
 import { stats } from "../data/performance";
 
-
-
 const PerformanceSection = () => {
   return (
     <section className='relative bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black py-[3vh] md:py-[7vh]'>

@@ -397,7 +397,7 @@ const DeployWorkloadSection = () => {
                   !isLast && "border-b md:border-b-0 md:border-r",
                   isSelected
                     ? "bg-primary-100 text-black"
-                    : "border-gray-90 text-gray-65"
+                    : "border-gray-90 text-gray-65",
                 )}
               >
                 {option.label}

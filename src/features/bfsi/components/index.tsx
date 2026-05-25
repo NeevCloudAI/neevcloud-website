@@ -3,7 +3,7 @@ import HeaderComponent from "@/shared/components/header";
 import FooterComponent from "@/shared/components/footer";
 import { Divider, Text } from "@/shared/ui-lib";
 import FaqSection from "@/shared/components/faq/faq-section";
-import {BFSI_FAQ_ITEMS} from "../data/bsfi-faq-section-data";
+import { BFSI_FAQ_ITEMS } from "../data/bsfi-faq-section-data";
 import HeroSection from "@/shared/components/HeroSection";
 import PerformanceSection from "./PerformanceSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";

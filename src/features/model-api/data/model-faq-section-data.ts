@@ -1,5 +1,5 @@
 import type { FaqItem } from "../../../shared/data/faq-section-types";
-export const  MODEL_API_FAQ_ITEMS: readonly FaqItem[] = [
+export const MODEL_API_FAQ_ITEMS: readonly FaqItem[] = [
   {
     id: 1,
     category: "Networking",

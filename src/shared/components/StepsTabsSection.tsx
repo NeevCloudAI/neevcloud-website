@@ -57,7 +57,7 @@ const StepsTabsSection = ({
                     "flex h-12 w-12 shrink-0 items-center justify-center rounded-md text-lg font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white"
+                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white",
                   )}
                 >
                   {index + 1}

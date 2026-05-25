@@ -19,7 +19,6 @@ const HeroSection = ({
   badgeText,
   image,
   trustBadges = trustBadgesData,
-  imageClassName,
 }: {
   title: React.ReactNode;
   description: string;
@@ -28,7 +27,6 @@ const HeroSection = ({
   badgeText: string;
   image: string;
   trustBadges?: string[];
-  imageClassName?: string;
 }) => {
   return (
     <Container className="flex flex-col items-center justify-center pt-[3vh] md:pt-[7vh]">
@@ -66,12 +64,7 @@ const HeroSection = ({
         ))}
       </div>
 
-      <div
-        className={cn(
-          "w-full min-h-50 md:min-h-dvh 2xl:min-h-[50vh] mt-6 rounded-2xl overflow-hidden relative",
-          imageClassName,
-        )}
-      >
+      <div className="w-full min-h-50 md:min-h-dvh 2xl:min-h-[80vh] mt-6 rounded-2xl overflow-hidden relative">
         <Image
           src={image}
           alt="Gradient Background"

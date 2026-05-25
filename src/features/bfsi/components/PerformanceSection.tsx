@@ -13,40 +13,40 @@ const PerformanceSection = () => {
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="h2"
+          variant="h2"
           textColor="white"
           weight="semibold"
           align="center"
           className="max-w-2xl"
         >
-          Performance that
+          Performance that{" "}
           <Text as="span" variant="h2" textColor="primary" weight="semibold">
             financial
           </Text>
-        </Text>
-        <Text
-          as="h2"
-          textColor="primary"
-          weight="semibold"
-          align="center"
-          className="max-w-2xl"
-        >
-          services
-          <Text as="span" variant="h2" textColor="white" weight="semibold">
-            depends on
-          </Text>
+          <br />
+          <Text as="span" variant="h2" textColor="primary" weight="semibold">
+            services
+          </Text>{" "}
+          depend on.
         </Text>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 w-full max-w-6xl mt-16">
           {stats.map((stat) => (
             <div
-              key={stat.label} 
+              key={stat.label}
               className="bg-white/5 border h-54.75 border-white/10 backdrop-blur-sm rounded-xl p-5 md:p-7 flex flex-col gap-1"
             >
               <div className="flex items-baseline gap-1">
-                <Text as="span" className="text-primary text-4xl md:text-5xl font-semibold leading-none ">
+                <Text
+                  as="span"
+                  className="text-primary text-4xl md:text-5xl font-semibold leading-none "
+                >
                   {stat.value}
                 </Text>
                 {stat.unit && (
-                  <Text as="span" className="text-white text-base md:text-lg font-medium">
+                  <Text
+                    as="span"
+                    className="text-white text-base md:text-lg font-medium"
+                  >
                     {stat.unit}
                   </Text>
                 )}

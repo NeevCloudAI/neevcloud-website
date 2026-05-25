@@ -1,6 +1,5 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -9,6 +8,7 @@ import ExploreModelsSection from "./ExploreModelsSection";
 import ExperimentationSection from "./ExperimentationSection";
 import AvailableModelsSection from "./AvailableModelsSection";
 import ModelsSection from "./ModelsSection";
+import { MODEL_PLAYGROUND_FAQ_ITEMS } from "../data/model-faq-section-data";
 
 const ModelPlaygroundComponent = () => {
   return (
@@ -50,7 +50,7 @@ const ModelPlaygroundComponent = () => {
       <AvailableModelsSection />
       <ExperimentationSection />
       <ExploreModelsSection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection items={MODEL_PLAYGROUND_FAQ_ITEMS} />
       <FooterComponent
         title="Launch Your First CPU Instance"
         description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."

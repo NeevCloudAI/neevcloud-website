@@ -36,10 +36,8 @@ export default function BFSICard({
         {badge && (
           <Text
             fontFamily="spaceMono"
-            className={cn(
-              "text-lg",
-              isEnterprise ? "text-white" : "text-black",
-            )}
+            variant="p"
+            textColor={isEnterprise ? "white" : "black"}
           >
             {badge}
           </Text>
@@ -56,10 +54,7 @@ export default function BFSICard({
       </Text>
 
       {/* Description */}
-      <Text
-        as="h6"
-        className={cn(isEnterprise ? "text-white" : "text-black")}
-      >
+      <Text as="h6" className={cn(isEnterprise ? "text-white" : "text-black")}>
         {description}
       </Text>
 

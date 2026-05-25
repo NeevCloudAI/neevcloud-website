@@ -3,7 +3,7 @@ import HeaderComponent from "@/shared/components/header";
 import FooterComponent from "@/shared/components/footer";
 import { Divider, Text } from "@/shared/ui-lib";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { BFSI_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import {BFSI_FAQ_ITEMS} from "../data/bsfi-faq-section-data";
 import HeroSection from "@/shared/components/HeroSection";
 import PerformanceSection from "./PerformanceSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
@@ -37,7 +37,6 @@ const BFSIComponent = () => {
             "99.9% uptime SLA",
             "Enterprise support",
           ]}
-          imageClassName="md:min-h-[120vh] 2xl:min-h-[80vh] 2xl:max-w-6xl 2xl:max-h-[80vh]"
         />
       </section>
       <BFSIApplicationsSection />
@@ -45,10 +44,10 @@ const BFSIComponent = () => {
 
       <FaqSection items={BFSI_FAQ_ITEMS} />
       <FooterComponent
-        title="Launch Your First CPU Instance"
-        description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."
-        button1Text="Configure Now"
-        button2Text="Talk to Our Team"
+        title="Ready to Run Your First Inference?"
+        description="Secure, compliant infrastructure for fraud detection, risk modeling, and financial analytics. SOC 2 certified with data sovereignty guarantees."
+        button1Text="Get Free API Key"
+        button2Text="Read the Docs"
       />
     </>
   );

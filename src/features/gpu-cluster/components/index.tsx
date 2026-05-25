@@ -1,6 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { GPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { GPU_CLUSTER_FAQ_ITEMS } from "../data/gpu-faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";

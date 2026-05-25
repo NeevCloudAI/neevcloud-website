@@ -1,7 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -9,6 +8,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 import StoragePerformanceSection from "./StoragePerformanceSection";
 import DeployStorageSection from "./DeployStorageSection";
 import MetricsSection from "./MetricsSection";
+import { NVME_FAQ_ITEMS } from "../data/model-faq-section-data";
 const NvmeComponent = () => {
   return (
     <>
@@ -73,7 +73,7 @@ const NvmeComponent = () => {
           height: 1000,
         }}
       />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection items={NVME_FAQ_ITEMS} />
       <FooterComponent
         title="Start GPU Compute with NVMe"
         description="Sub-millisecond latency, 7 GB/s throughput. Keep your GPUs saturated, not waiting. 25GB is included free with every GPU instance."

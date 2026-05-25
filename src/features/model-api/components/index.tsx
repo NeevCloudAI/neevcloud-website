@@ -1,6 +1,6 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { MODEL_API_FAQ_ITEMS } from "../data/model-faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
@@ -48,7 +48,7 @@ const ModelApiComponent = () => {
       <IntelligenceSection />
       <ExploreApiSection />
       <PaySection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection items={MODEL_API_FAQ_ITEMS} />
       <FooterComponent
         title="Start Building with Model APIs Today"
         description="Create an account and receive 10,000 free API requests. No credit card required."

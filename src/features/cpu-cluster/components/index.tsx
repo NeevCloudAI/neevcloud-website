@@ -5,7 +5,7 @@ import PrivateNetworkSection from "./private-network/private-network-section";
 import FooterComponent from "@/shared/components/footer";
 import { Divider, Text } from "@/shared/ui-lib";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { CPU_CLUSTER_FAQ_ITEMS } from "../data/cpu-faq-section-data";
 import HeroSection from "@/shared/components/HeroSection";
 import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import AIStackSection from "./AIStackSection";

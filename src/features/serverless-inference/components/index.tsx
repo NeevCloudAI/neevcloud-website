@@ -14,27 +14,25 @@ import TokenPricingSection from "./TokenPricingSection";
 const ServerlessInferenceComponent = () => {
   return (
     <>
-      <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat">
-        <AnnouncementSection />
-        <HeaderComponent />
-        <Divider orientation="horizontal" />
-        <HeroSection
-          title={
-            <Text as="h1" className="max-w-4xl text-center mt-4 md:mt-6">
-              Run Any Model. Pay Per Token.
-              <Text as="span" variant="h1" textColor="primary">
-                No GPUs
-              </Text>
-              to Manage.
+      <AnnouncementSection />
+      <HeaderComponent />
+      <Divider orientation="horizontal" />
+      <HeroSection
+        title={
+          <Text as="h1" className="max-w-4xl text-center mt-4 md:mt-6">
+            Run Any Model. Pay Per Token.
+            <Text as="span" variant="h1" textColor="primary">
+              No GPUs
             </Text>
-          }
-          description="NeevCloud Serverless Inference gives you instant API access to 20+ production-ready open-source models. OpenAI-compatible, sub-50ms latency, billed in INR, with every request processed India."
-          button1Text="Try in Playground"
-          button2Text="View Pricing"
-          badgeText="India's Sovereign Inference Cloud"
-          image="/images/serverless.png"
-        />
-      </section>
+            to Manage.
+          </Text>
+        }
+        description="NeevCloud Serverless Inference gives you instant API access to 20+ production-ready open-source models. OpenAI-compatible, sub-50ms latency, billed in INR, with every request processed India."
+        button1Text="Try in Playground"
+        button2Text="View Pricing"
+        badgeText="India's Sovereign Inference Cloud"
+        image="/images/serverless.png"
+      />
       <ThreeStepsSection />
       <ModelBuilderSection />
       <ModelsSection />

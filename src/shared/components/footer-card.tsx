@@ -20,7 +20,7 @@ const FooterCard = ({
     <section
       className={cn(
         "relative w-full rounded-md bg-primary-105 py-6 md:py-29 px-6 md:px-17.5 flex flex-col overflow-hidden",
-        className
+        className,
       )}
     >
       <Text as="h1" weight="medium" className="max-w-2xl">

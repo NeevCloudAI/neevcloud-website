@@ -1,7 +1,7 @@
 import React from "react";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
+  return <div className="relative">{children}</div>;
 };
 
 export default Providers;

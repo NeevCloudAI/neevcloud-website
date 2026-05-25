@@ -78,14 +78,14 @@ const HeroSection = () => {
         ),
       },
     ],
-    [],
+    []
   );
 
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const activeHeroSlide = heroSlides[activeSlideIndex] ?? heroSlides[0];
 
   return (
-    <div className="relative flex-1 flex flex-col items-center gap-2 md:gap-4 pt-[10vh] px-4 sm:px-6 md:px-8">
+    <div className="relative min-h-[calc(100vh-44px-80px)] bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat flex-1 flex flex-col items-center gap-2 md:gap-4 pt-[10vh] px-4 sm:px-6 md:px-8">
       {activeHeroSlide.title}
       {activeHeroSlide.subtitle}
       <div className="flex gap-4 mt-4 z-10">

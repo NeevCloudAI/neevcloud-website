@@ -13,27 +13,25 @@ import CPUWorkloadsSection from "./CPUWorkloadSection";
 const CpuClusterComponent = () => {
   return (
     <>
-      <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat">
-        <AnnouncementSection />
-        <HeaderComponent />
-        <Divider orientation="horizontal" />
-        <HeroSection
-          title={
-            <Text as="h1" className="max-w-7xl text-center mt-4 md:mt-6 ">
-              The
-              <Text as="span" variant="h1" textColor="primary">
-                Control Plane
-              </Text>
-              for your GPU Cluster. Everything That Runs Around It.
+      <AnnouncementSection />
+      <HeaderComponent />
+      <Divider orientation="horizontal" />
+      <HeroSection
+        title={
+          <Text as="h1" className="max-w-7xl text-center mt-4 md:mt-6 ">
+            The
+            <Text as="span" variant="h1" textColor="primary">
+              Control Plane
             </Text>
-          }
-          description="Model API gateways, data pipelines, orchestration control planes, and monitoring stacks, every AI deployment needs CPU alongside its GPUs. NeevCloud CPU instances are co-located with GPU clusters in the same private network. No egress charges between them."
-          button1Text="Deploy Instance"
-          button2Text="View Pricing"
-          badgeText="CPU Compute for AI Infrastructure"
-          image="/images/cpu.png"
-        />
-      </section>
+            for your GPU Cluster. Everything That Runs Around It.
+          </Text>
+        }
+        description="Model API gateways, data pipelines, orchestration control planes, and monitoring stacks, every AI deployment needs CPU alongside its GPUs. NeevCloud CPU instances are co-located with GPU clusters in the same private network. No egress charges between them."
+        button1Text="Deploy Instance"
+        button2Text="View Pricing"
+        badgeText="CPU Compute for AI Infrastructure"
+        image="/images/cpu.png"
+      />
       <CPUWorkloadsSection />
       <AIStackSection />
       <OSImageSection />

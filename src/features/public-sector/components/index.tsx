@@ -12,37 +12,35 @@ import AmbitionSection from "./AmbitionSection";
 const PublicSectorComponent = () => {
   return (
     <>
-      <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat">
-        <AnnouncementSection />
-        <HeaderComponent />
-        <Divider orientation="horizontal" />
-        <HeroSection
-          title={
-            <Text
-              as="h1"
-              align="center"
-              textColor="primary"
-              className="max-w-5xl mt-4 md:mt-6"
-            >
-              Indigenous AI Infrastructure for
-              <Text variant="h1" as="span" textColor="black">
-                National Priorities
-              </Text>
+      <AnnouncementSection />
+      <HeaderComponent />
+      <Divider orientation="horizontal" />
+      <HeroSection
+        title={
+          <Text
+            as="h1"
+            align="center"
+            textColor="primary"
+            className="max-w-5xl mt-4 md:mt-6"
+          >
+            Indigenous AI Infrastructure for
+            <Text variant="h1" as="span" textColor="black">
+              National Priorities
             </Text>
-          }
-          description="Public sector AI initiatives require infrastructure that respects data sovereignty, meets compliance standards, and supports strategic autonomy. NeevCloud provides Indian-built infrastructure designed for government and public sector requirements."
-          button1Text="Discuss Requirements"
-          button2Text="View Complaince"
-          badgeText="AI Infrastructure for Public Sector"
-          image="/images/public-sector.png"
-          trustBadges={[
-            "India-based infrastructure",
-            "Data sovereignty controls",
-            "Government compliance ready",
-            "Strategic independence",
-          ]}
-        />
-      </section>
+          </Text>
+        }
+        description="Public sector AI initiatives require infrastructure that respects data sovereignty, meets compliance standards, and supports strategic autonomy. NeevCloud provides Indian-built infrastructure designed for government and public sector requirements."
+        button1Text="Discuss Requirements"
+        button2Text="View Complaince"
+        badgeText="AI Infrastructure for Public Sector"
+        image="/images/public-sector.png"
+        trustBadges={[
+          "India-based infrastructure",
+          "Data sovereignty controls",
+          "Government compliance ready",
+          "Strategic independence",
+        ]}
+      />
       <AmbitionSection />
       <ContributeSection />
       <GovernmentSection />

@@ -13,33 +13,31 @@ import PerformanceSection from "./PerformanceSection";
 const BFSIComponent = () => {
   return (
     <>
-      <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat">
-        <AnnouncementSection />
-        <HeaderComponent />
-        <Divider orientation="horizontal" />
-        <HeroSection
-          title={
-            <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
-              AI Infrastructure Built for
-              <Text as="span" variant="h1" textColor="primary">
-                Financial Services
-              </Text>
+      <AnnouncementSection />
+      <HeaderComponent />
+      <Divider orientation="horizontal" />
+      <HeroSection
+        title={
+          <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
+            AI Infrastructure Built for
+            <Text as="span" variant="h1" textColor="primary">
+              Financial Services
             </Text>
-          }
-          description="From fraud detection to risk modeling, BFSI workloads demand infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute and AI infrastructure designed to meet the requirements of banking, fintech, and insurance."
-          button1Text="Talk to Sales"
-          button2Text="View Compliance"
-          badgeText="AI Infrastructure for BFSI"
-          image="/images/bfsi.png"
-          trustBadges={[
-            "SOC 2 Type II certified",
-            "Data sovereignty",
-            "Low-latency compute",
-            "99.9% uptime SLA",
-            "Enterprise support",
-          ]}
-        />
-      </section>
+          </Text>
+        }
+        description="From fraud detection to risk modeling, BFSI workloads demand infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute and AI infrastructure designed to meet the requirements of banking, fintech, and insurance."
+        button1Text="Talk to Sales"
+        button2Text="View Compliance"
+        badgeText="AI Infrastructure for BFSI"
+        image="/images/bfsi.png"
+        trustBadges={[
+          "SOC 2 Type II certified",
+          "Data sovereignty",
+          "Low-latency compute",
+          "99.9% uptime SLA",
+          "Enterprise support",
+        ]}
+      />
       <BFSIAmbitionSection />
       <EnterpriseSection />
       <BFSIApplicationsSection />

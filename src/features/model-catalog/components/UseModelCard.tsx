@@ -15,23 +15,27 @@ const UseModelCard = ({ card }: UseModelCardProps) => {
   const { title, description, features, ctaLabel, ctaVariant, footnote } = card;
 
   return (
-    <article className={"flex flex-col bg-white rounded-lg p-6 md:p-8 h-full"}>
-      <Text as="h3" weight="semibold" textColor="black">
+    <article
+      className={
+        "flex flex-col bg-white rounded-lg p-6 md:px-5 md:py-7.5 h-full"
+      }
+    >
+      <Text as="h4" weight="semibold" textColor="black">
         {title}
       </Text>
-      <Text textColor="gray-85" className="mt-2">
+      <Text textColor="gray-85" className="mt-1.25">
         {description}
       </Text>
 
-      <Divider orientation="horizontal" className="bg-gray-60 my-4 md:my-6" />
+      <Divider orientation="horizontal" className="bg-gray-60 my-4 md:my-5" />
 
-      <dl className="flex flex-col gap-3 md:gap-4">
+      <dl className="flex flex-col gap-2.5">
         {features.map((feature) => (
           <div
             key={feature.label}
             className="flex items-center justify-between gap-4"
           >
-            <Text textColor="gray-85">{feature.label}</Text>
+            <Text textColor="gray-75">{feature.label}</Text>
             <Text
               weight="medium"
               textColor={feature.highlighted ? "primary" : "black"}
@@ -46,14 +50,14 @@ const UseModelCard = ({ card }: UseModelCardProps) => {
         size="md"
         weight="semibold"
         className={cn(
-          "mt-6 md:mt-8 w-full text-center",
-          CTA_BUTTON_CLASS[ctaVariant],
+          "mt-6 md:mt-7.5 w-full text-center",
+          CTA_BUTTON_CLASS[ctaVariant]
         )}
       >
         {ctaLabel}
       </Button>
 
-      <Text as="small" align="center" textColor="gray-85" className="mt-3">
+      <Text as="small" align="center" textColor="gray-85" className="mt-2.5">
         {footnote}
       </Text>
     </article>

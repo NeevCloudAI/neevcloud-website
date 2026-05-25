@@ -10,9 +10,9 @@ export default function FaqSectionHeader({
   return (
     <header className="flex flex-col items-center text-center">
       <div className="flex items-center gap-2 mb-2">
-        <Text as="h2" weight="semibold" textColor="white" className="max-w-4xl">
+        <Text as="h2" textColor="white" className="max-w-4xl">
           Frequently asked
-          <Text as="span" variant="h2" weight="semibold" textColor="primary">
+          <Text as="span" variant="h2" textColor="primary">
             Question
           </Text>
         </Text>

@@ -9,15 +9,9 @@ const HeroSection = () => {
     () => [
       {
         title: (
-          <Text
-            as="h1"
-            textColor="black"
-            weight="semibold"
-            align="center"
-            className="max-w-5xl"
-          >
+          <Text as="h1" textColor="black" align="center" className="max-w-5xl">
             Full-Stack
-            <Text as="span" textColor="primary" weight="semibold" variant="h1">
+            <Text as="span" textColor="primary" variant="h1">
               AI Infrastructure
             </Text>
             Built to Scale Fearlessly
@@ -40,12 +34,11 @@ const HeroSection = () => {
           <Text
             as="h1"
             textColor="primary"
-            weight="semibold"
             align="center"
             className="max-w-5xl"
           >
             Project Noun:
-            <Text as="span" textColor="white" weight="semibold" variant="h1">
+            <Text as="span" textColor="white" variant="h1">
               The Brain Behind Your AI Infrastructure
             </Text>
           </Text>
@@ -64,15 +57,9 @@ const HeroSection = () => {
       },
       {
         title: (
-          <Text
-            as="h1"
-            textColor="black"
-            weight="semibold"
-            align="center"
-            className="max-w-5xl"
-          >
+          <Text as="h1" textColor="black" align="center" className="max-w-5xl">
             Full-Stack
-            <Text as="span" textColor="primary" weight="semibold" variant="h1">
+            <Text as="span" textColor="primary" variant="h1">
               AI Infrastructure
             </Text>
             Built to Scale Fearlessly

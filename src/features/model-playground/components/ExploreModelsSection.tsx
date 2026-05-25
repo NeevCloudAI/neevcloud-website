@@ -1,8 +1,8 @@
-import FooterCard from "@/shared/components/footer-card";
 import StepsTabsSection from "@/shared/components/StepsTabsSection";
 import { EXPLORE_MODELS_STEPS } from "@/features/model-playground/data/explore-models-steps";
 import ExploreModelsStepPreview from "@/features/model-playground/components/ExploreModelsStepPreview";
 import { Text } from "@/shared/ui-lib";
+import FooterCard from "@/shared/components/footer-card";
 
 const EXPLORE_MODELS_PREVIEWS = EXPLORE_MODELS_STEPS.map((_, index) => (
   <ExploreModelsStepPreview key={index} stepIndex={index} />
@@ -16,9 +16,9 @@ const ExploreModelsSection = () => {
       steps={EXPLORE_MODELS_STEPS}
       previews={EXPLORE_MODELS_PREVIEWS}
       heading={
-        <Text as="h2" weight="semibold" align="center">
+        <Text as="h2" align="center">
           Start Exploring
-          <Text as="span" variant="h2" textColor="primary" weight="semibold">
+          <Text as="span" variant="h2" textColor="primary">
             Models Now
           </Text>
         </Text>
@@ -30,11 +30,13 @@ const ExploreModelsSection = () => {
         </Text>
       }
     >
-      <FooterCard
-        title="Model Documentation"
-        description="Each model includes detailed documentation explaining architecture, training data, intended use cases, and known limitations."
-        button1Text="Browse Model Playground Docs"
-      />
+      <div className="w-full pt-4 md:pt-12.5">
+        <FooterCard
+          title="Model Documentation"
+          description="Each model includes detailed documentation explaining architecture, training data, intended use cases, and known limitations."
+          button1Text="Browse Model Playground Docs"
+        />
+      </div>
     </StepsTabsSection>
   );
 };

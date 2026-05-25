@@ -1,6 +1,7 @@
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import Image from "next/image";
 import type { ModelCardData } from "@/features/serverless-inference/data/models-section-types";
+import { LogOut } from "lucide-react";
 
 type ModelCardProps = {
   model: ModelCardData;
@@ -10,31 +11,31 @@ const ModelCard = ({ model }: ModelCardProps) => {
   const { name, provider, icon, tags, context, price, params } = model;
 
   return (
-    <article className="relative bg-gray-10 rounded-md p-4 md:p-8 flex flex-col gap-4 overflow-hidden">
-      <div className="flex gap-4">
-        <div className="p-3 bg-white rounded-md h-fit">
-          <Image src={icon} alt={`${name} logo`} width={30} height={30} />
+    <article className="relative bg-gray-10 rounded-lg p-4 md:p-6.25 flex flex-col gap-5 overflow-hidden">
+      <div className="flex gap-5">
+        <div className="p-3.25 bg-white rounded-md h-fit">
+          <Image src={icon} alt={`${name} logo`} width={35} height={35} />
         </div>
         <div className="flex flex-col justify-between">
-          <Text as="h4" weight="semibold">
+          <Text as="h4" weight="semibold" className="text-[22px]">
             {name}
           </Text>
-          <Text>{provider}</Text>
+          <Text textColor="black-5">{provider}</Text>
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-1.25">
         {tags.map((tag) => (
           <Text
             key={tag.name}
-            className={`bg-${tag.color} px-4 py-1 rounded-full`}
+            className={`bg-${tag.color} px-2.5 py-0.75 rounded-full text-[10px]`}
           >
             {tag.name}
           </Text>
         ))}
       </div>
 
-      <div className="bg-white rounded-md py-4 px-6 flex justify-between gap-4">
+      <div className="bg-white rounded-md py-2.5 px-9 flex justify-between gap-4 z-1 relative">
         <div className="flex flex-col items-center justify-between">
           <Text textColor="blue-40">CONTEXT</Text>
           <Text>{context}</Text>
@@ -51,9 +52,21 @@ const ModelCard = ({ model }: ModelCardProps) => {
         </div>
       </div>
 
-      <div className="flex gap-4 justify-between">
-        <Button>Try in Playground</Button>
-        <Button variant="outline" textColor="black" weight="semibold">
+      <div className="flex gap-2 justify-between">
+        <Button
+          className="flex items-center gap-2"
+          weight="semibold"
+          borderRadius="sm"
+        >
+          <LogOut size="15" className="font-semibold" />
+          Try in Playground
+        </Button>
+        <Button
+          variant="outline"
+          textColor="black"
+          weight="semibold"
+          borderRadius="sm"
+        >
           Read Documentation
         </Button>
       </div>

@@ -38,7 +38,9 @@ function StackPanel({
       <Text as="h3" weight="semibold" id={`stack-panel-${panel.id}-title`}>
         {panel.title}
       </Text>
-      <Text className="my-2">{panel.description}</Text>
+      <Text as="h6" className="my-2">
+        {panel.description}
+      </Text>
       <div className="flex flex-col">
         {panel.items.map((item) => (
           <div key={item.id} className="w-full">
@@ -46,25 +48,18 @@ function StackPanel({
               id={`stack-item-button-${panel.id}-${item.id}`}
               type="button"
               onClick={() => onToggleItem(item.id)}
-              className="group flex w-full cursor-pointer items-center justify-between gap-4 border-b border-gray-50 py-3 text-left transition-colors hover:text-black"
+              className="flex w-full cursor-pointer items-center justify-between border-b border-gray-50 py-3 text-left transition-colors hover:text-black"
               aria-expanded={activeItemId === item.id}
               aria-controls={`stack-item-content-${panel.id}-${item.id}`}
               aria-label={`Toggle ${item.label}`}
             >
-              <span className="flex items-center gap-2">
-                <Text as="span" weight="medium">
-                  {item.label}
-                </Text>
-              </span>
-              <span
-                className={cn(
-                  " text-2xl font-normal leading-none transition-transform duration-200 select-none",
-                  activeItemId === item.id && "rotate-45"
-                )}
-                aria-hidden
+              <Text as="h6">{item.label}</Text>
+              <Text
+                as="h3"
+                className={`transition-transform duration-200 ${activeItemId === item.id && "rotate-45"}`}
               >
                 +
-              </span>
+              </Text>
             </button>
 
             <div
@@ -80,7 +75,7 @@ function StackPanel({
               aria-labelledby={`stack-item-button-${panel.id}-${item.id}`}
             >
               <div className="overflow-hidden">
-                <Text className="px-1 pb-3 text-balance leading-relaxed">
+                <Text className="pt-2 pb-3 text-balance leading-relaxed">
                   {item.description}
                 </Text>
               </div>
@@ -114,10 +109,10 @@ const StackSection = () => {
   })();
 
   return (
-    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat overflow-hidden bg-gray-10 py-[3vh] md:py-[7vh]">
+    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat overflow-hidden bg-gray-10 py-[3vh] md:py-[10vh]">
       <Container className="relative flex flex-col gap-4 md:gap-12">
         <header className="flex flex-col items-center text-center">
-          <Text as="h2" weight="semibold">
+          <Text as="h2">
             One
             <Text
               as="span"
@@ -157,14 +152,14 @@ const StackSection = () => {
               return (
                 <div
                   key={panel.id}
-                  className={cn(`absolute left-0`)}
+                  className="absolute left-1/2 -translate-x-1/2 w-full h-full"
                   style={{
                     top:
                       index == 0
                         ? 0
                         : index === stackPanels.length - 1
-                          ? 380
-                          : index * 140,
+                          ? 400
+                          : index * 150,
                     zIndex: isActive ? 6 : stackPanels.length - index,
                     opacity: isActive ? 1 : 0.65,
                   }}
@@ -172,8 +167,8 @@ const StackSection = () => {
                   <Image
                     src={`/icons/stack-${index + 1}.svg`}
                     alt={`stack layer`}
-                    width={300}
-                    height={300}
+                    width={400}
+                    height={400}
                   />
                 </div>
               );

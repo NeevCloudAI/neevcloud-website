@@ -75,7 +75,7 @@ export function FlowBand({ direction }: FlowBandProps) {
         aria-hidden
       />
       <div
-        className="absolute left-0 top-1/2 hidden w-full border-t border-[0.5px] border-dashed border-gray-60 md:block"
+        className="absolute left-0 hidden w-full border-t border-[0.5px] border-dashed border-gray-60 md:block"
         aria-hidden
       />
       {Array.from({ length: FLOW_ARROW_COUNT }, (_, index) => (
@@ -93,7 +93,7 @@ export function ComputePill({ label, variant }: ComputePillProps) {
   return (
     <Text
       as="small"
-      className={`w-fit rounded-full px-4 py-1 ${PILL_VARIANT_STYLES[variant]}`}
+      className={`w-fit rounded-full px-2.5 py-1 ${PILL_VARIANT_STYLES[variant]}`}
     >
       {label}
     </Text>

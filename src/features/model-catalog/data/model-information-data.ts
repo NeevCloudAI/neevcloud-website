@@ -13,6 +13,18 @@ export const MODEL_INFORMATION: readonly ModelInfoCardData[] = [
       { label: "INPUT /1M", value: "₹4.17" },
       { label: "OUTPUT /1M", value: "₹6.68" },
     ],
+    capabilities: [
+      "128K token context",
+      "Strong reasoning abilities",
+      "Multilingual support",
+      "Function calling",
+    ],
+    useCases: [
+      "Customer support chatbots",
+      "Document Q&A",
+      "Long-form content analysis",
+      "Multi-turn conversations",
+    ],
   },
   {
     id: "llama-3-1-405b",
@@ -25,6 +37,18 @@ export const MODEL_INFORMATION: readonly ModelInfoCardData[] = [
       { label: "THROUGHPUT", value: "800+ TOK/S" },
       { label: "INPUT /1M", value: "₹73.48" },
       { label: "OUTPUT /1M", value: "₹100.20" },
+    ],
+    capabilities: [
+      "128K token context",
+      "Superior reasoning",
+      "Code generation",
+      "Multilingual (8 languages)",
+    ],
+    useCases: [
+      "Complex analysis tasks",
+      "Advanced coding assistance",
+      "Creative writing",
+      "Research and reasoning",
     ],
   },
   {
@@ -39,6 +63,18 @@ export const MODEL_INFORMATION: readonly ModelInfoCardData[] = [
       { label: "INPUT /1M", value: "₹73.48" },
       { label: "OUTPUT /1M", value: "₹100.20" },
     ],
+    capabilities: [
+      "128K token context",
+      "Instruction adherence",
+      "Function calling",
+      "Structured outputs",
+    ],
+    useCases: [
+      "Task automation",
+      "Complex instructions",
+      "Structured data extraction",
+      "Agent workflows",
+    ],
   },
   {
     id: "glm-4-5",
@@ -52,18 +88,42 @@ export const MODEL_INFORMATION: readonly ModelInfoCardData[] = [
       { label: "INPUT /1M", value: "₹12.50" },
       { label: "OUTPUT /1M", value: "₹25.00" },
     ],
+    capabilities: [
+      "Vision understanding",
+      "26 languages supported",
+      "Function calling",
+      "Long context (128K)",
+    ],
+    useCases: [
+      "Image analysis",
+      "Multilingual applications",
+      "Visual Q&A",
+      "Document understanding",
+    ],
   },
   {
     id: "llama-3-1-70b",
     name: "Llama 3.1 70B",
     provider: "Meta · 70B",
     latency: "p50 75ms",
-    bestFor: "General-purpose tasks, balanced performance",
+    bestFor: "General-purpose tasks",
     metrics: [
       { label: "CONTEXT", value: "128K" },
       { label: "THROUGHPUT", value: "700+ TOK/S" },
       { label: "INPUT /1M", value: "₹22.55" },
       { label: "OUTPUT /1M", value: "₹70.97" },
+    ],
+    capabilities: [
+      "128K token context",
+      "Strong instruction following",
+      "Code generation",
+      "Multilingual support",
+    ],
+    useCases: [
+      "Content generation",
+      "Data extraction",
+      "Summarization",
+      "General Q&A",
     ],
   },
   {
@@ -77,6 +137,18 @@ export const MODEL_INFORMATION: readonly ModelInfoCardData[] = [
       { label: "THROUGHPUT", value: "800+ TOK/S" },
       { label: "INPUT /1M", value: "₹73.48" },
       { label: "OUTPUT /1M", value: "₹100.20" },
+    ],
+    capabilities: [
+      "128K token context",
+      "Versatile across tasks",
+      "Code understanding",
+      "Strong reasoning",
+    ],
+    useCases: [
+      "General chatbots",
+      "Content creation",
+      "Code assistance",
+      "Analysis tasks",
     ],
   },
 ] as const;

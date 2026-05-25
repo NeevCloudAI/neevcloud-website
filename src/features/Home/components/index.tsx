@@ -27,7 +27,7 @@ const HomeComponent = () => {
       <InfrastructureSection />
       <ReviewsSection />
       <NounSection />
-      <FooterComponent />
+      <FooterComponent className="pt-0 md:pt-0 2xl:pt-0" />
     </>
   );
 };

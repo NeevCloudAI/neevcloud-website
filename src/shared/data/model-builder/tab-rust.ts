@@ -1,7 +1,37 @@
 import type { CodeToken } from "@/shared/types/model-builder-section.types";
 
-/** Light syntax pass for non-CLI tabs: strings, `#` / `//` comments, rest default. */
-export function tokenizeGenericCodeLine(line: string): CodeToken[] {
+const RUST_SOURCE_LINES = [
+  "use neevcloud::client::NeevCloudClient;",
+  "use neevcloud::types::{ClusterRequest, JobRequest};",
+  "",
+  "#[tokio::main]",
+  "async fn main() -> anyhow::Result<()> {",
+  "    let client = NeevCloudClient::from_env()?;",
+  "",
+  "    let cluster = client",
+  "        .clusters()",
+  "        .create(ClusterRequest {",
+  '            name: "avatar".into(),',
+  '            gpu: "b200".into(),',
+  "            nodes: 64,",
+  '            region: "eu-west-2".into(),',
+  "        })",
+  "        .await?;",
+  "",
+  "    client",
+  "        .jobs()",
+  "        .submit(JobRequest {",
+  "            cluster_id: cluster.id,",
+  '            entrypoint: "train.py".into(),',
+  '            checkpoint: Some("every=1h".into()),',
+  "        })",
+  "        .await?;",
+  "",
+  "    Ok(())",
+  "}",
+];
+
+function tokenizeRustLine(line: string): CodeToken[] {
   if (line === "") {
     return [{ text: "", variant: "command" }];
   }
@@ -28,10 +58,6 @@ export function tokenizeGenericCodeLine(line: string): CodeToken[] {
       i = j;
       continue;
     }
-    if (c === "#") {
-      tokens.push({ text: line.slice(i), variant: "muted" });
-      break;
-    }
     if (c === "/" && line[i + 1] === "/") {
       tokens.push({ text: line.slice(i), variant: "muted" });
       break;
@@ -42,7 +68,6 @@ export function tokenizeGenericCodeLine(line: string): CodeToken[] {
       j < line.length &&
       line[j] !== '"' &&
       line[j] !== "'" &&
-      line[j] !== "#" &&
       !(line[j] === "/" && line[j + 1] === "/")
     ) {
       j += 1;
@@ -58,3 +83,8 @@ export function tokenizeGenericCodeLine(line: string): CodeToken[] {
 
   return tokens.length > 0 ? tokens : [{ text: line, variant: "command" }];
 }
+
+export const runtimeTabRust = {
+  id: "Rust" as const,
+  codeLines: RUST_SOURCE_LINES.map(tokenizeRustLine),
+};

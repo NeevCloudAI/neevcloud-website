@@ -107,7 +107,7 @@ export const OS_IMAGE_SECTIONS: Record<OsSectionId, OsImageCard[]> = {
     {
       title: "Custom ISO",
       description: "Bring your own",
-      image: "/icons/plus.svg",
+      image: "",
       cards: [
         { name: "Upload Any OS", isActive: false },
         { name: "Any Distro", isActive: false },

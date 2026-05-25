@@ -11,13 +11,15 @@ const CloudComparisonCard = ({
   description: string;
 }) => {
   return (
-    <div className="relative border border-gray-10 rounded-md px-4 py-8 gap-4 flex items-center overflow-hidden">
+    <div className="relative border border-gray-10 rounded-md px-6 py-12 gap-4 flex items-center overflow-hidden">
       <div className="h-20 w-20 bg-gray-50 shrink-0"></div>
       <div className="pr-8">
         <Text as="h3" weight="semibold">
           {title}
         </Text>
-        <Text as="h6">{description}</Text>
+        <Text as="h6" textColor="black-5">
+          {description}
+        </Text>
       </div>
       <div className="absolute bottom-[-10%] right-0 opacity-80">
         <Image
@@ -33,9 +35,9 @@ const CloudComparisonCard = ({
 
 const NeevcloudSection: React.FC = () => {
   return (
-    <Container className="flex flex-col items-center justify-between gap-2 py-[3vh] md:py-[7vh]">
+    <Container className="flex flex-col items-center justify-between gap-12 py-8 md:py-16 2xl:py-25">
       <div>
-        <Text as="h2" weight="semibold" className="max-w-4xl" align="center">
+        <Text as="h2" className="max-w-4xl" align="center">
           Why the
           <Text as="span" variant="h2" textColor="primary">
             world
@@ -49,12 +51,12 @@ const NeevcloudSection: React.FC = () => {
           up to make intelligence accessible to everyone.
         </Text>
       </div>
-      <div className=" flex justify-center lg:flex-row flex-col w-full gap-4 mt-4 md:mt-8">
+      <div className="flex justify-center lg:flex-row flex-col w-full gap-4">
         <div className="relative flex-1">
           <Image
             src="/images/cloud-comparision.png"
             alt="NeevCloud Section"
-            className="flex-1"
+            className="flex-1 w-full h-full object-cover rounded-md"
             width={1000}
             height={1000}
           />
@@ -62,7 +64,7 @@ const NeevcloudSection: React.FC = () => {
             <Text as="h5" weight="semibold">
               Legacy Cloud
             </Text>
-            <Text as="small" align="center">
+            <Text as="small" align="center" className="mt-2.5">
               High Cost. Low Flexibility.
             </Text>
             <Text as="small" align="center">
@@ -74,10 +76,10 @@ const NeevcloudSection: React.FC = () => {
             <Text as="h5" weight="semibold" textColor="primary">
               NeevCloud
             </Text>
-            <Text as="small" align="center" className="hidden md:block">
+            <Text as="small" align="center" className="hidden md:block mt-2.5">
               High Performance. Transparent Pricing.
             </Text>
-            <Text as="small" align="center" className="block md:hidden">
+            <Text as="small" align="center" className="block md:hidden mt-2.5">
               High Performance.
             </Text>
             <Text as="small" align="center" className="block md:hidden">
@@ -134,7 +136,7 @@ const NeevcloudSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between gap-4 md:gap-0">
+        <div className="flex-1 flex flex-col justify-between gap-3">
           <CloudComparisonCard
             title="No Vendor Lock-in"
             description="Move your data and models freely. We believe in technology freedom, not walled gardens."
@@ -149,7 +151,7 @@ const NeevcloudSection: React.FC = () => {
           />
         </div>
       </div>
-      <div className="relative bg-primary-10 w-full rounded-md p-4 md:p-6 flex items-center gap-2 md:gap-8 mt-4 md:mt-8">
+      <div className="relative bg-primary-10 w-full rounded-md p-4 md:p-8 flex items-center gap-2 md:gap-8">
         <div className="bg-white w-fit py-2.5 px-3.5 md:py-5 md:px-6.5 rounded-full border border-primary">
           <Image
             src="/icons/india-map.svg"
@@ -159,20 +161,13 @@ const NeevcloudSection: React.FC = () => {
           />
         </div>
         <div>
-          <div className="flex gap-2">
-            <Text as="h3" weight="semibold">
-              India&apos;s First
-              <Text
-                as="span"
-                variant="h3"
-                weight="semibold"
-                textColor="primary"
-              >
-                AI Supercloud
-              </Text>
+          <Text as="h3" weight="semibold">
+            India&apos;s First
+            <Text as="span" variant="h3" weight="semibold" textColor="primary">
+              AI Supercloud
             </Text>
-          </div>
-          <Text as="h6">
+          </Text>
+          <Text as="h6" textColor="black-5" className="mt-0.5">
             Built to Make Intelligence Accessible to Everyone.
           </Text>
         </div>

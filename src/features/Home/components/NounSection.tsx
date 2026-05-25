@@ -5,7 +5,7 @@ import Image from "next/image";
 const NounSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-black py-[3vh] md:py-[7vh]"
+      className="relative overflow-hidden bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="noun-section-heading"
     >
       <div
@@ -13,12 +13,12 @@ const NounSection = () => {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#020617] via-[#020617]/70 to-[#020617]/0"
+        className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#020617] via-[#020617]/70 to-[#020617]/0  after:absolute after:bottom-0 after:left-0 after:w-full after:h-1/2 after:bg-linear-to-t after:from-black after:to-transparent"
         aria-hidden
       />
 
       <Container className="relative z-10">
-        <div className="flex items-center gap-2 md:gap-2 mb-4 md:mb-10 nowrap">
+        <div className="flex items-center gap-2 md:gap-2 nowrap">
           <Image src="/icons/noun.svg" alt="Noun" width={25} height={25} />
           <Text as="h6" textColor="primary">
             NOUN
@@ -29,8 +29,8 @@ const NounSection = () => {
           </Text>
         </div>
 
-        <div className="flex flex-col gap-2 md:gap-4 w-full md:w-1/2">
-          <div className="flex flex-wrap flex-row md:flex-col whitespace-nowrap gap-1 md:gap-4">
+        <div className="flex flex-col gap-2 md:gap-4 w-full">
+          <div className="flex flex-wrap flex-row md:flex-col whitespace-nowrap gap-1 md:gap-4 mt-4 md:mt-12">
             <Text as="h1" textColor="white">
               Introducing
             </Text>
@@ -45,7 +45,7 @@ const NounSection = () => {
             </Text>
           </div>
 
-          <Text textColor="gray-10" className="my-2 md:my-6">
+          <Text as="h6" textColor="gray-10" className="mt-2 md:mt-6 max-w-2xl">
             Project Noun is NeevCloud&apos;s leap beyond traditional
             infrastructure, removing the limits of geography and latency to
             redefine how AI is deployed and scaled. Built as a next-gen layer,
@@ -57,7 +57,7 @@ const NounSection = () => {
 
         <Divider
           orientation="horizontal"
-          className="bg-linear-to-r from-primary to-transparent my-4 w-full md:w-1/4"
+          className="bg-linear-to-r from-primary to-transparent mt-4 md:mt-10 mb-2 md:mb-5 w-full max-w-lg"
         />
         <Text as="h3" weight="semibold" textColor="white">
           If NeevCloud is the Foundation,
@@ -87,9 +87,9 @@ const NounSection = () => {
         </Text>
         <Divider
           orientation="horizontal"
-          className="bg-linear-to-r from-primary to-transparent my-4 w-full md:w-1/3"
+          className="bg-linear-to-r from-primary to-transparent mt-4 w-full md:w-1/3"
         />
-        <Button spacing="lg" borderRadius="sm" className="mt-4 md:mt-8">
+        <Button spacing="lg" borderRadius="sm" className="mt-4 md:mt-15">
           Explore Project Noun
         </Button>
       </Container>

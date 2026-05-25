@@ -119,10 +119,10 @@ const PricingCalculator = () => {
     <div className="pricing-calculator flex h-full flex-col">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <Text as="small" textColor="gray-85" className="mx-0 uppercase">
+          <Text as="small" textColor="gray-85" className="uppercase">
             live estimate
           </Text>
-          <Text as="h5" weight="semibold" className="mx-0 mt-0.5">
+          <Text as="h5" weight="semibold" className="mt-1.25">
             Monthly cost
           </Text>
         </div>
@@ -130,16 +130,16 @@ const PricingCalculator = () => {
           <Text as="h2" weight="bold" className="mx-0 leading-none">
             {formatCurrency(monthlyCost)}
           </Text>
-          <Text as="small" textColor="gray-85" className="mt-1">
+          <Text as="small" textColor="gray-85" className="mt-1.25">
             / month at current mix
           </Text>
         </div>
       </div>
 
-      <Divider orientation="horizontal" className="my-4" />
+      <Divider orientation="horizontal" className="my-5" />
 
       <div>
-        <div className="mb-3 flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-4">
           <Text as="h6" textColor="gray-75" className="mx-0">
             Total monthly requests
           </Text>
@@ -150,7 +150,7 @@ const PricingCalculator = () => {
           onChange={(value) => setTotalRequests(sliderToRequests(value))}
           ariaLabel="Total monthly requests"
         />
-        <div className="mt-2 flex justify-between gap-2">
+        <div className="mt-3 flex justify-between gap-2">
           {REQUEST_SCALE_LABELS.map((label) => (
             <Text key={label} as="small" textColor="gray-85">
               {label}
@@ -159,9 +159,9 @@ const PricingCalculator = () => {
         </div>
       </div>
 
-      <Divider orientation="horizontal" className="my-4" />
+      <Divider orientation="horizontal" className="my-5" />
 
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-1 flex-col mt-5">
         <div className="mb-4 flex items-center justify-between gap-4">
           <Text as="small" textColor="gray-85">
             Workload mix

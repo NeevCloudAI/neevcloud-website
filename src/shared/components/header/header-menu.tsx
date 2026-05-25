@@ -1,102 +1,91 @@
 "use client";
 
-import type { ComponentType } from "react";
 import { useState } from "react";
 import { ChevronDown, Menu } from "lucide-react";
 import { Button } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
 import type { HeaderNavId } from "./nav-items";
 import { NAV_ITEMS } from "./nav-items";
-import ProductMegaMenu from "./mega-menus/product-mega-menu";
-import SolutionsMegaMenu from "./mega-menus/solutions-mega-menu";
-import DevelopersMegaMenu from "./mega-menus/developers-mega-menu";
-import CompanyMegaMenu from "./mega-menus/company-mega-menu";
-import AiSupercloudMegaMenu from "./mega-menus/ai-supercloud-mega-menu";
-import InferenceMegaMenu from "./mega-menus/inference-mega-menu";
-import PricingMegaMenu from "./mega-menus/pricing-mega-menu";
-import ResourcesMegaMenu from "./mega-menus/resources-mega-menu";
-
-function getHeaderMegaMenu(navId: HeaderNavId): ComponentType | undefined {
-  switch (navId) {
-    case "ai-supercloud":
-      return AiSupercloudMegaMenu;
-    case "resources":
-      return ResourcesMegaMenu;
-    case "pricing":
-      return PricingMegaMenu;
-    case "inference-hub":
-      return InferenceMegaMenu;
-    case "product":
-      return ProductMegaMenu;
-    case "solutions":
-      return SolutionsMegaMenu;
-    case "developers":
-      return DevelopersMegaMenu;
-    case "company":
-      return CompanyMegaMenu;
-    default:
-      return undefined;
-  }
-}
+import { getMegaMenu } from "./mega-menu-loaders";
 
 type HeaderMenuProps = {
   children: React.ReactNode;
 };
 
+const megaMenuPanelClassName = cn(
+  "absolute left-1/2 top-full z-100",
+  "w-full max-w-[min(1200px,calc(100vw-2rem))]",
+  "-translate-x-1/2",
+  "rounded-b-md bg-white shadow-md"
+);
+
 export default function HeaderMenu({ children }: HeaderMenuProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileExpandedNavId, setMobileExpandedNavId] =
     useState<HeaderNavId | null>(null);
+  const [desktopOpenNavId, setDesktopOpenNavId] = useState<HeaderNavId | null>(
+    null
+  );
 
   return (
     <>
       <div className="flex w-full flex-1 flex-wrap items-center justify-between gap-3 md:flex-nowrap">
-        <div className="flex min-w-0 items-center gap-3 md:gap-4">
+        <div className="flex min-w-0 items-center gap-3 md:gap-5">
           {children}
           <nav
-            className="hidden items-center gap-4 md:flex"
+            className="hidden items-center gap-5 md:flex"
             aria-label="Primary"
           >
             {NAV_ITEMS.map((navItem) => {
-              const MegaMenu = getHeaderMegaMenu(navItem.id);
-              let megaMenuPanel = null;
-              if (MegaMenu) {
-                megaMenuPanel = (
-                  <div
-                    className={cn(
-                      "pointer-events-none absolute left-1/2 top-full z-100",
-                      "w-full max-w-[min(1200px,calc(100vw-2rem))]",
-                      "-translate-x-1/2",
-                      "rounded-b-md bg-white opacity-0 shadow-md",
-                      "transition-opacity duration-150",
-                      "group-hover:pointer-events-auto group-hover:opacity-100",
-                      "group-focus-within:pointer-events-auto group-focus-within:opacity-100"
-                    )}
-                    role="presentation"
-                  >
-                    <MegaMenu />
-                  </div>
-                );
-              }
+              const MegaMenu = getMegaMenu(navItem.id);
+              const isDesktopOpen = desktopOpenNavId === navItem.id;
+
               return (
                 <div
                   key={navItem.label}
                   className={cn("group", navItem.desktopVisibilityClass)}
+                  onMouseEnter={() => {
+                    if (MegaMenu) setDesktopOpenNavId(navItem.id);
+                  }}
+                  onMouseLeave={() => {
+                    setDesktopOpenNavId((current) =>
+                      current === navItem.id ? null : current
+                    );
+                  }}
+                  onFocusCapture={() => {
+                    if (MegaMenu) setDesktopOpenNavId(navItem.id);
+                  }}
+                  onBlurCapture={(event) => {
+                    if (
+                      !event.currentTarget.contains(
+                        event.relatedTarget as Node | null
+                      )
+                    ) {
+                      setDesktopOpenNavId((current) =>
+                        current === navItem.id ? null : current
+                      );
+                    }
+                  }}
                 >
-                  <div className="h-20 relative flex items-center after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100">
+                  <div className="relative flex h-20 items-center after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100">
                     <Button variant="ghost" textColor="black" spacing="none">
                       {navItem.label}
                     </Button>
                   </div>
-                  {megaMenuPanel}
+                  {MegaMenu && isDesktopOpen ? (
+                    <div className={megaMenuPanelClassName} role="presentation">
+                      <MegaMenu />
+                    </div>
+                  ) : null}
                 </div>
               );
             })}
           </nav>
         </div>
-        <div className="hidden w-full items-center gap-2 header-buttons:flex sm:gap-3 md:w-auto md:gap-4">
+        <div className="hidden w-full items-center gap-2 header-buttons:flex sm:gap-3 md:w-auto md:gap-5">
           <Button
             variant="secondary"
+            spacing="md"
             className="flex-1 whitespace-nowrap md:flex-none"
           >
             Login to CPU Cloud
@@ -105,9 +94,9 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
             Login to AI Cloud
           </Button>
         </div>
-        <Menu
-          size={16}
-          className="header-company:hidden"
+        <button
+          type="button"
+          className="header-company:hidden rounded-md p-1 text-black-80 hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
           aria-expanded={isMobileMenuOpen}
           aria-controls="responsive-navigation-menu"
@@ -119,7 +108,9 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
               return !open;
             });
           }}
-        />
+        >
+          <Menu size={16} aria-hidden />
+        </button>
       </div>
       {isMobileMenuOpen && (
         <nav
@@ -136,10 +127,11 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
             </Button>
           </div>
           {NAV_ITEMS.map((navItem) => {
-            const MobileMegaMenu = getHeaderMegaMenu(navItem.id);
+            const MobileMegaMenu = getMegaMenu(navItem.id);
             const hasMegaMenu = MobileMegaMenu !== undefined;
             const isExpanded =
               hasMegaMenu && mobileExpandedNavId === navItem.id;
+
             return (
               <div
                 key={navItem.label}

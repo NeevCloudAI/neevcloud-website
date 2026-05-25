@@ -16,9 +16,9 @@ const ExploreApiSection = () => {
       steps={EXPLORE_API_STEPS}
       previews={EXPLORE_API_PREVIEWS}
       heading={
-        <Text as="h2" weight="semibold" align="center">
+        <Text as="h2" align="center">
           Start Making Predictions in Minutes
-          <Text as="span" variant="h2" textColor="primary" weight="semibold">
+          <Text as="span" variant="h2" textColor="primary">
             Minutes
           </Text>
         </Text>
@@ -31,11 +31,13 @@ const ExploreApiSection = () => {
         </Text>
       }
     >
-      <FooterCard
-        title="Documentation and Resources"
-        description="Detailed reference documentation for every endpoint, including request parameters, response formats, error codes, and usage examples."
-        button1Text="View Full Model API Docs"
-      />
+      <div className="w-full pt-4 md:pt-12.5">
+        <FooterCard
+          title="Documentation and Resources"
+          description="Detailed reference documentation for every endpoint, including request parameters, response formats, error codes, and usage examples."
+          button1Text="View Full Model API Docs"
+        />
+      </div>
     </ExploreTabsSection>
   );
 };

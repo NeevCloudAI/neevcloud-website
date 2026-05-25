@@ -40,9 +40,8 @@ const EXPERIMENTATION_SECTION_FEATURES: FeatureCardProps[] = [
 
 const ExperimentationSection = () => {
   return (
-    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-[3vh] md:py-[7vh]">
+    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-8 md:py-16 2xl:py-25">
       <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full  md:w-[30%] h-[80%] top-20 right-[-5%] opacity-40 md:opacity-100"></div>
-      <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
       <Container className="flex flex-col items-center justify-center">
         <Text as="h2" textColor="white" weight={"semibold"}>
           Built For
@@ -50,13 +49,13 @@ const ExperimentationSection = () => {
             Experimentation
           </Text>
         </Text>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 md:mt-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 mt-4 md:mt-12.5">
           {EXPERIMENTATION_SECTION_FEATURES.map((feature) => (
             <FeatureCard
               key={feature.title}
               title={feature.title}
               description={feature.description}
-              theme="dark"
+              theme="transparent"
               className="bg-gray-120 backdrop-blur-xs"
             />
           ))}

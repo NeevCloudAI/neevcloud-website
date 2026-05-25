@@ -7,8 +7,8 @@ import { Divider, Text } from "@/shared/ui-lib";
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import HeroSection from "@/shared/components/HeroSection";
-import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import AIStackSection from "./AIStackSection";
+import CPUWorkloadsSection from "./CPUWorkloadSection";
 
 const CpuClusterComponent = () => {
   return (
@@ -19,11 +19,7 @@ const CpuClusterComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <Text
-              as="h1"
-              weight="semibold"
-              className="max-w-7xl text-center mt-4 md:mt-6 "
-            >
+            <Text as="h1" className="max-w-7xl text-center mt-4 md:mt-6 ">
               The
               <Text as="span" variant="h1" textColor="primary">
                 Control Plane
@@ -38,30 +34,7 @@ const CpuClusterComponent = () => {
           image="/images/cpu.png"
         />
       </section>
-      <DeployInstanceSection
-        title={
-          <Text
-            as="h2"
-            textColor="white"
-            weight="semibold"
-            className="max-w-4xl"
-          >
-            Every Workload
-            <Text as="span" variant="h2" textColor="primary">
-              Flat rate.
-            </Text>
-            Unmetered.
-          </Text>
-        }
-        description="Commit and Save. The Longer the Plan, the Lower the Rate."
-        image={{
-          src: "/images/deploy-instance.png",
-          alt: "Pricing",
-          width: 1000,
-          height: 1000,
-        }}
-        buttonText1="Deploy Instance"
-      />
+      <CPUWorkloadsSection />
       <AIStackSection />
       <OSImageSection />
       <PrivateNetworkSection />
@@ -71,6 +44,8 @@ const CpuClusterComponent = () => {
         description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."
         button1Text="Configure Now"
         button2Text="Talk to Our Team"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

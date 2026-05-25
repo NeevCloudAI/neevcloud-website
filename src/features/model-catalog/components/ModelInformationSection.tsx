@@ -5,14 +5,16 @@ import { MODEL_INFORMATION } from "@/features/model-catalog/data/model-informati
 
 const ModelInformationSection = () => {
   return (
-    <section className="relative bg-white py-[3vh] md:py-[7vh]">
-      <Container className="flex flex-col gap-6 md:gap-10">
-        <Text as="h2" weight="semibold" align="center">
+    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
+      <Container className="flex flex-col">
+        <Text as="h2" align="center">
           Detailed Model Information
         </Text>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="model-info-masonry mt-4 md:mt-12.5">
           {MODEL_INFORMATION.map((model) => (
-            <ModelInfoCard key={model.id} model={model} />
+            <div key={model.id} className="model-info-masonry__item">
+              <ModelInfoCard model={model} />
+            </div>
           ))}
         </div>
       </Container>

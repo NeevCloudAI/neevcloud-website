@@ -21,7 +21,7 @@ const StorageComparisonBar = ({
   const fillPercent = Math.min(100, (metric.seconds / 100) * 100);
 
   return (
-    <div className="flex w-full flex-col gap-1.5">
+    <div className="flex w-full flex-col gap-1">
       <div className="flex items-center justify-between gap-4">
         <Text as="h6" fontFamily="spaceMono" textColor="gray-90">
           {metric.label}
@@ -32,7 +32,7 @@ const StorageComparisonBar = ({
       </div>
       <div
         role="progressbar"
-        className={`relative h-2 w-full overflow-hidden rounded-full ${backgroundColor}`}
+        className={`relative h-2.75 w-full overflow-hidden rounded-full ${backgroundColor}`}
       >
         <div
           className={`absolute inset-y-0 left-0 rounded-full ${metric.barColor}`}

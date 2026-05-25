@@ -1,9 +1,8 @@
-import { Gift, MoveLeft, MoveRight, Shuffle } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import type { LucideIconName } from "@/shared/icons/lucide-icon-map";
 
 export type MetricCardData = {
   id: string;
-  icon: LucideIcon;
+  icon: LucideIconName;
   value: string;
   valueColor: "primary" | "black" | "tertiary" | "secondary" | "red-50";
   unit: string;
@@ -13,7 +12,7 @@ export type MetricCardData = {
 export const METRIC_CARDS: readonly MetricCardData[] = [
   {
     id: "sequential-read",
-    icon: MoveRight,
+    icon: "move-right",
     value: "7,000",
     valueColor: "primary",
     unit: "MB/s",
@@ -21,7 +20,7 @@ export const METRIC_CARDS: readonly MetricCardData[] = [
   },
   {
     id: "sequential-write",
-    icon: MoveLeft,
+    icon: "move-left",
     value: "5,000",
     valueColor: "tertiary",
     unit: "MB/s",
@@ -29,7 +28,7 @@ export const METRIC_CARDS: readonly MetricCardData[] = [
   },
   {
     id: "random-iops",
-    icon: Shuffle,
+    icon: "shuffle",
     value: "1M+",
     valueColor: "secondary",
     unit: "IOPS",
@@ -37,7 +36,7 @@ export const METRIC_CARDS: readonly MetricCardData[] = [
   },
   {
     id: "free-storage",
-    icon: Gift,
+    icon: "gift",
     value: "25",
     valueColor: "red-50",
     unit: "GB",

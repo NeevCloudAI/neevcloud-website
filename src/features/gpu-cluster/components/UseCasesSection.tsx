@@ -227,15 +227,17 @@ const UseCasesSection = () => {
   );
 
   return (
-    <Container className="bg-white flex flex-col items-center py-[3vh] md:py-[7vh]">
-      <Text as="h2" weight={"semibold"}>
+    <Container className="bg-white flex flex-col items-center py-8 md:py-16 2xl:py-25">
+      <Text as="h2">
         Use
-        <Text as="span" variant="h2" weight={"semibold"} textColor="primary">
+        <Text as="span" variant="h2" textColor="primary">
           Cases
         </Text>
       </Text>
-      <Text textColor="black-5">Built for Every AI Workload</Text>
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b border-gray-60 items-center justify-center mt-4 md:mt-8">
+      <Text as="h6" textColor="black-5">
+        Built for Every AI Workload
+      </Text>
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b border-gray-60 items-center justify-center mt-4 md:mt-12.5">
         {USE_CASES.map((tab) => (
           <Button
             key={tab.id}
@@ -243,18 +245,18 @@ const UseCasesSection = () => {
             textColor="black"
             size="full"
             onClick={() => setActiveTab(tab.id)}
-            className={`flex gap-1 flex-col items-start py-4 border border-b-0 border-gray-60 rounded-lg rounded-b-none ${activeTab === tab.id ? "bg-tertiary text-white" : ""}`}
+            className={`flex gap-1 flex-col items-start p-5 border border-b-0 border-gray-60 rounded-lg rounded-b-none ${activeTab === tab.id ? "bg-tertiary text-white" : ""}`}
           >
-            <Text>{tab.id}</Text>
+            <Text as="h6">{tab.id}</Text>
             <Text as="h4" weight="semibold">
               {tab.tabName}
             </Text>
           </Button>
         ))}
       </div>
-      <div className="relative bg-gray-10 w-full p-4 md:p-8 flex flex-col md:flex-row gap-4 overflow-hidden">
+      <div className="relative bg-gray-10 w-full p-4 md:p-12.5 flex flex-col md:flex-row gap-5 overflow-hidden">
         <div>
-          <div className="absolute bottom-[-58%] left-0">
+          <div className="absolute bottom-[-40%] left-0">
             <Image
               src="/icons/logo.svg"
               alt={activeCase.logoAlt}
@@ -262,21 +264,21 @@ const UseCasesSection = () => {
               height={500}
             />
           </div>
-          <div className="w-12 h-12 bg-white rounded-sm" />
-          <Text as="h2" weight="semibold" className="mt-4 md:mt-8">
+          <div className="w-15 h-15 bg-white rounded-sm border border-gray-60" />
+          <Text as="h2" className="mt-4 md:mt-10">
             {activeCase.heading}
           </Text>
-          <Text as="h4" className="mt-2 mb-4">
+          <Text as="h4" className="mt-2.5">
             {activeCase.description}
           </Text>
-          <div className="flex flex-wrap items-center gap-2 mt-4 md:mt-8">
+          <div className="flex flex-wrap items-center gap-2.5 mt-4 md:mt-10">
             {activeCase.tags.map((tag) => (
               <Text
                 key={tag.text}
                 className={
                   tag.variant === "primary"
-                    ? "bg-primary text-white px-4 py-1.5 rounded-full"
-                    : "bg-gray-70 text-white px-4 py-1.5 rounded-full"
+                    ? "bg-primary text-white px-4 py-1 rounded-full"
+                    : "bg-gray-70 text-white px-4 py-1 rounded-full"
                 }
               >
                 {tag.text}
@@ -284,17 +286,19 @@ const UseCasesSection = () => {
             ))}
           </div>
         </div>
-        <div className="bg-primary p-4 rounded-lg md:w-[30%] flex flex-col gap-4 shrink-0">
+        <div className="bg-primary p-5 rounded-lg md:w-[30%] flex flex-col gap-5 shrink-0">
           {activeCase.summary.map((block) => (
-            <div key={block.label} className="bg-white p-6 rounded-lg">
-              <Text as="small" textColor="gray-60">
+            <div key={block.label} className="bg-white p-7.5 rounded-lg">
+              <Text as="small" textColor="gray-65">
                 {block.label}
               </Text>
               <Text as="h4" weight="semibold">
                 {block.title}
               </Text>
               {block.subtitle ? (
-                <Text weight="semibold">{block.subtitle}</Text>
+                <Text as="h6" weight="semibold" textColor="gray-90">
+                  {block.subtitle}
+                </Text>
               ) : null}
             </div>
           ))}

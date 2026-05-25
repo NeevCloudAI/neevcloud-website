@@ -1,5 +1,4 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
-import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
@@ -9,6 +8,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 import StoragePerformanceSection from "./StoragePerformanceSection";
 import DeployStorageSection from "./DeployStorageSection";
 import MetricsSection from "./MetricsSection";
+import TransparentPricingSection from "./TransparentPricingSection";
 const NvmeComponent = () => {
   return (
     <>
@@ -21,7 +21,6 @@ const NvmeComponent = () => {
             <Text
               as="h1"
               align="center"
-              weight="semibold"
               textColor="primary"
               className="max-w-4xl mt-4 md:mt-6"
             >
@@ -48,37 +47,18 @@ const NvmeComponent = () => {
       <StoragePerformanceSection />
       <MetricsSection />
       <DeployStorageSection />
-      <DeployInstanceSection
-        showBorder={false}
-        showBlur={false}
-        title={
-          <Text
-            as="h2"
-            textColor="white"
-            weight="semibold"
-            className="max-w-4xl"
-          >
-            Simple,
-            <Text as="span" variant="h2" textColor="primary">
-              Transparent
-            </Text>
-            Pricing
-          </Text>
-        }
-        description="25GB included free with every GPU instance. Pay only for additional capacity you provision."
-        image={{
-          src: "/images/transparent-pricing.png",
-          alt: "Pricing",
-          width: 1000,
-          height: 1000,
-        }}
+      <TransparentPricingSection />
+      <FaqSection
+        items={CPU_CLUSTER_FAQ_ITEMS}
+        className="pt-0 md:pt-0 2xl:pt-0"
       />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent
         title="Start GPU Compute with NVMe"
         description="Sub-millisecond latency, 7 GB/s throughput. Keep your GPUs saturated, not waiting. 25GB is included free with every GPU instance."
         button1Text="Deploy with NVMe"
         button2Text="View Storage Pricing"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

@@ -1,11 +1,12 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
-import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import HeroSection from "@/shared/components/HeroSection";
 import { Divider, Text } from "@/shared/ui-lib";
 import ModelInformationSection from "./ModelInformationSection";
 import UseModelSection from "./UseModelSection";
+import RightModelSection from "./RightModelSection";
+import ModelActionSection from "./ModelActionSection";
 
 const ModelCatalogComponent = () => {
   return (
@@ -16,12 +17,7 @@ const ModelCatalogComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <Text
-              as="h1"
-              align="center"
-              weight="semibold"
-              className="max-w-4xl mt-4 md:mt-6"
-            >
+            <Text as="h1" align="center" className="max-w-4xl mt-4 md:mt-6">
               20+ production-Ready AI models.
               <Text variant="h1" as="span" textColor="primary">
                 One platform.
@@ -42,55 +38,8 @@ const ModelCatalogComponent = () => {
           ]}
         />
       </section>
-      <DeployInstanceSection
-        title={
-          <>
-            <Text as="h2" textColor="black" weight="semibold">
-              See Any Model in
-              <Text
-                as="span"
-                variant="h2"
-                textColor="primary"
-                weight="semibold"
-              >
-                Action
-              </Text>
-            </Text>
-          </>
-        }
-        description="Pick a model, send a prompt, watch it respond. Latency, token count, and cost stream in real time, exactly what you'd see hitting the production API."
-        image={{
-          src: "/images/model-action.png",
-          alt: "Pricing",
-          width: 1000,
-          height: 1000,
-        }}
-        showBGImage={false}
-        showLogo={false}
-        showBlur={false}
-      />
-      <DeployInstanceSection
-        title={
-          <Text
-            as="h2"
-            textColor="white"
-            weight="semibold"
-            className="max-w-4xl"
-          >
-            Find the right model
-            <Text as="span" variant="h2" textColor="primary">
-              for your use case.
-            </Text>
-          </Text>
-        }
-        description="Every model row links to docs, the playground, and a one-click deploy template."
-        image={{
-          src: "/images/right-model.png",
-          alt: "Pricing",
-          width: 1000,
-          height: 1000,
-        }}
-      />
+      <ModelActionSection />
+      <RightModelSection />
       <ModelInformationSection />
       <UseModelSection />
       <FooterComponent

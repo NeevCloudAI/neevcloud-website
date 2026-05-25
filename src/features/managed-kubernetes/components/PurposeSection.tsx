@@ -20,7 +20,7 @@ function FlowConnector({ className }: { className?: string }) {
       aria-hidden
     >
       <div className="z-3 h-2 w-2 rounded-full bg-primary" />
-      <div className="h-5 w-px bg-gray-60 md:h-10" />
+      <div className="h-10 w-px bg-gray-60 md:h-10" />
       <div className="h-2 w-2 rounded-full bg-primary" />
     </div>
   );
@@ -43,7 +43,7 @@ function ControlPlaneBranchConnector() {
         <div className="h-2 w-2 rounded-full bg-primary" />
       </div>
 
-      <div className="relative hidden h-12 w-full md:block md:h-14 lg:h-16">
+      <div className="relative hidden h-10 w-full md:block md:h-12.5">
         <svg
           className="absolute inset-0 size-full overflow-visible"
           viewBox="0 0 1000 64"
@@ -54,7 +54,7 @@ function ControlPlaneBranchConnector() {
             y1="0"
             x2="167"
             y2="58"
-            stroke="var(--gray-60)"
+            stroke="var(--blue-40)"
             strokeWidth="1"
           />
           <line
@@ -62,7 +62,7 @@ function ControlPlaneBranchConnector() {
             y1="0"
             x2="500"
             y2="58"
-            stroke="var(--gray-60)"
+            stroke="var(--blue-40)"
             strokeWidth="1"
           />
           <line
@@ -70,7 +70,7 @@ function ControlPlaneBranchConnector() {
             y1="0"
             x2="833"
             y2="58"
-            stroke="var(--gray-60)"
+            stroke="var(--blue-40)"
             strokeWidth="1"
           />
         </svg>
@@ -87,7 +87,7 @@ function FlowCard({ node, className }: FlowCardProps) {
   return (
     <div
       className={cn(
-        "z-3 flex flex-col items-center gap-1 bg-white rounded-lg p-4 md:px-24",
+        "z-3 flex flex-col items-center bg-white rounded-lg p-5 md:px-24",
         className
       )}
     >
@@ -95,12 +95,12 @@ function FlowCard({ node, className }: FlowCardProps) {
         <Text
           as="small"
           textColor="white"
-          className="bg-primary rounded-full px-3 py-0.5"
+          className="bg-primary rounded-full px-2.5 py-0.75 mb-2.5"
         >
           {node.badge}
         </Text>
       )}
-      <Text as="h4" weight="semibold">
+      <Text as="h4" weight="semibold" className="mb-1.25">
         {node.title}
       </Text>
       <Text as="h6" textColor="gray-85">
@@ -122,28 +122,22 @@ function FlowCard({ node, className }: FlowCardProps) {
 
 const PurposeSection = () => {
   return (
-    <section className="bg-gray-10 py-[3vh] md:py-[7vh]">
+    <section className="bg-gray-10 py-8 md:py-16 2xl:py-25">
       <Container className="flex flex-col items-center justify-center">
-        <Text
-          as="h2"
-          textColor="black"
-          weight="semibold"
-          align="center"
-          className="max-w-4xl"
-        >
+        <Text as="h2" textColor="black" align="center" className="max-w-4xl">
           Purpose-Built for
           <Text as="span" variant="h2" textColor="primary">
             GPU Workloads
           </Text>
         </Text>
 
-        <Text align="center" textColor="gray-75" className="max-w-2xl">
+        <Text as="h6" align="center" textColor="black-15" className="max-w-2xl">
           Click any node to inspect it. The diagram is the deploy: everything
           below the control plane is what you pay for; everything above runs on
           us.
         </Text>
 
-        <div className="mt-6 flex w-full gap-4 md:gap-12 flex-col items-center md:mt-10">
+        <div className="mt-6 md:mt-12.5 flex w-full gap-4 md:gap-12.5 flex-col items-center ">
           {PURPOSE_FLOW_STACK.map((node, index) => (
             <div
               key={node.id}
@@ -155,7 +149,7 @@ const PurposeSection = () => {
           ))}
 
           <div className="flex w-full flex-col items-center">
-            <div className="z-2 w-fit flex flex-col items-center gap-1 bg-black rounded-lg p-4 md:px-24">
+            <div className="z-2 w-fit flex flex-col items-center gap-1.25 bg-black rounded-lg p-5 md:px-24">
               <Text as="h4" weight="semibold" textColor="white">
                 {PURPOSE_CONTROL_PLANE.title}
               </Text>
@@ -202,7 +196,7 @@ const PurposeSection = () => {
           {PURPOSE_FEATURES.map((feature, index) => (
             <div
               key={feature.number}
-              className="relative flex flex-col gap-1 px-4 py-5 md:px-5 md:py-6"
+              className="relative flex flex-col gap-1.25 px-4 py-5 md:px-5 md:py-6"
             >
               {index > 0 ? (
                 <Divider
@@ -222,7 +216,7 @@ const PurposeSection = () => {
               <Text as="h4" weight="semibold">
                 {feature.title}
               </Text>
-              <Text as="h6" textColor="gray-75">
+              <Text as="h6" textColor="gray-85">
                 {feature.description}
               </Text>
             </div>

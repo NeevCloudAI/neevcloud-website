@@ -22,6 +22,8 @@ export type FooterBranding = {
 };
 
 export type FooterCtaContent = {
+  className?: string;
+  hasBGImage?: boolean;
   title?: string;
   description?: string;
   button1Text?: string;

@@ -22,7 +22,6 @@ const ModelPlaygroundComponent = () => {
             <Text
               as="h1"
               align="center"
-              weight="semibold"
               className="max-w-4xl mt-4"
               textColor="primary"
             >
@@ -56,6 +55,8 @@ const ModelPlaygroundComponent = () => {
         description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."
         button1Text="Configure Now"
         button2Text="Talk to Our Team"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

@@ -7,10 +7,10 @@ import { Text } from "@/shared/ui-lib";
 
 export function NetworkFlowSummary() {
   return (
-    <div className="mt-4 flex flex-1 flex-col items-center justify-start gap-2 md:gap-6">
+    <div className="mt-4 flex flex-1 flex-col items-center justify-start gap-2 md:gap-7.75">
       <Text
         as="small"
-        className="w-fit rounded-full bg-primary px-4 py-1 text-white"
+        className="w-fit rounded-full bg-primary px-4.5 py-1.25 text-white"
       >
         {FLOW_SUMMARY_BADGE_TEXT}
       </Text>

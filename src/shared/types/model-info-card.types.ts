@@ -10,7 +10,8 @@ export type ModelInfoCardData = {
   latency: string;
   bestFor: string;
   metrics: ModelMetric[];
-  capabilitiesLabel?: string;
+  capabilities: readonly string[];
+  useCases: readonly string[];
   primaryActionLabel?: string;
   secondaryActionLabel?: string;
   tertiaryActionLabel?: string;

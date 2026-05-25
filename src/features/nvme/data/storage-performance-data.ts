@@ -1,5 +1,4 @@
-import { Gauge, HardDrive, IndianRupee, Zap } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import type { LucideIconName } from "@/shared/icons/lucide-icon-map";
 
 export type StoragePerformanceFeature = {
   text: string;
@@ -8,7 +7,7 @@ export type StoragePerformanceFeature = {
 
 export type StoragePerformanceCardData = {
   id: string;
-  icon: LucideIcon;
+  icon: LucideIconName;
   title: string;
   subtitle: string;
   description: string;
@@ -19,7 +18,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
   [
     {
       id: "sub-millisecond-access",
-      icon: Zap,
+      icon: "zap",
       title: "Sub-Millisecond Access",
       subtitle: "Microsecond-level latency",
       description:
@@ -33,7 +32,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
     },
     {
       id: "high-sequential-throughput",
-      icon: Gauge,
+      icon: "gauge",
       title: "High Sequential Throughput",
       subtitle: "Up to 7,000 MB/s reads",
       description:
@@ -47,7 +46,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
     },
     {
       id: "per-instance-attachment",
-      icon: HardDrive,
+      icon: "hard-drive",
       title: "Per-Instance Attachment",
       subtitle: "Dedicated, no noisy neighbors",
       description:
@@ -61,7 +60,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
     },
     {
       id: "cost-effective-storage",
-      icon: IndianRupee,
+      icon: "indian-rupee",
       title: "Cost-Effective Storage",
       subtitle: "25GB free with every GPU",
       description:

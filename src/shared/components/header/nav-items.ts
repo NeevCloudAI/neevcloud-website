@@ -52,12 +52,12 @@ export const NAV_ITEMS: NavItem[] = [
     desktopVisibilityClass: "hidden header-developers:block",
     menuVisibilityClass: "header-developers:hidden",
   },
-  {
-    id: "resources",
-    label: "Resources",
-    desktopVisibilityClass: "hidden header-resource:block",
-    menuVisibilityClass: "header-resource:hidden",
-  },
+  // {
+  //   id: "resources",
+  //   label: "Resources",
+  //   desktopVisibilityClass: "hidden header-resource:block",
+  //   menuVisibilityClass: "header-resource:hidden",
+  // },
   {
     id: "company",
     label: "Company",

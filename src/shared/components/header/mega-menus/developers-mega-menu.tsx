@@ -65,22 +65,20 @@ const DEVELOPERS_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
 
 export default function DevelopersMegaMenu() {
   return (
-    <div className="flex w-full flex-col gap-4 p-8 shadow-sm">
-      <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+    <div className="flex w-full flex-col gap-4 p-4 md:p-7.5 shadow-sm">
+      <div className="flex flex-col gap-x-6 gap-y-8 md:flex-row md:gap-8">
         {DEVELOPERS_MEGA_MENU_COLUMNS.map((column, columnIndex) => (
           <div
             key={columnIndex}
             className="min-w-0 w-full md:min-w-[280px] lg:min-w-[350px]"
           >
-            {column.sections.map((section, sectionIndex) => (
+            {column.sections.map((section) => (
               <div key={section.heading}>
-                <Text
-                  textColor="blue-40"
-                  className={sectionIndex > 0 ? "mt-4 md:mt-10" : undefined}
-                >
-                  {section.heading}
-                </Text>
-                <Divider orientation="horizontal" className="my-2 bg-gray-60" />
+                <Text textColor="blue-40">{section.heading}</Text>
+                <Divider
+                  orientation="horizontal"
+                  className="my-2.5 bg-gray-60"
+                />
                 {section.links.map((link) => (
                   <MegaMenuLinkRow
                     key={`${section.heading}-${link.title}`}

@@ -33,17 +33,17 @@ const OSImageSection = () => {
   }, []);
 
   return (
-    <Container className="py-[3vh] md:py-[7vh] flex flex-col items-center justify-center">
-      <Text as="h2" align="center" weight="semibold" className="max-w-4xl">
+    <Container className="py-8 md:py-16 2xl:py-25 flex flex-col items-center justify-center">
+      <Text as="h2" align="center" className="max-w-4xl">
         Pre-built OS, and Images,
-        <Text as="span" variant="h2" textColor="primary" weight="semibold">
+        <Text as="span" variant="h2" textColor="primary">
           Ready to Deploy
         </Text>
       </Text>
       <Text as="h6" align="center" textColor="black-5">
         Boot in seconds with curated stacks, or upload your own ISO.
       </Text>
-      <div className="flex items-center justify-center mt-6 md:mt-12 mb-4 md:mb-8">
+      <div className="flex items-center justify-center mt-6 md:mt-12.5 mb-4 md:mb-7.5">
         {OS_IMAGE_SECTION_TABS.map((tab, idx) => (
           <Button
             key={tab.id}
@@ -69,7 +69,7 @@ const OSImageSection = () => {
           />
         ))}
       </div>
-      <div className="mt-6 w-full rounded-lg bg-tertiary p-4 md:px-8 md:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="mt-10 w-full rounded-lg bg-tertiary px-4 md:px-12.5 py-4 md:py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         {selectedImage ? (
           <div className="flex items-center gap-1">
             <Text as="h4" textColor="blue-40" weight="normal">

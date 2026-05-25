@@ -55,11 +55,9 @@ const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
 
 export default function CompanyMegaMenu() {
   return (
-    <div className="flex w-full flex-col gap-4 p-8 shadow-sm">
-      <div>
-        <Text textColor="blue-40">{COMPANY_SECTION_HEADING}</Text>
-        <Divider orientation="horizontal" className="my-2 bg-gray-60" />
-      </div>
+    <div className="flex w-full flex-col p-4 md:p-7.5 shadow-sm">
+      <Text textColor="blue-40">{COMPANY_SECTION_HEADING}</Text>
+      <Divider orientation="horizontal" className="mt-3 bg-gray-60" />
       <div className="flex flex-col gap-6 md:flex-row md:gap-8">
         <div className="min-w-0 w-full md:min-w-[280px] lg:min-w-[350px]">
           {COMPANY_COLUMN_LEFT.map((link) => (

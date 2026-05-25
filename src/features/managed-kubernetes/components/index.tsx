@@ -19,12 +19,7 @@ const ManagedKubernetesComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <Text
-              as="h1"
-              align="center"
-              weight="semibold"
-              className="max-w-6xl mt-4 md:mt-6"
-            >
+            <Text as="h1" align="center" className="max-w-6xl mt-4 md:mt-6">
               Kubernetes Built for GPUs.
               <Text
                 variant="h1"
@@ -55,12 +50,17 @@ const ManagedKubernetesComponent = () => {
       <NeedsSection />
       <DeployWorkloadSection />
       <ControlPlaneSection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection
+        items={CPU_CLUSTER_FAQ_ITEMS}
+        className="pt-0 md:pt-0 2xl:pt-0"
+      />
       <FooterComponent
         title="Deploy GPU-Aware Kubernetes."
         description="Create your first cluster with H100, H200, or A100 node pools. Device plugins, InfiniBand, and autoscaling are included. The control plane is free."
         button1Text="Create Cluster"
         button2Text="View Documentation"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

@@ -20,7 +20,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
           "flex min-w-76 flex-col items-start justify-end bg-primary p-4 md:p-12 text-center"
         }
       >
-        <Text as="h1" textColor="white" weight="normal">
+        <Text as="h1" textColor="white" weight="normal" className="text-7xl">
           {card.headline}
         </Text>
         <Text textColor="gray-10">{card.subline}</Text>
@@ -34,7 +34,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
         key={`${card.companyLabel}-${index}`}
         data-slide
         className={
-          "flex min-w-80 flex-col justify-between gap-4 bg-white p-4 md:p-8 border-r border-gray-10"
+          "flex min-w-80 flex-col justify-between gap-4 bg-white p-4 md:p-10 border-r border-gray-10"
         }
       >
         <Image
@@ -53,12 +53,12 @@ function renderCard(card: ReviewSectionCard, index: number) {
         <Text>{card.quote}</Text>
         <div className="mt-4 md:mt-12 flex items-center gap-3">
           <div
-            className="size-10 shrink-0 rounded-full bg-gray-10"
+            className="size-12 shrink-0 rounded-full bg-gray-50"
             aria-hidden
           />
           <div>
             <Text as="h6">{card.role}</Text>
-            <Text>{card.attributionCompany}</Text>
+            <Text textColor="gray-84">{card.attributionCompany}</Text>
           </div>
         </div>
       </article>
@@ -72,7 +72,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
       className="flex min-w-76 flex-col items-center justify-center bg-white border-r border-gray-10"
       aria-label={`${card.score} average from ${card.reviewCountLabel} on Google`}
     >
-      <Text as="h1" weight="normal">
+      <Text as="h1" weight="normal" className="text-7xl">
         {card.score}
       </Text>
       <div
@@ -83,7 +83,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
           <Star key={i} className="size-10 fill-primary-100" strokeWidth={0} />
         ))}
       </div>
-      <Text className="mt-2 text-gray-80">{card.reviewCountLabel}</Text>
+      <Text className="mt-2 text-black-5">{card.reviewCountLabel}</Text>
       <Image
         src="/icons/google-wordmark.svg"
         alt="Google"
@@ -113,7 +113,7 @@ export default function ReviewsCarousel() {
   }, []);
 
   return (
-    <div className="relative mt-4 md:mt-16 ml-auto w-full mr-0 px-4 sm:px-6 md:px-8 max-w-screen-1xl xl:max-w-screen-3xl">
+    <div className="relative mt-4 md:mt-13.5 ml-auto w-full px-4 max-w-screen-1xl xl:max-w-screen-3xl">
       <div
         ref={scrollerRef}
         className={
@@ -130,7 +130,7 @@ export default function ReviewsCarousel() {
           type="button"
           className={cn(
             "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show previous reviews"
           onClick={() => scrollByDirection("left")}
@@ -141,7 +141,7 @@ export default function ReviewsCarousel() {
           type="button"
           className={cn(
             "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show next reviews"
           onClick={() => scrollByDirection("right")}

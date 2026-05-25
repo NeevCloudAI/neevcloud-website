@@ -5,7 +5,7 @@ import type {
 import { FeatureCardProps } from "@/shared/components/feature-card";
 
 export const FLOW_ARROW_COUNT = 5;
-export const INSTANCE_STAT_SEPARATOR = ".";
+export const INSTANCE_STAT_SEPARATOR = "•";
 export const FLOW_SUMMARY_BADGE_TEXT = "₹0 egress · < 0.5 ms";
 export const FLOW_SUMMARY_REGION_TEXT = "Private Network . Same Region";
 export const ZERO_EGRESS_TITLE = "Zero Egress Charges";
@@ -50,14 +50,14 @@ export const COMPUTE_INSTANCES: ComputeInstance[] = [
     variant: "cpu",
     name: "api-gateway-01",
     specs: ["8 vCPU", "32 GB RAM", "10 GBPS"],
-    transferHint: ". Sending requests",
+    transferHint: "• Sending requests",
   },
   {
     typeLabel: "GPU",
     variant: "gpu",
     name: "inference-backend-01",
     specs: ["H100", "80 GB vRAM", "vLLM serving"],
-    transferHint: ". Returning tokens",
+    transferHint: "• Returning tokens",
   },
 ];
 

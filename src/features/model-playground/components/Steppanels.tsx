@@ -88,8 +88,8 @@ const stepTwoCardData: StepTwoCardData[] = [
 
 const StepTwoCard = ({ card }: { card: StepTwoCardData }) => {
   return (
-    <div className="bg-gray-10 p-3 rounded-xl flex items-center justify-between">
-      <div className="flex items-center gap-4">
+    <div className="bg-gray-10 p-4 md:px-5 rounded-xl flex items-center justify-between">
+      <div className="flex items-center gap-5">
         <Text as="h6" fontFamily="spaceMono" textColor="gray-90">
           {card.id}
         </Text>
@@ -112,27 +112,38 @@ const StepTwoCard = ({ card }: { card: StepTwoCardData }) => {
 
 export function StepOnePanel() {
   return (
-    <div className="bg-white rounded-xl w-full shadow-sm p-4">
+    <div className="relative bg-white rounded-xl w-full shadow-sm p-4 md:p-6.25 h-140">
+      <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
+        <Image
+          src="/icons/logo.svg"
+          alt=""
+          aria-hidden="true"
+          width={170}
+          height={170}
+          style={{ filter: "brightness(0)" }}
+        />
+      </div>
       <div className="flex items-center justify-between">
         <Text as="h5" weight="semibold">
           BENCHMARK RESULTS
         </Text>
         <Text
           as="small"
-          className="bg-primary text-white px-3 py-0.5 rounded-full"
+          className="bg-primary text-white px-2.5 py-0.75 rounded-full"
         >
           • Live
         </Text>
       </div>
       <Text
         fontFamily="spaceMono"
-        textColor="gray-75"
+        textColor="gray-90"
         as="h6"
-        className="mt-4 mb-2"
+        className="mt-5.5"
       >
         {`// response quality benchmark · your prompt`}
       </Text>
-      <div className="flex flex-col gap-2">
+
+      <div className="flex flex-col gap-2.5 mt-2.5">
         {stepOneBenchmarkResults.map((metric) => (
           <StorageComparisonBar
             key={metric.id}
@@ -143,13 +154,14 @@ export function StepOnePanel() {
       </div>
       <Text
         fontFamily="spaceMono"
-        textColor="gray-75"
+        textColor="gray-90"
         as="h6"
-        className="mt-4 mb-2"
+        className="mt-5.5"
       >
         {`// cost comparison · same 500 tokens`}
       </Text>
-      <div className="flex flex-col gap-2">
+
+      <div className="flex flex-col gap-2.5 mt-2.5">
         {costComparisonResults.map((metric) => (
           <StorageComparisonBar
             key={metric.id}
@@ -158,7 +170,7 @@ export function StepOnePanel() {
           />
         ))}
       </div>
-      <div className="border-green-50 bg-primary-40 rounded-xl p-4 mt-4 md:mt-8 space-y-2">
+      <div className="border border-primary-45 bg-primary-40/60 backdrop-blur-sm rounded-xl p-4 md:px-5 md:py-3.75 mt-4 md:mt-7.5 space-y-2 z-1 relative">
         <Text
           fontFamily="spaceMono"
           textColor="gray-90"
@@ -174,26 +186,36 @@ export function StepOnePanel() {
 
 export function StepTwoPanel() {
   return (
-    <div className="bg-white rounded-xl w-full shadow-sm p-4">
+    <div className="relative bg-white rounded-xl w-full shadow-sm p-4 md:p-6.25 h-140">
+      <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
+        <Image
+          src="/icons/logo.svg"
+          alt=""
+          aria-hidden="true"
+          width={170}
+          height={170}
+          style={{ filter: "brightness(0)" }}
+        />
+      </div>
       <div className="flex items-center justify-between">
         <Text as="h5" weight="semibold">
-          ZERO FRICTION ACCESS{" "}
+          ZERO FRICTION ACCESS
         </Text>
         <Text
           as="small"
-          className="bg-primary text-white px-3 py-0.5 rounded-full"
+          className="bg-primary text-white px-2.5 py-0.75 rounded-full"
         >
           • Live
         </Text>
       </div>
 
-      <div className="flex flex-col gap-3 mt-4 md:mt-6">
+      <div className="flex flex-col gap-2.5 mt-7.5">
         {stepTwoCardData.map((card) => (
           <StepTwoCard key={card.id} card={card} />
         ))}
       </div>
 
-      <div className="border-gray-55 bg-gray-05 rounded-xl p-4 mt-4 md:mt-8 flex items-center justify-between flex-col">
+      <div className="border-gray-55 bg-gray-05/80 backdrop-blur-xs rounded-xl p-4 md:px-5 md:py-3.75 mt-5 flex items-center justify-between flex-col">
         <Text fontFamily="spaceMono" textColor="primary" as="h3">
           ≤ 60s
         </Text>
@@ -207,21 +229,31 @@ export function StepTwoPanel() {
 
 export function StepThreePanel() {
   return (
-    <div className="bg-white rounded-xl w-full shadow-sm p-4">
+    <div className="relative bg-white rounded-xl w-full shadow-sm p-4 md:p-6.25 h-140">
+      <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
+        <Image
+          src="/icons/logo.svg"
+          alt=""
+          aria-hidden="true"
+          width={170}
+          height={170}
+          style={{ filter: "brightness(0)" }}
+        />
+      </div>
       <div className="flex items-center justify-between">
         <Text as="h5" weight="semibold">
-          idea → production
+          IDEA → PRODUCTION
         </Text>
         <Text
           as="small"
-          className="bg-primary text-white px-3 py-0.5 rounded-full"
+          className="bg-primary text-white px-2.5 py-0.75 rounded-full"
         >
           • Live
         </Text>
       </div>
 
-      <div className="flex flex-col gap-3 mt-4 md:mt-6">
-        <div className="bg-gray-10 p-3 rounded-xl flex items-center gap-2">
+      <div className="flex flex-col gap-2.5 mt-7.5">
+        <div className="bg-gray-10 p-5 rounded-xl flex items-center gap-2.5">
           <CircleCheck size={24} className="text-primary" />
           <Text as="h6" fontFamily="spaceMono" textColor="gray-90">
             Test prompt in Playground ·
@@ -236,14 +268,14 @@ export function StepThreePanel() {
           </Text>
         </div>
 
-        <div className="bg-gray-10 p-3 rounded-xl flex items-center gap-2">
+        <div className="bg-gray-10 p-5 rounded-xl flex items-center gap-2.5">
           <CircleCheck size={24} className="text-primary" />
           <Text as="h6" fontFamily="spaceMono" textColor="gray-90">
             Compare models, pick the winner
           </Text>
         </div>
 
-        <div className="bg-gray-10 p-3 rounded-xl flex items-center gap-2">
+        <div className="bg-gray-10 p-5 rounded-xl flex items-center gap-2.5">
           <Text className="bg-tertiary text-white px-2 py-0.5 rounded-full">
             3
           </Text>
@@ -252,7 +284,7 @@ export function StepThreePanel() {
           </Text>
         </div>
 
-        <div className="bg-primary-5 p-3 rounded-xl flex items-center gap-2">
+        <div className="bg-primary-5 p-5 rounded-xl flex items-center gap-2.5">
           <Text className="bg-gray-60 text-gray-90 px-2 py-0.5 rounded-full">
             4
           </Text>
@@ -262,7 +294,7 @@ export function StepThreePanel() {
         </div>
       </div>
 
-      <div className="bg-black rounded-xl p-4 mt-4 md:mt-8 space-y-1">
+      <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 md:px-5 md:py-3.75 mt-3.25 space-y-1">
         <Text fontFamily="spaceMono" textColor="gray-90">
           # one line change
         </Text>

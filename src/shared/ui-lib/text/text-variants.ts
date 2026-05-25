@@ -1,13 +1,13 @@
 import { cva } from "class-variance-authority";
 
-export const textVariants = cva("h-fit", {
+export const textVariants = cva("", {
   variants: {
     variant: {
       default: "",
       link: "underline decoration cursor-pointer",
       h1: "text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold mx-1 md:mx-2.5",
-      h2: "text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mx-1 md:mx-2",
-      h3: "text-base sm:text-lg md:text-xl lg:text-2xl font-medium mx-1 md:mx-5",
+      h2: "text-lg sm:text-2xl md:text-3xl lg:text-[40px] font-semibold mx-1 md:mx-2",
+      h3: "text-base sm:text-lg md:text-xl lg:text-2xl font-medium mx-1 md:mx-1.5",
       h4: "text-sm sm:text-base md:text-lg lg:text-xl font-medium mx-1 md:mx-1.5",
       h5: "text-xs sm:text-sm md:text-base lg:text-lg font-normal mx-1 md:mx-1.5",
       h6: "text-xs sm:text-xs md:text-sm lg:text-base font-normal mx-1 md:mx-1.5",
@@ -47,8 +47,15 @@ export const textVariants = cva("h-fit", {
       "green-50": "text-green-50",
       "green-100": "text-green-100",
       "primary-60": "text-primary-60",
+      "gray-84": "text-gray-84",
+      "black-20": "text-black-20",
+      "primary-70": "text-primary-70",
+      "gray-80": "text-gray-80",
+      "black-15": "text-black-15",
       "black-5": "text-black-5",
+      "primary-105": "text-primary-105",
       "primary-gradient": "text-gradient-to-r from-[#59D8A7] to-[#022C3C]",
+      "orange-50": "text-orange-50",
     },
     lineHeight: {
       xs: "leading-5",

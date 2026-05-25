@@ -25,8 +25,10 @@ const ComparisonCard = ({
     <div
       className={`p-4 md:p-8 rounded-md flex flex-col md:flex-row items-start md:items-center justify-between bg-${bgColor} text-${comparisonStatus ? "black" : "white"}`}
     >
-      <Text as="h1">{title}</Text>
-      <div className="flex flex-col gap-2">
+      <Text as="h1" className="text-7xl">
+        {title}
+      </Text>
+      <div className="flex flex-col gap-2.5">
         <Text as="small">{subtitle}</Text>
         <Text as="h6" weight="semibold">
           {subtitle2}
@@ -45,12 +47,11 @@ const ComparisonSection = () => {
 
   return (
     <div
-      className={`py-[3vh] md:py-[7vh] ${comparisonStatus ? "bg-gray-10" : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"}`}
+      className={`py-8 md:py-16 2xl:py-25 ${comparisonStatus ? "bg-gray-10" : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"}`}
     >
       <Container className="flex flex-col items-center">
         <Text
           as="h2"
-          weight="semibold"
           align="center"
           className="max-w-4xl"
           textColor={comparisonStatus ? "black" : "white"}
@@ -60,8 +61,6 @@ const ComparisonSection = () => {
             as="span"
             variant="h2"
             textColor={comparisonStatus ? "primary" : "white"}
-            weight="semibold"
-            className="max-w-4xl"
           >
             AI-scale leverage
           </Text>
@@ -70,7 +69,7 @@ const ComparisonSection = () => {
           Get rid of tedious cloud cost management with automation that works in
           real time.
         </Text>
-        <div className="flex items-center mt-6 mb-8">
+        <div className="flex items-center mt-8">
           <Button
             variant="outline-primary"
             className={`rounded-r-none ${comparisonStatus ? "bg-white" : "bg-gray-80 text-white"}`}
@@ -81,13 +80,14 @@ const ComparisonSection = () => {
             Without NeevCloud
           </Button>
           <Button
+            weight="semibold"
             className={`rounded-l-none ${comparisonStatus ? "" : "bg-gray-90 text-white"}`}
             onClick={() => setComparisonStatus(true)}
           >
             With NeevCloud
           </Button>
         </div>
-        <div className="mt-4 flex flex-col md:flex-row items-center gap-8 md:gap-4 w-full">
+        <div className="mt-4 md:mt-13 flex flex-col md:flex-row items-center gap-8 md:gap-4 w-full">
           <div
             className={`flex md:flex-2 flex-col ${comparisonStatus ? "bg-primary" : "bg-gray-90"} p-4 md:p-8 rounded-md w-full gap-4`}
           >
@@ -128,8 +128,9 @@ const ComparisonSection = () => {
                 AI-First by design
               </Text>
               <Text
-                className="mt-8"
-                textColor={comparisonStatus ? "black" : "white"}
+                as="h6"
+                className="mt-4 md:mt-12"
+                textColor={comparisonStatus ? "black-5" : "white"}
               >
                 Purpose-built for AI workloads
               </Text>

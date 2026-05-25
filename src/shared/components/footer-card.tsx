@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Button, Text } from "../ui-lib";
 
 interface FooterCardProps {
@@ -5,6 +6,7 @@ interface FooterCardProps {
   description: string;
   button1Text: string;
   button2Text?: string;
+  className?: string;
 }
 
 const FooterCard = ({
@@ -12,14 +14,22 @@ const FooterCard = ({
   description,
   button1Text,
   button2Text,
+  className,
 }: FooterCardProps) => {
   return (
-    <section className="relative w-full rounded-md bg-primary-100 py-[2vh] md:py-[10vh] px-4 md:px-12 flex flex-col  overflow-hidden">
+    <section
+      className={cn(
+        "relative w-full rounded-md bg-primary-105 py-6 md:py-29 px-6 md:px-17.5 flex flex-col overflow-hidden",
+        className
+      )}
+    >
       <Text as="h1" weight="medium" className="max-w-2xl">
         {title}
       </Text>
-      <Text className="z-2 mt-2 max-w-lg">{description}</Text>
-      <div className="mt-2 md:mt-6 flex gap-4 z-1">
+      <Text as="h6" className="z-2 mt-2.5 max-w-xl">
+        {description}
+      </Text>
+      <div className="mt-2 md:mt-7.5 flex gap-4">
         <Button
           variant="outline-primary"
           textColor="black"
@@ -34,7 +44,7 @@ const FooterCard = ({
           </Button>
         )}
       </div>
-      <div className=" absolute w-[40%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute w-[50%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat"></div>
     </section>
   );
 };

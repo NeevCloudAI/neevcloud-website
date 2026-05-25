@@ -18,11 +18,11 @@ const StepContent = ({ step }: StepContentProps) => {
         {step.number}
       </Text>
 
-      <Text className="bg-gray-60 text-gray-90 rounded-full px-4 py-1 w-fit">
+      <Text className="bg-gray-60 text-gray-90 rounded-full px-3.75 py-1.25 w-fit">
         {step.badge}
       </Text>
 
-      <Text className="mt-4" as="h6">
+      <Text className="mt-4 md:mt-9" as="h6">
         {step.description}
         {step.descriptionHighlight && (
           <Text
@@ -39,9 +39,9 @@ const StepContent = ({ step }: StepContentProps) => {
       </Text>
 
       {/* Check items */}
-      <ul className="mt-4 flex flex-col gap-2">
+      <ul className="mt-5 flex flex-col gap-2.5">
         {step.checkItems.map((item, i) => (
-          <li key={i} className="flex items-center gap-2">
+          <li key={i} className="flex items-center gap-2.5">
             {item.type === "check" ? (
               <SquareCheck className="w-4.5 h-4.5 text-primary shrink-0" />
             ) : (

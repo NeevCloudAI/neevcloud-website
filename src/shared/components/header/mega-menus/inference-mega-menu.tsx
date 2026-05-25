@@ -55,7 +55,7 @@ const INFERENCE_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
 
 export default function InferenceMegaMenu() {
   return (
-    <div className="flex w-full flex-col gap-4 p-8 shadow-sm">
+    <div className="flex w-full flex-col gap-4 p-4 md:p-7.5 shadow-sm">
       <div className="flex flex-col gap-6 md:flex-row md:gap-8">
         <div className="flex flex-col gap-6 md:flex-row md:gap-8">
           {INFERENCE_MEGA_MENU_COLUMNS.map((column, columnIndex) => (
@@ -73,7 +73,7 @@ export default function InferenceMegaMenu() {
                   </Text>
                   <Divider
                     orientation="horizontal"
-                    className="my-2 bg-gray-60"
+                    className="my-2.5 bg-gray-60"
                   />
                   {section.links.map((link) => (
                     <MegaMenuLinkRow
@@ -86,18 +86,18 @@ export default function InferenceMegaMenu() {
             </div>
           ))}
         </div>
-        <div className="flex min-w-0 w-full flex-col rounded-md bg-gray-10 p-4 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
+        <div className="flex justify-between min-w-0 w-full flex-col rounded-md bg-gray-10 p-5 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
           <Text
             as="small"
             textColor="white"
-            className="bg-primary rounded-full px-3.5 py-1.5 w-fit"
+            className="w-fit rounded-full bg-primary px-3.5 py-1.5"
           >
             FEATURED MODEL
           </Text>
-          <Text as="h6" weight="semibold" className="mt-3">
+          <Text as="h6" weight="semibold" className="mt-2.5">
             Hermes-4-405B is Live
           </Text>
-          <Text as="small" className="">
+          <Text as="small" textColor="black-20">
             Try our highest-throughput open-weight model on serverless
             infrastructure.
           </Text>

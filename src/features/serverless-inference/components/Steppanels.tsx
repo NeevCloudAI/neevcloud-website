@@ -10,7 +10,7 @@ import { Search } from "lucide-react";
 
 export function StepOnePanel() {
   return (
-    <div className="bg-white rounded-xl w-full relative overflow-hidden">
+    <div className="bg-white rounded-xl w-full relative overflow-hidden h-125">
       <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
         <Image
           src="/icons/logo.svg"
@@ -22,18 +22,19 @@ export function StepOnePanel() {
         />
       </div>
 
-      <div className="px-4 pt-4">
-        <div className="flex items-center gap-2 border border-gray-60 rounded-md px-3 py-2 mb-3">
+      <div className="p-6.25 pb-5">
+        <div className="flex items-center gap-2.5 border border-gray-60 rounded-md px-3.75 py-2.25 mb-3">
           <Search size={16} className="text-gray-85" />
           <span className="text-gray-85 text-sm">Search 20+ models...</span>
         </div>
       </div>
 
-      <div className="flex gap-2 mb-3 px-4 flex-wrap">
+      <div className="flex gap-1.25 px-4 flex-wrap">
         {STEP_ONE_FILTERS.map((f) => (
           <Text
+            as="small"
             key={f}
-            className={`px-3 py-1 rounded-full cursor-pointer font-medium ${f === "All" ? "bg-black text-white" : "bg-gray-60 text-gray-75"}`}
+            className={`px-2.5 py-0.75 rounded-full cursor-pointer font-medium ${f === "All" ? "bg-black text-white" : "bg-gray-60 text-gray-75"}`}
           >
             {f}
           </Text>
@@ -41,23 +42,25 @@ export function StepOnePanel() {
       </div>
 
       {/* Model rows */}
-      <div className="flex flex-col divide-y divide-gray-100">
+      <div className="flex flex-col divide-y divide-gray-100 mt-5 ">
         {STEP_ONE_MODELS.map((m, i) => (
           <div
             key={i}
-            className={`flex items-center justify-between p-4 ${
+            className={`flex items-center justify-between px-6.25 py-3.75 ${
               i === 0
                 ? "border-l-3 border-l-primary border-b border-b-gray-200 [background:linear-gradient(to_right,#e6f7f5,transparent)]"
                 : "border-b border-b-gray-60"
             }`}
           >
             <div>
-              <Text weight="semibold">{m.name}</Text>
-              <Text textColor="gray-85" as="h6">
+              <Text as="h4" weight="semibold">
+                {m.name}
+              </Text>
+              <Text textColor="black-5" as="h6">
                 {m.meta}
               </Text>
             </div>
-            <Text as="h6" weight="semibold" textColor="primary">
+            <Text as="h6" weight="semibold" textColor="primary-70">
               {m.price}
             </Text>
           </div>
@@ -69,18 +72,18 @@ export function StepOnePanel() {
 
 export function StepTwoPanel() {
   return (
-    <div className="bg-black rounded-xl overflow-hidden w-full shadow-sm">
-      <div className="flex items-center gap-2 px-4 py-3 bg-[#1a1a1a] border-b border-white/10">
-        <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-        <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
-        <span className="w-3 h-3 rounded-full bg-[#28c840]" />
-        <span className="ml-auto text-white/30 text-xs font-mono">
+    <div className="bg-black rounded-md overflow-hidden w-full shadow-sm h-125">
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+        <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+        <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+        <Text as="small" align="right" textColor="gray-75" className="ml-auto">
           {STEP_TWO_TERMINAL_PATH}
-        </span>
+        </Text>
       </div>
 
       {/* Code */}
-      <div className="px-2 md:px-5 py-2 md:py-8 font-mono">
+      <div className="px-2 md:px-8.75 py-2 md:py-11.5 font-mono">
         <Text fontFamily="spaceMono" textColor="gray-75">
           # Two-line integration
         </Text>
@@ -89,7 +92,7 @@ export function StepTwoPanel() {
             <Text
               fontFamily="spaceMono"
               textColor="red-50"
-              className="leading-6"
+              className="leading-7"
             >
               from
               <Text
@@ -126,7 +129,7 @@ export function StepTwoPanel() {
                 as="span"
                 textColor="green-10"
                 variant="p"
-                className="mx-0 ml-1 md:mx-0 md:ml-1.5"
+                className="mx-0 ml-1 md:mx-0 md:ml-1.5 leading-7"
               >
                 NeevCloud
               </Text>
@@ -137,7 +140,7 @@ export function StepTwoPanel() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               {`base_url="`}
               <Text
@@ -155,7 +158,7 @@ export function StepTwoPanel() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               {`response = client.chat.completion.`}
               <Text
@@ -173,7 +176,7 @@ export function StepTwoPanel() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               &nbsp; {`model=`}
               <Text
@@ -191,7 +194,7 @@ export function StepTwoPanel() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               &nbsp; {`messages=[{ `}
               <Text
@@ -251,7 +254,7 @@ export function StepTwoPanel() {
                 {`"Explain`}
               </Text>
             </Text>
-            <Text textColor="primary" className="mx-0 md:mx-0 leading-6">
+            <Text textColor="primary" className="mx-0 md:mx-0 leading-7">
               {`serverless inference."`}
               <Text as="span" variant="p" textColor="white">
                 {`}] )`}
@@ -261,7 +264,7 @@ export function StepTwoPanel() {
               as="span"
               textColor="green-10"
               variant="p"
-              className="mx-0 md:mx-0 leading-6"
+              className="mx-0 md:mx-0 leading-7"
             >
               Print
               <Text
@@ -277,7 +280,7 @@ export function StepTwoPanel() {
             <Text
               fontFamily="spaceMono"
               textColor="gray-75"
-              className="leading-6"
+              className="leading-7"
             >
               # ✓ 200 OK · 412ms · 30 tokens # Your existing OpenAI code just
               works.
@@ -294,33 +297,30 @@ export function StepThreePanel() {
     STEP_THREE_BILLING;
 
   return (
-    <div className="bg-white rounded-xl w-full shadow-sm relative overflow-hidden">
-      <div className="absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
+    <div className="relative bg-white rounded-xl w-full shadow-sm overflow-hidden h-125">
+      <div className="z-0 absolute bottom-0 right-0 pointer-events-none select-none opacity-15">
         <Image
           src="/icons/logo.svg"
           alt=""
           aria-hidden="true"
           width={170}
           height={170}
-          style={{ filter: "brightness(0)" }}
         />
       </div>
-      {/* Header */}
-      <div className="px-5 pt-5 pb-4 border-b border-gray-60">
+      <div className="p-6.25 border-b border-gray-60">
         <Text as="h4" weight="semibold">
           {title}
         </Text>
-        <Text textColor="gray-85" className="my-1">
+        <Text textColor="gray-85" className="my-1.25">
           {subtitle}
         </Text>
       </div>
 
-      {/* Rows */}
-      <div className="flex flex-col px-5 mb-5">
+      <div className="flex flex-col px-7.25 mb-3.75">
         {rows.map((row, i) => (
           <div
             key={i}
-            className="flex items-center justify-between py-4 border-b border-gray-60 "
+            className="flex items-center justify-between py-3.75 border-b border-gray-60 "
           >
             <div>
               <Text as="h6" weight="semibold">
@@ -337,8 +337,7 @@ export function StepThreePanel() {
         ))}
       </div>
 
-      {/* Total box — light teal background as in image */}
-      <div className="mx-5 mb-5 bg-primary-40 border border-primary-50 rounded-lg p-4 text-center">
+      <div className="mx-5 mb-5 bg-primary-40 z-1 relative border border-primary-45 rounded-xl p-3.75 text-center">
         <Text as="small" weight="semibold">
           {totalLabel}
         </Text>

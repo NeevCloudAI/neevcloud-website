@@ -17,7 +17,7 @@ function ThreeStepsSection() {
   const step = STEPS[activeStep];
 
   return (
-    <section className="bg-gray-10 relative py-[3vh] md:py-[7vh]">
+    <section className="bg-gray-10 relative py-8 md:py-16 2xl:py-25">
       <Container className="relative">
         <Text as="h2" weight="semibold" align="center">
           {THREE_STEPS_HEADING_BLACK}
@@ -29,17 +29,20 @@ function ThreeStepsSection() {
           {THREE_STEPS_SUBTEXT}
         </Text>
 
-        <div className="relative mt-6 md:mt-10">
-          <div className="relative z-10 grid grid-cols-3">
+        <div className="relative mt-6 md:mt-12.5">
+          <div className="relative z-10 grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-0">
             {STEPS.map((s, i) => (
-              <div key={i} className="flex items-center">
+              <div key={i} className="flex w-full items-center">
                 <Button
                   size="full"
                   variant={activeStep === i ? "default" : "white"}
-                  className="text-left"
+                  className="w-full text-left px-5 py-2.5"
                   onClick={() => setActiveStep(i)}
                 >
-                  <Text textColor={activeStep === i ? "gray-10" : "gray-90"}>
+                  <Text
+                    as="h6"
+                    textColor={activeStep === i ? "gray-10" : "gray-90"}
+                  >
                     {s.label}
                   </Text>
                   <Text
@@ -53,7 +56,7 @@ function ThreeStepsSection() {
                 {i < STEPS.length - 1 && (
                   <Divider
                     orientation="horizontal"
-                    className="bg-gray-400 w-4"
+                    className="hidden shrink-0 bg-gray-400 w-5 md:block"
                   />
                 )}
               </div>
@@ -62,7 +65,7 @@ function ThreeStepsSection() {
         </div>
 
         {/* Content */}
-        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="mt-6 md:mt-12.5 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <StepContent step={step} />
           <div>{STEP_PANELS[activeStep]}</div>
         </div>

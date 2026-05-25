@@ -1,5 +1,4 @@
 import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
-import DeployInstanceSection from "@/shared/components/DeployInstanceSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
@@ -10,6 +9,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 import InferenceStackSection from "./InferenceStackSection";
 import ModelsSection from "./ModelsSection";
 import ThreeStepsSection from "./Threestepssection";
+import TokenPricingSection from "./TokenPricingSection";
 
 const ServerlessInferenceComponent = () => {
   return (
@@ -20,11 +20,7 @@ const ServerlessInferenceComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <Text
-              as="h1"
-              weight="semibold"
-              className="max-w-4xl text-center mt-4 md:mt-6"
-            >
+            <Text as="h1" className="max-w-4xl text-center mt-4 md:mt-6">
               Run Any Model. Pay Per Token.
               <Text as="span" variant="h1" textColor="primary">
                 No GPUs
@@ -42,44 +38,19 @@ const ServerlessInferenceComponent = () => {
       <ThreeStepsSection />
       <ModelBuilderSection />
       <ModelsSection />
-      <DeployInstanceSection
-        title={
-          <>
-            <Text
-              as="h2"
-              weight="semibold"
-              textColor="white"
-              className="max-w-4xl"
-            >
-              Token Pricing.
-              <Text
-                as="span"
-                variant="h2"
-                textColor="primary"
-                weight={"semibold"}
-              >
-                No Surprises.
-              </Text>
-            </Text>
-          </>
-        }
-        description="Pay per token, input and output billed separately. All charges in INR. Volume discounts unlock automatically above 10M tokens per month. Reserved inference capacity available for high-volume workloads."
-        image={{
-          src: "/images/token-pricing.png",
-          alt: "Pricing",
-          width: 1000,
-          height: 1000,
-        }}
-        buttonText1="View Complete Pricing"
-        buttonText2="Contact for Custom Plans"
-      />
+      <TokenPricingSection />
       <InferenceStackSection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection
+        items={CPU_CLUSTER_FAQ_ITEMS}
+        className="pt-0 md:pt-0 2xl:pt-0"
+      />
       <FooterComponent
         title="Ready to Run Your First Inference?"
         description="Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges."
         button1Text="Get Free API Key"
         button2Text="Read the Docs"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

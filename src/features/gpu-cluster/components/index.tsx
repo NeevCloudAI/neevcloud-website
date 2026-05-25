@@ -18,7 +18,7 @@ const GpuClusterComponent = () => {
         <Divider orientation="horizontal" />
         <HeroSection
           title={
-            <Text as="h1" className="mt-4 md:mt-6 max-w-4xl text-center">
+            <Text as="h1" className="mt-4 md:mt-5 max-w-4xl text-center">
               The Right GPU for Every
               <Text as="span" variant="h1" textColor="primary">
                 AI Workload
@@ -41,6 +41,8 @@ const GpuClusterComponent = () => {
         description="Deploy H100, A100, RTX 5090, or other GPUs in minutes. On-demand flexibility or reserved savings."
         button1Text="Configure Now"
         button2Text="Talk to Our Team"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

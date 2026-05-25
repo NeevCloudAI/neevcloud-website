@@ -23,6 +23,8 @@
   --color-gray-05: var(--gray-05);
   --color-green-20: var(--green-20);
   --color-primary-5: var(--primary-5);
+  --color-primary-70: var(--primary-70);
+  --color-primary-110: var(--primary-110);
   --color-black-5: var(--black-5);
   --color-gray-65: var(--gray-65);
   --color-gray-70: var(--gray-70);
@@ -34,22 +36,45 @@
   --color-gray-55: var(--gray-55);
   --color-gray-100: var(--gray-100);
   --color-black-10: var(--black-10);
+  --color-primary-65: var(--primary-65);
   --color-black-50: var(--black-50);
+  --color-black-20: var(--black-20);
   --color-black-80: var(--black-80);
   --color-black-90: var(--black-90);
   --color-white: var(--white);
   --color-red-100: var(--red-100);
+  --color-primary-120: var(--primary-120);
   --color-white-50: var(--white-50);
+  --color-primary-105: var(--primary-105);
+  --color-primary-45: var(--primary-45);
+  --color-primary-75: var(--primary-75);
   --color-white-10: var(--white-10);
+  --color-black-7: var(--black-7);
   --color-gray-50: var(--gray-50);
+  --color-gray-25: var(--gray-25);
+
+  --color-orange-50: var(--orange-50);
+  --color-primary-80: var(--primary-80);
   --color-white-5: var(--white-5);
   --color-green-50: var(--green-50);
+  --color-gray-97: var(--gray-97);
+  --color-black-30: var(--black-30);
+  --color-black-25: var(--black-25);
   --color-green-100: var(--green-100);
   --color-green-10: var(--green-10);
   --color-gray-110: var(--gray-110);
+  --color-gray-83: var(--gray-83);
+  --color-gray-84: var(--gray-84);
+  --color-black-70: var(--black-70);
+  --color-black-35: var(--black-35);
+  --color-black-40: var(--black-40);
+  --color-primary-130: var(--primary-130);
+
   --color-gray-120: var(--gray-120);
+  --color-black-95: var(--black-95);
   --color-gray-125: var(--gray-125);
   --color-black-15: var(--black-15);
+  --color-primary-95: var(--primary-95);
 
   --breakpoint-header-company: 1430px;
   --breakpoint-header-resource: 1340px;
@@ -66,14 +91,26 @@
 
 :root {
   --primary: #00a78b;
+  --primary-70: #00a78a;
   --primary-5: #f4f9f9;
   --primary-10: #ebf5f5;
   --primary-20: #f0faf8;
   --primary-30: #d3f0eb;
   --primary-40: #e6f7f4;
+  --primary-95: #0d211e;
   --primary-50: #afe4db;
   --primary-60: #59dba7;
+  --primary-65: #46a481;
+  --primary-75: #00a78b;
+  --primary-45: #aae0d7;
+  --primary-80: #111b19;
   --primary-100: #58d6a6;
+  --primary-105: #58d7a7;
+  --primary-110: #285141;
+  --primary-120: #0e342d;
+  --primary-130: #031714;
+
+  --orange-50: #d29922;
 
   --secondary: #005150;
   --tertiary: #022c3c;
@@ -84,11 +121,24 @@
   --white: #ffffff;
 
   --black-5: #2e2e2e;
+  --black-7: #1e2120;
   --black-10: #0000001f;
+  --black-25: #1d1d1d;
+
+  --black-35: #232527;
+
+  --black-30: #2d2d2d;
   --black-15: #292c2b;
+
+  --black-20: #2a2c2c;
   --black-50: #00000052;
+  --black-70: #171819;
+
+  --black-40: #0f1112;
+
   --black-80: #0f0f0f;
   --black-90: #0000009e;
+  --black-95: #121212;
 
   --blue-40: #a0adb2;
 
@@ -97,6 +147,7 @@
   --gray-05: #e6e6e6;
   --gray-10: #eaf4f4;
   --gray-20: #eceff0;
+  --gray-25: #c2c2c2;
   --gray-50: #d9d9d9;
   --gray-55: #afafaf;
   --gray-60: #bdc9cc;
@@ -104,9 +155,12 @@
   --gray-70: #9fa6a6;
   --gray-75: #515f66;
   --gray-80: #545f66;
+  --gray-83: #5e5e5e;
+  --gray-84: #616161;
   --gray-85: #6e7c83;
   --gray-90: #384245;
   --gray-95: #2f2f2f;
+  --gray-97: #383838;
   --gray-100: #1f1f1f;
   --gray-105: #121313;
   --gray-110: #0a0b0c;
@@ -152,7 +206,7 @@ body {
     @apply text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold leading-tight;
   }
   h2 {
-    @apply text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug;
+    @apply text-lg sm:text-2xl md:text-3xl lg:text-[40px] font-semibold leading-snug;
   }
   h3 {
     @apply text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-normal;
@@ -263,5 +317,30 @@ body {
     border-radius: 9999px;
     background: var(--slider-thumb);
     box-shadow: 0 0 0 2px var(--white);
+  }
+
+  /* Masonry-style model cards via CSS columns */
+  .model-info-masonry {
+    column-gap: 1.25rem;
+    columns: 1;
+  }
+
+  @media (min-width: 768px) {
+    .model-info-masonry {
+      columns: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .model-info-masonry {
+      columns: 3;
+    }
+  }
+
+  .model-info-masonry__item {
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 1.25rem;
   }
 }

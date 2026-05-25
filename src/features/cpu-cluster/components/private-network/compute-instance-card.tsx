@@ -9,7 +9,7 @@ type ComputeSpecsProps = {
 
 function ComputeSpecs({ specs }: ComputeSpecsProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 mt-1">
       {specs.map((spec, index) => (
         <div key={spec} className="flex items-center gap-2">
           <Text as="h6" textColor="gray-60">
@@ -34,15 +34,15 @@ export function ComputeInstanceCard({
   transferHint,
 }: ComputeInstance) {
   return (
-    <div className="flex-1 space-y-3 rounded-xl bg-gray-90 p-4 md:p-8">
-      <div className="flex items-center gap-4">
+    <div className="flex-1 rounded-xl bg-gray-90 p-4 md:px-7.5 md:py-8.5">
+      <div className="flex items-center gap-2.5">
         <ComputePill label={typeLabel} variant={variant} />
         <Text as="h4" weight="semibold" textColor="white">
           {name}
         </Text>
       </div>
       <ComputeSpecs specs={specs} />
-      <Text as="small" textColor="primary-60">
+      <Text as="small" textColor="primary-60" className="mt-2.5">
         {transferHint}
       </Text>
     </div>

@@ -1,20 +1,17 @@
 "use client";
 
 import { Button, Text } from "@/shared/ui-lib";
-import { cn } from "@/lib/utils";
 import { useMemo, useState } from "react";
+import { MODEL_BUILDER_COPY } from "@/shared/constants/model-builder-section.constants";
 import {
-  CLI_CODE_LINES,
-  MODEL_BUILDER_COPY,
-  RUNTIME_CODE,
+  RUNTIME_TAB_BY_ID,
   RUNTIME_TABS,
-} from "@/shared/constants/model-builder-section.constants";
+} from "@/shared/data/model-builder/runtime-tabs-data";
 import type {
   CodeToken,
   CodeTokenVariant,
   RuntimeTab,
 } from "@/shared/types/model-builder-section.types";
-import { tokenizeGenericCodeLine } from "@/shared/utils/model-builder-section.utils";
 
 const TOKEN_CLASS: Record<CodeTokenVariant, string> = {
   accent: "text-primary",
@@ -29,13 +26,16 @@ const TOKEN_CLASS: Record<CodeTokenVariant, string> = {
 function renderLineTokens(tokens: CodeToken[], lineKey: string) {
   if (tokens.length === 0) {
     return (
-      <span key={lineKey} className="block min-h-[1.4em] select-none">
+      <span
+        key={lineKey}
+        className="block min-h-[1.4em] select-none leading-[28px]"
+      >
         {"\u00a0"}
       </span>
     );
   }
   return (
-    <span key={lineKey} className="block whitespace-pre">
+    <span key={lineKey} className="block whitespace-pre leading-[28px]">
       {tokens.map((t, i) => (
         <span key={i} className={TOKEN_CLASS[t.variant]}>
           {t.text}
@@ -49,37 +49,29 @@ const RuntimeTabs = () => {
   const [activeTab, setActiveTab] = useState<RuntimeTab>("CLI");
 
   const highlightedLines = useMemo(() => {
-    if (activeTab === "CLI") {
-      return CLI_CODE_LINES.map((tokens, lineIdx) =>
-        renderLineTokens(tokens, `cli-${lineIdx}`),
-      );
-    }
-    const lines = RUNTIME_CODE[activeTab];
-    return lines.map((line, lineIdx) =>
-      renderLineTokens(
-        tokenizeGenericCodeLine(line),
-        `${activeTab}-${lineIdx}`,
-      ),
+    const { codeLines } = RUNTIME_TAB_BY_ID[activeTab];
+    return codeLines.map((tokens, lineIdx) =>
+      renderLineTokens(tokens, `${activeTab}-${lineIdx}`)
     );
   }, [activeTab]);
 
   return (
-    <div className="overflow-hidden">
-      <div className={cn("rounded-md border border-white-10 bg-black")}>
-        <div className="flex items-center justify-between border-b border-white-10 px-3 py-2">
+    <div className="w-full flex-2 overflow-hidden">
+      <div className="rounded-lg border border-gray-95 bg-black-95">
+        <div className="flex items-center justify-between border-b border-gray-95 p-3">
           <div className="flex items-center gap-1.5" aria-hidden>
-            <span className="size-2 rounded-full bg-[#ff5f57]" />
-            <span className="size-2 rounded-full bg-[#febc2e]" />
-            <span className="size-2 rounded-full bg-[#28c840]" />
+            <span className="size-2.5 rounded-full bg-[#ff5f57]" />
+            <span className="size-2.5 rounded-full bg-[#febc2e]" />
+            <span className="size-2.5 rounded-full bg-[#28c840]" />
           </div>
-          <Text as="small" textColor="white-50" className="tracking-wide ">
+          <Text as="small" textColor="white-50" className="tracking-wide mr-4">
             {MODEL_BUILDER_COPY.terminalPath}
           </Text>
         </div>
 
         <pre
           id="runtime-code-panel"
-          className="h-75 overflow-x-auto overflow-y-auto p-6 text-xs leading-relaxed sm:p-8 sm:text-sm "
+          className="max-h-85 overflow-x-auto overflow-y-auto p-6 text-xs leading-relaxed sm:px-10 sm:py-7.5"
           role="tabpanel"
           aria-labelledby={`runtime-tab-${activeTab}`}
         >

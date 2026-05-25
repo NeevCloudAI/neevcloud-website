@@ -5,10 +5,6 @@ export type ModelFeature = {
 
 export type RuntimeTab = "CLI" | "Python" | "Go" | "Rust" | "Terraform";
 
-export type PlainRuntimeTab = Exclude<RuntimeTab, "CLI">;
-
-export type RuntimeCodeMap = Record<PlainRuntimeTab, string[]>;
-
 export type CodeTokenVariant =
   | "accent"
   | "command"

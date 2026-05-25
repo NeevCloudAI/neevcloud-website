@@ -12,16 +12,6 @@ const WORKLOAD_OPTIONS = [
   { id: "scale", label: "Scale Node Pool" },
 ] as const;
 
-const getButtonRadiusClasses = (index: number, total: number) => {
-  if (index === 0) {
-    return "rounded-none rounded-t-md md:rounded-t-none md:rounded-b-none md:rounded-l-md md:rounded-r-none";
-  }
-  if (index === total - 1) {
-    return "rounded-none rounded-b-md md:rounded-t-none md:rounded-b-none md:rounded-r-md md:rounded-l-none";
-  }
-  return "rounded-none";
-};
-
 type WorkloadCodeCardProps = {
   children: ReactNode;
   panelId: string;
@@ -37,7 +27,7 @@ const WorkloadCodeCard = ({
     id={panelId}
     role="tabpanel"
     aria-labelledby={labelledBy}
-    className="bg-black rounded-md w-full font-mono border border-black-5 mt-4"
+    className="bg-black rounded-md w-full font-mono mt-4 md:mt-7.5 h-88 overflow-auto"
   >
     <div className="flex items-center justify-between gap-2 px-4 py-3 border-b border-black-5">
       <div className="flex items-center gap-1">
@@ -45,7 +35,7 @@ const WorkloadCodeCard = ({
         <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
       </div>
-      <Text textColor="gray-75" fontFamily="spaceMono" className="ml-4">
+      <Text textColor="gray-75" fontFamily="spaceMono">
         ~/create.sh ·
         <Text as="span" variant="p" textColor="primary">
           ready to copy
@@ -349,52 +339,46 @@ const DeployWorkloadSection = () => {
   const ActivePanel = WORKLOAD_PANELS[selectedIndex];
 
   return (
-    <section className="bg-gray-10 py-[3vh] md:py-[7vh]">
+    <section className="bg-gray-10 py-8 md:py-16 2xl:py-25">
       <Container className="flex flex-col items-center justify-center">
-        <Text
-          as="h2"
-          textColor="black"
-          weight="semibold"
-          className="max-w-4xl"
-          align="center"
-        >
+        <Text as="h2" textColor="black" className="max-w-4xl" align="center">
           Deploy Your
           <Text as="span" variant="h2" textColor="primary">
             First Workload
           </Text>
         </Text>
-        <Text textColor="black-5" align="center" className="max-w-2xl">
+        <Text as="h6" textColor="black-5" align="center" className="max-w-3xl">
           Four primitives, create, deploy, train, scale. Same CLI surface, same
           auth, same cluster.
         </Text>
         <div
-          className="w-full grid grid-cols-1 md:grid-cols-4 items-center justify-between mt-4 md:mt-8"
+          className="w-full grid grid-cols-1 md:grid-cols-4 items-center justify-between mt-4 md:mt-12.5"
           role="tablist"
           aria-label="Workload options"
         >
           {WORKLOAD_OPTIONS.map((option, index) => {
             const isSelected = selectedIndex === index;
             const isLast = index === WORKLOAD_OPTIONS.length - 1;
+            const isFirst = index === 0;
             const tabId = `workload-tab-${option.id}`;
 
             return (
               <Button
                 key={option.id}
                 id={tabId}
-                type="button"
                 role="tab"
                 size="full"
                 aria-selected={isSelected}
                 aria-controls={`workload-panel-${option.id}`}
                 fontFamily="spaceMono"
                 spacing="lg"
-                borderRadius="none"
                 variant={isSelected ? undefined : "black"}
                 onClick={() => setSelectedIndex(index)}
                 className={cn(
-                  "py-4 transition-colors",
-                  getButtonRadiusClasses(index, WORKLOAD_OPTIONS.length),
+                  "rounded-none py-4 transition-colors text-sm",
                   !isLast && "border-b md:border-b-0 md:border-r",
+                  isFirst && "rounded-l-md",
+                  isLast && "rounded-r-md",
                   isSelected
                     ? "bg-primary-100 text-black"
                     : "border-gray-90 text-gray-65"

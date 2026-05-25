@@ -12,21 +12,18 @@ const DeployInstanceSection = ({
   buttonText2,
   showBGImage = true,
   showLogo = true,
-  showBlur = true,
 }: DeployInstanceSectionProps) => {
   return (
     <section
-      className={`relative ${showBGImage ? 'bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black' : "bg-gray-10"} py-[3vh] md:py-[7vh]`}
+      className={`relative ${showBGImage ? 'bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black' : "bg-gray-10"} py-8 md:py-16 2xl:py-25`}
     >
       {showLogo && (
         <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-full top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
       )}
-      {showBlur && (
-        <div className="pointer-events-none absolute inset-0 z-1 bg-radial from-teal-300/30 via-transparent to-transparent blur-xl"></div>
-      )}
       <Container className="flex flex-col items-center justify-center">
         {title}
         <Text
+          as="h6"
           textColor={showBGImage ? "gray-10" : "black-5"}
           align="center"
           className="max-w-2xl"

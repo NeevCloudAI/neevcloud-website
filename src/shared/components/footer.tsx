@@ -10,16 +10,27 @@ import {
   FOOTER_SOCIAL_LINKS,
 } from "../data/footer-data";
 import type { FooterCtaContent, FooterLinkGroup } from "../data/footer-types";
+import { cn } from "@/lib/utils";
 
 const FooterComponent = ({
   title,
   description,
   button1Text,
   button2Text,
+  className,
+  hasBGImage = false,
 }: FooterCtaContent) => {
   return (
-    <footer className="bg-black py-[3vh] md:py-[7vh]">
-      <Container className="flex flex-col gap-12 md:gap-16">
+    <footer
+      className={cn(
+        "relative bg-black py-8 md:py-16 2xl:py-25",
+        hasBGImage
+          ? "bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"
+          : "",
+        className
+      )}
+    >
+      <Container className="flex flex-col gap-6 md:gap-25">
         <FooterCard
           title={title || FOOTER_CTA.title || ""}
           description={description || FOOTER_CTA.description || ""}
@@ -28,7 +39,7 @@ const FooterComponent = ({
         />
 
         <div className="mb-4 md:mb-16 w-full flex flex-col md:flex-row gap-8 md:gap-16 text-white">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             <Image
               src={FOOTER_BRANDING.logo}
               alt="NeevCloud logo"
@@ -39,7 +50,7 @@ const FooterComponent = ({
               <Text>{FOOTER_BRANDING.taglineLine1}</Text>
               <Text>{FOOTER_BRANDING.taglineLine2}</Text>
             </div>
-            <ul className="flex gap-2 md:gap-4">
+            <ul className="flex gap-2 md:gap-4 mb-2">
               {FOOTER_SOCIAL_LINKS.map((social) => (
                 <li key={social.label}>
                   <Link
@@ -66,7 +77,7 @@ const FooterComponent = ({
           </div>
           <nav
             aria-label="Footer"
-            className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 md:gap-x-8"
+            className="w-full grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-4  md:gap-y-15 md:gap-x-8"
           >
             {FOOTER_LINK_GROUPS.map((group) => (
               <FooterLinkColumn key={group.title} group={group} />
@@ -85,7 +96,7 @@ type FooterLinkColumnProps = {
 const FooterLinkColumn = ({ group }: FooterLinkColumnProps) => {
   return (
     <div>
-      <Text as="h6" weight="semibold" className="mb-2 md:mb-6">
+      <Text as="h6" weight="semibold" className="mb-2 md:mb-5">
         {group.title}
       </Text>
       <ul>
@@ -93,7 +104,7 @@ const FooterLinkColumn = ({ group }: FooterLinkColumnProps) => {
           <li key={link.label}>
             <Link
               href={link.href}
-              className="flex flex-col text-white-50 hover:text-white pb-3.5 text-sm"
+              className="flex flex-col text-white-50 hover:text-white pb-2.5 text-sm"
             >
               {link.label}
             </Link>

@@ -22,7 +22,6 @@ const ModelApiComponent = () => {
               as="h1"
               align="center"
               textColor="primary"
-              weight="semibold"
               className="max-w-4xl mt-4 md:mt-6"
             >
               Production-Ready
@@ -48,12 +47,17 @@ const ModelApiComponent = () => {
       <IntelligenceSection />
       <ExploreApiSection />
       <PaySection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection
+        items={CPU_CLUSTER_FAQ_ITEMS}
+        className="pt-0 md:pt-0 2xl:pt-0"
+      />
       <FooterComponent
         title="Start Building with Model APIs Today"
         description="Create an account and receive 10,000 free API requests. No credit card required."
         button1Text="Request API Access"
         button2Text="View Documentation"
+        className="pt-0 md:pt-0 2xl:pt-0"
+        hasBGImage
       />
     </>
   );

@@ -29,7 +29,7 @@ const PricingCalculatorClient = () => {
   const formattedRequests = formatRequests(totalRequests);
   const monthlyCost = useMemo(
     () => calculateMonthlyCost(totalRequests, mix),
-    [totalRequests, mix]
+    [totalRequests, mix],
   );
 
   const categoryCosts = useMemo(
@@ -39,9 +39,9 @@ const PricingCalculatorClient = () => {
           acc[id] = calculateCategoryCost(totalRequests, mix[id], id);
           return acc;
         },
-        {} as Record<WorkloadCategoryId, number>
+        {} as Record<WorkloadCategoryId, number>,
       ),
-    [totalRequests, mix]
+    [totalRequests, mix],
   );
 
   const handleMixChange = (category: WorkloadCategoryId, value: number) => {

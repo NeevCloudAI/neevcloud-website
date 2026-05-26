@@ -9,7 +9,7 @@ export function formatCurrency(value: number): string {
 }
 
 export function calculateMonthlyStorageCost(
-  additionalStorageGb: number
+  additionalStorageGb: number,
 ): number {
   return additionalStorageGb * PRICE_PER_GB_MONTH;
 }
@@ -17,7 +17,7 @@ export function calculateMonthlyStorageCost(
 export function storageToSlider(
   storageGb: number,
   minGb: number,
-  maxGb: number
+  maxGb: number,
 ): number {
   if (maxGb === minGb) {
     return 0;
@@ -28,7 +28,7 @@ export function storageToSlider(
 export function sliderToStorage(
   sliderValue: number,
   minGb: number,
-  maxGb: number
+  maxGb: number,
 ): number {
   const storage = minGb + (sliderValue / 100) * (maxGb - minGb);
   return Math.round(storage);

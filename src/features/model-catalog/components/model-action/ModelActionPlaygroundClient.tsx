@@ -8,7 +8,7 @@ import { MODEL_ACTION_ITEMS } from "../../data/model-action-section.data";
 
 const ModelActionPlaygroundClient = () => {
   const [selectedModelId, setSelectedModelId] = useState(
-    MODEL_ACTION_ITEMS[0].id
+    MODEL_ACTION_ITEMS[0].id,
   );
   const [prompt, setPrompt] = useState("");
 

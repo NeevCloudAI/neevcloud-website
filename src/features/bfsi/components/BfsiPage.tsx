@@ -10,6 +10,7 @@ import ApplicationSection from "./ApplicationSection";
 import PerformanceSection from "./PerformanceSection";
 import { BFSI_FAQ_ITEMS } from "../data/faq-section.data";
 import { BFSI_FOOTER } from "../constants/bfsi-page.constants";
+import BfsiAmbitionSection from "./BfsiAmbitionSection";
 
 const BfsiPage = () => {
   return (

@@ -13,7 +13,7 @@ import type { OsSectionId } from "../../types/os-image-section.types";
 
 const OSImageSectionClient = () => {
   const [activeSection, setActiveSection] = useState<OsSectionId>(
-    DEFAULT_OS_IMAGE_SECTION
+    DEFAULT_OS_IMAGE_SECTION,
   );
   const [selectedImageTitle, setSelectedImageTitle] = useState<string>("");
 
@@ -21,7 +21,7 @@ const OSImageSectionClient = () => {
 
   const selectedImage = useMemo(
     () => imageList.find((item) => item.title === selectedImageTitle),
-    [imageList, selectedImageTitle]
+    [imageList, selectedImageTitle],
   );
 
   const handleSectionChange = useCallback((section: OsSectionId) => {

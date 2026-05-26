@@ -4,13 +4,13 @@ import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 import { Divider } from "@/shared/ui-lib";
-import ThreeStepsSection from "./ThreeStepsSection";
 import ServerlessInferenceHeroSection from "./ServerlessInferenceHeroSection";
 import ModelsSection from "./ModelsSection";
 import TokenPricingSection from "./TokenPricingSection";
 import InferenceStackSection from "./InferenceStackSection";
 import { SERVERLESS_INFERENCE_FOOTER } from "../constants/serverless-inference-page.constants";
 import AnnouncementSection from "@/shared/components/AnnouncementSection";
+import ThreeStepsSection from "./ThreeStepsSection";
 
 const ServerlessInferencePage = () => {
   return (

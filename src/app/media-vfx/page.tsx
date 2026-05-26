@@ -1,7 +1,7 @@
 import { MediaComponent } from "@/features/media-vfx";
 
-const ModelApiPage = () => {
+const MediaVpxPage = () => {
   return <MediaComponent />;
 };
 
-export default ModelApiPage;
+export default MediaVpxPage;

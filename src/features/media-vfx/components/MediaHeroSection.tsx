@@ -2,7 +2,7 @@ import HeroSection from "@/shared/components/HeroSection";
 import { MEDIA_HERO } from "../data/media-page.constants";
 import { Text } from "@/shared/ui-lib";
 
-const BfsiHeroSection = () => {
+const MediaHeroSection = () => {
   return (
     <HeroSection
       title={
@@ -23,4 +23,4 @@ const BfsiHeroSection = () => {
   );
 };
 
-export default BfsiHeroSection;
+export default MediaHeroSection;

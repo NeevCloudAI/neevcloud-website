@@ -1,26 +1,23 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/shared/ui-lib";
 
 const AUTOPLAY_INTERVAL = 4500;
 
+export type SlideShowSlide = {
+  src: string;
+  alt: string;
+};
+
 type HomeSlideShowProps = {
+  slides: SlideShowSlide[];
   onSlideChange?: (index: number) => void;
 };
 
-const HomeSlideShow = ({ onSlideChange }: HomeSlideShowProps) => {
+const HomeSlideShow = ({ slides, onSlideChange }: HomeSlideShowProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const slides = useMemo(
-    () => [
-      { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
-      { src: "/images/slide-show2.png", alt: "NeevCloud platform overview" },
-      { src: "/images/slide-show3.png", alt: "NeevCloud platform overview" },
-    ],
-    [],
-  );
 
   useEffect(() => {
     if (slides.length < 2) return;
@@ -59,7 +56,7 @@ const HomeSlideShow = ({ onSlideChange }: HomeSlideShowProps) => {
 
       {slides.length > 1 && (
         <div className="absolute bottom-20 left-1/2  flex -translate-x-1/2 gap-2">
-          {slides.map((slide, index) => (
+          {slides.map((_, index) => (
             <Button
               spacing="none"
               key={index}

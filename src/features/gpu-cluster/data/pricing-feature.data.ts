@@ -1,4 +1,4 @@
-import { FeatureCardProps } from "@/shared/components/feature-card";
+import type { FeatureCardProps } from "@/shared/components/feature-card";
 
 export const PRICING_FEATURES: FeatureCardProps[] = [
   {

@@ -1,8 +1,8 @@
+import ExploreApiStepPreview from "@/features/model-api/components/explore-api/ExploreApiStepPreview";
+import ExploreApiStepsTabsClient from "@/features/model-api/components/explore-api/ExploreApiStepsTabsClient";
+import { EXPLORE_API_STEPS } from "@/features/model-api/data/explore-api-section.data";
 import FooterCard from "@/shared/components/footer-card";
-import { EXPLORE_API_STEPS } from "@/features/model-api/data/explore-api-steps";
-import ExploreApiStepPreview from "@/features/model-api/components/ExploreApiStepPreview";
 import { Text } from "@/shared/ui-lib";
-import ExploreTabsSection from "./ExploreTabsSection";
 
 const EXPLORE_API_PREVIEWS = EXPLORE_API_STEPS.map((_, index) => (
   <ExploreApiStepPreview key={index} stepIndex={index} />
@@ -10,13 +10,13 @@ const EXPLORE_API_PREVIEWS = EXPLORE_API_STEPS.map((_, index) => (
 
 const ExploreApiSection = () => {
   return (
-    <ExploreTabsSection
+    <ExploreApiStepsTabsClient
       ariaLabel="Model API setup steps"
       tabIdPrefix="explore-api"
       steps={EXPLORE_API_STEPS}
       previews={EXPLORE_API_PREVIEWS}
       heading={
-        <Text as="h2" align="center">
+        <Text as="h2" align="center" id="explore-api-section-heading">
           Start Making Predictions in Minutes
           <Text as="span" variant="h2" textColor="primary">
             Minutes
@@ -38,7 +38,7 @@ const ExploreApiSection = () => {
           button1Text="View Full Model API Docs"
         />
       </div>
-    </ExploreTabsSection>
+    </ExploreApiStepsTabsClient>
   );
 };
 

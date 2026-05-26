@@ -1,0 +1,43 @@
+---
+description: Feature folder layout, page composition, and refactor constraints
+globs: src/features/**/*
+alwaysApply: false
+---
+
+# Feature architecture
+
+## Folder layout (per feature)
+
+```
+features/<feature>/
+  components/
+    <Feature>Page.tsx      # compose sections only
+    <Feature>HeroSection.tsx
+    <section>/             # optional subfolders (pricing/, explore-api/)
+  constants/               # hero, footer, section defaults
+  data/                    # *-section.data.ts (static content)
+  types/                   # *-section.types.ts, *Props types
+  index.tsx                # export page component
+  utils/                   # only when logic is non-trivial
+```
+
+## Page wiring
+
+- `app/<route>/page.tsx` imports from `@/features/<feature>` (thin).
+- `features/<feature>/index.tsx` exports `{ default as XComponent } from "./components/XPage"`.
+- No `components/index.tsx` monolith pages.
+
+## Data and types
+
+- Types live in `types/`, not exported from `data/` files.
+- Data files: `*-section.data.ts` (kebab-case).
+- Constants: `*-page.constants.ts`, `*-section.constants.ts` (defaults, labels, counts).
+
+## Refactor constraints
+
+- Do **not** change existing Tailwind classes or user-facing copy/button labels.
+- Split components; move copy to `data/` or `constants/` without rewriting UI.
+
+## Verify
+
+Run `npm run build` after structural feature changes.

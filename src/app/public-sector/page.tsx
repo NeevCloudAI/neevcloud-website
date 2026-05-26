@@ -1,4 +1,4 @@
-import PublicSectorComponent from "@/features/public-sector/components";
+import { PublicSectorComponent } from "@/features/public-sector";
 
 const PublicSectorPage = () => {
   return <PublicSectorComponent />;

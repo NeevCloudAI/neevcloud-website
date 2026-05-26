@@ -1,10 +1,12 @@
 import {
   MAX_REQUESTS,
   MIN_REQUESTS,
-  PRICE_PER_REQUEST,
-  type WorkloadCategoryId,
-  type WorkloadMix,
-} from "@/features/model-api/data/pricing-calculator-data";
+} from "@/features/model-api/constants/pricing-calculator.constants";
+import { PRICE_PER_REQUEST } from "@/features/model-api/data/pricing-calculator.data";
+import type {
+  WorkloadCategoryId,
+  WorkloadMix,
+} from "@/features/model-api/types/pricing-calculator.types";
 
 export function formatRequests(value: number): string {
   if (value >= 1_000_000) {

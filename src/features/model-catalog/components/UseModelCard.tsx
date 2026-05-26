@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
+import type { UseModelCardProps } from "@/shared/types/use-model-card.types";
 import { Button, Divider, Text } from "@/shared/ui-lib";
-import type {
-  UseModelCardProps,
-  UseModelCardVariant,
-} from "@/shared/types/use-model-card.types";
 
-const CTA_BUTTON_CLASS: Record<UseModelCardVariant, string> = {
+const CTA_BUTTON_CLASS: Record<
+  UseModelCardProps["card"]["ctaVariant"],
+  string
+> = {
   primary: "bg-primary text-white hover:bg-primary/90",
   black: "bg-black text-white hover:bg-black/90",
   outline: "bg-white text-black border border-gray-60 hover:border-black",
@@ -29,16 +29,20 @@ const UseModelCard = ({ card }: UseModelCardProps) => {
 
       <Divider orientation="horizontal" className="bg-gray-60 my-4 md:my-5" />
 
-      <dl className="flex flex-col gap-2.5">
+      <dl className="flex flex-col gap-2.5 m-0">
         {features.map((feature) => (
           <div
             key={feature.label}
             className="flex items-center justify-between gap-4"
           >
-            <Text textColor="gray-75">{feature.label}</Text>
+            <Text as="dt" textColor="gray-75">
+              {feature.label}
+            </Text>
             <Text
+              as="dd"
               weight="medium"
               textColor={feature.highlighted ? "primary" : "black"}
+              className="m-0"
             >
               {feature.value}
             </Text>

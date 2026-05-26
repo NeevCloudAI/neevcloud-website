@@ -1,4 +1,4 @@
-import { PRICE_PER_GB_MONTH } from "@/features/nvme/data/storage-pricing-calculator-data";
+import { PRICE_PER_GB_MONTH } from "@/features/nvme/constants/storage-pricing-calculator.constants";
 
 export function formatStorageGb(value: number): string {
   return `${value}GB`;

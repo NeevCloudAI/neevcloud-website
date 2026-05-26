@@ -2,38 +2,10 @@ import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
 import NeevCloudImage from "./NeevCloudImage";
+import CloudComparisonCard from "./CloudComparisonCard";
+import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
 
-const CloudComparisonCard = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => {
-  return (
-    <div className="relative border border-gray-10 rounded-md px-6 py-12 gap-4 flex items-center overflow-hidden">
-      <div className="h-20 w-20 bg-gray-50 shrink-0"></div>
-      <div className="pr-8">
-        <Text as="h3" weight="semibold">
-          {title}
-        </Text>
-        <Text as="h6" textColor="black-5">
-          {description}
-        </Text>
-      </div>
-      <div className="absolute bottom-[-10%] right-0 opacity-80">
-        <Image
-          src="/icons/green-logo.svg"
-          alt="Arrow Right"
-          width={100}
-          height={100}
-        />
-      </div>
-    </div>
-  );
-};
-
-const NeevcloudSection: React.FC = () => {
+export default function NeevcloudSection() {
   return (
     <Container className="flex flex-col items-center justify-between gap-12 py-8 md:py-16 2xl:py-25">
       <div>
@@ -92,19 +64,31 @@ const NeevcloudSection: React.FC = () => {
 
           <div className="absolute bottom-5 left-[2%] flex flex-col gap-1 md:gap-4 items-start">
             <div className="flex items-center gap-2">
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
+                aria-hidden
+              />
               <Text as="small">Vendor Lock-in</Text>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
+                aria-hidden
+              />
               <Text as="small">Hidden Fees</Text>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
+                aria-hidden
+              />
               <Text as="small">Complexity</Text>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
+                aria-hidden
+              />
               <Text as="small">Data Risks</Text>
             </div>
           </div>
@@ -114,41 +98,44 @@ const NeevcloudSection: React.FC = () => {
               <Text as="small" textColor="primary">
                 Freedom
               </Text>
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
+                aria-hidden
+              />
             </div>
             <div className="flex items-center gap-2">
               <Text as="small" textColor="primary">
                 Transparency
               </Text>
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
+                aria-hidden
+              />
             </div>
             <div className="flex items-center gap-2">
               <Text as="small" textColor="primary">
                 High Performance
               </Text>
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
+                aria-hidden
+              />
             </div>
             <div className="flex items-center gap-2">
               <Text as="small" textColor="primary">
                 Security
               </Text>
-              <div className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"></div>
+              <div
+                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
+                aria-hidden
+              />
             </div>
           </div>
         </div>
         <div className="flex-1 flex flex-col justify-between gap-3">
-          <CloudComparisonCard
-            title="No Vendor Lock-in"
-            description="Move your data and models freely. We believe in technology freedom, not walled gardens."
-          />
-          <CloudComparisonCard
-            title="Transparent Pricing"
-            description="What you see is what you pay. No hidden egress fees or surprise billing."
-          />
-          <CloudComparisonCard
-            title="Sovereign & Secure"
-            description="Your data stays within your control, protected by rigorous international security standards and local compliance."
-          />
+          {CLOUD_COMPARISON_CARDS.map((item) => (
+            <CloudComparisonCard key={item.id} item={item} />
+          ))}
         </div>
       </div>
       <div className="relative bg-primary-10 w-full rounded-md p-4 md:p-8 flex items-center gap-2 md:gap-8">
@@ -177,6 +164,4 @@ const NeevcloudSection: React.FC = () => {
       </div>
     </Container>
   );
-};
-
-export default NeevcloudSection;
+}

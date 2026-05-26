@@ -1,0 +1,1 @@
+export const DEFAULT_MODELS_SECTION_STEP_INDEX = 0;

@@ -64,7 +64,7 @@ const HeroSection = ({
           ))}
         </div>
 
-        <div className="w-full min-h-50 md:min-h-[80vh] 2xl:min-h-[70vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
+        <div className="w-full min-h-50 md:min-h-[80vh] 2xl:min-h-[50vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
           <Image
             src={image}
             alt="Gradient Background"

@@ -1,0 +1,1 @@
+export const DEFAULT_WORKLOAD_INDEX = 0;

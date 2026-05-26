@@ -7,7 +7,7 @@ import { memo } from "react";
 import type {
   OsCardChip,
   OsImageCard,
-} from "@/features/cpu-cluster/data/os-image-section-types";
+} from "@/features/cpu-cluster/types/os-image-section.types";
 
 type OSImageCardProps = Pick<
   OsImageCard,
@@ -32,6 +32,14 @@ const OSImageCard = memo(function OSImageCard({
         isSelected ? "bg-primary text-white" : "bg-gray-10",
       )}
       onClick={() => onSelect(title)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onSelect(title);
+        }
+      }}
+      role="button"
+      tabIndex={0}
       aria-pressed={isSelected}
       aria-label={`Select ${title}`}
     >

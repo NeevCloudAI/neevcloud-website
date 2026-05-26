@@ -1,1 +1,1 @@
-export { default as ModelPlaygroundComponent } from "./components";
+export { default as ModelPlaygroundComponent } from "./components/ModelPlaygroundPage";

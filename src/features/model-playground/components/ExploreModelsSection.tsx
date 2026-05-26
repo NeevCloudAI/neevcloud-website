@@ -1,8 +1,8 @@
 import StepsTabsSection from "@/shared/components/StepsTabsSection";
-import { EXPLORE_MODELS_STEPS } from "@/features/model-playground/data/explore-models-steps";
-import ExploreModelsStepPreview from "@/features/model-playground/components/ExploreModelsStepPreview";
-import { Text } from "@/shared/ui-lib";
+import ExploreModelsStepPreview from "@/features/model-playground/components/explore-models/ExploreModelsStepPreview";
+import { EXPLORE_MODELS_STEPS } from "@/features/model-playground/data/explore-models-section.data";
 import FooterCard from "@/shared/components/footer-card";
+import { Text } from "@/shared/ui-lib";
 
 const EXPLORE_MODELS_PREVIEWS = EXPLORE_MODELS_STEPS.map((_, index) => (
   <ExploreModelsStepPreview key={index} stepIndex={index} />
@@ -16,7 +16,7 @@ const ExploreModelsSection = () => {
       steps={EXPLORE_MODELS_STEPS}
       previews={EXPLORE_MODELS_PREVIEWS}
       heading={
-        <Text as="h2" align="center">
+        <Text as="h2" align="center" id="explore-models-section-heading">
           Start Exploring
           <Text as="span" variant="h2" textColor="primary">
             Models Now

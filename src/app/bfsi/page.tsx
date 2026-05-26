@@ -1,4 +1,4 @@
-import BFSIComponent from "@/features/bfsi/components";
+import { BFSIComponent } from "@/features/bfsi";
 
 const BFSIPage = () => {
   return <BFSIComponent />;

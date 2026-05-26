@@ -1,13 +1,16 @@
 import Container from "@/shared/components/container";
 import { CategoryFeatureCard } from "@/shared/components/category-feature-card";
 import { Text } from "@/shared/ui-lib";
-import { AVAILABLE_MODEL_CATEGORIES } from "@/features/model-playground/data/available-models";
+import { AVAILABLE_MODEL_CATEGORIES } from "@/features/model-playground/data/available-models-section.data";
 
 const AvailableModelsSection = () => {
   return (
-    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
+    <section
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
+      aria-labelledby="available-models-section-heading"
+    >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" align="center" className="max-w-4xl">
+        <Text as="h2" id="available-models-section-heading" align="center" className="max-w-4xl">
           Available Models
           <Text as="span" variant="h2" textColor="primary">
             Across Categories
@@ -19,16 +22,17 @@ const AvailableModelsSection = () => {
           specialized domains. Each model includes interactive demos and clear
           documentation.
         </Text>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 md:pt-12.5">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 md:pt-12.5 list-none p-0 m-0 w-full">
           {AVAILABLE_MODEL_CATEGORIES.map(({ category, hover }) => (
-            <CategoryFeatureCard
-              key={category.title}
-              category={category}
-              hover={hover}
-              hasHover
-            />
+            <li key={category.title}>
+              <CategoryFeatureCard
+                category={category}
+                hover={hover}
+                hasHover
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

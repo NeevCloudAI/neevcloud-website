@@ -1,4 +1,4 @@
-import NvmeComponent from "@/features/nvme/components";
+import { NvmeComponent } from "@/features/nvme";
 
 const NvmePage = () => {
   return <NvmeComponent />;

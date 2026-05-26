@@ -1,13 +1,22 @@
-import Container from "@/shared/components/container";
-import { Text } from "@/shared/ui-lib";
-import { CONTRIBUTE_CATEGORIES } from "../data/contribute-data";
 import { CategoryFeatureCard } from "@/shared/components/category-feature-card";
+import Container from "@/shared/components/container";
+import { CONTRIBUTE_CATEGORIES } from "@/features/public-sector/data/contribute-section.data";
+import { Text } from "@/shared/ui-lib";
 
 const ContributeSection = () => {
   return (
-    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
+    <section
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
+      aria-labelledby="public-sector-contribute-section-heading"
+    >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" textColor="black" align="center" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="public-sector-contribute-section-heading"
+          textColor="black"
+          align="center"
+          className="max-w-4xl"
+        >
           Contributing to
           <Text as="span" variant="h2" textColor="primary">
             National AI Infrastructure
@@ -20,11 +29,13 @@ const ContributeSection = () => {
           infrastructure directly supports these objectives through accessible,
           sovereign, and scalable AI compute.`}
         </Text>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 md:pt-12.5">
+        <ul className="grid list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-2 md:pt-12.5 w-full">
           {CONTRIBUTE_CATEGORIES.map((category) => (
-            <CategoryFeatureCard key={category.title} category={category} />
+            <li key={category.title}>
+              <CategoryFeatureCard category={category} />
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

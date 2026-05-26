@@ -28,6 +28,8 @@ function InfrastructureNativeFlowDiagram() {
         preserveAspectRatio="none"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
       >
         <path
           d="M 70 0 L 70 22 H 210 L 210 0 M 140 22 L 140 56"
@@ -53,6 +55,8 @@ function InfrastructureNativeFlowDiagram() {
         width="30"
         height="30"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
       >
         <g
           fill="none"

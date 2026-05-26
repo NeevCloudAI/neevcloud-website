@@ -1,12 +1,20 @@
 import Container from "@/shared/components/container";
+import ModelActionPlayground from "@/features/model-catalog/components/ModelActionPlayground";
 import { Text } from "@/shared/ui-lib";
-import ModelActionPlayground from "./ModelActionPlayground";
 
 const ModelActionSection = () => {
   return (
-    <section className=" bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-gray-10 py-8 md:py-16 2xl:py-25">
+    <section
+      className=" bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-gray-10 py-8 md:py-16 2xl:py-25"
+      aria-labelledby="model-catalog-action-section-heading"
+    >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" align="center" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="model-catalog-action-section-heading"
+          align="center"
+          className="max-w-4xl"
+        >
           See Any Model in
           <Text as="span" variant="h2" textColor="primary">
             Action

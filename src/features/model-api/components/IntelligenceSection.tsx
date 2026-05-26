@@ -1,13 +1,22 @@
 import Container from "@/shared/components/container";
+import IntelligenceCard from "@/features/model-api/components/IntelligenceCard";
+import { INTELLIGENCE_CARDS } from "@/features/model-api/data/intelligence-section.data";
 import { Text } from "@/shared/ui-lib";
-import { INTELLIGENCE_CARDS } from "../data/intelligence-section-data";
-import IntelligenceCard from "./IntelligenceCard";
 
 const IntelligenceSection = () => {
   return (
-    <section className="bg-gray-10 py-8 md:py-16 2xl:py-25">
+    <section
+      className="bg-gray-10 py-8 md:py-16 2xl:py-25"
+      aria-labelledby="model-api-intelligence-section-heading"
+    >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" textColor="black" align="center" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="model-api-intelligence-section-heading"
+          textColor="black"
+          align="center"
+          className="max-w-4xl"
+        >
           Skip the Infrastructure,
           <Text as="span" variant="h2" textColor="primary">
             Use the Intelligence

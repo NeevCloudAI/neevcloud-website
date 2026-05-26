@@ -1,4 +1,4 @@
-import ModelCatalogComponent from "@/features/model-catalog/components";
+import { ModelCatalogComponent } from "@/features/model-catalog";
 
 const ModelCatalogPage = () => {
   return <ModelCatalogComponent />;

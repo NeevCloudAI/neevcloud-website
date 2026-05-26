@@ -1,25 +1,39 @@
+import PerformanceMetricCard from "@/features/bfsi/components/performance/PerformanceMetricCard";
+import { PERFORMANCE_METRICS } from "@/features/bfsi/data/performance-section.data";
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import { PERFORMANCE_METRICS } from "../data/performance-section-data";
-import { PerformanceMetricCard } from "./PerformanceMetricCard";
 
 const PerformanceSection = () => {
   return (
-    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-8 md:py-16 2xl:py-25">
-      <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full md:w-[30%] h-[60%] top-20 right-[-5%] opacity-40 md:opacity-100"></div>
+    <section
+      className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-8 md:py-16 2xl:py-25"
+      aria-labelledby="bfsi-performance-section-heading"
+    >
+      {/* <div
+        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full md:w-[30%] h-[60%] top-20 right-[-5%] opacity-40 md:opacity-100"
+        aria-hidden="true"
+      /> */}
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" textColor="white" align="center" className="max-w-xl">
+        <Text
+          as="h2"
+          id="bfsi-performance-section-heading"
+          textColor="white"
+          align="center"
+          className="max-w-xl"
+        >
           Performance that
           <Text as="span" variant="h2" textColor="primary">
             financial services
           </Text>
           depend on.
         </Text>
-        <div className="grid w-full grid-cols-1 gap-5 pt-4 md:grid-cols-4 md:pt-12.5">
+        <ul className="grid w-full list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-4 md:pt-12.5">
           {PERFORMANCE_METRICS.map((metric) => (
-            <PerformanceMetricCard key={metric.id} metric={metric} />
+            <li key={metric.id}>
+              <PerformanceMetricCard metric={metric} />
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

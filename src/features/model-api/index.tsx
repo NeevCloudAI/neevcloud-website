@@ -1,1 +1,1 @@
-export { default as ModelApiComponent } from "./components";
+export { default as ModelApiComponent } from "./components/ModelApiPage";

@@ -1,13 +1,22 @@
 import Container from "@/shared/components/container";
+import UseModelCard from "@/features/model-catalog/components/UseModelCard";
+import { USE_MODEL_CARDS } from "@/features/model-catalog/data/use-model-section.data";
 import { Text } from "@/shared/ui-lib";
-import { USE_MODEL_CARDS } from "@/features/model-catalog/data/use-model-data";
-import UseModelCard from "./UseModelCard";
 
 const UseModelSection = () => {
   return (
-    <section className="relative bg-primary-20 py-8 md:py-16 2xl:py-25">
+    <section
+      className="relative bg-primary-20 py-8 md:py-16 2xl:py-25"
+      aria-labelledby="model-catalog-use-model-section-heading"
+    >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" align="center" textColor="primary" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="model-catalog-use-model-section-heading"
+          align="center"
+          textColor="primary"
+          className="max-w-4xl"
+        >
           Three ways
           <Text as="span" variant="h2" textColor="black">
             to use these models.
@@ -18,11 +27,13 @@ const UseModelSection = () => {
           same endpoints with the same auth, no behavioural differences.
         </Text>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 md:mt-12.5">
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 md:mt-12.5 list-none p-0 m-0">
           {USE_MODEL_CARDS.map((card) => (
-            <UseModelCard key={card.id} card={card} />
+            <li key={card.id}>
+              <UseModelCard card={card} />
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

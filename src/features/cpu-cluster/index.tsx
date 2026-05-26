@@ -1,1 +1,1 @@
-export { default as CpuClusterComponent } from "./components";
+export { default as CpuClusterComponent } from "./components/CpuClusterPage";

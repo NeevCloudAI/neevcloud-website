@@ -1,22 +1,29 @@
 import Container from "@/shared/components/container";
 import ModelInfoCard from "@/shared/components/ModelInfoCard";
+import { MODEL_INFORMATION } from "@/features/model-catalog/data/model-information-section.data";
 import { Text } from "@/shared/ui-lib";
-import { MODEL_INFORMATION } from "@/features/model-catalog/data/model-information-data";
 
 const ModelInformationSection = () => {
   return (
-    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
+    <section
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
+      aria-labelledby="model-catalog-information-section-heading"
+    >
       <Container className="flex flex-col">
-        <Text as="h2" align="center">
+        <Text
+          as="h2"
+          id="model-catalog-information-section-heading"
+          align="center"
+        >
           Detailed Model Information
         </Text>
-        <div className="model-info-masonry mt-4 md:mt-12.5">
+        <ul className="model-info-masonry mt-4 md:mt-12.5 list-none p-0 m-0">
           {MODEL_INFORMATION.map((model) => (
-            <div key={model.id} className="model-info-masonry__item">
+            <li key={model.id} className="model-info-masonry__item">
               <ModelInfoCard model={model} />
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

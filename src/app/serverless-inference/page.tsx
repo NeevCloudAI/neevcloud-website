@@ -1,4 +1,4 @@
-import ServerlessInferenceComponent from "@/features/serverless-inference";
+import { ServerlessInferenceComponent } from "@/features/serverless-inference";
 
 const ServerlessInferencePage = () => {
   return <ServerlessInferenceComponent />;

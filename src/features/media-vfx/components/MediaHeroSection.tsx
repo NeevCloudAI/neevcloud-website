@@ -1,5 +1,5 @@
 import HeroSection from "@/shared/components/HeroSection";
-import { MEDIA_HERO } from "../constants/media-page.constants";
+import { MEDIA_HERO } from "../data/media-page.constants";
 import { Text } from "@/shared/ui-lib";
 
 const BfsiHeroSection = () => {

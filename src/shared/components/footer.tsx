@@ -12,6 +12,13 @@ import {
 import type { FooterCtaContent, FooterLinkGroup } from "../data/footer-types";
 import { cn } from "@/lib/utils";
 
+const footerLinkClassName =
+  "flex flex-col text-white-50 pb-2.5 text-sm";
+
+function hasFooterHref(href: string): boolean {
+  return href.trim().length > 0;
+}
+
 const FooterComponent = ({
   title,
   description,
@@ -53,18 +60,29 @@ const FooterComponent = ({
             <ul className="flex gap-2 md:gap-4 mb-2">
               {FOOTER_SOCIAL_LINKS.map((social) => (
                 <li key={social.label}>
-                  <Link
-                    href={social.href}
-                    aria-label={social.label}
-                    className="inline-flex"
-                  >
-                    <Image
-                      src={social.icon}
-                      alt={social.label}
-                      width={20}
-                      height={20}
-                    />
-                  </Link>
+                  {hasFooterHref(social.href) ? (
+                    <Link
+                      href={social.href}
+                      aria-label={social.label}
+                      className="inline-flex"
+                    >
+                      <Image
+                        src={social.icon}
+                        alt={social.label}
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  ) : (
+                    <span className="inline-flex" aria-hidden>
+                      <Image
+                        src={social.icon}
+                        alt={social.label}
+                        width={20}
+                        height={20}
+                      />
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -102,12 +120,18 @@ const FooterLinkColumn = ({ group }: FooterLinkColumnProps) => {
       <ul>
         {group.links.map((link) => (
           <li key={link.label}>
-            <Link
-              href={link.href}
-              className="flex flex-col text-white-50 hover:text-white pb-2.5 text-sm"
-            >
-              {link.label}
-            </Link>
+            {hasFooterHref(link.href) ? (
+              <Link
+                href={link.href}
+                className={cn(footerLinkClassName, "hover:text-white")}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <Text as="span" className={footerLinkClassName}>
+                {link.label}
+              </Text>
+            )}
           </li>
         ))}
       </ul>

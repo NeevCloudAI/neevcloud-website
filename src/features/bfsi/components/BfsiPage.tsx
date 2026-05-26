@@ -4,7 +4,7 @@ import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import { Divider } from "@/shared/ui-lib";
 import BfsiHeroSection from "./BfsiHeroSection";
-import BfsiAmbitionSection from "./BfsiAmbitionSection";
+import BfsiAmbitionSection from "./BFSIAmbitionSection";
 import EnterpriseSection from "./EnterpriseSection";
 import ApplicationSection from "./ApplicationSection";
 import PerformanceSection from "./PerformanceSection";

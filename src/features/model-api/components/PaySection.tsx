@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import PaySectionTerminal from "@/features/model-api/components/pay/PaySectionTerminal";
-import PricingCalculator from "@/features/model-api/components/PricingCalculator";
+import PaySectionTerminal from "./pay/PaySectionTerminal";
+import PricingCalculator from "./PricingCalculator";
 import { Text } from "@/shared/ui-lib";
 
 const PaySection = () => {

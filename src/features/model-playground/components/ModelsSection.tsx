@@ -1,5 +1,5 @@
 import Container from "@/shared/components/container";
-import ModelsSectionClient from "@/features/model-playground/components/ModelsSectionClient";
+import ModelsSectionClient from "./ModelsSectionClient";
 import { Text } from "@/shared/ui-lib";
 
 const ModelsSection = () => {
@@ -9,7 +9,12 @@ const ModelsSection = () => {
       aria-labelledby="models-in-action-section-heading"
     >
       <Container className="relative flex flex-col items-center justify-center">
-        <Text as="h2" id="models-in-action-section-heading" align="center" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="models-in-action-section-heading"
+          align="center"
+          className="max-w-4xl"
+        >
           See Models in Action,
           <Text as="span" variant="h2" align="center" textColor="primary">
             Not Just in Theory

@@ -1,4 +1,4 @@
-import PurposeConnectorDot from "@/features/managed-kubernetes/components/purpose/PurposeConnectorDot";
+import PurposeConnectorDot from "./PurposeConnectorDot";
 
 const PurposeControlPlaneBranchConnector = () => {
   return (

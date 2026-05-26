@@ -1,12 +1,12 @@
 import {
   MAX_REQUESTS,
   MIN_REQUESTS,
-} from "@/features/model-api/constants/pricing-calculator.constants";
-import { PRICE_PER_REQUEST } from "@/features/model-api/data/pricing-calculator.data";
+} from "../constants/pricing-calculator.constants";
+import { PRICE_PER_REQUEST } from "../data/pricing-calculator.data";
 import type {
   WorkloadCategoryId,
   WorkloadMix,
-} from "@/features/model-api/types/pricing-calculator.types";
+} from "../types/pricing-calculator.types";
 
 export function formatRequests(value: number): string {
   if (value >= 1_000_000) {
@@ -47,7 +47,7 @@ export function sliderToRequests(sliderValue: number): number {
 export function updateWorkloadMix(
   mix: WorkloadMix,
   category: WorkloadCategoryId,
-  nextValue: number,
+  nextValue: number
 ): WorkloadMix {
   const clamped = Math.max(0, Math.min(100, Math.round(nextValue)));
   const delta = clamped - mix[category];
@@ -58,7 +58,7 @@ export function updateWorkloadMix(
 
   const next: WorkloadMix = { ...mix, [category]: clamped };
   const others = (Object.keys(mix) as WorkloadCategoryId[]).filter(
-    (key) => key !== category,
+    (key) => key !== category
   );
   const othersTotal = others.reduce((sum, key) => sum + mix[key], 0);
 
@@ -92,7 +92,7 @@ export function updateWorkloadMix(
 export function calculateCategoryCost(
   totalRequests: number,
   percentage: number,
-  category: WorkloadCategoryId,
+  category: WorkloadCategoryId
 ): number {
   const requests = totalRequests * (percentage / 100);
   return requests * PRICE_PER_REQUEST[category];
@@ -100,11 +100,11 @@ export function calculateCategoryCost(
 
 export function calculateMonthlyCost(
   totalRequests: number,
-  mix: WorkloadMix,
+  mix: WorkloadMix
 ): number {
   return (Object.keys(mix) as WorkloadCategoryId[]).reduce(
     (sum, category) =>
       sum + calculateCategoryCost(totalRequests, mix[category], category),
-    0,
+    0
   );
 }

@@ -1,6 +1,6 @@
-import ComputePill from "@/features/cpu-cluster/components/private-network/ComputePill";
-import ComputeSpecs from "@/features/cpu-cluster/components/private-network/ComputeSpecs";
-import type { ComputeInstance } from "@/features/cpu-cluster/types/private-network-section.types";
+import ComputePill from "./ComputePill";
+import ComputeSpecs from "./ComputeSpecs";
+import type { ComputeInstance } from "../../types/private-network-section.types";
 import { Text } from "@/shared/ui-lib";
 
 const ComputeInstanceCard = ({

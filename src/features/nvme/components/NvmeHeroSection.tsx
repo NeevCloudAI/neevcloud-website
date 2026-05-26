@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { NVME_HERO } from "@/features/nvme/constants/nvme-page.constants";
+import { NVME_HERO } from "../constants/nvme-page.constants";
 
 const NvmeHeroSection = () => {
   return (

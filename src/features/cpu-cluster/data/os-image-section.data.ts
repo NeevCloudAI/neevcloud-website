@@ -1,7 +1,4 @@
-import type {
-  OsImageCard,
-  OsSectionId,
-} from "@/features/cpu-cluster/types/os-image-section.types";
+import type { OsImageCard, OsSectionId } from "../types/os-image-section.types";
 
 export const OS_IMAGE_SECTIONS: Record<OsSectionId, OsImageCard[]> = {
   "base-operating-systems": [

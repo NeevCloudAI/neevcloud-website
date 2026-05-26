@@ -1,16 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import PricingCalculatorCostSummary from "@/features/model-api/components/pricing/PricingCalculatorCostSummary";
-import PricingCalculatorSlider from "@/features/model-api/components/pricing/PricingCalculatorSlider";
-import PricingCalculatorWorkloadMixRow from "@/features/model-api/components/pricing/PricingCalculatorWorkloadMixRow";
+import PricingCalculatorCostSummary from "./PricingCalculatorCostSummary";
+import PricingCalculatorSlider from "./PricingCalculatorSlider";
+import PricingCalculatorWorkloadMixRow from "./PricingCalculatorWorkloadMixRow";
 import {
   DEFAULT_MIX,
   DEFAULT_REQUESTS,
   REQUEST_SCALE_LABELS,
-} from "@/features/model-api/constants/pricing-calculator.constants";
-import { WORKLOAD_CATEGORIES } from "@/features/model-api/data/pricing-calculator.data";
-import type { WorkloadCategoryId } from "@/features/model-api/types/pricing-calculator.types";
+} from "../../constants/pricing-calculator.constants";
+import { WORKLOAD_CATEGORIES } from "../../data/pricing-calculator.data";
+import type { WorkloadCategoryId } from "../../types/pricing-calculator.types";
 import {
   calculateCategoryCost,
   calculateMonthlyCost,
@@ -18,7 +18,7 @@ import {
   requestsToSlider,
   sliderToRequests,
   updateWorkloadMix,
-} from "@/features/model-api/utils/pricing-calculator-utils";
+} from "../../utils/pricing-calculator-utils";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 
 const PricingCalculatorClient = () => {
@@ -29,7 +29,7 @@ const PricingCalculatorClient = () => {
   const formattedRequests = formatRequests(totalRequests);
   const monthlyCost = useMemo(
     () => calculateMonthlyCost(totalRequests, mix),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const categoryCosts = useMemo(
@@ -39,9 +39,9 @@ const PricingCalculatorClient = () => {
           acc[id] = calculateCategoryCost(totalRequests, mix[id], id);
           return acc;
         },
-        {} as Record<WorkloadCategoryId, number>,
+        {} as Record<WorkloadCategoryId, number>
       ),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const handleMixChange = (category: WorkloadCategoryId, value: number) => {

@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
-import { GPU_PRICING_TABLE_CELL_CLASS } from "@/features/gpu-cluster/constants/gpu-pricing-table.constants";
-import type { GpuPricingRow } from "@/features/gpu-cluster/types/gpu-pricing-table.types";
+import { GPU_PRICING_TABLE_CELL_CLASS } from "../constants/gpu-pricing-table.constants";
+import type { GpuPricingRow } from "../types/gpu-pricing-table.types";
 
 type GpuPricingTableRowProps = {
   row: GpuPricingRow;

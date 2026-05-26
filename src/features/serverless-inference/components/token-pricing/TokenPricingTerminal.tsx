@@ -1,6 +1,6 @@
-import TokenPricingTable from "@/features/serverless-inference/components/token-pricing/TokenPricingTable";
-import TokenPricingTerminalHeader from "@/features/serverless-inference/components/token-pricing/TokenPricingTerminalHeader";
 import { Text } from "@/shared/ui-lib";
+import TokenPricingTerminalHeader from "./TokenPricingTerminalHeader";
+import TokenPricingTable from "./TokenPricingTable";
 
 const TokenPricingTerminal = () => {
   return (

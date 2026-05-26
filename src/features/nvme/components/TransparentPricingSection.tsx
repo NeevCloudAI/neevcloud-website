@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
-import StoragePricingCalculator from "@/features/nvme/components/StoragePricingCalculator";
-import TransparentPricingTerminal from "@/features/nvme/components/pricing/TransparentPricingTerminal";
 import { Text } from "@/shared/ui-lib";
+import TransparentPricingTerminal from "./pricing/TransparentPricingTerminal";
+import StoragePricingCalculator from "./StoragePricingCalculator";
 
 const TransparentPricingSection = () => {
   return (

@@ -1,4 +1,4 @@
-import type { ComputePillVariant } from "@/features/cpu-cluster/types/private-network-section.types";
+import type { ComputePillVariant } from "../types/private-network-section.types";
 
 export const FLOW_ARROW_COUNT = 5;
 export const INSTANCE_STAT_SEPARATOR = "•";

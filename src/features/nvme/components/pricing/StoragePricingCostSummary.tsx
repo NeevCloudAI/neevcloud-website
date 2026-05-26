@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import { FREE_INCLUDED_GB } from "@/features/nvme/constants/storage-pricing-calculator.constants";
+import { FREE_INCLUDED_GB } from "../../constants/storage-pricing-calculator.constants";
 
 type StoragePricingCostSummaryProps = {
   monthlyCostLabel: string;

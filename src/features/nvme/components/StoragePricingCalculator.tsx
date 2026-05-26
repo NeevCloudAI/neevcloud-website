@@ -1,4 +1,4 @@
-import StoragePricingCalculatorClient from "@/features/nvme/components/StoragePricingCalculatorClient";
+import StoragePricingCalculatorClient from "./StoragePricingCalculatorClient";
 
 const StoragePricingCalculator = () => {
   return <StoragePricingCalculatorClient />;

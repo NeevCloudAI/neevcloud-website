@@ -1,4 +1,4 @@
-import type { ExploreModelsStep } from "@/features/model-playground/types/explore-models-section.types";
+import type { ExploreModelsStep } from "../types/explore-models-section.types";
 
 export const EXPLORE_MODELS_STEPS: readonly ExploreModelsStep[] = [
   {

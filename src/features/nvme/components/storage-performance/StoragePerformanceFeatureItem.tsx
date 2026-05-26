@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import type { StoragePerformanceFeature } from "@/features/nvme/types/storage-performance-section.types";
+import { StoragePerformanceFeature } from "../../types/storage-performance-section.types";
 
 type StoragePerformanceFeatureItemProps = {
   feature: StoragePerformanceFeature;

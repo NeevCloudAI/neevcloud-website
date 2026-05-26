@@ -1,4 +1,4 @@
-import type { CpuInstanceFamilyId } from "@/features/cpu-cluster/types/cpu-configuration.types";
+import type { CpuInstanceFamilyId } from "../types/cpu-configuration.types";
 
 export const CPU_CONFIG_TABLE_HEADERS = [
   "configuration",

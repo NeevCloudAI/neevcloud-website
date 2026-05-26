@@ -1,4 +1,4 @@
-import type { AvailableModelCategory } from "@/features/model-playground/types/available-models-section.types";
+import type { AvailableModelCategory } from "../types/available-models-section.types";
 
 export const AVAILABLE_MODEL_CATEGORIES: readonly AvailableModelCategory[] = [
   {

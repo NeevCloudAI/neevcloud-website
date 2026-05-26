@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import type { ApplicationCardProps } from "@/features/bfsi/types/application-section.types";
 import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
+import { ApplicationCardProps } from "../../types/application-section.types";
 
 const ApplicationCard = ({
   label,
@@ -19,14 +19,14 @@ const ApplicationCard = ({
       className={cn(
         "flex h-full flex-col rounded-md p-4 md:p-10",
         isLight ? "bg-white" : "bg-black",
-        className,
+        className
       )}
     >
       <div className="flex items-start justify-between gap-2.5">
         <div
           className={cn(
             "w-fit rounded-md p-3.75",
-            isLight ? "bg-gray-10" : "bg-gray-90",
+            isLight ? "bg-gray-10" : "bg-gray-90"
           )}
         >
           <Image src={icon} alt="" width={30} height={30} aria-hidden="true" />

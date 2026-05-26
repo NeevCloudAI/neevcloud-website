@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { GPU_CLUSTER_HERO } from "@/features/gpu-cluster/constants/gpu-cluster-page.constants";
+import { GPU_CLUSTER_HERO } from "../constants/gpu-cluster-page.constants";
 
 const GpuClusterHeroSection = () => {
   return (

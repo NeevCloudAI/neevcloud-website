@@ -1,15 +1,15 @@
-import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import { Divider } from "@/shared/ui-lib";
-import { CPU_CLUSTER_FOOTER } from "@/features/cpu-cluster/constants/cpu-cluster-page.constants";
-import AIStackSection from "@/features/cpu-cluster/components/AIStackSection";
-import CpuClusterHeroSection from "@/features/cpu-cluster/components/CpuClusterHeroSection";
-import CPUWorkloadSection from "@/features/cpu-cluster/components/CPUWorkloadSection";
-import OSImageSection from "@/features/cpu-cluster/components/os-image/OSImageSection";
-import PrivateNetworkSection from "@/features/cpu-cluster/components/private-network/PrivateNetworkSection";
+import AnnouncementSection from "@/shared/components/AnnouncementSection";
+import CpuClusterHeroSection from "./CpuClusterHeroSection";
+import CPUWorkloadSection from "./CPUWorkloadSection";
+import AIStackSection from "./AIStackSection";
+import OSImageSection from "./os-image/OSImageSection";
+import PrivateNetworkSection from "./private-network/PrivateNetworkSection";
+import { CPU_CLUSTER_FOOTER } from "../constants/cpu-cluster-page.constants";
 
 const CpuClusterPage = () => {
   return (

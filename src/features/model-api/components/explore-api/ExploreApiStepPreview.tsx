@@ -1,6 +1,6 @@
-import { EXPLORE_API_MOCK_URL } from "@/features/model-api/constants/explore-api-section.constants";
-import { EXPLORE_API_RESPONSE_META_ROWS } from "@/features/model-api/data/explore-api-step-preview.data";
-import type { ExploreApiStepPreviewProps } from "@/features/model-api/types/explore-api-section.types";
+import { EXPLORE_API_MOCK_URL } from "../../constants/explore-api-section.constants";
+import { EXPLORE_API_RESPONSE_META_ROWS } from "../../data/explore-api-step-preview.data";
+import type { ExploreApiStepPreviewProps } from "../../types/explore-api-section.types";
 import { Text } from "@/shared/ui-lib";
 
 function WindowChrome() {

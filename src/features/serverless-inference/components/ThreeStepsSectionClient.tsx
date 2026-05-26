@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { Button, Divider, Text } from "@/shared/ui-lib";
-import StepContent from "@/features/serverless-inference/components/three-steps/StepContent";
-import { STEP_PANEL_COMPONENTS } from "@/features/serverless-inference/components/three-steps/step-panels";
-import { DEFAULT_ACTIVE_STEP_INDEX } from "@/features/serverless-inference/constants/three-steps-section.constants";
-import { STEPS } from "@/features/serverless-inference/data/three-steps-section.data";
+import { DEFAULT_ACTIVE_STEP_INDEX } from "../constants/three-steps-section.constants";
+import { STEPS } from "../data/three-steps-section.data";
+import { STEP_PANEL_COMPONENTS } from "./three-steps/step-panels";
+import StepContent from "./three-steps/StepContent";
 
 const ThreeStepsSectionClient = () => {
   const [activeStep, setActiveStep] = useState(DEFAULT_ACTIVE_STEP_INDEX);

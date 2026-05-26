@@ -1,6 +1,6 @@
-import FlowArrowIcon from "@/features/cpu-cluster/components/private-network/FlowArrowIcon";
-import { FLOW_ARROW_COUNT } from "@/features/cpu-cluster/constants/private-network-section.constants";
-import type { FlowDirection } from "@/features/cpu-cluster/types/private-network-section.types";
+import FlowArrowIcon from "./FlowArrowIcon";
+import { FLOW_ARROW_COUNT } from "../../constants/private-network-section.constants";
+import type { FlowDirection } from "../../types/private-network-section.types";
 
 type FlowBandProps = {
   direction: FlowDirection;

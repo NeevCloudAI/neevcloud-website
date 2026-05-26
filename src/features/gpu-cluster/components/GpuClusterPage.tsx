@@ -1,14 +1,14 @@
-import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import { Divider } from "@/shared/ui-lib";
-import { GPU_CLUSTER_FOOTER } from "@/features/gpu-cluster/constants/gpu-cluster-page.constants";
-import ComputeSection from "@/features/gpu-cluster/components/ComputeSection";
-import GpuClusterHeroSection from "@/features/gpu-cluster/components/GpuClusterHeroSection";
-import PricingSection from "@/features/gpu-cluster/components/PricingSection";
-import UseCasesSection from "@/features/gpu-cluster/components/UseCasesSection";
+import AnnouncementSection from "@/shared/components/AnnouncementSection";
+import GpuClusterHeroSection from "./GpuClusterHeroSection";
+import PricingSection from "./PricingSection";
+import ComputeSection from "./ComputeSection";
+import UseCasesSection from "./UseCasesSection";
+import { GPU_CLUSTER_FOOTER } from "../constants/gpu-cluster-page.constants";
 
 const GpuClusterPage = () => {
   return (

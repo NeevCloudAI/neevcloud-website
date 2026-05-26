@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import DeployStorageAutomaticCard from "@/features/nvme/components/deploy-storage/DeployStorageAutomaticCard";
-import DeployStorageCustomTerminal from "@/features/nvme/components/deploy-storage/DeployStorageCustomTerminal";
+import DeployStorageAutomaticCard from "./deploy-storage/DeployStorageAutomaticCard";
+import DeployStorageCustomTerminal from "./deploy-storage/DeployStorageCustomTerminal";
 import { Text } from "@/shared/ui-lib";
 
 const DeployStorageSection = () => {

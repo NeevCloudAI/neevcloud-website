@@ -1,4 +1,4 @@
-import NeedsCodeBlockWrapper from "@/features/managed-kubernetes/components/needs/NeedsCodeBlockWrapper";
+import NeedsCodeBlockWrapper from "./NeedsCodeBlockWrapper";
 import { Text } from "@/shared/ui-lib";
 
 const GpuResourceCodeBlock = () => {

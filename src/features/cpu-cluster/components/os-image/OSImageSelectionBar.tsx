@@ -1,5 +1,5 @@
 import { Button, Text } from "@/shared/ui-lib";
-import type { OsImageCard } from "@/features/cpu-cluster/types/os-image-section.types";
+import type { OsImageCard } from "../../types/os-image-section.types";
 
 type OSImageSelectionBarProps = {
   selectedImage: OsImageCard | undefined;

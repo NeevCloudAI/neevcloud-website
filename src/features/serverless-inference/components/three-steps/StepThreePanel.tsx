@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Text } from "@/shared/ui-lib";
-import { STEP_THREE_BILLING } from "@/features/serverless-inference/data/three-steps-section.data";
+import { STEP_THREE_BILLING } from "../../data/three-steps-section.data";
 
 const StepThreePanel = () => {
   const { title, subtitle, rows, total, totalLabel, totalSub } =

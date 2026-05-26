@@ -17,7 +17,8 @@ export const HERO_SLIDES: HeroSlide[] = [
     headlinePrefix: "Full-Stack",
     headlineEmphasis: "AI Infrastructure",
     headlineSuffix: "Built to Scale Fearlessly",
-    subtitle: "Run AI workloads with sovereign control, security, and scalability.",
+    subtitle:
+      "Run AI workloads with sovereign control, security, and scalability.",
     primaryCtaLabel: "Explore Platform",
     secondaryCtaLabel: "Contact Sales",
     secondaryCtaVariant: "outline",
@@ -39,10 +40,10 @@ export const HERO_SLIDES: HeroSlide[] = [
     headlinePrefix: "Full-Stack",
     headlineEmphasis: "AI Infrastructure",
     headlineSuffix: "Built to Scale Fearlessly",
-    subtitle: "Run AI workloads with sovereign control, security, and scalability.",
+    subtitle:
+      "Run AI workloads with sovereign control, security, and scalability.",
     primaryCtaLabel: "Explore Platform",
     secondaryCtaLabel: "Contact Sales",
     secondaryCtaVariant: "outline",
   },
 ];
-

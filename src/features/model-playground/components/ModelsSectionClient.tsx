@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import { Button, Divider, Text } from "@/shared/ui-lib";
-import ModelsSectionStepContent from "@/features/model-playground/components/models-in-action/ModelsSectionStepContent";
-import { MODELS_SECTION_STEP_PANELS } from "@/features/model-playground/components/models-in-action/models-section-step-panels";
-import { DEFAULT_MODELS_SECTION_STEP_INDEX } from "@/features/model-playground/constants/models-section.constants";
-import { MODELS_SECTION_STEPS } from "@/features/model-playground/data/models-section.data";
+import { DEFAULT_MODELS_SECTION_STEP_INDEX } from "../constants/models-section.constants";
+import { MODELS_SECTION_STEPS } from "../data/models-section.data";
+import { MODELS_SECTION_STEP_PANELS } from "./models-in-action/models-section-step-panels";
+import ModelsSectionStepContent from "./models-in-action/ModelsSectionStepContent";
 
 const ModelsSectionClient = () => {
-  const [activeStep, setActiveStep] = useState(DEFAULT_MODELS_SECTION_STEP_INDEX);
+  const [activeStep, setActiveStep] = useState(
+    DEFAULT_MODELS_SECTION_STEP_INDEX
+  );
   const step = MODELS_SECTION_STEPS[activeStep];
   const ActivePanel = MODELS_SECTION_STEP_PANELS[activeStep];
 

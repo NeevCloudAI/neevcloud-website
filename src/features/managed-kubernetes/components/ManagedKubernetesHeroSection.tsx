@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { MANAGED_KUBERNETES_HERO } from "@/features/managed-kubernetes/constants/managed-kubernetes-page.constants";
+import { MANAGED_KUBERNETES_HERO } from "../constants/managed-kubernetes-page.constants";
 
 const ManagedKubernetesHeroSection = () => {
   return (

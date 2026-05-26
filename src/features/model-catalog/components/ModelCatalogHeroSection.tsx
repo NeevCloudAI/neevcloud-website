@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
-import { MODEL_CATALOG_HERO } from "@/features/model-catalog/constants/model-catalog-page.constants";
 import { Text } from "@/shared/ui-lib";
+import { MODEL_CATALOG_HERO } from "../constants/model-catalog-page.constants";
 
 const ModelCatalogHeroSection = () => {
   return (

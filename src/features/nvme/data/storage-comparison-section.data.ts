@@ -1,4 +1,4 @@
-import type { StorageMetricsCardData } from "@/features/nvme/types/storage-comparison-section.types";
+import { StorageMetricsCardData } from "../types/storage-comparison-section.types";
 
 export const STORAGE_METRICS_CARDS: StorageMetricsCardData[] = [
   {

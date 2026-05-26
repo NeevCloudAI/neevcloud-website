@@ -1,6 +1,6 @@
-import StepOnePanel from "@/features/serverless-inference/components/three-steps/StepOnePanel";
-import StepThreePanel from "@/features/serverless-inference/components/three-steps/StepThreePanel";
-import StepTwoPanel from "@/features/serverless-inference/components/three-steps/StepTwoPanel";
+import StepOnePanel from "./StepOnePanel";
+import StepThreePanel from "./StepThreePanel";
+import StepTwoPanel from "./StepTwoPanel";
 
 export const STEP_PANEL_COMPONENTS = [
   StepOnePanel,

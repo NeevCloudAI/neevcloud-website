@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import type { UseCaseTag as UseCaseTagType } from "@/features/gpu-cluster/types/use-cases-section.types";
+import type { UseCaseTag as UseCaseTagType } from "../types/use-cases-section.types";
 
 type UseCaseTagProps = {
   tag: UseCaseTagType;

@@ -1,4 +1,4 @@
-import type { TokenPricingRow } from "@/features/serverless-inference/types/token-pricing-section.types";
+import { TokenPricingRow } from "../types/token-pricing-section.types";
 
 export const TOKEN_PRICING_ROWS: TokenPricingRow[] = [
   {

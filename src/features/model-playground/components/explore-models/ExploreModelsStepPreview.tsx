@@ -1,7 +1,7 @@
-import { EXPLORE_MODELS_MOCK_URL } from "@/features/model-playground/constants/explore-models-section.constants";
+import { EXPLORE_MODELS_MOCK_URL } from "../../constants/explore-models-section.constants";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import { Command, Eye, Languages, Mic, Play, Star } from "lucide-react";
-import type { ExploreModelsStepPreviewProps } from "@/features/model-playground/types/explore-models-section.types";
+import type { ExploreModelsStepPreviewProps } from "../../types/explore-models-section.types";
 
 function WindowChrome() {
   return (

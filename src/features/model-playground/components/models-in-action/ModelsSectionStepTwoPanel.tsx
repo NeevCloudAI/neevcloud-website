@@ -1,8 +1,8 @@
 import { Text } from "@/shared/ui-lib";
-import ModelsSectionLiveBadge from "@/features/model-playground/components/models-in-action/ModelsSectionLiveBadge";
-import ModelsSectionPanelLogo from "@/features/model-playground/components/models-in-action/ModelsSectionPanelLogo";
-import ModelsSectionStepTwoCard from "@/features/model-playground/components/models-in-action/ModelsSectionStepTwoCard";
-import { STEP_TWO_CARD_DATA } from "@/features/model-playground/data/models-section.data";
+import ModelsSectionPanelLogo from "./ModelsSectionPanelLogo";
+import ModelsSectionLiveBadge from "./ModelsSectionLiveBadge";
+import { STEP_TWO_CARD_DATA } from "../../data/models-section.data";
+import ModelsSectionStepTwoCard from "./ModelsSectionStepTwoCard";
 
 const ModelsSectionStepTwoPanel = () => {
   return (

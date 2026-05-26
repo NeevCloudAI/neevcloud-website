@@ -1,4 +1,4 @@
-import ModelActionPlaygroundClient from "@/features/model-catalog/components/model-action/ModelActionPlaygroundClient";
+import ModelActionPlaygroundClient from "./model-action/ModelActionPlaygroundClient";
 
 const ModelActionPlayground = () => {
   return <ModelActionPlaygroundClient />;

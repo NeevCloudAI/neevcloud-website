@@ -2,25 +2,26 @@
 
 import { Button } from "@/shared/ui-lib";
 import { useCallback, useMemo, useState } from "react";
-import OSImageCard from "@/features/cpu-cluster/components/os-image/OSImageCard";
-import OSImageSelectionBar from "@/features/cpu-cluster/components/os-image/OSImageSelectionBar";
-import { DEFAULT_OS_IMAGE_SECTION } from "@/features/cpu-cluster/constants/os-image-section.constants";
+import OSImageCard from "./OSImageCard";
+import OSImageSelectionBar from "./OSImageSelectionBar";
+import { DEFAULT_OS_IMAGE_SECTION } from "../../constants/os-image-section.constants";
 import {
   OS_IMAGE_SECTIONS,
   OS_IMAGE_SECTION_TABS,
-} from "@/features/cpu-cluster/data/os-image-section.data";
-import type { OsSectionId } from "@/features/cpu-cluster/types/os-image-section.types";
+} from "../../data/os-image-section.data";
+import type { OsSectionId } from "../../types/os-image-section.types";
 
 const OSImageSectionClient = () => {
-  const [activeSection, setActiveSection] =
-    useState<OsSectionId>(DEFAULT_OS_IMAGE_SECTION);
+  const [activeSection, setActiveSection] = useState<OsSectionId>(
+    DEFAULT_OS_IMAGE_SECTION
+  );
   const [selectedImageTitle, setSelectedImageTitle] = useState<string>("");
 
   const imageList = OS_IMAGE_SECTIONS[activeSection];
 
   const selectedImage = useMemo(
     () => imageList.find((item) => item.title === selectedImageTitle),
-    [imageList, selectedImageTitle],
+    [imageList, selectedImageTitle]
   );
 
   const handleSectionChange = useCallback((section: OsSectionId) => {

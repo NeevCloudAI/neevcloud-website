@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
 import { FeatureCard } from "@/shared/components/feature-card";
 import { Text } from "@/shared/ui-lib";
-import { PRICING_FEATURES } from "@/features/gpu-cluster/data/pricing-feature.data";
+import { PRICING_FEATURES } from "../data/pricing-feature.data";
 
 const ComputeSection = () => {
   return (

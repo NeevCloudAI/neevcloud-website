@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import { INSTANCE_STAT_SEPARATOR } from "@/features/cpu-cluster/constants/private-network-section.constants";
+import { INSTANCE_STAT_SEPARATOR } from "../../constants/private-network-section.constants";
 
 type ComputeSpecsProps = {
   specs: string[];

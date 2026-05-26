@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
 import { FeatureCard } from "@/shared/components/feature-card";
-import { EXPERIMENTATION_SECTION_FEATURES } from "@/features/model-playground/data/experimentation-section.data";
+import { EXPERIMENTATION_SECTION_FEATURES } from "../data/experimentation-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const ExperimentationSection = () => {
@@ -14,7 +14,12 @@ const ExperimentationSection = () => {
         aria-hidden="true"
       />
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="experimentation-section-heading" textColor="white" weight={"semibold"}>
+        <Text
+          as="h2"
+          id="experimentation-section-heading"
+          textColor="white"
+          weight={"semibold"}
+        >
           Built For
           <Text as="span" variant="h2" textColor="primary" weight={"semibold"}>
             Experimentation

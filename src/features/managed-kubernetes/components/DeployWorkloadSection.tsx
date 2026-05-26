@@ -1,5 +1,5 @@
 import Container from "@/shared/components/container";
-import DeployWorkloadSectionClient from "@/features/managed-kubernetes/components/DeployWorkloadSectionClient";
+import DeployWorkloadSectionClient from "./DeployWorkloadSectionClient";
 import { Text } from "@/shared/ui-lib";
 
 const DeployWorkloadSection = () => {

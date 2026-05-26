@@ -1,5 +1,5 @@
 import { Gift, MoveLeft, MoveRight, Shuffle } from "lucide-react";
-import type { MetricCardData } from "@/features/nvme/types/metrics-section.types";
+import { MetricCardData } from "../types/metrics-section.types";
 
 export const METRIC_CARDS: readonly MetricCardData[] = [
   {

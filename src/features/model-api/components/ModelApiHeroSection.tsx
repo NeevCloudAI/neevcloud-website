@@ -1,5 +1,5 @@
 import HeroSection from "@/shared/components/HeroSection";
-import { MODEL_API_HERO } from "@/features/model-api/constants/model-api-page.constants";
+import { MODEL_API_HERO } from "../constants/model-api-page.constants";
 import { Text } from "@/shared/ui-lib";
 
 const ModelApiHeroSection = () => {

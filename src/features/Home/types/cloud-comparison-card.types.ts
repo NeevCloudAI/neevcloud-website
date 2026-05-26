@@ -3,4 +3,3 @@ export type CloudComparisonCardItem = {
   title: string;
   description: string;
 };
-

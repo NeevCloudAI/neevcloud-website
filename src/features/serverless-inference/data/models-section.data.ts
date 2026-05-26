@@ -1,4 +1,4 @@
-import type { ModelCardData } from "@/features/serverless-inference/types/models-section.types";
+import { ModelCardData } from "../types/models-section.types";
 
 export const MODELS: readonly ModelCardData[] = [
   {

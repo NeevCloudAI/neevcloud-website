@@ -1,4 +1,4 @@
-import type { ModelPricingRow } from "@/features/model-catalog/types/right-model-section.types";
+import type { ModelPricingRow } from "../types/right-model-section.types";
 
 export const MODEL_PRICING_ROWS: readonly ModelPricingRow[] = [
   {

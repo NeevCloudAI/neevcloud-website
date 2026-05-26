@@ -1,14 +1,14 @@
-import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
+import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
-import AmbitionSection from "@/features/public-sector/components/AmbitionSection";
-import ContributeSection from "@/features/public-sector/components/ContributeSection";
-import GovernmentSection from "@/features/public-sector/components/GovernmentSection";
-import PublicSectorHeroSection from "@/features/public-sector/components/PublicSectorHeroSection";
-import { PUBLIC_SECTOR_FOOTER } from "@/features/public-sector/constants/public-sector-page.constants";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import { Divider } from "@/shared/ui-lib";
+import PublicSectorHeroSection from "./PublicSectorHeroSection";
+import AmbitionSection from "./AmbitionSection";
+import ContributeSection from "./ContributeSection";
+import GovernmentSection from "./GovernmentSection";
+import { PUBLIC_SECTOR_FOOTER } from "../constants/public-sector-page.constants";
 
 const PublicSectorPage = () => {
   return (

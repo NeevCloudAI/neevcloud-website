@@ -1,5 +1,5 @@
-import PurposeFeatureItem from "@/features/managed-kubernetes/components/purpose/PurposeFeatureItem";
-import { PURPOSE_FEATURES } from "@/features/managed-kubernetes/data/purpose-section.data";
+import PurposeFeatureItem from "./PurposeFeatureItem";
+import { PURPOSE_FEATURES } from "../../data/purpose-section.data";
 
 const PurposeFeaturesGrid = () => {
   return (

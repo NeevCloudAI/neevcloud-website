@@ -10,4 +10,3 @@ export type StackSectionPanel = {
   description: string;
   items: StackSectionListItem[];
 };
-

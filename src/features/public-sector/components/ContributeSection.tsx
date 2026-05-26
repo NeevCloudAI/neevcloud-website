@@ -1,6 +1,6 @@
 import { CategoryFeatureCard } from "@/shared/components/category-feature-card";
 import Container from "@/shared/components/container";
-import { CONTRIBUTE_CATEGORIES } from "@/features/public-sector/data/contribute-section.data";
+import { CONTRIBUTE_CATEGORIES } from "../data/contribute-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const ContributeSection = () => {

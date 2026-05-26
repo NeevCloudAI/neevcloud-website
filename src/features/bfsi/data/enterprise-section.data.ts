@@ -1,4 +1,4 @@
-import type { EnterpriseSecurityCategory } from "@/features/bfsi/types/enterprise-section.types";
+import { EnterpriseSecurityCategory } from "../types/enterprise-section.types";
 
 export const ENTERPRISE_SECURITY_CATEGORIES: readonly EnterpriseSecurityCategory[] =
   [

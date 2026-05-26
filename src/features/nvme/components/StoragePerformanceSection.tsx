@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import StoragePerformanceCard from "@/features/nvme/components/storage-performance/StoragePerformanceCard";
-import { STORAGE_PERFORMANCE_CARDS } from "@/features/nvme/data/storage-performance-section.data";
+import StoragePerformanceCard from "./storage-performance/StoragePerformanceCard";
+import { STORAGE_PERFORMANCE_CARDS } from "../data/storage-performance-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const StoragePerformanceSection = () => {

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Text } from "@/shared/ui-lib";
-import UseCaseSummaryCard from "@/features/gpu-cluster/components/UseCaseSummaryCard";
-import UseCaseTag from "@/features/gpu-cluster/components/UseCaseTag";
-import type { UseCaseDefinition } from "@/features/gpu-cluster/types/use-cases-section.types";
+import UseCaseSummaryCard from "./UseCaseSummaryCard";
+import UseCaseTag from "./UseCaseTag";
+import type { UseCaseDefinition } from "../types/use-cases-section.types";
 
 type UseCasePanelProps = {
   useCase: UseCaseDefinition;

@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
-import { PURPOSE_LEGEND } from "@/features/managed-kubernetes/data/purpose-section.data";
+import { PURPOSE_LEGEND } from "../../data/purpose-section.data";
 
 const PurposeLegend = () => {
   return (

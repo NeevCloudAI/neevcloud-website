@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
-import { PILL_VARIANT_STYLES } from "@/features/cpu-cluster/constants/private-network-section.constants";
-import type { ComputePillVariant } from "@/features/cpu-cluster/types/private-network-section.types";
+import { PILL_VARIANT_STYLES } from "../../constants/private-network-section.constants";
+import type { ComputePillVariant } from "../../types/private-network-section.types";
 
 type ComputePillProps = {
   label: string;

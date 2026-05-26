@@ -1,4 +1,4 @@
-import type { ModelActionItem } from "@/features/model-catalog/types/model-action-section.types";
+import type { ModelActionItem } from "../types/model-action-section.types";
 
 export const MODEL_ACTION_ITEMS: readonly ModelActionItem[] = [
   {

@@ -11,7 +11,7 @@ const megaMenuPanelClassName = cn(
   "rounded-b-md bg-white opacity-0 shadow-md",
   "transition-opacity duration-150",
   "group-hover:pointer-events-auto group-hover:opacity-100",
-  "group-focus-within:pointer-events-auto group-focus-within:opacity-100"
+  "group-focus-within:pointer-events-auto group-focus-within:opacity-100",
 );
 
 export default function AiSupercloudDesktopTrigger() {

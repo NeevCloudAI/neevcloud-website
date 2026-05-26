@@ -2,7 +2,7 @@ import type {
   PurposeFeatureItem,
   PurposeFlowNode,
   PurposeLegendItem,
-} from "@/features/managed-kubernetes/types/purpose-section.types";
+} from "../types/purpose-section.types";
 
 export const PURPOSE_FLOW_STACK: PurposeFlowNode[] = [
   {

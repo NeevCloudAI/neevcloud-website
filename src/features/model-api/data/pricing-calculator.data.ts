@@ -1,4 +1,4 @@
-import type { WorkloadCategoryId } from "@/features/model-api/types/pricing-calculator.types";
+import type { WorkloadCategoryId } from "../types/pricing-calculator.types";
 
 export const PRICE_PER_REQUEST = {
   text: 0.0001,

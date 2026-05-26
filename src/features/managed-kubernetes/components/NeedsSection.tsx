@@ -1,16 +1,16 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import GpuResourceCodeBlock from "@/features/managed-kubernetes/components/needs/GpuResourceCodeBlock";
-import HelmDeployCodeBlock from "@/features/managed-kubernetes/components/needs/HelmDeployCodeBlock";
-import NeedsFeatureCard from "@/features/managed-kubernetes/components/needs/NeedsFeatureCard";
-import NeedsFeatureList from "@/features/managed-kubernetes/components/needs/NeedsFeatureList";
-import NeedsFeatureTags from "@/features/managed-kubernetes/components/needs/NeedsFeatureTags";
+import GpuResourceCodeBlock from "./needs/GpuResourceCodeBlock";
+import HelmDeployCodeBlock from "./needs/HelmDeployCodeBlock";
+import NeedsFeatureCard from "./needs/NeedsFeatureCard";
+import NeedsFeatureList from "./needs/NeedsFeatureList";
+import NeedsFeatureTags from "./needs/NeedsFeatureTags";
 import {
   AUTOSCALING_FEATURES,
   GPU_METRICS_TAGS,
   INFINIBAND_FEATURES,
   REGISTRY_TAGS,
-} from "@/features/managed-kubernetes/data/needs-section.data";
+} from "../data/needs-section.data";
 
 const NeedsSection = () => {
   return (

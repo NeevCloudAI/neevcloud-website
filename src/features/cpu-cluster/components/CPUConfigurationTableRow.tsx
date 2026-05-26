@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
-import { CPU_CONFIG_CELL_CLASS } from "@/features/cpu-cluster/constants/cpu-configuration.constants";
-import type { CpuConfigurationRow } from "@/features/cpu-cluster/types/cpu-configuration.types";
+import { CpuConfigurationRow } from "../types/cpu-configuration.types";
+import { CPU_CONFIG_CELL_CLASS } from "../constants/cpu-configuration.constants";
 
 type CPUConfigurationTableRowProps = {
   row: CpuConfigurationRow;

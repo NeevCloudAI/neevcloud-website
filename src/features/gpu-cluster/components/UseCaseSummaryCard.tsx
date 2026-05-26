@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import type { UseCaseSummaryBlock } from "@/features/gpu-cluster/types/use-cases-section.types";
+import type { UseCaseSummaryBlock } from "../types/use-cases-section.types";
 
 type UseCaseSummaryCardProps = {
   block: UseCaseSummaryBlock;

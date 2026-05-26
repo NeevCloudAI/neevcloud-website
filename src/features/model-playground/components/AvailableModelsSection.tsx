@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
 import { CategoryFeatureCard } from "@/shared/components/category-feature-card";
 import { Text } from "@/shared/ui-lib";
-import { AVAILABLE_MODEL_CATEGORIES } from "@/features/model-playground/data/available-models-section.data";
+import { AVAILABLE_MODEL_CATEGORIES } from "../data/available-models-section.data";
 
 const AvailableModelsSection = () => {
   return (
@@ -10,7 +10,12 @@ const AvailableModelsSection = () => {
       aria-labelledby="available-models-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="available-models-section-heading" align="center" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="available-models-section-heading"
+          align="center"
+          className="max-w-4xl"
+        >
           Available Models
           <Text as="span" variant="h2" textColor="primary">
             Across Categories
@@ -25,11 +30,7 @@ const AvailableModelsSection = () => {
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 md:pt-12.5 list-none p-0 m-0 w-full">
           {AVAILABLE_MODEL_CATEGORIES.map(({ category, hover }) => (
             <li key={category.title}>
-              <CategoryFeatureCard
-                category={category}
-                hover={hover}
-                hasHover
-              />
+              <CategoryFeatureCard category={category} hover={hover} hasHover />
             </li>
           ))}
         </ul>

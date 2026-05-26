@@ -1,12 +1,12 @@
 import Link from "next/link";
-import RightModelPricingTableRow from "@/features/model-catalog/components/right-model/RightModelPricingTableRow";
 import {
   MODEL_PRICING_SKU_COUNT,
   RIGHT_MODEL_TABLE_CELL_CLASS,
   RIGHT_MODEL_TABLE_HEADERS,
-} from "@/features/model-catalog/constants/right-model-section.constants";
-import { MODEL_PRICING_ROWS } from "@/features/model-catalog/data/right-model-section.data";
+} from "../../constants/right-model-section.constants";
+import { MODEL_PRICING_ROWS } from "../../data/right-model-section.data";
 import { Text } from "@/shared/ui-lib";
+import RightModelPricingTableRow from "./RightModelPricingTableRow";
 
 const RightModelPricingTable = () => {
   return (
@@ -30,9 +30,7 @@ const RightModelPricingTable = () => {
 
       <div className="mt-7.5 overflow-x-auto">
         <table className="w-full min-w-272 font-space-mono">
-          <caption className="sr-only">
-            Model pricing comparison table
-          </caption>
+          <caption className="sr-only">Model pricing comparison table</caption>
           <thead>
             <tr className="border-b border-black-30">
               {RIGHT_MODEL_TABLE_HEADERS.map((header) => (

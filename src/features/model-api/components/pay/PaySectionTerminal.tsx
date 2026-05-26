@@ -1,6 +1,6 @@
-import PaySectionPricingRow from "@/features/model-api/components/pay/PaySectionPricingRow";
-import PaySectionTerminalHeader from "@/features/model-api/components/pay/PaySectionTerminalHeader";
-import { PAY_SECTION_PRICING_ROWS } from "@/features/model-api/data/pay-section.data";
+import PaySectionPricingRow from "./PaySectionPricingRow";
+import PaySectionTerminalHeader from "./PaySectionTerminalHeader";
+import { PAY_SECTION_PRICING_ROWS } from "../../data/pay-section.data";
 import { Divider, Text } from "@/shared/ui-lib";
 
 const PaySectionTerminal = () => {

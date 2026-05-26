@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import RightModelPricingTable from "@/features/model-catalog/components/right-model/RightModelPricingTable";
-import RightModelTerminalHeader from "@/features/model-catalog/components/right-model/RightModelTerminalHeader";
+import RightModelPricingTable from "./right-model/RightModelPricingTable";
+import RightModelTerminalHeader from "./right-model/RightModelTerminalHeader";
 import { Text } from "@/shared/ui-lib";
 
 const RightModelSection = () => {

@@ -1,5 +1,5 @@
-import DeployStorageCliCode from "@/features/nvme/components/deploy-storage/DeployStorageCliCode";
-import DeployStorageCustomTerminalHeader from "@/features/nvme/components/deploy-storage/DeployStorageCustomTerminalHeader";
+import DeployStorageCliCode from "./DeployStorageCliCode";
+import DeployStorageCustomTerminalHeader from "./DeployStorageCustomTerminalHeader";
 
 const DeployStorageCustomTerminal = () => {
   return (

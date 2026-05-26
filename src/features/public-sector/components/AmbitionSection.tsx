@@ -1,6 +1,6 @@
 import { AmbitionDetailCard } from "@/shared/components/ambition-detail-card";
 import Container from "@/shared/components/container";
-import { AMBITION_ITEMS } from "@/features/public-sector/data/ambition-section.data";
+import { AMBITION_ITEMS } from "../data/ambition-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const AmbitionSection = () => {

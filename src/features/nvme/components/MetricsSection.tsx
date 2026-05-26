@@ -1,9 +1,9 @@
 import Container from "@/shared/components/container";
-import MetricCard from "@/features/nvme/components/metrics/MetricCard";
-import StorageMetricsCard from "@/features/nvme/components/storage-comparison/StorageMetricsCard";
-import { METRIC_CARDS } from "@/features/nvme/data/metrics-section.data";
-import { STORAGE_METRICS_CARDS } from "@/features/nvme/data/storage-comparison-section.data";
 import { Text } from "@/shared/ui-lib";
+import { METRIC_CARDS } from "../data/metrics-section.data";
+import MetricCard from "./metrics/MetricCard";
+import { STORAGE_METRICS_CARDS } from "../data/storage-comparison-section.data";
+import StorageMetricsCard from "./storage-comparison/StorageMetricsCard";
 
 const MetricsSection = () => {
   return (
@@ -12,7 +12,12 @@ const MetricsSection = () => {
       aria-labelledby="nvme-metrics-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="nvme-metrics-section-heading" className="max-w-4xl" align="center">
+        <Text
+          as="h2"
+          id="nvme-metrics-section-heading"
+          className="max-w-4xl"
+          align="center"
+        >
           Real-World
           <Text as="span" variant="h2" textColor="primary">
             Performance Metrics

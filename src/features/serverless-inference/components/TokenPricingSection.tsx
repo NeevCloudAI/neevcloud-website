@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import TokenPricingSectionActions from "@/features/serverless-inference/components/token-pricing/TokenPricingSectionActions";
-import TokenPricingTerminal from "@/features/serverless-inference/components/token-pricing/TokenPricingTerminal";
+import TokenPricingSectionActions from "./token-pricing/TokenPricingSectionActions";
+import TokenPricingTerminal from "./token-pricing/TokenPricingTerminal";
 import { Text } from "@/shared/ui-lib";
 
 const TokenPricingSection = () => {

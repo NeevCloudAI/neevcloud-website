@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import GovernmentServiceRow from "@/features/public-sector/components/government/GovernmentServiceRow";
-import { GOVERNMENT_SERVICES } from "@/features/public-sector/data/government-section.data";
+import GovernmentServiceRow from "./government/GovernmentServiceRow";
+import { GOVERNMENT_SERVICES } from "../data/government-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const GovernmentSection = () => {

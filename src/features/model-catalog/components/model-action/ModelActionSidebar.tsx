@@ -1,8 +1,8 @@
 import Link from "next/link";
-import ModelActionSidebarCard from "@/features/model-catalog/components/model-action/ModelActionSidebarCard";
-import { MODEL_ACTION_TOTAL_COUNT } from "@/features/model-catalog/constants/model-action-section.constants";
-import { MODEL_ACTION_ITEMS } from "@/features/model-catalog/data/model-action-section.data";
-import type { ModelActionItem } from "@/features/model-catalog/types/model-action-section.types";
+import ModelActionSidebarCard from "./ModelActionSidebarCard";
+import { MODEL_ACTION_TOTAL_COUNT } from "../../constants/model-action-section.constants";
+import { MODEL_ACTION_ITEMS } from "../../data/model-action-section.data";
+import type { ModelActionItem } from "../../types/model-action-section.types";
 import { Text } from "@/shared/ui-lib";
 
 type ModelActionSidebarProps = {
@@ -27,10 +27,7 @@ const ModelActionSidebar = ({
         Select model
       </Text>
 
-      <ul
-        className="mt-5 flex list-none flex-col gap-1.25 p-0 m-0"
-        role="list"
-      >
+      <ul className="mt-5 flex list-none flex-col gap-1.25 p-0 m-0" role="list">
         {MODEL_ACTION_ITEMS.map((model: ModelActionItem) => (
           <li key={model.id}>
             <ModelActionSidebarCard

@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import ModelActionPlayground from "@/features/model-catalog/components/ModelActionPlayground";
 import { Text } from "@/shared/ui-lib";
+import ModelActionPlayground from "./ModelActionPlayground";
 
 const ModelActionSection = () => {
   return (

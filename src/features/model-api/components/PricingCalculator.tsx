@@ -1,4 +1,4 @@
-import PricingCalculatorClient from "@/features/model-api/components/pricing/PricingCalculatorClient";
+import PricingCalculatorClient from "./pricing/PricingCalculatorClient";
 
 const PricingCalculator = () => {
   return <PricingCalculatorClient />;

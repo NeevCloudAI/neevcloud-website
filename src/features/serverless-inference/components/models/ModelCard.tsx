@@ -1,7 +1,7 @@
 import { LogOut } from "lucide-react";
 import Image from "next/image";
 import { Button, Divider, Text } from "@/shared/ui-lib";
-import type { ModelCardData } from "@/features/serverless-inference/types/models-section.types";
+import { ModelCardData } from "../../types/models-section.types";
 
 type ModelCardProps = {
   model: ModelCardData;

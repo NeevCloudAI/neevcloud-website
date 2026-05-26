@@ -1,5 +1,5 @@
 import { Divider, Text } from "@/shared/ui-lib";
-import ControlPlaneTerminalHeader from "@/features/managed-kubernetes/components/control-plane/ControlPlaneTerminalHeader";
+import ControlPlaneTerminalHeader from "./ControlPlaneTerminalHeader";
 
 const ControlPlanePricingTerminal = () => {
   return (

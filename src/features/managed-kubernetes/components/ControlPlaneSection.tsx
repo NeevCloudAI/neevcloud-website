@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
-import ControlPlanePricingTerminal from "@/features/managed-kubernetes/components/control-plane/ControlPlanePricingTerminal";
-import ControlPlaneWhatsIncludedCard from "@/features/managed-kubernetes/components/control-plane/ControlPlaneWhatsIncludedCard";
-import ReservedNodePricing from "@/features/managed-kubernetes/components/control-plane/ReservedNodePricing";
+import ControlPlanePricingTerminal from "./control-plane/ControlPlanePricingTerminal";
+import ControlPlaneWhatsIncludedCard from "./control-plane/ControlPlaneWhatsIncludedCard";
+import ReservedNodePricing from "./control-plane/ReservedNodePricing";
 import { Text } from "@/shared/ui-lib";
 
 const ControlPlaneSection = () => {

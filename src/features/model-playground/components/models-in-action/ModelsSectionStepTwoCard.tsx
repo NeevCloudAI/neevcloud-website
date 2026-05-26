@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Text } from "@/shared/ui-lib";
-import type { ModelsSectionStepTwoCard } from "@/features/model-playground/types/models-section.types";
+import type { ModelsSectionStepTwoCard } from "../../types/models-section.types";
 
 type ModelsSectionStepTwoCardProps = {
   card: ModelsSectionStepTwoCard;

@@ -1,5 +1,5 @@
 import { Divider, Text } from "@/shared/ui-lib";
-import { INFRASTRUCTURE_GPU_SPEC_BADGES } from "@/features/Home/constants/infrastructure-section.constants";
+import { INFRASTRUCTURE_GPU_SPEC_BADGES } from "../constants/infrastructure-section.constants";
 
 type GpuAvailabilityRowProps = {
   rowId: string;

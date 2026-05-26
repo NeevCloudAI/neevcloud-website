@@ -2,7 +2,10 @@
 
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import { STACK_SECTION_PANELS_LEFT, STACK_SECTION_PANELS_RIGHT } from "../data/stack-section-panels";
+import {
+  STACK_SECTION_PANELS_LEFT,
+  STACK_SECTION_PANELS_RIGHT,
+} from "../data/stack-section-panels";
 import { useState } from "react";
 import StackPanel from "./StackPanel";
 import StackLayers from "./StackLayers";
@@ -17,13 +20,13 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId
+      currentItemId === itemId ? "" : itemId,
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId)
+      panel.items.some((item) => item.id === activeItemId),
     );
     return idx === -1 ? 0 : idx;
   })();

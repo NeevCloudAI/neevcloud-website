@@ -1,5 +1,5 @@
 import HeroSection from "@/shared/components/HeroSection";
-import { PUBLIC_SECTOR_HERO } from "@/features/public-sector/constants/public-sector-page.constants";
+import { PUBLIC_SECTOR_HERO } from "../constants/public-sector-page.constants";
 import { Text } from "@/shared/ui-lib";
 
 const PublicSectorHeroSection = () => {

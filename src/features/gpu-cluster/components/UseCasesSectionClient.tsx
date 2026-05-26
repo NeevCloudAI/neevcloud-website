@@ -2,9 +2,9 @@
 
 import { Button, Text } from "@/shared/ui-lib";
 import { useId, useState } from "react";
-import { DEFAULT_USE_CASE_ID } from "@/features/gpu-cluster/constants/use-cases-section.constants";
-import { USE_CASES } from "@/features/gpu-cluster/data/use-cases-section.data";
-import UseCasePanel from "@/features/gpu-cluster/components/UseCasePanel";
+import { DEFAULT_USE_CASE_ID } from "../constants/use-cases-section.constants";
+import { USE_CASES } from "../data/use-cases-section.data";
+import UseCasePanel from "./UseCasePanel";
 
 const UseCasesSectionClient = () => {
   const [activeTab, setActiveTab] = useState<string>(DEFAULT_USE_CASE_ID);

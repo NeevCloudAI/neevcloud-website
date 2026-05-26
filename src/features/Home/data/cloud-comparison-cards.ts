@@ -10,7 +10,8 @@ export const CLOUD_COMPARISON_CARDS: CloudComparisonCardItem[] = [
   {
     id: "transparent-pricing",
     title: "Transparent Pricing",
-    description: "What you see is what you pay. No hidden egress fees or surprise billing.",
+    description:
+      "What you see is what you pay. No hidden egress fees or surprise billing.",
   },
   {
     id: "sovereign-secure",
@@ -19,4 +20,3 @@ export const CLOUD_COMPARISON_CARDS: CloudComparisonCardItem[] = [
       "Your data stays within your control, protected by rigorous international security standards and local compliance.",
   },
 ];
-

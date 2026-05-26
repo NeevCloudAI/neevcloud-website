@@ -1,6 +1,6 @@
 import StepsTabsSection from "@/shared/components/StepsTabsSection";
-import ExploreModelsStepPreview from "@/features/model-playground/components/explore-models/ExploreModelsStepPreview";
-import { EXPLORE_MODELS_STEPS } from "@/features/model-playground/data/explore-models-section.data";
+import ExploreModelsStepPreview from "./explore-models/ExploreModelsStepPreview";
+import { EXPLORE_MODELS_STEPS } from "../data/explore-models-section.data";
 import FooterCard from "@/shared/components/footer-card";
 import { Text } from "@/shared/ui-lib";
 

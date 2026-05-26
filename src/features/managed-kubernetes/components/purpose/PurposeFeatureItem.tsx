@@ -1,5 +1,5 @@
 import { Divider, Text } from "@/shared/ui-lib";
-import type { PurposeFeatureItem as PurposeFeatureItemType } from "@/features/managed-kubernetes/types/purpose-section.types";
+import type { PurposeFeatureItem as PurposeFeatureItemType } from "../../types/purpose-section.types";
 
 type PurposeFeatureItemProps = {
   feature: PurposeFeatureItemType;

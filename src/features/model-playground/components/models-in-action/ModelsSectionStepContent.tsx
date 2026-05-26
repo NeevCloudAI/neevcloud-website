@@ -1,6 +1,6 @@
 import { SquareCheck } from "lucide-react";
 import { Text } from "@/shared/ui-lib";
-import type { ModelsSectionStep } from "@/features/model-playground/types/models-section.types";
+import type { ModelsSectionStep } from "../../types/models-section.types";
 
 type ModelsSectionStepContentProps = {
   step: ModelsSectionStep;
@@ -9,7 +9,12 @@ type ModelsSectionStepContentProps = {
 const ModelsSectionStepContent = ({ step }: ModelsSectionStepContentProps) => {
   return (
     <div>
-      <Text as="h1" textColor="gray-60" className="text-[5rem]" aria-hidden="true">
+      <Text
+        as="h1"
+        textColor="gray-60"
+        className="text-[5rem]"
+        aria-hidden="true"
+      >
         {step.number}
       </Text>
 

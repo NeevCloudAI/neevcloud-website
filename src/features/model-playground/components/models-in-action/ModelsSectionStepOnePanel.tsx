@@ -1,11 +1,11 @@
 import StorageComparisonBar from "@/shared/components/StorageComparisonBar";
 import { Text } from "@/shared/ui-lib";
-import ModelsSectionLiveBadge from "@/features/model-playground/components/models-in-action/ModelsSectionLiveBadge";
-import ModelsSectionPanelLogo from "@/features/model-playground/components/models-in-action/ModelsSectionPanelLogo";
+import ModelsSectionLiveBadge from "./ModelsSectionLiveBadge";
+import ModelsSectionPanelLogo from "./ModelsSectionPanelLogo";
 import {
   STEP_ONE_BENCHMARK_RESULTS,
   STEP_ONE_COST_COMPARISON_RESULTS,
-} from "@/features/model-playground/data/models-section.data";
+} from "../../data/models-section.data";
 
 const ModelsSectionStepOnePanel = () => {
   return (

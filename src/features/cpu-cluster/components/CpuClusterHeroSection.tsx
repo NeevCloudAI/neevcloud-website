@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { CPU_CLUSTER_HERO } from "@/features/cpu-cluster/constants/cpu-cluster-page.constants";
+import { CPU_CLUSTER_HERO } from "../constants/cpu-cluster-page.constants";
 
 const CpuClusterHeroSection = () => {
   return (

@@ -4,7 +4,7 @@ import { Text } from "@/shared/ui-lib";
 import {
   STEP_ONE_FILTERS,
   STEP_ONE_MODELS,
-} from "@/features/serverless-inference/data/three-steps-section.data";
+} from "../../data/three-steps-section.data";
 
 const StepOnePanel = () => {
   return (

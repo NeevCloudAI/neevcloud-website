@@ -1,4 +1,4 @@
-import type { FlowDirection } from "@/features/cpu-cluster/types/private-network-section.types";
+import type { FlowDirection } from "../../types/private-network-section.types";
 
 type FlowArrowIconProps = {
   direction: FlowDirection;

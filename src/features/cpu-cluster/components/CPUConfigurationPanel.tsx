@@ -1,4 +1,4 @@
-import CPUConfigurationPanelClient from "@/features/cpu-cluster/components/CPUConfigurationPanelClient";
+import CPUConfigurationPanelClient from "./CPUConfigurationPanelClient";
 
 const CPUConfigurationPanel = () => {
   return <CPUConfigurationPanelClient />;

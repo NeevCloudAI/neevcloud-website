@@ -1,4 +1,4 @@
-import type { ComputeInstance } from "@/features/cpu-cluster/types/private-network-section.types";
+import type { ComputeInstance } from "../types/private-network-section.types";
 import type { FeatureCardProps } from "@/shared/components/feature-card";
 
 export const NETWORKING_FEATURES: FeatureCardProps[] = [

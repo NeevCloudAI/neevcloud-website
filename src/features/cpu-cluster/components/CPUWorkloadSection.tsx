@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
-import CPUConfigurationPanel from "@/features/cpu-cluster/components/CPUConfigurationPanel";
-import CpuWorkloadSectionActions from "@/features/cpu-cluster/components/CpuWorkloadSectionActions";
-import CpuWorkloadTerminalHeader from "@/features/cpu-cluster/components/CpuWorkloadTerminalHeader";
+import CPUConfigurationPanel from "./CPUConfigurationPanel";
+import CpuWorkloadSectionActions from "./CpuWorkloadSectionActions";
+import CpuWorkloadTerminalHeader from "./CpuWorkloadTerminalHeader";
 import { Text } from "@/shared/ui-lib";
 
 const CPUWorkloadSection = () => {

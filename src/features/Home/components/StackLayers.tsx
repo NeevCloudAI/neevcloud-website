@@ -17,8 +17,7 @@ export default function StackLayers({ activeIndex, count }: StackLayersProps) {
             key={index}
             className="absolute left-1/2 -translate-x-1/2 w-full h-full"
             style={{
-              top:
-                index === 0 ? 0 : index === count - 1 ? 400 : index * 150,
+              top: index === 0 ? 0 : index === count - 1 ? 400 : index * 150,
               zIndex: isActive ? 6 : count - index,
               opacity: isActive ? 1 : 0.65,
             }}
@@ -36,4 +35,3 @@ export default function StackLayers({ activeIndex, count }: StackLayersProps) {
     </div>
   );
 }
-

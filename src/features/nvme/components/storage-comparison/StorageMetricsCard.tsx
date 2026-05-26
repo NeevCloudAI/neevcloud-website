@@ -1,6 +1,6 @@
 import StorageComparisonBar from "@/shared/components/StorageComparisonBar";
 import { Text } from "@/shared/ui-lib";
-import type { StorageMetricsCardData } from "@/features/nvme/types/storage-comparison-section.types";
+import { StorageMetricsCardData } from "../../types/storage-comparison-section.types";
 
 type StorageMetricsCardProps = {
   card: StorageMetricsCardData;

@@ -1,4 +1,4 @@
-import type { StoragePerformanceCardData } from "@/features/nvme/types/storage-performance-section.types";
+import { StoragePerformanceCardData } from "../types/storage-performance-section.types";
 
 export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
   [

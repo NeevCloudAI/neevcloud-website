@@ -1,4 +1,4 @@
-import type { WorkloadMix } from "@/features/model-api/types/pricing-calculator.types";
+import type { WorkloadMix } from "../types/pricing-calculator.types";
 
 export const MIN_REQUESTS = 10_000;
 export const MAX_REQUESTS = 50_000_000;

@@ -1,5 +1,5 @@
-import GovernmentServiceRowArrow from "@/features/public-sector/components/government/GovernmentServiceRowArrow";
-import type { GovernmentServiceRowProps } from "@/features/public-sector/types/government-section.types";
+import GovernmentServiceRowArrow from "./GovernmentServiceRowArrow";
+import { GovernmentServiceRowProps } from "../../types/government-section.types";
 import { cn } from "@/lib/utils";
 import { Text } from "@/shared/ui-lib";
 import Link from "next/link";
@@ -23,7 +23,7 @@ const GovernmentServiceRow = ({
       href={href}
       className={cn(
         "group flex w-full items-center justify-between rounded-lg border border-white-10 bg-white-5 p-4 backdrop-blur-md transition-colors hover:bg-primary-120/80 md:px-10 md:py-7",
-        className,
+        className
       )}
       aria-label={`${title}: ${description}`}
     >

@@ -4,7 +4,7 @@ import {
   ZERO_EGRESS_DESCRIPTION_LINES,
   ZERO_EGRESS_PRICE,
   ZERO_EGRESS_TITLE,
-} from "@/features/cpu-cluster/constants/private-network-section.constants";
+} from "../../constants/private-network-section.constants";
 
 const ZeroEgressCallout = () => {
   return (

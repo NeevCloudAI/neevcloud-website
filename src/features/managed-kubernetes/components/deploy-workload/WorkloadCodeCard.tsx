@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import WorkloadCodeCardFooter from "@/features/managed-kubernetes/components/deploy-workload/WorkloadCodeCardFooter";
-import WorkloadCodeCardHeader from "@/features/managed-kubernetes/components/deploy-workload/WorkloadCodeCardHeader";
+import WorkloadCodeCardFooter from "./WorkloadCodeCardFooter";
+import WorkloadCodeCardHeader from "./WorkloadCodeCardHeader";
 
 type WorkloadCodeCardProps = {
   children: ReactNode;

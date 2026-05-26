@@ -1,4 +1,4 @@
-import type { PaySectionPricingRow as PaySectionPricingRowData } from "@/features/model-api/types/pay-section.types";
+import type { PaySectionPricingRow as PaySectionPricingRowData } from "../../types/pay-section.types";
 import { Divider, Text } from "@/shared/ui-lib";
 
 type PaySectionPricingRowProps = {

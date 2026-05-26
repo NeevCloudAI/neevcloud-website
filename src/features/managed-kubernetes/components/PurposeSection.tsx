@@ -1,17 +1,17 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import PurposeControlPlaneBlock from "@/features/managed-kubernetes/components/purpose/PurposeControlPlaneBlock";
-import PurposeControlPlaneBranchConnector from "@/features/managed-kubernetes/components/purpose/PurposeControlPlaneBranchConnector";
-import PurposeFeaturesGrid from "@/features/managed-kubernetes/components/purpose/PurposeFeaturesGrid";
-import PurposeFlowCard from "@/features/managed-kubernetes/components/purpose/PurposeFlowCard";
-import PurposeFlowConnector from "@/features/managed-kubernetes/components/purpose/PurposeFlowConnector";
-import PurposeLegend from "@/features/managed-kubernetes/components/purpose/PurposeLegend";
 import {
   PURPOSE_CONTROL_PLANE,
   PURPOSE_FLOW_STACK,
   PURPOSE_NODE_POOLS,
   PURPOSE_STORAGE_LABELS,
-} from "@/features/managed-kubernetes/data/purpose-section.data";
+} from "../data/purpose-section.data";
+import PurposeFlowCard from "./purpose/PurposeFlowCard";
+import PurposeFlowConnector from "./purpose/PurposeFlowConnector";
+import PurposeControlPlaneBlock from "./purpose/PurposeControlPlaneBlock";
+import PurposeControlPlaneBranchConnector from "./purpose/PurposeControlPlaneBranchConnector";
+import PurposeLegend from "./purpose/PurposeLegend";
+import PurposeFeaturesGrid from "./purpose/PurposeFeaturesGrid";
 
 const PurposeSection = () => {
   return (

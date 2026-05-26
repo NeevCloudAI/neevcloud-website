@@ -1,4 +1,4 @@
-import type { WorkloadOption } from "@/features/managed-kubernetes/types/deploy-workload-section.types";
+import type { WorkloadOption } from "../types/deploy-workload-section.types";
 
 export const WORKLOAD_OPTIONS: WorkloadOption[] = [
   { id: "gpu-cluster", label: "Create GPU Cluster" },

@@ -1,6 +1,6 @@
 import { AmbitionDetailCard } from "@/shared/components/ambition-detail-card";
 import Container from "@/shared/components/container";
-import { BFSI_AMBITION_ITEMS } from "@/features/bfsi/data/ambition-section.data";
+import { BFSI_AMBITION_ITEMS } from "../data/ambition-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const BfsiAmbitionSection = () => {

@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import { INCLUDED_FEATURES } from "@/features/nvme/constants/storage-pricing-calculator.constants";
+import { INCLUDED_FEATURES } from "../../constants/storage-pricing-calculator.constants";
 
 const StoragePricingIncludedFeatures = () => {
   return (

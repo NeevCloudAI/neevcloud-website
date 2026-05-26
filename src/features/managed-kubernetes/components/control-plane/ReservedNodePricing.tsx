@@ -1,10 +1,22 @@
 import { Divider, Text } from "@/shared/ui-lib";
-import ReservedNodePricingTier from "@/features/managed-kubernetes/components/control-plane/ReservedNodePricingTier";
+import ReservedNodePricingTier from "./ReservedNodePricingTier";
 
 const RESERVED_PRICING_TIERS = [
-  { term: "3 Months", discount: "15%", description: "vs on-demand · billed monthly" },
-  { term: "6 Months", discount: "20%", description: "vs on-demand · billed monthly" },
-  { term: "12 Months", discount: "23%", description: "vs on-demand · billed monthly" },
+  {
+    term: "3 Months",
+    discount: "15%",
+    description: "vs on-demand · billed monthly",
+  },
+  {
+    term: "6 Months",
+    discount: "20%",
+    description: "vs on-demand · billed monthly",
+  },
+  {
+    term: "12 Months",
+    discount: "23%",
+    description: "vs on-demand · billed monthly",
+  },
 ] as const;
 
 const ReservedNodePricing = () => {

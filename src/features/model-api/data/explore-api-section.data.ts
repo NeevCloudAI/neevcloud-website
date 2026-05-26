@@ -1,4 +1,4 @@
-import type { ExploreApiStep } from "@/features/model-api/types/explore-api-section.types";
+import type { ExploreApiStep } from "../types/explore-api-section.types";
 
 export const EXPLORE_API_STEPS: ExploreApiStep[] = [
   {

@@ -8,12 +8,7 @@ const PaySectionTerminalHeader = () => {
         <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
       </div>
-      <Text
-        as="h6"
-        textColor="gray-75"
-        fontFamily="spaceMono"
-        className="ml-5"
-      >
+      <Text as="h6" textColor="gray-75" fontFamily="spaceMono" className="ml-5">
         {`~ model-api-pricing - bash - 80x24`}
       </Text>
     </div>

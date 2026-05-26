@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Container from "@/shared/components/container";
-import type { ExploreApiStepsTabsClientProps } from "@/features/model-api/types/explore-api-section.types";
+import type { ExploreApiStepsTabsClientProps } from "../../types/explore-api-section.types";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
 
@@ -57,7 +57,7 @@ const ExploreApiStepsTabsClient = ({
                     "flex h-12 w-12 shrink-0 items-center justify-center rounded-md text-2xl transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white",
+                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white"
                   )}
                 >
                   {index + 1}

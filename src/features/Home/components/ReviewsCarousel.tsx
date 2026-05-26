@@ -4,8 +4,8 @@ import { useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Text } from "@/shared/ui-lib";
-import { REVIEWS_SECTION_CARDS } from "@/features/Home/constants/reviews-section.constants";
-import type { ReviewSectionCard } from "@/features/Home/types/reviews-section.types";
+import { REVIEWS_SECTION_CARDS } from "../constants/reviews-section.constants";
+import type { ReviewSectionCard } from "../types/reviews-section.types";
 import Image from "next/image";
 
 const SLIDE_GAP_PX = 0;

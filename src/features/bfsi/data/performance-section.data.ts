@@ -1,4 +1,4 @@
-import type { PerformanceMetric } from "@/features/bfsi/types/performance-section.types";
+import { PerformanceMetric } from "../types/performance-section.types";
 
 export const PERFORMANCE_METRICS: readonly PerformanceMetric[] = [
   {

@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import ModelCard from "@/features/serverless-inference/components/models/ModelCard";
-import { MODELS } from "@/features/serverless-inference/data/models-section.data";
+import ModelCard from "./models/ModelCard";
+import { MODELS } from "../data/models-section.data";
 import { Button, Text } from "@/shared/ui-lib";
 
 const ModelsSection = () => {
@@ -10,7 +10,12 @@ const ModelsSection = () => {
       aria-labelledby="models-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="models-section-heading" align="center" className="max-w-4xl">
+        <Text
+          as="h2"
+          id="models-section-heading"
+          align="center"
+          className="max-w-4xl"
+        >
           20+ Models. One Endpoint.
           <Text as="span" variant="h2" textColor="primary">
             Billed in INR

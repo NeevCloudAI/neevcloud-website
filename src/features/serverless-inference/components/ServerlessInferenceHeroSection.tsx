@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { SERVERLESS_INFERENCE_HERO } from "@/features/serverless-inference/constants/serverless-inference-page.constants";
+import { SERVERLESS_INFERENCE_HERO } from "../constants/serverless-inference-page.constants";
 
 const ServerlessInferenceHeroSection = () => {
   return (

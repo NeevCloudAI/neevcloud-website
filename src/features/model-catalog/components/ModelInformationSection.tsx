@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
 import ModelInfoCard from "@/shared/components/ModelInfoCard";
-import { MODEL_INFORMATION } from "@/features/model-catalog/data/model-information-section.data";
+import { MODEL_INFORMATION } from "../data/model-information-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const ModelInformationSection = () => {

@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import { FeatureCard } from "@/shared/components/feature-card";
 import { Text } from "@/shared/ui-lib";
-import { AI_STACK_SECTION_FEATURES } from "@/features/cpu-cluster/data/ai-stack-section.data";
+import { AI_STACK_SECTION_FEATURES } from "../data/ai-stack-section.data";
 
 const AIStackSection = () => {
   return (
@@ -31,7 +31,7 @@ const AIStackSection = () => {
               className={cn(
                 "md:col-span-2",
                 index === 3 && "md:col-start-2",
-                index === 4 && "md:col-start-4",
+                index === 4 && "md:col-start-4"
               )}
             >
               <FeatureCard

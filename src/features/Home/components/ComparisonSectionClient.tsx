@@ -23,7 +23,7 @@ function ComparisonCard({
       className={cn(
         "rounded-md p-4 md:p-8",
         "flex flex-col md:flex-row items-start md:items-center justify-between gap-4",
-        inverted ? "bg-gray-80 text-white" : "bg-white text-black"
+        inverted ? "bg-gray-80 text-white" : "bg-white text-black",
       )}
     >
       <Text as="p" className="text-7xl">
@@ -47,7 +47,9 @@ export default function ComparisonSectionClient() {
   const [isWithNeevCloud, setIsWithNeevCloud] = useState(true);
   const descriptionId = useId();
 
-  const bullets = isWithNeevCloud ? WITH_NEEVCLOUD_BULLETS : WITHOUT_NEEVCLOUD_BULLETS;
+  const bullets = isWithNeevCloud
+    ? WITH_NEEVCLOUD_BULLETS
+    : WITHOUT_NEEVCLOUD_BULLETS;
 
   return (
     <div
@@ -55,7 +57,7 @@ export default function ComparisonSectionClient() {
         "py-8 md:py-16 2xl:py-25",
         isWithNeevCloud
           ? "bg-gray-10"
-          : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"
+          : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat",
       )}
     >
       <Container className="flex flex-col items-center">
@@ -79,7 +81,8 @@ export default function ComparisonSectionClient() {
           textColor={isWithNeevCloud ? "black-5" : "white"}
           align="center"
         >
-          Get rid of tedious cloud cost management with automation that works in real time.
+          Get rid of tedious cloud cost management with automation that works in
+          real time.
         </Text>
 
         <div
@@ -92,7 +95,7 @@ export default function ComparisonSectionClient() {
             variant="outline-primary"
             className={cn(
               "rounded-r-none",
-              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white"
+              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white",
             )}
             textColor="black"
             weight="semibold"
@@ -104,7 +107,10 @@ export default function ComparisonSectionClient() {
           </Button>
           <Button
             weight="semibold"
-            className={cn("rounded-l-none", isWithNeevCloud ? "" : "bg-gray-90 text-white")}
+            className={cn(
+              "rounded-l-none",
+              isWithNeevCloud ? "" : "bg-gray-90 text-white",
+            )}
             onClick={() => setIsWithNeevCloud(true)}
             aria-pressed={isWithNeevCloud}
             type="button"
@@ -117,11 +123,15 @@ export default function ComparisonSectionClient() {
           <div
             className={cn(
               "flex md:flex-2 flex-col p-4 md:p-8 rounded-md w-full gap-4",
-              isWithNeevCloud ? "bg-primary" : "bg-gray-90"
+              isWithNeevCloud ? "bg-primary" : "bg-gray-90",
             )}
           >
             {COMPARISON_SUMMARY_CARDS.map((card) => (
-              <ComparisonCard key={card.id} card={card} inverted={!isWithNeevCloud} />
+              <ComparisonCard
+                key={card.id}
+                card={card}
+                inverted={!isWithNeevCloud}
+              />
             ))}
           </div>
 
@@ -133,7 +143,11 @@ export default function ComparisonSectionClient() {
             >
               {isWithNeevCloud ? "With NeevCloud" : "Global Hyperscalers"}
             </Text>
-            <Text as="h2" weight="normal" textColor={isWithNeevCloud ? undefined : "white"}>
+            <Text
+              as="h2"
+              weight="normal"
+              textColor={isWithNeevCloud ? undefined : "white"}
+            >
               {isWithNeevCloud ? "AI-First by design" : "Scale Without Focus"}
             </Text>
 
@@ -146,17 +160,22 @@ export default function ComparisonSectionClient() {
             </Text>
             <Divider
               orientation="horizontal"
-              className={cn("my-4", isWithNeevCloud ? "bg-black-10" : "bg-white-10")}
+              className={cn(
+                "my-4",
+                isWithNeevCloud ? "bg-black-10" : "bg-white-10",
+              )}
             />
 
             {bullets.slice(1).map((label, idx) => (
               <div key={label}>
-                <Text textColor={isWithNeevCloud ? undefined : "white"}>{label}</Text>
+                <Text textColor={isWithNeevCloud ? undefined : "white"}>
+                  {label}
+                </Text>
                 <Divider
                   orientation="horizontal"
                   className={cn(
                     "my-4",
-                    isWithNeevCloud ? "bg-black-10" : "bg-white-10"
+                    isWithNeevCloud ? "bg-black-10" : "bg-white-10",
                   )}
                   aria-hidden={idx === bullets.length - 2}
                 />
@@ -168,4 +187,3 @@ export default function ComparisonSectionClient() {
     </div>
   );
 }
-

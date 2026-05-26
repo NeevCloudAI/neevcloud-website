@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import IntelligenceCard from "@/features/model-api/components/IntelligenceCard";
-import { INTELLIGENCE_CARDS } from "@/features/model-api/data/intelligence-section.data";
+import IntelligenceCard from "./IntelligenceCard";
+import { INTELLIGENCE_CARDS } from "../data/intelligence-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const IntelligenceSection = () => {

@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
-import { TOKEN_PRICING_TABLE_CELL_CLASS } from "@/features/serverless-inference/constants/token-pricing-section.constants";
-import type { TokenPricingRow } from "@/features/serverless-inference/types/token-pricing-section.types";
+import { TOKEN_PRICING_TABLE_CELL_CLASS } from "../../constants/token-pricing-section.constants";
+import { TokenPricingRow } from "../../types/token-pricing-section.types";
 
 type TokenPricingTableRowProps = {
   row: TokenPricingRow;

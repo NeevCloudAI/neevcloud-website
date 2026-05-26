@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
-import GpuPricingTable from "@/features/gpu-cluster/components/GpuPricingTable";
-import PricingSectionActions from "@/features/gpu-cluster/components/PricingSectionActions";
-import PricingTerminalHeader from "@/features/gpu-cluster/components/PricingTerminalHeader";
+import GpuPricingTable from "./GpuPricingTable";
+import PricingSectionActions from "./PricingSectionActions";
+import PricingTerminalHeader from "./PricingTerminalHeader";
 import { Divider, Text } from "@/shared/ui-lib";
 
 const PricingSection = () => {

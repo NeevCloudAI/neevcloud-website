@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
 import { FeatureCard } from "@/shared/components/feature-card";
-import { INFERENCE_STACK_SECTION_FEATURES } from "@/features/serverless-inference/data/inference-stack-section.data";
+import { INFERENCE_STACK_SECTION_FEATURES } from "../data/inference-stack-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const InferenceStackSection = () => {

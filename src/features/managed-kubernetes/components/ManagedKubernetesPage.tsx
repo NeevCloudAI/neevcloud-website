@@ -1,15 +1,15 @@
-import AnnouncementSection from "@/features/Home/components/AnnouncementSection";
+import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import { Divider } from "@/shared/ui-lib";
-import { MANAGED_KUBERNETES_FOOTER } from "@/features/managed-kubernetes/constants/managed-kubernetes-page.constants";
-import ControlPlaneSection from "@/features/managed-kubernetes/components/ControlPlaneSection";
-import DeployWorkloadSection from "@/features/managed-kubernetes/components/DeployWorkloadSection";
-import ManagedKubernetesHeroSection from "@/features/managed-kubernetes/components/ManagedKubernetesHeroSection";
-import NeedsSection from "@/features/managed-kubernetes/components/NeedsSection";
-import PurposeSection from "@/features/managed-kubernetes/components/PurposeSection";
+import ManagedKubernetesHeroSection from "./ManagedKubernetesHeroSection";
+import PurposeSection from "./PurposeSection";
+import NeedsSection from "./NeedsSection";
+import DeployWorkloadSection from "./DeployWorkloadSection";
+import ControlPlaneSection from "./ControlPlaneSection";
+import { MANAGED_KUBERNETES_FOOTER } from "../constants/managed-kubernetes-page.constants";
 
 const ManagedKubernetesPage = () => {
   return (

@@ -1,5 +1,5 @@
 import { SquareCheck } from "lucide-react";
-import type { IntelligenceCard as IntelligenceCardData } from "@/features/model-api/types/intelligence-section.types";
+import type { IntelligenceCard as IntelligenceCardData } from "../types/intelligence-section.types";
 import { Text } from "@/shared/ui-lib";
 
 type IntelligenceCardProps = {

@@ -2,7 +2,7 @@ import type {
   Step,
   StepOneModel,
   StepThreeBilling,
-} from "@/features/serverless-inference/types/three-steps-section.types";
+} from "../types/three-steps-section.types";
 
 export const STEPS: Step[] = [
   {

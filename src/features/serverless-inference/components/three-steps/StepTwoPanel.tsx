@@ -1,13 +1,22 @@
 import { Text } from "@/shared/ui-lib";
-import { STEP_TWO_TERMINAL_PATH } from "@/features/serverless-inference/data/three-steps-section.data";
+import { STEP_TWO_TERMINAL_PATH } from "../../data/three-steps-section.data";
 
 const StepTwoPanel = () => {
   return (
     <div className="bg-black rounded-md overflow-hidden w-full shadow-sm h-125">
       <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" aria-hidden="true" />
-        <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" aria-hidden="true" />
-        <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" aria-hidden="true" />
+        <span
+          className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"
+          aria-hidden="true"
+        />
+        <span
+          className="w-2.5 h-2.5 rounded-full bg-[#febc2e]"
+          aria-hidden="true"
+        />
+        <span
+          className="w-2.5 h-2.5 rounded-full bg-[#28c840]"
+          aria-hidden="true"
+        />
         <Text as="small" align="right" textColor="gray-75" className="ml-auto">
           {STEP_TWO_TERMINAL_PATH}
         </Text>

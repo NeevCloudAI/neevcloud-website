@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import type { MetricCardData } from "@/features/nvme/types/metrics-section.types";
+import { MetricCardData } from "../../types/metrics-section.types";
 
 type MetricCardProps = {
   metric: MetricCardData;
@@ -10,7 +10,11 @@ const MetricCard = ({ metric }: MetricCardProps) => {
 
   return (
     <article className="flex flex-col items-center rounded-md bg-gray-10 px-4 py-7.5">
-      <Icon size={14} className={`text-${metric.valueColor}`} aria-hidden="true" />
+      <Icon
+        size={14}
+        className={`text-${metric.valueColor}`}
+        aria-hidden="true"
+      />
       <Text
         as="h3"
         weight="semibold"

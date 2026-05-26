@@ -1,5 +1,5 @@
-import TransparentPricingRow from "@/features/nvme/components/pricing/TransparentPricingRow";
-import TransparentPricingTerminalHeader from "@/features/nvme/components/pricing/TransparentPricingTerminalHeader";
+import TransparentPricingRow from "./TransparentPricingRow";
+import TransparentPricingTerminalHeader from "./TransparentPricingTerminalHeader";
 import { Divider, Text } from "@/shared/ui-lib";
 
 const TransparentPricingTerminal = () => {
@@ -27,12 +27,20 @@ const TransparentPricingTerminal = () => {
 
         <Divider orientation="horizontal" className="mt-7.25 bg-black-5" />
 
-        <TransparentPricingRow label="First 25GB" value="free" valueColor="primary" />
+        <TransparentPricingRow
+          label="First 25GB"
+          value="free"
+          valueColor="primary"
+        />
         <TransparentPricingRow
           label="Additional storage"
           value="₹4.17 / GB / hr"
         />
-        <TransparentPricingRow label="Transfer charges" value="none" valueColor="primary" />
+        <TransparentPricingRow
+          label="Transfer charges"
+          value="none"
+          valueColor="primary"
+        />
         <TransparentPricingRow
           label="Billing granularity"
           value="Per second"

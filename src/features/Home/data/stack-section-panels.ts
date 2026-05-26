@@ -109,4 +109,3 @@ export const STACK_SECTION_PANELS_RIGHT: StackSectionPanel[] = [
     ],
   },
 ];
-

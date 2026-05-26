@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import type { PurposeFlowNode } from "@/features/managed-kubernetes/types/purpose-section.types";
+import type { PurposeFlowNode } from "../../types/purpose-section.types";
 
 type PurposeControlPlaneBlockProps = {
   node: PurposeFlowNode;

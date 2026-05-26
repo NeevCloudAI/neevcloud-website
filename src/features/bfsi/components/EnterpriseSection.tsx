@@ -1,7 +1,7 @@
-import EnterpriseSecurityCard from "@/features/bfsi/components/enterprise/EnterpriseSecurityCard";
-import { ENTERPRISE_SECURITY_CATEGORIES } from "@/features/bfsi/data/enterprise-section.data";
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
+import { ENTERPRISE_SECURITY_CATEGORIES } from "../data/enterprise-section.data";
+import EnterpriseSecurityCard from "./enterprise/EnterpriseSecurityCard";
 
 const EnterpriseSection = () => {
   return (

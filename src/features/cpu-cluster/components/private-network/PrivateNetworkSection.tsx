@@ -1,12 +1,12 @@
 import Container from "@/shared/components/container";
 import { FeatureCard } from "@/shared/components/feature-card";
-import ComputeInstanceCard from "@/features/cpu-cluster/components/private-network/ComputeInstanceCard";
-import NetworkFlowSummary from "@/features/cpu-cluster/components/private-network/NetworkFlowSummary";
-import ZeroEgressCallout from "@/features/cpu-cluster/components/private-network/ZeroEgressCallout";
+import ComputeInstanceCard from "./ComputeInstanceCard";
+import NetworkFlowSummary from "./NetworkFlowSummary";
+import ZeroEgressCallout from "./ZeroEgressCallout";
 import {
   COMPUTE_INSTANCES,
   NETWORKING_FEATURES,
-} from "@/features/cpu-cluster/data/private-network-section.data";
+} from "../../data/private-network-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const PrivateNetworkSection = () => {
@@ -16,7 +16,12 @@ const PrivateNetworkSection = () => {
       aria-labelledby="cpu-private-network-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="cpu-private-network-section-heading" align="center" className="max-w-5xl">
+        <Text
+          as="h2"
+          id="cpu-private-network-section-heading"
+          align="center"
+          className="max-w-5xl"
+        >
           Same Private Network,
           <Text as="span" variant="h2" textColor="primary">
             as your GPU Cluster.

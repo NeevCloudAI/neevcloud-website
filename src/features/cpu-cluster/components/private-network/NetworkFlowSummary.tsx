@@ -1,8 +1,8 @@
-import FlowBand from "@/features/cpu-cluster/components/private-network/FlowBand";
+import FlowBand from "./FlowBand";
 import {
   FLOW_SUMMARY_BADGE_TEXT,
   FLOW_SUMMARY_REGION_TEXT,
-} from "@/features/cpu-cluster/constants/private-network-section.constants";
+} from "../../constants/private-network-section.constants";
 import { Text } from "@/shared/ui-lib";
 
 const NetworkFlowSummary = () => {

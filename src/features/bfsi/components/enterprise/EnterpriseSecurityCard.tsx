@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import type { EnterpriseSecurityCardProps } from "@/features/bfsi/types/enterprise-section.types";
 import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
+import { EnterpriseSecurityCardProps } from "../../types/enterprise-section.types";
 
 const EnterpriseSecurityCard = ({
   category,
@@ -14,7 +14,7 @@ const EnterpriseSecurityCard = ({
     <article
       className={cn(
         "flex w-full flex-col rounded-md bg-gray-10 p-4 md:p-10",
-        className,
+        className
       )}
     >
       <div className="w-fit rounded-md bg-white p-3.75">
@@ -38,7 +38,12 @@ const EnterpriseSecurityCard = ({
             className="flex items-center flex-wrap gap-2.5 rounded-md bg-white px-3.75 py-2.5"
           >
             <div className="flex items-center gap-2.5">
-              <Text as="h6" textColor="primary" className="shrink-0" aria-hidden="true">
+              <Text
+                as="h6"
+                textColor="primary"
+                className="shrink-0"
+                aria-hidden="true"
+              >
                 •
               </Text>
               <Text as="h6" className="whitespace-nowrap">

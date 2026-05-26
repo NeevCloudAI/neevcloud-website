@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Container from "@/shared/components/container";
 import { Divider, Text } from "@/shared/ui-lib";
-import { INFRASTRUCTURE_GPU_AVAILABILITY_ROWS } from "@/features/Home/constants/infrastructure-section.constants";
+import { INFRASTRUCTURE_GPU_AVAILABILITY_ROWS } from "../constants/infrastructure-section.constants";
 import GpuAvailabilityRow from "./GpuAvailabilityRow";
 
 function InfrastructureNativeFlowDiagram() {

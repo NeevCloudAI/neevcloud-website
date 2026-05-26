@@ -2,9 +2,9 @@ import { Text } from "@/shared/ui-lib";
 import {
   CPU_CONFIG_CELL_CLASS,
   CPU_CONFIG_TABLE_HEADERS,
-} from "@/features/cpu-cluster/constants/cpu-configuration.constants";
-import CPUConfigurationTableRow from "@/features/cpu-cluster/components/CPUConfigurationTableRow";
-import type { CpuInstanceFamily } from "@/features/cpu-cluster/types/cpu-configuration.types";
+} from "../constants/cpu-configuration.constants";
+import CPUConfigurationTableRow from "./CPUConfigurationTableRow";
+import type { CpuInstanceFamily } from "../types/cpu-configuration.types";
 
 type CPUConfigurationTableProps = {
   family: CpuInstanceFamily;
@@ -19,12 +19,7 @@ const CPUConfigurationTable = ({ family }: CPUConfigurationTableProps) => {
         </Text>
         {` configuration: ${family.titleName}`}
       </Text>
-      <Text
-        as="h6"
-        textColor="gray-80"
-        className="mt-1"
-        fontFamily="spaceMono"
-      >
+      <Text as="h6" textColor="gray-80" className="mt-1" fontFamily="spaceMono">
         {family.subtitle}
       </Text>
 

@@ -1,4 +1,4 @@
-import type { RightModelTableHeader } from "@/features/model-catalog/types/right-model-section.types";
+import type { RightModelTableHeader } from "../types/right-model-section.types";
 
 export const RIGHT_MODEL_TABLE_HEADERS: readonly RightModelTableHeader[] = [
   { id: "model", name: "model" },

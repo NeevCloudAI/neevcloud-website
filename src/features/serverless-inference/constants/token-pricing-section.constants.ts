@@ -1,4 +1,4 @@
-import type { TokenPricingTableHeader } from "@/features/serverless-inference/types/token-pricing-section.types";
+import { TokenPricingTableHeader } from "../types/token-pricing-section.types";
 
 export const TOKEN_PRICING_TABLE_HEADERS: readonly TokenPricingTableHeader[] = [
   { id: "model", name: "model" },

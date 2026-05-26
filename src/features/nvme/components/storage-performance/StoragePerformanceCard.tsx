@@ -1,5 +1,5 @@
-import StoragePerformanceFeatureItem from "@/features/nvme/components/storage-performance/StoragePerformanceFeatureItem";
-import type { StoragePerformanceCardData } from "@/features/nvme/types/storage-performance-section.types";
+import StoragePerformanceFeatureItem from "./StoragePerformanceFeatureItem";
+import { StoragePerformanceCardData } from "../../types/storage-performance-section.types";
 import { Text } from "@/shared/ui-lib";
 
 type StoragePerformanceCardProps = {

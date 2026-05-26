@@ -1,4 +1,4 @@
-import type { GovernmentServiceItem } from "@/features/public-sector/types/government-section.types";
+import { GovernmentServiceItem } from "../types/government-section.types";
 
 export const GOVERNMENT_SERVICES: readonly GovernmentServiceItem[] = [
   {

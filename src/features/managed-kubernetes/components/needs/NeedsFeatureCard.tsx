@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import type { NeedsFeatureCardProps } from "@/features/managed-kubernetes/types/needs-feature-card.types";
+import type { NeedsFeatureCardProps } from "../../types/needs-feature-card.types";
 
 const NeedsFeatureCard = ({
   title,

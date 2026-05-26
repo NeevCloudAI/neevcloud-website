@@ -1,4 +1,4 @@
-import type { UseCaseDefinition } from "@/features/gpu-cluster/types/use-cases-section.types";
+import type { UseCaseDefinition } from "../types/use-cases-section.types";
 
 export const USE_CASES: UseCaseDefinition[] = [
   {

@@ -2,7 +2,7 @@ import type { StorageComparisonMetric } from "@/shared/components/StorageCompari
 import type {
   ModelsSectionStep,
   ModelsSectionStepTwoCard,
-} from "@/features/model-playground/types/models-section.types";
+} from "../types/models-section.types";
 
 export const MODELS_SECTION_STEPS: ModelsSectionStep[] = [
   {

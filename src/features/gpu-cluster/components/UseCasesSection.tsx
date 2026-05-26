@@ -1,5 +1,5 @@
 import Container from "@/shared/components/container";
-import UseCasesSectionClient from "@/features/gpu-cluster/components/UseCasesSectionClient";
+import UseCasesSectionClient from "./UseCasesSectionClient";
 import { Text } from "@/shared/ui-lib";
 
 const UseCasesSection = () => {

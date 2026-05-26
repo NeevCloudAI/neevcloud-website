@@ -1,4 +1,4 @@
-import type { IntelligenceCard } from "@/features/model-api/types/intelligence-section.types";
+import type { IntelligenceCard } from "../types/intelligence-section.types";
 
 export const INTELLIGENCE_CARDS: IntelligenceCard[] = [
   {

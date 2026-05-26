@@ -1,5 +1,5 @@
-import { PROMPT_SUGGESTIONS } from "@/features/model-catalog/constants/model-action-section.constants";
-import type { ModelActionItem } from "@/features/model-catalog/types/model-action-section.types";
+import { PROMPT_SUGGESTIONS } from "../../constants/model-action-section.constants";
+import type { ModelActionItem } from "../../types/model-action-section.types";
 import { Button, Text } from "@/shared/ui-lib";
 
 type ModelActionPromptPanelProps = {

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import type { PerformanceMetricCardProps } from "@/features/bfsi/types/performance-section.types";
 import { Text } from "@/shared/ui-lib";
+import { PerformanceMetricCardProps } from "../../types/performance-section.types";
 
 const PerformanceMetricCard = ({
   metric,
@@ -12,7 +12,7 @@ const PerformanceMetricCard = ({
     <article
       className={cn(
         "rounded-md bg-white-5 p-4 backdrop-blur-md md:px-7.5 md:py-10",
-        className,
+        className
       )}
     >
       <Text as="h1" textColor="primary">

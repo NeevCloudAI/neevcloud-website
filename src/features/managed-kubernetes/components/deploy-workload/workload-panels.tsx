@@ -1,7 +1,7 @@
-import GpuClusterWorkloadContent from "@/features/managed-kubernetes/components/deploy-workload/GpuClusterWorkloadContent";
-import ScaleWorkloadContent from "@/features/managed-kubernetes/components/deploy-workload/ScaleWorkloadContent";
-import TrainingWorkloadContent from "@/features/managed-kubernetes/components/deploy-workload/TrainingWorkloadContent";
-import VllmWorkloadContent from "@/features/managed-kubernetes/components/deploy-workload/VllmWorkloadContent";
+import GpuClusterWorkloadContent from "./GpuClusterWorkloadContent";
+import ScaleWorkloadContent from "./ScaleWorkloadContent";
+import TrainingWorkloadContent from "./TrainingWorkloadContent";
+import VllmWorkloadContent from "./VllmWorkloadContent";
 
 export const WORKLOAD_PANELS = [
   GpuClusterWorkloadContent,

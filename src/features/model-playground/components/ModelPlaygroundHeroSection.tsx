@@ -1,6 +1,6 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { MODEL_PLAYGROUND_HERO } from "@/features/model-playground/constants/model-playground-page.constants";
+import { MODEL_PLAYGROUND_HERO } from "../constants/model-playground-page.constants";
 
 const ModelPlaygroundHeroSection = () => {
   return (

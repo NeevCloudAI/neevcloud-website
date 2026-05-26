@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
-import UseModelCard from "@/features/model-catalog/components/UseModelCard";
-import { USE_MODEL_CARDS } from "@/features/model-catalog/data/use-model-section.data";
+import UseModelCard from "./UseModelCard";
+import { USE_MODEL_CARDS } from "../data/use-model-section.data";
 import { Text } from "@/shared/ui-lib";
 
 const UseModelSection = () => {

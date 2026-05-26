@@ -1,6 +1,6 @@
 import { Clock, SquareCheck } from "lucide-react";
 import { Text } from "@/shared/ui-lib";
-import type { Step } from "@/features/serverless-inference/types/three-steps-section.types";
+import { Step } from "../../types/three-steps-section.types";
 
 type StepContentProps = {
   step: Step;

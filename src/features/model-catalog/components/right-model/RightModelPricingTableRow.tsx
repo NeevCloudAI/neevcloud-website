@@ -1,7 +1,7 @@
-import RightModelRowActions from "@/features/model-catalog/components/right-model/RightModelRowActions";
-import { RIGHT_MODEL_TABLE_CELL_CLASS } from "@/features/model-catalog/constants/right-model-section.constants";
-import type { ModelPricingRow } from "@/features/model-catalog/types/right-model-section.types";
 import { Text } from "@/shared/ui-lib";
+import { ModelPricingRow } from "../../types/right-model-section.types";
+import { RIGHT_MODEL_TABLE_CELL_CLASS } from "../../constants/right-model-section.constants";
+import RightModelRowActions from "./RightModelRowActions";
 
 type RightModelPricingTableRowProps = {
   row: ModelPricingRow;
@@ -10,7 +10,9 @@ type RightModelPricingTableRowProps = {
 const RightModelPricingTableRow = ({ row }: RightModelPricingTableRowProps) => {
   return (
     <tr className="border-b border-black-7">
-      <td className={`${RIGHT_MODEL_TABLE_CELL_CLASS} min-w-44 whitespace-normal`}>
+      <td
+        className={`${RIGHT_MODEL_TABLE_CELL_CLASS} min-w-44 whitespace-normal`}
+      >
         <Text as="h6" textColor="primary-105" fontFamily="spaceMono">
           {row.model.title}
         </Text>

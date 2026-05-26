@@ -20,18 +20,10 @@ const DeployStorageCliCode = () => {
           >
             # Launch GPU with 500GB local NVMe
           </Text>
-          <Text
-            fontFamily="spaceMono"
-            textColor="white"
-            className="leading-6"
-          >
+          <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             Neevcloud gpu create \
           </Text>
-          <Text
-            fontFamily="spaceMono"
-            textColor="white"
-            className="leading-6"
-          >
+          <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             &nbsp; &nbsp; &nbsp; {`--gpu`}
             <Text as="span" textColor="red-50" variant="p">
               h100
@@ -40,11 +32,7 @@ const DeployStorageCliCode = () => {
               \
             </Text>
           </Text>
-          <Text
-            fontFamily="spaceMono"
-            textColor="white"
-            className="leading-6"
-          >
+          <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             &nbsp; &nbsp; &nbsp; {`- - local storage`}
             <Text as="span" textColor="primary" variant="p">
               500gb
@@ -57,18 +45,10 @@ const DeployStorageCliCode = () => {
           >
             # Add storage to running instance
           </Text>
-          <Text
-            fontFamily="spaceMono"
-            textColor="white"
-            className="leading-6"
-          >
+          <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             neevcloud storage attach \
           </Text>
-          <Text
-            fontFamily="spaceMono"
-            textColor="white"
-            className="leading-6"
-          >
+          <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             &nbsp; &nbsp; &nbsp; {`- instance - id `}
             <Text
               as="span"
@@ -80,11 +60,7 @@ const DeployStorageCliCode = () => {
             </Text>
             \
           </Text>
-          <Text
-            fontFamily="spaceMono"
-            textColor="white"
-            className="leading-6"
-          >
+          <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             &nbsp; &nbsp; &nbsp; {`- - local - storage`}
             <Text as="span" textColor="primary" variant="p">
               lib

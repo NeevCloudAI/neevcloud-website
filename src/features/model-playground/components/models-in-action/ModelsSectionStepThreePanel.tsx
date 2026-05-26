@@ -1,7 +1,7 @@
 import { CircleCheck } from "lucide-react";
 import { Text } from "@/shared/ui-lib";
-import ModelsSectionLiveBadge from "@/features/model-playground/components/models-in-action/ModelsSectionLiveBadge";
-import ModelsSectionPanelLogo from "@/features/model-playground/components/models-in-action/ModelsSectionPanelLogo";
+import ModelsSectionLiveBadge from "./ModelsSectionLiveBadge";
+import ModelsSectionPanelLogo from "./ModelsSectionPanelLogo";
 
 const ModelsSectionStepThreePanel = () => {
   return (

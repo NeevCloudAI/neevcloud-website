@@ -42,4 +42,3 @@ export const WITHOUT_NEEVCLOUD_BULLETS = [
   "Data scattered globally",
   "Weeks for GPU access",
 ] as const;
-

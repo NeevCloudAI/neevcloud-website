@@ -6,4 +6,3 @@ export type ComparisonSummaryCard = {
   description: string;
   description2: string;
 };
-

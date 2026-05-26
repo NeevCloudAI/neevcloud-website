@@ -1,7 +1,7 @@
 "use client";
 
-import PricingCalculatorSlider from "@/features/model-api/components/pricing/PricingCalculatorSlider";
-import { formatCurrency } from "@/features/model-api/utils/pricing-calculator-utils";
+import PricingCalculatorSlider from "./PricingCalculatorSlider";
+import { formatCurrency } from "../../utils/pricing-calculator-utils";
 import { Text } from "@/shared/ui-lib";
 
 type PricingCalculatorWorkloadMixRowProps = {

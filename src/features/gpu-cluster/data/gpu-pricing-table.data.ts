@@ -1,4 +1,4 @@
-import type { GpuPricingRow } from "@/features/gpu-cluster/types/gpu-pricing-table.types";
+import type { GpuPricingRow } from "../types/gpu-pricing-table.types";
 
 export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   {

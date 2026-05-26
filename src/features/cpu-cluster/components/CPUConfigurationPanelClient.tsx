@@ -2,17 +2,17 @@
 
 import { useCallback, useState } from "react";
 import { Button, Text } from "@/shared/ui-lib";
-import CPUConfigurationTable from "@/features/cpu-cluster/components/CPUConfigurationTable";
-import { DEFAULT_CPU_INSTANCE_FAMILY } from "@/features/cpu-cluster/constants/cpu-configuration.constants";
+import CPUConfigurationTable from "./CPUConfigurationTable";
+import { DEFAULT_CPU_INSTANCE_FAMILY } from "../constants/cpu-configuration.constants";
 import {
   CPU_INSTANCE_FAMILIES,
   CPU_INSTANCE_FAMILY_BY_ID,
-} from "@/features/cpu-cluster/data/cpu-configuration.data";
-import type { CpuInstanceFamilyId } from "@/features/cpu-cluster/types/cpu-configuration.types";
+} from "../data/cpu-configuration.data";
+import type { CpuInstanceFamilyId } from "../types/cpu-configuration.types";
 
 const CPUConfigurationPanelClient = () => {
   const [activeFamilyId, setActiveFamilyId] = useState<CpuInstanceFamilyId>(
-    DEFAULT_CPU_INSTANCE_FAMILY,
+    DEFAULT_CPU_INSTANCE_FAMILY
   );
 
   const activeFamily = CPU_INSTANCE_FAMILY_BY_ID[activeFamilyId];

@@ -1,6 +1,6 @@
-import ExploreApiStepPreview from "@/features/model-api/components/explore-api/ExploreApiStepPreview";
-import ExploreApiStepsTabsClient from "@/features/model-api/components/explore-api/ExploreApiStepsTabsClient";
-import { EXPLORE_API_STEPS } from "@/features/model-api/data/explore-api-section.data";
+import ExploreApiStepPreview from "./explore-api/ExploreApiStepPreview";
+import ExploreApiStepsTabsClient from "./explore-api/ExploreApiStepsTabsClient";
+import { EXPLORE_API_STEPS } from "../data/explore-api-section.data";
 import FooterCard from "@/shared/components/footer-card";
 import { Text } from "@/shared/ui-lib";
 

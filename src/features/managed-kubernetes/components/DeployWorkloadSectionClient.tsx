@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { Button } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
-import WorkloadCodeCard from "@/features/managed-kubernetes/components/deploy-workload/WorkloadCodeCard";
-import { WORKLOAD_PANELS } from "@/features/managed-kubernetes/components/deploy-workload/workload-panels";
-import { DEFAULT_WORKLOAD_INDEX } from "@/features/managed-kubernetes/constants/deploy-workload-section.constants";
-import { WORKLOAD_OPTIONS } from "@/features/managed-kubernetes/data/deploy-workload-section.data";
+import WorkloadCodeCard from "./deploy-workload/WorkloadCodeCard";
+import { WORKLOAD_PANELS } from "./deploy-workload/workload-panels";
+import { DEFAULT_WORKLOAD_INDEX } from "../constants/deploy-workload-section.constants";
+import { WORKLOAD_OPTIONS } from "../data/deploy-workload-section.data";
 
 const DeployWorkloadSectionClient = () => {
   const [selectedIndex, setSelectedIndex] = useState(DEFAULT_WORKLOAD_INDEX);
@@ -47,7 +47,7 @@ const DeployWorkloadSectionClient = () => {
                 isLast && "rounded-r-md",
                 isSelected
                   ? "bg-primary-100 text-black"
-                  : "border-gray-90 text-gray-65",
+                  : "border-gray-90 text-gray-65"
               )}
             >
               {option.label}

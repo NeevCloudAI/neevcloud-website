@@ -1,4 +1,4 @@
-import type { ReviewSectionCard } from "@/features/Home/types/reviews-section.types";
+import type { ReviewSectionCard } from "../types/reviews-section.types";
 
 export const REVIEWS_SECTION_CARDS: ReviewSectionCard[] = [
   {

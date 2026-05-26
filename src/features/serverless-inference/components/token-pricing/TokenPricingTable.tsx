@@ -1,10 +1,10 @@
 import { Text } from "@/shared/ui-lib";
-import TokenPricingTableRow from "@/features/serverless-inference/components/token-pricing/TokenPricingTableRow";
 import {
   TOKEN_PRICING_TABLE_CELL_CLASS,
   TOKEN_PRICING_TABLE_HEADERS,
-} from "@/features/serverless-inference/constants/token-pricing-section.constants";
-import { TOKEN_PRICING_ROWS } from "@/features/serverless-inference/data/token-pricing-section.data";
+} from "../../constants/token-pricing-section.constants";
+import { TOKEN_PRICING_ROWS } from "../../data/token-pricing-section.data";
+import TokenPricingTableRow from "./TokenPricingTableRow";
 
 const TokenPricingTable = () => {
   return (

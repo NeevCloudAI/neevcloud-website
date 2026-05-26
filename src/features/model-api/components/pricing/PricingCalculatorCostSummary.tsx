@@ -1,4 +1,4 @@
-import { formatCurrency } from "@/features/model-api/utils/pricing-calculator-utils";
+import { formatCurrency } from "../../utils/pricing-calculator-utils";
 import { Text } from "@/shared/ui-lib";
 
 type PricingCalculatorCostSummaryProps = {

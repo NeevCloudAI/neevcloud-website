@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import ModelActionOutputPanel from "@/features/model-catalog/components/model-action/ModelActionOutputPanel";
-import ModelActionPromptPanel from "@/features/model-catalog/components/model-action/ModelActionPromptPanel";
-import ModelActionSidebar from "@/features/model-catalog/components/model-action/ModelActionSidebar";
-import { MODEL_ACTION_ITEMS } from "@/features/model-catalog/data/model-action-section.data";
+import ModelActionOutputPanel from "./ModelActionOutputPanel";
+import ModelActionPromptPanel from "./ModelActionPromptPanel";
+import ModelActionSidebar from "./ModelActionSidebar";
+import { MODEL_ACTION_ITEMS } from "../../data/model-action-section.data";
 
 const ModelActionPlaygroundClient = () => {
   const [selectedModelId, setSelectedModelId] = useState(
-    MODEL_ACTION_ITEMS[0].id,
+    MODEL_ACTION_ITEMS[0].id
   );
   const [prompt, setPrompt] = useState("");
 

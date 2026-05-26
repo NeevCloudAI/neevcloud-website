@@ -2,9 +2,9 @@ import { Text } from "@/shared/ui-lib";
 import {
   GPU_PRICING_TABLE_CELL_CLASS,
   GPU_PRICING_TABLE_HEADERS,
-} from "@/features/gpu-cluster/constants/gpu-pricing-table.constants";
-import { GPU_PRICING_TABLE_ROWS } from "@/features/gpu-cluster/data/gpu-pricing-table.data";
-import GpuPricingTableRow from "@/features/gpu-cluster/components/GpuPricingTableRow";
+} from "../constants/gpu-pricing-table.constants";
+import { GPU_PRICING_TABLE_ROWS } from "../data/gpu-pricing-table.data";
+import GpuPricingTableRow from "./GpuPricingTableRow";
 
 const GpuPricingTable = () => {
   return (

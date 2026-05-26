@@ -12,8 +12,7 @@ import {
 import type { FooterCtaContent, FooterLinkGroup } from "../data/footer-types";
 import { cn } from "@/lib/utils";
 
-const footerLinkClassName =
-  "flex flex-col text-white-50 pb-2.5 text-sm";
+const footerLinkClassName = "flex flex-col text-white-50 pb-2.5 text-sm";
 
 function hasFooterHref(href: string): boolean {
   return href.trim().length > 0;

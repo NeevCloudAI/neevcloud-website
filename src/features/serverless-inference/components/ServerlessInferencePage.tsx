@@ -4,7 +4,7 @@ import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 import { Divider } from "@/shared/ui-lib";
-import ThreeStepsSection from "./ThreeStepsSection";
+import ThreeStepSection from "./ThreeStepSection";
 import ServerlessInferenceHeroSection from "./ServerlessInferenceHeroSection";
 import ModelsSection from "./ModelsSection";
 import TokenPricingSection from "./TokenPricingSection";
@@ -19,7 +19,7 @@ const ServerlessInferencePage = () => {
       <HeaderComponent />
       <Divider orientation="horizontal" />
       <ServerlessInferenceHeroSection />
-      <ThreeStepsSection />
+      <ThreeStepSection />
       <ModelBuilderSection />
       <ModelsSection />
       <TokenPricingSection />

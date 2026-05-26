@@ -7,7 +7,7 @@ import {
 } from "../constants/three-steps-section.constants";
 import ThreeStepsSectionClient from "./ThreeStepsSectionClient";
 
-const ThreeStepsSection = () => {
+const ThreeStepSection = () => {
   return (
     <section
       className="bg-gray-10 relative py-8 md:py-16 2xl:py-25"
@@ -35,4 +35,4 @@ const ThreeStepsSection = () => {
   );
 };
 
-export default ThreeStepsSection;
+export default ThreeStepSection;

@@ -47,7 +47,7 @@ const DeployWorkloadSectionClient = () => {
                 isLast && "rounded-r-md",
                 isSelected
                   ? "bg-primary-100 text-black"
-                  : "border-gray-90 text-gray-65"
+                  : "border-gray-90 text-gray-65",
               )}
             >
               {option.label}

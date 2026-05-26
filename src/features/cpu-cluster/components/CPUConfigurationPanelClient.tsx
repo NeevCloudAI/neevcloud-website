@@ -12,7 +12,7 @@ import type { CpuInstanceFamilyId } from "../types/cpu-configuration.types";
 
 const CPUConfigurationPanelClient = () => {
   const [activeFamilyId, setActiveFamilyId] = useState<CpuInstanceFamilyId>(
-    DEFAULT_CPU_INSTANCE_FAMILY
+    DEFAULT_CPU_INSTANCE_FAMILY,
   );
 
   const activeFamily = CPU_INSTANCE_FAMILY_BY_ID[activeFamilyId];

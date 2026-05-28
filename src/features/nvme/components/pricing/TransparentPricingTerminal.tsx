@@ -41,11 +41,7 @@ const TransparentPricingTerminal = () => {
           value="none"
           valueColor="primary"
         />
-        <TransparentPricingRow
-          label="Billing granularity"
-          value="Per second"
-          showBottomMargin={false}
-        />
+        <TransparentPricingRow label="Billing granularity" value="Per second" />
       </div>
     </div>
   );

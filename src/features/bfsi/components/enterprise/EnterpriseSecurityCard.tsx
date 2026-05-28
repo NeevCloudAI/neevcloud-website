@@ -14,7 +14,7 @@ const EnterpriseSecurityCard = ({
     <article
       className={cn(
         "flex w-full flex-col rounded-md bg-gray-10 p-4 md:p-10",
-        className
+        className,
       )}
     >
       <div className="w-fit rounded-md bg-white p-3.75">

@@ -9,7 +9,7 @@ import ModelsSectionStepContent from "./models-in-action/ModelsSectionStepConten
 
 const ModelsSectionClient = () => {
   const [activeStep, setActiveStep] = useState(
-    DEFAULT_MODELS_SECTION_STEP_INDEX
+    DEFAULT_MODELS_SECTION_STEP_INDEX,
   );
   const step = MODELS_SECTION_STEPS[activeStep];
   const ActivePanel = MODELS_SECTION_STEP_PANELS[activeStep];

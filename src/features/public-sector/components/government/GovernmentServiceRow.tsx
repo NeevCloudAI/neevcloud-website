@@ -23,7 +23,7 @@ const GovernmentServiceRow = ({
       href={href}
       className={cn(
         "group flex w-full items-center justify-between rounded-lg border border-white-10 bg-white-5 p-4 backdrop-blur-md transition-colors hover:bg-primary-120/80 md:px-10 md:py-7",
-        className
+        className,
       )}
       aria-label={`${title}: ${description}`}
     >

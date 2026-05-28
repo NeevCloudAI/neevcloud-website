@@ -20,13 +20,13 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId
+      currentItemId === itemId ? "" : itemId,
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId)
+      panel.items.some((item) => item.id === activeItemId),
     );
     return idx === -1 ? 0 : idx;
   })();

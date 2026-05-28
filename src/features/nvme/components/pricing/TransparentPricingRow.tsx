@@ -5,7 +5,6 @@ type TransparentPricingRowProps = {
   value: string;
   valueColor?: "primary" | "white";
   labelColor?: "blue-40";
-  showBottomMargin?: boolean;
 };
 
 const TransparentPricingRow = ({
@@ -13,7 +12,6 @@ const TransparentPricingRow = ({
   value,
   valueColor = "white",
   labelColor = "blue-40",
-  showBottomMargin = true,
 }: TransparentPricingRowProps) => {
   return (
     <>

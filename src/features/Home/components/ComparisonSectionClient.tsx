@@ -23,7 +23,7 @@ function ComparisonCard({
       className={cn(
         "rounded-md p-4 md:p-8",
         "flex flex-col md:flex-row items-start md:items-center justify-between gap-4",
-        inverted ? "bg-gray-80 text-white" : "bg-white text-black"
+        inverted ? "bg-gray-80 text-white" : "bg-white text-black",
       )}
     >
       <Text as="h1" className="text-5xl md:text-7xl">
@@ -57,7 +57,7 @@ export default function ComparisonSectionClient() {
         "py-8 md:py-16 2xl:py-25",
         isWithNeevCloud
           ? "bg-gray-10"
-          : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"
+          : "bg-black bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat",
       )}
     >
       <Container className="flex flex-col items-center">
@@ -97,7 +97,7 @@ export default function ComparisonSectionClient() {
             variant="outline-primary"
             className={cn(
               "rounded-r-none",
-              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white"
+              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white",
             )}
             textColor="black"
             weight="semibold"
@@ -111,7 +111,7 @@ export default function ComparisonSectionClient() {
             weight="semibold"
             className={cn(
               "rounded-l-none",
-              isWithNeevCloud ? "" : "bg-gray-90 text-white"
+              isWithNeevCloud ? "" : "bg-gray-90 text-white",
             )}
             onClick={() => setIsWithNeevCloud(true)}
             aria-pressed={isWithNeevCloud}
@@ -125,7 +125,7 @@ export default function ComparisonSectionClient() {
           <div
             className={cn(
               "flex md:flex-2 flex-col p-4 md:p-8 rounded-md w-full gap-4",
-              isWithNeevCloud ? "bg-primary" : "bg-gray-90"
+              isWithNeevCloud ? "bg-primary" : "bg-gray-90",
             )}
           >
             {COMPARISON_SUMMARY_CARDS.map((card) => (
@@ -157,7 +157,7 @@ export default function ComparisonSectionClient() {
             <Text
               as="h6"
               className={cn(
-                isWithNeevCloud ? "mt-4 md:mt-12.5" : "mt-4 md:mt-7.5"
+                isWithNeevCloud ? "mt-4 md:mt-12.5" : "mt-4 md:mt-7.5",
               )}
               textColor={isWithNeevCloud ? "black-5" : "white"}
             >
@@ -167,7 +167,7 @@ export default function ComparisonSectionClient() {
               orientation="horizontal"
               className={cn(
                 "my-4.5",
-                isWithNeevCloud ? "bg-black-10" : "bg-white-10"
+                isWithNeevCloud ? "bg-black-10" : "bg-white-10",
               )}
             />
 
@@ -180,7 +180,7 @@ export default function ComparisonSectionClient() {
                   orientation="horizontal"
                   className={cn(
                     "my-4.5",
-                    isWithNeevCloud ? "bg-black-10" : "bg-white-10"
+                    isWithNeevCloud ? "bg-black-10" : "bg-white-10",
                   )}
                   aria-hidden={idx === bullets.length - 2}
                 />

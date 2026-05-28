@@ -20,7 +20,12 @@ const ModelsSection = () => {
             Not Just in Theory
           </Text>
         </Text>
-        <Text align="center" textColor="black-5" className="max-w-2xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           Understanding what a model can do is easier when you can actually use
           it. Our Model Playground gives you hands-on access to test prompts,
           upload images, analyze text, and explore capabilities before writing a

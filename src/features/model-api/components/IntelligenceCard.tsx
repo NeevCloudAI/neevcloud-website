@@ -13,7 +13,11 @@ const IntelligenceCard = ({ card }: IntelligenceCardProps) => {
         <Text as="h6" textColor="blue-40">
           {card.badgeLabel}
         </Text>
-        <Text as="h3" weight="semibold" className="mt-2 md:mt-7.5">
+        <Text
+          as="h3"
+          weight="semibold"
+          className="mt-2 md:mt-7.5 text-[24px] md:text-[30px]"
+        >
           {card.title}
         </Text>
         <Text as="h6" className="mt-2.5">

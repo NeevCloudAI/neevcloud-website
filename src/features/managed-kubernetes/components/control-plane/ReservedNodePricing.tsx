@@ -26,7 +26,7 @@ const ReservedNodePricing = () => {
         <Text as="h3" weight="semibold">
           Reserved Node Pricing
         </Text>
-        <Text textColor="primary" as="h6">
+        <Text textColor="primary" as="h6" fontFamily="spaceMono">
           {`commit longer  ·  pay less  ·  cancel anytime by EOL of term`}
         </Text>
       </div>

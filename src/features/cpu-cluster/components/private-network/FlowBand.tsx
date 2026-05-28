@@ -9,7 +9,7 @@ type FlowBandProps = {
 const FlowBand = ({ direction }: FlowBandProps) => {
   return (
     <div
-      className="relative flex h-30 w-fit flex-col items-center justify-between px-0.5 sm:px-1 md:h-3 md:w-full md:flex-row md:px-0"
+      className="relative flex h-20 w-fit flex-col items-center justify-between px-0.5 sm:px-1 md:h-3 md:w-full md:flex-row md:px-0"
       aria-hidden="true"
     >
       <div className="absolute bottom-0 left-1/2 top-0 -translate-x-1/2 border-l border-[0.5px] border-dashed border-gray-60 md:hidden" />

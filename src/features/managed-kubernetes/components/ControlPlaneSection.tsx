@@ -27,7 +27,12 @@ const ControlPlaneSection = () => {
           </Text>
           Pay Only for Nodes.
         </Text>
-        <Text as="h6" textColor="gray-10" align="center" className="max-w-2xl">
+        <Text
+          as="h6"
+          textColor="gray-10"
+          align="center"
+          className="max-w-2xl mt-2.5"
+        >
           The NKS control plane runs on our infrastructure at no charge. You pay
           only for GPU and CPU nodes in your cluster.
         </Text>

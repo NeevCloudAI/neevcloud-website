@@ -20,20 +20,20 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId,
+      currentItemId === itemId ? "" : itemId
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId),
+      panel.items.some((item) => item.id === activeItemId)
     );
     return idx === -1 ? 0 : idx;
   })();
 
   return (
     <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat overflow-hidden bg-gray-10 py-[3vh] md:py-[10vh]">
-      <Container className="relative flex flex-col gap-4 md:gap-12">
+      <Container className="relative flex flex-col">
         <header className="flex flex-col items-center text-center">
           <Text as="h2">
             One
@@ -47,13 +47,13 @@ const StackSection = () => {
             </Text>
             . Silicon to endpoint.
           </Text>
-          <Text as="h6" textColor="black-5">
+          <Text as="h6" textColor="black-5" className="mt-2.5">
             Deploy AI on infrastructure designed for scale, resilience, and
             speed.
           </Text>
         </header>
 
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 mt-4 md:mt-12.5">
           <div className="flex flex-col gap-2 md:gap-4 flex-1">
             <StackPanel
               panel={leftTop}

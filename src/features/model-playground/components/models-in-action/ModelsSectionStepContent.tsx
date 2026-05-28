@@ -18,7 +18,7 @@ const ModelsSectionStepContent = ({ step }: ModelsSectionStepContentProps) => {
         {step.number}
       </Text>
 
-      <Text as="h3" weight="semibold" className="text-[30px]">
+      <Text as="h3" weight="semibold" className="text-[30px] mt-5">
         {step.heading}
       </Text>
 

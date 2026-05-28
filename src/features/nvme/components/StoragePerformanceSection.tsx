@@ -22,12 +22,12 @@ const StoragePerformanceSection = () => {
             GPU Performance
           </Text>
         </Text>
-        <Text align="center" textColor="black-5" className="max-w-2xl">
+        <Text align="center" textColor="black-5" className="max-w-2xl mt-2.5">
           NeevCloud&apos;s high-performance NVMe local disks deliver sustained
           throughput and microsecond-level latency, so your compute never waits
           on your storage.
         </Text>
-        <ul className="grid grid-cols-1 gap-5 pt-4 md:pt-12.5 md:grid-cols-2 list-none p-0 m-0 w-full">
+        <ul className="grid grid-cols-1 gap-5 mt-4 md:mt-12.5 md:grid-cols-2 list-none w-full">
           {STORAGE_PERFORMANCE_CARDS.map((card) => (
             <li key={card.id}>
               <StoragePerformanceCard card={card} />

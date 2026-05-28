@@ -23,11 +23,16 @@ const MetricsSection = () => {
             Performance Metrics
           </Text>
         </Text>
-        <Text as="h6" textColor="black-5" className="max-w-3xl" align="center">
+        <Text
+          as="h6"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+          align="center"
+        >
           Measured with typical AI workloads, model training, checkpoint saves,
           and dataset streaming.
         </Text>
-        <ul className="mt-4 md:mt-12.5 grid w-full grid-cols-2 gap-4 md:grid-cols-4 list-none p-0 m-0">
+        <ul className="mt-4 md:mt-12.5 grid w-full grid-cols-2 gap-5 md:grid-cols-4 list-none p-0 m-0">
           {METRIC_CARDS.map((metric) => (
             <li key={metric.id}>
               <MetricCard metric={metric} />

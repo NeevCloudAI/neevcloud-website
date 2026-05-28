@@ -22,12 +22,17 @@ const DeployStorageSection = () => {
             NVMe Storage
           </Text>
         </Text>
-        <Text className="max-w-2xl" align="center" textColor="gray-90">
+        <Text
+          as="h6"
+          className="max-w-3xl mt-2.5"
+          align="center"
+          textColor="gray-90"
+        >
           Choose your deployment mode, automatic provisioning at launch or
           custom capacity. Generate your exact CLI command instantly.
         </Text>
 
-        <div className="w-full flex gap-4 mt-4 md:mt-12.5">
+        <div className="w-full flex flex-col md:flex-row gap-4 mt-4 md:mt-12.5">
           <DeployStorageAutomaticCard />
           <DeployStorageCustomTerminal />
         </div>

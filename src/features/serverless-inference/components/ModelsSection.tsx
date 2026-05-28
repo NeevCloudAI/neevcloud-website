@@ -22,7 +22,12 @@ const ModelsSection = () => {
           </Text>
         </Text>
 
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           From Kimi K2 to Llama 3 405B to GLM 4.5, every model runs on
           NeevCloud&apos;s GPU clusters in India and is served through a unified
           API. Switch models with a single parameter change.

@@ -22,7 +22,12 @@ const UseModelSection = () => {
             to use these models.
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-2xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-2xl mt-2.5"
+        >
           Pick the integration style that matches your stack. All three hit the
           same endpoints with the same auth, no behavioural differences.
         </Text>

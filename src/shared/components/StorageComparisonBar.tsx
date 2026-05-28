@@ -23,7 +23,7 @@ const StorageComparisonBar = ({
   return (
     <div className="flex w-full flex-col gap-1">
       <div className="flex items-center justify-between gap-4">
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-90">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-60">
           {metric.label}
         </Text>
         <Text as="h6" fontFamily="spaceMono" textColor={metric.valueColor}>
@@ -32,7 +32,7 @@ const StorageComparisonBar = ({
       </div>
       <div
         role="progressbar"
-        className={`relative h-2.75 w-full overflow-hidden rounded-full ${backgroundColor}`}
+        className={`mt-1 relative h-2.75 w-full overflow-hidden rounded-full ${backgroundColor}`}
       >
         <div
           className={`absolute inset-y-0 left-0 rounded-full ${metric.barColor}`}

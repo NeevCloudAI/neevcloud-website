@@ -24,7 +24,12 @@ const ExploreApiSection = () => {
         </Text>
       }
       description={
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           {`Integration follows a simple pattern: authenticate, send your data,
           receive predictions. Whether you're building a prototype or production
           system, the process stays the same.`}

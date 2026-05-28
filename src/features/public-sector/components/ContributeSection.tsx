@@ -23,13 +23,18 @@ const ContributeSection = () => {
           </Text>
           Goals
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           {`The India AI Mission aims to democratize AI access, build indigenous
           capabilities, and position India as a global AI leader. NeevCloud's
           infrastructure directly supports these objectives through accessible,
           sovereign, and scalable AI compute.`}
         </Text>
-        <ul className="grid list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-2 md:pt-12.5 w-full">
+        <ul className="grid list-none grid-cols-1 gap-5 p-0 m-0 mt-4 md:grid-cols-2 md:mt-12.5 w-full">
           {CONTRIBUTE_CATEGORIES.map((category) => (
             <li key={category.title}>
               <CategoryFeatureCard category={category} />

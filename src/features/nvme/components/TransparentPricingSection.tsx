@@ -26,7 +26,12 @@ const TransparentPricingSection = () => {
           </Text>
           Pricing
         </Text>
-        <Text as="h6" textColor="gray-10" align="center" className="max-w-3xl">
+        <Text
+          as="h6"
+          textColor="gray-10"
+          align="center"
+          className="max-w-3xl mt-2.5"
+        >
           25GB included free with every GPU instance. Pay only for additional
           capacity you provision.
         </Text>

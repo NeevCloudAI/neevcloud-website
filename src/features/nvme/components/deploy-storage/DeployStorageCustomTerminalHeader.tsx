@@ -16,7 +16,11 @@ const DeployStorageCustomTerminalHeader = () => {
           className="w-2.5 h-2.5 rounded-full bg-[#28c840]"
           aria-hidden="true"
         />
-        <Text textColor="white" fontFamily="spaceMono" className="ml-4">
+        <Text
+          textColor="white"
+          fontFamily="spaceMono"
+          className="ml-4 hidden md:block"
+        >
           Custom Capacity
         </Text>
       </div>

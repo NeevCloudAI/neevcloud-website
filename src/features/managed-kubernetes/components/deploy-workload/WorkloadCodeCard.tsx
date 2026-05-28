@@ -18,7 +18,7 @@ const WorkloadCodeCard = ({
       id={panelId}
       role="tabpanel"
       aria-labelledby={labelledBy}
-      className="bg-black rounded-md w-full font-mono mt-4 md:mt-7.5 h-88 overflow-auto"
+      className="bg-black rounded-md w-full font-mono mt-4 md:mt-7.5 h-92 overflow-auto"
     >
       <WorkloadCodeCardHeader />
       <div className="px-2 md:px-5 py-2 md:py-8">{children}</div>

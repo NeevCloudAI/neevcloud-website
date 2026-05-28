@@ -27,7 +27,7 @@ const PrivateNetworkSection = () => {
             as your GPU Cluster.
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5">
+        <Text as="h6" align="center" textColor="black-5" className="mt-2.5">
           Boot in seconds with curated stacks, or upload your own ISO.
         </Text>
         <div className="w-full mt-4 md:mt-12.5 flex flex-col items-stretch justify-between md:flex-row">

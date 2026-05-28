@@ -12,7 +12,7 @@ const PurposeFlowCard = ({ node, className }: PurposeFlowCardProps) => {
     <div
       className={cn(
         "z-3 flex flex-col items-center bg-white rounded-lg p-5 md:px-24",
-        className,
+        className
       )}
     >
       {node.badge && (
@@ -24,10 +24,10 @@ const PurposeFlowCard = ({ node, className }: PurposeFlowCardProps) => {
           {node.badge}
         </Text>
       )}
-      <Text as="h4" weight="semibold" className="mb-1.25">
+      <Text as="h4" weight="semibold" className="text-[18px] md:text-[22px]">
         {node.title}
       </Text>
-      <Text as="h6" textColor="gray-85">
+      <Text as="h6" textColor="gray-85" className="mt-1.25">
         {node.subtitle}
       </Text>
 

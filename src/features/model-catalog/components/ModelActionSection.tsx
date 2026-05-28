@@ -20,7 +20,12 @@ const ModelActionSection = () => {
             Action
           </Text>
         </Text>
-        <Text as="h6" textColor="black-5" align="center" className="max-w-3xl">
+        <Text
+          as="h6"
+          textColor="black-5"
+          align="center"
+          className="max-w-3xl mt-2.5"
+        >
           {`Pick a model, send a prompt, watch it respond. Latency, token count,
           and cost stream in real time, exactly what you'd see hitting the
           production API.`}

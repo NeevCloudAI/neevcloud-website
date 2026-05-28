@@ -51,7 +51,7 @@ const RuntimeTabs = () => {
   const highlightedLines = useMemo(() => {
     const { codeLines } = RUNTIME_TAB_BY_ID[activeTab];
     return codeLines.map((tokens, lineIdx) =>
-      renderLineTokens(tokens, `${activeTab}-${lineIdx}`),
+      renderLineTokens(tokens, `${activeTab}-${lineIdx}`)
     );
   }, [activeTab]);
 

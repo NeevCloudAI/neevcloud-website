@@ -19,7 +19,7 @@ const StepContent = ({ step }: StepContentProps) => {
         {step.number}
       </Text>
 
-      <Text className="bg-gray-60 text-gray-90 rounded-full px-3.75 py-1.25 w-fit">
+      <Text className="bg-gray-60 text-gray-90 rounded-full px-3.75 py-1.25 w-fit mt-2">
         {step.badge}
       </Text>
 

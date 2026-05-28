@@ -17,9 +17,7 @@ const TransparentPricingRow = ({
 }: TransparentPricingRowProps) => {
   return (
     <>
-      <div
-        className={`flex items-center justify-between gap-2 mt-5.5 ${showBottomMargin ? "mb-5" : ""}`}
-      >
+      <div className={`flex items-center justify-between gap-2 mt-5.5 mb-5`}>
         <Text fontFamily="spaceMono" textColor={labelColor} as="h6">
           {label}
         </Text>

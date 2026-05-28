@@ -10,13 +10,13 @@ export default function CloudComparisonCard({
   item,
 }: CloudComparisonCardProps) {
   return (
-    <article className="relative flex items-center gap-4 overflow-hidden rounded-md border border-gray-10 px-6 py-12">
+    <article className="relative flex items-center gap-5 overflow-hidden rounded-md border border-gray-10 p-4 md:px-6 md:py-12">
       <div className="h-20 w-20 shrink-0 bg-gray-50" aria-hidden />
       <div className="pr-8">
         <Text as="h3" weight="semibold">
           {item.title}
         </Text>
-        <Text as="h6" textColor="black-5">
+        <Text as="h6" textColor="black-5" className="mt-2.5">
           {item.description}
         </Text>
       </div>

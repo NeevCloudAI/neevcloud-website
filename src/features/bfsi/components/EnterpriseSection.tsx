@@ -21,7 +21,12 @@ const EnterpriseSection = () => {
             for BFSI.
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           NeevCloud infrastructure meets enterprise security and compliance
           requirements for BFSI organizations with independently audited
           controls and data protection.

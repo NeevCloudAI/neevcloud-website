@@ -33,7 +33,12 @@ const PurposeSection = () => {
           </Text>
         </Text>
 
-        <Text as="h6" align="center" textColor="black-15" className="max-w-2xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-15"
+          className="max-w-2xl mt-2.5"
+        >
           Click any node to inspect it. The diagram is the deploy: everything
           below the control plane is what you pay for; everything above runs on
           us.

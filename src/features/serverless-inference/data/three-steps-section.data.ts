@@ -8,7 +8,7 @@ export const STEPS: Step[] = [
   {
     number: "01",
     label: "STEP 01",
-    badge: "DAY 1 – BROWSE",
+    badge: "DAY 1 - BROWSE",
     title: "Choose your model",
     description:
       "Browse 20+ open-source models. Filter by task, size, provider, or cost. Every model is production-ready and version-pinned.",

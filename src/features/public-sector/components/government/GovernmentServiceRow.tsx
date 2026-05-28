@@ -23,13 +23,13 @@ const GovernmentServiceRow = ({
       href={href}
       className={cn(
         "group flex w-full items-center justify-between rounded-lg border border-white-10 bg-white-5 p-4 backdrop-blur-md transition-colors hover:bg-primary-120/80 md:px-10 md:py-7",
-        className,
+        className
       )}
       aria-label={`${title}: ${description}`}
     >
       <div className="flex items-center gap-4">
         <Text
-          as="h2"
+          as="h3"
           textColor="primary"
           weight="semibold"
           className="text-[30px] leading-none w-fit"

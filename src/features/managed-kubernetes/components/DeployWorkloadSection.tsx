@@ -21,7 +21,12 @@ const DeployWorkloadSection = () => {
             First Workload
           </Text>
         </Text>
-        <Text as="h6" textColor="black-5" align="center" className="max-w-3xl">
+        <Text
+          as="h6"
+          textColor="black-5"
+          align="center"
+          className="max-w-3xl mt-2.5"
+        >
           Four primitives, create, deploy, train, scale. Same CLI surface, same
           auth, same cluster.
         </Text>

@@ -18,18 +18,23 @@ const ModelBuilderSection = () => {
           </Text>
           model builders.
         </Text>
-        <Text textColor="gray-10" align="center" className="max-w-xl">
+        <Text
+          as="h6"
+          textColor="gray-10"
+          align="center"
+          className="max-w-2xl mt-2.5"
+        >
           {MODEL_BUILDER_COPY.description}
         </Text>
 
-        <div className="w-full flex flex-col items-center md:flex-row gap-4 mt-4 md:mt-12">
-          <aside className="flex-1 space-y-6 md:space-y-12">
+        <div className="w-full flex flex-col items-center md:flex-row gap-4 mt-4 md:mt-12.5">
+          <aside className="flex-1 flex flex-col gap-4 md:gap-12.5">
             {MODEL_BUILDER_FEATURES.map((feature) => (
-              <div key={feature.title} className="space-y-1 md:space-y-2">
+              <div key={feature.title}>
                 <Text as="h3" textColor="white" weight="semibold">
                   {feature.title}
                 </Text>
-                <Text as="h6" textColor="white">
+                <Text as="h6" textColor="white" className="mt-2.5">
                   {feature.description}
                 </Text>
               </div>

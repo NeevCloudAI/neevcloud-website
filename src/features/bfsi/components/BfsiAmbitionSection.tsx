@@ -23,7 +23,12 @@ const BfsiAmbitionSection = () => {
           </Text>
           Ambitions
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           {`As India accelerates AI adoption across government, public services, and strategic sectors, infrastructure requirements extend beyond technical specifications to include sovereignty, compliance, and alignment with national development goals.`}
         </Text>
         <ul className="grid w-full list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-3 md:pt-12.5">

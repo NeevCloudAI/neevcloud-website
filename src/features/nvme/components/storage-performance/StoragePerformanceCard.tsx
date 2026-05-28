@@ -8,7 +8,7 @@ type StoragePerformanceCardProps = {
 
 const StoragePerformanceCard = ({ card }: StoragePerformanceCardProps) => {
   return (
-    <article className="flex w-full flex-col gap-5 rounded-md bg-white p-4 md:px-10 md:py-12.5">
+    <article className="flex w-full flex-col gap-5 rounded-md bg-white p-4 md:p-10">
       <div className="flex gap-5 items-center">
         <div
           className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-blue-40"

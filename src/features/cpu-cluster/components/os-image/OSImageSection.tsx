@@ -17,7 +17,7 @@ const OSImageSection = () => {
             Ready to Deploy
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5">
+        <Text as="h6" align="center" textColor="black-5" className="mt-2.5">
           Boot in seconds with curated stacks, or upload your own ISO.
         </Text>
         <OSImageSectionClient />

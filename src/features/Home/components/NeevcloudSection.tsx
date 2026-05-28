@@ -7,7 +7,7 @@ import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
 
 export default function NeevcloudSection() {
   return (
-    <Container className="flex flex-col items-center justify-between gap-12 py-8 md:py-16 2xl:py-25">
+    <Container className="flex flex-col items-center justify-between py-8 md:py-16 2xl:py-25">
       <div>
         <Text as="h2" className="max-w-4xl" align="center">
           Why the
@@ -16,14 +16,19 @@ export default function NeevcloudSection() {
           </Text>
           Needs NeevCloud?
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           Legacy cloud providers and expensive &quot;neoclouds&quot; often force
           a choice between performance and price. We believe you should have
           both. NeevCloud is India’s first AI Supercloud, built from the ground
           up to make intelligence accessible to everyone.
         </Text>
       </div>
-      <div className="flex justify-center lg:flex-row flex-col w-full gap-4">
+      <div className="flex justify-center lg:flex-row flex-col w-full gap-5 mt-4 md:mt-12.5">
         <div className="relative flex-1">
           <Image
             src="/images/cloud-comparision.png"
@@ -132,13 +137,13 @@ export default function NeevcloudSection() {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between gap-3">
+        <div className="flex-1 flex flex-col justify-between gap-5">
           {CLOUD_COMPARISON_CARDS.map((item) => (
             <CloudComparisonCard key={item.id} item={item} />
           ))}
         </div>
       </div>
-      <div className="relative bg-primary-10 w-full rounded-md p-4 md:p-8 flex items-center gap-2 md:gap-8">
+      <div className="relative bg-primary-10 w-full rounded-md p-4 md:p-8 flex items-center gap-2 md:gap-8 mt-4 md:mt-12.5">
         <div className="bg-white w-fit py-2.5 px-3.5 md:py-5 md:px-6.5 rounded-full border border-primary">
           <Image
             src="/icons/india-map.svg"
@@ -148,13 +153,20 @@ export default function NeevcloudSection() {
           />
         </div>
         <div>
-          <Text as="h3" weight="semibold">
-            India&apos;s First
-            <Text as="span" variant="h3" weight="semibold" textColor="primary">
-              AI Supercloud
+          <div className="flex items-center gap-1.75">
+            <Text as="h3" weight="semibold" className="text-[30px]">
+              India&apos;s First
+              <Text
+                as="span"
+                weight="semibold"
+                textColor="primary"
+                className="text-[30px] mx-1.5"
+              >
+                AI Supercloud
+              </Text>
             </Text>
-          </Text>
-          <Text as="h6" textColor="black-5" className="mt-0.5">
+          </div>
+          <Text as="h6" textColor="black-5" className="mt-2.5">
             Built to Make Intelligence Accessible to Everyone.
           </Text>
         </div>

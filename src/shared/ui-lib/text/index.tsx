@@ -31,7 +31,7 @@ function Text({
           textColor,
           lineHeight,
           fontFamily,
-        }),
+        })
       )}
       {...props}
     />

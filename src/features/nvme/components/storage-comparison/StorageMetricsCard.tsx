@@ -21,7 +21,7 @@ const StorageMetricsCard = ({ card }: StorageMetricsCardProps) => {
           {card.badge}
         </Text>
       </div>
-      <ul className="mt-5 flex flex-col gap-2.25 list-none p-0 m-0">
+      <ul className="mt-5 flex flex-col gap-2.5 list-none p-0 m-0">
         {card.metrics.map((metric) => (
           <li key={metric.id}>
             <StorageComparisonBar metric={metric} />

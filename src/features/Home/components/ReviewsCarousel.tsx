@@ -1,7 +1,13 @@
 "use client";
 
 import { useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  MoveLeft,
+  MoveRight,
+  Star,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Text } from "@/shared/ui-lib";
 import { REVIEWS_SECTION_CARDS } from "../constants/reviews-section.constants";
@@ -20,7 +26,12 @@ function renderCard(card: ReviewSectionCard, index: number) {
           "flex min-w-76 flex-col items-start justify-end bg-primary p-4 md:p-12 text-center"
         }
       >
-        <Text as="h1" textColor="white" weight="normal" className="text-7xl">
+        <Text
+          as="h1"
+          textColor="white"
+          weight="normal"
+          className="text-5xl md:text-7xl"
+        >
           {card.headline}
         </Text>
         <Text textColor="gray-10">{card.subline}</Text>
@@ -34,21 +45,21 @@ function renderCard(card: ReviewSectionCard, index: number) {
         key={`${card.companyLabel}-${index}`}
         data-slide
         className={
-          "flex min-w-80 flex-col justify-between gap-4 bg-white p-4 md:p-10 border-r border-gray-10"
+          "flex min-w-80 flex-col justify-between gap-5 bg-white p-4 md:p-10 border-r border-gray-10"
         }
       >
         <Image
           src={"/icons/roor.svg"}
           alt={"roor.ai"}
-          width={120}
-          height={120}
+          width={135}
+          height={135}
         />
         <Image
           src={"/icons/quote.svg"}
           alt={"quote"}
           width={20}
           height={20}
-          className="mt-4 md:mt-6"
+          className="mt-4 md:mt-10"
         />
         <Text>{card.quote}</Text>
         <div className="mt-4 md:mt-12 flex items-center gap-3">
@@ -72,7 +83,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
       className="flex min-w-76 flex-col items-center justify-center bg-white border-r border-gray-10"
       aria-label={`${card.score} average from ${card.reviewCountLabel} on Google`}
     >
-      <Text as="h1" weight="normal" className="text-7xl">
+      <Text as="h1" weight="normal" className="text-5xl md:text-7xl">
         {card.score}
       </Text>
       <div
@@ -113,7 +124,7 @@ export default function ReviewsCarousel() {
   }, []);
 
   return (
-    <div className="relative mt-4 md:mt-13.5 ml-auto w-full px-4 max-w-screen-1xl xl:max-w-screen-3xl">
+    <div className="relative mt-4 md:mt-12.5 ml-auto w-full px-4 max-w-screen-1xl xl:max-w-screen-3xl">
       <div
         ref={scrollerRef}
         className={
@@ -129,24 +140,24 @@ export default function ReviewsCarousel() {
         <button
           type="button"
           className={cn(
-            "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black cursor-pointer",
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show previous reviews"
           onClick={() => scrollByDirection("left")}
         >
-          <ChevronLeft className="size-5" aria-hidden />
+          <MoveLeft size={15} aria-hidden />
         </button>
         <button
           type="button"
           className={cn(
-            "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black cursor-pointer",
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show next reviews"
           onClick={() => scrollByDirection("right")}
         >
-          <ChevronRight className="size-5" aria-hidden />
+          <MoveRight size={15} aria-hidden />
         </button>
       </div>
     </div>

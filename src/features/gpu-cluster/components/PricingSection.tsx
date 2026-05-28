@@ -28,7 +28,12 @@ const PricingSection = () => {
           </Text>
           Unmetered.
         </Text>
-        <Text textColor="gray-10" align="center">
+        <Text
+          as="h6"
+          textColor="gray-10"
+          align="center"
+          className="max-w-3xl mt-2.5"
+        >
           Commit and Save. The Longer the Plan, the Lower the Rate.
         </Text>
 

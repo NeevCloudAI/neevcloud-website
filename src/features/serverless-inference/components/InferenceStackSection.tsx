@@ -10,7 +10,12 @@ const InferenceStackSection = () => {
       aria-labelledby="inference-stack-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="inference-stack-section-heading" textColor="white">
+        <Text
+          as="h2"
+          id="inference-stack-section-heading"
+          textColor="white"
+          align="center"
+        >
           Real Applications,
           <Text as="span" variant="h2" textColor="primary" weight={"semibold"}>
             Production Ready

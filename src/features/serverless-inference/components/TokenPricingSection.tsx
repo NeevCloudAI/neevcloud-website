@@ -26,7 +26,12 @@ const TokenPricingSection = () => {
             No Surprises.
           </Text>
         </Text>
-        <Text as="h6" textColor="gray-10" align="center" className="max-w-3xl">
+        <Text
+          as="h6"
+          textColor="gray-10"
+          align="center"
+          className="max-w-3xl mt-2.5"
+        >
           Pay per token, input and output billed separately. All charges in INR.
           Volume discounts unlock automatically above 10M tokens per month.
           Reserved inference capacity available for high-volume workloads.

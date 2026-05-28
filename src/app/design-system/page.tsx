@@ -6,16 +6,16 @@ const DesignSystemPage = () => {
       <Text as="h1" className="bg-red-500">
         Design System for h1:
         <br />
-        font-size: 20px, 48px 60px
+        font-size: 36px, 42px, 48px, 60px
         <br />
-        line-height: 72px
+        line-height: 44px, 52px, 60px, 72px
       </Text>
       <Text as="h2" className="bg-green-500">
         Design System for h2:
         <br />
-        font-size: 18px, 30px, 40px
+        font-size: 28px, 32px, 36px, 40px
         <br />
-        line-height: 48px
+        line-height: 36px, 40px, 44px, 48px
       </Text>
       <Text as="h3" className="bg-blue-500">
         Design System for h3:
@@ -45,19 +45,12 @@ const DesignSystemPage = () => {
         <br />
         line-height: 22px
       </Text>
-      <Text as="p" className="bg-pink-500">
+      <Text className="bg-pink-500">
         Design System for p:
         <br />
         font-size: 14px
         <br />
         line-height: 20px
-      </Text>
-      <Text as="span" className="bg-gray-600">
-        Design System for span:
-        <br />
-        font-size: 12px, 14px, 16px
-        <br />
-        line-height: 22px
       </Text>
       <Text as="small" className="bg-gray-500">
         Design System for small:
@@ -70,4 +63,30 @@ const DesignSystemPage = () => {
   );
 };
 
+// <Text as="span" className="bg-gray-600">
+//   Design System for span:
+//   <br />
+//   font-size: 12px, 14px, 16px
+//   <br />
+//   line-height: 22px
+// </Text>
+
 export default DesignSystemPage;
+
+// Required font size: 60px, 40px, 30px, 24px, 22px, 20px, 18px, 16px, 14px, 12px, 10px
+// h1: 60px -
+// h2: 40px -
+// h3: 30px
+// h4: 24px
+// h5: 22px
+// h6: 20px
+// p: 18px
+// small: 16px
+// 14: 14
+// 12: 12
+
+//
+
+// caption: 14px
+// label: 12px
+// span: 16px

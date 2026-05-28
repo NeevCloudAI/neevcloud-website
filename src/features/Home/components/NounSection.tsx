@@ -19,18 +19,18 @@ const NounSection = () => {
 
       <Container className="relative z-10">
         <div className="flex items-center gap-2 md:gap-2 nowrap">
-          <Image src="/icons/noun.svg" alt="Noun" width={25} height={25} />
-          <Text as="h6" textColor="primary">
+          <Image src="/icons/noun.svg" alt="Noun" width={30} height={30} />
+          <Text as="h4" textColor="primary" weight="semibold">
             NOUN
           </Text>
-          <Divider className="bg-gray-50 h-6 mx-2" />
+          <Divider className="bg-gray-75 h-6 mx-2" />
           <Text as="h3" weight="semibold" textColor="white">
             Connecting People, Places, and Things.
           </Text>
         </div>
 
         <div className="flex flex-col gap-2 md:gap-4 w-full">
-          <div className="flex flex-wrap flex-row md:flex-col whitespace-nowrap gap-1 md:gap-4 mt-4 md:mt-12">
+          <div className="flex flex-wrap flex-row md:flex-col whitespace-nowrap gap-1 md:gap-4 mt-4 md:mt-12.5">
             <Text as="h1" textColor="white">
               Introducing
             </Text>
@@ -45,7 +45,7 @@ const NounSection = () => {
             </Text>
           </div>
 
-          <Text as="h6" textColor="gray-10" className="mt-2 md:mt-6 max-w-2xl">
+          <Text as="h6" textColor="gray-10" className="mt-2 md:mt-5 max-w-2xl">
             Project Noun is NeevCloud&apos;s leap beyond traditional
             infrastructure, removing the limits of geography and latency to
             redefine how AI is deployed and scaled. Built as a next-gen layer,
@@ -87,7 +87,7 @@ const NounSection = () => {
         </Text>
         <Divider
           orientation="horizontal"
-          className="bg-linear-to-r from-primary to-transparent mt-4 w-full md:w-1/3"
+          className="bg-linear-to-r from-primary to-transparent mt-5 w-full md:w-1/3"
         />
         <Button spacing="lg" borderRadius="sm" className="mt-4 md:mt-15">
           Explore Project Noun

@@ -17,7 +17,9 @@ export default function FaqSectionHeader({
           </Text>
         </Text>
       </div>
-      <Text textColor="gray-10">{description}</Text>
+      <Text as="h6" textColor="gray-10" className="mt-2.5">
+        {description}
+      </Text>
     </header>
   );
 }

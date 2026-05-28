@@ -23,7 +23,12 @@ const IntelligenceSection = () => {
           </Text>
         </Text>
 
-        <Text as="h6" align="center" textColor="gray-75" className="max-w-4xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="gray-75"
+          className="max-w-4xl mt-2.5"
+        >
           {`Building AI applications shouldn't require expertise in model
           deployment, scaling infrastructure, or GPU orchestration. Our Model
           API gives you direct access to production-grade models through

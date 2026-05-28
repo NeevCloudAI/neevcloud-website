@@ -11,7 +11,7 @@ const TransparentPricingTerminal = () => {
     >
       <TransparentPricingTerminalHeader />
 
-      <div className="px-2 md:px-3.75 py-2 md:py-7.5">
+      <div className="px-4 md:px-3.75 py-2 md:py-7.5">
         <Text as="h6" fontFamily="spaceMono" textColor="white">
           {`› nvme list --pricing --currency=INR`}
         </Text>

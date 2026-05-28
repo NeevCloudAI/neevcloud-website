@@ -6,7 +6,7 @@ import GpuAvailabilityRow from "./GpuAvailabilityRow";
 
 function InfrastructureNativeFlowDiagram() {
   return (
-    <figure className="mt-6 md:mt-10 flex w-full flex-col items-center">
+    <figure className="mt-4 md:mt-10.75 flex w-full flex-col items-center">
       <div className="flex w-full gap-8">
         <Text
           textColor="white"
@@ -45,12 +45,12 @@ function InfrastructureNativeFlowDiagram() {
         as="h4"
         weight="semibold"
         textColor="white"
-        className="border border-gray-25 bg-gray-83 rounded-lg px-4 md:px-6 py-2 md:py-4 text-center shadow-sm"
+        className="border border-gray-25 bg-gray-83 rounded-lg px-4 md:px-5 py-2 md:py-4 text-center shadow-sm"
       >
         AI SuperCloud
       </Text>
 
-      <svg
+      {/* <svg
         viewBox="0 0 120 120"
         width="30"
         height="30"
@@ -69,7 +69,13 @@ function InfrastructureNativeFlowDiagram() {
 
           <polyline points="30,55 60,25 90,55" />
         </g>
-      </svg>
+      </svg> */}
+      <Image
+        src="/icons/up-icon.svg"
+        alt="AI SuperCloud"
+        width={20}
+        height={20}
+      />
 
       <div className="flex items-center justify-center gap-2 rounded-lg border border-primary-65 bg-primary-110 px-6 md:px-12 py-2 md:py-4">
         <Image
@@ -102,27 +108,27 @@ export default function InfrastructureSectionContent() {
           , Not Adds Them
         </Text>
 
-        <Text className="mt-2 max-w-2xl" textColor="gray-10" align="center">
+        <Text
+          as="h6"
+          className="mt-2.5 max-w-2xl"
+          textColor="gray-10"
+          align="center"
+        >
           We built NeevCloud to give every innovator access to world-class AI
           infrastructure without the traditional limits of cost, complexity, or
           control.
         </Text>
 
-        <div className="flex flex-col md:flex-row mt-4 md:mt-12 gap-5">
+        <div className="flex flex-col md:flex-row mt-4 md:mt-12.5 gap-5">
           <div className="flex-2 bg-black-95 rounded-md">
             <div className="p-4 md:p-10">
-              <Text as="h3" weight="semibold">
+              <Text as="h3" weight="semibold" className="text-[30px]">
                 On-Demand GPU Access
               </Text>
-              <Text as="h4" textColor="primary">
+              <Text as="h4" textColor="primary" className="mt-1.25">
                 Available When You Need It
               </Text>
-              <Text
-                as="h6"
-                className="pt-4"
-                weight="regular"
-                textColor="gray-10"
-              >
+              <Text as="h6" className="mt-3.75" textColor="gray-10">
                 Provision GPU resources in minutes without long wait times or
                 complex procurement processes. Start training immediately and
                 scale as your projects grow.
@@ -139,18 +145,13 @@ export default function InfrastructureSectionContent() {
             ))}
           </div>
           <div className="flex flex-1.5 flex-col rounded-md p-4 md:p-10 bg-black-95">
-            <Text as="h3" weight="semibold">
+            <Text as="h3" weight="semibold" className="text-[30px]">
               AI-Native Infrastructure
             </Text>
-            <Text as="h4" textColor="primary">
+            <Text as="h4" textColor="primary" className="mt-1.25">
               Purpose-Built for Modern AI
             </Text>
-            <Text
-              as="h6"
-              className="pt-4 max-w-md"
-              weight="regular"
-              textColor="gray-10"
-            >
+            <Text as="h6" className="mt-3.75 max-w-md" textColor="gray-10">
               Every layer of our stack is designed specifically for AI
               workloads. We engineer for performance and efficiency.
             </Text>
@@ -160,13 +161,13 @@ export default function InfrastructureSectionContent() {
 
         <div className=" w-full flex flex-col md:flex-row mt-5 gap-5">
           <div className="relative flex-1 rounded-md p-4 md:p-10 bg-black-95">
-            <Text as="h3" weight="semibold">
+            <Text as="h3" weight="semibold" className="text-[30px]">
               High Memory Capacity
             </Text>
-            <Text as="h4" textColor="primary">
+            <Text as="h4" textColor="primary" className="mt-1.25">
               Handle Larger Models, Faster
             </Text>
-            <Text as="h6" textColor="gray-10" className="pt-4">
+            <Text as="h6" textColor="gray-10" className="mt-3.75">
               Work with massive datasets and complex models without hitting
               memory bottlenecks. Our GPU configurations provide the capacity
               your most ambitious projects demand.{" "}
@@ -182,13 +183,13 @@ export default function InfrastructureSectionContent() {
             </div>
           </div>
           <div className="flex-2 rounded-md p-4 md:p-10 bg-black-95">
-            <Text as="h3" weight="semibold">
+            <Text as="h3" weight="semibold" className="text-[30px]">
               24x7 Best-in-Class Support
             </Text>
-            <Text as="h4" textColor="primary">
+            <Text as="h4" textColor="primary" className="mt-1.25">
               Expert Help, Always Available
             </Text>
-            <Text as="h6" textColor="gray-10" className="pt-4">
+            <Text as="h6" textColor="gray-10" className="mt-3.75">
               Our team understands AI infrastructure because we built it. Get
               responsive support from engineers who know the platform inside and
               out, whenever you need it.

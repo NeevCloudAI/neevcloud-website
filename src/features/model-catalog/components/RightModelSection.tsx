@@ -32,7 +32,12 @@ const RightModelSection = () => {
             for your use case.
           </Text>
         </Text>
-        <Text as="h6" textColor="gray-10" align="center" className="max-w-3xl">
+        <Text
+          as="h6"
+          textColor="gray-10"
+          align="center"
+          className="max-w-3xl mt-2.5"
+        >
           Every model row links to docs, the playground, and a one-click deploy
           template.
         </Text>

@@ -6,7 +6,7 @@ import { Divider } from "@/shared/ui-lib";
 import MediaHeroSection from "./MediaHeroSection";
 import MediaAmbitionSection from "./MediaAmbitionSection";
 import { MEDIA_FAQ_ITEMS } from "../data/faq-section.data";
-import { MEDIA_FOOTER } from "../data/media-page.constants";
+import { MEDIA_FOOTER } from "../data/media-page.data";
 
 const MediaPage = () => {
   return (

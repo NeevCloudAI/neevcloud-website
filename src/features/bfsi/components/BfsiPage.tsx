@@ -9,7 +9,7 @@ import EnterpriseSection from "./EnterpriseSection";
 import ApplicationSection from "./ApplicationSection";
 import PerformanceSection from "./PerformanceSection";
 import { BFSI_FAQ_ITEMS } from "../data/faq-section.data";
-import { BFSI_FOOTER } from "../constants/bfsi-page.constants";
+import { BFSI_FOOTER } from "../data/bfsi-page.data";
 
 const BfsiPage = () => {
   return (

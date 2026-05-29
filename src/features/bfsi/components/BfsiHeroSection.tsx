@@ -1,5 +1,5 @@
 import HeroSection from "@/shared/components/HeroSection";
-import { BFSI_HERO } from "../constants/bfsi-page.constants";
+import { BFSI_HERO } from "../data/bfsi-page.data";
 import { Text } from "@/shared/ui-lib";
 
 const BfsiHeroSection = () => {

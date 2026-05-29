@@ -4,12 +4,12 @@ import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import { Divider } from "@/shared/ui-lib";
 import BfsiHeroSection from "./BfsiHeroSection";
+import BfsiAmbitionSection from "./BfsiAmbitionSection";
 import EnterpriseSection from "./EnterpriseSection";
 import ApplicationSection from "./ApplicationSection";
 import PerformanceSection from "./PerformanceSection";
 import { BFSI_FAQ_ITEMS } from "../data/faq-section.data";
-import { BFSI_FOOTER } from "../constants/bfsi-page.constants";
-import BfsiAmbitionSection from "./BfsiAmbitionSection";
+import { BFSI_FOOTER } from "../data/bfsi-page.data";
 
 const BfsiPage = () => {
   return (

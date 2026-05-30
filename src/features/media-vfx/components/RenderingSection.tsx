@@ -4,7 +4,7 @@ import { RENDERING_SERVICES } from "../data/rendering-section.data";
 const RenderingSection = () => (
   <ServiceListSection
     sectionId="rendering-stack-section-heading"
-    heading="Complete "
+    heading="Complete"
     headingHighlight="rendering stack"
     description="Every layer of the production pipeline, compute, storage, network, software, orchestration — provisioned and managed."
     services={RENDERING_SERVICES}

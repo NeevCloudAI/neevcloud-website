@@ -8,6 +8,7 @@ import DefenceAmbitionSection from "./DefenceAmbitionSection";
 import DefenceApplicationSection from "./DefenceApplicationSection";
 import { DEFENCE_FAQ_ITEMS } from "../data/faq-section.data";
 import { DEFENCE_FOOTER } from "../data/defence-page.data";
+import DefenceSovereignSection from "./DefenceSovereignSection";
 
 const DefencePage = () => {
   return (
@@ -18,6 +19,7 @@ const DefencePage = () => {
       <DefenceHeroSection />
       <DefenceAmbitionSection />
       <DefenceApplicationSection />
+      <DefenceSovereignSection />
       <FaqSection items={DEFENCE_FAQ_ITEMS} />
       <FooterComponent
         title={DEFENCE_FOOTER.title}

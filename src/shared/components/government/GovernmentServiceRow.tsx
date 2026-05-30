@@ -20,12 +20,9 @@ const ServiceRow = ({ service, className }: ServiceRowProps) => {
       href={href}
       className={cn(
         "group rounded-lg border border-white-10 bg-white-5 p-4 backdrop-blur-md transition-colors hover:bg-primary-120/80",
-        // Mobile: single column, everything stacks
         "flex w-full flex-col gap-2",
-        // Desktop: 4-column grid — index | title+specs | description | highlight+arrow
-        // Best match for image 2:
         "md:grid md:grid-cols-[48px_320px_minmax(0,450px)_auto] md:items-center md:gap-x-8 md:gap-y-0 md:px-8 md:py-7",
-        className,
+        className
       )}
       aria-label={`${title}: ${description}`}
     >
@@ -40,8 +37,7 @@ const ServiceRow = ({ service, className }: ServiceRowProps) => {
         {index}
       </Text>
 
-      {/* Col 2 — title + specs
-          On mobile: show index inline with title */}
+      {/* Col 2 — title + specs */}
       <div className="flex flex-col gap-1.25">
         {/* Index only visible on mobile, inline */}
         <div className="flex items-center gap-3 md:contents">
@@ -64,7 +60,7 @@ const ServiceRow = ({ service, className }: ServiceRowProps) => {
       </div>
 
       {/* Col 3 — description */}
-      <Text as="h6" textColor="gray-60" className="text-justify">
+      <Text as="h6" textColor="gray-60">
         {description}
       </Text>
 

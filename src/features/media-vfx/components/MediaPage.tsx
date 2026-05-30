@@ -17,7 +17,7 @@ const MediaPage = () => {
       <Divider orientation="horizontal" />
       <MediaHeroSection />
       <MediaAmbitionSection />
-      <RenderingSection/>
+      <RenderingSection />
       <FaqSection items={MEDIA_FAQ_ITEMS} className="pt-0 md:pt-0 2xl:pt-0" />
       <FooterComponent
         title={MEDIA_FOOTER.title}

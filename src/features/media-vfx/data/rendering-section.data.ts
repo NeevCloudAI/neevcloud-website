@@ -1,4 +1,4 @@
-import { ServiceItem } from "../../../shared/types/service-section.types";
+import { ServiceItem } from "@/shared/types/service-section.types";
 
 export const RENDERING_SERVICES: readonly ServiceItem[] = [
   {

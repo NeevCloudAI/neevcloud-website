@@ -7,6 +7,7 @@ import MediaHeroSection from "./MediaHeroSection";
 import MediaAmbitionSection from "./MediaAmbitionSection";
 import { MEDIA_FAQ_ITEMS } from "../data/faq-section.data";
 import { MEDIA_FOOTER } from "../data/media-page.data";
+import RenderingSection from "./RenderingSection";
 
 const MediaPage = () => {
   return (
@@ -16,6 +17,7 @@ const MediaPage = () => {
       <Divider orientation="horizontal" />
       <MediaHeroSection />
       <MediaAmbitionSection />
+      <RenderingSection/>
       <FaqSection items={MEDIA_FAQ_ITEMS} className="pt-0 md:pt-0 2xl:pt-0" />
       <FooterComponent
         title={MEDIA_FOOTER.title}

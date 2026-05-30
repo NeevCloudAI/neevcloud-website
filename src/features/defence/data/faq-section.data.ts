@@ -12,14 +12,16 @@ export const DEFENCE_FAQ_ITEMS: readonly FaqItem[] = [
   {
     id: 2,
     category: "Getting Started",
-    question: "Can infrastructure be deployed air-gapped for classified workloads?",
+    question:
+      "Can infrastructure be deployed air-gapped for classified workloads?",
     answer:
       "Yes. Network-isolated clusters with dedicated physical infrastructure, custom security architectures, and on-site deployment support for maximum segregation.",
   },
   {
     id: 3,
     category: "Getting Started",
-    question: "What GPU infrastructure is available for defence AI applications?",
+    question:
+      "What GPU infrastructure is available for defence AI applications?",
     answer:
       "H100, H200, and A100 GPUs available as single instances or multi-GPU clusters. InfiniBand networking for distributed training on intelligence, surveillance, and autonomous systems workloads.",
   },

@@ -7,7 +7,7 @@ import { AI_STACK_SECTION_FEATURES } from "../data/ai-stack-section.data";
 const AIStackSection = () => {
   return (
     <section
-      className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black pb-8 md:pb-16 2xl:pb-25"
+      className="relative bg-black pb-8 md:pb-16 2xl:pb-25"
       aria-labelledby="cpu-ai-stack-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -31,7 +31,7 @@ const AIStackSection = () => {
               className={cn(
                 "md:col-span-2",
                 index === 3 && "md:col-start-2",
-                index === 4 && "md:col-start-4",
+                index === 4 && "md:col-start-4"
               )}
             >
               <FeatureCard

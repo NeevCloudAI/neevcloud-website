@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const InferenceStackSection = () => {
   return (
     <section
-      className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black pb-[3vh] md:pb-[7vh]"
+      className="relative bg-black pb-[3vh] md:pb-[7vh]"
       aria-labelledby="inference-stack-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

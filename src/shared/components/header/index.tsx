@@ -7,7 +7,7 @@ import HeaderMenu from "./header-menu";
 
 const HeaderComponent = () => {
   return (
-    <header className="sticky bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat top-0 z-50 w-full bg-white/93 backdrop-blur-xs shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-xs shadow-sm">
       <Container className="relative flex flex-wrap items-center gap-3 py-3 md:flex-nowrap md:py-0">
         <HeaderMenu>
           <Link href="/">

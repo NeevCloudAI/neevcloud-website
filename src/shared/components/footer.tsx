@@ -23,19 +23,9 @@ const FooterComponent = ({
   description,
   button1Text,
   button2Text,
-  className,
-  hasBGImage = false,
 }: FooterCtaContent) => {
   return (
-    <footer
-      className={cn(
-        "relative bg-black py-8 md:py-16 2xl:py-25",
-        hasBGImage
-          ? "bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat"
-          : "",
-        className,
-      )}
-    >
+    <footer className={cn("relative bg-black py-8 md:py-16 2xl:py-25")}>
       <Container className="flex flex-col gap-6 md:gap-25">
         <FooterCard
           title={title || FOOTER_CTA.title || ""}

@@ -9,6 +9,7 @@ import AmbitionSection from "./AmbitionSection";
 import ContributeSection from "./ContributeSection";
 import GovernmentSection from "./GovernmentSection";
 import { PUBLIC_SECTOR_FOOTER } from "../constants/public-sector-page.constants";
+import GovernmentApplicationSection from "./GovernmentApplicationSection";
 
 const PublicSectorPage = () => {
   return (
@@ -19,6 +20,7 @@ const PublicSectorPage = () => {
       <PublicSectorHeroSection />
       <AmbitionSection />
       <ContributeSection />
+      <GovernmentApplicationSection />
       <GovernmentSection />
       <FaqSection
         items={CPU_CLUSTER_FAQ_ITEMS}
@@ -30,7 +32,6 @@ const PublicSectorPage = () => {
         button1Text={PUBLIC_SECTOR_FOOTER.button1Text}
         button2Text={PUBLIC_SECTOR_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

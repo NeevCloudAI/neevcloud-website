@@ -31,8 +31,8 @@ export function AmbitionDetailCard({
   return (
     <article
       className={cn(
-        "flex flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
-        className,
+        "flex h-full flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
+        className
       )}
     >
       <Text textColor="gray-85">{label}</Text>

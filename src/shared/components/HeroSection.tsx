@@ -28,7 +28,7 @@ const HeroSection = ({
   trustBadges?: string[];
 }) => {
   return (
-    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat pt-8 md:pt-16 2xl:pt-25">
+    <section className="relative bg-white pt-8 md:pt-16 2xl:pt-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
@@ -40,7 +40,7 @@ const HeroSection = ({
 
         {title}
 
-        <Text as="h6" className="mt-2.5 max-w-3xl" align="center">
+        <Text as="h6" className="mt-2.5 max-w-4xl" align="center">
           {description}
         </Text>
 
@@ -64,7 +64,7 @@ const HeroSection = ({
           ))}
         </div>
 
-        <div className="w-full min-h-50 md:min-h-[80vh] 2xl:min-h-[50vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
+        <div className="w-full min-h-50 md:min-h-[80vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
           <Image
             src={image}
             alt="Gradient Background"

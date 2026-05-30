@@ -20,19 +20,19 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId,
+      currentItemId === itemId ? "" : itemId
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId),
+      panel.items.some((item) => item.id === activeItemId)
     );
     return idx === -1 ? 0 : idx;
   })();
 
   return (
-    <section className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat overflow-hidden bg-gray-10 py-[3vh] md:py-[10vh]">
+    <section className="relative overflow-hidden bg-gray-10 py-[3vh] md:py-[10vh]">
       <Container className="relative flex flex-col">
         <header className="flex flex-col items-center text-center">
           <Text as="h2">

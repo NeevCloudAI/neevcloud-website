@@ -1,4 +1,4 @@
-export type ApplicationCardTheme = "light" | "dark";
+export type ApplicationCardTheme = "light" | "dark" | "gray";
 
 export type ApplicationCardItem = {
   id: string;
@@ -9,6 +9,7 @@ export type ApplicationCardItem = {
   theme?: ApplicationCardTheme;
   image?: string;
   className?: string;
+  imageSpacing?: boolean;
 };
 
 export type ApplicationCardProps = {
@@ -19,4 +20,5 @@ export type ApplicationCardProps = {
   theme?: ApplicationCardTheme;
   image?: string;
   className?: string;
+  imageSpacing?: boolean;
 };

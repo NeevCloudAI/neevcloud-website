@@ -1,4 +1,4 @@
-import { ApplicationCardItem } from "../types/application-section.types";
+import type { ApplicationCardItem } from "@/shared/types/application-card.types";
 
 export const BFSI_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
   {

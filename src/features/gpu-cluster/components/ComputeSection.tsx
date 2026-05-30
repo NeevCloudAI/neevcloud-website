@@ -6,7 +6,7 @@ import { PRICING_FEATURES } from "../data/pricing-feature.data";
 const ComputeSection = () => {
   return (
     <section
-      className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black pb-8 md:pb-16 2xl:pb-25"
+      className="relative bg-black pb-8 md:pb-16 2xl:pb-25"
       aria-labelledby="gpu-compute-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

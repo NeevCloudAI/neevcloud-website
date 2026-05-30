@@ -27,7 +27,6 @@ const GpuClusterPage = () => {
         button1Text={GPU_CLUSTER_FOOTER.button1Text}
         button2Text={GPU_CLUSTER_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

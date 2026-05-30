@@ -32,7 +32,6 @@ const NvmePage = () => {
         button1Text={NVME_FOOTER.button1Text}
         button2Text={NVME_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

@@ -29,7 +29,6 @@ const CpuClusterPage = () => {
         button1Text={CPU_CLUSTER_FOOTER.button1Text}
         button2Text={CPU_CLUSTER_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

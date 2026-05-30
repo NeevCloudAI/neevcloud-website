@@ -32,7 +32,6 @@ const ManagedKubernetesPage = () => {
         button1Text={MANAGED_KUBERNETES_FOOTER.button1Text}
         button2Text={MANAGED_KUBERNETES_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

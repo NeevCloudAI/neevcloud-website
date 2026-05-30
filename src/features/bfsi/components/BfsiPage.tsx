@@ -29,7 +29,6 @@ const BfsiPage = () => {
         button1Text={BFSI_FOOTER.button1Text}
         button2Text={BFSI_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

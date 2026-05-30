@@ -6,7 +6,7 @@ import StoragePricingCalculator from "./StoragePricingCalculator";
 const TransparentPricingSection = () => {
   return (
     <section
-      className="relative bg-[url('/images/bg-home.png')] bg-cover bg-center bg-no-repeat bg-black py-8 md:py-16 2xl:py-25"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="nvme-transparent-pricing-section-heading"
     >
       <div

@@ -30,7 +30,6 @@ const ModelApiPage = () => {
         button1Text={MODEL_API_FOOTER.button1Text}
         button2Text={MODEL_API_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

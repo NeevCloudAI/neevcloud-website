@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
 import { BFSI_APPLICATION_CARDS } from "../data/application-section.data";
-import ApplicationCard from "./application/ApplicationCard";
+import ApplicationCard from "@/shared/components/application-card";
 
 const ApplicationSection = () => {
   return (

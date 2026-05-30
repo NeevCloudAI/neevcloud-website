@@ -23,7 +23,6 @@ const MediaPage = () => {
         button1Text={MEDIA_FOOTER.button1Text}
         button2Text={MEDIA_FOOTER.button2Text}
         className="pt-0 md:pt-0 2xl:pt-0"
-        hasBGImage
       />
     </>
   );

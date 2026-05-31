@@ -1,6 +1,6 @@
 import { Text } from "@/shared/ui-lib";
 
-const WorkloadCodeCardHeader = () => {
+const CodeTabPanelHeader = () => {
   return (
     <div className="flex items-center justify-between gap-2 px-4 py-3 border-b border-black-5">
       <div className="flex items-center gap-1" aria-hidden="true">
@@ -18,4 +18,4 @@ const WorkloadCodeCardHeader = () => {
   );
 };
 
-export default WorkloadCodeCardHeader;
+export default CodeTabPanelHeader;

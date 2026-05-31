@@ -1,6 +1,6 @@
 import { Divider, Text } from "@/shared/ui-lib";
 
-const WorkloadCodeCardFooter = () => {
+const CodeTabPanelFooter = () => {
   return (
     <>
       <Divider orientation="horizontal" className="mb-4 bg-black-5" />
@@ -13,4 +13,4 @@ const WorkloadCodeCardFooter = () => {
   );
 };
 
-export default WorkloadCodeCardFooter;
+export default CodeTabPanelFooter;

@@ -106,7 +106,7 @@ export const STEP_ONE_COST_COMPARISON_RESULTS: StorageComparisonMetric[] = [
     label: "llama-3.1-70b",
     displayValue: "₹0.003",
     seconds: 15,
-    valueColor: "primary-gradient",
+    valueColor: "primary",
     barColor: "bg-primary-gradient",
   },
   {

@@ -15,6 +15,7 @@ export const buttonVariants = cva(
         "white-outline-right": `border-r border-white-10`,
         "white-outline": `border border-white`,
         ghost: `bg-transparent`,
+        gray: "bg-gray-10",
       },
       size: {
         default: "text-sm",

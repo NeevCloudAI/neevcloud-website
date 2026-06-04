@@ -65,7 +65,6 @@ export const PerformanceBenchmarkCard = ({
       {/* Footnote */}
       {footnote && (
         <Text
-          as="p"
           className="mt-6 text-xs text-gray-85 leading-relaxed border-t border-gray-95 pt-4"
         >
           {footnote}
@@ -115,8 +114,8 @@ export const FastestConfigCard = ({
     >
       {/* Label */}
       <Text
-        as="h2"
-        className="text-lg font-semibold tracking-widest uppercase mb-3"
+        as="h4"
+        className="font-semibold  uppercase mb-3"
       >
         Fastest Configuration
       </Text>
@@ -125,30 +124,32 @@ export const FastestConfigCard = ({
       <div className="flex items-baseline gap-2 mb-4">
         <Text
           as="h1"
-          className="text-6xl font-semibold leading-none text-primary"
+          className="text-[30px] md:text-6xl font-semibold leading-none text-primary"
         >
           {minutesPerFrame}
         </Text>
-        <Text as="h3" className="text-3xl font-semibold text-primary">
+        <Text as="h3" className="text-[30px] font-semibold text-primary">
           min
         </Text>
-        <Text as="h3" className="text-3xl font-semibold">
+        <Text as="h3" className="text-[30px] font-semibold">
           per 4K frame
         </Text>
       </div>
 
       {/* Description */}
-      <p className="text-sm text-gray-90 leading-relaxed mb-6">
+      <Text className="text-gray-90 leading-relaxed mb-6">
         {description.map((segment: DescriptionSegment, i: number) =>
           segment.highlight ? (
             <Text as="span" key={i} textColor="primary">
               {segment.text}
             </Text>
           ) : (
-            <span key={i}>{segment.text}</span>
+            <Text as="span" key={i}>
+              {segment.text}
+            </Text>
           ),
         )}
-      </p>
+      </Text>
 
       {/* Feature list */}
       <ul className="flex list-none flex-col gap-1.25 p-0 m-0">

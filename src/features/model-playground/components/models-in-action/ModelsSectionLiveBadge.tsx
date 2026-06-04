@@ -6,7 +6,7 @@ const ModelsSectionLiveBadge = () => {
       as="small"
       className="bg-primary text-white px-2.5 py-0.75 rounded-full"
     >
-      • Live
+      • live
     </Text>
   );
 };

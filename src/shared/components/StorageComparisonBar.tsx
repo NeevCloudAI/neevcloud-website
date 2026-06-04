@@ -1,37 +1,70 @@
 import { Text } from "@/shared/ui-lib";
+import { cn } from "@/lib/utils";
 
 export type StorageComparisonMetric = {
   id: string;
   label: string;
+  labelColor?: string;
+  subtitle?: string; // optional secondary line shown below label
   displayValue: string;
   seconds: number;
-  valueColor: "primary" | "red-50" | "primary-gradient";
+  valueColor: string;
   barColor?: string;
 };
 
 export type StorageComparisonBarProps = {
   metric: StorageComparisonMetric;
   backgroundColor?: string;
+  showLabel?: boolean; // default true  — set false to hide the whole label/value row
 };
 
 const StorageComparisonBar = ({
   metric,
   backgroundColor = "bg-white",
+  showLabel = true,
 }: StorageComparisonBarProps) => {
   const fillPercent = Math.min(100, (metric.seconds / 100) * 100);
 
   return (
     <div className="flex w-full flex-col gap-1">
-      <div className="flex items-center justify-between gap-4">
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-60">
-          {metric.label}
-        </Text>
-        <Text as="h6" fontFamily="spaceMono" textColor={metric.valueColor}>
-          {metric.displayValue}
-        </Text>
-      </div>
+      {showLabel && (
+        <div className="flex items-start justify-between gap-4">
+          {/* Label + optional subtitle stacked on the left */}
+          <div className="flex flex-col gap-0.5">
+            <Text
+              as="h6"
+              fontFamily="spaceMono"
+              className={cn(metric.labelColor ?? "text-gray-90")}
+            >
+              {metric.label}
+            </Text>
+            {metric.subtitle && (
+              <Text
+                as="p"
+                fontFamily="spaceMono"
+                className="text-xs text-gray-75 leading-tight"
+              >
+                {metric.subtitle}
+              </Text>
+            )}
+          </div>
+
+          {/* Value on the right, aligned to first line of label */}
+          <Text
+            as="h6"
+            fontFamily="spaceMono"
+            className={cn("shrink-0", metric.valueColor)}
+          >
+            {metric.displayValue}
+          </Text>
+        </div>
+      )}
+
       <div
         role="progressbar"
+        aria-valuenow={metric.seconds}
+        aria-valuemin={0}
+        aria-valuemax={100}
         className={`mt-1 relative h-2.75 w-full overflow-hidden rounded-full ${backgroundColor}`}
       >
         <div

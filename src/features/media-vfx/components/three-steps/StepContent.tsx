@@ -19,7 +19,7 @@ const StepContent = ({ step }: StepContentProps) => {
         {step.number}
       </Text>
 
-      <Text as="h3" weight="semibold" className="mt-4 text-3xl">
+      <Text as="h3" weight="semibold" className="mt-4 text-[30px]">
         {step.heading}
       </Text>
 

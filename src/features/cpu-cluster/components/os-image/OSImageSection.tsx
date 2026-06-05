@@ -5,7 +5,7 @@ import { Text } from "@/shared/ui-lib";
 const OSImageSection = () => {
   return (
     <section aria-labelledby="cpu-os-image-section-heading">
-      <Container className="py-8 md:py-16 2xl:py-25 flex flex-col items-center justify-center">
+      <Container className="py-8 md:py-25 flex flex-col items-center justify-center">
         <Text
           as="h2"
           id="cpu-os-image-section-heading"

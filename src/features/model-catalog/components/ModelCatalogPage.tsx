@@ -1,7 +1,4 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
 import ModelCatalogHeroSection from "./ModelCatalogHeroSection";
 import ModelActionSection from "./ModelActionSection";
 import RightModelSection from "./RightModelSection";
@@ -12,9 +9,6 @@ import { MODEL_CATALOG_FOOTER } from "../constants/model-catalog-page.constants"
 const ModelCatalogPage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <ModelCatalogHeroSection />
       <ModelActionSection />
       <RightModelSection />

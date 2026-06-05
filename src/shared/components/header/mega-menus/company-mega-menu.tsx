@@ -11,18 +11,21 @@ const COMPANY_COLUMN_LEFT: MegaMenuLinkRowProps[] = [
     iconAlt: "About us",
     title: "About Us",
     description: "Our Story & Vision and Mission",
+    href: "/about-us",
   },
   {
     iconSrc: "",
     iconAlt: "Leadership",
     title: "Leadership",
     description: "Meet the Team",
+    href: "/leadership",
   },
   {
     iconSrc: "",
     iconAlt: "Career",
     title: "Career",
     description: "Build the Sovereign Cloud",
+    href: "/careers",
   },
   {
     iconSrc: "",
@@ -50,6 +53,7 @@ const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
     iconAlt: "Contact us",
     title: "Contact Us",
     description: "Talk to Sales or Support",
+    href: "/contact-neevcloud",
   },
 ];
 

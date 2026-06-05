@@ -1,7 +1,4 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
 import { CPU_PRICING_FOOTER } from "../data/cpu-pricing-page.data";
 import CpuPricingHeroSection from "./CpuPricingHeroSection";
 import CpuTransparentPricingSection from "./CpuTransparentPricingSection";
@@ -14,9 +11,6 @@ import { CPU_PRICING_FAQ } from "../data/cpu-pricing-faq-section.data";
 const CpuPricingPage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <CpuPricingHeroSection />
       <CpuAiSection />
       <CpuArchitectureSection />

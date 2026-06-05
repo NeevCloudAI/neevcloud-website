@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const UseModelSection = () => {
   return (
     <section
-      className="relative bg-primary-20 py-8 md:py-16 2xl:py-25"
+      className="relative bg-primary-20 py-8 md:py-25"
       aria-labelledby="model-catalog-use-model-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

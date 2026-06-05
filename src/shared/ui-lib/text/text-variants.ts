@@ -51,6 +51,7 @@ export const textVariants = cva("", {
       "gray-75": "text-gray-75",
       "gray-85": "text-gray-85",
       "gray-90": "text-gray-90",
+      "gray-100": "text-gray-100",
       "red-50": "text-red-50",
       "green-10": "text-green-10",
       "green-50": "text-green-50",
@@ -71,6 +72,7 @@ export const textVariants = cva("", {
       "gray-66": "text-gray-66",
       "primary-170": "text-primary-170",
       "primary-180": "text-primary-180",
+      "primary-200": "text-primary-200",
     },
     lineHeight: {
       xs: "leading-5",

@@ -42,6 +42,7 @@ export const buttonVariants = cva(
         sm: "px-3 py-1.5",
         md: "px-4 py-2",
         lg: "px-8 py-2",
+        xl: "px-10 py-3",
       },
       textColor: {
         default: "text-white",
@@ -86,5 +87,5 @@ export const buttonVariants = cva(
       spacing: "md",
       textColor: "default",
     },
-  },
+  }
 );

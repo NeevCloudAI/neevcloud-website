@@ -5,7 +5,7 @@ import { Text } from "@/shared/ui-lib";
 const DeployWorkloadSection = () => {
   return (
     <section
-      className="bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="bg-gray-10 py-8 md:py-25"
       aria-labelledby="deploy-workload-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

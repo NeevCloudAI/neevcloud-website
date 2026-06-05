@@ -26,9 +26,7 @@ const FooterComponent = ({
   className,
 }: FooterCtaContent) => {
   return (
-    <footer
-      className={cn("relative bg-black py-8 md:py-16 2xl:py-25", className)}
-    >
+    <footer className={cn("relative bg-black py-8 md:py-25", className)}>
       <Container className="flex flex-col gap-6 md:gap-25">
         <FooterCard
           title={title || FOOTER_CTA.title || ""}

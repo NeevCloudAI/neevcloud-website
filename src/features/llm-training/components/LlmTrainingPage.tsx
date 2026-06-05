@@ -1,8 +1,5 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
 import LlmTrainingHeroSection from "./LlmTrainingHeroSection";
 import LlmTrainingInfrastructureSection from "./LlmTrainingInfrastructureSection";
 import LlmTrainingApplicationSection from "./LlmTrainingApplicationSection";
@@ -13,9 +10,6 @@ import LlmDeploymentSection from "./LlmDeploymentSection";
 const LlmTrainingPage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <LlmTrainingHeroSection />
       <LlmTrainingInfrastructureSection />
       <LlmTrainingApplicationSection />

@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const AiInferenceTransparentPricingSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-16 2xl:py-25"
+      className="relative bg-black py-8 md:py-25"
       aria-labelledby="ai-inference-transparent-pricing-section-heading"
     >
       <div

@@ -1,8 +1,5 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
 import MediaHeroSection from "./MediaHeroSection";
 import MediaAmbitionSection from "./MediaAmbitionSection";
 import MediaApplicationSection from "./MediaApplicationSection";
@@ -16,9 +13,6 @@ import OSImageSection from "./os-image/OSImageSection";
 const MediaPage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <MediaHeroSection />
       <MediaAmbitionSection />
       <ThreeStepSection />

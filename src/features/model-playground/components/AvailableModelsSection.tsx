@@ -6,7 +6,7 @@ import { AVAILABLE_MODEL_CATEGORIES } from "../data/available-models-section.dat
 const AvailableModelsSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-16 2xl:py-25"
+      className="relative bg-white py-8 md:py-25"
       aria-labelledby="available-models-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

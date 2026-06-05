@@ -1,9 +1,6 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
-import { Divider } from "@/shared/ui-lib";
 import PublicSectorHeroSection from "./PublicSectorHeroSection";
 import AmbitionSection from "./AmbitionSection";
 import ContributeSection from "./ContributeSection";
@@ -14,9 +11,6 @@ import GovernmentApplicationSection from "./GovernmentApplicationSection";
 const PublicSectorPage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <PublicSectorHeroSection />
       <AmbitionSection />
       <ContributeSection />

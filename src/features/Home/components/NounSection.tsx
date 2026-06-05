@@ -5,7 +5,7 @@ import Image from "next/image";
 const NounSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-black py-8 md:py-16 2xl:py-25"
+      className="relative overflow-hidden bg-black py-8 md:py-25"
       aria-labelledby="noun-section-heading"
     >
       <div

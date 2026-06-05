@@ -9,7 +9,7 @@ import GenerativeAiPerformanceCard from "./performance/GenerativeAiPerformanceCa
 const GenerativeAiPerformanceSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-black py-8 md:py-16 2xl:py-25"
+      className="relative overflow-hidden bg-black py-8 md:py-25"
       aria-labelledby="generative-ai-performance-section-heading"
     >
       <div

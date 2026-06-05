@@ -6,7 +6,7 @@ import PerformanceMetricCard from "./performance/PerformanceMetricCard";
 const PerformanceSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-16 2xl:py-25"
+      className="relative bg-black py-8 md:py-25"
       aria-labelledby="bfsi-performance-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

@@ -27,7 +27,7 @@ const ExploreApiStepsTabsClient = ({
 
   return (
     <section
-      className="relative bg-white py-8 md:py-16 2xl:py-25"
+      className="relative bg-white py-8 md:py-25"
       aria-labelledby={`${tabIdPrefix}-section-heading`}
     >
       <Container className="flex flex-col items-center justify-center">
@@ -57,7 +57,7 @@ const ExploreApiStepsTabsClient = ({
                     "flex h-12 w-12 shrink-0 items-center justify-center rounded-md text-2xl transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white",
+                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white"
                   )}
                 >
                   {index + 1}

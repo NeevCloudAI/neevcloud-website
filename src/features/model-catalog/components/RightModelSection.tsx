@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const RightModelSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-16 2xl:py-25"
+      className="relative bg-black py-8 md:py-25"
       aria-labelledby="model-catalog-right-model-section-heading"
     >
       <div

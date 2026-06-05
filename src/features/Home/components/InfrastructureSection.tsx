@@ -73,7 +73,7 @@ export default function InfrastructureSectionContent() {
 
   return (
     <div className="relative bg-black text-white">
-      <Container className="flex flex-col items-center py-8 md:py-16 2xl:py-25">
+      <Container className="flex flex-col items-center py-8 md:py-25">
         <Text as="h2" align="center" className="max-w-4xl">
           Infrastructure That
           <Text

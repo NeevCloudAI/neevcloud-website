@@ -46,7 +46,7 @@ export default function FaqSection({
   const filteredFaqs = useFilteredFaqs(items, activeTopic);
 
   return (
-    <section className={cn("bg-black py-8 md:py-16 2xl:py-25", className)}>
+    <section className={cn("bg-black py-8 md:py-25", className)}>
       <Container className="flex flex-col items-center justify-center">
         <FaqSectionHeader description={description} />
 

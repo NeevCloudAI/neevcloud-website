@@ -1,5 +1,3 @@
-import { Divider } from "@/shared/ui-lib";
-import HeaderComponent from "@/shared/components/header";
 import HeroSection from "./HeroSection";
 import NeevcloudSection from "./NeevcloudSection";
 import ComparisonSection from "./ComparisonSection";
@@ -9,14 +7,10 @@ import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 import StackSection from "./StackSection";
 import InfrastructureSection from "./InfrastructureSection";
 import ReviewsSection from "./ReviewsSection";
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 
 const HomeComponent = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <HeroSection />
       <StackSection />
       <NeevcloudSection />

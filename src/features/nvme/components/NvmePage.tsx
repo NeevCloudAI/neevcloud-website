@@ -1,9 +1,6 @@
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import NvmeHeroSection from "./NvmeHeroSection";
 import StoragePerformanceSection from "./StoragePerformanceSection";
 import MetricsSection from "./MetricsSection";
@@ -14,9 +11,6 @@ import { NVME_FOOTER } from "../constants/nvme-page.constants";
 const NvmePage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <NvmeHeroSection />
       <StoragePerformanceSection />
       <MetricsSection />

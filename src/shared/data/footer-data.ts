@@ -83,13 +83,13 @@ export const FOOTER_LINK_GROUPS: readonly FooterLinkGroup[] = [
   {
     title: "Company",
     links: [
-      { label: "About NeevCloud", href: "" },
+      { label: "About NeevCloud", href: "/about-us" },
       { label: "Press & Media", href: "" },
-      { label: "Careers", href: "" },
+      { label: "Careers", href: "/careers" },
       { label: "Vision & Mission", href: "" },
       { label: "Why NeevCloud", href: "" },
-      { label: "Leadership", href: "" },
-      { label: "Contact Us", href: "" },
+      { label: "Leadership", href: "/leadership" },
+      { label: "Contact Us", href: "/contact-neevcloud" },
     ],
   },
   {

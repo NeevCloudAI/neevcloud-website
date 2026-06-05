@@ -15,7 +15,7 @@ const DeployInstanceSection = ({
 }: DeployInstanceSectionProps) => {
   return (
     <section
-      className={`relative ${showBGImage ? 'bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black' : "bg-gray-10"} py-8 md:py-16 2xl:py-25`}
+      className={`relative ${showBGImage ? 'bg-[url("/images/bg-home.png")] bg-cover bg-center bg-no-repeat bg-black' : "bg-gray-10"} py-8 md:py-25`}
     >
       {showLogo && (
         <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-full top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>

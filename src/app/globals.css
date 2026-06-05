@@ -76,6 +76,7 @@
   --color-black-100: var(--black-100);
   --color-black-35: var(--black-35);
   --color-black-40: var(--black-40);
+  --color-primary-200: var(--primary-200);
   --color-primary-130: var(--primary-130);
 
   --color-red-10: var(--red-10);
@@ -130,6 +131,7 @@
   --primary-140: #1b1d1e;
   --primary-150: #1b2c29;
   --primary-170: #e0eded;
+  --primary-200: #c5f1e2;
 
   --orange-50: #d29922;
 
@@ -273,7 +275,7 @@ body {
   input {
     background-color: var(--white);
     border-color: var(--gray-10);
-    @apply text-sm border rounded-md px-4 py-1.5 focus:outline-none focus:ring-1 disabled:pointer-events-none disabled:opacity-50;
+    @apply text-sm border focus:outline-none disabled:pointer-events-none disabled:opacity-50;
   }
 
   input:focus {

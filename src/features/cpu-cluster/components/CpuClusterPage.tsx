@@ -1,9 +1,6 @@
 import FaqSection from "@/shared/components/faq/faq-section";
 import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import CpuClusterHeroSection from "./CpuClusterHeroSection";
 import CPUWorkloadSection from "./CPUWorkloadSection";
 import AIStackSection from "./AIStackSection";
@@ -14,9 +11,6 @@ import { CPU_CLUSTER_FOOTER } from "../constants/cpu-cluster-page.constants";
 const CpuClusterPage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <CpuClusterHeroSection />
       <CPUWorkloadSection />
       <AIStackSection />

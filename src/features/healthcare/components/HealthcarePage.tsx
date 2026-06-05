@@ -1,8 +1,5 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import FaqSection from "@/shared/components/faq/faq-section";
 import FooterComponent from "@/shared/components/footer";
-import HeaderComponent from "@/shared/components/header";
-import { Divider } from "@/shared/ui-lib";
 import HealthcareHeroSection from "./HealthcareHeroSection";
 import HealthcareAmbitionSection from "./HealthcareAmbitionSection";
 import HealthcareApplicationSection from "./HealthcareApplicationSection";
@@ -13,9 +10,6 @@ import HealthcarePerformanceSection from "./HealthcarePerformanceSection";
 const HealthcarePage = () => {
   return (
     <>
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
       <HealthcareHeroSection />
       <HealthcareAmbitionSection />
       <HealthcareApplicationSection />

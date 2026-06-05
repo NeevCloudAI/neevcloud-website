@@ -7,7 +7,7 @@ import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
 
 export default function NeevcloudSection() {
   return (
-    <Container className="flex flex-col items-center justify-between py-8 md:py-16 2xl:py-25">
+    <Container className="flex flex-col items-center justify-between py-8 md:py-25">
       <div>
         <Text as="h2" className="max-w-4xl" align="center">
           Why the

@@ -4,7 +4,7 @@ import type { HeaderNavId } from "./nav-items";
 
 export const MEGA_MENUS: Partial<Record<HeaderNavId, ComponentType>> = {
   "ai-supercloud": dynamic(
-    () => import("./mega-menus/ai-supercloud-mega-menu")
+    () => import("./mega-menus/ai-supercloud-mega-menu"),
   ),
   "inference-hub": dynamic(() => import("./mega-menus/inference-mega-menu")),
   product: dynamic(() => import("./mega-menus/product-mega-menu")),

@@ -1,20 +1,37 @@
+import {
+  GRID_COLUMNS,
+  GRID_ROWS,
+  STEP_THREE_GRID_SHELL_CLASS,
+} from "../../constants/step-three-panel.constants";
+
+/** true = teal (active), false = grey — 12 columns × 5 rows */
+const STEP_THREE_GRID: boolean[][] = [
+  [true, true, true, true, false, true, true, true, false, false, true, true],
+  [true, true, true, true, true, true, false, true, true, true, true, true],
+  [true, true, true, true, true, true, true, true, false, false, true, true],
+  [true, true, true, true, true, false, true, true, true, true, false, false],
+  [true, true, false, true, true, true, true, false, true, true, true, false],
+];
+
 const StepThreePanel = () => {
-  const darkIndices = new Set([4, 8, 10, 16, 21, 30, 35, 38, 45, 50, 52, 54]);
-  const nodes = Array.from({ length: 55 }, (_, i) => !darkIndices.has(i));
+  const nodes = STEP_THREE_GRID.flat();
 
   return (
-    <div className="bg-black overflow-hidden flex items-center justify-center w-148.5 h-68 rounded-lg">
+    <div
+      className={`w-fit max-w-full bg-black rounded-lg p-2 md:p-5 ${STEP_THREE_GRID_SHELL_CLASS}`}
+    >
       <div
-        className="grid gap-2"
+        className="grid"
         style={{
-          gridTemplateColumns: "repeat(11, 42px)",
-          gridTemplateRows: "repeat(5, 42px)",
+          gap: "var(--step-three-gap)",
+          gridTemplateColumns: `repeat(${GRID_COLUMNS}, var(--step-three-cell))`,
+          gridTemplateRows: `repeat(${GRID_ROWS}, var(--step-three-cell))`,
         }}
       >
         {nodes.map((active, i) => (
           <div
             key={i}
-            className={`w-10.5 h-10.5 rounded-sm ${
+            className={`size-full rounded-sm ${
               active ? "bg-primary" : "bg-[#384245]"
             }`}
           />

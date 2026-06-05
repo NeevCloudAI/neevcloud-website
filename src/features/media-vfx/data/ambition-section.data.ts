@@ -4,7 +4,7 @@ export const MEDIA_AMBITION_ITEMS: readonly AmbitionDetailItem[] = [
   {
     id: "rendering-capabilities",
     label: "01 · RENDERING CAPABILITIES",
-    iconSrc: "/icons/shield.svg",
+    iconSrc: "/icons/protected.svg",
     iconAlt: "Rendering Capabilities",
     title: "GPU-Accelerated Rendering",
     description:

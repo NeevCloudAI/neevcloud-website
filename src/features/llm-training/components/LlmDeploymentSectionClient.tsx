@@ -15,11 +15,7 @@ const LlmDeploymentSectionClient = () => {
       ariaLabel="LLM training deployment options"
       tabIdPrefix="llm-deployment"
       renderPanel={({ panelId, labelledBy, children }) => (
-        <CodeTabPanel
-          key={panelId}
-          panelId={panelId}
-          labelledBy={labelledBy}
-        >
+        <CodeTabPanel key={panelId} panelId={panelId} labelledBy={labelledBy}>
           {children}
         </CodeTabPanel>
       )}

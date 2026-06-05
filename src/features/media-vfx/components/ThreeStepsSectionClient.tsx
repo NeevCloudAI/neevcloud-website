@@ -51,7 +51,7 @@ const ThreeStepsSectionClient = () => {
               {i < STEPS.length - 1 && (
                 <Divider
                   orientation="horizontal"
-                  className="hidden shrink-0 bg-gray-400 w-5 md:block"
+                  className="hidden bg-gray-400 w-5 md:block"
                   aria-hidden="true"
                 />
               )}
@@ -60,12 +60,13 @@ const ThreeStepsSectionClient = () => {
         </div>
       </div>
 
-      <div className="mt-6 md:mt-12.5 grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl mx-auto">
+      <div className="mt-6 md:mt-12.5 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-15 items-center md:mx-10">
         <StepContent step={step} />
         <div
           id={`three-steps-panel-${activeStep}`}
           role="tabpanel"
           aria-labelledby={`three-steps-tab-${activeStep}`}
+          className="w-full md:h-75"
         >
           <ActivePanel />
         </div>

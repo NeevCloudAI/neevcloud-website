@@ -4,7 +4,7 @@ export const DEFENCE_AMBITION_ITEMS: readonly AmbitionDetailItem[] = [
   {
     id: "data-sovereignty",
     label: "01",
-    iconSrc: "/icons/shield.svg",
+    iconSrc: "/icons/protected.svg",
     iconAlt: "Complete data sovereignty",
     title: "Complete Data Sovereignty",
     description:

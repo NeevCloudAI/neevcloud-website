@@ -16,19 +16,26 @@ export type StorageComparisonBarProps = {
   metric: StorageComparisonMetric;
   backgroundColor?: string;
   showLabel?: boolean; // default true  — set false to hide the whole label/value row
+  labelClassName?: string;
 };
 
 const StorageComparisonBar = ({
   metric,
   backgroundColor = "bg-white",
   showLabel = true,
+  labelClassName,
 }: StorageComparisonBarProps) => {
   const fillPercent = Math.min(100, (metric.seconds / 100) * 100);
 
   return (
     <div className="flex w-full flex-col gap-1">
       {showLabel && (
-        <div className="flex items-start justify-between gap-4">
+        <div
+          className={cn(
+            "flex items-start justify-between gap-4",
+            labelClassName
+          )}
+        >
           {/* Label + optional subtitle stacked on the left */}
           <div className="flex flex-col gap-0.5">
             <Text

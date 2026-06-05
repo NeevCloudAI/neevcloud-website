@@ -49,27 +49,6 @@ function InfrastructureNativeFlowDiagram() {
       >
         AI SuperCloud
       </Text>
-
-      {/* <svg
-        viewBox="0 0 120 120"
-        width="30"
-        height="30"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <g
-          fill="none"
-          stroke="#E6E6E6"
-          strokeWidth="12"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <line x1="60" y1="95" x2="60" y2="35" />
-
-          <polyline points="30,55 60,25 90,55" />
-        </g>
-      </svg> */}
       <Image
         src="/icons/up-icon.svg"
         alt="AI SuperCloud"

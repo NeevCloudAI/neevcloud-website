@@ -2,10 +2,10 @@
 
 @theme inline {
   --font-space-mono: var(--font-space-mono);
-
   --color-primary: var(--primary);
   --color-primary-10: var(--primary-10);
   --color-primary-20: var(--primary-20);
+  --color-primary-25: var(--primary-25);
   --color-primary-30: var(--primary-30);
   --color-primary-40: var(--primary-40);
   --color-primary-50: var(--primary-50);
@@ -14,6 +14,7 @@
 
   --color-secondary: var(--secondary);
   --color-red-50: var(--red-50);
+  --color-red-10: var(--red-10);
   --color-tertiary: var(--tertiary);
   --color-gray-10: var(--gray-10);
   --color-gray-20: var(--gray-20);
@@ -25,6 +26,7 @@
   --color-primary-5: var(--primary-5);
   --color-primary-70: var(--primary-70);
   --color-primary-110: var(--primary-110);
+  --color-primary-140: var(--primary-140);
   --color-black-5: var(--black-5);
   --color-gray-65: var(--gray-65);
   --color-gray-70: var(--gray-70);
@@ -52,6 +54,7 @@
   --color-black-7: var(--black-7);
   --color-gray-50: var(--gray-50);
   --color-gray-25: var(--gray-25);
+  --color-green-30: var(--green-30);
 
   --color-orange-50: var(--orange-50);
   --color-primary-80: var(--primary-80);
@@ -60,21 +63,34 @@
   --color-gray-97: var(--gray-97);
   --color-black-30: var(--black-30);
   --color-black-25: var(--black-25);
+  --color-primary-85: var(--primary-85);
   --color-green-100: var(--green-100);
   --color-green-10: var(--green-10);
+  --color-primary-160: var(--primary-160);
   --color-gray-110: var(--gray-110);
   --color-gray-83: var(--gray-83);
   --color-gray-84: var(--gray-84);
   --color-black-70: var(--black-70);
+  --color-primary-170: var(--primary-170);
+  --color-black-29: var(--black-29);
+  --color-black-100: var(--black-100);
   --color-black-35: var(--black-35);
   --color-black-40: var(--black-40);
   --color-primary-130: var(--primary-130);
 
+  --color-red-10: var(--red-10);
+  --color-gray-106: var(--gray-106);
   --color-gray-120: var(--gray-120);
   --color-black-95: var(--black-95);
   --color-gray-125: var(--gray-125);
   --color-black-15: var(--black-15);
+  --color-primary-150: var(--primary-150);
   --color-primary-95: var(--primary-95);
+  --color-primary-130: var(--primary-130);
+  --color-gray-66: var(--gray-66);
+  --color-primary-180: var(--primary-180);
+  --color-gray-107: var(--gray-107);
+  --color-primary-190: var(--primary-190);
 
   --breakpoint-header-company: 1430px;
   --breakpoint-header-resource: 1340px;
@@ -92,11 +108,13 @@
 :root {
   --primary: #00a78b;
   --primary-70: #00a78a;
+  --primary-85: #e9f3f3;
   --primary-5: #f4f9f9;
   --primary-10: #ebf5f5;
   --primary-20: #f0faf8;
   --primary-30: #d3f0eb;
   --primary-40: #e6f7f4;
+  --primary-25: #d9f2ee;
   --primary-95: #0d211e;
   --primary-50: #afe4db;
   --primary-60: #59dba7;
@@ -109,6 +127,9 @@
   --primary-110: #285141;
   --primary-120: #0e342d;
   --primary-130: #031714;
+  --primary-140: #1b1d1e;
+  --primary-150: #1b2c29;
+  --primary-170: #e0eded;
 
   --orange-50: #d29922;
 
@@ -129,6 +150,7 @@
 
   --black-30: #2d2d2d;
   --black-15: #292c2b;
+  --black-29: #292929;
 
   --black-20: #2a2c2c;
   --black-50: #00000052;
@@ -139,6 +161,7 @@
   --black-80: #0f0f0f;
   --black-90: #0000009e;
   --black-95: #121212;
+  --black-100: #080c13;
 
   --blue-40: #a0adb2;
 
@@ -163,15 +186,25 @@
   --gray-97: #383838;
   --gray-100: #1f1f1f;
   --gray-105: #121313;
+  --gray-106: #a5a8a8;
+  --gray-107: #a4a4a4;
   --gray-110: #0a0b0c;
   --gray-120: #101010;
   --gray-125: #171a1c;
+  --primary-130: #66cab9;
+  --primary-160: #96f7e4;
+  --primary-180: #212928;
+  --primary-190: #5c6480;
+
+  --gray-66: #666666;
 
   --green-10: #005150;
   --green-20: #a4ddd5;
+  --green-30: #384040;
   --green-50: #002e27;
   --green-100: #001411;
 
+  --red-10: #ff4d1c;
   --red-50: #ff4d48;
 
   --background: #ffffff;
@@ -242,12 +275,43 @@ body {
     border-color: var(--gray-10);
     @apply text-sm border rounded-md px-4 py-1.5 focus:outline-none focus:ring-1 disabled:pointer-events-none disabled:opacity-50;
   }
+
   input:focus {
     --tw-ring-color: var(--gray-80);
   }
 }
 
 @layer utilities {
+  .sidebar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      #ffd500 0%,
+      #ff9a00 50%,
+      #ff4d4d 100%
+    );
+    border-radius: 999px;
+  }
+
+  .classy::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .classy::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .classy::-webkit-scrollbar-thumb {
+    background: #6e7b80;
+    border-radius: 999px;
+  }
 }
 
 @layer components {

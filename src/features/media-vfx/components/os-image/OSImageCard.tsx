@@ -18,7 +18,7 @@ const OSImageCard = memo(function OSImageCard({
   cards,
 }: OSImageCardProps) {
   return (
-    <div className="relative rounded-xl p-8 flex flex-col overflow-hidden text-left bg-gray-10">
+    <div className="relative rounded-md p-6.25 flex flex-col overflow-hidden text-left bg-gray-10">
       <div className="flex items-center gap-5">
         <div
           className={`w-14 h-14 p-2 ${image ? "bg-white" : "bg-gray-60"} rounded-md flex items-center justify-center`}
@@ -38,8 +38,6 @@ const OSImageCard = memo(function OSImageCard({
           <Text as="h6">{description}</Text>
         </div>
       </div>
-
-      
 
       <div className="flex items-center gap-2">
         {cards.map((card: OsCardChip) => (

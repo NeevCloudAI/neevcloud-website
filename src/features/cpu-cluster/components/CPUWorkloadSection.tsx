@@ -44,7 +44,7 @@ const CPUWorkloadSection = () => {
         >
           <CpuWorkloadTerminalHeader />
 
-          <div className="px-4 py-5 md:py-7.5 min-h-120 overflow-y-auto">
+          <div className="px-4 py-5 md:py-7.5 min-h-120">
             <CPUConfigurationPanel />
           </div>
         </div>

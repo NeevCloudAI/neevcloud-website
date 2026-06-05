@@ -4,7 +4,7 @@ export const BFSI_AMBITION_ITEMS: readonly AmbitionDetailItem[] = [
   {
     id: "analytics",
     label: "01 · ANALYTICS",
-    iconSrc: "/icons/shield.svg",
+    iconSrc: "/icons/protected.svg",
     iconAlt: "Analytics",
     title: "AI-Powered Analytics",
     description:

@@ -24,7 +24,7 @@ const HeroSection = ({
   button1Text: string;
   button2Text: string;
   badgeText: string;
-  image: string;
+  image?: string;
   trustBadges?: string[];
 }) => {
   return (
@@ -40,7 +40,7 @@ const HeroSection = ({
 
         {title}
 
-        <Text as="h6" className="mt-2.5 max-w-4xl" align="center">
+        <Text as="h6" className="mt-2.5 max-w-2xl" align="center">
           {description}
         </Text>
 
@@ -64,15 +64,19 @@ const HeroSection = ({
           ))}
         </div>
 
-        <div className="w-full min-h-50 md:min-h-[80vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
-          <Image
-            src={image}
-            alt="Gradient Background"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
+        {image ? (
+          <div className="w-full min-h-50 md:min-h-[80vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
+            <Image
+              src={image}
+              alt="Gradient Background"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        ) : (
+          <div className="mt-4 md:mt-12.5"></div>
+        )}
       </Container>
     </section>
   );

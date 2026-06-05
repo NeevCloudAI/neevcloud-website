@@ -25,14 +25,8 @@ export interface FastestConfigFeature {
   value: string; // bold right text, e.g. "22.5× faster"
 }
 
-export interface DescriptionSegment {
-  text: string;
-  highlight?: boolean;
-}
-
 export interface FastestConfigCardProps {
   minutesPerFrame: number;
-  description: DescriptionSegment[];
   features: FastestConfigFeature[];
   className?: string;
 }

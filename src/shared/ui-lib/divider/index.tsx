@@ -11,10 +11,8 @@ const Divider = ({
     <div
       className={cn(
         "bg-black-10 shrink-0",
-        orientation === "vertical"
-          ? "h-full min-h-4 w-px"
-          : "w-full min-w-4 h-px",
-        className,
+        orientation === "vertical" ? "min-h-4 w-px " : "min-w-4 h-px w-full ",
+        className
       )}
     />
   );

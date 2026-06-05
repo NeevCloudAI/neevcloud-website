@@ -5,7 +5,7 @@ export const AGENTIC_WORKFLOW_INFRASTRUCTURE_ITEMS: readonly AmbitionDetailItem[
     {
       id: "container-native",
       label: "01",
-      iconSrc: "/icons/shield.svg",
+      iconSrc: "/icons/protected.svg",
       iconAlt: "Container-native deployment",
       title: "Container-Native",
       description:

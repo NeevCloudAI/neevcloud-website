@@ -35,7 +35,12 @@ const ServiceListSection = ({
             </Text>
           )}
         </Text>
-        <Text as="h6" align="center" textColor="gray-10" className="max-w-2xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="gray-10"
+          className="max-w-2xl mt-2.5"
+        >
           {description}
         </Text>
         <ul

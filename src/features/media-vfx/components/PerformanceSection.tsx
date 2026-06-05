@@ -8,7 +8,6 @@ import {
   BENCHMARK_ITEMS,
   BENCHMARK_FOOTNOTE,
   FASTEST_CONFIG_FEATURES,
-  FASTEST_CONFIG_DESCRIPTION,
 } from "../data/performance-section.data";
 
 const EnterpriseSection = () => {
@@ -18,14 +17,13 @@ const EnterpriseSection = () => {
       aria-labelledby="bfsi-enterprise-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        {/* Heading */}
         <Text
           as="h2"
           id="bfsi-enterprise-section-heading"
           align="center"
           className="max-w-4xl"
         >
-          Rendering performance{" "}
+          Rendering performance
           <Text as="span" variant="h2" textColor="primary">
             benchmarks
           </Text>
@@ -42,8 +40,7 @@ const EnterpriseSection = () => {
           relative gain is consistent.
         </Text>
 
-        {/* Cards */}
-        <div className="mt-10 md:mt-14 grid w-full grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="mt-8 md:mt-12.5 grid w-full grid-cols-1 gap-5 md:grid-cols-2">
           <PerformanceBenchmarkCard
             items={BENCHMARK_ITEMS}
             footnote={BENCHMARK_FOOTNOTE}
@@ -51,7 +48,6 @@ const EnterpriseSection = () => {
 
           <FastestConfigCard
             minutesPerFrame={2}
-            description={FASTEST_CONFIG_DESCRIPTION}
             features={FASTEST_CONFIG_FEATURES}
           />
         </div>

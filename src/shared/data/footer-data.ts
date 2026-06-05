@@ -34,7 +34,7 @@ export const FOOTER_LINK_GROUPS: readonly FooterLinkGroup[] = [
     title: "Products",
     links: [
       { label: "GPU AI Service", href: "/gpu-cluster" },
-      { label: "AI Inference", href: "" },
+      { label: "AI Inference", href: "/ai-inference" },
       { label: "GPU Compute", href: "" },
       { label: "Storage", href: "" },
     ],
@@ -54,7 +54,7 @@ export const FOOTER_LINK_GROUPS: readonly FooterLinkGroup[] = [
     links: [
       { label: "GPU Pricing", href: "" },
       { label: "Inference Pricing", href: "" },
-      { label: "CPU Compute Pricing", href: "" },
+      { label: "CPU Compute Pricing", href: "/cpu-pricing" },
       { label: "Storage Pricing", href: "" },
       { label: "Cost Efficiency Explained", href: "" },
     ],

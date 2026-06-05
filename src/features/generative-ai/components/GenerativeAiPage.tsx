@@ -8,6 +8,7 @@ import GenerativeAiInfrastructureSection from "./GenerativeAiInfrastructureSecti
 import GenerativeAiApplicationSection from "./GenerativeAiApplicationSection";
 import { GENERATIVE_AI_FAQ_ITEMS } from "../data/faq-section.data";
 import { GENERATIVE_AI_FOOTER } from "../data/generative-ai-page.data";
+import GenerativeAiDeploymentSection from "./GenerativeAiDeploymentSection";
 import GenerativeAiPerformanceSection from "./GenerativeAiPerformanceSection";
 
 const GenerativeAiPage = () => {
@@ -19,6 +20,7 @@ const GenerativeAiPage = () => {
       <GenerativeAiHeroSection />
       <GenerativeAiInfrastructureSection />
       <GenerativeAiApplicationSection />
+      <GenerativeAiDeploymentSection />
       <GenerativeAiPerformanceSection />
       <FaqSection items={GENERATIVE_AI_FAQ_ITEMS} />
       <FooterComponent

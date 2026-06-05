@@ -60,15 +60,3 @@ export const FASTEST_CONFIG_FEATURES: FastestConfigFeature[] = [
   { id: "interconnect", label: "interconnect", value: "NVLink + IB" },
   { id: "billing", label: "billing", value: "per-second" },
 ];
-
-export const FASTEST_CONFIG_DESCRIPTION = [
-  {
-    text: "8× H100 with NVLink delivers a 20M-poly path-traced 4K frame in 2 minutes, ",
-  },
-  { text: "22.5× faster", highlight: true },
-  { text: " than a single A100 and " },
-  { text: "7× faster", highlight: true },
-  {
-    text: " than a single H100. Per-second billing means the cluster vanishes the moment your render finishes.",
-  },
-];

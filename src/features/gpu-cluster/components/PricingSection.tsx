@@ -46,7 +46,7 @@ const PricingSection = () => {
 
           <div className="p-4 md:py-7.5 pb-0 md:pb-0">
             <Text as="h6" fontFamily="spaceMono" textColor="white">
-              {`› gpu list --pricing --currency=INR`}
+              {`› gpu list --pricing --currency=INR`}
             </Text>
 
             <Text

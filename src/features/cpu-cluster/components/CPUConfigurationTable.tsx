@@ -23,7 +23,7 @@ const CPUConfigurationTable = ({ family }: CPUConfigurationTableProps) => {
         {family.subtitle}
       </Text>
 
-      <div className="mt-7.5 overflow-x-auto">
+      <div className="mt-7.5">
         <table
           className="w-full font-space-mono"
           aria-label={`${family.titleName} configuration options`}

@@ -11,7 +11,9 @@ export type AmbitionDetailItem = {
   id: string;
   label: string;
   iconSrc: string;
+  iconColor?: string;
   iconAlt: string;
+  size?: "small" | "large";
   title: string;
   description: string;
   bullets: readonly AmbitionDetailBullet[];
@@ -26,23 +28,52 @@ export function AmbitionDetailCard({
   item,
   className,
 }: AmbitionDetailCardProps) {
-  const { label, iconSrc, iconAlt, title, description, bullets } = item;
+  const {
+    label,
+    iconSrc,
+    iconColor,
+    iconAlt,
+    title,
+    description,
+    bullets,
+    size = "large",
+  } = item;
 
   return (
     <article
       className={cn(
         "flex h-full flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
-        className,
+        className
       )}
     >
       <Text textColor="gray-85">{label}</Text>
-      <Image
-        src={iconSrc}
-        alt={iconAlt}
-        width={60}
-        height={60}
-        className="mt-2.5 self-end"
-      />
+      {size === "small" ? (
+        <div className="flex items-center justify-end mt-2.5 mb-4">
+          <div
+            className={cn(
+              "p-3 bg-primary-40 rounded-lg",
+              iconColor && `bg-${iconColor}`
+            )}
+          >
+            <Image
+              src={iconSrc}
+              alt={iconAlt}
+              width={20}
+              height={20}
+              className="self-end"
+            />
+          </div>
+        </div>
+      ) : (
+        <Image
+          src={iconSrc}
+          alt={iconAlt}
+          width={60}
+          height={60}
+          className="mt-2.5 self-end"
+        />
+      )}
+
       <Divider
         orientation="horizontal"
         className="my-5 rounded-md bg-gray-60"

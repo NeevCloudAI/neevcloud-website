@@ -30,8 +30,8 @@ const LlmTrainingInfrastructureSection = () => {
         >
           Adapting a foundation model to your domain requires serious compute,
           fast storage, and a platform that doesn&apos;t get in the way.
-          NeevCloud provides H100 and A100 configurations, single to
-          multi-node, with framework freedom.
+          NeevCloud provides H100 and A100 configurations, single to multi-node,
+          with framework freedom.
         </Text>
         <ul className="grid w-full list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-3 md:items-stretch md:pt-12.5">
           {LLM_TRAINING_INFRASTRUCTURE_ITEMS.map((item) => (

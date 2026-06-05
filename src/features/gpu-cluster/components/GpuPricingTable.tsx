@@ -8,7 +8,7 @@ import GpuPricingTableRow from "./GpuPricingTableRow";
 
 const GpuPricingTable = () => {
   return (
-    <div className="mt-7.5 overflow-x-auto">
+    <div className="mt-7.5">
       <table
         className="min-w-6xl w-full border-collapse font-space-mono text-xs md:text-sm"
         aria-label="GPU pricing by SKU and commitment term"

@@ -9,7 +9,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       title: "Research and Analysis",
       description:
         "Autonomous research agents that gather information, synthesize findings, and generate reports across multiple sources.",
-      icon: "/icons/research.svg",
+      icon: "/icons/drug-discovery.svg",
       image: "/images/healthcare-drug-discovery.png",
       imageSpacing: true,
       theme: "gray",
@@ -21,7 +21,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       title: "Workflow Automation",
       description:
         "Agents that execute multi-step business processes, make decisions, and interact with external systems.",
-      icon: "/icons/command.svg",
+      icon: "/icons/medical-imaging.svg",
       theme: "gray",
     },
     {
@@ -31,7 +31,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       title: "Code Generation and Review",
       description:
         "Developer agents that write code, review pull requests, generate tests, and maintain documentation.",
-      icon: "/icons/code.svg",
+      icon: "/icons/genomic-analysis.svg",
       theme: "gray",
     },
     {
@@ -41,7 +41,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       title: "Customer Support",
       description:
         "Support agents that understand context, access knowledge bases, and resolve issues.",
-      icon: "/icons/mic.svg",
+      icon: "/icons/medical-research.svg",
       theme: "gray",
     },
     {
@@ -51,7 +51,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       title: "Data Processing",
       description:
         "Agents that clean, transform, and enrich datasets using multiple tools and models.",
-      icon: "/icons/spark.svg",
+      icon: "/icons/startups-innovation.svg",
       theme: "dark",
     },
     {
@@ -61,7 +61,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       title: "Planning and Scheduling",
       description:
         "Optimize schedules, allocate resources, and coordinate complex multi-party tasks.",
-      icon: "/icons/stack-2.svg",
+      icon: "/icons/clinical-decision.svg",
       theme: "gray",
     },
   ] as const;

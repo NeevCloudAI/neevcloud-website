@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${spaceMono.variable}`}>
+      <body className={`${poppins.variable} ${spaceMono.variable} sidebar`}>
         <Providers>{children}</Providers>
       </body>
     </html>

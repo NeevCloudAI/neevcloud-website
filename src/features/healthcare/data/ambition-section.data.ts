@@ -4,7 +4,7 @@ export const HEALTHCARE_AMBITION_ITEMS: readonly AmbitionDetailItem[] = [
   {
     id: "drug-discovery",
     label: "01",
-    iconSrc: "/icons/shield.svg",
+    iconSrc: "/icons/protected.svg",
     iconAlt: "Drug discovery and research",
     title: "Drug Discovery & Research",
     description:

@@ -5,7 +5,7 @@ export const GENERATIVE_AI_INFRASTRUCTURE_ITEMS: readonly AmbitionDetailItem[] =
     {
       id: "one-click-deployment",
       label: "01",
-      iconSrc: "/icons/shield.svg",
+      iconSrc: "/icons/protected.svg",
       iconAlt: "One-click deployment",
       title: "One-Click Deployment",
       description:

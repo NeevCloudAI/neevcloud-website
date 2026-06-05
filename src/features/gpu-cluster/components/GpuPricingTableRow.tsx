@@ -40,7 +40,7 @@ const GpuPricingTableRow = ({ row }: GpuPricingTableRowProps) => {
           <Text
             as="span"
             fontFamily="spaceMono"
-            variant="small"
+            variant="p"
             textColor="primary-105"
             className="ml-2 md:ml-5"
           >
@@ -54,7 +54,7 @@ const GpuPricingTableRow = ({ row }: GpuPricingTableRowProps) => {
           <Text
             as="span"
             fontFamily="spaceMono"
-            variant="small"
+            variant="p"
             textColor="primary-105"
             className="ml-2 md:ml-5"
           >
@@ -68,7 +68,7 @@ const GpuPricingTableRow = ({ row }: GpuPricingTableRowProps) => {
           <Text
             as="span"
             fontFamily="spaceMono"
-            variant="small"
+            variant="p"
             textColor="primary-105"
             className="ml-2 md:ml-5"
           >

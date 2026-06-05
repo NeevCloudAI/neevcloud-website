@@ -1,4 +1,3 @@
-import { Clock, SquareCheck } from "lucide-react";
 import { Text } from "@/shared/ui-lib";
 import { Step } from "../../types/four-steps-section.types";
 
@@ -13,21 +12,25 @@ const StepContent = ({ step }: StepContentProps) => {
         as="h1"
         weight="semibold"
         textColor="gray-60"
-        className="text-[5rem]"
+        className="text-[3rem] md:text-[5rem]"
         aria-hidden="true"
       >
         {step.number}
       </Text>
 
-      <Text as="h3" weight="semibold" className="mt-4 text-[30px]">
+      <Text
+        as="h3"
+        weight="semibold"
+        className="mt-4 md:mt-8 text-[20px] md:text-[30px]"
+      >
         {step.heading}
       </Text>
 
-      <Text as="h6" className="mt-4">
+      <Text as="h6" className="mt-2.5">
         {step.description1}
       </Text>
 
-      <Text as="h6" className="mt-3">
+      <Text as="h6" className="mt-2.5">
         {step.description2}
       </Text>
     </div>

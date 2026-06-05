@@ -23,7 +23,12 @@ const MediaAmbitionSection = () => {
           </Text>
           Choose NeevCloud
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text
+          as="h6"
+          align="center"
+          textColor="black-5"
+          className="max-w-3xl mt-2.5"
+        >
           {`High-resolution rendering, complex simulations, and real-time previews require infrastructure that delivers performance without the overhead of managing on-premise hardware. NeevCloud provides GPU compute optimized for media and VFX production.`}
         </Text>
         <ul className="grid w-full list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-3 md:pt-12.5">

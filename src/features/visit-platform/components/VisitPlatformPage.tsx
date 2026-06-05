@@ -5,7 +5,8 @@ import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import VisitPlatformHeroSection from "./VisitPlatformHeroSection";
 import { MODEL_PLAYGROUND_FOOTER } from "../data/model-playground-page.constants";
 import InfrastructureSection from "./InfrastructureSection";
-
+import CompleteAISection from "./AiControl";
+import GettingStartedSection from "./GettingStartedSection";
 const VisitPlatformPage = () => {
   return (
     <>
@@ -14,6 +15,8 @@ const VisitPlatformPage = () => {
       <Divider orientation="horizontal" />
       <VisitPlatformHeroSection />
       <InfrastructureSection />
+      <CompleteAISection />
+      
       <FooterComponent
         title={MODEL_PLAYGROUND_FOOTER.title}
         description={MODEL_PLAYGROUND_FOOTER.description}

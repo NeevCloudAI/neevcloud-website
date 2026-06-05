@@ -94,7 +94,9 @@ const GpuCostCalculatorSummaryPanel = ({
       </ul>
 
       <div className="mt-auto flex flex-col gap-3 pt-6">
-        <Button className="w-full">{GPU_COST_CALCULATOR_SECTION.deployCta}</Button>
+        <Button className="w-full">
+          {GPU_COST_CALCULATOR_SECTION.deployCta}
+        </Button>
         <Button variant="outline" textColor="black" className="w-full">
           {GPU_COST_CALCULATOR_SECTION.contactCta}
         </Button>

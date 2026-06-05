@@ -2,127 +2,262 @@ import { Text } from "@/shared/ui-lib";
 
 const OnKubernetesContent = () => (
   <>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="mt-1 leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="mt-1 leading-7"
+    >
       apiVersion:
       <Text as="span" variant="h6" textColor="white">
         apps/v1
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       kind:
       <Text as="span" variant="h6" textColor="white">
         Deployment
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       metadata:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;name:
       <Text as="span" variant="h6" textColor="white">
         research-agent
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       spec:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;replicas:
       <Text as="span" variant="h6" textColor="primary">
         3
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;template:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;spec:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;containers:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name:
       <Text as="span" variant="h6" textColor="white">
         agent
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image:
       <Text as="span" variant="h6" textColor="red-50">
         neevcloud.com/registry/research-agent:v1
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;env:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name:
       <Text as="span" variant="h6" textColor="white">
         NEEVCLOUD_API_KEY
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueFrom:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;secretKeyRef:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:
       <Text as="span" variant="h6" textColor="white">
         agent-secrets
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key:
       <Text as="span" variant="h6" textColor="white">
         api-key
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- name:
       <Text as="span" variant="h6" textColor="white">
         MODEL_ENDPOINT
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value:
       <Text as="span" variant="h6" textColor="red-50">
         &quot;https://api.neevcloud.com/v1&quot;
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resources:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requests:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memory:
       <Text as="span" variant="h6" textColor="red-50">
         &quot;4Gi&quot;
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cpu:
       <Text as="span" variant="h6" textColor="red-50">
         &quot;2&quot;
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limits:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nvidia.com/gpu:
       <Text as="span" variant="h6" textColor="primary">
         1
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nodeSelector:
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6" className="leading-7">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gpu:
       <Text as="span" variant="h6" textColor="white">
         a100

@@ -25,7 +25,7 @@ const CpuTransparentPricingInstanceTypeSidebar = ({
                 onClick={() => onTypeSelect(option.id)}
                 className={cn(
                   "w-full flex items-center gap-3 border bg-black-25/60 p-3 md:w-70",
-                  isActive ? "border-primary-105" : "border-gray-97"
+                  isActive ? "border-primary-105" : "border-gray-97",
                 )}
               >
                 <option.icon

@@ -5,7 +5,6 @@ import type {
   CardRow,
 } from "../types/four-steps-section.types";
 
-
 export const STEPS: Step[] = [
   {
     number: "01",
@@ -76,7 +75,7 @@ export const STEP_ONE_ASSETS: StepOneAsset[] = [
   },
 ];
 
-export const STEP_TWO_ROWS: CardRow[]=[
+export const STEP_TWO_ROWS: CardRow[] = [
   {
     left: "GPU",
     right: "8X H100",
@@ -108,8 +107,6 @@ export const STEP_TWO_ROWS: CardRow[]=[
     rightColor: "white",
   },
 ];
-
-
 
 export const STEP_THREE_BILLING: StepThreeBilling = {
   title: "December usage · Llama 3.1 70B",

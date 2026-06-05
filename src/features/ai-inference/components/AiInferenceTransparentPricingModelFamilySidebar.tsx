@@ -35,7 +35,7 @@ const AiInferenceTransparentPricingModelFamilySidebar = ({
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => onFamilySelect(option.id)}
                   className={cn(
-                    "w-full rounded-md border bg-black-25/60 px-5 py-2.5 text-left md:w-70 border-gray-97"
+                    "w-full rounded-md border bg-black-25/60 px-5 py-2.5 text-left md:w-70 border-gray-97",
                   )}
                 >
                   <Text as="h6" fontFamily="spaceMono" textColor="white">

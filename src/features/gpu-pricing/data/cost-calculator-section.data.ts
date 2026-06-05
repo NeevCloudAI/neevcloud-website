@@ -87,17 +87,11 @@ export const GPU_COST_CALCULATOR_PRESETS: readonly GpuCostCalculatorPreset[] = [
 
 export const GPU_COST_CALCULATOR_GPU_TYPE_BY_ID = Object.fromEntries(
   GPU_COST_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType]),
-) as Record<
-  GpuCostCalculatorGpuType["id"],
-  GpuCostCalculatorGpuType
->;
+) as Record<GpuCostCalculatorGpuType["id"], GpuCostCalculatorGpuType>;
 
 export const GPU_COST_CALCULATOR_COMMITMENT_BY_ID = Object.fromEntries(
   GPU_COST_CALCULATOR_COMMITMENTS.map((commitment) => [
     commitment.id,
     commitment,
   ]),
-) as Record<
-  GpuCostCalculatorCommitment["id"],
-  GpuCostCalculatorCommitment
->;
+) as Record<GpuCostCalculatorCommitment["id"], GpuCostCalculatorCommitment>;

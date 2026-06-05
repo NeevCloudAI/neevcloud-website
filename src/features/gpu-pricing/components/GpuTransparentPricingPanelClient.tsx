@@ -11,7 +11,7 @@ import GpuTransparentPricingTerminalHeader from "./GpuTransparentPricingTerminal
 
 const GpuTransparentPricingPanelClient = () => {
   const [activeFamily, setActiveFamily] = useState<GpuInstanceFamilyId>(
-    DEFAULT_GPU_INSTANCE_FAMILY
+    DEFAULT_GPU_INSTANCE_FAMILY,
   );
 
   const family =

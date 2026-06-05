@@ -37,7 +37,7 @@ const MultiStepPipelineContent = () => (
       </Text>
       , agent=planner, prompt=
       <Text as="span" variant="h6" textColor="red-50">
-        &quot;{'{'}task{'}'}&quot;
+        &quot;{"{"}task{"}"}&quot;
       </Text>
       ),
     </Text>

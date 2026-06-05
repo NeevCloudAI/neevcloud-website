@@ -48,5 +48,3 @@ export interface CardRow {
   leftColor?: TextColor;
   rightColor?: TextColor;
 }
-
-

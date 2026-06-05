@@ -18,7 +18,8 @@ export const GPU_PRICING_FAQ: readonly FaqItem[] = [
   {
     id: 3,
     category: "Getting Started",
-    question: "What is the difference between GPU AI Service and GPU VM Service?",
+    question:
+      "What is the difference between GPU AI Service and GPU VM Service?",
     answer:
       "GPU AI Service runs Kubernetes-managed GPU pods for containerized workloads. GPU VM Service provides full Linux VMs with direct GPU access for custom drivers, legacy apps, or full OS control.",
   },
@@ -32,7 +33,8 @@ export const GPU_PRICING_FAQ: readonly FaqItem[] = [
   {
     id: 5,
     category: "Networking",
-    question: "Can GPU instances communicate with CPU instances without egress charges?",
+    question:
+      "Can GPU instances communicate with CPU instances without egress charges?",
     answer:
       "Yes. GPU and CPU instances in the same India region share a private network. Inter-instance traffic within the region is free with no bandwidth limits.",
   },

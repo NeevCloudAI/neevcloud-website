@@ -23,13 +23,13 @@ const ApplicationCard = ({
           : theme === "dark"
             ? "bg-black"
             : "bg-gray-10",
-        className
+        className,
       )}
     >
       <div
         className={cn(
           "flex items-start justify-between gap-2.5",
-          image ? "p-4 md:p-10 pb-0 md:pb-0" : ""
+          image ? "p-4 md:p-10 pb-0 md:pb-0" : "",
         )}
       >
         <div
@@ -39,7 +39,7 @@ const ApplicationCard = ({
               ? "bg-gray-10"
               : theme === "dark"
                 ? "bg-gray-90"
-                : "bg-white"
+                : "bg-white",
           )}
         >
           <Image src={icon} alt="" width={30} height={30} aria-hidden="true" />
@@ -80,7 +80,7 @@ const ApplicationCard = ({
             "relative mt-5 w-full flex-1",
             imageSpacing
               ? "flex flex-col justify-end overflow-hidden rounded-b-md "
-              : "pb-8"
+              : "pb-8",
           )}
         >
           <Image

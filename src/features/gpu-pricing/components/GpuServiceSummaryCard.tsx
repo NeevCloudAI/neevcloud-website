@@ -12,14 +12,14 @@ const GpuServiceSummaryCard = ({ service }: GpuServiceSummaryCardProps) => {
         "flex h-full flex-col rounded-md border p-4 md:p-5",
         isContainer
           ? "border-primary-70 bg-primary-140"
-          : "border-white-10 bg-black-80"
+          : "border-white-10 bg-black-80",
       )}
     >
       <div className="flex items-start gap-3">
         <div
           className={cn(
             "flex size-10 shrink-0 items-center justify-center rounded-md",
-            isContainer ? "bg-primary-40" : "bg-black-25"
+            isContainer ? "bg-primary-40" : "bg-black-25",
           )}
         >
           <Image
@@ -70,7 +70,7 @@ const GpuServiceSummaryCard = ({ service }: GpuServiceSummaryCardProps) => {
         spacing="md"
         className={cn(
           "mt-5 border font-space-mono",
-          isContainer ? "border-primary" : "border-primary-70"
+          isContainer ? "border-primary" : "border-primary-70",
         )}
       >
         {service.ctaLabel}

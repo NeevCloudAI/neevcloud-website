@@ -5,12 +5,11 @@ import type {
   GpuPricingRow,
 } from "../types/transparent-pricing-section.types";
 
-export const GPU_INSTANCE_FAMILY_OPTIONS: readonly GpuInstanceFamilyOption[] =
-  [
-    { id: "single-gpu", number: "01", label: "Single GPU" },
-    { id: "multi-gpu", number: "02", label: "Multi-GPU" },
-    { id: "multi-node", number: "03", label: "Multi-Node" },
-  ] as const;
+export const GPU_INSTANCE_FAMILY_OPTIONS: readonly GpuInstanceFamilyOption[] = [
+  { id: "single-gpu", number: "01", label: "Single GPU" },
+  { id: "multi-gpu", number: "02", label: "Multi-GPU" },
+  { id: "multi-node", number: "03", label: "Multi-Node" },
+] as const;
 
 export const GPU_SINGLE_GPU_PRICING_ROWS: readonly GpuPricingRow[] = [
   {

@@ -38,7 +38,8 @@ const WithToolCallingContent = () => (
       as="h6"
       className="leading-7"
     >
-      &nbsp;&nbsp;&quot;&quot;&quot;Search the web for current information.&quot;&quot;&quot;
+      &nbsp;&nbsp;&quot;&quot;&quot;Search the web for current
+      information.&quot;&quot;&quot;
     </Text>
     <Text
       fontFamily="spaceMono"
@@ -69,7 +70,8 @@ const WithToolCallingContent = () => (
       as="h6"
       className="leading-7"
     >
-      &nbsp;&nbsp;&quot;&quot;&quot;Execute SQL against connected data sources.&quot;&quot;&quot;
+      &nbsp;&nbsp;&quot;&quot;&quot;Execute SQL against connected data
+      sources.&quot;&quot;&quot;
     </Text>
     <Text
       fontFamily="spaceMono"

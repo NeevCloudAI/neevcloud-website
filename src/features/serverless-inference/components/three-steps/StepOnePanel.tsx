@@ -44,14 +44,14 @@ const StepOnePanel = () => {
 
       <div className="flex flex-col divide-y divide-gray-100 mt-5 ">
         {STEP_ONE_MODELS.map((m, i) => (
-          <div
-            key={m.name}
-            className={`flex items-center justify-between px-6.25 py-3.75 ${
-              i === 0
-                ? "border-l-3 border-l-primary border-b border-b-gray-200 [background:linear-gradient(to_right,#e6f7f5,transparent)]"
-                : "border-b border-b-gray-60"
-            }`}
-          >
+           <div
+                     key={m.name}
+                     className={`flex items-center justify-between px-6.25 py-3.75 ${
+                       i === 0
+                         ? "border-l-3 border-l-primary [background:linear-gradient(to_right,#e6f7f5,transparent)]"
+                         : ""
+                     } ${i < 3 ? "border-b border-b-gray-60" : ""}`}
+                   >
             <div>
               <Text as="h4" weight="semibold">
                 {m.name}

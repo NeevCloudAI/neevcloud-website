@@ -1,0 +1,1 @@
+export const DEFAULT_DEPLOYMENT_INDEX = 0;

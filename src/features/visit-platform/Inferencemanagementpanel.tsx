@@ -16,7 +16,7 @@ const InferenceManagementPanel = () => {
         </div>
       </div>
       <div className="flex gap-1.25 px-7.5 flex-wrap">
-        {INFERENCE_TAGS.map((f, i) => (
+        {INFERENCE_TAGS.map((f) => (
           <Text
             as="small"
             key={f}

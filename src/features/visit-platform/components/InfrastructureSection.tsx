@@ -14,7 +14,7 @@ import PurposeServiceBranchConnector from "./infrastructure/PurposeServiceBranch
 const PurposeSection = () => {
   return (
     <section
-      className="py-8 md:py-16 2xl:py-25"
+      className="py-8 md:py-25"
       aria-labelledby="purpose-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -23,16 +23,11 @@ const PurposeSection = () => {
           id="purpose-section-heading"
           textColor="black"
           align="center"
-          className="max-w-4xl"
+          className="max-w-2xl"
         >
-          Full-stack infrastructure
-          <Text>
-            <Text as="span" variant="h2" textColor="black">
-              under{" "}
-            </Text>
-            <Text as="span" variant="h2" textColor="primary">
-              your control
-            </Text>
+          Full-stack infrastructure under
+          <Text as="span" variant="h2" textColor="primary">
+            your control
           </Text>
         </Text>
 
@@ -52,13 +47,10 @@ const PurposeSection = () => {
           role="img"
           aria-label="Infrastructure architecture diagram"
         >
-          {/* Console block at top */}
           <PurposeControlPlaneBlock node={PURPOSE_CONSOLE_NODE} />
 
-          {/* Branch connector: console → 3 services */}
           <PurposeControlPlaneBranchConnector />
 
-          {/* 3 service cards */}
           <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3 md:gap-6 md:-mt-1">
             {PURPOSE_SERVICE_NODES.map((node) => (
               <PurposeFlowCard
@@ -82,7 +74,10 @@ const PurposeSection = () => {
           </div>
 
           {/* CPU Compute block */}
-          <PurposeFlowCard node={PURPOSE_CPU_NODE} className="bg-gray-10 -mt-1" />
+          <PurposeFlowCard
+            node={PURPOSE_CPU_NODE}
+            className="bg-gray-10 -mt-1"
+          />
         </div>
       </Container>
     </section>

@@ -2,7 +2,6 @@
 
 import { useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import type { EmployeeStory } from "../types/employee-stories-section.types";
 import EmployeeStoryCard from "./EmployeeStoryCard";
 import { Button } from "@/shared/ui-lib";

@@ -1,8 +1,10 @@
 import { Text } from "@/shared/ui-lib";
+import Image from "next/image";
 
 export type FeatureCardProps = {
   title: string;
   description: string;
+  icon?: string;
   theme?: "light" | "dark" | "transparent";
   className?: string;
 };
@@ -10,6 +12,7 @@ export type FeatureCardProps = {
 export function FeatureCard({
   title,
   description,
+  icon,
   theme = "light",
   className,
 }: FeatureCardProps) {
@@ -17,7 +20,11 @@ export function FeatureCard({
     <div
       className={`flex w-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white-5 backdrop-blur-md" : theme === "dark" ? "bg-gray-105 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
     >
-      <div className="h-7.5 w-7.5 shrink-0 bg-gray-50"></div>
+      {icon ? (
+        <Image src={icon} alt={title} width={30} height={30} />
+      ) : (
+        <div className="h-7.5 w-7.5 shrink-0 bg-gray-50"></div>
+      )}
       <Text
         as="h3"
         weight="semibold"

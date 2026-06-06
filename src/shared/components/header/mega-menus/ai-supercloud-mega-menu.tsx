@@ -23,6 +23,7 @@ const AI_SUPERCLOUD_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconAlt: "Visit",
             title: "Visit the Platform",
             description: "Open the AI SuperCloud Console",
+            href: "/visit-platform",
           },
           {
             iconSrc: "/icons/question-mark.svg",

@@ -1,0 +1,40 @@
+import { FeatureCardProps } from "@/shared/components/feature-card";
+
+export const COMPLETE_AI_CARDS: FeatureCardProps[] = [
+  {
+    title: "Train Models",
+    icon: "/icons/train.svg",
+    description:
+      "Deploy GPU instances, start training. Scale from single GPUs to 256+ node clusters.",
+  },
+  {
+    title: "Deploy Inference",
+    icon: "/icons/inference.svg",
+    description:
+      "Upload models, create endpoints, and serve predictions with automatic scaling.",
+  },
+  {
+    title: "Manage Data",
+    icon: "/icons/data.svg",
+    description:
+      "Store datasets and models on persistent storage. Access from any compute instance.",
+  },
+  {
+    title: "Run Pipelines",
+    icon: "/icons/pipelines.svg",
+    description:
+      "Use CPU instances for preprocessing, databases, and orchestration alongside GPU workloads.",
+  },
+  {
+    title: "Monitor Everything",
+    icon: "/icons/monitor.svg",
+    description:
+      "Track resource usage, performance metrics, and costs from unified dashboard.",
+  },
+  {
+    title: "Scale Infrastructure",
+    icon: "/icons/scale.svg",
+    description:
+      "Add resources as needs grow. Remove when projects complete. Pay only for actual usage.",
+  },
+];

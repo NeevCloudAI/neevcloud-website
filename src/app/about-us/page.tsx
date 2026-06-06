@@ -19,4 +19,3 @@ const AboutUsRoutePage = () => {
 };
 
 export default AboutUsRoutePage;
-

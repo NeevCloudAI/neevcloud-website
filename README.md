@@ -15,3 +15,5 @@
 
 sliders images
 header
+
+SEO: add seo object in every page

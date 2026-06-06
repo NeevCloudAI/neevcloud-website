@@ -23,11 +23,7 @@ export const metadata: Metadata = {
 const CareersRoutePage = () => {
   return (
     <>
-      <link
-        rel="preconnect"
-        href={KEKA_EMBED.origin}
-        crossOrigin="anonymous"
-      />
+      <link rel="preconnect" href={KEKA_EMBED.origin} crossOrigin="anonymous" />
       <link rel="preload" href={KEKA_EMBED.scriptSrc} as="script" />
       <Script id="keka-embed-config" strategy="afterInteractive">
         {`window.khConfig=${KEKA_EMBED_CONFIG_JSON};`}

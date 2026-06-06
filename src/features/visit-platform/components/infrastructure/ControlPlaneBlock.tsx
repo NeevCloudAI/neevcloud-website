@@ -7,19 +7,29 @@ type PurposeControlPlaneBlockProps = {
   className?: string;
 };
 
-const ControlPlaneBlock = ({ node, className }: PurposeControlPlaneBlockProps) => {
+const ControlPlaneBlock = ({
+  node,
+  className,
+}: PurposeControlPlaneBlockProps) => {
   return (
-    <div className={cn(
-      "flex flex-col bg-black items-center rounded-lg py-5",
-      className
-    )}>
-      <Text as="h6" textColor="gray-85" className="tracking-widest uppercase px-30.5">
+    <div
+      className={cn(
+        "flex flex-col bg-black items-center rounded-lg p-5 md:px-30",
+        className
+      )}
+    >
+      <Text as="h6" textColor="gray-85">
         {node.subtitle}
       </Text>
-      <Text as="h4" weight="semibold" textColor="white" className="text-[22px] md:text-[25px] py-1.5">
+      <Text
+        as="h4"
+        weight="semibold"
+        textColor="white"
+        className="text-[18px] md:text-[22px] mt-1.25"
+      >
         {node.title}
       </Text>
-      <Text textColor="primary" >
+      <Text textColor="primary" className="mt-1.25">
         {node.footer}
       </Text>
     </div>

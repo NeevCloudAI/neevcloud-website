@@ -8,7 +8,7 @@ import StorageMetricsCard from "./storage-comparison/StorageMetricsCard";
 const MetricsSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-25"
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
       aria-labelledby="nvme-metrics-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

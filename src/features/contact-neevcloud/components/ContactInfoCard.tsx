@@ -1,5 +1,5 @@
 import { Text } from "@/shared/ui-lib";
-import { Calendar, Mail, Phone } from "lucide-react";
+import { Calendar, Mail, Phone } from "@/shared/icons/lucide-icon-map";
 import type { ContactInfoCardItem } from "../types/conversation-section.types";
 
 const CONTACT_INFO_ICONS = {

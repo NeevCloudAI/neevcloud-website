@@ -6,9 +6,13 @@ import PerformanceMetricCard from "./performance/PerformanceMetricCard";
 const PerformanceSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-25"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="bfsi-performance-section-heading"
     >
+      <div
+        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full md:w-[30%] h-[80%] top-20 right-[-5%] opacity-40 md:opacity-100"
+        aria-hidden="true"
+      />
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="h2"

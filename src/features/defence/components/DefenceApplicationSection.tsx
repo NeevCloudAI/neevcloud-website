@@ -6,7 +6,7 @@ import { DEFENCE_APPLICATION_CARDS } from "../data/application-section.data";
 const DefenceApplicationSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-25"
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
       aria-labelledby="defence-applications-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

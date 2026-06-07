@@ -5,7 +5,7 @@ import {
   MessageSquare,
   PenLine,
   Search,
-} from "lucide-react";
+} from "@/shared/icons/lucide-icon-map";
 import type { AiInferenceScenarioItem } from "../types/scenarios-section.types";
 
 export const AI_INFERENCE_SCENARIO_ITEMS: readonly AiInferenceScenarioItem[] = [

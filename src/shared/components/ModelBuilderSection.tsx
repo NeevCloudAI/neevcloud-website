@@ -8,7 +8,7 @@ import RuntimeTabs from "@/shared/components/RuntimeTabs";
 
 const ModelBuilderSection = () => {
   return (
-    <section className="relative bg-black py-8 md:py-25">
+    <section className="relative bg-black py-8 md:py-16 2xl:py-25">
       <div className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"></div>
       <Container className="flex flex-col items-center justify-center">
         <Text as="h2" textColor="white" align="center" className="max-w-4xl">

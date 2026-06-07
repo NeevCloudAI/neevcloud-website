@@ -6,7 +6,7 @@ import { MEDIA_APPLICATION_CARDS } from "../data/application-section.data";
 const MediaApplicationSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-25"
+      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="media-applications-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

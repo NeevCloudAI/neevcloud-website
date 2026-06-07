@@ -1,4 +1,4 @@
-import { LogOut } from "lucide-react";
+import { LogOut } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import { ModelCardData } from "../../types/models-section.types";

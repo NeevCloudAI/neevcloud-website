@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Space_Mono } from "next/font/google";
 import "./globals.css";
-import Providers from "./provider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -28,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${spaceMono.variable}`}>
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );

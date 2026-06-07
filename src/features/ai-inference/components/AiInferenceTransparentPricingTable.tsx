@@ -2,7 +2,7 @@ import { Text } from "@/shared/ui-lib";
 import { AI_INFERENCE_TRANSPARENT_PRICING_TABLE_CELL_CLASS } from "../constants/transparent-pricing-section.constants";
 import type { AiInferenceTransparentPricingTableProps } from "../types/transparent-pricing-section.types";
 import AiInferenceTransparentPricingTableRow from "./AiInferenceTransparentPricingTableRow";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/shared/icons/lucide-icon-map";
 
 const AiInferenceTransparentPricingTable = ({
   family,

@@ -6,7 +6,7 @@ import ApplicationCard from "@/shared/components/application-card";
 const GovernmentApplicationSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-25"
+      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="bfsi-applications-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -17,9 +17,9 @@ const GovernmentApplicationSection = () => {
           align="center"
           className="max-w-4xl"
         >
-          BFSI applications
+          Public Sector
           <Text as="span" variant="h2" textColor="black">
-            on NeevCloud.
+            AI Applications
           </Text>
         </Text>
         <Text

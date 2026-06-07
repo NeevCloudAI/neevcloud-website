@@ -1,4 +1,4 @@
-import { SquareCheck } from "lucide-react";
+import { SquareCheck } from "@/shared/icons/lucide-icon-map";
 import type { IntelligenceCard as IntelligenceCardData } from "../types/intelligence-section.types";
 import { Text } from "@/shared/ui-lib";
 

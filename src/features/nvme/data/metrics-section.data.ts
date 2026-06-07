@@ -1,4 +1,4 @@
-import { Gift, MoveLeft, MoveRight, Shuffle } from "lucide-react";
+import { Gift, MoveLeft, MoveRight, Shuffle } from "@/shared/icons/lucide-icon-map";
 import { MetricCardData } from "../types/metrics-section.types";
 
 export const METRIC_CARDS: readonly MetricCardData[] = [

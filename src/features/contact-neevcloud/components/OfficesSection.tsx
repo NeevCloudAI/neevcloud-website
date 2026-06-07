@@ -9,7 +9,7 @@ import {
 const OfficesSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-gray-10 py-8 md:py-16 2xl:py-25 md:min-h-dvh bg-[url('/images/map.png')] bg-cover bg-center bg-no-repeat"
+      className="relative overflow-hidden bg-gray-10 py-8 md:py-16 2xl:py-25 bg-[url('/images/map.png')] bg-cover bg-center bg-no-repeat"
       aria-labelledby="offices-section-heading"
     >
       <Container className="relative flex flex-col items-center justify-center">

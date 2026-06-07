@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useRef } from "react";
-import { MoveLeft, MoveRight, Star } from "lucide-react";
+import { MoveLeft, MoveRight, Star } from "@/shared/icons/lucide-icon-map";
 import { cn } from "@/lib/utils";
 import { Text } from "@/shared/ui-lib";
 import { REVIEWS_SECTION_CARDS } from "../constants/reviews-section.constants";

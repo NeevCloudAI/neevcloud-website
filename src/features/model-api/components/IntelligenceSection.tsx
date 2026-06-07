@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const IntelligenceSection = () => {
   return (
     <section
-      className="bg-gray-10 py-8 md:py-25"
+      className="bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="model-api-intelligence-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

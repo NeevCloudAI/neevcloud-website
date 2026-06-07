@@ -7,7 +7,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 const PricingSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-25"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="gpu-pricing-section-heading"
     >
       <div

@@ -1,7 +1,7 @@
 import { Button, Text } from "@/shared/ui-lib";
 import { CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS } from "../constants/transparent-pricing-section.constants";
 import type { CpuTransparentPricingTableRowProps } from "../types/transparent-pricing-section.types";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/shared/icons/lucide-icon-map";
 
 const CpuTransparentPricingTableRow = ({
   row,

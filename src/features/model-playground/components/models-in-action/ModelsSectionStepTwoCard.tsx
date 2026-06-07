@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import type { ModelsSectionStepTwoCard } from "../../types/models-section.types";
 

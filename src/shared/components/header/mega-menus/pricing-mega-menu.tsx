@@ -23,6 +23,7 @@ const PRICING_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             iconAlt: "GPU Compute",
             title: "GPU Compute",
             description: "On-Demand & Reserved Plans",
+            href: "/gpu-pricing",
           },
           {
             iconSrc: "",

@@ -6,7 +6,7 @@ import { CULTURE_CARDS, CULTURE_SECTION } from "../data/culture-section.data";
 const CultureSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-25"
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
       aria-labelledby="careers-culture-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

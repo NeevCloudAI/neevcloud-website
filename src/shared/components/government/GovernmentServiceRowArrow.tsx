@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/shared/icons/lucide-icon-map";
 
 const ServiceRowArrow = () => {
   return (

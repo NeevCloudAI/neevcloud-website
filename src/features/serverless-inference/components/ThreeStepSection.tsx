@@ -10,7 +10,7 @@ import ThreeStepsSectionClient from "./ThreeStepsSectionClient";
 const ThreeStepSection = () => {
   return (
     <section
-      className="bg-gray-10 relative py-8 md:py-25"
+      className="bg-gray-10 relative py-8 md:py-16 2xl:py-25"
       aria-labelledby="three-steps-section-heading"
     >
       <Container className="relative">

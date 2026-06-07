@@ -1,4 +1,6 @@
+import { cn } from "@/lib/utils";
 import { Button, Divider, Text } from "@/shared/ui-lib";
+import Link from "next/link";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
@@ -91,6 +93,19 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
   },
 ];
 
+const PRODUCT_MEGA_MENU_GPU_LINKS = [
+  { label: "A100", href: "/nvidia-a100" },
+  { label: "A30", href: "/nvidia-a30" },
+  { label: "B200", href: "/nvidia-b200" },
+  { label: "B300", href: "/nvidia-b300" },
+  { label: "H100", href: "/nvidia-h100" },
+] as const;
+
+const gpuLinkClassName = cn(
+  "outline-offset-2 transition-colors hover:text-primary",
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+);
+
 export default function ProductMegaMenu() {
   return (
     <div className="flex w-full flex-col gap-4 p-4 md:p-7.5 shadow-sm">
@@ -125,10 +140,22 @@ export default function ProductMegaMenu() {
       </div>
       <Divider orientation="horizontal" />
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <Text textColor="blue-40">
-          H100 &nbsp; · &nbsp; H200 &nbsp; · &nbsp; B200 &nbsp; · &nbsp; B300
-          &nbsp; · &nbsp; A30 &nbsp; · &nbsp; MI300X
-        </Text>
+        <nav aria-label="Available GPUs">
+          <ul className="m-0 flex list-none flex-wrap items-center p-0">
+            {PRODUCT_MEGA_MENU_GPU_LINKS.map((link, index) => (
+              <li key={link.label} className="flex items-center">
+                {index > 0 ? (
+                  <Text textColor="blue-40" aria-hidden="true">
+                    &nbsp; · &nbsp;
+                  </Text>
+                ) : null}
+                <Link href={link.href} className={gpuLinkClassName}>
+                  <Text textColor="blue-40">{link.label}</Text>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <Button variant="ghost" className="text-gray-75" spacing="none">
           Compare GPUs -&gt;
         </Button>

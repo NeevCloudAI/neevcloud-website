@@ -62,10 +62,13 @@
   --color-green-50: var(--green-50);
   --color-gray-97: var(--gray-97);
   --color-black-30: var(--black-30);
+  --color-gray-92: var(--gray-92);
+  --color-green-60: var(--green-60);
   --color-black-25: var(--black-25);
   --color-primary-85: var(--primary-85);
   --color-green-100: var(--green-100);
   --color-green-10: var(--green-10);
+  --color-green-40: var(--green-40);
   --color-primary-160: var(--primary-160);
   --color-gray-110: var(--gray-110);
   --color-gray-83: var(--gray-83);
@@ -103,6 +106,8 @@
   --breakpoint-header-buttons: 850px;
   --breakpoint-header-1xl: 1531px;
   --breakpoint-1xl: 1360px;
+  --breakpoint-1\.5xl: 88rem; /* 1408px — between xl (80rem) and 2xl (96rem) */
+  --breakpoint-2\.5xl: 108rem; /* 1728px — between 2xl (96rem) and 3xl (120rem) */
   --container-3\.5xl: 52rem;
 }
 
@@ -193,6 +198,7 @@
   --gray-110: #0a0b0c;
   --gray-120: #101010;
   --gray-125: #171a1c;
+  --gray-92: #929497;
   --primary-130: #66cab9;
   --primary-160: #96f7e4;
   --primary-180: #212928;
@@ -203,7 +209,9 @@
   --green-10: #005150;
   --green-20: #a4ddd5;
   --green-30: #384040;
+  --green-40: #001d18;
   --green-50: #002e27;
+  --green-60: #000a08;
   --green-100: #001411;
 
   --red-10: #ff4d1c;

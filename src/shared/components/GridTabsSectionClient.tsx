@@ -55,9 +55,9 @@ const GridTabsSectionClient = ({
     <>
       <div
         className={cn(
-          "w-full grid grid-cols-1 items-center justify-between mt-4 md:mt-12.5",
+          "w-full grid grid-cols-1 items-center justify-between",
           TAB_GRID_COLS[tabs.length] ?? "md:grid-cols-4",
-          tabListClassName,
+          tabListClassName
         )}
         role="tablist"
         aria-label={ariaLabel}
@@ -89,7 +89,7 @@ const GridTabsSectionClient = ({
                 isLast && "rounded-r-md",
                 isSelected
                   ? "bg-primary-100 text-black"
-                  : "border-gray-90 text-gray-65",
+                  : "border-gray-90 text-gray-65"
               )}
             >
               {tab.label}

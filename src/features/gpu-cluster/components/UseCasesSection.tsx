@@ -5,7 +5,7 @@ import { Text } from "@/shared/ui-lib";
 const UseCasesSection = () => {
   return (
     <section aria-labelledby="gpu-use-cases-section-heading">
-      <Container className="bg-white flex flex-col items-center py-8 md:py-25">
+      <Container className="bg-white flex flex-col items-center py-8 md:py-16 2xl:py-25">
         <Text as="h2" id="gpu-use-cases-section-heading">
           Use
           <Text as="span" variant="h2" textColor="primary">

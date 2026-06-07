@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const DeployStorageSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-25"
+      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="nvme-deploy-storage-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

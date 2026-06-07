@@ -6,7 +6,7 @@ import { Button, Text } from "@/shared/ui-lib";
 const ModelsSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-25 bg-glow-terminal"
+      className="relative bg-white py-8 md:py-16 2xl:py-25 bg-glow-terminal"
       aria-labelledby="models-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

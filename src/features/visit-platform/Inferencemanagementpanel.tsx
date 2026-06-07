@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Search } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import ConsoleMockupCard from "./components/Consolemockupcard";
 import { INFERENCE_MODELS, INFERENCE_TAGS } from "./data/console-section.data";

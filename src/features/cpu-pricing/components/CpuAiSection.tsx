@@ -6,7 +6,7 @@ import { CPU_PRICING_SECTION_ITEMS } from "../data/cpu-pricing-section.data";
 const CpuAiSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-25"
+      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="cpu-ai-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

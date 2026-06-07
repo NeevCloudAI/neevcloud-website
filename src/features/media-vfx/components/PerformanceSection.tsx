@@ -13,7 +13,7 @@ import {
 const EnterpriseSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-25"
+      className="relative bg-white py-8 md:py-16 2xl:py-25"
       aria-labelledby="bfsi-enterprise-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

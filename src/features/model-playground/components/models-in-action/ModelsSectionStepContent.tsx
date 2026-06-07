@@ -1,4 +1,4 @@
-import { SquareCheck } from "lucide-react";
+import { SquareCheck } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import type { ModelsSectionStep } from "../../types/models-section.types";
 

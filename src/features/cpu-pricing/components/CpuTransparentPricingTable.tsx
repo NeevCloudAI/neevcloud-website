@@ -5,7 +5,7 @@ import {
 } from "../constants/transparent-pricing-section.constants";
 import type { CpuTransparentPricingTableProps } from "../types/transparent-pricing-section.types";
 import CpuTransparentPricingTableRow from "./CpuTransparentPricingTableRow";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/shared/icons/lucide-icon-map";
 
 const CpuTransparentPricingTable = ({
   activeType,

@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "@/shared/icons/lucide-icon-map";
 
 export type CpuInstanceTypeId =
   | "general-purpose"

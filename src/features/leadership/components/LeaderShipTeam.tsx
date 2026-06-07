@@ -164,7 +164,7 @@ const LeadershipTeamCard = ({ member }: LeadershipTeamCardProps) => {
 
 const LeaderShipTeam = () => {
   return (
-    <section className="relative bg-white py-8 md:py-25">
+    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"

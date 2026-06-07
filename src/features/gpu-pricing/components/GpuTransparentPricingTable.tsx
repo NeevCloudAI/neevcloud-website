@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import {
   GPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS,

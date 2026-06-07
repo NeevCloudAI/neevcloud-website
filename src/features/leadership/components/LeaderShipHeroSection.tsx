@@ -2,11 +2,11 @@ import Container from "@/shared/components/container";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import { LEADERSHIP_HERO } from "../data/leadership-page.data";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "@/shared/icons/lucide-icon-map";
 
 const LeaderShipHeroSection = () => {
   return (
-    <section className="relative bg-white py-8 md:py-25">
+    <section className="relative bg-white pt-8 md:pt-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
@@ -28,12 +28,12 @@ const LeaderShipHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button>{LEADERSHIP_HERO.button1Text}</Button>
-          <Button variant="outline" textColor="black">
+          <Button spacing="lg">{LEADERSHIP_HERO.button1Text}</Button>
+          <Button variant="outline" textColor="black" spacing="lg">
             {LEADERSHIP_HERO.button2Text}
           </Button>
         </div>
-        <div className="rounded-lg bg-gradient-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2]  flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
+        <div className="mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
           <div className="p-4 md:pl-24 ">
             <div className="flex items-center gap-2">
               <Divider orientation="horizontal" className="w-8 bg-primary" />

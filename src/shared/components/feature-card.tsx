@@ -18,7 +18,7 @@ export function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div
-      className={`flex w-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white-5 backdrop-blur-md" : theme === "dark" ? "bg-gray-105 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
+      className={`flex w-full h-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white-5 backdrop-blur-md" : theme === "dark" ? "bg-gray-105 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
     >
       {icon ? (
         <Image src={icon} alt={title} width={30} height={30} />

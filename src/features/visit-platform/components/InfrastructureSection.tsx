@@ -14,7 +14,7 @@ import PurposeServiceBranchConnector from "./infrastructure/PurposeServiceBranch
 const PurposeSection = () => {
   return (
     <section
-      className="py-8 md:py-25"
+      className="py-8 md:py-16 2xl:py-25"
       aria-labelledby="purpose-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

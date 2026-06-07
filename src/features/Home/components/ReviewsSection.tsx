@@ -5,7 +5,7 @@ import ReviewsCarousel from "./ReviewsCarousel";
 const ReviewsSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-gray-10 py-8 md:py-25"
+      className="relative overflow-hidden bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="reviews-section-heading"
     >
       <Container

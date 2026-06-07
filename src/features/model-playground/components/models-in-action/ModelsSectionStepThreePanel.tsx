@@ -1,4 +1,4 @@
-import { CircleCheck } from "lucide-react";
+import { CircleCheck } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import ModelsSectionLiveBadge from "./ModelsSectionLiveBadge";
 import ModelsSectionPanelLogo from "./ModelsSectionPanelLogo";

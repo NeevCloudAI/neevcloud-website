@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import { CpuIcon } from "lucide-react";
+import { CpuIcon } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
 
 type CpuArchitectureItem = {

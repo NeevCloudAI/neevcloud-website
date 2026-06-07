@@ -6,7 +6,7 @@ const AiInferenceHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="mt-4 max-w-5xl md:mt-6">
+        <Text as="h1" align="center" className="mt-4 max-w-3xl md:mt-6">
           Serve AI Models at
           <Text as="span" variant="h1" textColor="primary">
             Production Scale

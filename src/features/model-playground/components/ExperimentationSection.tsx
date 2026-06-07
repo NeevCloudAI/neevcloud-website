@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const ExperimentationSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-25"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="experimentation-section-heading"
     >
       <div

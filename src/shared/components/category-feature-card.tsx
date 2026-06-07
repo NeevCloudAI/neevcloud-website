@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button, Text } from "@/shared/ui-lib";
-import { SquareCheck } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { SquareCheck, type LucideIcon } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
 
 export type CategoryFeatureHoverDetail = {

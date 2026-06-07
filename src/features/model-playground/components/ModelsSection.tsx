@@ -5,7 +5,7 @@ import { Text } from "@/shared/ui-lib";
 const ModelsSection = () => {
   return (
     <section
-      className="bg-gray-10 relative py-8 md:py-25"
+      className="bg-gray-10 relative py-8 md:py-16 2xl:py-25"
       aria-labelledby="models-in-action-section-heading"
     >
       <Container className="relative flex flex-col items-center justify-center">

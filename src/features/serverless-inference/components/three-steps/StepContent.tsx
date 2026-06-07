@@ -1,4 +1,4 @@
-import { Clock, SquareCheck } from "lucide-react";
+import { Clock, SquareCheck } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import { Step } from "../../types/three-steps-section.types";
 

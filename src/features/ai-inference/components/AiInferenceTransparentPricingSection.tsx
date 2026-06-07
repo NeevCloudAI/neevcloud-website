@@ -1,12 +1,12 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
 import AiInferenceTransparentPricingPanel from "./AiInferenceTransparentPricingPanel";
-import { Check } from "lucide-react";
+import { Check } from "@/shared/icons/lucide-icon-map";
 
 const AiInferenceTransparentPricingSection = () => {
   return (
     <section
-      className="relative bg-black py-8 md:py-25"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="ai-inference-transparent-pricing-section-heading"
     >
       <div

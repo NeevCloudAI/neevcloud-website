@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Search } from "lucide-react";
+import { Search } from "@/shared/icons/lucide-icon-map";
 import { Text } from "@/shared/ui-lib";
 import {
   STEP_ONE_FILTERS,

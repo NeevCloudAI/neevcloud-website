@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "@/shared/icons/lucide-icon-map";
 import type { EmployeeStory } from "../types/employee-stories-section.types";
 import EmployeeStoryCard from "./EmployeeStoryCard";
 import { Button } from "@/shared/ui-lib";

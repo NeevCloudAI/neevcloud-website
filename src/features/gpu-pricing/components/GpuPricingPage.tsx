@@ -5,6 +5,8 @@ import { GPU_PRICING_FOOTER } from "../data/gpu-pricing-page.data";
 import GpuPricingHeroSection from "./GpuPricingHeroSection";
 import GpuAiSection from "./GpuAiSection";
 import GpuCostCalculatorSection from "./GpuCostCalculatorSection";
+import GpuModelTransparentPricingSection from "./GpuModelTransparentPricingSection";
+import GpuStoragePricingSection from "./GpuStoragePricingSection";
 import GpuTransparentPricingSection from "./GpuTransparentPricingSection";
 
 const GpuPricingPage = () => {
@@ -12,8 +14,10 @@ const GpuPricingPage = () => {
     <>
       <GpuPricingHeroSection />
       <GpuAiSection />
-      <GpuCostCalculatorSection />
+      <GpuModelTransparentPricingSection />
+      <GpuStoragePricingSection />
       <GpuTransparentPricingSection />
+      <GpuCostCalculatorSection />
       <FaqSection items={GPU_PRICING_FAQ} />
       <FooterComponent
         title={GPU_PRICING_FOOTER.title}

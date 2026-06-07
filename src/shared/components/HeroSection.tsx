@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button, Text } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck } from "@/shared/icons/lucide-icon-map";
 
 const trustBadgesData = [
   "Data residency in India",

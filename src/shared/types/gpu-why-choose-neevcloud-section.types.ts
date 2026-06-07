@@ -26,6 +26,7 @@ export type GpuWhyChooseNeevcloudSectionContent = {
   buttonText: string;
 };
 
-export type GpuWhyChooseNeevcloudSectionProps = GpuWhyChooseNeevcloudSectionContent & {
-  className?: string;
-};
+export type GpuWhyChooseNeevcloudSectionProps =
+  GpuWhyChooseNeevcloudSectionContent & {
+    className?: string;
+  };

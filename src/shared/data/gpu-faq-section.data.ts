@@ -67,8 +67,7 @@ export const NVIDIA_A30_FAQ: readonly FaqItem[] = [
     id: 5,
     category: "Use Cases",
     question: "Who should use the NVIDIA A30?",
-    answer:
-      "Teams deploying scalable AI inference and analytics applications.",
+    answer: "Teams deploying scalable AI inference and analytics applications.",
   },
 ] as const;
 
@@ -83,7 +82,8 @@ export const NVIDIA_B200_FAQ: readonly FaqItem[] = [
   {
     id: 2,
     category: "Specifications",
-    question: "What are the key features and specifications of the NVIDIA B200 GPU?",
+    question:
+      "What are the key features and specifications of the NVIDIA B200 GPU?",
     answer:
       "The B200 leverages 12-high memory stacks, reaching up to 288GB, and provides 8 TB/s memory bandwidth with an advanced NVLink interface for seamless connectivity. It delivers 5X AI inferencing performance over previous generations, making it ideal for data-intensive AI and HPC applications.",
   },
@@ -98,7 +98,8 @@ export const NVIDIA_B200_FAQ: readonly FaqItem[] = [
   {
     id: 4,
     category: "Pricing",
-    question: "What is the NVIDIA B200 price and how can I access it on NeevCloud?",
+    question:
+      "What is the NVIDIA B200 price and how can I access it on NeevCloud?",
     answer:
       "The NVIDIA B200 price depends on the instance type and rental duration. By renting B200 GPUs on NeevCloud, you gain cost-effective access to high-performance AI and HPC compute, eliminating large upfront hardware expenses. Check NeevCloud to view the latest nvidia b200 price and flexible rental options.",
   },

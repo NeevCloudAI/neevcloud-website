@@ -76,7 +76,11 @@ const GpuChooseSection = ({
                         key={header}
                         className={`${GPU_CHOOSE_SECTION_TABLE_CELL_CLASS} font-normal`}
                       >
-                        <Text as="h6" fontFamily="spaceMono" textColor="gray-80">
+                        <Text
+                          as="h6"
+                          fontFamily="spaceMono"
+                          textColor="gray-80"
+                        >
                           {header}
                         </Text>
                       </th>
@@ -87,7 +91,11 @@ const GpuChooseSection = ({
                   {rows.map((row) => (
                     <tr key={row.id} className="border-b border-black-29">
                       <td className={GPU_CHOOSE_SECTION_TABLE_CELL_CLASS}>
-                        <Text as="h6" fontFamily="spaceMono" textColor="primary">
+                        <Text
+                          as="h6"
+                          fontFamily="spaceMono"
+                          textColor="primary"
+                        >
                           {row.sku}
                         </Text>
                         <Text
@@ -122,7 +130,11 @@ const GpuChooseSection = ({
                             </Text>
                           </div>
                         ) : (
-                          <Text as="h6" fontFamily="spaceMono" textColor="white">
+                          <Text
+                            as="h6"
+                            fontFamily="spaceMono"
+                            textColor="white"
+                          >
                             {row.threeMonthPrice}
                           </Text>
                         )}
@@ -146,7 +158,11 @@ const GpuChooseSection = ({
                             </Text>
                           </div>
                         ) : (
-                          <Text as="h6" fontFamily="spaceMono" textColor="white">
+                          <Text
+                            as="h6"
+                            fontFamily="spaceMono"
+                            textColor="white"
+                          >
                             {row.sixMonthCommitment}
                           </Text>
                         )}
@@ -170,7 +186,11 @@ const GpuChooseSection = ({
                             </Text>
                           </div>
                         ) : (
-                          <Text as="h6" fontFamily="spaceMono" textColor="white">
+                          <Text
+                            as="h6"
+                            fontFamily="spaceMono"
+                            textColor="white"
+                          >
                             {row.oneYearCommitment}
                           </Text>
                         )}

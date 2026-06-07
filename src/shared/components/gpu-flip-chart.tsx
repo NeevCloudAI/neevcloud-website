@@ -7,7 +7,7 @@ import { Text } from "@/shared/ui-lib";
 
 const chartTicks = Array.from(
   { length: GPU_FLIP_CHART_MAX_MULTIPLIER + 1 },
-  (_, index) => GPU_FLIP_CHART_MAX_MULTIPLIER - index
+  (_, index) => GPU_FLIP_CHART_MAX_MULTIPLIER - index,
 );
 
 const GpuFlipChart = ({ flipDetails }: GpuFlipChartProps) => {

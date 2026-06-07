@@ -10,7 +10,7 @@ const GpuModelTransparentPricingCommitmentCard = ({
   family,
 }: GpuModelTransparentPricingCommitmentCardProps) => {
   const headers = GPU_MODEL_COMMITMENT_TABLE_HEADERS.map((header) =>
-    header === "Example (8x H100)" ? family.commitmentExampleLabel : header
+    header === "Example (8x H100)" ? family.commitmentExampleLabel : header,
   );
 
   return (

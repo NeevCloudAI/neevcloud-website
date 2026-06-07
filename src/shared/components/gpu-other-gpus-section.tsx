@@ -15,7 +15,7 @@ const GpuOtherGpusSection = ({
   className,
 }: GpuOtherGpusSectionProps) => {
   const cards = getGpuOtherGpusCatalog(excludeId).filter(
-    (card) => card.id !== excludeId
+    (card) => card.id !== excludeId,
   );
   const flipChartConfig =
     GPU_OTHER_GPUS_FLIP_CHART_CONFIG_BY_PAGE[

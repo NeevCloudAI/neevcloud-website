@@ -103,7 +103,7 @@ const PRODUCT_MEGA_MENU_GPU_LINKS = [
 
 const gpuLinkClassName = cn(
   "outline-offset-2 transition-colors hover:text-primary",
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
 );
 
 export default function ProductMegaMenu() {

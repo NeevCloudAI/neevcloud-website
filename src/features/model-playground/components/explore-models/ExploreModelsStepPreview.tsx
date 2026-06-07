@@ -1,6 +1,13 @@
 import { EXPLORE_MODELS_MOCK_URL } from "../../constants/explore-models-section.constants";
 import { Button, Divider, Text } from "@/shared/ui-lib";
-import { Command, Eye, Languages, Mic, Play, Star } from "@/shared/icons/lucide-icon-map";
+import {
+  Command,
+  Eye,
+  Languages,
+  Mic,
+  Play,
+  Star,
+} from "@/shared/icons/lucide-icon-map";
 import type { ExploreModelsStepPreviewProps } from "../../types/explore-models-section.types";
 
 function WindowChrome() {

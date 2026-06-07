@@ -13,7 +13,7 @@ const GpuWhyChooseNeevcloudCard = ({
     <article
       className={cn(
         "flex h-full w-full flex-col items-center overflow-hidden rounded-md bg-white-5 border border-black-30 backdrop-blur-md p-4 text-center md:p-7.5",
-        className
+        className,
       )}
     >
       <Image src={icon} alt="" width={42} height={42} aria-hidden="true" />

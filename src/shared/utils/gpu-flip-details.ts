@@ -28,7 +28,7 @@ function formatUpToMultiplierLabel(ratio: number): string {
 
 function buildUpToLabel(
   input: GpuFlipDetailsInput,
-  config: GpuFlipChartConfig = GPU_OTHER_GPUS_DEFAULT_FLIP_CHART_CONFIG
+  config: GpuFlipChartConfig = GPU_OTHER_GPUS_DEFAULT_FLIP_CHART_CONFIG,
 ): string | undefined {
   const ratio =
     parseMultiplierLabel(input.comparisonMultiplierLabel) /
@@ -43,7 +43,7 @@ function buildUpToLabel(
 
 export function buildGpuFlipChartDetails(
   input: GpuFlipDetailsInput,
-  config: GpuFlipChartConfig = GPU_OTHER_GPUS_DEFAULT_FLIP_CHART_CONFIG
+  config: GpuFlipChartConfig = GPU_OTHER_GPUS_DEFAULT_FLIP_CHART_CONFIG,
 ): GpuFlipChartDetails {
   const card1Height = multiplierToHeight(input.baselineMultiplierLabel);
   const card2Height = multiplierToHeight(input.comparisonMultiplierLabel);

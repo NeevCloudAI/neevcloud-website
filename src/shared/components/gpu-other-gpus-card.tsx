@@ -32,7 +32,7 @@ const GpuOtherGpusCard = ({
         className={cn(
           "relative h-full w-full transition-transform duration-500 transform-3d",
           isFlipped && "transform-[rotateY(180deg)]",
-          className
+          className,
         )}
       >
         <article className={cardSurfaceClassName} aria-hidden={isFlipped}>
@@ -72,7 +72,7 @@ const GpuOtherGpusCard = ({
         <article
           className={cn(
             cardSurfaceClassName,
-            "absolute inset-0 transform-[rotateY(180deg)] bg-white items-center justify-center"
+            "absolute inset-0 transform-[rotateY(180deg)] bg-white items-center justify-center",
           )}
           aria-hidden={!isFlipped}
         >

@@ -1,4 +1,7 @@
-import type { PathsStep, PathsStepPanel } from "../types/three-paths-section.types";
+import type {
+  PathsStep,
+  PathsStepPanel,
+} from "../types/three-paths-section.types";
 
 export const PATHS_STEPS: PathsStep[] = [
   {
@@ -40,7 +43,10 @@ export const PATHS_STEP_PANELS: PathsStepPanel[] = [
   {
     listHeading: "WHAT YOU CAN DO",
     items: [
-      { type: "simple", text: "Compare language models, Llama 3.1 8B, 70B, 405B" },
+      {
+        type: "simple",
+        text: "Compare language models, Llama 3.1 8B, 70B, 405B",
+      },
       { type: "simple", text: "Test vision models on your own images" },
       { type: "simple", text: "Try audio processing and generation" },
       { type: "simple", text: "Adjust parameters and see results instantly" },

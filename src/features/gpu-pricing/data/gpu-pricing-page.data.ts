@@ -14,9 +14,9 @@ export const GPU_PRICING_HERO = {
 } as const;
 
 export const GPU_PRICING_FOOTER = {
-  title: "Launch GPU Instances at Transparent Rates",
+  title: "Deploy GPU Compute Today.",
   description:
-    "Deploy H100, A100, or L40S on-demand or reserved in India. Container-native or full VM modes with per-second billing and zero egress to co-located CPU workloads.",
+    "H100, A100, and L40S instances ready to launch. Choose container-native or full VM deployment. Per-second billing, commitment discounts available.",
   button1Text: "View GPU Configs",
-  button2Text: "Talk to Our Team",
+  button2Text: "Compare Service Types",
 } as const;

@@ -1,6 +1,6 @@
 import FooterComponent from "@/shared/components/footer";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { GPU_PRICING_FAQ } from "../data/gpu-pricing-faq-section.data";
+import { GPU_PRICING_FAQ_ITEMS } from "../data/gpu-pricing-faq-section.data";
 import { GPU_PRICING_FOOTER } from "../data/gpu-pricing-page.data";
 import GpuPricingHeroSection from "./GpuPricingHeroSection";
 import GpuAiSection from "./GpuAiSection";
@@ -18,7 +18,7 @@ const GpuPricingPage = () => {
       <GpuStoragePricingSection />
       <GpuTransparentPricingSection />
       <GpuCostCalculatorSection />
-      <FaqSection items={GPU_PRICING_FAQ} />
+      <FaqSection items={GPU_PRICING_FAQ_ITEMS} />
       <FooterComponent
         title={GPU_PRICING_FOOTER.title}
         description={GPU_PRICING_FOOTER.description}

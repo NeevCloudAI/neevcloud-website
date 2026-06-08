@@ -7,9 +7,9 @@ export const LEADERSHIP_HERO = {
 } as const;
 
 export const LEADERSHIP_FOOTER = {
-  title: "Ready to build with us?",
+  title: "Ready to build together?",
   description:
-    "Join our community of builders and start building your AI infrastructure today.",
-  button1Text: "Get started",
-  button2Text: "View Infrastructure",
+    "Whether you're training models, deploying inference, or designing sovereign AI infrastructure — we'd like to hear what you're building.",
+  button1Text: "Get in touch",
+  button2Text: "Follow on Linkedin",
 } as const;

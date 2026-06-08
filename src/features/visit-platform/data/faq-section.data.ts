@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const VISIT_PLATFORM_FAQ_ITEMS: readonly FaqItem[] = [
+export const VISIT_PLATFORM_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Platform",
-    question: "What can I manage from the NeevCloud console?",
+    category: "Networking",
+    question: "Do I need a credit card to access the console?",
     answer:
-      "Deploy and manage GPUs, inference endpoints, storage, and CPU compute from a single dashboard. Monitor workloads, track costs, and control infrastructure without switching between separate portals.",
+      "No. Create an account and explore the platform without payment information. Add billing details when ready to deploy paid resources.",
   },
   {
     id: 2,
     category: "Getting Started",
-    question: "How quickly can I deploy my first resource?",
+    question: "Can I access the platform via API?",
     answer:
-      "After creating an account and completing the guided onboarding, you can deploy your first GPU instance in 2–5 minutes using pre-configured templates for PyTorch, TensorFlow, Hugging Face, vLLM, and more.",
+      "Yes. Full API and CLI tools available for programmatic infrastructure management. Documentation includes API reference and examples.",
   },
   {
     id: 3,
-    category: "Platform",
-    question: "Does the platform support API and CLI access?",
+    category: "Getting Started",
+    question: "Is there a mobile app?",
     answer:
-      "Yes. Control infrastructure programmatically through REST APIs or the command-line interface. Integrate deployments with CI/CD pipelines, scripts, and automated workflows.",
+      "The console is web-based and mobile-responsive. Access and manage infrastructure from any device with a browser.",
   },
   {
     id: 4,
     category: "Billing",
-    question: "How does billing work on the platform?",
+    question: "Where is the documentation?",
     answer:
-      "Real-time cost tracking by service with per-second billing for compute and per-token billing for inference. No hidden fees, with transparent usage dashboards and alerts for cost thresholds.",
+      "Complete documentation available at docs.neevcloud.com covering onboarding, deployment, API usage, and best practices.",
   },
   {
     id: 5,
-    category: "Monitoring",
-    question: "What monitoring capabilities are included?",
+    category: "Scaling",
+    question: "How do I get support while using the platform?",
     answer:
-      "Track GPU utilization, training progress, inference latency, and costs in real time. Set alerts for performance and spending thresholds directly from the console.",
+      "In-console support chat, email support@neevcloud.com, or browse documentation. Enterprise customers receive dedicated support channels.",
   },
-] as const;
+];

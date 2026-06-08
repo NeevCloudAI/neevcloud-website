@@ -15,9 +15,9 @@ export const NEEVCLOUD_ARENA_HERO = {
 } as const;
 
 export const NEEVCLOUD_ARENA_FOOTER = {
-  title: "Experience AI infrastructure before you commit",
+  title: "Start Building on NeevCloud",
   description:
-    "Test models, run workloads, and validate performance on production infrastructure. No setup, no synthetic benchmarks — just real results.",
-  button1Text: "Try ARENA",
-  button2Text: "Book a Session",
+    "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges.",
+  button1Text: "Access Console",
+  button2Text: "Read Documentation",
 } as const;

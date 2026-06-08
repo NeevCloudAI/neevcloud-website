@@ -6,7 +6,7 @@ import CpuAiSection from "./CpuAiSection";
 import CpuArchitectureSection from "./CpuArchitectureSection";
 import CpuPricingDeploymentSection from "./CpuPricingDeploymentSection";
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_PRICING_FAQ } from "../data/cpu-pricing-faq-section.data";
+import { CPU_PRICING_FAQ_ITEMS } from "../data/cpu-pricing-faq-section.data";
 
 const CpuPricingPage = () => {
   return (
@@ -16,7 +16,7 @@ const CpuPricingPage = () => {
       <CpuArchitectureSection />
       <CpuTransparentPricingSection />
       <CpuPricingDeploymentSection />
-      <FaqSection items={CPU_PRICING_FAQ} />
+      <FaqSection items={CPU_PRICING_FAQ_ITEMS} />
       <FooterComponent
         title={CPU_PRICING_FOOTER.title}
         description={CPU_PRICING_FOOTER.description}

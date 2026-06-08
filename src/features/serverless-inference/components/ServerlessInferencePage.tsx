@@ -8,6 +8,7 @@ import ModelsSection from "./ModelsSection";
 import TokenPricingSection from "./TokenPricingSection";
 import InferenceStackSection from "./InferenceStackSection";
 import { SERVERLESS_INFERENCE_FOOTER } from "../constants/serverless-inference-page.constants";
+import { INFERENCE_API_FAQ_ITEMS } from "../data/faq-section-data";
 
 const ServerlessInferencePage = () => {
   return (
@@ -19,7 +20,7 @@ const ServerlessInferencePage = () => {
       <TokenPricingSection />
       <InferenceStackSection />
       <FaqSection
-        items={CPU_CLUSTER_FAQ_ITEMS}
+        items={INFERENCE_API_FAQ_ITEMS}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent

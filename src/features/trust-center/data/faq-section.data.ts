@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const TRUST_CENTER_FAQ_ITEMS: readonly FaqItem[] = [
+export const TRUST_CENTER_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Compliance",
-    question: "What certifications does NeevCloud maintain?",
+    category: "Networking",
+    question: "Where is NeevCloud infrastructure located?",
     answer:
-      "NeevCloud maintains ISO 27001, SOC 2 Type II, and TIA 942-aligned data center reliability standards. Certifications are independently audited and continuously monitored.",
+      "All infrastructure operates within India. Datacenters located in [specific regions] with Tier III certification.",
   },
   {
     id: 2,
-    category: "Security",
-    question: "How is customer data protected?",
+    category: "Getting Started",
+    question: "Can I get copies of compliance certifications?",
     answer:
-      "Data is encrypted at rest and in transit with role-based access controls, network isolation, and audit logging. Infrastructure operates within India under Indian jurisdiction.",
+      "Yes. ISO 27001 and Tier III certifications are available publicly. SOC 2 Type II reports available to customers under NDA.",
   },
   {
     id: 3,
-    category: "Operations",
-    question: "Can I view real-time system status?",
+    category: "Getting Started",
+    question: "How is data encrypted?",
     answer:
-      "Yes. Live system status shows availability, incidents, maintenance schedules, and historical uptime data. We publish transparent operational information rather than aggregated metrics alone.",
+      "Data encrypted at rest using AES-256. Data in transit is encrypted with TLS 1.3. Encryption keys are managed through secure key management systems.",
   },
   {
     id: 4,
-    category: "Compliance",
-    question: "Are audit reports available to customers?",
+    category: "Billing",
+    question: "What happens during a security incident?",
     answer:
-      "SOC 2 Type II audit reports, penetration test summaries, compliance certifications, and security assessments are available to customers under NDA.",
+      "Immediate detection through monitoring, documented response procedures, containment and remediation, and transparent communication with affected customers.",
   },
   {
     id: 5,
-    category: "Security",
-    question: "Where can I find security documentation?",
+    category: "Scaling",
+    question: "Does NeevCloud have access to my data?",
     answer:
-      "Security architecture overviews, data handling policies, access control implementation details, and incident response procedures are available for security teams evaluating NeevCloud.",
+      "NeevCloud personnel do not access customer data except when explicitly requested for support or required for system operations, always with customer notification.",
   },
-] as const;
+];

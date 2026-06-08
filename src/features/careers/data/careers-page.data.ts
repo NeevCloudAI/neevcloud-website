@@ -14,9 +14,9 @@ export const CAREERS_HERO = {
 } as const;
 
 export const CAREERS_FOOTER = {
-  title: "Ready to make an impact?",
+  title: "Ready to Build your career with us?",
   description:
-    "Explore open roles and join a team that's building AI infrastructure accessible to everyone with an idea worth building.",
+    "We're looking for engineers, operators, and builders who want to work on infrastructure that matters, apply below.",
   button1Text: "View Current Openings",
-  button2Text: "Apply Now",
+  button2Text: "Email your Resume",
 } as const;

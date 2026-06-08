@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const WHY_AI_SUPERCLOUD_FAQ_ITEMS: readonly FaqItem[] = [
+export const WHY_AI_SUPERCLOUD_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Overview",
-    question: "What is AI Supercloud?",
+    category: "Networking",
+    question: "What exactly is an AI Supercloud?",
     answer:
-      "AI Supercloud is infrastructure purpose-built for machine learning from the ground up — not general compute adapted for AI. It covers GPU access, training, inference, storage, and orchestration in one platform designed for how modern AI teams work.",
+      "Infrastructure designed specifically for AI workloads from the ground up, not a general cloud adapted for machine learning. Purpose-built for training, inference, and deployment.",
   },
   {
     id: 2,
-    category: "Infrastructure",
-    question: "How is AI Supercloud different from traditional cloud?",
+    category: "Getting Started",
+    question: "How is pricing actually transparent?",
     answer:
-      "Traditional cloud optimizes for general workloads with complex tiers, long GPU provisioning times, and opaque billing. AI Supercloud offers 2–5 minute GPU deployment, per-second billing, transparent pricing, open standards, and sovereign infrastructure options within India.",
+      "Per-second billing for compute, per-token for inference, published rates with no hidden fees. Real-time cost tracking shows exactly what you're paying as you use resources.",
   },
   {
     id: 3,
-    category: "Pricing",
-    question: "How does billing work on AI Supercloud?",
+    category: "Getting Started",
+    question: "Can I migrate from existing cloud providers?",
     answer:
-      "Per-second billing with real-time cost tracking in the dashboard. No hidden fees, no per-hour minimums, and no surprise charges. You pay for actual usage across compute and inference workloads.",
+      "Yes. NeevCloud uses standard frameworks and open APIs. Your PyTorch, TensorFlow, or other code transfers directly without modifications.",
   },
   {
     id: 4,
-    category: "Data",
-    question: "Where does my data reside?",
+    category: "Billing",
+    question: "What does data sovereignty mean in practice?",
     answer:
-      "Infrastructure runs within India with complete residency controls. Your training data, models, and workloads stay under your jurisdiction — supporting compliance with DPDP Act requirements and enterprise data sovereignty needs.",
+      "Infrastructure operates within India under Indian governance. You control where data lives and who has jurisdiction. Complete data residency controls for compliance.",
   },
   {
     id: 5,
-    category: "Getting Started",
-    question: "How quickly can I deploy my first GPU workload?",
+    category: "Scaling",
+    question: "Is this only for large companies?",
     answer:
-      "Deploy GPUs in 2–5 minutes using pre-configured templates for PyTorch, TensorFlow, Hugging Face, vLLM, and more. No waiting lists, no multi-week approval processes, and no steep setup curve.",
+      "No. Solo developers to enterprises use NeevCloud. Instant provisioning and pay-per-use pricing work for any scale. Academic discounts available for students and researchers.",
   },
-] as const;
+];

@@ -15,9 +15,9 @@ export const TRUST_CENTER_HERO = {
 } as const;
 
 export const TRUST_CENTER_FOOTER = {
-  title: "Build with confidence on NeevCloud",
+  title: "Start Building on NeevCloud",
   description:
-    "Enterprise-grade security, verified compliance, and transparent operations for mission-critical AI workloads.",
-  button1Text: "View Certifications",
-  button2Text: "Explore Security",
+    "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges.",
+  button1Text: "Access Console",
+  button2Text: "Read Documentation",
 } as const;

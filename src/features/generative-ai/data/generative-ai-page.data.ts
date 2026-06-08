@@ -15,9 +15,9 @@ export const GENERATIVE_AI_HERO = {
 } as const;
 
 export const GENERATIVE_AI_FOOTER = {
-  title: "Build GenAI Products on Indian Infrastructure",
+  title: "Build Your GenAI Product Today",
   description:
-    "One-click deployment for text, image, and multimodal models. RAG-ready architecture with elastic scaling and India-native data handling.",
+    "Launch production-ready GenAI applications with one-click deployments, elastic scaling, and India-native infrastructure. No minimum commitment.",
   button1Text: "Build with NeevCloud",
   button2Text: "See GenAI Templates",
 } as const;

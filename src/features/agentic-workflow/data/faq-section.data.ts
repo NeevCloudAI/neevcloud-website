@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const AGENTIC_WORKFLOW_FAQ_ITEMS: readonly FaqItem[] = [
+export const AGENTIC_WORKFLOW_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Getting Started",
-    question: "How do I deploy agent workflows on NeevCloud?",
+    category: "Networking",
+    question: "What makes NeevCloud good for AI agents?",
     answer:
-      "Package agent components as Docker containers and deploy to GPU clusters via Managed Kubernetes (NKS). Pre-built templates available for common orchestration patterns like LangChain, AutoGen, and custom multi-agent setups.",
+      "Kubernetes-native orchestration for agent fleets, persistent compute for long-running workflows, low-latency model endpoints, and integrated observability. Deploy agents as containers with GPU access.",
   },
   {
     id: 2,
     category: "Getting Started",
-    question: "Can agents call hosted models as tools?",
+    question: "Can agents run continuously?",
     answer:
-      "Yes. OpenAI-compatible API endpoints with function calling, streaming responses, and low-latency inference let agents use multiple models within a single workflow loop.",
+      "Yes. Deploy agents as always-on Kubernetes pods. State persists across restarts. Sessions can run for hours or days without interruption.",
   },
   {
     id: 3,
-    category: "Scaling",
-    question: "How does Kubernetes help manage agent fleets?",
+    category: "Getting Started",
+    question: "How do agents access models?",
     answer:
-      "NKS provides auto-scaling agent pods, service discovery, rolling updates, and standard K8s tooling to deploy and manage hundreds of agents without custom infrastructure.",
+      "Call hosted models via OpenAI-compatible API endpoints. Models support function calling, streaming, and tool use. Sub-50ms inference latency for agent decision-making.",
   },
   {
     id: 4,
-    category: "Scaling",
-    question: "What types of agent workloads are supported?",
+    category: "Billing",
+    question: "How do I monitor agent behavior?",
     answer:
-      "Research and analysis, workflow automation, code generation, customer support, data processing, and planning agents. Long-running multi-step pipelines with observability-ready infrastructure.",
+      "Integrate with Prometheus, Grafana, and standard logging tools. Track agent metrics, model calls, tool usage, and costs in real time.",
   },
   {
     id: 5,
-    category: "Networking",
-    question: "Where does agent compute run?",
+    category: "Scaling",
+    question: "What's the pricing for agent workloads?",
     answer:
-      "All agent workloads run on India-resident GPU clusters with container-native isolation, API-accessible inference, and zero egress between components within the same region.",
+      "Pay for GPU/CPU compute (per-second billing) plus model API usage (per-token). No additional fees for orchestration or monitoring. Scale agents up/down based on workload.",
   },
 ];

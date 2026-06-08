@@ -14,9 +14,9 @@ export const PUBLIC_SECTOR_HERO = {
 } as const;
 
 export const PUBLIC_SECTOR_FOOTER = {
-  title: "Start GPU Compute with NVMe",
+  title: "Ready to Run Your First Inference?",
   description:
-    "Sub-millisecond latency, 7 GB/s throughput. Keep your GPUs saturated, not waiting. 25GB is included free with every GPU instance.",
-  button1Text: "Deploy with NVMe",
-  button2Text: "View Storage Pricing",
+    "Infrastructure requirements for government initiatives. Indigenous infrastructure, data sovereignty, and compliance-ready for public sector deployment.",
+  button1Text: "Talk to Sales",
+  button2Text: "Read the Docs",
 } as const;

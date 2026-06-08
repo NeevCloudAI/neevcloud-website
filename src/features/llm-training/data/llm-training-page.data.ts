@@ -15,9 +15,9 @@ export const LLM_TRAINING_HERO = {
 } as const;
 
 export const LLM_TRAINING_FOOTER = {
-  title: "Start Fine-Tuning on GPU Cloud",
+  title: "Start Fine-Tuning Your Models",
   description:
-    "H100 and A100 clusters for domain adaptation, instruction tuning, and RLHF. Framework agnostic, India-resident compute with per-second billing.",
+    "H100 and A100 clusters are ready to launch. Bring your framework, dataset, and training script. We handle infrastructure, storage, and networking.",
   button1Text: "Start Fine-Tuning",
   button2Text: "Browse GPU Configs",
 } as const;

@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const LLM_TRAINING_FAQ_ITEMS: readonly FaqItem[] = [
+export const LLM_TRAINING_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Getting Started",
-    question: "Which frameworks are supported for fine-tuning?",
+    category: "Networking",
+    question: "What frameworks are supported?",
     answer:
-      "HuggingFace Transformers, DeepSpeed, Megatron-LM, Axolotl, and custom PyTorch scripts. Pre-configured templates available for LoRA, QLoRA, and full fine-tuning workflows.",
+      "All major frameworks work: Hugging Face Transformers, DeepSpeed, Megatron-LM, Axolotl, PyTorch FSDP. Bring your own training scripts or use pre-configured templates.",
   },
   {
     id: 2,
     category: "Getting Started",
-    question: "What GPU configurations are available?",
+    question: "Can I fine-tune 70B+ models on single GPUs?",
     answer:
-      "Single GPU (H100, A100, A30), multi-GPU nodes (8x H100, 8x A100), and multi-node clusters (16, 32, 64+ GPUs) with InfiniBand networking for distributed training.",
+      "Yes. Use QLoRA or LoRA with 4-bit quantization to fine-tune 70B models on a single H100 (80GB). For full fine-tuning, use multi-GPU setups.",
   },
   {
     id: 3,
-    category: "Scaling",
-    question: "Can I fine-tune 70B+ parameter models?",
+    category: "Getting Started",
+    question: "How do checkpoints work?",
     answer:
-      "Yes. Parameter-efficient methods like LoRA and QLoRA enable fine-tuning large models on single GPUs. Full fine-tuning of 70B+ models requires multi-GPU or multi-node clusters.",
+      "Checkpoints auto-save to S3-compatible object storage. They persist across instance restarts and survive spot preemptions. Resume training from any checkpoint.",
   },
   {
     id: 4,
     category: "Billing",
-    question: "How is fine-tuning billed?",
+    question: "What's the fastest storage option?",
     answer:
-      "Per-second GPU billing with on-demand and reserved capacity options. Spot instances available with auto-resume from checkpointing for cost-effective training runs.",
+      "Local NVMe delivers 7 GB/s reads. Copy datasets from object storage to local NVMe storage at startup to maximum training throughput.",
   },
   {
     id: 5,
-    category: "Networking",
-    question: "Where is training compute located?",
+    category: "Scaling",
+    question: "Can I run multi-node training?",
     answer:
-      "All compute runs in India-resident data centers with fast NVMe storage and InfiniBand networking between nodes. Data sovereignty and DPDP Act compliance supported.",
+      "Yes. Launch multi-node clusters with InfiniBand networking (400 Gbps). DeepSpeed and Megatron-LM handle distributed training automatically.",
   },
 ];

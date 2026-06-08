@@ -13,9 +13,9 @@ export const CPU_PRICING_HERO = {
 } as const;
 
 export const CPU_PRICING_FOOTER = {
-  title: "Launch CPU Instances at Transparent Rates",
+  title: "Deploy GPU First Instance Today",
   description:
-    "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress between workloads.",
-  button1Text: "View CPU Configs",
-  button2Text: "Talk to Our Team",
+    "Flexible CPU compute for data preprocessing, APIs, databases, and orchestration. Deploy in 60 seconds with transparent per-hour pricing.",
+  button1Text: "Deploy Instance",
+  button2Text: "View Configurations",
 } as const;

@@ -14,9 +14,9 @@ export const AI_INFERENCE_HERO = {
 } as const;
 
 export const AI_INFERENCE_FOOTER = {
-  title: "Deploy Production Inference in Minutes",
+  title: "Deploy Your Model to Production",
   description:
-    "Bring your own model or use hosted endpoints. OpenAI-compatible APIs, India-resident infrastructure, and pay-per-token pricing with no idle compute charges.",
-  button1Text: "Deploy Your Model",
-  button2Text: "Talk to Our Team",
+    "Flexible CPU compute for data preprocessing, APIs, databases, and orchestration. Deploy in 60 seconds with transparent per-hour pricing.",
+  button1Text: "Deploy Instance",
+  button2Text: "View Configurations",
 } as const;

@@ -65,10 +65,7 @@ export default function NeevcloudSection() {
                 High Cost. Low Flexibility. Hidden Limitations.
               </Text>
 
-              <Text
-                as="h5"
-                className="font-space-mono mt-6 mb-3.5"
-              >
+              <Text as="h5" className="font-space-mono mt-6 mb-3.5">
                 Legacy Cloud
               </Text>
               <div className="w-36 h-1 bg-red-400 mb-4" />
@@ -79,9 +76,7 @@ export default function NeevcloudSection() {
                     key={problem}
                     className="border border-gray-200 rounded-md px-5 py-2 bg-gray-light"
                   >
-                    <Text className="font-space-mono">
-                      {problem}
-                    </Text>
+                    <Text className="font-space-mono">{problem}</Text>
                   </div>
                 ))}
               </div>
@@ -90,8 +85,7 @@ export default function NeevcloudSection() {
             {/* Footer bar */}
             <div className="bg-red-light py-3 text-center -mx-6">
               <Text as="h6" className="font-space-mono text-red-text">
-             
-                  Expensive · Opaque · Risky
+                Expensive · Opaque · Risky
               </Text>
             </div>
           </div>
@@ -121,7 +115,7 @@ export default function NeevcloudSection() {
                   {NEEVCLOUD_ADVANTAGES.map((advantage) => (
                     <div
                       key={advantage}
-                      className="border border-gray-200 rounded-md px-5 py-2 bg-gray-50"
+                      className="border border-gray-200 rounded-md px-5 py-2 bg-gray-light"
                     >
                       <Text className="font-space-mono">{advantage}</Text>
                     </div>
@@ -152,7 +146,6 @@ export default function NeevcloudSection() {
                 alt="NeevCloud Dashboard"
                 fill
                 className="object-center"
-                
               />
               <div className="absolute top-4 right-4 flex items-center bg-white rounded-xl shadow-md px-4 py-2.5 z-10">
                 <Image

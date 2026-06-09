@@ -29,9 +29,8 @@ export default function CloudComparisonCard({
         <Text as="h3" weight="semibold" className="mb-2.5">
           {item.title}
         </Text>
-        <Text className="text-[#585C5F]">{item.description}</Text>
+        <Text className="text-gray-description">{item.description}</Text>
       </div>
-
     </article>
   );
 }

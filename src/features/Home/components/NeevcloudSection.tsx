@@ -77,7 +77,7 @@ export default function NeevcloudSection() {
                 {LEGACY_CLOUD_PROBLEMS.map((problem) => (
                   <div
                     key={problem}
-                    className="border border-gray-200 rounded-md px-5 py-2 bg-[#F7F7F7]"
+                    className="border border-gray-200 rounded-md px-5 py-2 bg-gray-light"
                   >
                     <Text className="font-space-mono">
                       {problem}
@@ -88,8 +88,8 @@ export default function NeevcloudSection() {
             </div>
 
             {/* Footer bar */}
-            <div className="bg-[#FFDBDA] py-3 text-center -mx-6">
-              <Text as="h6" className="font-space-mono text-[#FE4D47]">
+            <div className="bg-red-light py-3 text-center -mx-6">
+              <Text as="h6" className="font-space-mono text-red-text">
              
                   Expensive · Opaque · Risky
               </Text>

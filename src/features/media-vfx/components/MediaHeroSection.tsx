@@ -14,8 +14,8 @@ const MediaHeroSection = () => {
         </Text>
       }
       description={MEDIA_HERO.description}
-      button1Text={MEDIA_HERO.button1Text}
-      button2Text={MEDIA_HERO.button2Text}
+      primaryCta={MEDIA_HERO.primaryCta}
+      secondaryCta={MEDIA_HERO.secondaryCta}
       badgeText={MEDIA_HERO.badgeText}
       image={MEDIA_HERO.image}
       trustBadges={[...MEDIA_HERO.trustBadges]}

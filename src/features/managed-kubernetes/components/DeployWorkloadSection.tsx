@@ -25,7 +25,7 @@ const DeployWorkloadSection = () => {
           as="h6"
           textColor="black-5"
           align="center"
-          className="max-w-3xl mt-2.5"
+          className="max-w-3xl mt-2.5 mb-6 md:mb-12.5"
         >
           Four primitives, create, deploy, train, scale. Same CLI surface, same
           auth, same cluster.

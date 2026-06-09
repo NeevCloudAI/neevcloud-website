@@ -20,8 +20,8 @@ const CpuPricingPage = () => {
       <FooterComponent
         title={CPU_PRICING_FOOTER.title}
         description={CPU_PRICING_FOOTER.description}
-        button1Text={CPU_PRICING_FOOTER.button1Text}
-        button2Text={CPU_PRICING_FOOTER.button2Text}
+        primaryCta={CPU_PRICING_FOOTER.primaryCta}
+        secondaryCta={CPU_PRICING_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

@@ -15,8 +15,8 @@ const TrustCenterHeroSection = () => {
       }
       image={TRUST_CENTER_HERO.dashboardImage}
       description={TRUST_CENTER_HERO.description}
-      button1Text={TRUST_CENTER_HERO.button1Text}
-      button2Text={TRUST_CENTER_HERO.button2Text}
+      primaryCta={TRUST_CENTER_HERO.primaryCta}
+      secondaryCta={TRUST_CENTER_HERO.secondaryCta}
       badgeText={TRUST_CENTER_HERO.badgeText}
       trustBadges={[...TRUST_CENTER_HERO.trustBadges]}
     />

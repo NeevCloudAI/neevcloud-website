@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { Text } from "@/shared/ui-lib";
+
+export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+  title: "Design System | NeevCloud",
+  description: "Internal typography and component reference for the NeevCloud design system.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 const DesignSystemPage = () => {
   return (

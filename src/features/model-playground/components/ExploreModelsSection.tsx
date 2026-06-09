@@ -34,7 +34,7 @@ const ExploreModelsSection = () => {
         <FooterCard
           title="Model Documentation"
           description="Each model includes detailed documentation explaining architecture, training data, intended use cases, and known limitations."
-          button1Text="Browse Model Playground Docs"
+          primaryCta="Browse Model Playground Docs"
         />
       </div>
     </StepsTabsSection>

@@ -14,8 +14,8 @@ const CareersHeroSection = () => {
         </Text>
       }
       description={CAREERS_HERO.description}
-      button1Text={CAREERS_HERO.button1Text}
-      button2Text={CAREERS_HERO.button2Text}
+      primaryCta={CAREERS_HERO.primaryCta}
+      secondaryCta={CAREERS_HERO.secondaryCta}
       badgeText={CAREERS_HERO.badgeText}
       trustBadges={[...CAREERS_HERO.trustBadges]}
       image="/images/career.png"

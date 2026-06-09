@@ -25,8 +25,8 @@ const ServerlessInferencePage = () => {
       <FooterComponent
         title={SERVERLESS_INFERENCE_FOOTER.title}
         description={SERVERLESS_INFERENCE_FOOTER.description}
-        button1Text={SERVERLESS_INFERENCE_FOOTER.button1Text}
-        button2Text={SERVERLESS_INFERENCE_FOOTER.button2Text}
+        primaryCta={SERVERLESS_INFERENCE_FOOTER.primaryCta}
+        secondaryCta={SERVERLESS_INFERENCE_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

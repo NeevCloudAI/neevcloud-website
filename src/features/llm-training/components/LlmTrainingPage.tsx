@@ -18,8 +18,8 @@ const LlmTrainingPage = () => {
       <FooterComponent
         title={LLM_TRAINING_FOOTER.title}
         description={LLM_TRAINING_FOOTER.description}
-        button1Text={LLM_TRAINING_FOOTER.button1Text}
-        button2Text={LLM_TRAINING_FOOTER.button2Text}
+        primaryCta={LLM_TRAINING_FOOTER.primaryCta}
+        secondaryCta={LLM_TRAINING_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

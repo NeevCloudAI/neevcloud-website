@@ -20,7 +20,7 @@ const PrivateNetworkSection = () => {
           as="h2"
           id="cpu-private-network-section-heading"
           align="center"
-          className="max-w-5xl"
+          className="max-w-2xl"
         >
           Same Private Network,
           <Text as="span" variant="h2" textColor="primary">

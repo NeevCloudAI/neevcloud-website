@@ -19,8 +19,8 @@ const ModelApiHeroSection = () => {
         </Text>
       }
       description={MODEL_API_HERO.description}
-      button1Text={MODEL_API_HERO.button1Text}
-      button2Text={MODEL_API_HERO.button2Text}
+      primaryCta={MODEL_API_HERO.primaryCta}
+      secondaryCta={MODEL_API_HERO.secondaryCta}
       badgeText={MODEL_API_HERO.badgeText}
       image={MODEL_API_HERO.image}
       trustBadges={[...MODEL_API_HERO.trustBadges]}

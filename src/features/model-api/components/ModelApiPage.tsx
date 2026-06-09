@@ -21,8 +21,8 @@ const ModelApiPage = () => {
       <FooterComponent
         title={MODEL_API_FOOTER.title}
         description={MODEL_API_FOOTER.description}
-        button1Text={MODEL_API_FOOTER.button1Text}
-        button2Text={MODEL_API_FOOTER.button2Text}
+        primaryCta={MODEL_API_FOOTER.primaryCta}
+        secondaryCta={MODEL_API_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

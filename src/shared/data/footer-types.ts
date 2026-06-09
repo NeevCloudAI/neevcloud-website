@@ -25,6 +25,6 @@ export type FooterCtaContent = {
   className?: string;
   title?: string;
   description?: string;
-  button1Text?: string;
-  button2Text?: string;
+  primaryCta?: string;
+  secondaryCta?: string;
 };

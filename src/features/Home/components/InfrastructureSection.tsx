@@ -45,7 +45,7 @@ function InfrastructureNativeFlowDiagram() {
         as="h4"
         weight="semibold"
         textColor="white"
-        className="border border-gray-25 bg-gray-83 rounded-lg px-4 md:px-5 py-2 md:py-4 text-center shadow-sm"
+        className="border border-gray-25 bg-gray-83 rounded-lg px-4 md:px-5 py-2 md:py-3 text-center shadow-sm"
       >
         AI SuperCloud
       </Text>
@@ -74,7 +74,7 @@ export default function InfrastructureSectionContent() {
   return (
     <div className="relative bg-black text-white">
       <Container className="flex flex-col items-center py-8 md:py-16 2xl:py-25">
-        <Text as="h2" align="center" className="max-w-4xl">
+        <Text as="h2" align="center" className="max-w-3xl">
           Infrastructure That
           <Text
             as="span"

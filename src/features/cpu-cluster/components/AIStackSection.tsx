@@ -16,7 +16,7 @@ const AIStackSection = () => {
           id="cpu-ai-stack-section-heading"
           textColor="white"
           align="center"
-          className="max-w-2xl"
+          className="max-w-md"
         >
           Where CPU Fits in an
           <Text as="span" variant="h2" textColor="primary">
@@ -31,7 +31,7 @@ const AIStackSection = () => {
               className={cn(
                 "md:col-span-2",
                 index === 3 && "md:col-start-2",
-                index === 4 && "md:col-start-4",
+                index === 4 && "md:col-start-4"
               )}
             >
               <FeatureCard

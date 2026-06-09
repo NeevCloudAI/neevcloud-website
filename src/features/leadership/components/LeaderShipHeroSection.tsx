@@ -28,9 +28,9 @@ const LeaderShipHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{LEADERSHIP_HERO.button1Text}</Button>
+          <Button spacing="lg">{LEADERSHIP_HERO.primaryCta}</Button>
           <Button variant="outline" textColor="black" spacing="lg">
-            {LEADERSHIP_HERO.button2Text}
+            {LEADERSHIP_HERO.secondaryCta}
           </Button>
         </div>
         <div className="mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">

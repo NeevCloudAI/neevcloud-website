@@ -2,8 +2,8 @@ export const HEALTHCARE_HERO = {
   badgeText: "Healthcare",
   description:
     "From medical imaging to drug discovery, healthcare AI requires infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute designed for medical workloads with certifications healthcare organizations need.",
-  button1Text: "Talk to Sales",
-  button2Text: "View Compliance",
+  primaryCta: "Talk to Sales",
+  secondaryCta: "View Compliance",
   image: "/images/healthcare.png",
   trustBadges: [
     "Data residency in India",
@@ -18,6 +18,6 @@ export const HEALTHCARE_FOOTER = {
   title: "Build the Future of Healthcare AI",
   description:
     "Secure, compliant infrastructure for medical imaging, drug discovery, and healthcare research. ISO 27001 and SOC 2 Type II certified.",
-  button1Text: "Talk to Sales",
-  button2Text: "View Documentation",
+  primaryCta: "Talk to Sales",
+  secondaryCta: "View Documentation",
 } as const;

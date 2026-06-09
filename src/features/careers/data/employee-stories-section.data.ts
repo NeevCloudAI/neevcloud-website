@@ -8,14 +8,6 @@ export const EMPLOYEE_STORIES_SECTION = {
 
 export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
   {
-    id: "sanjay-singh-rajawat",
-    name: "Sanjay Singh Rajawat",
-    title: "Associate Software Engineer",
-    quote:
-      "I've been able to work on impactful projects in AI cloud development. The supportive environment and access to advanced technologies have accelerated my learning.",
-    image: "/images/sanjay-singh-rajawat.png",
-  },
-  {
     id: "ayushi-shekhawat",
     name: "Ayushi Shekhawat",
     title: "Sales Engineer",
@@ -54,5 +46,13 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     quote:
       "I've had the chance to work on advanced server systems, collaborate with an inspiring team, and contribute directly to building India's AI-first infrastructure.",
     image: "/images/akansha-dubey.png",
+  },
+  {
+    id: "sanjay-singh-rajawat",
+    name: "Sanjay Singh Rajawat",
+    title: "Associate Software Engineer",
+    quote:
+      "I've been able to work on impactful projects in AI cloud development. The supportive environment and access to advanced technologies have accelerated my learning.",
+    image: "/images/sanjay-singh-rajawat.png",
   },
 ] as const;

@@ -1,5 +1,7 @@
 import Container from "@/shared/components/container";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { Button, Divider, Text } from "@/shared/ui-lib";
+import LinkComponent from "@/shared/ui-lib/link";
 import Image from "next/image";
 
 const NounSection = () => {
@@ -87,11 +89,15 @@ const NounSection = () => {
         </Text>
         <Divider
           orientation="horizontal"
-          className="bg-linear-to-r from-primary to-transparent mt-5 w-full md:w-1/3"
+          className="bg-linear-to-r from-primary to-transparent mt-5 mb-4 md:mb-15 w-full md:w-1/3"
         />
-        <Button spacing="lg" borderRadius="sm" className="mt-4 md:mt-15">
+        <LinkComponent
+          href={EXTERNAL_LINKS.projectOrion}
+          target="_blank"
+          spacing="lg"
+        >
           Explore Project Noun
-        </Button>
+        </LinkComponent>
       </Container>
     </section>
   );

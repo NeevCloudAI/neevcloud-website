@@ -20,8 +20,8 @@ const BfsiPage = () => {
       <FooterComponent
         title={BFSI_FOOTER.title}
         description={BFSI_FOOTER.description}
-        button1Text={BFSI_FOOTER.button1Text}
-        button2Text={BFSI_FOOTER.button2Text}
+        primaryCta={BFSI_FOOTER.primaryCta}
+        secondaryCta={BFSI_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

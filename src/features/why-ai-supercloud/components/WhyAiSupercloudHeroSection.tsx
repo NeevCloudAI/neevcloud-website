@@ -15,8 +15,8 @@ const WhyAiSupercloudHeroSection = () => {
       }
       image={WHY_AI_SUPERCLOUD_HERO.image}
       description={WHY_AI_SUPERCLOUD_HERO.description}
-      button1Text={WHY_AI_SUPERCLOUD_HERO.button1Text}
-      button2Text={WHY_AI_SUPERCLOUD_HERO.button2Text}
+      primaryCta={WHY_AI_SUPERCLOUD_HERO.primaryCta}
+      secondaryCta={WHY_AI_SUPERCLOUD_HERO.secondaryCta}
       badgeText={WHY_AI_SUPERCLOUD_HERO.badgeText}
       trustBadges={[...WHY_AI_SUPERCLOUD_HERO.trustBadges]}
     />

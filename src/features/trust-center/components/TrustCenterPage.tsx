@@ -23,8 +23,8 @@ const TrustCenterPage = () => {
       <FooterComponent
         title={TRUST_CENTER_FOOTER.title}
         description={TRUST_CENTER_FOOTER.description}
-        button1Text={TRUST_CENTER_FOOTER.button1Text}
-        button2Text={TRUST_CENTER_FOOTER.button2Text}
+        primaryCta={TRUST_CENTER_FOOTER.primaryCta}
+        secondaryCta={TRUST_CENTER_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

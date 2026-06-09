@@ -28,7 +28,6 @@ const RightModelSection = () => {
         >
           Find the right model
           <Text as="span" variant="h2" textColor="primary">
-            {" "}
             for your use case.
           </Text>
         </Text>

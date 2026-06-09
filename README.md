@@ -17,3 +17,47 @@ sliders images
 header
 
 SEO: add seo object in every page
+
+Pending:
+
+1. On clicking header menu, it should close
+2. route: /
+   1.1
+   section: OneVertical Stack. Silicon to endpoint.
+   pending: replace center image, also left and right items should be clickable
+   1.2
+   section: Why theworldNeeds NeevCloud?.
+   Pending: Replace this complete section
+   1.3
+   section: The AI cloud built forFrontiermodel builders.
+   pending: Add correct Code for python, go, Rust, Terraform
+   pending: add good scrollbar in other tabs.
+   1.4
+   section: From manual toil toAI-scale leverage
+   pending: content for without neevcloud
+   1.5
+   section: PoweringAI BreakthroughsAcross Industries
+   pending: user's image is missing in reviews
+
+   route: /gpu-pricing
+   1.1
+   section: Two Ways to DeployGPUs
+   pending: add icon's bg color
+   1.2
+   section: Deployment Modes Comparison
+   pending: Missing
+
+   route: /AI supercloud pages
+   1.1
+   section: Hero section
+   pending: Replace hero image
+
+   route: /about-us
+   1.1
+   section: Hero section
+   pending: complete hero image
+
+   route: /leadership
+   1.1
+   section: Hero section
+   pending: hero section gradient

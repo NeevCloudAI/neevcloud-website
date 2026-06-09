@@ -15,8 +15,8 @@ const CpuClusterHeroSection = () => {
         </Text>
       }
       description={CPU_CLUSTER_HERO.description}
-      button1Text={CPU_CLUSTER_HERO.button1Text}
-      button2Text={CPU_CLUSTER_HERO.button2Text}
+      primaryCta={CPU_CLUSTER_HERO.primaryCta}
+      secondaryCta={CPU_CLUSTER_HERO.secondaryCta}
       badgeText={CPU_CLUSTER_HERO.badgeText}
       image={CPU_CLUSTER_HERO.image}
     />

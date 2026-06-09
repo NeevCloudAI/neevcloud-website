@@ -18,8 +18,8 @@ const AgenticWorkflowPage = () => {
       <FooterComponent
         title={AGENTIC_WORKFLOW_FOOTER.title}
         description={AGENTIC_WORKFLOW_FOOTER.description}
-        button1Text={AGENTIC_WORKFLOW_FOOTER.button1Text}
-        button2Text={AGENTIC_WORKFLOW_FOOTER.button2Text}
+        primaryCta={AGENTIC_WORKFLOW_FOOTER.primaryCta}
+        secondaryCta={AGENTIC_WORKFLOW_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

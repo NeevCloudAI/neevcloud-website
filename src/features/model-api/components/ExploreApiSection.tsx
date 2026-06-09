@@ -17,7 +17,7 @@ const ExploreApiSection = () => {
       previews={EXPLORE_API_PREVIEWS}
       heading={
         <Text as="h2" align="center" id="explore-api-section-heading">
-          Start Making Predictions in Minutes
+          Start Making Predictions in
           <Text as="span" variant="h2" textColor="primary">
             Minutes
           </Text>
@@ -40,7 +40,7 @@ const ExploreApiSection = () => {
         <FooterCard
           title="Documentation and Resources"
           description="Detailed reference documentation for every endpoint, including request parameters, response formats, error codes, and usage examples."
-          button1Text="View Full Model API Docs"
+          primaryCta="View Full Model API Docs"
         />
       </div>
     </ExploreApiStepsTabsClient>

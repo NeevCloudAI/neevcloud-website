@@ -20,8 +20,8 @@ const CpuClusterPage = () => {
       <FooterComponent
         title={CPU_CLUSTER_FOOTER.title}
         description={CPU_CLUSTER_FOOTER.description}
-        button1Text={CPU_CLUSTER_FOOTER.button1Text}
-        button2Text={CPU_CLUSTER_FOOTER.button2Text}
+        primaryCta={CPU_CLUSTER_FOOTER.primaryCta}
+        secondaryCta={CPU_CLUSTER_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

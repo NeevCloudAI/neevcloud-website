@@ -23,8 +23,8 @@ const ManagedKubernetesPage = () => {
       <FooterComponent
         title={MANAGED_KUBERNETES_FOOTER.title}
         description={MANAGED_KUBERNETES_FOOTER.description}
-        button1Text={MANAGED_KUBERNETES_FOOTER.button1Text}
-        button2Text={MANAGED_KUBERNETES_FOOTER.button2Text}
+        primaryCta={MANAGED_KUBERNETES_FOOTER.primaryCta}
+        secondaryCta={MANAGED_KUBERNETES_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

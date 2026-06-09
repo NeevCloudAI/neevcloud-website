@@ -2,8 +2,8 @@ export const NEEVCLOUD_ARENA_HERO = {
   badgeText: "NeevCloud Arena",
   description:
     "NeevCloud ARENA lets you test models, run workloads, and validate performance on production infrastructure, before making decisions.",
-  button1Text: "Try ARENA",
-  button2Text: "Book a Session",
+  primaryCta: "Try ARENA",
+  secondaryCta: "Book a Session",
   trustBadges: [
     "Try in Minutes",
     "Real Infrastructure",
@@ -18,6 +18,6 @@ export const NEEVCLOUD_ARENA_FOOTER = {
   title: "Experience AI infrastructure before you commit",
   description:
     "Test models, run workloads, and validate performance on production infrastructure. No setup, no synthetic benchmarks — just real results.",
-  button1Text: "Try ARENA",
-  button2Text: "Book a Session",
+  primaryCta: "Try ARENA",
+  secondaryCta: "Book a Session",
 } as const;

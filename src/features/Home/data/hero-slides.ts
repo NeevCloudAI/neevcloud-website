@@ -1,3 +1,5 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export type HeroSlide = {
   id: string;
   theme: "light" | "dark";
@@ -6,7 +8,12 @@ export type HeroSlide = {
   headlineSuffix: string;
   subtitle: string;
   primaryCtaLabel: string;
+  primaryCtaRoute?: string;
+  primaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
+  primaryCtaVariant?: "default" | "outline" | "white";
   secondaryCtaLabel: string;
+  secondaryCtaRoute?: string;
+  secondaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
   secondaryCtaVariant: "outline" | "white";
 };
 
@@ -20,7 +27,10 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Run AI workloads with sovereign control, security, and scalability.",
     primaryCtaLabel: "Explore Platform",
+    primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+    primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Contact Sales",
+    secondaryCtaRoute: "/contact-neevcloud",
     secondaryCtaVariant: "outline",
   },
   {
@@ -30,8 +40,11 @@ export const HERO_SLIDES: HeroSlide[] = [
     headlineEmphasis: "The Brain Behind Your AI Infrastructure",
     headlineSuffix: "",
     subtitle: "Provision high-performance GPU clusters with dependable uptime.",
-    primaryCtaLabel: "Explore Platform",
+    primaryCtaLabel: "Explore Noun",
+    primaryCtaRoute: EXTERNAL_LINKS.projectOrion,
+    primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Contact Sales",
+    secondaryCtaRoute: "/contact-neevcloud",
     secondaryCtaVariant: "white",
   },
   {
@@ -43,7 +56,10 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Run AI workloads with sovereign control, security, and scalability.",
     primaryCtaLabel: "Explore Platform",
+    primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+    primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Contact Sales",
+    secondaryCtaRoute: "/contact-neevcloud",
     secondaryCtaVariant: "outline",
   },
 ];

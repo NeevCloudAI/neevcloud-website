@@ -14,8 +14,8 @@ const GpuClusterHeroSection = () => {
         </Text>
       }
       description={GPU_CLUSTER_HERO.description}
-      button1Text={GPU_CLUSTER_HERO.button1Text}
-      button2Text={GPU_CLUSTER_HERO.button2Text}
+      primaryCta={GPU_CLUSTER_HERO.primaryCta}
+      secondaryCta={GPU_CLUSTER_HERO.secondaryCta}
       badgeText={GPU_CLUSTER_HERO.badgeText}
       image={GPU_CLUSTER_HERO.image}
     />

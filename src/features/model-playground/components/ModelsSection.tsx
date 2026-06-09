@@ -13,7 +13,7 @@ const ModelsSection = () => {
           as="h2"
           id="models-in-action-section-heading"
           align="center"
-          className="max-w-4xl"
+          className="max-w-lg"
         >
           See Models in Action,
           <Text as="span" variant="h2" align="center" textColor="primary">

@@ -14,7 +14,7 @@ const DefenceApplicationSection = () => {
           as="h2"
           id="defence-applications-section-heading"
           align="center"
-          className="max-w-2xl"
+          className="max-w-4xl"
         >
           AI Infrastructure for
           <Text as="span" variant="h2" textColor="primary">

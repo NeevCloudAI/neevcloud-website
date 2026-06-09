@@ -16,8 +16,8 @@ const AboutUsPage = () => {
       <FooterComponent
         title={ABOUT_US_FOOTER.title}
         description={ABOUT_US_FOOTER.description}
-        button1Text={ABOUT_US_FOOTER.button1Text}
-        button2Text={ABOUT_US_FOOTER.button2Text}
+        primaryCta={ABOUT_US_FOOTER.primaryCta}
+        secondaryCta={ABOUT_US_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

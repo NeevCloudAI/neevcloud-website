@@ -28,9 +28,9 @@ const ContactNeevcloudHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{CONTACT_NEEVCLOUD_HERO.button1Text}</Button>
+          <Button spacing="lg">{CONTACT_NEEVCLOUD_HERO.primaryCta}</Button>
           <Button variant="outline" textColor="black" spacing="lg">
-            {CONTACT_NEEVCLOUD_HERO.button2Text}
+            {CONTACT_NEEVCLOUD_HERO.secondaryCta}
           </Button>
         </div>
 

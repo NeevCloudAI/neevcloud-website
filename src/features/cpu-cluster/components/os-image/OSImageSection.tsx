@@ -10,7 +10,7 @@ const OSImageSection = () => {
           as="h2"
           id="cpu-os-image-section-heading"
           align="center"
-          className="max-w-4xl"
+          className="max-w-xl"
         >
           Pre-built OS, and Images,
           <Text as="span" variant="h2" textColor="primary">

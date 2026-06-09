@@ -1,8 +1,8 @@
 export const MANAGED_KUBERNETES_HERO = {
   description:
     "Deploy inference servers, training pipelines, and multi-tenant ML platforms on GPU-aware Kubernetes. Device plugins pre-installed. InfiniBand configured. Autoscaling included. You deploy pods, we handle the rest.",
-  button1Text: "Deploy Your Cluster",
-  button2Text: "View Documentation",
+  primaryCta: "Deploy Your Cluster",
+  secondaryCta: "View Documentation",
   badgeText: "GPU-Aware Kubernetes",
   image: "/images/kubernetes.png",
   trustBadges: [
@@ -18,6 +18,6 @@ export const MANAGED_KUBERNETES_FOOTER = {
   title: "Deploy GPU-Aware Kubernetes.",
   description:
     "Create your first cluster with H100, H200, or A100 node pools. Device plugins, InfiniBand, and autoscaling are included. The control plane is free.",
-  button1Text: "Create Cluster",
-  button2Text: "View Documentation",
+  primaryCta: "Create Cluster",
+  secondaryCta: "View Documentation",
 } as const;

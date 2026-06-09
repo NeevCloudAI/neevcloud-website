@@ -18,8 +18,8 @@ const GpuClusterPage = () => {
       <FooterComponent
         title={GPU_CLUSTER_FOOTER.title}
         description={GPU_CLUSTER_FOOTER.description}
-        button1Text={GPU_CLUSTER_FOOTER.button1Text}
-        button2Text={GPU_CLUSTER_FOOTER.button2Text}
+        primaryCta={GPU_CLUSTER_FOOTER.primaryCta}
+        secondaryCta={GPU_CLUSTER_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

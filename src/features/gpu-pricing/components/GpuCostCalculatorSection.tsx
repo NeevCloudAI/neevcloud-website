@@ -26,7 +26,7 @@ const GpuCostCalculatorSection = () => {
           align="center"
           className="mt-4 max-w-4xl"
         >
-          {GPU_COST_CALCULATOR_SECTION.titlePrefix}{" "}
+          {GPU_COST_CALCULATOR_SECTION.titlePrefix}
           <Text as="span" variant="h2" textColor="primary">
             {GPU_COST_CALCULATOR_SECTION.titleHighlight}
           </Text>

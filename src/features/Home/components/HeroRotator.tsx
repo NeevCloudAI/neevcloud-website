@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import HomeSlideShow, { type SlideShowSlide } from "./HomeSlideShow";
 import { HERO_SLIDES } from "../data/hero-slides";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const SLIDESHOW_IMAGES: SlideShowSlide[] = [
   { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
@@ -42,10 +43,20 @@ export default function HeroRotator() {
       </Text>
 
       <div className="flex gap-4 mt-4 z-10">
-        <Button>{activeHeroSlide.primaryCtaLabel}</Button>
-        <Button variant={activeHeroSlide.secondaryCtaVariant} textColor="black">
+        <LinkComponent
+          href={activeHeroSlide.primaryCtaRoute ?? ""}
+          variant={activeHeroSlide.primaryCtaVariant}
+          target={activeHeroSlide.primaryCtaTarget}
+        >
+          {activeHeroSlide.primaryCtaLabel}
+        </LinkComponent>
+        <LinkComponent
+          href={activeHeroSlide.secondaryCtaRoute ?? ""}
+          variant={activeHeroSlide.secondaryCtaVariant}
+          target={activeHeroSlide.secondaryCtaTarget}
+        >
           {activeHeroSlide.secondaryCtaLabel}
-        </Button>
+        </LinkComponent>
       </div>
 
       <HomeSlideShow

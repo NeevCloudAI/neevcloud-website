@@ -15,14 +15,14 @@ const StoragePerformanceSection = () => {
           id="nvme-storage-performance-section-heading"
           textColor="black"
           align="center"
-          className="max-w-4xl"
+          className="max-w-xl"
         >
           Storage That Matches Your
           <Text as="span" variant="h2" textColor="primary">
             GPU Performance
           </Text>
         </Text>
-        <Text align="center" textColor="black-5" className="max-w-2xl mt-2.5">
+        <Text align="center" textColor="black-5" className="max-w-3xl mt-2.5">
           NeevCloud&apos;s high-performance NVMe local disks deliver sustained
           throughput and microsecond-level latency, so your compute never waits
           on your storage.

@@ -10,7 +10,7 @@ const EmployeeStoryCard = ({ story }: EmployeeStoryCardProps) => {
   return (
     <article
       data-slide
-      className="relative h-100 min-w-[min(100%,18rem)] shrink-0 overflow-hidden rounded-lg md:h-120 md:min-w-[calc((100%-3rem)/3)]"
+      className="relative h-140 w-115 shrink-0 overflow-hidden rounded-lg "
     >
       <Image
         src={story.image}

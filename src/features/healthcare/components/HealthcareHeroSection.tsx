@@ -14,8 +14,8 @@ const HealthcareHeroSection = () => {
         </Text>
       }
       description={HEALTHCARE_HERO.description}
-      button1Text={HEALTHCARE_HERO.button1Text}
-      button2Text={HEALTHCARE_HERO.button2Text}
+      primaryCta={HEALTHCARE_HERO.primaryCta}
+      secondaryCta={HEALTHCARE_HERO.secondaryCta}
       badgeText={HEALTHCARE_HERO.badgeText}
       image={HEALTHCARE_HERO.image}
       trustBadges={[...HEALTHCARE_HERO.trustBadges]}

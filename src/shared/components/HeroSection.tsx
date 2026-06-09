@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button, Text } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
 import { CircleCheck } from "@/shared/icons/lucide-icon-map";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const trustBadgesData = [
   "Data residency in India",
@@ -14,8 +15,10 @@ const trustBadgesData = [
 const HeroSection = ({
   title,
   description,
-  button1Text,
-  button2Text,
+  primaryCta,
+  primaryCtaRoute,
+  secondaryCta,
+  secondaryCtaRoute,
   badgeText,
   image,
   badgeIcon,
@@ -23,8 +26,10 @@ const HeroSection = ({
 }: {
   title: React.ReactNode;
   description: string;
-  button1Text: string;
-  button2Text: string;
+  primaryCta: string;
+  primaryCtaRoute?: string;
+  secondaryCta: string;
+  secondaryCtaRoute?: string;
   badgeText: string;
   image?: string;
   badgeIcon?: boolean;
@@ -43,15 +48,17 @@ const HeroSection = ({
 
         {title}
 
-        <Text as="h6" className="mt-2.5 max-w-3xl" align="center">
+        <Text as="h6" className="mt-2.5 max-w-4xl" align="center">
           {description}
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{button1Text}</Button>
-          <Button variant="outline" textColor="black" spacing="lg">
-            {button2Text}
-          </Button>
+          <LinkComponent href={primaryCtaRoute ?? ""}>
+            {primaryCta}
+          </LinkComponent>
+          <LinkComponent href={secondaryCtaRoute ?? ""} variant="outline">
+            {secondaryCta}
+          </LinkComponent>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">

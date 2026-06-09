@@ -14,8 +14,8 @@ const ModelCatalogHeroSection = () => {
         </Text>
       }
       description={MODEL_CATALOG_HERO.description}
-      button1Text={MODEL_CATALOG_HERO.button1Text}
-      button2Text={MODEL_CATALOG_HERO.button2Text}
+      primaryCta={MODEL_CATALOG_HERO.primaryCta}
+      secondaryCta={MODEL_CATALOG_HERO.secondaryCta}
       badgeText={MODEL_CATALOG_HERO.badgeText}
       image={MODEL_CATALOG_HERO.image}
       trustBadges={[...MODEL_CATALOG_HERO.trustBadges]}

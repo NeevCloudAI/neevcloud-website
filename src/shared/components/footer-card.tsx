@@ -4,23 +4,23 @@ import { Button, Text } from "../ui-lib";
 interface FooterCardProps {
   title: string;
   description: string;
-  button1Text: string;
-  button2Text?: string;
+  primaryCta: string;
+  secondaryCta?: string;
   className?: string;
 }
 
 const FooterCard = ({
   title,
   description,
-  button1Text,
-  button2Text,
+  primaryCta,
+  secondaryCta,
   className,
 }: FooterCardProps) => {
   return (
     <section
       className={cn(
         "relative w-full rounded-md bg-primary-105 py-6 md:py-29 px-6 md:px-17.5 flex flex-col overflow-hidden",
-        className,
+        className
       )}
     >
       <Text as="h1" weight="medium" className="max-w-2xl">
@@ -36,11 +36,11 @@ const FooterCard = ({
           spacing="md"
           weight="semibold"
         >
-          {button1Text}
+          {primaryCta}
         </Button>
-        {button2Text && (
+        {secondaryCta && (
           <Button variant={"black"} spacing="md">
-            {button2Text}
+            {secondaryCta}
           </Button>
         )}
       </div>

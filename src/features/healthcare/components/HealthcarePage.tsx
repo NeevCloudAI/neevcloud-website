@@ -21,8 +21,8 @@ const HealthcarePage = () => {
       <FooterComponent
         title={HEALTHCARE_FOOTER.title}
         description={HEALTHCARE_FOOTER.description}
-        button1Text={HEALTHCARE_FOOTER.button1Text}
-        button2Text={HEALTHCARE_FOOTER.button2Text}
+        primaryCta={HEALTHCARE_FOOTER.primaryCta}
+        secondaryCta={HEALTHCARE_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

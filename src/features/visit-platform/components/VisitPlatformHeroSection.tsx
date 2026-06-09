@@ -14,8 +14,8 @@ const VisitPlatformHeroSection = () => {
         </Text>
       }
       description={MODEL_PLAYGROUND_HERO.description}
-      button1Text={MODEL_PLAYGROUND_HERO.button1Text}
-      button2Text={MODEL_PLAYGROUND_HERO.button2Text}
+      primaryCta={MODEL_PLAYGROUND_HERO.primaryCta}
+      secondaryCta={MODEL_PLAYGROUND_HERO.secondaryCta}
       badgeText={MODEL_PLAYGROUND_HERO.badgeText}
       image={MODEL_PLAYGROUND_HERO.image}
       trustBadges={[...MODEL_PLAYGROUND_HERO.trustBadges]}

@@ -12,7 +12,7 @@ const ReviewsSection = () => {
         className="flex flex-col items-center justify-center relative z-2"
         alignRight
       >
-        <Text as="h2" className="max-w-4xl">
+        <Text as="h2" className="max-w-3xl" align="center">
           Powering
           <Text as="span" variant="h2" textColor="primary">
             AI Breakthroughs

@@ -19,7 +19,7 @@ export const DEFENCE_AMBITION_ITEMS: readonly AmbitionDetailItem[] = [
   {
     id: "air-gapped",
     label: "02 · FLEXIBILITY",
-    iconSrc: "/icons/academic.svg",
+    iconSrc: "/icons/bank.svg",
     iconAlt: "Air-gapped deployments",
     title: "Air-Gapped Deployments",
     description:

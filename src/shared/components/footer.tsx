@@ -21,8 +21,8 @@ function hasFooterHref(href: string): boolean {
 const FooterComponent = ({
   title,
   description,
-  button1Text,
-  button2Text,
+  primaryCta,
+  secondaryCta,
   className,
 }: FooterCtaContent) => {
   return (
@@ -33,8 +33,8 @@ const FooterComponent = ({
         <FooterCard
           title={title || FOOTER_CTA.title || ""}
           description={description || FOOTER_CTA.description || ""}
-          button1Text={button1Text || FOOTER_CTA.button1Text || ""}
-          button2Text={button2Text || FOOTER_CTA.button2Text || ""}
+          primaryCta={primaryCta || FOOTER_CTA.primaryCta || ""}
+          secondaryCta={secondaryCta || FOOTER_CTA.secondaryCta || ""}
         />
 
         <div className="mb-4 md:mb-16 w-full flex flex-col md:flex-row gap-8 md:gap-16 text-white">

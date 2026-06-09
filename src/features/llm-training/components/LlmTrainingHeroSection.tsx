@@ -11,8 +11,8 @@ const LlmTrainingHeroSection = () => {
         </Text>
       }
       description={LLM_TRAINING_HERO.description}
-      button1Text={LLM_TRAINING_HERO.button1Text}
-      button2Text={LLM_TRAINING_HERO.button2Text}
+      primaryCta={LLM_TRAINING_HERO.primaryCta}
+      secondaryCta={LLM_TRAINING_HERO.secondaryCta}
       badgeText={LLM_TRAINING_HERO.badgeText}
       image={LLM_TRAINING_HERO.image}
       trustBadges={[...LLM_TRAINING_HERO.trustBadges]}

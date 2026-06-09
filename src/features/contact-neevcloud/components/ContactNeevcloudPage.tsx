@@ -13,8 +13,8 @@ const ContactNeevcloudPage = () => {
       <FooterComponent
         title={CONTACT_NEEVCLOUD_FOOTER.title}
         description={CONTACT_NEEVCLOUD_FOOTER.description}
-        button1Text={CONTACT_NEEVCLOUD_FOOTER.button1Text}
-        button2Text={CONTACT_NEEVCLOUD_FOOTER.button2Text}
+        primaryCta={CONTACT_NEEVCLOUD_FOOTER.primaryCta}
+        secondaryCta={CONTACT_NEEVCLOUD_FOOTER.secondaryCta}
       />
     </>
   );

@@ -15,17 +15,17 @@ const CPUConfigurationTableRow = ({ row }: CPUConfigurationTableRowProps) => {
         </Text>
       </td>
       <td className={CPU_CONFIG_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-80">
           {row.vcpu}
         </Text>
       </td>
       <td className={CPU_CONFIG_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-80">
           {row.ram}
         </Text>
       </td>
       <td className={CPU_CONFIG_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-80">
           {row.storage}
         </Text>
       </td>

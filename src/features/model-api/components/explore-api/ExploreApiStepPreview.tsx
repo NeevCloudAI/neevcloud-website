@@ -30,7 +30,7 @@ function Step1Preview() {
       </Text>
 
       <div className="rounded-md border border-gray-125 bg-gray-110 p-2.5 md:px-5 md:py-2.5">
-        <Text fontFamily="spaceMono" textColor="gray-75">
+        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-7">
           $
           <Text
             as="span"
@@ -57,7 +57,7 @@ function Step1Preview() {
             copied ✔
           </Text>
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-75">
+        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-7">
           →
           <Text as="span" textColor="white" variant="p">
             key active in 0.4s
@@ -170,35 +170,63 @@ function Step3Preview() {
         step 3 - make your first request
       </Text>
       <div className="border border-gray-125 bg-gray-110 rounded-md px-3.75 py-2.5 ">
-        <Text fontFamily="spaceMono" textColor="primary" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="primary"
+          className="py-1 leading-7"
+        >
           POST
           <Text as="span" textColor="white" variant="p">
             /v1/predict
           </Text>
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-75" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="gray-75"
+          className="py-1 leading-7"
+        >
           Authorization: Bearer ***
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-75" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="gray-75"
+          className="py-1 leading-7"
+        >
           Content-Type: application/json
         </Text>
-        <Text fontFamily="spaceMono" textColor="white" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="white"
+          className="py-1 leading-7"
+        >
           {`{`}
         </Text>
-        <Text fontFamily="spaceMono" textColor="white" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="white"
+          className="py-1 leading-7"
+        >
           {`“model”: “llama-3.1-70b-instruct”,`}
         </Text>
-        <Text fontFamily="spaceMono" textColor="white" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="white"
+          className="py-1 leading-7"
+        >
           {`“input”: “Summarize Q3 call”`}
         </Text>
-        <Text fontFamily="spaceMono" textColor="white" className="py-1">
+        <Text
+          fontFamily="spaceMono"
+          textColor="white"
+          className="py-1 leading-7"
+        >
           {`}`}
         </Text>
         <Text
           fontFamily="spaceMono"
           as="small"
           textColor="red-50"
-          className="py-1"
+          className="py-1 leading-7"
         >
           ↑ sending
         </Text>

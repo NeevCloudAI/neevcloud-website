@@ -1,14 +1,14 @@
 import { cva } from "class-variance-authority";
 
-export const buttonVariants = cva(
+export const linkVariants = cva(
   "cursor-pointer w-fit whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed",
   {
     variants: {
       variant: {
-        default: `bg-primary`,
+        default: `bg-primary text-white`,
         secondary: `bg-secondary`,
         tertiary: `bg-tertiary`,
-        outline: `border border-black`,
+        outline: `border border-black text-black`,
         black: `bg-black text-white`,
         "outline-primary": `bg-white`,
         white: `bg-white`,
@@ -21,7 +21,6 @@ export const buttonVariants = cva(
         default: "text-sm",
         sm: "text-sm",
         md: "text-md",
-        xs: "text-xs",
         lg: "text-lg",
         xl: "text-xl",
         xxl: "text-2xl",
@@ -43,17 +42,6 @@ export const buttonVariants = cva(
         md: "px-4 py-2",
         lg: "px-8 py-2",
         xl: "px-10 py-3",
-      },
-      textColor: {
-        default: "text-white",
-        primary: "text-primary",
-        secondary: "text-secondary",
-        destructive: "text-destructive",
-        outline: "text-gray-10",
-        blue: "text-blue-40",
-        black: "text-black",
-        ghost: "text-black-80",
-        gray: "text-gray-80",
       },
       fontFamily: {
         spaceMono: "font-space-mono",
@@ -84,8 +72,7 @@ export const buttonVariants = cva(
     defaultVariants: {
       variant: "default",
       size: "default",
-      spacing: "md",
-      textColor: "default",
+      spacing: "default",
       borderRadius: "default",
     },
   }

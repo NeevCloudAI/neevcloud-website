@@ -13,7 +13,7 @@ const NumberedDetailCard = ({
     <article
       className={cn(
         "flex h-full flex-col rounded-md border border-gray-05 bg-white p-4 md:p-5",
-        className,
+        className
       )}
     >
       <div className="flex items-start justify-between gap-4">
@@ -29,7 +29,7 @@ const NumberedDetailCard = ({
           as="h1"
           className="shrink-0 text-[3rem] md:text-[5rem] lg:text-[7rem]"
           fontFamily="spaceMono"
-          textColor="primary-200"
+          textColor="primary-85"
           weight="normal"
           aria-hidden="true"
         >

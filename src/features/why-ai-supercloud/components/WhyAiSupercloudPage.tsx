@@ -21,8 +21,8 @@ const WhyAiSupercloudPage = () => {
       <FooterComponent
         title={WHY_AI_SUPERCLOUD_FOOTER.title}
         description={WHY_AI_SUPERCLOUD_FOOTER.description}
-        button1Text={WHY_AI_SUPERCLOUD_FOOTER.button1Text}
-        button2Text={WHY_AI_SUPERCLOUD_FOOTER.button2Text}
+        primaryCta={WHY_AI_SUPERCLOUD_FOOTER.primaryCta}
+        secondaryCta={WHY_AI_SUPERCLOUD_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

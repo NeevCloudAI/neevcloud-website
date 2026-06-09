@@ -51,7 +51,7 @@ const RuntimeTabs = () => {
   const highlightedLines = useMemo(() => {
     const { codeLines } = RUNTIME_TAB_BY_ID[activeTab];
     return codeLines.map((tokens, lineIdx) =>
-      renderLineTokens(tokens, `${activeTab}-${lineIdx}`),
+      renderLineTokens(tokens, `${activeTab}-${lineIdx}`)
     );
   }, [activeTab]);
 
@@ -71,7 +71,7 @@ const RuntimeTabs = () => {
 
         <pre
           id="runtime-code-panel"
-          className="max-h-85 overflow-x-auto overflow-y-auto p-6 text-xs leading-relaxed sm:px-10 sm:py-7.5"
+          className="max-h-85 overflow-x-auto classy overflow-y-auto p-6 text-xs leading-relaxed sm:px-10 sm:py-7.5"
           role="tabpanel"
           aria-labelledby={`runtime-tab-${activeTab}`}
         >

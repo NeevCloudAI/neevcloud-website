@@ -23,8 +23,8 @@ const PublicSectorPage = () => {
       <FooterComponent
         title={PUBLIC_SECTOR_FOOTER.title}
         description={PUBLIC_SECTOR_FOOTER.description}
-        button1Text={PUBLIC_SECTOR_FOOTER.button1Text}
-        button2Text={PUBLIC_SECTOR_FOOTER.button2Text}
+        primaryCta={PUBLIC_SECTOR_FOOTER.primaryCta}
+        secondaryCta={PUBLIC_SECTOR_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

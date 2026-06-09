@@ -2,8 +2,8 @@ export const WHY_AI_SUPERCLOUD_HERO = {
   badgeText: "Why AI SuperCloud",
   description:
     "Traditional cloud was built for general computing, and later adapted for AI. AI Supercloud is purpose-built for machine learning from the ground up.",
-  button1Text: "Access Console",
-  button2Text: "View Documentation",
+  primaryCta: "Access Console",
+  secondaryCta: "View Documentation",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",
@@ -18,6 +18,6 @@ export const WHY_AI_SUPERCLOUD_FOOTER = {
   title: "Build on infrastructure made for AI",
   description:
     "Purpose-built AI Supercloud with instant GPU access, transparent pricing, and sovereign infrastructure within India.",
-  button1Text: "Access Console",
-  button2Text: "View Documentation",
+  primaryCta: "Access Console",
+  secondaryCta: "View Documentation",
 } as const;

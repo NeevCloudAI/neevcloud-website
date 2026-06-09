@@ -3,6 +3,7 @@ import { Text } from "@/shared/ui-lib";
 import UseCaseSummaryCard from "./UseCaseSummaryCard";
 import UseCaseTag from "./UseCaseTag";
 import type { UseCaseDefinition } from "../types/use-cases-section.types";
+import { Loader } from "lucide-react";
 
 type UseCasePanelProps = {
   useCase: UseCaseDefinition;
@@ -26,7 +27,7 @@ const UseCasePanel = ({
       className="relative bg-gray-10 w-full p-4 md:p-12.5 flex flex-col md:flex-row gap-5 overflow-hidden"
     >
       <div>
-        <div className="absolute bottom-[-40%] left-0">
+        <div className="absolute bottom-[-45%] left-0">
           <Image
             src="/icons/logo.svg"
             alt={useCase.logoAlt}
@@ -35,9 +36,11 @@ const UseCasePanel = ({
           />
         </div>
         <div
-          className="w-15 h-15 bg-white rounded-sm border border-gray-60"
+          className="w-fit p-3.75 bg-white rounded-sm border border-gray-60"
           aria-hidden="true"
-        />
+        >
+          <Loader size={30} className="text-gray-60" />
+        </div>
         <Text as="h2" className="mt-4 md:mt-10">
           {useCase.heading}
         </Text>

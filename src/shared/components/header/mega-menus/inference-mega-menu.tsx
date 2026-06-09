@@ -1,4 +1,6 @@
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import Link from "next/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+import { Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
@@ -108,9 +110,11 @@ export default function InferenceMegaMenu() {
             height={300}
             className="mt-4"
           />
-          <Text as="small" textColor="red-50" className="mt-4">
-            Open Playground -&gt;
-          </Text>
+          <Link href={EXTERNAL_LINKS.aiInferencePlayground} target="_blank">
+            <Text as="small" textColor="red-50" className="mt-4">
+              Open Playground -&gt;
+            </Text>
+          </Link>
         </div>
       </div>
       <Divider orientation="horizontal" />
@@ -118,9 +122,9 @@ export default function InferenceMegaMenu() {
         <Text textColor="blue-40">
           All endpoints hosted in India · DPDP-aligned
         </Text>
-        <Button variant="ghost" className="text-gray-75" spacing="none">
-          View ALL Models -&gt;
-        </Button>
+        <Link href={EXTERNAL_LINKS.aiInferenceDedicatedModel} target="_blank">
+          <Text textColor="gray-75">View ALL Models -&gt;</Text>
+        </Link>
       </div>
     </div>
   );

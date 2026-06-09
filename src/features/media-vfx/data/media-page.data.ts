@@ -2,8 +2,8 @@ export const MEDIA_HERO = {
   badgeText: "Media & VFX",
   description:
     "From 3D animation to cinematic effects, media workflows demand massive compute on tight deadlines. NeevCloud provides GPU infrastructure that scales with your production, so you can render faster, iterate in real time, and deliver on schedule.",
-  button1Text: "Start Rendering",
-  button2Text: "Talk to Sales",
+  primaryCta: "Start Rendering",
+  secondaryCta: "Talk to Sales",
   image: "/images/media.png",
   trustBadges: [
     "H100 and A100 GPUs",
@@ -18,6 +18,6 @@ export const MEDIA_FOOTER = {
   title: "Start Rendering on GPU Cloud",
   description:
     "Scale your render farm on-demand. H100 and A100 GPUs for feature films, animation, and VFX. Per-second billing, instant provisioning.",
-  button1Text: "Start Rendering",
-  button2Text: "Talk to Sales",
+  primaryCta: "Start Rendering",
+  secondaryCta: "Talk to Sales",
 } as const;

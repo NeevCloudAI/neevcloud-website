@@ -2,8 +2,8 @@ export const AI_INFERENCE_HERO = {
   badgeText: "AI Inference",
   description:
     "Managed inference endpoints with low latency, OpenAI-compatible APIs, and India-resident infrastructure, no platform team needed.",
-  button1Text: "Deploy Your Model",
-  button2Text: "View Inference Pricing",
+  primaryCta: "Deploy Your Model",
+  secondaryCta: "View Inference Pricing",
   trustBadges: [
     "OpenAI-compatible API",
     "Managed infrastructure",
@@ -17,6 +17,6 @@ export const AI_INFERENCE_FOOTER = {
   title: "Deploy Production Inference in Minutes",
   description:
     "Bring your own model or use hosted endpoints. OpenAI-compatible APIs, India-resident infrastructure, and pay-per-token pricing with no idle compute charges.",
-  button1Text: "Deploy Your Model",
-  button2Text: "Talk to Our Team",
+  primaryCta: "Deploy Your Model",
+  secondaryCta: "Talk to Our Team",
 } as const;

@@ -15,8 +15,8 @@ const GenerativeAiHeroSection = () => {
         </Text>
       }
       description={GENERATIVE_AI_HERO.description}
-      button1Text={GENERATIVE_AI_HERO.button1Text}
-      button2Text={GENERATIVE_AI_HERO.button2Text}
+      primaryCta={GENERATIVE_AI_HERO.primaryCta}
+      secondaryCta={GENERATIVE_AI_HERO.secondaryCta}
       badgeText={GENERATIVE_AI_HERO.badgeText}
       image={GENERATIVE_AI_HERO.image}
       trustBadges={[...GENERATIVE_AI_HERO.trustBadges]}

@@ -17,8 +17,8 @@ const ModelCatalogPage = () => {
       <FooterComponent
         title={MODEL_CATALOG_FOOTER.title}
         description={MODEL_CATALOG_FOOTER.description}
-        button1Text={MODEL_CATALOG_FOOTER.button1Text}
-        button2Text={MODEL_CATALOG_FOOTER.button2Text}
+        primaryCta={MODEL_CATALOG_FOOTER.primaryCta}
+        secondaryCta={MODEL_CATALOG_FOOTER.secondaryCta}
       />
     </>
   );

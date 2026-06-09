@@ -4,6 +4,7 @@ import Link from "next/link";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -94,16 +95,17 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
 ];
 
 const PRODUCT_MEGA_MENU_GPU_LINKS = [
-  { label: "A100", href: "/nvidia-a100" },
-  { label: "A30", href: "/nvidia-a30" },
+  { label: "H100", href: "/nvidia-h100" },
+  { label: "H200", href: "/nvidia-h200" },
   { label: "B200", href: "/nvidia-b200" },
   { label: "B300", href: "/nvidia-b300" },
-  { label: "H100", href: "/nvidia-h100" },
+  { label: "A30", href: "/nvidia-a30" },
+  { label: "MI300X", href: "/nvidia-mi300x" },
 ] as const;
 
 const gpuLinkClassName = cn(
   "outline-offset-2 transition-colors hover:text-primary",
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
 );
 
 export default function ProductMegaMenu() {
@@ -156,9 +158,9 @@ export default function ProductMegaMenu() {
             ))}
           </ul>
         </nav>
-        <Button variant="ghost" className="text-gray-75" spacing="none">
-          Compare GPUs -&gt;
-        </Button>
+        <Link href={EXTERNAL_LINKS.aiSupercloudConsole} target="_blank">
+          <Text textColor="gray-75">Compare GPUs -&gt;</Text>
+        </Link>
       </div>
     </div>
   );

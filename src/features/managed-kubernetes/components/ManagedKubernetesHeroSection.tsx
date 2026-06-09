@@ -20,8 +20,8 @@ const ManagedKubernetesHeroSection = () => {
         </Text>
       }
       description={MANAGED_KUBERNETES_HERO.description}
-      button1Text={MANAGED_KUBERNETES_HERO.button1Text}
-      button2Text={MANAGED_KUBERNETES_HERO.button2Text}
+      primaryCta={MANAGED_KUBERNETES_HERO.primaryCta}
+      secondaryCta={MANAGED_KUBERNETES_HERO.secondaryCta}
       badgeText={MANAGED_KUBERNETES_HERO.badgeText}
       image={MANAGED_KUBERNETES_HERO.image}
       trustBadges={[...MANAGED_KUBERNETES_HERO.trustBadges]}

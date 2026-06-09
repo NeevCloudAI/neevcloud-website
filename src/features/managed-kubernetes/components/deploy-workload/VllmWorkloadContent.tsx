@@ -2,10 +2,15 @@ import { Text } from "@/shared/ui-lib";
 
 const VllmWorkloadContent = () => (
   <>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1">
+    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
       # Add NeevCloud Helm repo
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       helm
       <Text as="span" variant="p" textColor="white">
         repo add neevcloud
@@ -14,7 +19,12 @@ const VllmWorkloadContent = () => (
         https://charts.neevcloud.com
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       helm
       <Text as="span" variant="p" textColor="white">
         repo update
@@ -23,14 +33,24 @@ const VllmWorkloadContent = () => (
     <Text fontFamily="spaceMono" textColor="gray-75" className="mt-4 md:mt-8">
       # Install vLLM with Llama 3 70B
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       helm
       <Text as="span" variant="p" textColor="white">
         install llama-server neevcloud/vllm
       </Text>
       \
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp; --set
       <Text as="span" variant="p" textColor="white" className="mr-0 md:mr-0">
         model=
@@ -40,7 +60,12 @@ const VllmWorkloadContent = () => (
       </Text>
       \
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp; --set
       <Text as="span" variant="p" textColor="white">
         gpus=1
@@ -57,7 +82,12 @@ const VllmWorkloadContent = () => (
       </Text>
       \
     </Text>
-    <Text fontFamily="spaceMono" textColor="primary" as="h6">
+    <Text
+      fontFamily="spaceMono"
+      textColor="primary"
+      as="h6"
+      className="leading-7"
+    >
       &nbsp; --set
       <Text as="span" variant="p" textColor="white" className="mr-0 md:mr-0">
         replicas=

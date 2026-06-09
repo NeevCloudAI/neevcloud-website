@@ -545,7 +545,7 @@ export const GPU_OTHER_GPUS_CATALOG_BY_PAGE: Record<
 };
 
 export function getGpuOtherGpusCatalog(
-  pageId: string,
+  pageId: string
 ): readonly GpuOtherGpuCard[] {
   return GPU_OTHER_GPUS_CATALOG_BY_PAGE[pageId] ?? GPU_OTHER_GPUS_CATALOG_A100;
 }

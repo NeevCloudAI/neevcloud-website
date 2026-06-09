@@ -20,8 +20,8 @@ const AiInferencePage = () => {
       <FooterComponent
         title={AI_INFERENCE_FOOTER.title}
         description={AI_INFERENCE_FOOTER.description}
-        button1Text={AI_INFERENCE_FOOTER.button1Text}
-        button2Text={AI_INFERENCE_FOOTER.button2Text}
+        primaryCta={AI_INFERENCE_FOOTER.primaryCta}
+        secondaryCta={AI_INFERENCE_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

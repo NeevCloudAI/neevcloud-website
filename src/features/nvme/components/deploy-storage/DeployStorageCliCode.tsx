@@ -3,7 +3,12 @@ import { Text } from "@/shared/ui-lib";
 const DeployStorageCliCode = () => {
   return (
     <div className="px-4 md:px-7.5 py-2 md:py-10">
-      <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+      <Text
+        as="h6"
+        fontFamily="spaceMono"
+        textColor="gray-75"
+        className="leading-6"
+      >
         Provision additional NVMe storage when launching GPU instances or add
         capacity to running instances.
       </Text>

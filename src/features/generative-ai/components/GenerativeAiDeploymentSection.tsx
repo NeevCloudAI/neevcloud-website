@@ -26,7 +26,7 @@ const GenerativeAiDeploymentSection = () => {
           as="h6"
           textColor="black-5"
           align="center"
-          className="max-w-3xl mt-2.5"
+          className="max-w-3xl mt-2.5 mb-6 md:mb-12.5"
         >
           {GENERATIVE_AI_DEPLOYMENT_SECTION.description}
         </Text>

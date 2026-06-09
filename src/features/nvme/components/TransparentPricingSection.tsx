@@ -10,7 +10,7 @@ const TransparentPricingSection = () => {
       aria-labelledby="nvme-transparent-pricing-section-heading"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] md:h-full top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"
         aria-hidden="true"
       />
       <Container className="flex flex-col items-center justify-center">

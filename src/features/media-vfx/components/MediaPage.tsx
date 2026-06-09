@@ -24,8 +24,8 @@ const MediaPage = () => {
       <FooterComponent
         title={MEDIA_FOOTER.title}
         description={MEDIA_FOOTER.description}
-        button1Text={MEDIA_FOOTER.button1Text}
-        button2Text={MEDIA_FOOTER.button2Text}
+        primaryCta={MEDIA_FOOTER.primaryCta}
+        secondaryCta={MEDIA_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

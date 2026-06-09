@@ -16,8 +16,8 @@ export const FOOTER_CTA: FooterCtaContent = {
   title: "Start Building on NeevCloud Today",
   description:
     "Sign up in 60 seconds. $200 in compute credits, no commitment. Your first B200 is already warming up.",
-  button1Text: "Get Started Free",
-  button2Text: "Talk to Our Team",
+  primaryCta: "Get Started Free",
+  secondaryCta: "Talk to Our Team",
 };
 
 export const FOOTER_SOCIAL_LINKS: readonly FooterSocialLink[] = [

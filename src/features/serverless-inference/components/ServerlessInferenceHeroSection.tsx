@@ -15,8 +15,8 @@ const ServerlessInferenceHeroSection = () => {
         </Text>
       }
       description={SERVERLESS_INFERENCE_HERO.description}
-      button1Text={SERVERLESS_INFERENCE_HERO.button1Text}
-      button2Text={SERVERLESS_INFERENCE_HERO.button2Text}
+      primaryCta={SERVERLESS_INFERENCE_HERO.primaryCta}
+      secondaryCta={SERVERLESS_INFERENCE_HERO.secondaryCta}
       badgeText={SERVERLESS_INFERENCE_HERO.badgeText}
       image={SERVERLESS_INFERENCE_HERO.image}
     />

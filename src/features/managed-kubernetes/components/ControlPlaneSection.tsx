@@ -19,6 +19,7 @@ const ControlPlaneSection = () => {
           as="h2"
           id="control-plane-section-heading"
           textColor="white"
+          align="center"
           className="max-w-4xl"
         >
           Control Plane

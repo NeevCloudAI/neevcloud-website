@@ -4,24 +4,19 @@ import { Text } from "@/shared/ui-lib";
 const GpuResourceCodeBlock = () => {
   return (
     <NeedsCodeBlockWrapper>
-      <Text as="small" textColor="white" fontFamily="spaceMono">
+      <Text textColor="white" fontFamily="spaceMono" className="leading-5">
         resources:
       </Text>
-      <Text as="small" textColor="white" fontFamily="spaceMono">
+      <Text textColor="white" fontFamily="spaceMono" className="leading-5">
         &nbsp;&nbsp;limits:
       </Text>
-      <Text as="small" textColor="primary" fontFamily="spaceMono">
+      <Text textColor="primary" fontFamily="spaceMono" className="leading-5">
         &nbsp;&nbsp;&nbsp;nvidia.com/gpu:
-        <Text
-          as="span"
-          variant="small"
-          textColor="white"
-          fontFamily="spaceMono"
-        >
+        <Text as="span" variant="p" textColor="white" fontFamily="spaceMono">
           1
           <Text
             as="span"
-            variant="small"
+            variant="p"
             textColor="gray-75"
             fontFamily="spaceMono"
           >

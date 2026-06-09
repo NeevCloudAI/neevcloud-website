@@ -95,7 +95,17 @@ const ExploreApiStepsTabsClient = ({
                 {current.description}
               </Text>
             </div>
-            {previews[activeStep]}
+            <div className="w-full">
+              {previews.map((preview, index) => (
+                <div
+                  key={`${tabIdPrefix}-preview-${index}`}
+                  className={cn("w-full", index !== activeStep && "hidden")}
+                  aria-hidden={index !== activeStep}
+                >
+                  {preview}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

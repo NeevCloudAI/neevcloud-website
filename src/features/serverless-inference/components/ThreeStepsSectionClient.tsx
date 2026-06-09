@@ -27,6 +27,7 @@ const ThreeStepsSectionClient = () => {
                 role="tab"
                 type="button"
                 size="full"
+                borderRadius="lg"
                 aria-selected={activeStep === i}
                 aria-controls={`three-steps-panel-${i}`}
                 tabIndex={activeStep === i ? 0 : -1}

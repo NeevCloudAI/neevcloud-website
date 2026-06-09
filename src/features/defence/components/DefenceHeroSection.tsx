@@ -14,8 +14,8 @@ const DefenceHeroSection = () => {
         </Text>
       }
       description={DEFENCE_HERO.description}
-      button1Text={DEFENCE_HERO.button1Text}
-      button2Text={DEFENCE_HERO.button2Text}
+      primaryCta={DEFENCE_HERO.primaryCta}
+      secondaryCta={DEFENCE_HERO.secondaryCta}
       badgeText={DEFENCE_HERO.badgeText}
       image={DEFENCE_HERO.image}
       trustBadges={[...DEFENCE_HERO.trustBadges]}

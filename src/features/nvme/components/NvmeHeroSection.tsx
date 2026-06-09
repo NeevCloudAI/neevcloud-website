@@ -19,8 +19,8 @@ const NvmeHeroSection = () => {
         </Text>
       }
       description={NVME_HERO.description}
-      button1Text={NVME_HERO.button1Text}
-      button2Text={NVME_HERO.button2Text}
+      primaryCta={NVME_HERO.primaryCta}
+      secondaryCta={NVME_HERO.secondaryCta}
       badgeText={NVME_HERO.badgeText}
       image={NVME_HERO.image}
       trustBadges={[...NVME_HERO.trustBadges]}

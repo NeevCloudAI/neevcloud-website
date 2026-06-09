@@ -2,8 +2,8 @@ export const CPU_PRICING_HERO = {
   badgeText: "CPU Pricing",
   description:
     "GPUs train models. But data pipelines, API servers, databases, and orchestration run on CPUs. NeevCloud provides the general-purpose compute your AI stack actually needs to function.",
-  button1Text: "Deploy Instance",
-  button2Text: "View Configurations",
+  primaryCta: "Deploy Instance",
+  secondaryCta: "View Configurations",
   trustBadges: [
     "Deploy in 60 seconds",
     "Pay per hour",
@@ -16,6 +16,6 @@ export const CPU_PRICING_FOOTER = {
   title: "Launch CPU Instances at Transparent Rates",
   description:
     "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress between workloads.",
-  button1Text: "View CPU Configs",
-  button2Text: "Talk to Our Team",
+  primaryCta: "View CPU Configs",
+  secondaryCta: "Talk to Our Team",
 } as const;

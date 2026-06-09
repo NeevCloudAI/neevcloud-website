@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
@@ -97,9 +99,11 @@ export default function AiSupercloudMegaMenu() {
               deployed and scaled.
             </Text>
           </div>
-          <Text as="small" textColor="red-50">
-            Explore Project Noun -&gt;
-          </Text>
+          <Link href={EXTERNAL_LINKS.projectOrion} target="_blank">
+            <Text as="small" textColor="red-50">
+              Explore Project Noun -&gt;
+            </Text>
+          </Link>
         </div>
       </div>
       <Divider orientation="horizontal" />

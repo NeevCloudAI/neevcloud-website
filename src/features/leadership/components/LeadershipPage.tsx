@@ -13,8 +13,8 @@ const LeadershipPage = () => {
       <FooterComponent
         title={LEADERSHIP_FOOTER.title}
         description={LEADERSHIP_FOOTER.description}
-        button1Text={LEADERSHIP_FOOTER.button1Text}
-        button2Text={LEADERSHIP_FOOTER.button2Text}
+        primaryCta={LEADERSHIP_FOOTER.primaryCta}
+        secondaryCta={LEADERSHIP_FOOTER.secondaryCta}
       />
     </>
   );

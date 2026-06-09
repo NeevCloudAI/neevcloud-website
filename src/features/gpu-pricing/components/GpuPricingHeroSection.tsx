@@ -14,8 +14,8 @@ const GpuPricingHeroSection = () => {
         </Text>
       }
       description={GPU_PRICING_HERO.description}
-      button1Text={GPU_PRICING_HERO.button1Text}
-      button2Text={GPU_PRICING_HERO.button2Text}
+      primaryCta={GPU_PRICING_HERO.primaryCta}
+      secondaryCta={GPU_PRICING_HERO.secondaryCta}
       badgeText={GPU_PRICING_HERO.badgeText}
       trustBadges={[...GPU_PRICING_HERO.trustBadges]}
     />

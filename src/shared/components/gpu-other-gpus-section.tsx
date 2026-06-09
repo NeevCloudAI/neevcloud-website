@@ -28,7 +28,7 @@ const GpuOtherGpusSection = ({
 
   return (
     <section
-      className={cn("bg-black py-8 md:py-16 2xl:py-25", className)}
+      className={cn("bg-black py-8 md:py-25", className)}
       aria-labelledby="gpu-other-gpus-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -45,10 +45,10 @@ const GpuOtherGpusSection = ({
           {cards.map((card) => (
             <li key={card.id}>
               <GpuOtherGpusCard
-                flipDetails={card.flipDetails}
-                flipChartConfig={flipChartConfig}
                 title={card.title}
                 description={card.description}
+                flipDetails={card.flipDetails}
+                flipChartConfig={flipChartConfig}
               />
             </li>
           ))}

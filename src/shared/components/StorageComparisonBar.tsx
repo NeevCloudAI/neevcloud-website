@@ -33,7 +33,7 @@ const StorageComparisonBar = ({
         <div
           className={cn(
             "flex items-start justify-between gap-4",
-            labelClassName,
+            labelClassName
           )}
         >
           {/* Label + optional subtitle stacked on the left */}
@@ -41,7 +41,7 @@ const StorageComparisonBar = ({
             <Text
               as="h6"
               fontFamily="spaceMono"
-              className={cn(metric.labelColor ?? "text-gray-90")}
+              className={cn(metric.labelColor ?? "text-gray-60")}
             >
               {metric.label}
             </Text>
@@ -49,7 +49,7 @@ const StorageComparisonBar = ({
               <Text
                 as="p"
                 fontFamily="spaceMono"
-                className="text-xs text-gray-75 leading-tight"
+                className="text-gray-75 leading-tight"
               >
                 {metric.subtitle}
               </Text>
@@ -60,7 +60,7 @@ const StorageComparisonBar = ({
           <Text
             as="h6"
             fontFamily="spaceMono"
-            className={cn("shrink-0", metric.valueColor)}
+            className={`shrink-0 ${metric.valueColor ? `text-${metric.valueColor}` : "text-gray-90"}`}
           >
             {metric.displayValue}
           </Text>

@@ -6,7 +6,7 @@ const AiInferenceHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="mt-4 max-w-3xl md:mt-6">
+        <Text as="h1" align="center" className="mt-4 max-w-6xl md:mt-6">
           Serve AI Models at
           <Text as="span" variant="h1" textColor="primary">
             Production Scale
@@ -14,8 +14,8 @@ const AiInferenceHeroSection = () => {
         </Text>
       }
       description={AI_INFERENCE_HERO.description}
-      button1Text={AI_INFERENCE_HERO.button1Text}
-      button2Text={AI_INFERENCE_HERO.button2Text}
+      primaryCta={AI_INFERENCE_HERO.primaryCta}
+      secondaryCta={AI_INFERENCE_HERO.secondaryCta}
       badgeText={AI_INFERENCE_HERO.badgeText}
       trustBadges={[...AI_INFERENCE_HERO.trustBadges]}
     />

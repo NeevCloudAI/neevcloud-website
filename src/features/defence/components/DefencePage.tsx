@@ -18,8 +18,8 @@ const DefencePage = () => {
       <FooterComponent
         title={DEFENCE_FOOTER.title}
         description={DEFENCE_FOOTER.description}
-        button1Text={DEFENCE_FOOTER.button1Text}
-        button2Text={DEFENCE_FOOTER.button2Text}
+        primaryCta={DEFENCE_FOOTER.primaryCta}
+        secondaryCta={DEFENCE_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

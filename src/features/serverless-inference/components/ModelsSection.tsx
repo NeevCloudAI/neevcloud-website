@@ -14,7 +14,7 @@ const ModelsSection = () => {
           as="h2"
           id="models-section-heading"
           align="center"
-          className="max-w-4xl"
+          className="max-w-xl"
         >
           20+ Models. One Endpoint.
           <Text as="span" variant="h2" textColor="primary">

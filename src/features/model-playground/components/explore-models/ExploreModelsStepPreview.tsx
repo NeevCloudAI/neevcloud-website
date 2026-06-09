@@ -378,7 +378,7 @@ function Step5Preview() {
       </Text>
 
       <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-5">
-        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-6">
+        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-7">
           # from playground to production · one line
         </Text>
         <pre>
@@ -386,7 +386,7 @@ function Step5Preview() {
             <Text
               fontFamily="spaceMono"
               textColor="red-50"
-              className="leading-6"
+              className="leading-7"
             >
               from
               <Text
@@ -416,7 +416,7 @@ function Step5Preview() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               client =
               <Text
@@ -434,7 +434,7 @@ function Step5Preview() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               {`base_url="`}
               <Text
@@ -452,7 +452,7 @@ function Step5Preview() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               {`response = client.chat.completion.`}
               <Text
@@ -470,7 +470,7 @@ function Step5Preview() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               &nbsp; {`model=`}
               <Text
@@ -488,7 +488,7 @@ function Step5Preview() {
             <Text
               fontFamily="spaceMono"
               textColor="white"
-              className="leading-6"
+              className="leading-7"
             >
               &nbsp; {`messages=[...] )`}
             </Text>

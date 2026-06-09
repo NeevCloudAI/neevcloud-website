@@ -27,9 +27,9 @@ const AboutUsHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{ABOUT_US_HERO.button1Text}</Button>
+          <Button spacing="lg">{ABOUT_US_HERO.primaryCta}</Button>
           <Button variant="outline" textColor="black" spacing="lg">
-            {ABOUT_US_HERO.button2Text}
+            {ABOUT_US_HERO.secondaryCta}
           </Button>
         </div>
 

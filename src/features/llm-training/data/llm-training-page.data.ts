@@ -2,8 +2,8 @@ export const LLM_TRAINING_HERO = {
   badgeText: "LLM Fine-Tuning",
   description:
     "Purpose-built GPU infrastructure for domain adaptation, instruction tuning, and RLHF. Bring your framework, we handle the rest.",
-  button1Text: "Start Fine-Tuning",
-  button2Text: "Browse GPU Configs",
+  primaryCta: "Start Fine-Tuning",
+  secondaryCta: "Browse GPU Configs",
   image: "/images/playground.png",
   trustBadges: [
     "H100 & A100 clusters",
@@ -18,6 +18,6 @@ export const LLM_TRAINING_FOOTER = {
   title: "Start Fine-Tuning on GPU Cloud",
   description:
     "H100 and A100 clusters for domain adaptation, instruction tuning, and RLHF. Framework agnostic, India-resident compute with per-second billing.",
-  button1Text: "Start Fine-Tuning",
-  button2Text: "Browse GPU Configs",
+  primaryCta: "Start Fine-Tuning",
+  secondaryCta: "Browse GPU Configs",
 } as const;

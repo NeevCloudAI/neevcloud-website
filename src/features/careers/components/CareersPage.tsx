@@ -15,8 +15,8 @@ const CareersPage = () => {
       <FooterComponent
         title={CAREERS_FOOTER.title}
         description={CAREERS_FOOTER.description}
-        button1Text={CAREERS_FOOTER.button1Text}
-        button2Text={CAREERS_FOOTER.button2Text}
+        primaryCta={CAREERS_FOOTER.primaryCta}
+        secondaryCta={CAREERS_FOOTER.secondaryCta}
       />
     </>
   );

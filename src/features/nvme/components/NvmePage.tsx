@@ -23,8 +23,8 @@ const NvmePage = () => {
       <FooterComponent
         title={NVME_FOOTER.title}
         description={NVME_FOOTER.description}
-        button1Text={NVME_FOOTER.button1Text}
-        button2Text={NVME_FOOTER.button2Text}
+        primaryCta={NVME_FOOTER.primaryCta}
+        secondaryCta={NVME_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

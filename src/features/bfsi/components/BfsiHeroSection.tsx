@@ -14,8 +14,8 @@ const BfsiHeroSection = () => {
         </Text>
       }
       description={BFSI_HERO.description}
-      button1Text={BFSI_HERO.button1Text}
-      button2Text={BFSI_HERO.button2Text}
+      primaryCta={BFSI_HERO.primaryCta}
+      secondaryCta={BFSI_HERO.secondaryCta}
       badgeText={BFSI_HERO.badgeText}
       image={BFSI_HERO.image}
       trustBadges={[...BFSI_HERO.trustBadges]}

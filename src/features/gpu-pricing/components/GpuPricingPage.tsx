@@ -8,6 +8,7 @@ import GpuCostCalculatorSection from "./GpuCostCalculatorSection";
 import GpuModelTransparentPricingSection from "./GpuModelTransparentPricingSection";
 import GpuStoragePricingSection from "./GpuStoragePricingSection";
 import GpuTransparentPricingSection from "./GpuTransparentPricingSection";
+import GpuDeploymentComparisonSection from "./GpuDeploymentComparisonSection";
 
 const GpuPricingPage = () => {
   return (
@@ -17,13 +18,14 @@ const GpuPricingPage = () => {
       <GpuModelTransparentPricingSection />
       <GpuStoragePricingSection />
       <GpuTransparentPricingSection />
+      <GpuDeploymentComparisonSection />
       <GpuCostCalculatorSection />
       <FaqSection items={GPU_PRICING_FAQ} />
       <FooterComponent
         title={GPU_PRICING_FOOTER.title}
         description={GPU_PRICING_FOOTER.description}
-        button1Text={GPU_PRICING_FOOTER.button1Text}
-        button2Text={GPU_PRICING_FOOTER.button2Text}
+        primaryCta={GPU_PRICING_FOOTER.primaryCta}
+        secondaryCta={GPU_PRICING_FOOTER.secondaryCta}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

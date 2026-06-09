@@ -1,9 +1,25 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
-import NeevCloudImage from "./NeevCloudImage";
 import CloudComparisonCard from "./CloudComparisonCard";
 import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
+import { Button } from "@/shared/ui-lib";
+
+const LEGACY_CLOUD_PROBLEMS = [
+  "Vendor Lock-In",
+  "Unpredictable Costs",
+  "Data Compliance Risks",
+  "Limited Data Sovereignty",
+  "Security Vulnerabilities",
+];
+
+const NEEVCLOUD_ADVANTAGES = [
+  "AI-native infrastructure",
+  "Multi-cloud portability",
+  "India-first data residency",
+  "Open-source compatible",
+  "AI-native Pay-as-you-grow pricing",
+];
 
 export default function NeevcloudSection() {
   return (
@@ -28,151 +44,135 @@ export default function NeevcloudSection() {
           up to make intelligence accessible to everyone.
         </Text>
       </div>
-      <div className="flex justify-center lg:flex-row flex-col w-full gap-5 mt-4 md:mt-12.5">
-        <div className="relative flex-1">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3  mt-4 md:mt-12.5">
+        {/* ── Left Panel — coded, data.png as bg ── */}
+        <div className="relative overflow-hidden flex flex-col justify-between p-5 pb-0 bg-white border border-gray-200">
+          {/* data.png as background */}
           <Image
-            src="/images/cloud-comparision.png"
-            alt="NeevCloud Section"
-            className="flex-1 w-full h-full object-cover rounded-md"
-            width={1000}
-            height={1000}
+            src="/images/data.png"
+            alt=""
+            fill
+            className="object-cover object-center"
           />
-          <div className="absolute top-3 md:top-5 left-[7%] md:left-[15%] flex flex-col items-center">
-            <Text as="h5" weight="semibold">
-              Legacy Cloud
-            </Text>
-            <Text as="small" align="center" className="mt-2.5">
-              High Cost. Low Flexibility.
-            </Text>
-            <Text as="small" align="center">
-              Hidden Limitations.
-            </Text>
-          </div>
 
-          <div className="absolute top-3 md:top-5 right-[7%] md:right-[5%] flex flex-col items-center">
-            <Text as="h5" weight="semibold" textColor="primary">
-              NeevCloud
-            </Text>
-            <Text as="small" align="center" className="hidden md:block mt-2.5">
-              High Performance. Transparent Pricing.
-            </Text>
-            <Text as="small" align="center" className="block md:hidden mt-2.5">
-              High Performance.
-            </Text>
-            <Text as="small" align="center" className="block md:hidden">
-              Transparent Pricing.
-            </Text>
-            <Text as="small" align="center">
-              Sovereign & Secure.
-            </Text>
-          </div>
+          {/* Content on top */}
+          <div className="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <Text as="h3" weight="semibold" className="mb-1">
+                Problems you face today
+              </Text>
+              <Text textColor="black-5" className="font-space-mono">
+                High Cost. Low Flexibility. Hidden Limitations.
+              </Text>
 
-          <div className="absolute bottom-5 left-[2%] flex flex-col gap-1 md:gap-4 items-start">
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
-                aria-hidden
-              />
-              <Text as="small">Vendor Lock-in</Text>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
-                aria-hidden
-              />
-              <Text as="small">Hidden Fees</Text>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
-                aria-hidden
-              />
-              <Text as="small">Complexity</Text>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-black rounded-full"
-                aria-hidden
-              />
-              <Text as="small">Data Risks</Text>
-            </div>
-          </div>
+              <Text
+                as="h5"
+                className="font-space-mono mt-6 mb-3.5"
+              >
+                Legacy Cloud
+              </Text>
+              <div className="w-36 h-1 bg-red-400 mb-4" />
 
-          <div className="absolute bottom-5 right-[2%] flex flex-col gap-1 md:gap-4 items-end">
-            <div className="flex items-center gap-2">
-              <Text as="small" textColor="primary">
-                Freedom
-              </Text>
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
-                aria-hidden
-              />
+              <div className="flex flex-col gap-2 ml-5 mr-10.5">
+                {LEGACY_CLOUD_PROBLEMS.map((problem) => (
+                  <div
+                    key={problem}
+                    className="border border-gray-200 rounded-md px-5 py-2 bg-[#F7F7F7]"
+                  >
+                    <Text className="font-space-mono">
+                      {problem}
+                    </Text>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <Text as="small" textColor="primary">
-                Transparency
+
+            {/* Footer bar */}
+            <div className="bg-[#FFDBDA] py-3 text-center -mx-6">
+              <Text as="h6" className="font-space-mono text-[#FE4D47]">
+             
+                  Expensive · Opaque · Risky
               </Text>
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
-                aria-hidden
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <Text as="small" textColor="primary">
-                High Performance
-              </Text>
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
-                aria-hidden
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <Text as="small" textColor="primary">
-                Security
-              </Text>
-              <div
-                className="w-4 md:w-6 h-4 md:h-6 bg-primary rounded-full"
-                aria-hidden
-              />
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-between gap-5">
-          {CLOUD_COMPARISON_CARDS.map((item) => (
-            <CloudComparisonCard key={item.id} item={item} />
-          ))}
+        {/* ── Right Panel (spans 2 cols) — browser chrome + advantage list + computer image ── */}
+        <div className="lg:col-span-2 border border-gray-200 flex flex-col">
+          {/* Browser chrome bar */}
+          <div className="flex items-center gap-2 py-4 px-5.5 border-b border-gray-200">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-400" />
+              <div className="w-3 h-3 rounded-full bg-yellow-400" />
+              <div className="w-3 h-3 rounded-full bg-green-400" />
+            </div>
+            <Text as="small">neevcloud.com</Text>
+          </div>
+
+          {/* Inner content: advantage list left, computer image right */}
+          <div className="flex flex-1">
+            {/* Advantage list */}
+            <div className="flex flex-col justify-between p-8 flex-1">
+              <div>
+                <Text as="h3" weight="semibold">
+                  The NeevCloud Advantage
+                </Text>
+                <div className="w-36 h-1 bg-primary mt-3.5 mb-4" />
+                <div className="flex flex-col gap-1.5">
+                  {NEEVCLOUD_ADVANTAGES.map((advantage) => (
+                    <div
+                      key={advantage}
+                      className="border border-gray-200 rounded-md px-5 py-2 bg-gray-50"
+                    >
+                      <Text className="font-space-mono">{advantage}</Text>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-6 flex flex-col gap-3">
+                <div className="flex gap-3">
+                  <Button
+                    className="flex-1 bg-primary rounded-md py-2 px-5.5 text-sm font-medium"
+                    textColor="black"
+                  >
+                    Play with a Demo
+                  </Button>
+                  <Button className="flex-1 bg-black text-white rounded-md py-2 text-sm font-medium">
+                    Get Started
+                  </Button>
+                </div>
+                <Text textColor="black">AI Agent building your app...</Text>
+              </div>
+            </div>
+
+            {/* Computer image with logo badge — right side */}
+            <div className="relative flex-1 hidden md:block">
+              <Image
+                src="/images/computer.png"
+                alt="NeevCloud Dashboard"
+                fill
+                className="object-center"
+                
+              />
+              <div className="absolute top-4 right-4 flex items-center bg-white rounded-xl shadow-md px-4 py-2.5 z-10">
+                <Image
+                  src="/icons/logo-black.svg"
+                  alt="NeevCloud"
+                  width={120}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="relative bg-primary-10 w-full rounded-md p-4 md:p-8 flex items-center gap-2 md:gap-8 mt-4 md:mt-12.5">
-        <div className="bg-white w-fit py-2.5 px-3.5 md:py-5 md:px-6.5 rounded-full border border-primary">
-          <Image
-            src="/icons/india-map.svg"
-            alt="India Map"
-            width={70}
-            height={70}
-          />
-        </div>
-        <div>
-          <div className="flex items-center gap-1.75">
-            <Text as="h3" weight="semibold" className="text-[30px]">
-              India&apos;s First
-              <Text
-                as="span"
-                weight="semibold"
-                textColor="primary"
-                className="text-[30px] mx-1.5"
-              >
-                AI Supercloud
-              </Text>
-            </Text>
-          </div>
-          <Text as="h6" textColor="black-5" className="mt-2.5">
-            Built to Make Intelligence Accessible to Everyone.
-          </Text>
-        </div>
-        <div className="absolute bottom-0 right-0">
-          <NeevCloudImage />
-        </div>
+
+      {/* ── Bottom 3 Comparison Cards ── */}
+      <div className="grid grid-cols-1 md:grid-cols-3 w-full">
+        {CLOUD_COMPARISON_CARDS.map((item) => (
+          <CloudComparisonCard key={item.id} item={item} />
+        ))}
       </div>
     </Container>
   );

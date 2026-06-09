@@ -1,4 +1,5 @@
 import type { GpuWhyChooseNeevcloudSectionContent } from "@/shared/types/gpu-why-choose-neevcloud-section.types";
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 
 export const GPU_WHY_CHOOSE_NEEVCLOUD_SECTION: GpuWhyChooseNeevcloudSectionContent =
   {
@@ -73,5 +74,7 @@ export const GPU_WHY_CHOOSE_NEEVCLOUD_SECTION: GpuWhyChooseNeevcloudSectionConte
         },
       ],
     },
-    buttonText: "Reserve Now",
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
   };

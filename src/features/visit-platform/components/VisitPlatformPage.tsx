@@ -23,10 +23,7 @@ const VisitPlatformPage = () => {
         className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
-        title={MODEL_PLAYGROUND_FOOTER.title}
-        description={MODEL_PLAYGROUND_FOOTER.description}
-        primaryCta={MODEL_PLAYGROUND_FOOTER.primaryCta}
-        secondaryCta={MODEL_PLAYGROUND_FOOTER.secondaryCta}
+        {...MODEL_PLAYGROUND_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

@@ -1,11 +1,16 @@
 import { cn } from "@/lib/utils";
-import { Button, Text } from "../ui-lib";
+import { Text } from "../ui-lib";
+import LinkComponent from "../ui-lib/link";
 
 interface FooterCardProps {
   title: string;
   description: string;
   primaryCta: string;
+  primaryCtaRoute?: string;
+  primaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
   secondaryCta?: string;
+  secondaryCtaRoute?: string;
+  secondaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
   className?: string;
 }
 
@@ -13,7 +18,11 @@ const FooterCard = ({
   title,
   description,
   primaryCta,
+  primaryCtaRoute,
+  primaryCtaTarget,
   secondaryCta,
+  secondaryCtaRoute,
+  secondaryCtaTarget,
   className,
 }: FooterCardProps) => {
   return (
@@ -30,18 +39,23 @@ const FooterCard = ({
         {description}
       </Text>
       <div className="mt-2 md:mt-7.5 flex gap-4 z-1">
-        <Button
+        <LinkComponent
+          href={primaryCtaRoute ?? ""}
+          target={primaryCtaTarget}
           variant="outline-primary"
-          textColor="black"
-          spacing="md"
-          weight="semibold"
+          spacing="lg"
         >
           {primaryCta}
-        </Button>
+        </LinkComponent>
         {secondaryCta && (
-          <Button variant={"black"} spacing="md">
+          <LinkComponent
+            href={secondaryCtaRoute ?? ""}
+            target={secondaryCtaTarget}
+            variant="black"
+            spacing="lg"
+          >
             {secondaryCta}
-          </Button>
+          </LinkComponent>
         )}
       </div>
       <div className="absolute w-[50%] h-full top-10 right-[-5%] bg-[url('/icons/logo-large.svg')] bg-cover bg-center bg-no-repeat opacity-50"></div>

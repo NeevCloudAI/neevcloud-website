@@ -1,3 +1,4 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import type { AvailableModelCategory } from "../types/available-models-section.types";
 
 export const AVAILABLE_MODEL_CATEGORIES: readonly AvailableModelCategory[] = [
@@ -27,7 +28,8 @@ export const AVAILABLE_MODEL_CATEGORIES: readonly AvailableModelCategory[] = [
         { id: 4, title: "Translation across languages" },
       ],
       ctaLabel: "Explore Language Models",
-      ctaHref: "/model-catalog",
+      ctaHref: EXTERNAL_LINKS.templates,
+      ctaTarget: "_blank",
     },
   },
   {
@@ -53,7 +55,8 @@ export const AVAILABLE_MODEL_CATEGORIES: readonly AvailableModelCategory[] = [
         { id: 4, title: "Visual search and similarity matching" },
       ],
       ctaLabel: "Explore Vision Models",
-      ctaHref: "/model-catalog",
+      ctaHref: EXTERNAL_LINKS.templates,
+      ctaTarget: "_blank",
     },
   },
   {
@@ -79,7 +82,8 @@ export const AVAILABLE_MODEL_CATEGORIES: readonly AvailableModelCategory[] = [
         { id: 4, title: "Multilingual speech translation" },
       ],
       ctaLabel: "Explore Audio Models",
-      ctaHref: "/model-catalog",
+      ctaHref: EXTERNAL_LINKS.templates,
+      ctaTarget: "_blank",
     },
   },
   {
@@ -105,7 +109,8 @@ export const AVAILABLE_MODEL_CATEGORIES: readonly AvailableModelCategory[] = [
         { id: 4, title: "Domain-specific Q&A systems" },
       ],
       ctaLabel: "Explore Specialized Models",
-      ctaHref: "/model-catalog",
+      ctaHref: EXTERNAL_LINKS.templates,
+      ctaTarget: "_blank",
     },
   },
 ] as const;

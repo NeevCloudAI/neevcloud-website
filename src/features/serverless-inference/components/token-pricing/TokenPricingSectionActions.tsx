@@ -1,12 +1,22 @@
-import { Button } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const TokenPricingSectionActions = () => {
   return (
     <div className="flex gap-4 flex-col md:flex-row items-center justify-center mt-8 md:mt-25">
-      <Button weight="semibold">View Complete Pricing</Button>
-      <Button variant="white" textColor="black" weight="semibold">
+      <LinkComponent
+        href={EXTERNAL_LINKS.aiInferenceDedicatedModel}
+        target="_blank"
+      >
+        View Complete Pricing
+      </LinkComponent>
+      <LinkComponent
+        href="/contact-neevcloud"
+        variant="white"
+        textColor="black"
+      >
         Contact for Custom Plans
-      </Button>
+      </LinkComponent>
     </div>
   );
 };

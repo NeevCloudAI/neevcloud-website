@@ -1,10 +1,13 @@
 import type { AmbitionDetailItem } from "@/shared/components/ambition-detail-card";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 export type ExperienceCtaCard = {
   id: string;
   title: string;
   description: string;
-  buttonText: string;
+  primaryCtaLabel: string;
+  primaryCtaRoute: string;
+  primaryCtaTarget: "_blank" | "_self" | "_parent" | "_top";
 };
 
 export const EXPERIENCE_SECTION = {
@@ -18,7 +21,8 @@ export const EXPERIENCE_CTA_SECTION = {
   titlePrefix: "Three Ways to",
   titleHighlight: "Experience",
   footerText: "Not sure where to start?",
-  footerButtonText: "Book a Guided Session",
+  footerButtonLabel: "Book a Guided Session",
+  footerButtonRoute: "/contact-neevcloud",
 } as const;
 
 export const EXPERIENCE_CTA_CARDS: readonly ExperienceCtaCard[] = [
@@ -26,19 +30,25 @@ export const EXPERIENCE_CTA_CARDS: readonly ExperienceCtaCard[] = [
     id: "try-ai",
     title: "TRY AI",
     description: "Test models in browser",
-    buttonText: "Launch Playground",
+    primaryCtaLabel: "Launch Playground",
+    primaryCtaRoute: EXTERNAL_LINKS.aiInferencePlayground,
+    primaryCtaTarget: "_blank",
   },
   {
     id: "build-ai",
     title: "BUILD AI",
     description: "Run guided workloads",
-    buttonText: "Start Building",
+    primaryCtaLabel: "Start Building",
+    primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+    primaryCtaTarget: "_blank",
   },
   {
     id: "see-ai",
     title: "SEE AI",
     description: "Explore use cases",
-    buttonText: "View Examples",
+    primaryCtaLabel: "View Examples",
+    primaryCtaRoute: EXTERNAL_LINKS.tutorials,
+    primaryCtaTarget: "_blank",
   },
 ] as const;
 

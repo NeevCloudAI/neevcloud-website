@@ -238,7 +238,7 @@ body {
     font-variation-settings: normal;
   }
   html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
   }
   body {
     background-color: var(--background);

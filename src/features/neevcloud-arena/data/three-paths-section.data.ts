@@ -1,3 +1,4 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import type {
   PathsStep,
   PathsStepPanel,
@@ -13,7 +14,9 @@ export const PATHS_STEPS: PathsStep[] = [
       "Test state-of-the-art AI models without writing code or setting up infrastructure. Compare outputs, adjust parameters, and understand capabilities using your own prompts and data.",
     learnText:
       "Which models fit your use case and performance requirements, with real results, not synthetic benchmarks.",
-    buttonText: "Launch Playground",
+    primaryCtaLabel: "Launch Playground",
+    primaryCtaRoute: EXTERNAL_LINKS.aiInferencePlayground,
+    primaryCtaTarget: "_blank",
   },
   {
     number: "02",
@@ -24,7 +27,9 @@ export const PATHS_STEPS: PathsStep[] = [
       "Run real training and inference workloads on production GPU infrastructure with step-by-step guidance. See exactly what production deployment looks like — costs, latency, and utilization all visible in real time.",
     learnText:
       "How your workloads perform on NeevCloud infrastructure and what production deployment looks like at scale.",
-    buttonText: "Start Building",
+    primaryCtaLabel: "Start Building",
+    primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+    primaryCtaTarget: "_blank",
   },
   {
     number: "03",
@@ -35,7 +40,9 @@ export const PATHS_STEPS: PathsStep[] = [
       "Explore how teams across industries use NeevCloud infrastructure for production AI applications. See patterns, architectures, and infrastructure choices that work at scale, not hypotheticals.",
     learnText:
       "Patterns, architectures, and infrastructure choices for production AI systems across real industries.",
-    buttonText: "Explore Use Cases",
+    primaryCtaLabel: "Explore Use Cases",
+    primaryCtaRoute: EXTERNAL_LINKS.tutorials,
+    primaryCtaTarget: "_blank",
   },
 ];
 

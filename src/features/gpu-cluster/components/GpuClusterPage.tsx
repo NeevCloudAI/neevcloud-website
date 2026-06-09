@@ -1,5 +1,5 @@
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { GPU_CLUSTER_FAQ_ITEMS } from "../data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import GpuClusterHeroSection from "./GpuClusterHeroSection";
 import PricingSection from "./PricingSection";
@@ -14,12 +14,9 @@ const GpuClusterPage = () => {
       <PricingSection />
       <ComputeSection />
       <UseCasesSection />
-      <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
+      <FaqSection items={GPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent
-        title={GPU_CLUSTER_FOOTER.title}
-        description={GPU_CLUSTER_FOOTER.description}
-        primaryCta={GPU_CLUSTER_FOOTER.primaryCta}
-        secondaryCta={GPU_CLUSTER_FOOTER.secondaryCta}
+        {...GPU_CLUSTER_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

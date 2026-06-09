@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, Menu } from "@/shared/icons/lucide-icon-map";
 import { Button } from "@/shared/ui-lib";
+import { buttonVariants } from "@/shared/ui-lib/button/button-variants";
 import { cn } from "@/lib/utils";
 import type { HeaderNavId } from "./nav-items";
 import { NAV_ITEMS } from "./nav-items";
@@ -16,15 +18,18 @@ const megaMenuPanelClassName = cn(
   "absolute left-1/2 top-full z-100",
   "w-full max-w-[min(1200px,calc(100vw-2rem))]",
   "-translate-x-1/2",
-  "rounded-b-md bg-white shadow-md",
+  "rounded-b-md bg-white shadow-md"
 );
+
+const navLinkUnderlineClassName =
+  "relative flex h-20 items-center after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100";
 
 export default function HeaderMenu({ children }: HeaderMenuProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileExpandedNavId, setMobileExpandedNavId] =
     useState<HeaderNavId | null>(null);
   const [desktopOpenNavId, setDesktopOpenNavId] = useState<HeaderNavId | null>(
-    null,
+    null
   );
 
   return (
@@ -37,6 +42,28 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
             aria-label="Primary"
           >
             {NAV_ITEMS.map((navItem) => {
+              if (navItem.href) {
+                return (
+                  <div
+                    key={navItem.label}
+                    className={cn("group", navItem.desktopVisibilityClass)}
+                  >
+                    <div className={navLinkUnderlineClassName}>
+                      <Link
+                        href={navItem.href}
+                        className={buttonVariants({
+                          variant: "ghost",
+                          textColor: "black",
+                          spacing: "none",
+                        })}
+                      >
+                        {navItem.label}
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+
               const MegaMenu = getMegaMenu(navItem.id);
               const isDesktopOpen = desktopOpenNavId === navItem.id;
 
@@ -49,7 +76,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }}
                   onMouseLeave={() => {
                     setDesktopOpenNavId((current) =>
-                      current === navItem.id ? null : current,
+                      current === navItem.id ? null : current
                     );
                   }}
                   onFocusCapture={() => {
@@ -58,16 +85,16 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   onBlurCapture={(event) => {
                     if (
                       !event.currentTarget.contains(
-                        event.relatedTarget as Node | null,
+                        event.relatedTarget as Node | null
                       )
                     ) {
                       setDesktopOpenNavId((current) =>
-                        current === navItem.id ? null : current,
+                        current === navItem.id ? null : current
                       );
                     }
                   }}
                 >
-                  <div className="relative flex h-20 items-center after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100">
+                  <div className={navLinkUnderlineClassName}>
                     <Button variant="ghost" textColor="black" spacing="none">
                       {navItem.label}
                     </Button>
@@ -127,6 +154,26 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
             </Button>
           </div>
           {NAV_ITEMS.map((navItem) => {
+            if (navItem.href) {
+              return (
+                <div
+                  key={navItem.label}
+                  className={`overflow-hidden rounded-md border border-gray-200 ${navItem.menuVisibilityClass}`}
+                >
+                  <Link
+                    href={navItem.href}
+                    className="flex w-full items-center px-3 py-2.5 text-left text-sm text-black-80"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setMobileExpandedNavId(null);
+                    }}
+                  >
+                    {navItem.label}
+                  </Link>
+                </div>
+              );
+            }
+
             const MobileMegaMenu = getMegaMenu(navItem.id);
             const hasMegaMenu = MobileMegaMenu !== undefined;
             const isExpanded =
@@ -146,12 +193,12 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }
                   className={cn(
                     "flex w-full items-center justify-between px-3 py-2.5 text-left text-sm",
-                    hasMegaMenu ? "gap-2 font-medium text-black-80" : undefined,
+                    hasMegaMenu ? "gap-2 font-medium text-black-80" : undefined
                   )}
                   onClick={() => {
                     if (!hasMegaMenu) return;
                     setMobileExpandedNavId((prev) =>
-                      prev === navItem.id ? null : navItem.id,
+                      prev === navItem.id ? null : navItem.id
                     );
                   }}
                 >
@@ -161,7 +208,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                       size={18}
                       className={cn(
                         "shrink-0 text-gray-75 transition-transform duration-200",
-                        isExpanded && "rotate-180",
+                        isExpanded && "rotate-180"
                       )}
                       aria-hidden
                     />

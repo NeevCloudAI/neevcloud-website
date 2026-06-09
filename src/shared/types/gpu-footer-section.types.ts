@@ -4,4 +4,7 @@ export type GpuFooterSectionContent = {
   titleHighlight: string;
   titleSuffix: string;
   description: string;
+  buttonCta: string;
+  buttonLink: string;
+  buttonTarget?: string;
 };

@@ -1,9 +1,12 @@
-import { Button } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const CpuWorkloadSectionActions = () => {
   return (
     <div className="flex gap-4 flex-col md:flex-row items-center justify-center mt-8 md:mt-25">
-      <Button weight="semibold">Deploy Instance</Button>
+      <LinkComponent href={EXTERNAL_LINKS.signup} target="_blank">
+        Deploy Instance
+      </LinkComponent>
     </div>
   );
 };

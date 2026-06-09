@@ -5,6 +5,7 @@ import {
   formatCurrency,
   formatRatePerHour,
 } from "../../utils/gpu-cost-calculator-utils";
+import LinkComponent from "@/shared/ui-lib/link";
 
 type GpuCostCalculatorSummaryPanelProps = {
   breakdown: GpuCostCalculatorBreakdown;
@@ -94,12 +95,20 @@ const GpuCostCalculatorSummaryPanel = ({
       </ul>
 
       <div className="mt-auto flex flex-col gap-3 pt-6">
-        <Button className="w-full">
+        <LinkComponent
+          href={GPU_COST_CALCULATOR_SECTION.deployCtaRoute}
+          target="_blank"
+          className="w-full"
+        >
           {GPU_COST_CALCULATOR_SECTION.deployCta}
-        </Button>
-        <Button variant="outline" textColor="black" className="w-full">
+        </LinkComponent>
+        <LinkComponent
+          href="/contact-neevcloud"
+          variant="outline"
+          className="w-full"
+        >
           {GPU_COST_CALCULATOR_SECTION.contactCta}
-        </Button>
+        </LinkComponent>
       </div>
     </div>
   );

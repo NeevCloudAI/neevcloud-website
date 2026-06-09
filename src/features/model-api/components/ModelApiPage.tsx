@@ -1,5 +1,5 @@
 import FaqSection from "@/shared/components/faq/faq-section";
-import { CPU_CLUSTER_FAQ_ITEMS } from "@/shared/data/faq-section-data";
+import { API_GENERAL_FAQ_ITEMS } from "../data/faq-section-data";
 import FooterComponent from "@/shared/components/footer";
 import ModelApiHeroSection from "./ModelApiHeroSection";
 import IntelligenceSection from "./IntelligenceSection";
@@ -15,14 +15,11 @@ const ModelApiPage = () => {
       <ExploreApiSection />
       <PaySection />
       <FaqSection
-        items={CPU_CLUSTER_FAQ_ITEMS}
+        items={API_GENERAL_FAQ_ITEMS}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
-        title={MODEL_API_FOOTER.title}
-        description={MODEL_API_FOOTER.description}
-        primaryCta={MODEL_API_FOOTER.primaryCta}
-        secondaryCta={MODEL_API_FOOTER.secondaryCta}
+        {...MODEL_API_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

@@ -1,7 +1,9 @@
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import { CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS } from "../constants/transparent-pricing-section.constants";
 import type { CpuTransparentPricingTableRowProps } from "../types/transparent-pricing-section.types";
 import { ArrowRight } from "@/shared/icons/lucide-icon-map";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const CpuTransparentPricingTableRow = ({
   row,
@@ -34,18 +36,15 @@ const CpuTransparentPricingTableRow = ({
         <Text as="h6" fontFamily="spaceMono" textColor="white">
           {row.bestFor}
         </Text>
-        <Button
+        <LinkComponent
+          href={EXTERNAL_LINKS.signup}
+          target="_blank"
           size="xs"
-          variant="ghost"
-          backgroundColor="transparent"
-          textColor="primary"
-          spacing="none"
-          borderRadius="xs"
           className="border border-primary-70 font-space-mono flex items-center gap-3.5 rounded-md text-white px-3 py-1 bg-primary-150 opacity-0 transition-opacity duration-150 group-hover:opacity-100"
         >
           Deploy
           <ArrowRight size={18} className="text-primary" />
-        </Button>
+        </LinkComponent>
       </td>
     </tr>
   );

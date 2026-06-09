@@ -48,7 +48,7 @@ const GpuCostCalculatorClient = () => {
         hoursPerMonth,
         commitmentId,
       }),
-    [gpuTypeId, hoursPerMonth, commitmentId]
+    [gpuTypeId, hoursPerMonth, commitmentId],
   );
 
   const handleGpuTypeSelect = useCallback((id: GpuCostCalculatorGpuTypeId) => {
@@ -66,7 +66,7 @@ const GpuCostCalculatorClient = () => {
       setCommitmentId(id);
       setActivePresetId(null);
     },
-    []
+    [],
   );
 
   const handlePresetSelect = useCallback(
@@ -81,7 +81,7 @@ const GpuCostCalculatorClient = () => {
       setCommitmentId(config.commitmentId);
       setActivePresetId(config.presetId);
     },
-    []
+    [],
   );
 
   return (
@@ -182,7 +182,7 @@ const GpuCostCalculatorClient = () => {
                         "rounded-lg border px-3 py-2.5 text-left transition-colors",
                         isSelected
                           ? "border-primary bg-primary text-white"
-                          : "border-gray-60 bg-white hover:border-primary-50"
+                          : "border-gray-60 bg-white hover:border-primary-50",
                       )}
                     >
                       <Text

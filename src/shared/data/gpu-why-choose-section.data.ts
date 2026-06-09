@@ -1,4 +1,5 @@
 import type { GpuWhyChooseSectionContent } from "@/shared/types/gpu-why-choose-section.types";
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 
 export const NVIDIA_A100_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
   titlePrefix: "Why Choose",
@@ -38,7 +39,9 @@ export const NVIDIA_A100_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
         "Seamlessly manage massive datasets and complex tasks with the A100's substantial memory capacity.",
     },
   ],
-  buttonText: "Reserve Now",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
   imageSrc: "/images/nvidia-a100-gpu.png",
   imageAlt: "NVIDIA A100 GPU module",
 };
@@ -92,7 +95,9 @@ export const NVIDIA_A30_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
       description: "with 900 GB/s bidirectional bandwidth.",
     },
   ],
-  buttonText: "Reserve Now",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
   imageSrc: "/images/nvidia-a30-gpu.png",
   imageAlt: "NVIDIA A30 GPU",
 };
@@ -128,7 +133,9 @@ export const NVIDIA_B200_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
       description: "Advanced NVLink interface for seamless host connectivity",
     },
   ],
-  buttonText: "Reserve Now",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
   imageSrc: "/images/nvidia-b200-gpu.png",
   imageAlt: "NVIDIA DGX B200 GPU",
 };
@@ -182,7 +189,9 @@ export const NVIDIA_H100_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
         "Multi-Instance GPU (MIG) partitioning for improved resource utilization",
     },
   ],
-  buttonText: "Reserve Now",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
   imageSrc: "/images/nvidia-h100-gpu.png",
   imageAlt: "NVIDIA H100 GPU",
 };
@@ -224,7 +233,9 @@ export const NVIDIA_B300_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
         "Advanced NVLink and high-speed networking ensure efficient data transfer and storage for large-scale AI applications.",
     },
   ],
-  buttonText: "Reserve Now",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
   imageSrc: "/images/nvidia-b200-gpu.png",
   imageAlt: "NVIDIA B300 GPU",
 };

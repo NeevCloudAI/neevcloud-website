@@ -19,12 +19,7 @@ const ManagedKubernetesHeroSection = () => {
           {`, So You Don't Have To Be.`}
         </Text>
       }
-      description={MANAGED_KUBERNETES_HERO.description}
-      primaryCta={MANAGED_KUBERNETES_HERO.primaryCta}
-      secondaryCta={MANAGED_KUBERNETES_HERO.secondaryCta}
-      badgeText={MANAGED_KUBERNETES_HERO.badgeText}
-      image={MANAGED_KUBERNETES_HERO.image}
-      trustBadges={[...MANAGED_KUBERNETES_HERO.trustBadges]}
+      {...MANAGED_KUBERNETES_HERO}
     />
   );
 };

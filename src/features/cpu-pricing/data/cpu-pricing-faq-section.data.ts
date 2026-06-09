@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const CPU_PRICING_FAQ: readonly FaqItem[] = [
+export const CPU_PRICING_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Getting Started",
-    question: "How do I deploy agent workflows on NeevCloud?",
+    category: "Networking",
+    question: "Is KYC required to use NeevCloud?",
     answer:
-      "Package agent components as Docker containers and deploy to GPU clusters via Managed Kubernetes (NKS). Pre-built templates available for common orchestration patterns like LangChain, AutoGen, and custom multi-agent setups.",
+      "Blender, Maya, Houdini, Cinema 4D, Unreal Engine, and any renderer that runs on Linux. Bring your own licenses or use open-source tools.",
   },
   {
     id: 2,
     category: "Getting Started",
-    question: "Can agents call hosted models as tools?",
+    question: "What operating systems are available?",
     answer:
-      "Yes. OpenAI-compatible API endpoints with function calling, streaming responses, and low-latency inference let agents use multiple models within a single workflow loop.",
+      "High-bandwidth network transfers with rsync, cloud storage sync (S3-compatible), or direct uploads. NVMe storage handles large asset libraries efficiently.",
   },
   {
     id: 3,
-    category: "Scaling",
-    question: "How does Kubernetes help manage agent fleets?",
+    category: "Getting Started",
+    question: "Can I attach multiple storage volumes?",
     answer:
-      "NKS provides auto-scaling agent pods, service discovery, rolling updates, and standard K8s tooling to deploy and manage hundreds of agents without custom infrastructure.",
+      "Yes. Spot instances offer up to 60% savings for batch renders. Jobs checkpoint automatically and resume on new instances if preempted.",
   },
   {
     id: 4,
-    category: "Scaling",
-    question: "What types of agent workloads are supported?",
+    category: "Billing",
+    question: "How does networking work with GPU instances?",
     answer:
-      "Research and analysis, workflow automation, code generation, customer support, data processing, and planning agents. Long-running multi-step pipelines with observability-ready infrastructure.",
+      "GPUs excel at parallel processing, making them 5–10× faster for path tracing and real-time rendering. CPUs handle general tasks and can be cost-effective for simpler scenes.",
   },
   {
     id: 5,
-    category: "Networking",
-    question: "Where does agent compute run?",
+    category: "Scaling",
+    question: "Can NeevCloud access my stored data?",
     answer:
-      "All agent workloads run on India-resident GPU clusters with container-native isolation, API-accessible inference, and zero egress between components within the same region.",
+      "Per-second billing for GPU instances. Only charged while rendering—no cost for idle time. Storage billed monthly per GB.",
   },
 ];

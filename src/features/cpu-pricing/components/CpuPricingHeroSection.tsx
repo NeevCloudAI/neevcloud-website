@@ -13,11 +13,7 @@ const CpuPricingHeroSection = () => {
           </Text>
         </Text>
       }
-      description={CPU_PRICING_HERO.description}
-      primaryCta={CPU_PRICING_HERO.primaryCta}
-      secondaryCta={CPU_PRICING_HERO.secondaryCta}
-      badgeText={CPU_PRICING_HERO.badgeText}
-      trustBadges={[...CPU_PRICING_HERO.trustBadges]}
+      {...CPU_PRICING_HERO}
     />
   );
 };

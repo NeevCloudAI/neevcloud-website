@@ -14,12 +14,7 @@ const ModelCatalogPage = () => {
       <RightModelSection />
       <ModelInformationSection />
       <UseModelSection />
-      <FooterComponent
-        title={MODEL_CATALOG_FOOTER.title}
-        description={MODEL_CATALOG_FOOTER.description}
-        primaryCta={MODEL_CATALOG_FOOTER.primaryCta}
-        secondaryCta={MODEL_CATALOG_FOOTER.secondaryCta}
-      />
+      <FooterComponent {...MODEL_CATALOG_FOOTER} />
     </>
   );
 };

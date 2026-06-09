@@ -12,12 +12,7 @@ const CareersPage = () => {
       <OpenPositionsSection />
       <CultureSection />
       <EmployeeStoriesSection />
-      <FooterComponent
-        title={CAREERS_FOOTER.title}
-        description={CAREERS_FOOTER.description}
-        primaryCta={CAREERS_FOOTER.primaryCta}
-        secondaryCta={CAREERS_FOOTER.secondaryCta}
-      />
+      <FooterComponent {...CAREERS_FOOTER} />
     </>
   );
 };

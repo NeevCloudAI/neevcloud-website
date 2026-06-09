@@ -1,4 +1,5 @@
 import Container from "@/shared/components/container";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { Divider, Text } from "@/shared/ui-lib";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
@@ -18,7 +19,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Architect of scalable AI systems, Vijayakumar leads the design and evolution of NeevCloud’s AI platforms. He bridges deep engineering with product vision to turn complex ideas into production-ready reality.",
     image: "/images/vijayakumar-arumuga-nadar.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.vijayakumarArumugaNadarLinkedin,
   },
   {
     name: "Radheshyam Dhakad",
@@ -26,7 +27,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Driving NeevCloud’s core technology strategy, Radheshyam builds resilient, future-ready infrastructure at scale. His leadership ensures performance, reliability, and innovation remain uncompromised.",
     image: "/images/radheshyam-dhakad.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.radheshyamDhakadLinkedin,
   },
   {
     name: "Priyal Kothari",
@@ -34,7 +35,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Leading operational excellence across NeevCloud, Priyal streamlines cross-functional workflows and builds systems that enhance efficiency at scale. Her leadership ensures teams operate with agility, alignment, and consistent performance across the organization.",
     image: "/images/priyal-kothari.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.priyalKothariLinkedin,
   },
   {
     name: "Noel Varghese",
@@ -42,7 +43,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Strengthening trust and resilience, Noel secures NeevCloud’s platforms against evolving digital threats. He ensures every system meets the highest standards of security, compliance, and risk governance.",
     image: "/images/noel-varghese.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.noelVargheseLinkedin,
   },
   {
     name: "Dinesh Maheshwari",
@@ -50,7 +51,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "The steward of financial discipline, Dinesh ensures operational efficiency through precision and transparency. His oversight enables sustainable growth across the NeevCloud ecosystem.",
     image: "/images/dinesh-maheshwari.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.dineshMaheshwariLinkedin,
   },
   {
     name: "Shashwat Jain",
@@ -58,7 +59,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Shashwat anchors NeevCloud's growth with strong legal governance and regulatory clarity. He safeguards the company's interests while enabling confident, compliant expansion.",
     image: "/images/shashwat-jain.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.shashwatJainLinkedin,
   },
   {
     name: "Shamsher Ansari",
@@ -66,7 +67,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Driving the technical product vision at NeevCloud, Shamsher architects high-performance cloud platforms built for scale and complexity. He brings together deep engineering expertise and strategic clarity to transform infrastructure into powerful, production ready systems for next-generation AI workloads.",
     image: "/images/shamsher-ansari.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.shamsherAnsariLinkedin,
   },
   {
     name: "Alok Pratap Singh",
@@ -74,7 +75,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Focused on delivering seamless product experiences, Alok translates complex technical requirements into intuitive, scalable solutions. He plays a key role in shaping NeevCloud’s offerings to meet evolving customer and infrastructure demands.",
     image: "/images/alok-pratap-singh.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.alokPratapSinghLinkedin,
   },
   {
     name: "Rashmeet Kaur Bedi",
@@ -82,7 +83,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Shaping NeevCloud’s voice and presence, Rashmeet translates technology into compelling brand narratives. She drives positioning, storytelling, and consistency across every touchpoint.",
     image: "/images/rashmeet-kaur-bedi.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.rashmeetKaurBediLinkedin,
   },
   {
     name: "Sahil Ansari",
@@ -90,7 +91,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "At the frontlines of growth, Sahil connects customer needs with the right cloud and AI solutions. He leads with insight, agility, and a results-driven mindset.",
     image: "/images/sahil-ansari.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.sahilAnsariLinkedin,
   },
   {
     name: "Mohit Mehroliya",
@@ -98,7 +99,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Champion of people and culture, Mohit builds teams that scale with ambition. He aligns talent strategy with NeevCloud’s fast-growing, innovation-driven environment.",
     image: "/images/mohit-mehroliya.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.mohitMehroliyaLinkedin,
   },
   {
     name: "Kushal Kothari",
@@ -106,7 +107,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
     description:
       "Kushal ensures ZATA’s initiatives move from vision to execution seamlessly. He drives cross-functional alignment to deliver projects on time, at scale, and with precision.",
     image: "/images/kushal-kothari.png",
-    linkedinHref: "",
+    linkedinHref: EXTERNAL_LINKS.kushalKothariLinkedin,
   },
 ];
 

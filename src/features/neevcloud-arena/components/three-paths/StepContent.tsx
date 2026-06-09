@@ -1,6 +1,7 @@
 import { Button, Text } from "@/shared/ui-lib";
 import { YOU_WILL_LEARN_LABEL } from "../../constants/three-paths-section.constants";
 import type { PathsStep } from "../../types/three-paths-section.types";
+import LinkComponent from "@/shared/ui-lib/link";
 
 type StepContentProps = {
   step: PathsStep;
@@ -38,9 +39,15 @@ const StepContent = ({ step }: StepContentProps) => {
         </Text>
       </div>
 
-      <Button variant="black" spacing="lg" className="mt-4 md:mt-10">
-        {step.buttonText}
-      </Button>
+      <LinkComponent
+        href={step.primaryCtaRoute}
+        target={step.primaryCtaTarget}
+        variant="black"
+        spacing="lg"
+        className="mt-4 md:mt-10"
+      >
+        {step.primaryCtaLabel}
+      </LinkComponent>
     </div>
   );
 };

@@ -3,17 +3,19 @@ import Container from "@/shared/components/container";
 import GpuTechnicalSpecsBarChart from "@/shared/components/gpu-technical-specs-bar-chart";
 import GpuTechnicalSpecsTable from "@/shared/components/gpu-technical-specs-table";
 import {
-  GPU_TECHNICAL_SPECS_BUTTON_TEXT,
   GPU_TECHNICAL_SPECS_TITLE_HIGHLIGHT,
   GPU_TECHNICAL_SPECS_TITLE_PREFIX,
 } from "@/shared/constants/gpu-technical-specs-section.constants";
 import type { GpuTechnicalSpecsSectionProps } from "@/shared/types/gpu-technical-specs-section.types";
 import { Button, Text } from "@/shared/ui-lib";
+import LinkComponent from "../ui-lib/link";
 
 const GpuTechnicalSpecsSection = ({
   rows,
   charts,
-  buttonText = GPU_TECHNICAL_SPECS_BUTTON_TEXT,
+  buttonCta,
+  buttonLink,
+  buttonTarget,
   className,
 }: GpuTechnicalSpecsSectionProps) => {
   const hasCharts = Boolean(charts?.length);
@@ -41,7 +43,7 @@ const GpuTechnicalSpecsSection = ({
             "mt-4 w-full md:mt-12.5",
             hasCharts
               ? "grid grid-cols-1 items-start gap-2.5 lg:grid-cols-[1.15fr_0.85fr]"
-              : "max-w-4xl",
+              : "max-w-4xl"
           )}
         >
           <GpuTechnicalSpecsTable rows={rows} />
@@ -55,9 +57,18 @@ const GpuTechnicalSpecsSection = ({
           ) : null}
         </div>
 
-        <Button spacing="lg" className="mt-8 md:mt-12.5">
+        <LinkComponent
+          href={buttonLink}
+          target={buttonTarget}
+          spacing="lg"
+          className="mt-8 md:mt-12.5"
+        >
+          {buttonCta}
+        </LinkComponent>
+
+        {/* <Button spacing="lg" className="mt-8 md:mt-12.5">
           {buttonText}
-        </Button>
+        </Button> */}
       </Container>
     </section>
   );

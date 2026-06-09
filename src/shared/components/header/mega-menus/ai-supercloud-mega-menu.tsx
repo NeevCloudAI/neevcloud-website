@@ -4,6 +4,7 @@ import { Button, Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
+import LinkComponent from "@/shared/ui-lib/link";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -99,11 +100,16 @@ export default function AiSupercloudMegaMenu() {
               deployed and scaled.
             </Text>
           </div>
-          <Link href={EXTERNAL_LINKS.projectOrion} target="_blank">
-            <Text as="small" textColor="red-50">
-              Explore Project Noun -&gt;
-            </Text>
-          </Link>
+          <LinkComponent
+            href={EXTERNAL_LINKS.projectOrion}
+            variant="ghost"
+            target="_blank"
+            spacing="none"
+            size="xs"
+            textColor="red-50"
+          >
+            Explore Project Noun -&gt;
+          </LinkComponent>
         </div>
       </div>
       <Divider orientation="horizontal" />

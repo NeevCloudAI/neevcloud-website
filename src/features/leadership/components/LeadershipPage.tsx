@@ -10,12 +10,7 @@ const LeadershipPage = () => {
       <LeaderShipHeroSection />
       <LeaderShipTeam />
       <LeaderHowWeLeadsSection />
-      <FooterComponent
-        title={LEADERSHIP_FOOTER.title}
-        description={LEADERSHIP_FOOTER.description}
-        primaryCta={LEADERSHIP_FOOTER.primaryCta}
-        secondaryCta={LEADERSHIP_FOOTER.secondaryCta}
-      />
+      <FooterComponent {...LEADERSHIP_FOOTER} />
     </>
   );
 };

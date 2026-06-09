@@ -3,7 +3,9 @@ export const CAREERS_HERO = {
   description:
     "Join us in creating systems that remove traditional barriers of cost, access, and control. Make world-class computing available to anyone with an idea worth building.",
   primaryCta: "View Current Openings",
+  primaryCtaRoute: "/careers#current-openings",
   secondaryCta: "Apply Now",
+  secondaryCtaRoute: "/careers#current-openings",
   trustBadges: [
     "Work that matters",
     "Team events",
@@ -14,9 +16,10 @@ export const CAREERS_HERO = {
 } as const;
 
 export const CAREERS_FOOTER = {
-  title: "Ready to make an impact?",
+  title: "Ready to Build your career with us?",
   description:
-    "Explore open roles and join a team that's building AI infrastructure accessible to everyone with an idea worth building.",
+    "We're looking for engineers, operators, and builders who want to work on infrastructure that matters, apply below.",
   primaryCta: "View Current Openings",
-  secondaryCta: "Apply Now",
+  primaryCtaRoute: "/careers#current-openings",
+  secondaryCta: "Email your Resume",
 } as const;

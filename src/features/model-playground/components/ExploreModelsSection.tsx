@@ -3,6 +3,7 @@ import ExploreModelsStepPreview from "./explore-models/ExploreModelsStepPreview"
 import { EXPLORE_MODELS_STEPS } from "../data/explore-models-section.data";
 import FooterCard from "@/shared/components/footer-card";
 import { Text } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const EXPLORE_MODELS_PREVIEWS = EXPLORE_MODELS_STEPS.map((_, index) => (
   <ExploreModelsStepPreview key={index} stepIndex={index} />
@@ -35,6 +36,8 @@ const ExploreModelsSection = () => {
           title="Model Documentation"
           description="Each model includes detailed documentation explaining architecture, training data, intended use cases, and known limitations."
           primaryCta="Browse Model Playground Docs"
+          primaryCtaRoute={EXTERNAL_LINKS.documentation}
+          primaryCtaTarget="_blank"
         />
       </div>
     </StepsTabsSection>

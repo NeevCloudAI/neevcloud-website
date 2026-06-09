@@ -1,3 +1,4 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import type { UseModelCardData } from "@/shared/types/use-model-card.types";
 
 export const USE_MODEL_CARDS: readonly UseModelCardData[] = [
@@ -13,6 +14,8 @@ export const USE_MODEL_CARDS: readonly UseModelCardData[] = [
       { label: "Best For", value: "Exploration & Testing" },
     ],
     ctaLabel: "Try in playground",
+    ctaHref: EXTERNAL_LINKS.aiInferencePlayground,
+    ctaTarget: "_blank",
     ctaVariant: "primary",
     footnote: "Free, no signup required.",
   },
@@ -28,6 +31,8 @@ export const USE_MODEL_CARDS: readonly UseModelCardData[] = [
       { label: "Best For", value: "Startups & Builders" },
     ],
     ctaLabel: "Get API Key",
+    ctaHref: EXTERNAL_LINKS.apiKeys,
+    ctaTarget: "_blank",
     ctaVariant: "black",
     footnote: "Free tier · no credit card to start",
   },
@@ -43,6 +48,7 @@ export const USE_MODEL_CARDS: readonly UseModelCardData[] = [
       { label: "Best For", value: "Enterprise workloads" },
     ],
     ctaLabel: "Contact Sales",
+    ctaHref: "/contact-neevcloud",
     ctaVariant: "outline",
     footnote: "Enterprise consultation included",
   },

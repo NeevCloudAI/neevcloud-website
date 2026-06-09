@@ -3,6 +3,7 @@ import Container from "@/shared/components/container";
 import type { GpuWhyChooseSectionProps } from "@/shared/types/gpu-why-choose-section.types";
 import { Button, Text } from "@/shared/ui-lib";
 import Image from "next/image";
+import LinkComponent from "../ui-lib/link";
 
 const GpuWhyChooseSection = ({
   titlePrefix,
@@ -10,7 +11,9 @@ const GpuWhyChooseSection = ({
   titleSuffix,
   description,
   features,
-  buttonText,
+  buttonCta,
+  buttonLink,
+  buttonTarget,
   imageSrc,
   imageAlt,
   className,
@@ -53,9 +56,14 @@ const GpuWhyChooseSection = ({
               ))}
             </ul>
 
-            <Button spacing="lg" className="mt-4 w-fit md:mt-12.5">
-              {buttonText}
-            </Button>
+            <LinkComponent
+              href={buttonLink}
+              target={buttonTarget}
+              spacing="lg"
+              className="mt-4 w-fit md:mt-12.5"
+            >
+              {buttonCta}
+            </LinkComponent>
           </div>
 
           <div className="relative flex min-h-50 w-full items-center justify-center md:min-h-100">

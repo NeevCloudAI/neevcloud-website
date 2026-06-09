@@ -13,12 +13,7 @@ const NeevcloudArenaHeroSection = () => {
           </Text>
         </Text>
       }
-      image={NEEVCLOUD_ARENA_HERO.image}
-      description={NEEVCLOUD_ARENA_HERO.description}
-      primaryCta={NEEVCLOUD_ARENA_HERO.primaryCta}
-      secondaryCta={NEEVCLOUD_ARENA_HERO.secondaryCta}
-      badgeText={NEEVCLOUD_ARENA_HERO.badgeText}
-      trustBadges={[...NEEVCLOUD_ARENA_HERO.trustBadges]}
+      {...NEEVCLOUD_ARENA_HERO}
     />
   );
 };

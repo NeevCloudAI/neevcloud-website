@@ -14,11 +14,7 @@ const CpuClusterHeroSection = () => {
           for your GPU Cluster. Everything That Runs Around It.
         </Text>
       }
-      description={CPU_CLUSTER_HERO.description}
-      primaryCta={CPU_CLUSTER_HERO.primaryCta}
-      secondaryCta={CPU_CLUSTER_HERO.secondaryCta}
-      badgeText={CPU_CLUSTER_HERO.badgeText}
-      image={CPU_CLUSTER_HERO.image}
+      {...CPU_CLUSTER_HERO}
     />
   );
 };

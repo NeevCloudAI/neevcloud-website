@@ -1,8 +1,10 @@
 import Container from "@/shared/components/container";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import { LEADERSHIP_HERO } from "../data/leadership-page.data";
 import Image from "next/image";
 import { ChevronDown } from "@/shared/icons/lucide-icon-map";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const LeaderShipHeroSection = () => {
   return (
@@ -28,11 +30,23 @@ const LeaderShipHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{LEADERSHIP_HERO.primaryCta}</Button>
-          <Button variant="outline" textColor="black" spacing="lg">
+          <LinkComponent
+            href={LEADERSHIP_HERO.primaryCtaRoute ?? ""}
+            target={LEADERSHIP_HERO.primaryCtaTarget}
+            spacing="lg"
+          >
+            {LEADERSHIP_HERO.primaryCta}
+          </LinkComponent>
+          <LinkComponent
+            href={LEADERSHIP_HERO.secondaryCtaRoute ?? ""}
+            variant="outline"
+            target={LEADERSHIP_HERO.secondaryCtaTarget}
+            spacing="lg"
+          >
             {LEADERSHIP_HERO.secondaryCta}
-          </Button>
+          </LinkComponent>
         </div>
+
         <div className="mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
           <div className="p-4 md:pl-24 ">
             <div className="flex items-center gap-2">
@@ -58,10 +72,16 @@ const LeaderShipHeroSection = () => {
               at the center of the Global AI …
             </Text>
             <div className="flex items-center gap-1 mt-2.5">
-              <Text weight="semibold" textColor="gray-100">
+              <LinkComponent
+                href={EXTERNAL_LINKS.narendraSenLinkedin}
+                variant="ghost"
+                target="_blank"
+                spacing="none"
+                className="flex items-center gap-1"
+              >
                 Read More
-              </Text>
-              <ChevronDown className="w-4 h-4 font-semibold" />
+                <ChevronDown className="w-4 h-4 font-semibold" />
+              </LinkComponent>
             </div>
           </div>
           <div className="relative pt-4 md:pt-8">

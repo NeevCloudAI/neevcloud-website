@@ -13,11 +13,7 @@ const GpuPricingHeroSection = () => {
           </Text>
         </Text>
       }
-      description={GPU_PRICING_HERO.description}
-      primaryCta={GPU_PRICING_HERO.primaryCta}
-      secondaryCta={GPU_PRICING_HERO.secondaryCta}
-      badgeText={GPU_PRICING_HERO.badgeText}
-      trustBadges={[...GPU_PRICING_HERO.trustBadges]}
+      {...GPU_PRICING_HERO}
     />
   );
 };

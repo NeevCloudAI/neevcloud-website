@@ -12,6 +12,8 @@ export type UseModelCardData = {
   description: string;
   features: UseModelFeature[];
   ctaLabel: string;
+  ctaHref: string;
+  ctaTarget?: string;
   ctaVariant: UseModelCardVariant;
   footnote: string;
 };

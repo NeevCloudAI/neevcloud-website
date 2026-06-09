@@ -1,9 +1,15 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const MODEL_API_HERO = {
   badgeText: "Production AI Models",
   description:
     "Integrate modern AI models into your applications with clean, well-documented APIs. From prototype to production in minutes, not weeks.",
   primaryCta: "Request API Access",
+  primaryCtaRoute: EXTERNAL_LINKS.modelApi,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
   image: "/images/playground.png",
   trustBadges: [
     "Sub-100ms Latency",
@@ -19,5 +25,9 @@ export const MODEL_API_FOOTER = {
   description:
     "Create an account and receive 10,000 free API requests. No credit card required.",
   primaryCta: "Request API Access",
+  primaryCtaRoute: EXTERNAL_LINKS.modelApi,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { UseModelCardProps } from "@/shared/types/use-model-card.types";
 import { Button, Divider, Text } from "@/shared/ui-lib";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const CTA_BUTTON_CLASS: Record<
   UseModelCardProps["card"]["ctaVariant"],
@@ -12,7 +13,16 @@ const CTA_BUTTON_CLASS: Record<
 };
 
 const UseModelCard = ({ card }: UseModelCardProps) => {
-  const { title, description, features, ctaLabel, ctaVariant, footnote } = card;
+  const {
+    title,
+    description,
+    features,
+    ctaLabel,
+    ctaHref,
+    ctaTarget,
+    ctaVariant,
+    footnote,
+  } = card;
 
   return (
     <article
@@ -50,16 +60,18 @@ const UseModelCard = ({ card }: UseModelCardProps) => {
         ))}
       </dl>
 
-      <Button
+      <LinkComponent
+        href={ctaHref}
+        target={ctaTarget}
         size="md"
         weight="semibold"
         className={cn(
           "mt-6 md:mt-7.5 w-full text-center",
-          CTA_BUTTON_CLASS[ctaVariant],
+          CTA_BUTTON_CLASS[ctaVariant]
         )}
       >
         {ctaLabel}
-      </Button>
+      </LinkComponent>
 
       <Text as="small" align="center" textColor="gray-85" className="mt-2.5">
         {footnote}

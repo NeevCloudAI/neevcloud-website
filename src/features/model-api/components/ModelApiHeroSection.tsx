@@ -18,12 +18,7 @@ const ModelApiHeroSection = () => {
           </Text>
         </Text>
       }
-      description={MODEL_API_HERO.description}
-      primaryCta={MODEL_API_HERO.primaryCta}
-      secondaryCta={MODEL_API_HERO.secondaryCta}
-      badgeText={MODEL_API_HERO.badgeText}
-      image={MODEL_API_HERO.image}
-      trustBadges={[...MODEL_API_HERO.trustBadges]}
+      {...MODEL_API_HERO}
     />
   );
 };

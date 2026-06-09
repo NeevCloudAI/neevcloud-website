@@ -12,6 +12,8 @@ const LinkComponent = ({
   fontFamily,
   backgroundColor,
   borderRadius,
+  textColor,
+  className,
   ...props
 }: React.ComponentProps<typeof Link> & VariantProps<typeof linkVariants>) => {
   return (
@@ -21,11 +23,13 @@ const LinkComponent = ({
         linkVariants({
           variant,
           size,
+          className,
           weight,
           spacing,
           fontFamily,
           backgroundColor,
           borderRadius,
+          textColor,
         })
       )}
       {...props}

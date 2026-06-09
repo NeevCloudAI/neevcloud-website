@@ -27,12 +27,6 @@ const COMPANY_COLUMN_LEFT: MegaMenuLinkRowProps[] = [
     description: "Build the Sovereign Cloud",
     href: "/careers",
   },
-  {
-    iconSrc: "",
-    iconAlt: "Press kit",
-    title: "Press Kit",
-    description: "Build the Sovereign Cloud",
-  },
 ];
 
 const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
@@ -41,12 +35,14 @@ const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
     iconAlt: "Life at NeevCloud",
     title: "Life at NeevCloud",
     description: "Culture, benefits, and how we work",
+    href: "/life-at-neevcloud",
   },
   {
     iconSrc: "",
     iconAlt: "Event",
     title: "Event",
     description: "Webinars, meetups, and announcements",
+    href: "/events",
   },
   {
     iconSrc: "",

@@ -1,4 +1,5 @@
 import type { GpuFooterSectionContent } from "@/shared/types/gpu-footer-section.types";
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 
 export const NVIDIA_A100_FOOTER_SECTION: GpuFooterSectionContent = {
   gpuName: "A100",
@@ -7,6 +8,9 @@ export const NVIDIA_A100_FOOTER_SECTION: GpuFooterSectionContent = {
   titleSuffix: "GPU",
   description:
     "Universal MIG support to create multiple isolated GPU instances for concurrency and security.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
 };
 
 export const NVIDIA_A30_FOOTER_SECTION: GpuFooterSectionContent = {
@@ -16,6 +20,9 @@ export const NVIDIA_A30_FOOTER_SECTION: GpuFooterSectionContent = {
   titleSuffix: "GPU",
   description:
     "Experience the next generation of GPU acceleration with NeevCloud&apos;s A30 cloud solution where innovation meets enterprise-grade performance.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
 };
 
 export const NVIDIA_B200_FOOTER_SECTION: GpuFooterSectionContent = {
@@ -25,6 +32,9 @@ export const NVIDIA_B200_FOOTER_SECTION: GpuFooterSectionContent = {
   titleSuffix: "Redefining HPC and AI Workloads",
   description:
     "Leveraging the NVIDIA Blackwell Cloud GPU architecture, HGX B200 can handle diverse workloads, including large language models, recommender systems, and chatbots making it ideal for businesses looking to accelerate their AI transformation at the best price.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
 };
 
 export const NVIDIA_B300_FOOTER_SECTION: GpuFooterSectionContent = {
@@ -34,6 +44,9 @@ export const NVIDIA_B300_FOOTER_SECTION: GpuFooterSectionContent = {
   titleSuffix: "Redefining HPC and AI Workloads",
   description:
     "Leveraging the NVIDIA Blackwell Cloud GPU architecture, B300 can handle diverse workloads, including large language models, recommender systems, and chatbots making it ideal for businesses looking to accelerate their AI transformation.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
 };
 
 export const NVIDIA_H100_FOOTER_SECTION: GpuFooterSectionContent = {
@@ -43,4 +56,7 @@ export const NVIDIA_H100_FOOTER_SECTION: GpuFooterSectionContent = {
   titleSuffix: "The Next Generation of AI Computing Power",
   description:
     "NeevCloud is proud to offer the latest and greatest in GPU cloud hosting power - the NVIDIA H100 Tensor Core GPU. Built with advanced AI capabilities, the H100 delivers incredible performance for machine learning, data analytics, and scientific computing workloads.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
 };

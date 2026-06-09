@@ -17,13 +17,7 @@ const BfsiPage = () => {
       <ApplicationSection />
       <PerformanceSection />
       <FaqSection items={BFSI_FAQ_ITEMS} className="pt-0 md:pt-0 2xl:pt-0" />
-      <FooterComponent
-        title={BFSI_FOOTER.title}
-        description={BFSI_FOOTER.description}
-        primaryCta={BFSI_FOOTER.primaryCta}
-        secondaryCta={BFSI_FOOTER.secondaryCta}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FooterComponent {...BFSI_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Divider, Text } from "@/shared/ui-lib";
 import Image from "next/image";
+import LinkComponent from "../ui-lib/link";
 
 export type AmbitionDetailBullet = {
   id: number;
@@ -18,6 +19,10 @@ export type AmbitionDetailItem = {
   description: string;
   bulletsHeading?: string;
   bullets: readonly AmbitionDetailBullet[];
+  exploreCta?: string;
+  exploreCtaRoute?: string;
+  exploreCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
+  code?: readonly string[];
 };
 
 export type AmbitionDetailCardProps = {
@@ -39,13 +44,17 @@ export function AmbitionDetailCard({
     description,
     bullets,
     size = "large",
+    exploreCta,
+    exploreCtaRoute,
+    exploreCtaTarget,
+    code,
   } = item;
 
   return (
     <article
       className={cn(
         "flex h-full flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
-        className,
+        className
       )}
     >
       <Text textColor="gray-85">{label}</Text>
@@ -54,7 +63,7 @@ export function AmbitionDetailCard({
           <div
             className={cn(
               "p-3 bg-primary-40 rounded-lg",
-              iconColor && `bg-${iconColor}`,
+              iconColor && `bg-${iconColor}`
             )}
           >
             <Image
@@ -95,7 +104,7 @@ export function AmbitionDetailCard({
         <ul
           className={cn(
             "flex list-none flex-col gap-1.25",
-            bulletsHeading ? "mt-2.5" : "mt-4 md:mt-10",
+            bulletsHeading ? "mt-2.5" : "mt-4 md:mt-10"
           )}
         >
           {bullets.map((bullet) => (
@@ -111,6 +120,30 @@ export function AmbitionDetailCard({
           ))}
         </ul>
       ) : null}
+
+      {code && (
+        <div className="mt-5 p-5 md:min-h-35 bg-black rounded-md">
+          {code.map((line) => (
+            <Text textColor="white" fontFamily="spaceMono" key={line}>
+              {line}
+            </Text>
+          ))}
+        </div>
+      )}
+
+      {exploreCta && (
+        <LinkComponent
+          href={exploreCtaRoute ?? ""}
+          target={exploreCtaTarget}
+          variant="ghost"
+          spacing="none"
+          size="md"
+          textColor="primary"
+          className="mt-4 md:mt-7.5 underline"
+        >
+          {exploreCta}
+        </LinkComponent>
+      )}
     </article>
   );
 }

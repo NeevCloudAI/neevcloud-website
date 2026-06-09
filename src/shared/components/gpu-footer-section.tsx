@@ -1,15 +1,18 @@
 import Container from "@/shared/components/container";
 import {
-  GPU_FOOTER_SECTION_BUTTON_TEXT,
   GPU_FOOTER_SECTION_CERTIFICATION_ALT,
   GPU_FOOTER_SECTION_CERTIFICATION_IMAGE,
   GPU_FOOTER_SECTION_COPYRIGHT,
 } from "@/shared/constants/gpu-footer-section.constants";
 import type { GpuFooterSectionContent } from "@/shared/types/gpu-footer-section.types";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
+import LinkComponent from "../ui-lib/link";
 
 const GpuFooterSection = ({
+  buttonCta,
+  buttonLink,
+  buttonTarget,
   titlePrefix,
   titleHighlight,
   titleSuffix,
@@ -44,9 +47,14 @@ const GpuFooterSection = ({
           {description}
         </Text>
 
-        <Button spacing="lg" className="mt-6 md:mt-12.5">
-          {GPU_FOOTER_SECTION_BUTTON_TEXT}
-        </Button>
+        <LinkComponent
+          href={buttonLink}
+          target={buttonTarget}
+          spacing="lg"
+          className="mt-4 w-fit md:mt-12.5"
+        >
+          {buttonCta}
+        </LinkComponent>
 
         <Image
           src={GPU_FOOTER_SECTION_CERTIFICATION_IMAGE}

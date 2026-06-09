@@ -49,7 +49,9 @@ export type GpuTechnicalSpecsRow = {
 export type GpuTechnicalSpecsSectionContent = {
   rows: readonly GpuTechnicalSpecsRow[];
   charts?: readonly GpuTechnicalSpecsChart[];
-  buttonText?: string;
+  buttonCta: string;
+  buttonLink: string;
+  buttonTarget?: string;
 };
 
 export type GpuTechnicalSpecsSectionProps = GpuTechnicalSpecsSectionContent & {

@@ -13,12 +13,7 @@ const ModelCatalogHeroSection = () => {
           </Text>
         </Text>
       }
-      description={MODEL_CATALOG_HERO.description}
-      primaryCta={MODEL_CATALOG_HERO.primaryCta}
-      secondaryCta={MODEL_CATALOG_HERO.secondaryCta}
-      badgeText={MODEL_CATALOG_HERO.badgeText}
-      image={MODEL_CATALOG_HERO.image}
-      trustBadges={[...MODEL_CATALOG_HERO.trustBadges]}
+      {...MODEL_CATALOG_HERO}
     />
   );
 };

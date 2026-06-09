@@ -21,10 +21,7 @@ const TrustCenterPage = () => {
         className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
-        title={TRUST_CENTER_FOOTER.title}
-        description={TRUST_CENTER_FOOTER.description}
-        primaryCta={TRUST_CENTER_FOOTER.primaryCta}
-        secondaryCta={TRUST_CENTER_FOOTER.secondaryCta}
+        {...TRUST_CENTER_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

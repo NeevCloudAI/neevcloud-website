@@ -1,5 +1,3 @@
-export const GPU_FOOTER_SECTION_BUTTON_TEXT = "Reserve Now";
-
 export const GPU_FOOTER_SECTION_COPYRIGHT =
   "© 2026, NeevAI SuperCloud Pvt. Ltd.";
 

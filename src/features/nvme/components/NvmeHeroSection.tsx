@@ -18,12 +18,7 @@ const NvmeHeroSection = () => {
           </Text>
         </Text>
       }
-      description={NVME_HERO.description}
-      primaryCta={NVME_HERO.primaryCta}
-      secondaryCta={NVME_HERO.secondaryCta}
-      badgeText={NVME_HERO.badgeText}
-      image={NVME_HERO.image}
-      trustBadges={[...NVME_HERO.trustBadges]}
+      {...NVME_HERO}
     />
   );
 };

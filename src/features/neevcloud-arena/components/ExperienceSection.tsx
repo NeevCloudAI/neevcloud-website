@@ -1,12 +1,13 @@
 import { AmbitionDetailCard } from "@/shared/components/ambition-detail-card";
 import Container from "@/shared/components/container";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import {
   EXPERIENCE_CTA_CARDS,
   EXPERIENCE_CTA_SECTION,
   EXPERIENCE_ITEMS,
   EXPERIENCE_SECTION,
 } from "../data/experience-section.data";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const ExperienceSection = () => {
   return (
@@ -60,13 +61,16 @@ const ExperienceSection = () => {
                   as="h6"
                   textColor="white"
                   weight="semibold"
-                  className="mt-2.5"
+                  className="mt-2.5 mb-5 md:mb-10"
                 >
                   {card.description}
                 </Text>
-                <Button size="sm" className="mt-5 md:mt-10" spacing="lg">
-                  {card.buttonText}
-                </Button>
+                <LinkComponent
+                  href={card.primaryCtaRoute}
+                  target={card.primaryCtaTarget}
+                >
+                  {card.primaryCtaLabel}
+                </LinkComponent>
               </li>
             ))}
           </ul>
@@ -79,14 +83,13 @@ const ExperienceSection = () => {
             >
               {EXPERIENCE_CTA_SECTION.footerText}
             </Text>
-            <Button
+            <LinkComponent
+              href={EXPERIENCE_CTA_SECTION.footerButtonRoute}
               variant="white"
-              textColor="black"
               spacing="lg"
-              weight="semibold"
             >
-              {EXPERIENCE_CTA_SECTION.footerButtonText}
-            </Button>
+              {EXPERIENCE_CTA_SECTION.footerButtonLabel}
+            </LinkComponent>
           </div>
         </div>
       </Container>

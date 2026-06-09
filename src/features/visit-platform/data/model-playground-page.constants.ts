@@ -1,8 +1,14 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const MODEL_PLAYGROUND_HERO = {
   description:
     "Deploy GPUs, manage inference, control storage, and monitor workloads through a unified console. Everything you need to build AI, accessible in one place.",
   primaryCta: "Access Console",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
   badgeText: "AI SuperCloud Platform",
   image: "/images/playground.png",
   trustBadges: [
@@ -19,5 +25,9 @@ export const MODEL_PLAYGROUND_FOOTER = {
   description:
     "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges.",
   primaryCta: "Access Console",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
   secondaryCta: "Read Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

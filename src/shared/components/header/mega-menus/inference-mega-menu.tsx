@@ -5,6 +5,7 @@ import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
 import Image from "next/image";
+import LinkComponent from "@/shared/ui-lib/link";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -110,11 +111,17 @@ export default function InferenceMegaMenu() {
             height={300}
             className="mt-4"
           />
-          <Link href={EXTERNAL_LINKS.aiInferencePlayground} target="_blank">
-            <Text as="small" textColor="red-50" className="mt-4">
-              Open Playground -&gt;
-            </Text>
-          </Link>
+          <LinkComponent
+            href={EXTERNAL_LINKS.aiInferencePlayground}
+            variant="ghost"
+            target="_blank"
+            spacing="none"
+            size="xs"
+            textColor="red-50"
+            className="mt-4"
+          >
+            Open Playground -&gt;
+          </LinkComponent>
         </div>
       </div>
       <Divider orientation="horizontal" />

@@ -10,7 +10,9 @@ export type GpuWhyChooseSectionContent = {
   titleSuffix: string;
   description: string;
   features: readonly GpuWhyChooseFeature[];
-  buttonText: string;
+  buttonCta: string;
+  buttonLink: string;
+  buttonTarget?: string;
   imageSrc: string;
   imageAlt: string;
 };

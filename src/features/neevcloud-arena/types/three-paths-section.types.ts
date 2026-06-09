@@ -16,5 +16,7 @@ export type PathsStep = {
   heading: string;
   description: string;
   learnText: string;
-  buttonText: string;
+  primaryCtaLabel: string;
+  primaryCtaRoute: string;
+  primaryCtaTarget: "_blank" | "_self" | "_parent" | "_top";
 };

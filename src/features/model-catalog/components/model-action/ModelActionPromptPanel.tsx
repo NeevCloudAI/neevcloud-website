@@ -1,6 +1,8 @@
+import LinkComponent from "@/shared/ui-lib/link";
 import { PROMPT_SUGGESTIONS } from "../../constants/model-action-section.constants";
 import type { ModelActionItem } from "../../types/model-action-section.types";
 import { Button, Text } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type ModelActionPromptPanelProps = {
   selectedModel: ModelActionItem;
@@ -68,7 +70,12 @@ const ModelActionPromptPanel = ({
               </Button>
             ))}
           </div>
-          <Button className="w-full md:w-fit">Try Models</Button>
+          <LinkComponent
+            href={EXTERNAL_LINKS.aiInferencePlayground}
+            target="_blank"
+          >
+            Try Models
+          </LinkComponent>
         </div>
       </div>
     </>

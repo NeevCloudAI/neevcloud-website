@@ -1,7 +1,9 @@
 import Container from "@/shared/components/container";
 import ModelCard from "./models/ModelCard";
 import { MODELS } from "../data/models-section.data";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const ModelsSection = () => {
   return (
@@ -39,9 +41,15 @@ const ModelsSection = () => {
             </li>
           ))}
         </ul>
-        <Button className="mt-4 md:mt-12.5" variant="black" spacing="lg">
+        <LinkComponent
+          href={EXTERNAL_LINKS.aiInferenceDedicatedModel}
+          target="_blank"
+          variant="black"
+          spacing="lg"
+          className="mt-4 md:mt-12.5"
+        >
           See ALL Models
-        </Button>
+        </LinkComponent>
       </Container>
     </section>
   );

@@ -13,12 +13,7 @@ const MediaHeroSection = () => {
           </Text>
         </Text>
       }
-      description={MEDIA_HERO.description}
-      primaryCta={MEDIA_HERO.primaryCta}
-      secondaryCta={MEDIA_HERO.secondaryCta}
-      badgeText={MEDIA_HERO.badgeText}
-      image={MEDIA_HERO.image}
-      trustBadges={[...MEDIA_HERO.trustBadges]}
+      {...MEDIA_HERO}
     />
   );
 };

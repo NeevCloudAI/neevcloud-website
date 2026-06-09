@@ -10,12 +10,7 @@ const ContactNeevcloudPage = () => {
       <ContactNeevcloudHeroSection />
       <ConversationSection />
       <OfficesSection />
-      <FooterComponent
-        title={CONTACT_NEEVCLOUD_FOOTER.title}
-        description={CONTACT_NEEVCLOUD_FOOTER.description}
-        primaryCta={CONTACT_NEEVCLOUD_FOOTER.primaryCta}
-        secondaryCta={CONTACT_NEEVCLOUD_FOOTER.secondaryCta}
-      />
+      <FooterComponent {...CONTACT_NEEVCLOUD_FOOTER} />
     </>
   );
 };

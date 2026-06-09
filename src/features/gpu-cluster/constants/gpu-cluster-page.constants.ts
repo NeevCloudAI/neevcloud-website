@@ -1,8 +1,14 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const GPU_CLUSTER_HERO = {
   description:
     "One platform. On-demand, reserved, or spot, all on India-sovereign infrastructure. Every instance includes InfiniBand networking, NVMe-attached storage, and pre-built ML images. Live within minutes.",
   primaryCta: "Configure Now",
+  primaryCtaRoute: EXTERNAL_LINKS.deployGpu,
+  primaryCtaTarget: "_blank",
   secondaryCta: "Compare GPUs",
+  secondaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
+  secondaryCtaTarget: "_blank",
   badgeText: "Bare GPU Compute - Billed in INR",
   image: "/images/gpu.png",
 } as const;
@@ -12,5 +18,7 @@ export const GPU_CLUSTER_FOOTER = {
   description:
     "Deploy H100, A100, RTX 5090, or other GPUs in minutes. On-demand flexibility or reserved savings.",
   primaryCta: "Configure Now",
+  primaryCtaRoute: "/gpu-pricing",
   secondaryCta: "Talk to Our Team",
+  secondaryCtaRoute: "/contact-neevcloud",
 } as const;

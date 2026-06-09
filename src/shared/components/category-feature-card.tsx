@@ -2,12 +2,14 @@ import { cn } from "@/lib/utils";
 import { Button, Text } from "@/shared/ui-lib";
 import { SquareCheck, type LucideIcon } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
+import LinkComponent from "../ui-lib/link";
 
 export type CategoryFeatureHoverDetail = {
   label?: string;
   tasks: readonly { id: number; title: string }[];
   ctaLabel?: string;
-  ctaHref?: string;
+  ctaHref: string;
+  ctaTarget?: string;
 };
 
 export type CategoryFeatureItem = {
@@ -46,14 +48,14 @@ export function CategoryFeatureCard({
       className={cn(
         "flex w-full flex-col rounded-md bg-gray-10 p-4 md:p-10",
         showHoverOverlay && "group relative overflow-hidden",
-        className,
+        className
       )}
     >
       <div
         className={cn(
           "flex flex-col",
           showHoverOverlay &&
-            "transition-opacity duration-300 ease-out group-hover:pointer-events-none group-focus-within:pointer-events-none",
+            "transition-opacity duration-300 ease-out group-hover:pointer-events-none group-focus-within:pointer-events-none"
         )}
       >
         <div className="w-fit rounded-md bg-white p-3.75">
@@ -116,7 +118,7 @@ export function CategoryFeatureCard({
         <div
           className={cn(
             "absolute inset-0 flex translate-y-full flex-col bg-primary/92 p-4 backdrop-blur-md transition-transform duration-500 ease-out md:py-25 md:px-10",
-            "group-hover:translate-y-0 group-focus-within:translate-y-0",
+            "group-hover:translate-y-0 group-focus-within:translate-y-0"
           )}
         >
           <Text
@@ -138,9 +140,15 @@ export function CategoryFeatureCard({
             ))}
           </ul>
 
-          <Button variant="black" weight="semibold" className="mt-6 w-fit">
+          <LinkComponent
+            href={hover.ctaHref}
+            target={hover.ctaTarget}
+            variant="black"
+            weight="semibold"
+            className="mt-6 w-fit"
+          >
             {hover.ctaLabel}
-          </Button>
+          </LinkComponent>
         </div>
       ) : null}
     </article>

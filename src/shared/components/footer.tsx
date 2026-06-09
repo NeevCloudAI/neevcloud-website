@@ -5,7 +5,6 @@ import Container from "./container";
 import FooterCard from "./footer-card";
 import {
   FOOTER_BRANDING,
-  FOOTER_CTA,
   FOOTER_LINK_GROUPS,
   FOOTER_SOCIAL_LINKS,
 } from "../data/footer-data";
@@ -22,7 +21,11 @@ const FooterComponent = ({
   title,
   description,
   primaryCta,
+  primaryCtaRoute,
+  primaryCtaTarget,
   secondaryCta,
+  secondaryCtaRoute,
+  secondaryCtaTarget,
   className,
 }: FooterCtaContent) => {
   return (
@@ -31,10 +34,14 @@ const FooterComponent = ({
     >
       <Container className="flex flex-col gap-6 md:gap-25">
         <FooterCard
-          title={title || FOOTER_CTA.title || ""}
-          description={description || FOOTER_CTA.description || ""}
-          primaryCta={primaryCta || FOOTER_CTA.primaryCta || ""}
-          secondaryCta={secondaryCta || FOOTER_CTA.secondaryCta || ""}
+          title={title || ""}
+          description={description || ""}
+          primaryCta={primaryCta || ""}
+          primaryCtaRoute={primaryCtaRoute || ""}
+          primaryCtaTarget={primaryCtaTarget}
+          secondaryCta={secondaryCta || ""}
+          secondaryCtaRoute={secondaryCtaRoute || ""}
+          secondaryCtaTarget={secondaryCtaTarget}
         />
 
         <div className="mb-4 md:mb-16 w-full flex flex-col md:flex-row gap-8 md:gap-16 text-white">

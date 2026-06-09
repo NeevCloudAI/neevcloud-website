@@ -7,6 +7,7 @@ const OpenPositionsSection = () => {
     <section
       className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="open-positions-section-heading"
+      id="current-openings"
     >
       <Container className="relative flex flex-col items-center justify-center">
         <Text

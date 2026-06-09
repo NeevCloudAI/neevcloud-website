@@ -13,12 +13,7 @@ const VisitPlatformHeroSection = () => {
           </Text>
         </Text>
       }
-      description={MODEL_PLAYGROUND_HERO.description}
-      primaryCta={MODEL_PLAYGROUND_HERO.primaryCta}
-      secondaryCta={MODEL_PLAYGROUND_HERO.secondaryCta}
-      badgeText={MODEL_PLAYGROUND_HERO.badgeText}
-      image={MODEL_PLAYGROUND_HERO.image}
-      trustBadges={[...MODEL_PLAYGROUND_HERO.trustBadges]}
+      {...MODEL_PLAYGROUND_HERO}
     />
   );
 };

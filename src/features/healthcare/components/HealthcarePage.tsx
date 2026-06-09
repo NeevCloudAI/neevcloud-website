@@ -19,10 +19,7 @@ const HealthcarePage = () => {
         className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
-        title={HEALTHCARE_FOOTER.title}
-        description={HEALTHCARE_FOOTER.description}
-        primaryCta={HEALTHCARE_FOOTER.primaryCta}
-        secondaryCta={HEALTHCARE_FOOTER.secondaryCta}
+        {...HEALTHCARE_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

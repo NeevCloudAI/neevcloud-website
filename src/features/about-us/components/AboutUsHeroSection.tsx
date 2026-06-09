@@ -2,6 +2,7 @@ import { Button, Text } from "@/shared/ui-lib";
 import { ABOUT_US_HERO } from "../data/about-us-page.data";
 import Container from "@/shared/components/container";
 import Image from "next/image";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const AboutUsHeroSection = () => {
   return (
@@ -27,10 +28,21 @@ const AboutUsHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{ABOUT_US_HERO.primaryCta}</Button>
-          <Button variant="outline" textColor="black" spacing="lg">
+          <LinkComponent
+            href={ABOUT_US_HERO.primaryCtaRoute ?? ""}
+            target={ABOUT_US_HERO.primaryCtaTarget}
+            spacing="lg"
+          >
+            {ABOUT_US_HERO.primaryCta}
+          </LinkComponent>
+          <LinkComponent
+            href={ABOUT_US_HERO.secondaryCtaRoute ?? ""}
+            variant="outline"
+            target={ABOUT_US_HERO.secondaryCtaTarget}
+            spacing="lg"
+          >
             {ABOUT_US_HERO.secondaryCta}
-          </Button>
+          </LinkComponent>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">

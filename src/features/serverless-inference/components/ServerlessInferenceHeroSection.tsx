@@ -14,11 +14,7 @@ const ServerlessInferenceHeroSection = () => {
           to Manage.
         </Text>
       }
-      description={SERVERLESS_INFERENCE_HERO.description}
-      primaryCta={SERVERLESS_INFERENCE_HERO.primaryCta}
-      secondaryCta={SERVERLESS_INFERENCE_HERO.secondaryCta}
-      badgeText={SERVERLESS_INFERENCE_HERO.badgeText}
-      image={SERVERLESS_INFERENCE_HERO.image}
+      {...SERVERLESS_INFERENCE_HERO}
     />
   );
 };

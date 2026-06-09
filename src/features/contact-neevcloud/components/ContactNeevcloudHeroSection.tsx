@@ -3,6 +3,7 @@ import { CONTACT_NEEVCLOUD_HERO } from "../data/contact-neevcloud-page.data";
 import Container from "@/shared/components/container";
 import { CircleCheck } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const ContactNeevcloudHeroSection = () => {
   return (
@@ -28,10 +29,20 @@ const ContactNeevcloudHeroSection = () => {
         </Text>
 
         <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <Button spacing="lg">{CONTACT_NEEVCLOUD_HERO.primaryCta}</Button>
-          <Button variant="outline" textColor="black" spacing="lg">
+          <LinkComponent
+            href={CONTACT_NEEVCLOUD_HERO.primaryCtaRoute ?? ""}
+            spacing="lg"
+          >
+            {CONTACT_NEEVCLOUD_HERO.primaryCta}
+          </LinkComponent>
+          <LinkComponent
+            href={CONTACT_NEEVCLOUD_HERO.secondaryCtaRoute ?? ""}
+            variant="outline"
+            target={CONTACT_NEEVCLOUD_HERO.secondaryCtaTarget}
+            spacing="lg"
+          >
             {CONTACT_NEEVCLOUD_HERO.secondaryCta}
-          </Button>
+          </LinkComponent>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">

@@ -23,7 +23,9 @@ export type GpuWhyChooseNeevcloudSubsection = {
 export type GpuWhyChooseNeevcloudSectionContent = {
   whyChoose: GpuWhyChooseNeevcloudSubsection;
   roi: GpuWhyChooseNeevcloudSubsection;
-  buttonText: string;
+  buttonCta: string;
+  buttonLink: string;
+  buttonTarget?: string;
 };
 
 export type GpuWhyChooseNeevcloudSectionProps =

@@ -11,6 +11,7 @@ export type HeaderNavId =
 export type NavItem = {
   id: HeaderNavId;
   label: string;
+  href?: string;
   desktopVisibilityClass: string;
   menuVisibilityClass: string;
 };
@@ -49,15 +50,10 @@ export const NAV_ITEMS: NavItem[] = [
   {
     id: "developers",
     label: "Developers",
+    href: "/developers",
     desktopVisibilityClass: "hidden header-developers:block",
     menuVisibilityClass: "header-developers:hidden",
   },
-  // {
-  //   id: "resources",
-  //   label: "Resources",
-  //   desktopVisibilityClass: "hidden header-resource:block",
-  //   menuVisibilityClass: "header-resource:hidden",
-  // },
   {
     id: "company",
     label: "Company",

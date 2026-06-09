@@ -1,3 +1,4 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import type {
   GpuCostCalculatorCommitment,
   GpuCostCalculatorGpuType,
@@ -19,7 +20,9 @@ export const GPU_COST_CALCULATOR_SECTION = {
   summaryLiveLabel: "live · updates as you tweak",
   summaryTitle: "ESTIMATED MONTHLY COST",
   deployCta: "Deploy this config →",
+  deployCtaRoute: EXTERNAL_LINKS.deployGpu,
   contactCta: "Contact sales",
+  contactCtaRoute: "/contact-neevcloud",
 } as const;
 
 export const GPU_COST_CALCULATOR_GPU_TYPES: readonly GpuCostCalculatorGpuType[] =
@@ -86,12 +89,12 @@ export const GPU_COST_CALCULATOR_PRESETS: readonly GpuCostCalculatorPreset[] = [
 ] as const;
 
 export const GPU_COST_CALCULATOR_GPU_TYPE_BY_ID = Object.fromEntries(
-  GPU_COST_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType]),
+  GPU_COST_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType])
 ) as Record<GpuCostCalculatorGpuType["id"], GpuCostCalculatorGpuType>;
 
 export const GPU_COST_CALCULATOR_COMMITMENT_BY_ID = Object.fromEntries(
   GPU_COST_CALCULATOR_COMMITMENTS.map((commitment) => [
     commitment.id,
     commitment,
-  ]),
+  ])
 ) as Record<GpuCostCalculatorCommitment["id"], GpuCostCalculatorCommitment>;

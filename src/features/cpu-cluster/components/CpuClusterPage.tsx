@@ -18,10 +18,7 @@ const CpuClusterPage = () => {
       <PrivateNetworkSection />
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent
-        title={CPU_CLUSTER_FOOTER.title}
-        description={CPU_CLUSTER_FOOTER.description}
-        primaryCta={CPU_CLUSTER_FOOTER.primaryCta}
-        secondaryCta={CPU_CLUSTER_FOOTER.secondaryCta}
+        {...CPU_CLUSTER_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

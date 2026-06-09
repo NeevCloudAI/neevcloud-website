@@ -13,11 +13,7 @@ const CareersHeroSection = () => {
           </Text>
         </Text>
       }
-      description={CAREERS_HERO.description}
-      primaryCta={CAREERS_HERO.primaryCta}
-      secondaryCta={CAREERS_HERO.secondaryCta}
-      badgeText={CAREERS_HERO.badgeText}
-      trustBadges={[...CAREERS_HERO.trustBadges]}
+      {...CAREERS_HERO}
       image="/images/career.png"
     />
   );

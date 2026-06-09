@@ -13,12 +13,7 @@ const AgenticWorkflowHeroSection = () => {
           </Text>
         </Text>
       }
-      description={AGENTIC_WORKFLOW_HERO.description}
-      primaryCta={AGENTIC_WORKFLOW_HERO.primaryCta}
-      secondaryCta={AGENTIC_WORKFLOW_HERO.secondaryCta}
-      badgeText={AGENTIC_WORKFLOW_HERO.badgeText}
-      image={AGENTIC_WORKFLOW_HERO.image}
-      trustBadges={[...AGENTIC_WORKFLOW_HERO.trustBadges]}
+      {...AGENTIC_WORKFLOW_HERO}
     />
   );
 };

@@ -13,12 +13,7 @@ const TrustCenterHeroSection = () => {
           </Text>
         </Text>
       }
-      image={TRUST_CENTER_HERO.dashboardImage}
-      description={TRUST_CENTER_HERO.description}
-      primaryCta={TRUST_CENTER_HERO.primaryCta}
-      secondaryCta={TRUST_CENTER_HERO.secondaryCta}
-      badgeText={TRUST_CENTER_HERO.badgeText}
-      trustBadges={[...TRUST_CENTER_HERO.trustBadges]}
+      {...TRUST_CENTER_HERO}
     />
   );
 };

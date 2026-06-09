@@ -13,8 +13,14 @@ export type ModelInfoCardData = {
   capabilities: readonly string[];
   useCases: readonly string[];
   primaryActionLabel?: string;
+  primaryActionHref?: string;
+  primaryActionTarget?: string;
   secondaryActionLabel?: string;
+  secondaryActionHref?: string;
+  secondaryActionTarget?: string;
   tertiaryActionLabel?: string;
+  tertiaryActionHref?: string;
+  tertiaryActionTarget?: string;
 };
 
 export type ModelInfoCardProps = {

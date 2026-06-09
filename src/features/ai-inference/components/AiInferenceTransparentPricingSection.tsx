@@ -8,6 +8,7 @@ const AiInferenceTransparentPricingSection = () => {
     <section
       className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="ai-inference-transparent-pricing-section-heading"
+      id="ai-inference-transparent-pricing-section"
     >
       <div
         className="pointer-events-none absolute inset-0 top-20 right-[-5%] h-[60%] w-full bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat opacity-40 md:w-[30%] md:opacity-100"

@@ -13,11 +13,7 @@ const AiInferenceHeroSection = () => {
           </Text>
         </Text>
       }
-      description={AI_INFERENCE_HERO.description}
-      primaryCta={AI_INFERENCE_HERO.primaryCta}
-      secondaryCta={AI_INFERENCE_HERO.secondaryCta}
-      badgeText={AI_INFERENCE_HERO.badgeText}
-      trustBadges={[...AI_INFERENCE_HERO.trustBadges]}
+      {...AI_INFERENCE_HERO}
     />
   );
 };

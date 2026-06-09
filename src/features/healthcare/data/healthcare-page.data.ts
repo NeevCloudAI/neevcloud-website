@@ -1,8 +1,11 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const HEALTHCARE_HERO = {
   badgeText: "Healthcare",
   description:
     "From medical imaging to drug discovery, healthcare AI requires infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute designed for medical workloads with certifications healthcare organizations need.",
   primaryCta: "Talk to Sales",
+  primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Compliance",
   image: "/images/healthcare.png",
   trustBadges: [
@@ -19,5 +22,8 @@ export const HEALTHCARE_FOOTER = {
   description:
     "Secure, compliant infrastructure for medical imaging, drug discovery, and healthcare research. ISO 27001 and SOC 2 Type II certified.",
   primaryCta: "Talk to Sales",
+  primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

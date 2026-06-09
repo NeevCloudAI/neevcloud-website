@@ -16,10 +16,7 @@ const AgenticWorkflowPage = () => {
       <AgenticWorkflowDeploymentSection />
       <FaqSection items={AGENTIC_WORKFLOW_FAQ_ITEMS} />
       <FooterComponent
-        title={AGENTIC_WORKFLOW_FOOTER.title}
-        description={AGENTIC_WORKFLOW_FOOTER.description}
-        primaryCta={AGENTIC_WORKFLOW_FOOTER.primaryCta}
-        secondaryCta={AGENTIC_WORKFLOW_FOOTER.secondaryCta}
+        {...AGENTIC_WORKFLOW_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

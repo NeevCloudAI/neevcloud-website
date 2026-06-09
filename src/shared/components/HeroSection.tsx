@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
 import { CircleCheck } from "@/shared/icons/lucide-icon-map";
 import LinkComponent from "@/shared/ui-lib/link";
@@ -17,26 +17,34 @@ const HeroSection = ({
   description,
   primaryCta,
   primaryCtaRoute,
+  primaryCtaTarget,
   secondaryCta,
   secondaryCtaRoute,
+  secondaryCtaTarget,
   badgeText,
   image,
   badgeIcon,
+  className,
   trustBadges = trustBadgesData,
 }: {
   title: React.ReactNode;
   description: string;
-  primaryCta: string;
+  primaryCta?: string;
   primaryCtaRoute?: string;
-  secondaryCta: string;
+  primaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
+  secondaryCta?: string;
   secondaryCtaRoute?: string;
+  secondaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
   badgeText: string;
   image?: string;
   badgeIcon?: boolean;
-  trustBadges?: string[];
+  className?: string;
+  trustBadges?: readonly string[];
 }) => {
   return (
-    <section className="relative bg-white pt-8 md:pt-16 2xl:pt-25">
+    <section
+      className={`relative bg-white pt-8 md:pt-16 2xl:pt-25 ${className}`}
+    >
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
@@ -52,28 +60,45 @@ const HeroSection = ({
           {description}
         </Text>
 
-        <div className="flex gap-4 mt-4 md:mt-7.5 z-10">
-          <LinkComponent href={primaryCtaRoute ?? ""}>
-            {primaryCta}
-          </LinkComponent>
-          <LinkComponent href={secondaryCtaRoute ?? ""} variant="outline">
-            {secondaryCta}
-          </LinkComponent>
-        </div>
+        {primaryCta || secondaryCta ? (
+          <div className="z-10 mt-4 flex gap-4 md:mt-7.5">
+            {primaryCta ? (
+              <LinkComponent
+                href={primaryCtaRoute ?? ""}
+                target={primaryCtaTarget}
+                spacing="lg"
+              >
+                {primaryCta}
+              </LinkComponent>
+            ) : null}
+            {secondaryCta ? (
+              <LinkComponent
+                href={secondaryCtaRoute ?? ""}
+                variant="outline"
+                target={secondaryCtaTarget}
+                spacing="lg"
+              >
+                {secondaryCta}
+              </LinkComponent>
+            ) : null}
+          </div>
+        ) : null}
 
-        <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">
-          {trustBadges.map((badge, index) => (
-            <div key={badge} className="flex items-center gap-3">
-              {badgeIcon && <CircleCheck size={16} />}
-              <span className="text-foreground text-sm whitespace-nowrap">
-                {badge}
-              </span>
-              {!badgeIcon && index < trustBadges.length - 1 && (
-                <span className="text-foreground text-sm">•</span>
-              )}
-            </div>
-          ))}
-        </div>
+        {trustBadges.length > 0 ? (
+          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">
+            {trustBadges.map((badge, index) => (
+              <div key={badge} className="flex items-center gap-3">
+                {badgeIcon && <CircleCheck size={16} />}
+                <span className="text-foreground text-sm whitespace-nowrap">
+                  {badge}
+                </span>
+                {!badgeIcon && index < trustBadges.length - 1 && (
+                  <span className="text-foreground text-sm">•</span>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : null}
 
         {image ? (
           <div className="w-full min-h-50 md:min-h-[80vh] mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
@@ -85,9 +110,9 @@ const HeroSection = ({
               priority
             />
           </div>
-        ) : (
+        ) : primaryCta || secondaryCta || trustBadges.length > 0 ? (
           <div className="mt-4 md:mt-12.5"></div>
-        )}
+        ) : null}
       </Container>
     </section>
   );

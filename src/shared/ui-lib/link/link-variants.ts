@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const linkVariants = cva(
-  "cursor-pointer w-fit whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed",
+  "cursor-pointer w-fit whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed text-center block",
   {
     variants: {
       variant: {
@@ -9,23 +9,38 @@ export const linkVariants = cva(
         secondary: `bg-secondary`,
         tertiary: `bg-tertiary`,
         outline: `border border-black text-black`,
+        "outline-gray": `border border-gray-85 text-gray-85`,
         black: `bg-black text-white`,
         "outline-primary": `bg-white`,
         white: `bg-white`,
         "white-outline-right": `border-r border-white-10`,
-        "white-outline": `border border-white`,
+        "white-outline": `border border-white text-white`,
         ghost: `bg-transparent`,
         gray: "bg-gray-10",
       },
       size: {
         default: "text-sm",
         sm: "text-sm",
+        xs: "text-xs",
         md: "text-md",
         lg: "text-lg",
         xl: "text-xl",
         xxl: "text-2xl",
         full: "w-full",
         none: "text-sm",
+      },
+      textColor: {
+        default: "text-white",
+        primary: "text-primary",
+        secondary: "text-secondary",
+        destructive: "text-destructive",
+        outline: "text-gray-10",
+        blue: "text-blue-40",
+        black: "text-black",
+        ghost: "text-black-80",
+        gray: "text-gray-80",
+        "gray-85": "text-gray-85",
+        "red-50": "text-red-50",
       },
       weight: {
         default: "font-normal",
@@ -73,6 +88,7 @@ export const linkVariants = cva(
       variant: "default",
       size: "default",
       spacing: "default",
+      weight: "medium",
       borderRadius: "default",
     },
   }

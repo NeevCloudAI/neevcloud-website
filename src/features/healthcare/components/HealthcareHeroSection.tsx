@@ -13,12 +13,7 @@ const HealthcareHeroSection = () => {
           </Text>
         </Text>
       }
-      description={HEALTHCARE_HERO.description}
-      primaryCta={HEALTHCARE_HERO.primaryCta}
-      secondaryCta={HEALTHCARE_HERO.secondaryCta}
-      badgeText={HEALTHCARE_HERO.badgeText}
-      image={HEALTHCARE_HERO.image}
-      trustBadges={[...HEALTHCARE_HERO.trustBadges]}
+      {...HEALTHCARE_HERO}
     />
   );
 };

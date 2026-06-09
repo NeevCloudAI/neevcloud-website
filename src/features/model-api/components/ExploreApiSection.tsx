@@ -3,6 +3,7 @@ import ExploreApiStepsTabsClient from "./explore-api/ExploreApiStepsTabsClient";
 import { EXPLORE_API_STEPS } from "../data/explore-api-section.data";
 import FooterCard from "@/shared/components/footer-card";
 import { Text } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const EXPLORE_API_PREVIEWS = EXPLORE_API_STEPS.map((_, index) => (
   <ExploreApiStepPreview key={index} stepIndex={index} />
@@ -41,6 +42,8 @@ const ExploreApiSection = () => {
           title="Documentation and Resources"
           description="Detailed reference documentation for every endpoint, including request parameters, response formats, error codes, and usage examples."
           primaryCta="View Full Model API Docs"
+          primaryCtaRoute={EXTERNAL_LINKS.documentation}
+          primaryCtaTarget="_blank"
         />
       </div>
     </ExploreApiStepsTabsClient>

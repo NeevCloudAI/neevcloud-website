@@ -13,12 +13,7 @@ const DefenceHeroSection = () => {
           </Text>
         </Text>
       }
-      description={DEFENCE_HERO.description}
-      primaryCta={DEFENCE_HERO.primaryCta}
-      secondaryCta={DEFENCE_HERO.secondaryCta}
-      badgeText={DEFENCE_HERO.badgeText}
-      image={DEFENCE_HERO.image}
-      trustBadges={[...DEFENCE_HERO.trustBadges]}
+      {...DEFENCE_HERO}
     />
   );
 };

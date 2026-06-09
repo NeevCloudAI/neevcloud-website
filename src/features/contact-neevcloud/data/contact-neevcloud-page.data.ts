@@ -1,9 +1,14 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const CONTACT_NEEVCLOUD_HERO = {
   badgeText: "Get in Touch",
   description:
     "Whether you're scaling AI, exploring the cloud, or need expert guidance, our team is here to help you move forward.",
   primaryCta: "Contact Us",
+  primaryCtaRoute: "/contact-neevcloud#contact-form",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
   badgeIcon: true,
   trustBadges: [
     "Expert guidance",
@@ -18,5 +23,9 @@ export const CONTACT_NEEVCLOUD_FOOTER = {
   description:
     "Create an account and receive 10,000 free API requests. No credit card required.",
   primaryCta: "Request API Access",
+  primaryCtaRoute: EXTERNAL_LINKS.apiKeys,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

@@ -1,7 +1,11 @@
 import type { GpuTechnicalSpecsSectionContent } from "@/shared/types/gpu-technical-specs-section.types";
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 
 export const NVIDIA_A100_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
   {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
     rows: [
       {
         id: "gpu-architecture",
@@ -128,6 +132,9 @@ export const NVIDIA_A100_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
 
 export const NVIDIA_A30_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
   {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
     rows: [
       {
         id: "gpu-memory",
@@ -206,6 +213,9 @@ export const NVIDIA_A30_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent
 
 export const NVIDIA_B200_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
   {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
     rows: [
       {
         id: "gpu",
@@ -312,6 +322,9 @@ export const NVIDIA_B200_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
 
 export const NVIDIA_B300_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
   {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
     rows: [
       {
         id: "gpu",
@@ -349,6 +362,9 @@ export const NVIDIA_B300_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
 
 export const NVIDIA_H100_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
   {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
     rows: [
       {
         id: "gpu-memory",

@@ -15,13 +15,7 @@ const DefencePage = () => {
       <DefenceApplicationSection />
       <DefenceSovereignSection />
       <FaqSection items={DEFENCE_FAQ_ITEMS} />
-      <FooterComponent
-        title={DEFENCE_FOOTER.title}
-        description={DEFENCE_FOOTER.description}
-        primaryCta={DEFENCE_FOOTER.primaryCta}
-        secondaryCta={DEFENCE_FOOTER.secondaryCta}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FooterComponent {...DEFENCE_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
     </>
   );
 };

@@ -2,6 +2,8 @@ import { LogOut } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import { ModelCardData } from "../../types/models-section.types";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type ModelCardProps = {
   model: ModelCardData;
@@ -53,22 +55,24 @@ const ModelCard = ({ model }: ModelCardProps) => {
       </div>
 
       <div className="flex gap-2 justify-between">
-        <Button
+        <LinkComponent
+          href={EXTERNAL_LINKS.aiInferencePlayground}
+          target="_blank"
           className="flex items-center gap-2"
-          weight="semibold"
-          borderRadius="sm"
         >
           <LogOut size="15" className="font-semibold" aria-hidden="true" />
           Try in Playground
-        </Button>
-        <Button
+        </LinkComponent>
+        <LinkComponent
+          href={EXTERNAL_LINKS.documentation}
+          target="_blank"
           variant="outline"
           textColor="black"
           weight="semibold"
           borderRadius="sm"
         >
           Read Documentation
-        </Button>
+        </LinkComponent>
       </div>
 
       <div className="absolute bottom-0 right-0 opacity-80 pointer-events-none">

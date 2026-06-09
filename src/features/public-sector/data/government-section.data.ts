@@ -21,7 +21,7 @@ export const GOVERNMENT_SERVICES: readonly GovernmentServiceItem[] = [
       "OpenAI-compatible endpoints. Sub-50ms latency, billed in INR. Native Indic model support.",
     highlight: "8x H100",
     highlightSubtext: "from ₹240/hr",
-    href: "/serverless-inference",
+    href: "/ai-inference",
   },
   {
     id: "storage",
@@ -43,7 +43,7 @@ export const GOVERNMENT_SERVICES: readonly GovernmentServiceItem[] = [
       "General purpose, compute optimized, and memory optimized instances for your business needs.",
     highlight: "6 families",
     highlightSubtext: "spot available",
-    href: "/cpu-cluster",
+    href: "/cpu-pricing",
   },
   {
     id: "managed-kubernetes",

@@ -20,6 +20,8 @@ import {
   updateWorkloadMix,
 } from "../../utils/pricing-calculator-utils";
 import { Button, Divider, Text } from "@/shared/ui-lib";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const PricingCalculatorClient = () => {
   const [totalRequests, setTotalRequests] = useState(DEFAULT_REQUESTS);
@@ -29,7 +31,7 @@ const PricingCalculatorClient = () => {
   const formattedRequests = formatRequests(totalRequests);
   const monthlyCost = useMemo(
     () => calculateMonthlyCost(totalRequests, mix),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const categoryCosts = useMemo(
@@ -39,9 +41,9 @@ const PricingCalculatorClient = () => {
           acc[id] = calculateCategoryCost(totalRequests, mix[id], id);
           return acc;
         },
-        {} as Record<WorkloadCategoryId, number>,
+        {} as Record<WorkloadCategoryId, number>
       ),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const handleMixChange = (category: WorkloadCategoryId, value: number) => {
@@ -100,9 +102,12 @@ const PricingCalculatorClient = () => {
         </div>
 
         <div className="mt-6 flex justify-end md:mt-8">
-          <Button className="w-full sm:w-auto">
+          <LinkComponent
+            href={EXTERNAL_LINKS.aiInferencePlayground}
+            target="_blank"
+          >
             Start with 10,000 free requests
-          </Button>
+          </LinkComponent>
         </div>
       </div>
     </div>

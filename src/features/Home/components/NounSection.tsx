@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import LinkComponent from "@/shared/ui-lib/link";
 import Image from "next/image";
 

@@ -1,39 +1,39 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const NEEVCLOUD_ARENA_FAQ_ITEMS: readonly FaqItem[] = [
+export const NEEVCLOUD_ARENA_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Getting Started",
-    question: "What is NeevCloud ARENA?",
+    category: "Networking",
+    question: "Do I need an account to use ARENA?",
     answer:
-      "ARENA is a hands-on environment where you test models, run guided workloads, and validate performance on production infrastructure before committing. It replaces documentation tours with direct, real-world experience.",
+      "Model Playground requires no account. Building and running workloads requires creating a free NeevCloud account.",
   },
   {
     id: 2,
     category: "Getting Started",
-    question: "Do I need an account to use ARENA?",
+    question: "Is ARENA using real production infrastructure?",
     answer:
-      "The Model Playground starts instantly without creating an account. Guided workload experiences and deeper infrastructure testing may require a session, but you can explore capabilities first and commit on your own timeline.",
+      "Yes. You're testing on the same GPU configurations, networking, and storage that production workloads use.",
   },
   {
     id: 3,
-    category: "Infrastructure",
-    question: "What infrastructure can I test in ARENA?",
+    category: "Getting Started",
+    question: "Can I use my own models and data?",
     answer:
-      "Test on the same production infrastructure your workloads would run on, including H100, A100, and other GPU configurations. Run training, inference, and deployment scenarios with real performance and cost metrics.",
+      "In guided Build AI workflows, you can upload custom models and datasets to test on NeevCloud infrastructure.",
   },
   {
     id: 4,
-    category: "Experience",
-    question: "What are the three paths in ARENA?",
+    category: "Billing",
+    question: "How long does a typical ARENA session take?",
     answer:
-      "TRY AI lets you test models in the browser. BUILD AI runs guided workloads on production GPUs. SEE AI explores real-world applications across industries so you can understand what's possible at scale.",
+      "Model Playground: instant. Guided workload sessions: 15–45 minutes, depending on complexity. Use case exploration: self-paced.",
   },
   {
     id: 5,
-    category: "Results",
-    question: "Can I share ARENA results with my team?",
+    category: "Scaling",
+    question: "Does using ARENA cost anything?",
     answer:
-      "Yes. Generate reports with performance data, cost breakdowns, and recommendations you can share with stakeholders and decision-makers to build confidence before adoption.",
+      "Model Playground is free. Build AI sessions include free credits for testing. Extended testing beyond free credits incurs standard usage charges.",
   },
-] as const;
+];

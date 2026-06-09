@@ -13,12 +13,7 @@ const BfsiHeroSection = () => {
           </Text>
         </Text>
       }
-      description={BFSI_HERO.description}
-      primaryCta={BFSI_HERO.primaryCta}
-      secondaryCta={BFSI_HERO.secondaryCta}
-      badgeText={BFSI_HERO.badgeText}
-      image={BFSI_HERO.image}
-      trustBadges={[...BFSI_HERO.trustBadges]}
+      {...BFSI_HERO}
     />
   );
 };

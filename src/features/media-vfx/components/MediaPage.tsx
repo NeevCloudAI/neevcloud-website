@@ -21,13 +21,7 @@ const MediaPage = () => {
       <PerformanceSection />
       <RenderingSection />
       <FaqSection items={MEDIA_FAQ_ITEMS} className="pt-0 md:pt-0 2xl:pt-0" />
-      <FooterComponent
-        title={MEDIA_FOOTER.title}
-        description={MEDIA_FOOTER.description}
-        primaryCta={MEDIA_FOOTER.primaryCta}
-        secondaryCta={MEDIA_FOOTER.secondaryCta}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FooterComponent {...MEDIA_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
     </>
   );
 };

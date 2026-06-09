@@ -1,6 +1,7 @@
 import { Text } from "@/shared/ui-lib";
 import { GPU_PRICING_TABLE_CELL_CLASS } from "../constants/gpu-pricing-table.constants";
 import type { GpuPricingRow } from "../types/gpu-pricing-table.types";
+import LinkComponent from "@/shared/ui-lib/link";
 
 type GpuPricingTableRowProps = {
   row: GpuPricingRow;
@@ -10,9 +11,14 @@ const GpuPricingTableRow = ({ row }: GpuPricingTableRowProps) => {
   return (
     <tr className="border-b border-black-7">
       <td className={GPU_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="primary-105">
+        <LinkComponent
+          href={`/nvidia-${row.sku}`}
+          variant="ghost"
+          spacing="none"
+          textColor="primary"
+        >
           {row.sku}
-        </Text>
+        </LinkComponent>
       </td>
       <td className={GPU_PRICING_TABLE_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="gray-80">

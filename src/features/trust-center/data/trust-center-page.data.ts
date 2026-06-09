@@ -1,3 +1,5 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const TRUST_CENTER_HERO = {
   badgeText: "Trust Center",
   description:
@@ -15,9 +17,13 @@ export const TRUST_CENTER_HERO = {
 } as const;
 
 export const TRUST_CENTER_FOOTER = {
-  title: "Build with confidence on NeevCloud",
+  title: "Start Building on NeevCloud",
   description:
-    "Enterprise-grade security, verified compliance, and transparent operations for mission-critical AI workloads.",
-  primaryCta: "View Certifications",
-  secondaryCta: "Explore Security",
+    "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges.",
+  primaryCta: "Access Console",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
+  secondaryCta: "Read Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

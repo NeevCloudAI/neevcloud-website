@@ -3,11 +3,14 @@ import Container from "@/shared/components/container";
 import GpuWhyChooseNeevcloudCard from "@/shared/components/gpu-why-choose-neevcloud-card";
 import type { GpuWhyChooseNeevcloudSectionProps } from "@/shared/types/gpu-why-choose-neevcloud-section.types";
 import { Button, Text } from "@/shared/ui-lib";
+import LinkComponent from "../ui-lib/link";
 
 const GpuWhyChooseNeevcloudSection = ({
   whyChoose,
   roi,
-  buttonText,
+  buttonCta,
+  buttonLink,
+  buttonTarget,
   className,
 }: GpuWhyChooseNeevcloudSectionProps) => {
   const roiPrimaryCards = roi.cards.slice(0, 3);
@@ -19,7 +22,7 @@ const GpuWhyChooseNeevcloudSection = ({
       aria-labelledby="gpu-why-choose-neevcloud-heading"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full md:w-[30%] h-[80%] top-20 right-[-5%] opacity-40 md:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full md:w-[30%] h-[30%] top-20 right-[-5%] opacity-40 md:opacity-100"
         aria-hidden="true"
       />
       <Container className="relative flex flex-col items-center justify-center">
@@ -96,9 +99,14 @@ const GpuWhyChooseNeevcloudSection = ({
           </ul>
         ) : null}
 
-        <Button spacing="lg" className="mt-8 md:mt-12.5">
-          {buttonText}
-        </Button>
+        <LinkComponent
+          href={buttonLink}
+          target={buttonTarget}
+          spacing="lg"
+          className="mt-4 w-fit md:mt-12.5"
+        >
+          {buttonCta}
+        </LinkComponent>
       </Container>
     </section>
   );

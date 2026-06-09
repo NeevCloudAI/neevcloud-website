@@ -14,12 +14,7 @@ const GenerativeAiHeroSection = () => {
           on Indian Infrastructure
         </Text>
       }
-      description={GENERATIVE_AI_HERO.description}
-      primaryCta={GENERATIVE_AI_HERO.primaryCta}
-      secondaryCta={GENERATIVE_AI_HERO.secondaryCta}
-      badgeText={GENERATIVE_AI_HERO.badgeText}
-      image={GENERATIVE_AI_HERO.image}
-      trustBadges={[...GENERATIVE_AI_HERO.trustBadges]}
+      {...GENERATIVE_AI_HERO}
     />
   );
 };

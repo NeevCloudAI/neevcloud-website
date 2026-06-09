@@ -13,11 +13,7 @@ const GpuClusterHeroSection = () => {
           </Text>
         </Text>
       }
-      description={GPU_CLUSTER_HERO.description}
-      primaryCta={GPU_CLUSTER_HERO.primaryCta}
-      secondaryCta={GPU_CLUSTER_HERO.secondaryCta}
-      badgeText={GPU_CLUSTER_HERO.badgeText}
-      image={GPU_CLUSTER_HERO.image}
+      {...GPU_CLUSTER_HERO}
     />
   );
 };

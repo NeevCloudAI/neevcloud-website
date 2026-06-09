@@ -10,12 +10,7 @@ const LlmTrainingHeroSection = () => {
           Fine-Tune LLMs at Scale, in India
         </Text>
       }
-      description={LLM_TRAINING_HERO.description}
-      primaryCta={LLM_TRAINING_HERO.primaryCta}
-      secondaryCta={LLM_TRAINING_HERO.secondaryCta}
-      badgeText={LLM_TRAINING_HERO.badgeText}
-      image={LLM_TRAINING_HERO.image}
-      trustBadges={[...LLM_TRAINING_HERO.trustBadges]}
+      {...LLM_TRAINING_HERO}
     />
   );
 };

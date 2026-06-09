@@ -1,9 +1,14 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const AI_INFERENCE_HERO = {
   badgeText: "AI Inference",
   description:
     "Managed inference endpoints with low latency, OpenAI-compatible APIs, and India-resident infrastructure, no platform team needed.",
   primaryCta: "Deploy Your Model",
+  primaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Inference Pricing",
+  secondaryCtaRoute: "/ai-inference#ai-inference-transparent-pricing-section",
   trustBadges: [
     "OpenAI-compatible API",
     "Managed infrastructure",
@@ -14,9 +19,12 @@ export const AI_INFERENCE_HERO = {
 } as const;
 
 export const AI_INFERENCE_FOOTER = {
-  title: "Deploy Production Inference in Minutes",
+  title: "Deploy Your Model to Production",
   description:
-    "Bring your own model or use hosted endpoints. OpenAI-compatible APIs, India-resident infrastructure, and pay-per-token pricing with no idle compute charges.",
-  primaryCta: "Deploy Your Model",
-  secondaryCta: "Talk to Our Team",
+    "Flexible CPU compute for data preprocessing, APIs, databases, and orchestration. Deploy in 60 seconds with transparent per-hour pricing.",
+  primaryCta: "Deploy Instance",
+  primaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
+  primaryCtaTarget: "_blank",
+  secondaryCta: "View Configurations",
+  secondaryCtaRoute: "/ai-inference#ai-inference-transparent-pricing-section",
 } as const;

@@ -1,9 +1,14 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const NEEVCLOUD_ARENA_HERO = {
   badgeText: "NeevCloud Arena",
   description:
     "NeevCloud ARENA lets you test models, run workloads, and validate performance on production infrastructure, before making decisions.",
   primaryCta: "Try ARENA",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
   secondaryCta: "Book a Session",
+  secondaryCtaRoute: "/contact-neevcloud",
   trustBadges: [
     "Try in Minutes",
     "Real Infrastructure",
@@ -15,9 +20,13 @@ export const NEEVCLOUD_ARENA_HERO = {
 } as const;
 
 export const NEEVCLOUD_ARENA_FOOTER = {
-  title: "Experience AI infrastructure before you commit",
+  title: "Start Building on NeevCloud",
   description:
-    "Test models, run workloads, and validate performance on production infrastructure. No setup, no synthetic benchmarks — just real results.",
-  primaryCta: "Try ARENA",
-  secondaryCta: "Book a Session",
+    "Deploy general-purpose, compute-optimized, or memory-optimized instances in minutes. Co-located with GPU clusters for zero egress charges.",
+  primaryCta: "Access Console",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
+  secondaryCta: "Read Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

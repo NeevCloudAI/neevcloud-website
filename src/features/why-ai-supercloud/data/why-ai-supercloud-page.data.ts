@@ -1,9 +1,15 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const WHY_AI_SUPERCLOUD_HERO = {
   badgeText: "Why AI SuperCloud",
   description:
     "Traditional cloud was built for general computing, and later adapted for AI. AI Supercloud is purpose-built for machine learning from the ground up.",
   primaryCta: "Access Console",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",
@@ -19,5 +25,9 @@ export const WHY_AI_SUPERCLOUD_FOOTER = {
   description:
     "Purpose-built AI Supercloud with instant GPU access, transparent pricing, and sovereign infrastructure within India.",
   primaryCta: "Access Console",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

@@ -2,6 +2,7 @@ import { Button, Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
+import LinkComponent from "@/shared/ui-lib/link";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -89,9 +90,15 @@ export default function PricingMegaMenu() {
               Compare us vs Hyperscalers
             </Text>
           </div>
-          <Text as="small" textColor="red-50">
+          <LinkComponent
+            href="/tco-calculator"
+            variant="ghost"
+            spacing="none"
+            size="xs"
+            textColor="red-50"
+          >
             Calculate Now -&gt;
-          </Text>
+          </LinkComponent>
         </div>
       </div>
       <Divider orientation="horizontal" />

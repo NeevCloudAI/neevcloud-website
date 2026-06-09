@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import ModelInfoDetails from "@/shared/components/ModelInfoDetails";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import type { ModelInfoCardProps } from "@/shared/types/model-info-card.types";
+import LinkComponent from "../ui-lib/link";
 
 const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
   const {
@@ -12,9 +13,15 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
     metrics,
     capabilities,
     useCases,
-    primaryActionLabel = "Try in playground",
-    secondaryActionLabel = "View Full Docs",
-    tertiaryActionLabel = "Get API Key",
+    primaryActionLabel,
+    primaryActionHref,
+    primaryActionTarget,
+    secondaryActionLabel,
+    secondaryActionHref,
+    secondaryActionTarget,
+    tertiaryActionLabel,
+    tertiaryActionHref,
+    tertiaryActionTarget,
   } = model;
 
   return (
@@ -54,7 +61,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
               className={cn(
                 "flex flex-col p-4 border-gray-60",
                 !isLastRow && "border-b",
-                !isRightColumn && "border-r",
+                !isRightColumn && "border-r"
               )}
             >
               <Text as="small" textColor="gray-75">
@@ -72,22 +79,27 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
 
       <Divider className="bg-gray-60 mt-7.5 mb-5" orientation="horizontal" />
 
-      <div className="flex flex-wrap gap-2">
-        <Button spacing="sm">{primaryActionLabel}</Button>
-        <Button
-          spacing="sm"
-          variant="ghost"
-          className="border border-gray-85 text-gray-85"
+      <div className="flex flex-wrap justify-between gap-1">
+        <LinkComponent
+          href={primaryActionHref ?? ""}
+          target={primaryActionTarget ?? ""}
+        >
+          {primaryActionLabel}
+        </LinkComponent>
+        <LinkComponent
+          href={secondaryActionHref ?? ""}
+          target={secondaryActionTarget ?? ""}
+          variant="outline-gray"
         >
           {secondaryActionLabel}
-        </Button>
-        <Button
-          spacing="sm"
-          variant="ghost"
-          className="border border-gray-85 text-gray-85"
+        </LinkComponent>
+        <LinkComponent
+          href={tertiaryActionHref ?? ""}
+          target={tertiaryActionTarget ?? ""}
+          variant="outline-gray"
         >
           {tertiaryActionLabel}
-        </Button>
+        </LinkComponent>
       </div>
     </article>
   );

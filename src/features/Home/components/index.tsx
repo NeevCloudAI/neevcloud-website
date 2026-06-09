@@ -7,6 +7,7 @@ import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 import StackSection from "./StackSection";
 import InfrastructureSection from "./InfrastructureSection";
 import ReviewsSection from "./ReviewsSection";
+import { HOME_FOOTER } from "../constants/home.constants";
 
 const HomeComponent = () => {
   return (
@@ -19,7 +20,7 @@ const HomeComponent = () => {
       <InfrastructureSection />
       <ReviewsSection />
       <NounSection />
-      <FooterComponent className="pt-0 md:pt-0 2xl:pt-0" />
+      <FooterComponent {...HOME_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
     </>
   );
 };

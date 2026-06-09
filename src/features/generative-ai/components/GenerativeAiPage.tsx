@@ -18,10 +18,7 @@ const GenerativeAiPage = () => {
       <GenerativeAiPerformanceSection />
       <FaqSection items={GENERATIVE_AI_FAQ_ITEMS} />
       <FooterComponent
-        title={GENERATIVE_AI_FOOTER.title}
-        description={GENERATIVE_AI_FOOTER.description}
-        primaryCta={GENERATIVE_AI_FOOTER.primaryCta}
-        secondaryCta={GENERATIVE_AI_FOOTER.secondaryCta}
+        {...GENERATIVE_AI_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

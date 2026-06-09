@@ -47,7 +47,7 @@ const SOLUTIONS_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             description: "Clinical-Grade Compliance",
           },
           {
-            iconSrc: "/icons/flag.svg",
+            iconSrc: "",
             iconAlt: "Defence",
             title: "Defence",
             href: "/defence",

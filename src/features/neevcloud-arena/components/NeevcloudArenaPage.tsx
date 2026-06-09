@@ -21,10 +21,7 @@ const NeevcloudArenaPage = () => {
         className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
-        title={NEEVCLOUD_ARENA_FOOTER.title}
-        description={NEEVCLOUD_ARENA_FOOTER.description}
-        primaryCta={NEEVCLOUD_ARENA_FOOTER.primaryCta}
-        secondaryCta={NEEVCLOUD_ARENA_FOOTER.secondaryCta}
+        {...NEEVCLOUD_ARENA_FOOTER}
         className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>

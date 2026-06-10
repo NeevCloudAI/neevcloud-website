@@ -43,8 +43,8 @@ function renderCard(card: ReviewSectionCard, index: number) {
         }
       >
         <Image
-          src={"/icons/roor.svg"}
-          alt={"roor.ai"}
+          src={card.logo}
+          alt={card.companyLabel}
           width={135}
           height={135}
         />
@@ -57,14 +57,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
         />
         <Text>{card.quote}</Text>
         <div className="mt-4 md:mt-12 flex items-center gap-3">
-          <div
-            className="size-12 shrink-0 rounded-full bg-gray-50"
-            aria-hidden
-          />
-          <div>
-            <Text as="h6">{card.role}</Text>
-            <Text textColor="gray-84">{card.attributionCompany}</Text>
-          </div>
+          <Text as="h6">{card.companyLabel}</Text>
         </div>
       </article>
     );
@@ -135,7 +128,7 @@ export default function ReviewsCarousel() {
           type="button"
           className={cn(
             "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black cursor-pointer",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show previous reviews"
           onClick={() => scrollByDirection("left")}
@@ -146,7 +139,7 @@ export default function ReviewsCarousel() {
           type="button"
           className={cn(
             "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black cursor-pointer",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show next reviews"
           onClick={() => scrollByDirection("right")}

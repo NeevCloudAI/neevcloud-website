@@ -60,8 +60,7 @@ export function calculateTcoBreakdown(
 
   const gpuSubtotal =
     config.gpuCount * gpuType.ratePerHour * config.hoursPerMonth;
-  const gpuCompute =
-    gpuSubtotal * (1 - commitment.discountPercent / 100);
+  const gpuCompute = gpuSubtotal * (1 - commitment.discountPercent / 100);
 
   const storageTotal =
     config.localNvmeGb * rates.localNvmePerGbMonth +
@@ -89,9 +88,7 @@ export function calculateTcoBreakdown(
       const competitorTotal = providerTotals[provider.id];
       const amount = Math.max(0, competitorTotal - monthlyTotal);
       const percent =
-        competitorTotal > 0
-          ? Math.round((amount / competitorTotal) * 100)
-          : 0;
+        competitorTotal > 0 ? Math.round((amount / competitorTotal) * 100) : 0;
 
       acc[provider.id] = { amount, percent };
       return acc;

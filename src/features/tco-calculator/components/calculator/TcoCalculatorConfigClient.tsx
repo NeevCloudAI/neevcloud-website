@@ -45,8 +45,9 @@ const TcoCalculatorConfigClient = () => {
     useState<TcoCalculatorGpuTypeId>(DEFAULT_GPU_TYPE_ID);
   const [gpuCount, setGpuCount] = useState(DEFAULT_GPU_COUNT);
   const [hoursPerMonth, setHoursPerMonth] = useState(DEFAULT_HOURS_PER_MONTH);
-  const [commitmentId, setCommitmentId] =
-    useState<TcoCalculatorCommitmentId>(DEFAULT_COMMITMENT_ID);
+  const [commitmentId, setCommitmentId] = useState<TcoCalculatorCommitmentId>(
+    DEFAULT_COMMITMENT_ID,
+  );
   const [localNvmeGb, setLocalNvmeGb] = useState(DEFAULT_LOCAL_NVME_GB);
   const [networkStorageGb, setNetworkStorageGb] = useState(
     DEFAULT_NETWORK_STORAGE_GB,

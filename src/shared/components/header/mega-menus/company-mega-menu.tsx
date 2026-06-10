@@ -7,21 +7,21 @@ const COMPANY_SECTION_HEADING = "COMPANY";
 
 const COMPANY_COLUMN_LEFT: MegaMenuLinkRowProps[] = [
   {
-    iconSrc: "",
+    iconSrc: "/icons/info.svg",
     iconAlt: "About us",
     title: "About Us",
     description: "Our Story & Vision and Mission",
     href: "/about-us",
   },
   {
-    iconSrc: "",
+    iconSrc: "/icons/leadership.svg",
     iconAlt: "Leadership",
     title: "Leadership",
     description: "Meet the Team",
     href: "/leadership",
   },
   {
-    iconSrc: "",
+    iconSrc: "/icons/career.svg",
     iconAlt: "Career",
     title: "Career",
     description: "Build the Sovereign Cloud",
@@ -31,21 +31,21 @@ const COMPANY_COLUMN_LEFT: MegaMenuLinkRowProps[] = [
 
 const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
   {
-    iconSrc: "",
+    iconSrc: "/icons/life.svg",
     iconAlt: "Life at NeevCloud",
     title: "Life at NeevCloud",
     description: "Culture, benefits, and how we work",
     href: "/life-at-neevcloud",
   },
   {
-    iconSrc: "",
+    iconSrc: "/icons/event.svg",
     iconAlt: "Event",
     title: "Event",
     description: "Webinars, meetups, and announcements",
     href: "/events",
   },
   {
-    iconSrc: "",
+    iconSrc: "/icons/contact-us.svg",
     iconAlt: "Contact us",
     title: "Contact Us",
     description: "Talk to Sales or Support",

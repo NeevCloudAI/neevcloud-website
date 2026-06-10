@@ -5,10 +5,12 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | NeevCloud",
-  description: "NeevCloud privacy policy describing how we collect, use, and protect your data.",
+  description:
+    "NeevCloud privacy policy describing how we collect, use, and protect your data.",
   openGraph: {
     title: "Privacy Policy | NeevCloud",
-    description: "NeevCloud privacy policy describing how we collect, use, and protect your data.",
+    description:
+      "NeevCloud privacy policy describing how we collect, use, and protect your data.",
   },
 };
 

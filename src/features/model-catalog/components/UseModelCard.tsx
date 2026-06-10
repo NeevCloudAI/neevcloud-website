@@ -67,7 +67,7 @@ const UseModelCard = ({ card }: UseModelCardProps) => {
         weight="semibold"
         className={cn(
           "mt-6 md:mt-7.5 w-full text-center",
-          CTA_BUTTON_CLASS[ctaVariant]
+          CTA_BUTTON_CLASS[ctaVariant],
         )}
       >
         {ctaLabel}

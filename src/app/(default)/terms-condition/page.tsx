@@ -5,10 +5,12 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | NeevCloud",
-  description: "NeevCloud terms and conditions for using our AI infrastructure platform and services.",
+  description:
+    "NeevCloud terms and conditions for using our AI infrastructure platform and services.",
   openGraph: {
     title: "Terms & Conditions | NeevCloud",
-    description: "NeevCloud terms and conditions for using our AI infrastructure platform and services.",
+    description:
+      "NeevCloud terms and conditions for using our AI infrastructure platform and services.",
   },
 };
 

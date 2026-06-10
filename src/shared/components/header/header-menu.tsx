@@ -16,13 +16,19 @@ type HeaderMenuProps = {
 
 const megaMenuPanelClassName = cn(
   "absolute left-1/2 top-full z-100",
-  "w-full max-w-[min(1200px,calc(100vw-2rem))]",
+  "w-full max-w-[min(1000px,calc(100vw-2rem))]",
   "-translate-x-1/2",
   "rounded-b-md bg-white shadow-md"
 );
 
 const navLinkUnderlineClassName =
   "relative flex h-20 items-center after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100 group-focus-within:after:scale-x-100";
+
+function shouldCloseMegaMenuOnClick(target: EventTarget | null): boolean {
+  return Boolean(
+    target instanceof Element && target.closest("a, button[type='button']")
+  );
+}
 
 export default function HeaderMenu({ children }: HeaderMenuProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,6 +37,13 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
   const [desktopOpenNavId, setDesktopOpenNavId] = useState<HeaderNavId | null>(
     null
   );
+
+  const closeDesktopMegaMenu = () => setDesktopOpenNavId(null);
+
+  const closeMobileMegaMenu = () => {
+    setMobileExpandedNavId(null);
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -100,7 +113,15 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                     </Button>
                   </div>
                   {MegaMenu && isDesktopOpen ? (
-                    <div className={megaMenuPanelClassName} role="presentation">
+                    <div
+                      className={megaMenuPanelClassName}
+                      role="presentation"
+                      onClickCapture={(event) => {
+                        if (shouldCloseMegaMenuOnClick(event.target)) {
+                          closeDesktopMegaMenu();
+                        }
+                      }}
+                    >
                       <MegaMenu />
                     </div>
                   ) : null}
@@ -220,6 +241,11 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                     role="region"
                     aria-labelledby={`mobile-nav-${navItem.id}`}
                     className="max-h-[min(60vh,520px)] overflow-y-auto overscroll-contain border-t border-gray-200 bg-gray-10 [&>div]:rounded-none [&>div]:p-4 [&>div]:shadow-none"
+                    onClickCapture={(event) => {
+                      if (shouldCloseMegaMenuOnClick(event.target)) {
+                        closeMobileMegaMenu();
+                      }
+                    }}
                   >
                     <MobileMegaMenu />
                   </div>

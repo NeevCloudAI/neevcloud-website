@@ -8,8 +8,7 @@ export type ReviewTestimonialCard = {
   type: "testimonial";
   companyLabel: string;
   quote: string;
-  role: string;
-  attributionCompany: string;
+  logo: string;
 };
 
 export type ReviewRatingCard = {

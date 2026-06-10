@@ -2,10 +2,7 @@
 
 import PricingCalculatorSlider from "@/features/model-api/components/pricing/PricingCalculatorSlider";
 import { Text } from "@/shared/ui-lib";
-import {
-  sliderToValue,
-  valueToSlider,
-} from "../../utils/tco-calculator-utils";
+import { sliderToValue, valueToSlider } from "../../utils/tco-calculator-utils";
 
 type TcoCalculatorSliderFieldProps = {
   label: string;

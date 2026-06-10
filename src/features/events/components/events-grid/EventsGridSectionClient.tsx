@@ -18,7 +18,7 @@ const EventsGridSectionClient = ({
 
   const filteredEvents = useMemo(
     () => events.filter((event) => matchesEventFilter(event, activeFilter)),
-    [events, activeFilter]
+    [events, activeFilter],
   );
 
   return (
@@ -54,7 +54,7 @@ const EventsGridSectionClient = ({
                 isLast && "rounded-r-md",
                 isSelected
                   ? "bg-primary-100 text-black"
-                  : "border-gray-90 text-gray-65"
+                  : "border-gray-90 text-gray-65",
               )}
             >
               {filter.label}

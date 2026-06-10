@@ -20,21 +20,21 @@ const PRICING_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
         heading: "PRICING",
         links: [
           {
-            iconSrc: "",
+            iconSrc: "/icons/gpu-instance.svg",
             iconAlt: "GPU Compute",
             title: "GPU Compute",
             description: "On-Demand & Reserved Plans",
             href: "/gpu-pricing",
           },
           {
-            iconSrc: "",
+            iconSrc: "/icons/cpu-instance.svg",
             iconAlt: "CPU Compute",
             title: "CPU Compute",
             description: "Per-Second Billing",
             href: "/cpu-pricing",
           },
           {
-            iconSrc: "",
+            iconSrc: "/icons/serverless-api.svg",
             iconAlt: "AI Inference",
             title: "AI Inference",
             description: "Per-Token Serverless Rates",

@@ -8,19 +8,17 @@ export const REVIEWS_SECTION_CARDS: ReviewSectionCard[] = [
   },
   {
     type: "testimonial",
-    companyLabel: "roar.ai",
+    companyLabel: "NeuroBridge",
     quote:
-      "We used the NeevCloud to train and fine-tune our large language models, and the performance was consistently reliable. Setup was quick, training times were noticeably faster, and the support team was responsive whenever we needed assistance.",
-    role: "AI Engineer",
-    attributionCompany: "roar.ai",
+      "NeevCloud provides the high-performance GPU infrastructure we need to accelerate AI research and deploy production-grade AI systems at scale. Its reliability, scalability, and seamless access to compute resources make it a trusted foundation for our innovation.",
+    logo: "/icons/neurobridge-logo.svg",
   },
   {
     type: "testimonial",
-    companyLabel: "northbeam.io",
+    companyLabel: "Videoverse",
     quote:
-      "We used the NeevCloud to train and fine-tune our large language models, and the performance was consistently reliable. Setup was quick, training times were noticeably faster, and the support team was responsive whenever we needed assistance.",
-    role: "ML Lead",
-    attributionCompany: "northbeam.io",
+      "NeevCloud delivers the scalable GPU computing power required for our AI-driven video processing workloads. Its robust infrastructure, consistent performance, and enterprise-grade reliability enable us to innovate faster and deliver exceptional video experiences at scale.",
+    logo: "/icons/videoverse-logo.svg",
   },
   {
     type: "rating",
@@ -29,18 +27,9 @@ export const REVIEWS_SECTION_CARDS: ReviewSectionCard[] = [
   },
   {
     type: "testimonial",
-    companyLabel: "vertex labs",
+    companyLabel: "Msg91",
     quote:
-      "We used the NeevCloud to train and fine-tune our large language models, and the performance was consistently reliable. Setup was quick, training times were noticeably faster, and the support team was responsive whenever we needed assistance.",
-    role: "Research Engineer",
-    attributionCompany: "vertex labs",
-  },
-  {
-    type: "testimonial",
-    companyLabel: "vertex labs",
-    quote:
-      "We used the NeevCloud to train and fine-tune our large language models, and the performance was consistently reliable. Setup was quick, training times were noticeably faster, and the support team was responsive whenever we needed assistance.",
-    role: "Research Engineer",
-    attributionCompany: "vertex labs",
+      "NeevCloud's reliable GPU infrastructure and scalable cloud platform empower us to build, deploy, and scale communication-driven AI solutions with confidence.",
+    logo: "/icons/msg91-logo.svg",
   },
 ];

@@ -126,7 +126,7 @@ const TermsConditionContentSection = () => {
         <Text textColor="gray-90">
           <strong>3. THE TYPES OF INFORMATION WE COLLECT</strong>
         </Text>
-        <ul className="">
+        <ul className="legal-alpha-list text-gray-90 text-sm space-y-5">
           <li className="text-gray-90">
             <strong>Personal Information:</strong> This includes the contact
             information of customers and sub-users added to the Customer Account
@@ -218,8 +218,8 @@ const TermsConditionContentSection = () => {
         <Text textColor="gray-90">
           <strong>4. HOW DO WE COLLECT INFORMATION ABOUT YOU</strong>
         </Text>
-        <ul className="legal-alpha-list">
-          <li>
+        <ul className="legal-alpha-list text-gray-90 text-sm space-y-5">
+          <li className="text-gray-90">
             <strong>Information you give us or our service providers.</strong>{" "}
             may provide Personal Information when you: (i) access the Website,
             (ii) request, purchase and use the Services, (iii) communicate with
@@ -312,8 +312,8 @@ const TermsConditionContentSection = () => {
           Unless otherwise stated herein, we use your Information for providing
           you the Services that you have requested from us, as described below:
         </Text>
-        <ul className="legal-alpha-list">
-          <li>
+        <ul className="legal-alpha-list text-gray-90 text-sm space-y-5">
+          <li className="text-gray-90">
             <strong>To contact you:</strong> use your Contact Information to get
             in touch with you. Here are some examples of reasons why we might
             contact you : to communicate with you about your orders or the
@@ -437,8 +437,8 @@ const TermsConditionContentSection = () => {
           other third parties as permitted by applicable law in a country where
           NeevCloud operates and as described in this section.
         </Text>
-        <ul className="legal-alpha-list">
-          <li>
+        <ul className="legal-alpha-list text-gray-90 text-sm space-y-5">
+          <li className="text-gray-90">
             <strong>
               Disclosure to our Service Providers and third-party business
               Partners:
@@ -501,8 +501,8 @@ const TermsConditionContentSection = () => {
         <Text textColor="gray-90">
           <strong>7. HOW YOU CAN MANAGE YOUR PERSONAL INFORMATION</strong>
         </Text>
-        <ul className="legal-alpha-list">
-          <li>
+        <ul className="legal-alpha-list text-gray-90 text-sm space-y-5">
+          <li className="text-gray-90">
             <strong>Communication Preferences and Opt-outs:</strong> you wish to
             stop receiving email marketing communications from us, please click
             on the “unsubscribe” link at the bottom of the relevant email
@@ -532,12 +532,13 @@ const TermsConditionContentSection = () => {
               reasonable timeframes stipulated by applicable law. Please note
               that some requests may be subject to a reasonable fee.
             </Text>
-            <Text textColor="gray-90">
+            <Text textColor="gray-90" className="mt-5">
               7.c.2. If you would like to correct or update the Information we
               hold about you, or revoke consent previously granted, please
               follow these instructions:
             </Text>
-            <ul className="legal-list">
+
+            <ul className="list-disc list-inside text-gray-90 text-sm space-y-5 mt-5">
               <li>
                 If you’re an existing customer, please log in to the applicable
                 NeevCloud control panel to submit a support ticket.
@@ -583,7 +584,7 @@ const TermsConditionContentSection = () => {
           <li>
             <strong>
               Choosing not to provide us with certain information:
-            </strong>{" "}
+            </strong>
             can choose not to provide certain information when using the Website
             or the Services but this may prevent you from being able to take
             full advantage of the functions available online and it may prevent
@@ -593,14 +594,14 @@ const TermsConditionContentSection = () => {
         <Text textColor="gray-90">
           <strong>8. SECURITY OF YOUR INFORMATION</strong>
         </Text>
-        <ul className="legal-alpha-list">
-          <li>
+        <ul className="legal-alpha-list text-gray-90 text-sm space-y-5">
+          <li className="text-gray-90">
             <strong>The measures we take:</strong> are committed to industry
             best practice standards when it comes to preventing loss, misuse,
             alteration, unauthorised access, or unlawful or unnecessary
             processing of the Information we collect as described in Section 3
             of this Privacy Policy. For example, we:
-            <ul className="legal-list">
+            <ul className="list-disc list-inside text-gray-90 text-sm space-y-5 mb-5">
               <li>make use of encryption technology as required;</li>
               <li>
                 use appropriate network access control technology to limit
@@ -623,7 +624,7 @@ const TermsConditionContentSection = () => {
             The steps you should take. To help maintain the security of
             information you provide to NeevCloud or you store on NeevCloud’s
             hosted systems, please follow these rules:
-            <ul className="legal-list">
+            <ul className="list-disc list-inside text-gray-90 text-sm space-y-5 mb-5">
               <li>Keep your passwords private.</li>
               <li>
                 If you’re already a customer, remember that you’re responsible
@@ -684,14 +685,16 @@ const TermsConditionContentSection = () => {
           cancel or remove your Information but may retain and use copies of
           your Information as necessary to comply with our legal obligations,
           resolve disputes, and enforce our agreements. If you do not have a
-          Customer Account, you can send a request by email to{" "}
-          <a
-            href="mailto:support@neevcloud.com"
-            className="legal-link"
-            target="_top"
+          Customer Account, you can send a request by email to
+          <Text
+            as="span"
+            variant="p"
+            textColor="primary"
+            className="underline"
+            weight="medium"
           >
-            support@neevcloud.com
-          </a>{" "}
+            <a href="mailto:support@neevcloud.com">support@neevcloud.com</a>
+          </Text>
           or write to us at the address listed in Section 14 of this Privacy
           Policy.
         </Text>
@@ -706,9 +709,8 @@ const TermsConditionContentSection = () => {
           Data or Information) Rules, 2011, and the Digital Personal Data
           Protection Act, 2023 (&quot;DPDPA&quot;) of India.
         </Text>
-        <ol className="legal-alpha-list-none-bullet">
+        <ul className="legal-aplha-number-list text-gray-90 text-sm space-y-5">
           <li>
-            {" "}
             <strong>Data Minimisation</strong>
             <Text textColor="gray-90">
               NeevCloud collects only the Personal Information that is adequate,
@@ -720,13 +722,12 @@ const TermsConditionContentSection = () => {
             </Text>
           </li>
           <li>
-            {" "}
             <strong>Data Subject Rights</strong>
             <Text textColor="gray-90">
               Subject to applicable law, you have the following rights in
               relation to your Personal Information:
             </Text>
-            <ul className="rb-sub-list">
+            <ul className="list-disc list-inside text-gray-90 text-sm space-y-5 my-5">
               <li>
                 <strong>Right to Access:</strong> You have the right to request
                 access to the Personal Information we hold about you and to
@@ -762,13 +763,20 @@ const TermsConditionContentSection = () => {
             </ul>
             To exercise any of the above rights, please log in to the applicable
             NeevCloud control panel and submit a support ticket, or contact us
-            at{" "}
-            <a href="mailto:dpo@neevcloud.com" target="_top">
-              dpo@neevcloud.com
-            </a>
+            at
+            <Text
+              as="span"
+              variant="p"
+              textColor="primary"
+              className="underline"
+              weight="medium"
+            >
+              <a href="mailto:dpo@neevcloud.com" target="_top">
+                dpo@neevcloud.com
+              </a>
+            </Text>
             . We will respond to your request within the timeframes stipulated
             by applicable law.
-            <Text textColor="gray-90"></Text>
           </li>
           <li>
             <strong>Data Protection Officer</strong>
@@ -776,13 +784,21 @@ const TermsConditionContentSection = () => {
               NeevCloud has designated a responsible point of contact for data
               protection matters. If you have any concerns, queries, or
               complaints regarding the processing of your Personal Information
-              or our data protection practices, you may contact us at:{" "}
-              <a href="mailto:dpo@neevcloud.com" target="_top">
-                dpo@neevcloud.com
-              </a>
+              or our data protection practices, you may contact us at:
+              <Text
+                as="span"
+                variant="p"
+                textColor="primary"
+                className="underline"
+                weight="medium"
+              >
+                <a href="mailto:dpo@neevcloud.com" target="_top">
+                  dpo@neevcloud.com
+                </a>
+              </Text>
             </Text>
           </li>
-        </ol>
+        </ul>
         <Text textColor="gray-90">
           <strong>11. CHILDREN</strong>
         </Text>
@@ -870,14 +886,18 @@ const TermsConditionContentSection = () => {
         <Text textColor="gray-90">
           For any queries regarding data protection, you may contact our <br />
           Data Protection Officer, <strong>Noel Varghese</strong>
-          Email id:{" "}
-          <a
-            href="mailto:dpo@neevcloud.com"
-            className="legal-link"
-            target="_top"
+          Email id:
+          <Text
+            as="span"
+            variant="p"
+            textColor="primary"
+            className="underline"
+            weight="medium"
           >
-            dpo@neevcloud.com
-          </a>
+            <a href="mailto:dpo@neevcloud.com" target="_top">
+              noel@neevcloud.com
+            </a>
+          </Text>
         </Text>
         <Text textColor="gray-90">
           Registered Office Address: NEEVAI SUPERCLOUD PRIVATE LIMITED, 401,

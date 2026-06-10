@@ -10,6 +10,7 @@ const SLIDESHOW_IMAGES: SlideShowSlide[] = [
   { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
   { src: "/images/slide-show2.png", alt: "NeevCloud platform overview" },
   { src: "/images/slide-show3.png", alt: "NeevCloud platform overview" },
+  { src: "/images/slide-show4.png", alt: "NeevCloud platform overview" },
 ];
 
 export default function HeroRotator() {
@@ -42,7 +43,7 @@ export default function HeroRotator() {
         {activeHeroSlide.subtitle}
       </Text>
 
-      <div className="flex gap-4 mt-4 z-10">
+      <div className="flex gap-5 mt-5 z-10">
         <LinkComponent
           href={activeHeroSlide.primaryCtaRoute ?? ""}
           variant={activeHeroSlide.primaryCtaVariant}

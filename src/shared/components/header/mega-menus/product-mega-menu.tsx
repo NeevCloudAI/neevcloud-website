@@ -63,12 +63,12 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             href: "/nvme",
             description: "Sub-Millisecond Latency",
           },
-          {
-            iconSrc: "/icons/object-storage.svg",
-            iconAlt: "Object storage",
-            title: "Object Storage",
-            description: "S3-compatible . India-resident",
-          },
+          // {
+          //   iconSrc: "/icons/object-storage.svg",
+          //   iconAlt: "Object storage",
+          //   title: "Object Storage",
+          //   description: "S3-compatible . India-resident",
+          // },
         ],
       },
       {
@@ -105,7 +105,7 @@ const PRODUCT_MEGA_MENU_GPU_LINKS = [
 
 const gpuLinkClassName = cn(
   "outline-offset-2 transition-colors hover:text-primary",
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
 );
 
 export default function ProductMegaMenu() {

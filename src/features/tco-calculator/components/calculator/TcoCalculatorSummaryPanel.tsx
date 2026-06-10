@@ -98,8 +98,8 @@ const TcoCalculatorSummaryPanel = ({
             return (
               <li key={provider.id}>
                 <Text as="small" textColor="primary">
-                  vs {provider.label}{" "}
-                  {formatCurrency(savings.amount)} ({savings.percent}%)
+                  vs {provider.label} {formatCurrency(savings.amount)} (
+                  {savings.percent}%)
                 </Text>
               </li>
             );

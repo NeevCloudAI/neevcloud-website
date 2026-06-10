@@ -5,10 +5,12 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Billing Guidelines | NeevCloud",
-  description: "NeevCloud billing guidelines for pricing, invoicing, and payment terms.",
+  description:
+    "NeevCloud billing guidelines for pricing, invoicing, and payment terms.",
   openGraph: {
     title: "Billing Guidelines | NeevCloud",
-    description: "NeevCloud billing guidelines for pricing, invoicing, and payment terms.",
+    description:
+      "NeevCloud billing guidelines for pricing, invoicing, and payment terms.",
   },
 };
 

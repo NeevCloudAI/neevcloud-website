@@ -30,7 +30,7 @@ const LinkComponent = ({
           backgroundColor,
           borderRadius,
           textColor,
-        })
+        }),
       )}
       {...props}
     />

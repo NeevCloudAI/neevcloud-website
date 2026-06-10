@@ -27,7 +27,7 @@ const DevelopersDocumentationSearchClient = ({
 
     return categories.map((category) => {
       const visibleTags = category.tags.filter((tag) =>
-        tag.label.toLowerCase().includes(normalizedQuery)
+        tag.label.toLowerCase().includes(normalizedQuery),
       );
 
       return {

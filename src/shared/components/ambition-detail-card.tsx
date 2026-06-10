@@ -54,7 +54,7 @@ export function AmbitionDetailCard({
     <article
       className={cn(
         "flex h-full flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
-        className
+        className,
       )}
     >
       <Text textColor="gray-85">{label}</Text>
@@ -63,7 +63,7 @@ export function AmbitionDetailCard({
           <div
             className={cn(
               "p-3 bg-primary-40 rounded-lg",
-              iconColor && `bg-${iconColor}`
+              iconColor && `bg-${iconColor}`,
             )}
           >
             <Image
@@ -104,7 +104,7 @@ export function AmbitionDetailCard({
         <ul
           className={cn(
             "flex list-none flex-col gap-1.25",
-            bulletsHeading ? "mt-2.5" : "mt-4 md:mt-10"
+            bulletsHeading ? "mt-2.5" : "mt-4 md:mt-10",
           )}
         >
           {bullets.map((bullet) => (

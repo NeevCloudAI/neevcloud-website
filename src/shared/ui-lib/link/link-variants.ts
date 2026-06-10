@@ -91,5 +91,5 @@ export const linkVariants = cva(
       weight: "medium",
       borderRadius: "default",
     },
-  }
+  },
 );

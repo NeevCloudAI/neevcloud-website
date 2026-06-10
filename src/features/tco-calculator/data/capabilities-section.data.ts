@@ -41,7 +41,8 @@ export const TCO_CALCULATOR_CAPABILITIES_ITEMS: readonly AmbitionDetailItem[] =
       iconAlt: "Storage cost modeling",
       size: "small",
       title: "Storage Cost Modeling",
-      description: "NVMe, network storage, and object storage are all included.",
+      description:
+        "NVMe, network storage, and object storage are all included.",
       bullets: [
         { id: 1, title: "Local NVMe (per GB/hour)" },
         { id: 2, title: "Network block storage (per GB/month)" },

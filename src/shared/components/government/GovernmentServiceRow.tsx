@@ -22,7 +22,7 @@ const ServiceRow = ({ service, className }: ServiceRowProps) => {
         "group rounded-lg border border-white-10 bg-white-5 p-4 backdrop-blur-md transition-colors hover:bg-primary-120/80",
         "flex w-full flex-col gap-2",
         "md:grid md:grid-cols-[48px_320px_minmax(0,450px)_auto] md:items-center md:gap-x-8 md:gap-y-0 md:px-8 md:py-7",
-        className
+        className,
       )}
       aria-label={`${title}: ${description}`}
     >

@@ -26,7 +26,7 @@ const SOLUTIONS_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             description: "Sovereign AI for Government",
           },
           {
-            iconSrc: "",
+            iconSrc: "/icons/bank-dark.svg",
             iconAlt: "BFSI",
             title: "BFSI",
             href: "/bfsi",
@@ -47,7 +47,7 @@ const SOLUTIONS_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             description: "Clinical-Grade Compliance",
           },
           {
-            iconSrc: "",
+            iconSrc: "/icons/shield-dark.svg",
             iconAlt: "Defence",
             title: "Defence",
             href: "/defence",

@@ -1,7 +1,7 @@
 export const AGENTIC_WORKFLOW_HERO = {
   badgeText: "Agentic Workflow",
   description:
-    "Run multi-step, multi-model agent pipelines on reliable, low-latency GPU compute—without managing the cluster.",
+    "Run multi-step, multi-model agent pipelines on reliable, low-latency GPU compute-without managing the cluster.",
   primaryCta: "Deploy Your Agent Stack",
   secondaryCta: "Talk to an Engineer",
   secondaryCtaRoute: "/contact-neevcloud",

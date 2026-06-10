@@ -31,7 +31,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
   },
   {
     name: "Priyal Kothari",
-    title: "Head — Efficiency Architect",
+    title: "Head - Efficiency Architect",
     description:
       "Leading operational excellence across NeevCloud, Priyal streamlines cross-functional workflows and builds systems that enhance efficiency at scale. Her leadership ensures teams operate with agility, alignment, and consistent performance across the organization.",
     image: "/images/priyal-kothari.png",
@@ -39,7 +39,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
   },
   {
     name: "Noel Varghese",
-    title: "Head — Cybersecurity",
+    title: "Head - Cybersecurity",
     description:
       "Strengthening trust and resilience, Noel secures NeevCloud’s platforms against evolving digital threats. He ensures every system meets the highest standards of security, compliance, and risk governance.",
     image: "/images/noel-varghese.png",
@@ -87,7 +87,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
   },
   {
     name: "Sahil Ansari",
-    title: "Group Product Manager — Technical",
+    title: "Group Product Manager - Technical",
     description:
       "At the frontlines of growth, Sahil connects customer needs with the right cloud and AI solutions. He leads with insight, agility, and a results-driven mindset.",
     image: "/images/sahil-ansari.png",

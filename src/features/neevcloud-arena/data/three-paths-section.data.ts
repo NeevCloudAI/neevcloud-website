@@ -24,7 +24,7 @@ export const PATHS_STEPS: PathsStep[] = [
     title: "Guided Workload Experience",
     heading: "Run real workloads on production GPUs",
     description:
-      "Run real training and inference workloads on production GPU infrastructure with step-by-step guidance. See exactly what production deployment looks like — costs, latency, and utilization all visible in real time.",
+      "Run real training and inference workloads on production GPU infrastructure with step-by-step guidance. See exactly what production deployment looks like - costs, latency, and utilization all visible in real time.",
     learnText:
       "How your workloads perform on NeevCloud infrastructure and what production deployment looks like at scale.",
     primaryCtaLabel: "Start Building",

@@ -56,7 +56,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     id: "sovereign-security",
     theme: "light",
     badge: "Enterprise Security",
-    headlinePrefix: "Secure. Sovereign.",
+    headlinePrefix: "Secure. Scalable. Sovereign.",
     headlineEmphasis: "Enterprise-Ready AI Cloud",
     headlineSuffix: "",
     subtitle:

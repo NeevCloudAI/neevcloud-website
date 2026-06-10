@@ -15,7 +15,7 @@ export type StorageComparisonMetric = {
 export type StorageComparisonBarProps = {
   metric: StorageComparisonMetric;
   backgroundColor?: string;
-  showLabel?: boolean; // default true  — set false to hide the whole label/value row
+  showLabel?: boolean; // default true  - set false to hide the whole label/value row
   labelClassName?: string;
 };
 
@@ -33,7 +33,7 @@ const StorageComparisonBar = ({
         <div
           className={cn(
             "flex items-start justify-between gap-4",
-            labelClassName,
+            labelClassName
           )}
         >
           {/* Label + optional subtitle stacked on the left */}

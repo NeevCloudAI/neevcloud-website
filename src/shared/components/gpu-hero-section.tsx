@@ -3,6 +3,7 @@ import Container from "@/shared/components/container";
 import type { GpuHeroSectionProps } from "@/shared/types/gpu-hero-section.types";
 import { Text } from "@/shared/ui-lib";
 import { SquareCheck } from "lucide-react";
+import GpuHeroHubspotPlaceholder from "./gpu-hero-hubspot-placeholder";
 
 const GpuHeroSection = ({
   badgeText,
@@ -16,7 +17,6 @@ const GpuHeroSection = ({
   pricingPrefix,
   pricingAmount,
   pricingFooter,
-  rightContent,
   className,
 }: GpuHeroSectionProps) => {
   return (
@@ -105,7 +105,7 @@ const GpuHeroSection = ({
             </Text>
           </div>
         </div>
-        <div>{rightContent}</div>
+        <GpuHeroHubspotPlaceholder />
       </Container>
     </section>
   );

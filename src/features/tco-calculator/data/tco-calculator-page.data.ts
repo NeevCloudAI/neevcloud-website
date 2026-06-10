@@ -3,7 +3,7 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 export const TCO_CALCULATOR_HERO = {
   badgeText: "TCO Calculator",
   description:
-    "Compare your current infrastructure spend against NeevCloud in under two minutes—with full line-item transparency.",
+    "Compare your current infrastructure spend against NeevCloud in under two minutes-with full line-item transparency.",
   primaryCta: "Open TCO Calculator",
   primaryCtaRoute: "/tco-calculator#tco-calculator-tool",
   secondaryCta: "Talk to Sales",

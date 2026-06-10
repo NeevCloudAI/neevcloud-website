@@ -1,6 +1,5 @@
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
-import GpuHeroHubspotPlaceholder from "@/shared/components/gpu-hero-hubspot-placeholder";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
 import GpuUseCasesSection from "@/shared/components/gpu-use-cases-section";
 import GpuWhyChooseNeevcloudSection from "@/shared/components/gpu-why-choose-neevcloud-section";
@@ -20,10 +19,7 @@ import { NVIDIA_B300_TECHNICAL_SPECS_SECTION } from "@/shared/data/gpu-technical
 const NvidiaB300 = () => {
   return (
     <>
-      <GpuHeroSection
-        {...NVIDIA_B300_HERO}
-        rightContent={<GpuHeroHubspotPlaceholder />}
-      />
+      <GpuHeroSection {...NVIDIA_B300_HERO} />
       <GpuChooseSection {...NVIDIA_B300_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_B300_WHY_CHOOSE_SECTION} />
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />

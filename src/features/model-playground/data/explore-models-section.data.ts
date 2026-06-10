@@ -49,7 +49,7 @@ export const EXPLORE_MODELS_STEPS: readonly ExploreModelsStep[] = [
     badgeLabel: "Ship",
     title: "Move to Production",
     description:
-      "Once you find a model that fits your use case, deployment is simple—the same models from the Playground are available via our inference API for production.",
+      "Once you find a model that fits your use case, deployment is simple-the same models from the Playground are available via our inference API for production.",
     features: [
       "One line change from playground to prod",
       "Same models and parameters as the UI",

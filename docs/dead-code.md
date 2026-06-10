@@ -43,7 +43,7 @@ Generated via [knip](https://github.com/webpro/knip) static analysis and manual 
 
 ## Unused Exports
 
-These symbols are exported but never imported elsewhere. They are used internally within their own file — remove `export` or delete if the symbol itself is unused.
+These symbols are exported but never imported elsewhere. They are used internally within their own file - remove `export` or delete if the symbol itself is unused.
 
 | Export                | File                                                 |
 | --------------------- | ---------------------------------------------------- |

@@ -15,7 +15,7 @@ export const LEADERSHIP_HERO = {
 export const LEADERSHIP_FOOTER = {
   title: "Ready to build together?",
   description:
-    "Whether you're training models, deploying inference, or designing sovereign AI infrastructure — we'd like to hear what you're building.",
+    "Whether you're training models, deploying inference, or designing sovereign AI infrastructure - we'd like to hear what you're building.",
   primaryCta: "Get in touch",
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "Follow on Linkedin",

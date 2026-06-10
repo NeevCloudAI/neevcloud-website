@@ -31,7 +31,7 @@ const PathsStepPanel = ({ panel }: PathsStepPanelProps) => {
                   <Text as="span" variant="h6" weight="semibold">
                     {item.industry}
                   </Text>
-                  {"— "}
+                  {"- "}
                   {item.detail}
                 </Text>
               </div>

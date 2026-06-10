@@ -29,7 +29,7 @@ const CpuAiSection = () => {
           textColor="black-5"
           className="max-w-3xl mt-2.5"
         >
-          {`Production AI systems involve preprocessing pipelines, API endpoints, databases, monitoring tools, and workflow orchestration. These workloads don't need GPUs—they need reliable, flexible CPU infrastructure that integrates seamlessly with your GPU resources.`}
+          {`Production AI systems involve preprocessing pipelines, API endpoints, databases, monitoring tools, and workflow orchestration. These workloads don't need GPUs-they need reliable, flexible CPU infrastructure that integrates seamlessly with your GPU resources.`}
         </Text>
         <ul className="grid w-full list-none grid-cols-1 gap-5 p-0 m-0 pt-4 md:grid-cols-3 md:pt-12.5">
           {CPU_PRICING_SECTION_ITEMS.map((item) => (

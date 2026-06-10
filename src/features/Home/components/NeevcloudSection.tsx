@@ -95,7 +95,7 @@ export default function NeevcloudSection() {
           </div>
         </div>
 
-        {/* ── Right Panel (spans 2 cols) — browser chrome + advantage list + computer image ── */}
+        {/* ── Right Panel (spans 2 cols) - browser chrome + advantage list + computer image ── */}
         <div className="lg:col-span-2 border border-gray-200 flex flex-col">
           <div className="flex items-center gap-2 py-4 px-5.5 border-b border-gray-200">
             <div className="flex gap-1.5">

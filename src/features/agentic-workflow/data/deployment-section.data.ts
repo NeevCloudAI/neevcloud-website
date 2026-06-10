@@ -4,7 +4,7 @@ export const AGENTIC_WORKFLOW_DEPLOYMENT_SECTION = {
   titlePrefix: "Deploy Your",
   titleHighlight: "First Workload",
   description:
-    "Kubernetes-native agents, tool calling, pipelines, fleet ops, and durable state—from one platform.",
+    "Kubernetes-native agents, tool calling, pipelines, fleet ops, and durable state-from one platform.",
 } as const;
 
 export const AGENTIC_WORKFLOW_DEPLOYMENT_OPTIONS: AgenticWorkflowDeploymentOption[] =

@@ -111,8 +111,8 @@
   --breakpoint-header-buttons: 850px;
   --breakpoint-header-1xl: 1531px;
   --breakpoint-1xl: 1360px;
-  --breakpoint-1\.5xl: 88rem; /* 1408px — between xl (80rem) and 2xl (96rem) */
-  --breakpoint-2\.5xl: 108rem; /* 1728px — between 2xl (96rem) and 3xl (120rem) */
+  --breakpoint-1\.5xl: 88rem; /* 1408px - between xl (80rem) and 2xl (96rem) */
+  --breakpoint-2\.5xl: 108rem; /* 1728px - between 2xl (96rem) and 3xl (120rem) */
   --container-3\.5xl: 52rem;
 }
 
@@ -264,7 +264,7 @@ body {
   /* @apply text-sm font-normal leading-normal; */
   /* @apply text-xs block font-normal leading-normal; */
   h1 {
-    @apply text-[36px] leading-[44px] tracking-[-0.01em] sm:text-[42px] sm:leading-[52px] sm:tracking-[-0.015em] md:text-[48px] md:leading-[60px] md:tracking-[-0.02em] lg:text-[60px] lg:leading-[72px] lg:tracking-[-0.03em] font-semibold;
+    @apply text-[36px] leading-[70px] sm:text-[42px] md:text-[48px] lg:text-[60px] font-semibold;
   }
   h2 {
     @apply text-[28px] leading-[36px] tracking-[-0.015em] sm:text-[32px] sm:leading-[40px] sm:tracking-[-0.015em] md:text-[36px] md:leading-[44px] md:tracking-[-0.02em] lg:text-[40px] lg:leading-[48px] lg:tracking-[-0.02em] font-semibold;

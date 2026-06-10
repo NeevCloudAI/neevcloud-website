@@ -16,8 +16,8 @@ Follow the rules below strictly.
 
 For work under `src/features/`, also follow the Cursor rules in `.cursor/rules/`:
 
-- `feature-architecture.mdc` — folder layout, page composition, types/data/constants, refactor constraints
-- `feature-client-and-a11y.mdc` — minimize `"use client"`, client wrappers, section accessibility
+- `feature-architecture.mdc` - folder layout, page composition, types/data/constants, refactor constraints
+- `feature-client-and-a11y.mdc` - minimize `"use client"`, client wrappers, section accessibility
 
 When refactoring or adding a feature section, say explicitly if Tailwind or copy must not change.
 

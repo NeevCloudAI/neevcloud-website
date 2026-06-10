@@ -4,7 +4,7 @@ export const AI_STACK_SECTION_FEATURES: FeatureCardProps[] = [
   {
     title: "Model API Gateway",
     description:
-      "Your inference backend runs on GPU. Your users call a REST API. That API server—handling auth, routing, rate limiting, and logging, runs on CPU. Route to different GPU backends based on model, user tier, or latency target.",
+      "Your inference backend runs on GPU. Your users call a REST API. That API server-handling auth, routing, rate limiting, and logging, runs on CPU. Route to different GPU backends based on model, user tier, or latency target.",
   },
   {
     title: "RAG Orchestration Workers",

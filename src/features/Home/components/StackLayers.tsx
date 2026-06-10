@@ -23,7 +23,11 @@ export default function StackLayers({ activeIndex, count }: StackLayersProps) {
             }}
           >
             <Image
-              src={`/icons/stack-${index + 1}.svg`}
+              src={
+                isActive
+                  ? `/icons/stack-${index + 1}.svg`
+                  : `/icons/stack-${index + 1}-shadow.svg`
+              }
               alt={`Stack layer ${index + 1}`}
               width={400}
               height={400}

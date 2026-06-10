@@ -4,7 +4,7 @@ import {
   STEP_THREE_GRID_SHELL_CLASS,
 } from "../../constants/step-three-panel.constants";
 
-/** true = teal (active), false = grey — 12 columns × 5 rows */
+/** true = teal (active), false = grey - 12 columns × 5 rows */
 const STEP_THREE_GRID: boolean[][] = [
   [true, true, true, true, false, true, true, true, false, false, true, true],
   [true, true, true, true, true, true, false, true, true, true, true, true],

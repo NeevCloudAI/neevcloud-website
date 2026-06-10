@@ -6,7 +6,7 @@ export const textVariants = cva("", {
       default: "",
       link: "underline decoration cursor-pointer",
       // h1: "text-xl sm:text-2xl md:text-5xl lg:text-6xl font-semibold mx-1 md:mx-2.5",
-      h1: "text-[36px] tracking-[-0.01em] sm:text-[42px] sm:tracking-[-0.015em] md:text-[48px] md:tracking-[-0.02em] lg:text-[60px] lg:tracking-[-0.03em] font-semibold mx-1.75 md:mx-3",
+      h1: "text-[36px] leading-[70px] sm:text-[42px] md:text-[48px] lg:text-[60px] font-semibold mx-1.75 md:mx-3",
       // h2: "text-lg sm:text-2xl md:text-3xl lg:text-[40px] font-semibold mx-1 md:mx-2",
       h2: "text-[28px] tracking-[-0.015em] sm:text-[32px] sm:tracking-[-0.015em] md:text-[36px] md:tracking-[-0.02em] lg:text-[40px] lg:tracking-[-0.02em] font-semibold mx-1.5 md:mx-3",
       // h3: "text-base sm:text-lg md:text-xl lg:text-2xl font-medium mx-1 md:mx-1.5",

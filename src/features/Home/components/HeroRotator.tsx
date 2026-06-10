@@ -25,18 +25,38 @@ export default function HeroRotator() {
     const restColor = isDark ? "primary" : "black";
 
     return (
-      <Text as="h1" textColor={restColor} align="center" className="max-w-5xl">
-        {activeHeroSlide.headlinePrefix}
-        <Text as="span" textColor={emphasisColor} variant="h1">
+      <div>
+        <Text
+          as="h1"
+          textColor={restColor}
+          align="center"
+          className="max-w-5xl"
+        >
+          {activeHeroSlide.headlinePrefix}
+          {activeHeroSlide.headlineSuffix}
+        </Text>
+        <Text
+          as="h1"
+          textColor={emphasisColor}
+          align="center"
+          className="max-w-5xl"
+        >
           {activeHeroSlide.headlineEmphasis}
         </Text>
-        {activeHeroSlide.headlineSuffix}
-      </Text>
+      </div>
     );
   }, [activeHeroSlide, isDark]);
 
   return (
     <>
+      <Text
+        as="small"
+        textColor="primary-70"
+        className="bg-primary-20 p-1 px-4 rounded-md border border-primary-30"
+      >
+        {activeHeroSlide.badge}
+      </Text>
+
       {title}
 
       <Text as="h6" align="center" textColor={isDark ? "white" : undefined}>

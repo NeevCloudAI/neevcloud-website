@@ -31,7 +31,7 @@ const GpuAiSection = () => {
           NeevCloud offers two purpose-built GPU compute modes: GPU AI Service
           for Kubernetes-native containerized workloads, and GPU VM Service for
           teams that need full Linux OS control. Both run on datacenter-grade
-          NVIDIA hardware and are built specifically for AI—not repurposed
+          NVIDIA hardware and are built specifically for AI-not repurposed
           general-purpose cloud infrastructure.
         </Text>
         <ul className="m-0 grid w-full list-none grid-cols-1 gap-5 p-0 pt-4 md:grid-cols-2 md:pt-12.5">

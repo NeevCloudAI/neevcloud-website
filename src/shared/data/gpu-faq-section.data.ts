@@ -31,7 +31,7 @@ export const NVIDIA_A100_FAQ: readonly FaqItem[] = [
     question:
       "Why is NeevCloud a reliable choice for renting NVIDIA A100 GPUs in India?",
     answer:
-      "NeevCloud delivers cloud GPU rental in India with enterprise-grade infrastructure, flexible reservation options, and predictable performance. By renting NVIDIA A100 GPUs on NeevCloud, teams gain access to high-performance AI compute, priority availability, and cost-efficient deployment—without managing physical servers or long-term commitments.",
+      "NeevCloud delivers cloud GPU rental in India with enterprise-grade infrastructure, flexible reservation options, and predictable performance. By renting NVIDIA A100 GPUs on NeevCloud, teams gain access to high-performance AI compute, priority availability, and cost-efficient deployment-without managing physical servers or long-term commitments.",
   },
 ] as const;
 

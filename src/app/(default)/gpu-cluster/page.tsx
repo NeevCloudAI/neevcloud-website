@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "GPU Cluster | NeevCloud",
   description:
-    "One platform. On-demand, reserved, or spot — all on India-sovereign infrastructure. Every instance includes InfiniBand networking, NVMe-attached storage, and pre-built ML images.",
+    "One platform. On-demand, reserved, or spot - all on India-sovereign infrastructure. Every instance includes InfiniBand networking, NVMe-attached storage, and pre-built ML images.",
   openGraph: {
     title: "GPU Cluster | NeevCloud",
     description:

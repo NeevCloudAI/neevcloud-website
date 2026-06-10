@@ -43,7 +43,7 @@ export const ENTERPRISE_SECURITY_CATEGORIES: readonly EnterpriseSecurityCategory
       icon: "/icons/microscope.svg",
       title: "Compliance Documentation",
       description:
-        "SOC 2 reports, ISO certificates, security attestations — available on request for qualified BFSI organizations.",
+        "SOC 2 reports, ISO certificates, security attestations - available on request for qualified BFSI organizations.",
       features: [
         {
           id: 1,

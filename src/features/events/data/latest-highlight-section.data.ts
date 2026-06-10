@@ -6,7 +6,7 @@ export const LATEST_HIGHLIGHT_SECTION = {
   badge: "India AI Impact Summit 2026",
   heading: "Sovereign End-to-End SuperAI Cloud Platform",
   description:
-    "NeevCloud showcased its Sovereign End-to-End SuperAI Cloud Platform at India AI Impact Summit 2026, built for large-scale AI workloads in India. The platform demonstrates India-first infrastructure: data sovereignty, GPU scale, and AI-native design — all in one stack.",
+    "NeevCloud showcased its Sovereign End-to-End SuperAI Cloud Platform at India AI Impact Summit 2026, built for large-scale AI workloads in India. The platform demonstrates India-first infrastructure: data sovereignty, GPU scale, and AI-native design - all in one stack.",
   metadata: [
     { id: "year", label: "2026", icon: "calendar" },
     { id: "location", label: "Mumbai, India", icon: "map-pinned" },

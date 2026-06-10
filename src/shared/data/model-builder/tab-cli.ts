@@ -1,6 +1,6 @@
 import type { CodeToken } from "@/shared/types/model-builder-section.types";
 
-/** Tokenized CLI block — matches Figma syntax colors (accent, flags, muted output, URL). */
+/** Tokenized CLI block - matches Figma syntax colors (accent, flags, muted output, URL). */
 const CLI_CODE_LINES: CodeToken[][] = [
   [
     { text: "› ", variant: "prompt" },

@@ -55,7 +55,7 @@ const HomeSlideShow = ({ slides, onSlideChange }: HomeSlideShowProps) => {
       ))}
 
       {slides.length > 1 && (
-        <div className="absolute bottom-20 left-1/2  flex -translate-x-1/2 gap-2">
+        <div className="absolute bottom-20 left-1/2 flex -translate-x-1/2 gap-2">
           {slides.map((_, index) => (
             <Button
               spacing="none"

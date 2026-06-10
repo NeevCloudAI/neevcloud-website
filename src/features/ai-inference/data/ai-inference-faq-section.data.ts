@@ -34,6 +34,6 @@ export const AI_INFERENCE_FAQ_ITEMS: FaqItem[] = [
     category: "Scaling",
     question: "Can NeevCloud access my stored data?",
     answer:
-      "Per-second billing for GPU instances. Only charged while rendering—no cost for idle time. Storage billed monthly per GB.",
+      "Per-second billing for GPU instances. Only charged while rendering-no cost for idle time. Storage billed monthly per GB.",
   },
 ];

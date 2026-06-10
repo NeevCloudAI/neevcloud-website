@@ -34,6 +34,6 @@ export const MEDIA_FAQ_ITEMS: readonly FaqItem[] = [
     category: "Scaling",
     question: "How is billing calculated for render jobs?",
     answer:
-      "Per-second billing for GPU instances. Only charged while rendering—no cost for idle time. Storage billed monthly per GB.",
+      "Per-second billing for GPU instances. Only charged while rendering-no cost for idle time. Storage billed monthly per GB.",
   },
 ];

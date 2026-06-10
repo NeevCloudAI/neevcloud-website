@@ -47,7 +47,7 @@ const LeaderShipHeroSection = () => {
           </LinkComponent>
         </div>
 
-        <div className="mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
+        <div className="max-w-5xl mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
           <div className="p-4 md:pl-24 ">
             <div className="flex items-center gap-2">
               <Divider orientation="horizontal" className="w-8 bg-primary" />
@@ -69,7 +69,13 @@ const LeaderShipHeroSection = () => {
             <Text as="h6" className="mt-5 max-w-xs">
               As Founder and CEO of NeevCloud, Narendra Sen is redefining how
               nations build and own AI infrastructure. His vision places India
-              at the center of the Global AI …
+              at the center of the Global AI Landscape through platforms that
+              are secure, scalable, and sovereign by design.
+            </Text>
+            <Text as="h6" className="mt-2.5 max-w-xs">
+              By pioneering India’s first AI SuperCloud, he is laying the
+              foundation for a digital future powered by innovation,
+              independence, and long-term resilience.
             </Text>
             <div className="flex items-center gap-1 mt-2.5">
               <LinkComponent

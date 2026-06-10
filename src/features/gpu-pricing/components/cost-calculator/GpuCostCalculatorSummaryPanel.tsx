@@ -21,7 +21,7 @@ const GpuCostCalculatorSummaryPanel = ({
   const discountLabel =
     breakdown.discountAmount > 0
       ? `-${formatCurrency(breakdown.discountAmount)}`
-      : "—";
+      : "-";
 
   return (
     <div className="flex h-full flex-col rounded-lg bg-gray-10 p-4 md:p-6">

@@ -38,7 +38,7 @@ const CPU_ARCHITECTURE_SECTION_ITEMS = [
     size: "small",
     title: "API and Application Layer",
     description:
-      "Run AI service frontends on CPU — APIs, auth, logging, business logic while connecting seamlessly to GPU inference and training backends.",
+      "Run AI service frontends on CPU - APIs, auth, logging, business logic while connecting seamlessly to GPU inference and training backends.",
   },
   {
     id: "database-state-management",

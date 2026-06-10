@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 export type GpuHeroSectionContent = {
   badgeText: string;
   titlePrefix: string;
@@ -15,6 +13,5 @@ export type GpuHeroSectionContent = {
 };
 
 export type GpuHeroSectionProps = GpuHeroSectionContent & {
-  rightContent?: ReactNode;
   className?: string;
 };

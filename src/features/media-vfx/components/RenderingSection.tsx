@@ -6,7 +6,7 @@ const RenderingSection = () => (
     sectionId="rendering-stack-section-heading"
     heading="Complete"
     headingHighlight="rendering stack"
-    description="Every layer of the production pipeline, compute, storage, network, software, orchestration — provisioned and managed."
+    description="Every layer of the production pipeline, compute, storage, network, software, orchestration - provisioned and managed."
     services={RENDERING_SERVICES}
     ariaLabel="Rendering stack services"
   />

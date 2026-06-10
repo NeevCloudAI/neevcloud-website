@@ -9,7 +9,7 @@ export const CPU_PRICING_SECTION_ITEMS: readonly AmbitionDetailItem[] = [
     size: "small",
     title: "Not Everything Needs a GPU",
     description:
-      "CPU instances handle preprocessing, databases, monitoring, and logging efficiently — freeing GPU resources for tasks that truly require acceleration.",
+      "CPU instances handle preprocessing, databases, monitoring, and logging efficiently - freeing GPU resources for tasks that truly require acceleration.",
     bullets: [
       { id: 1, title: "Data preprocessing pipelines" },
       { id: 2, title: "API servers and gateways" },
@@ -42,7 +42,7 @@ export const CPU_PRICING_SECTION_ITEMS: readonly AmbitionDetailItem[] = [
     title: "Standard Infrastructure",
     size: "small",
     description:
-      "For Linux workloads, databases, web apps, monitoring, or dev environments — CPU instances provide simple, flexible compute without GPU complexity.",
+      "For Linux workloads, databases, web apps, monitoring, or dev environments - CPU instances provide simple, flexible compute without GPU complexity.",
     bullets: [
       { id: 1, title: "Web and application servers" },
       { id: 2, title: "Development environments" },

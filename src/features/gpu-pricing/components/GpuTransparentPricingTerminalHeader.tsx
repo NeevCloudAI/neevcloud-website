@@ -9,7 +9,7 @@ const GpuTransparentPricingTerminalHeader = () => {
         <span className="size-2.5 rounded-full bg-[#28c840]" />
       </div>
       <Text textColor="gray-80" fontFamily="spaceMono" className="ml-4.5">
-        gpu-configuration — bash — 80x24
+        gpu-configuration - bash - 80x24
       </Text>
     </div>
   );

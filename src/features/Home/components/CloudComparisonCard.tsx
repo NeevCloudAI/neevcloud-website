@@ -10,18 +10,26 @@ export default function CloudComparisonCard({
   item,
 }: CloudComparisonCardProps) {
   return (
-    <article className="relative flex items-center gap-5 overflow-hidden rounded-md border border-gray-10 p-4 md:px-6 md:py-12">
-      <div className="h-20 w-20 shrink-0 bg-gray-50" aria-hidden />
-      <div className="pr-8">
-        <Text as="h3" weight="semibold">
+    <article className="relative flex flex-col overflow-hidden border border-gray-10 px-10 pt-15">
+      {/* Top row: icon left, decorative square right */}
+      <div className="flex items-center justify-between pb-10">
+        <Image src={item.iconSrc} alt={item.title} width={80} height={80} />
+        <div className="opacity-100" aria-hidden>
+          <Image
+            src="/icons/logo-white-bg.svg"
+            alt=""
+            width={117}
+            height={117}
+          />
+        </div>
+      </div>
+
+      {/* Text content */}
+      <div className="mb-5">
+        <Text as="h3" weight="semibold" className="mb-2.5">
           {item.title}
         </Text>
-        <Text as="h6" textColor="black-5" className="mt-2.5">
-          {item.description}
-        </Text>
-      </div>
-      <div className="absolute bottom-[-10%] right-0 opacity-80" aria-hidden>
-        <Image src="/icons/green-logo.svg" alt="" width={100} height={100} />
+        <Text className="text-gray-description">{item.description}</Text>
       </div>
     </article>
   );

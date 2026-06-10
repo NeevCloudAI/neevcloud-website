@@ -96,6 +96,11 @@
   --color-gray-107: var(--gray-107);
   --color-primary-190: var(--primary-190);
 
+  --color-gray-description: var(--gray-description);
+  --color-gray-light: var(--gray-light);
+  --color-red-light: var(--red-light);
+  --color-red-text: var(--red-text);
+
   --breakpoint-header-company: 1430px;
   --breakpoint-header-resource: 1340px;
   --breakpoint-header-developers: 1250px;
@@ -220,6 +225,11 @@
   --background: #ffffff;
   --foreground: #000000;
   --radius: 0.625rem;
+
+  --gray-description: #585c5f;
+  --gray-light: #f7f7f7;
+  --red-light: #ffdbda;
+  --red-text: #fe4d47;
 }
 
 body {

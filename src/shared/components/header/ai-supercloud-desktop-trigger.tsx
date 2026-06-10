@@ -29,9 +29,7 @@ export default function AiSupercloudDesktopTrigger() {
       onMouseLeave={() => setIsOpen(false)}
       onFocusCapture={() => setIsOpen(true)}
       onBlurCapture={(event) => {
-        if (
-          !event.currentTarget.contains(event.relatedTarget as Node | null)
-        ) {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
           setIsOpen(false);
         }
       }}

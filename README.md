@@ -20,24 +20,29 @@ SEO: add seo object in every page
 
 Pending:
 
-1. On clicking header menu, it should close
+<!-- 1. On clicking header menu, it should close -->
+
 2. route: /
-   1.1
+   <!-- 1.1
    section: OneVertical Stack. Silicon to endpoint.
-   pending: replace center image, also left and right items should be clickable
-   1.2
+   pending: replace center image, also left and right items should be clickable -->
+
+   <!-- 1.2
    section: Why theworldNeeds NeevCloud?.
-   Pending: Replace this complete section
+   Pending: Replace this complete section -->
+
    1.3
    section: The AI cloud built forFrontiermodel builders.
    pending: Add correct Code for python, go, Rust, Terraform
    pending: add good scrollbar in other tabs.
-   1.4
+
+   <!-- 1.4
    section: From manual toil toAI-scale leverage
-   pending: content for without neevcloud
-   1.5
+   pending: content for without neevcloud -->
+
+   <!-- 1.5
    section: PoweringAI BreakthroughsAcross Industries
-   pending: user's image is missing in reviews
+   pending: user's image is missing in reviews -->
 
    route: /gpu-pricing
    1.1
@@ -73,7 +78,6 @@ Pending:
    <!-- 3. route: neevcloud-arena, section: SEE AI, align INDUSTRY EXAMPLES -->
    <!-- 7.route: cpu-cluster, section: Where CPU Fits in anAI Stack. add icons -->
    <!-- 9. route: leadership, Narendra section needs to be weighted and add linkedin section instead of read more -->
-
-2. route: gpu-cluster, section: Every WorkloadFlat rate.Unmetered. Add pricing from sheet
-3. route: about-use. hero sections image
+   <!-- 3. route: about-use. hero sections image -->
+   <!-- 2. route: gpu-cluster, section: Every WorkloadFlat rate.Unmetered. Add pricing from sheet -->
 <!--  -->

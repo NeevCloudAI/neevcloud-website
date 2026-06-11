@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   MODEL_PRICING_SKU_COUNT,
   RIGHT_MODEL_TABLE_CELL_CLASS,

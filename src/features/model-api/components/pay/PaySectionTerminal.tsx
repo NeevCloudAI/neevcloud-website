@@ -27,7 +27,12 @@ const PaySectionTerminal = () => {
           <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="left">
             Price / request
           </Text>
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="right">
+          <Text
+            as="h6"
+            fontFamily="spaceMono"
+            textColor="gray-75"
+            align="right"
+          >
             Pricing
           </Text>
         </div>

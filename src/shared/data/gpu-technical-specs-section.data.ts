@@ -414,8 +414,7 @@ export const NVIDIA_H200_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
       {
         id: "deployment-options",
         feature: "Deployment Options",
-        specification:
-          "On-Prem, Private Cloud, and NeevCloud AI SuperCloud",
+        specification: "On-Prem, Private Cloud, and NeevCloud AI SuperCloud",
       },
     ],
     charts: [

@@ -1,9 +1,7 @@
 import Container from "@/shared/components/container";
 import { Divider, Text } from "@/shared/ui-lib";
-import Image from "next/image";
 import CloudComparisonCard from "./CloudComparisonCard";
 import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
-import { Button } from "@/shared/ui-lib";
 import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
@@ -47,7 +45,7 @@ export default function NeevcloudSection() {
         </Text>
       </div>
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 mt-4 md:mt-12.5">
-        <div className="relative overflow-hidden flex flex-col justify-between p-5 bg-white border border-gray-200 bg-[url('/images/data.png')] bg-cover bg-center bg-no-repeat">
+        <div className="relative overflow-hidden flex flex-col justify-between p-5 pb-0 bg-white border border-gray-200 bg-[url('/images/data.png')] bg-cover bg-center bg-no-repeat">
           <div className="relative z-10 flex flex-col h-full justify-between">
             <div>
               <Text as="h3" weight="semibold" className="mb-1">
@@ -108,7 +106,7 @@ export default function NeevcloudSection() {
             <Text as="small">neevcloud.com</Text>
           </div>
 
-          <div className="flex-1 flex flex-col justify-between p-8 bg-[url('/images/compute.png')] bg-right bg-no-repeat">
+          <div className="flex-1 flex flex-col justify-between p-8 bg-[url('/images/compute.png')] bg-right bg-contain bg-no-repeat">
             <div className="max-w-md">
               <div>
                 <Text as="h3" weight="semibold">

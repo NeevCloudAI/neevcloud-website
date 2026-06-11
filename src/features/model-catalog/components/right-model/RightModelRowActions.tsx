@@ -1,5 +1,4 @@
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import { Button } from "@/shared/ui-lib";
 import LinkComponent from "@/shared/ui-lib/link";
 
 const RightModelRowActions = () => {

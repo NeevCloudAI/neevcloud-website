@@ -26,12 +26,7 @@ const DeploymentComparisonColumnHeader = ({
   const styles = VARIANT_STYLES[header.variant];
 
   return (
-    <div
-      className={cn(
-        "w-full rounded-lg border p-4",
-        styles.card,
-      )}
-    >
+    <div className={cn("w-full rounded-lg border p-4", styles.card)}>
       <div className="flex items-center gap-2">
         <div className={cn("rounded-lg p-1.5", styles.iconWrap)}>
           <DeploymentComparisonIcon

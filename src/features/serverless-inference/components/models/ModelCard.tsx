@@ -1,6 +1,6 @@
 import { LogOut } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import { ModelCardData } from "../../types/models-section.types";
 import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";

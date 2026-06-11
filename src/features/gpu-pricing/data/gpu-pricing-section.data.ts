@@ -5,7 +5,7 @@ export const GPU_PRICING_SECTION_ITEMS: readonly AmbitionDetailItem[] = [
     id: "gpu-ai-service",
     label: "01 · CONTAINER-NATIVE",
     iconSrc: "/icons/stack.svg",
-    iconColor: "red-10",
+    iconColor: "#FF4D1C",
     iconAlt: "GPU AI Service",
     size: "small",
     title: "GPU AI Service",
@@ -18,6 +18,7 @@ export const GPU_PRICING_SECTION_ITEMS: readonly AmbitionDetailItem[] = [
       { id: 4, title: "Auto-scaling workloads" },
       { id: 5, title: "Teams using containers" },
     ],
+    iconClassName: "bg-[#FF4D1C]/10",
   },
   {
     id: "gpu-vm-service",

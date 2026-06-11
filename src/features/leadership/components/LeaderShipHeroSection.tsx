@@ -2,7 +2,7 @@ import Container from "@/shared/components/container";
 import { Divider, Text } from "@/shared/ui-lib";
 import { LEADERSHIP_HERO } from "../data/leadership-page.data";
 import Image from "next/image";
-import { ChevronDown, MoveRight } from "@/shared/icons/lucide-icon-map";
+import { MoveRight } from "@/shared/icons/lucide-icon-map";
 import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 

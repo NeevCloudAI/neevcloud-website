@@ -37,7 +37,10 @@ const GpuAiSection = () => {
         <ul className="m-0 grid w-full list-none grid-cols-1 gap-5 p-0 pt-4 md:grid-cols-2 md:pt-12.5">
           {GPU_PRICING_SECTION_ITEMS.map((item) => (
             <li key={item.id}>
-              <AmbitionDetailCard item={item} />
+              <AmbitionDetailCard
+                item={item}
+                iconClassName={item.iconClassName}
+              />
             </li>
           ))}
         </ul>

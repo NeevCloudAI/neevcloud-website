@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import GpuWhyChooseNeevcloudCard from "@/shared/components/gpu-why-choose-neevcloud-card";
 import type { GpuWhyChooseNeevcloudSectionProps } from "@/shared/types/gpu-why-choose-neevcloud-section.types";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import LinkComponent from "../ui-lib/link";
 
 const GpuWhyChooseNeevcloudSection = ({

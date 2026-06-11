@@ -19,7 +19,7 @@ import {
   sliderToRequests,
   updateWorkloadMix,
 } from "../../utils/pricing-calculator-utils";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
@@ -31,7 +31,7 @@ const PricingCalculatorClient = () => {
   const formattedRequests = formatRequests(totalRequests);
   const monthlyCost = useMemo(
     () => calculateMonthlyCost(totalRequests, mix),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const categoryCosts = useMemo(
@@ -41,9 +41,9 @@ const PricingCalculatorClient = () => {
           acc[id] = calculateCategoryCost(totalRequests, mix[id], id);
           return acc;
         },
-        {} as Record<WorkloadCategoryId, number>,
+        {} as Record<WorkloadCategoryId, number>
       ),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const handleMixChange = (category: WorkloadCategoryId, value: number) => {

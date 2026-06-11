@@ -6,7 +6,7 @@ import { INFRASTRUCTURE_SECTION } from "../data/infrastructure-section.data";
 const InfrastructureSection = () => {
   return (
     <section
-      className="relative bg-white py-8 md:py-16 2xl:py-25"
+      className="relative bg-white pb-8 md:pb-16 2xl:pb-25"
       aria-labelledby="about-infrastructure-section-heading"
     >
       <Container>

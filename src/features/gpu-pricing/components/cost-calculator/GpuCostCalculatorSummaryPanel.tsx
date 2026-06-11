@@ -1,4 +1,4 @@
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import { GPU_COST_CALCULATOR_SECTION } from "../../data/cost-calculator-section.data";
 import type { GpuCostCalculatorBreakdown } from "../../types/cost-calculator-section.types";
 import {

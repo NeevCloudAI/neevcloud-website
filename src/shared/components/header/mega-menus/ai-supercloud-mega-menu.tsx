@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {

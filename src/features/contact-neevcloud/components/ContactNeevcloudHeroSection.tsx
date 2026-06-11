@@ -1,4 +1,4 @@
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import { CONTACT_NEEVCLOUD_HERO } from "../data/contact-neevcloud-page.data";
 import Container from "@/shared/components/container";
 import { CircleCheck } from "@/shared/icons/lucide-icon-map";

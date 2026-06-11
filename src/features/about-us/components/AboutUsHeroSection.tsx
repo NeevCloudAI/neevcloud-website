@@ -1,4 +1,4 @@
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import { ABOUT_US_HERO } from "../data/about-us-page.data";
 import Container from "@/shared/components/container";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import LinkComponent from "@/shared/ui-lib/link";
 
 const AboutUsHeroSection = () => {
   return (
-    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
+    <section className="relative bg-white pt-8 md:pt-16 2xl:pt-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
@@ -59,13 +59,15 @@ const AboutUsHeroSection = () => {
         </div>
 
         <div className="w-full min-h-50 md:min-h-[80vh] mt-4 md:mt-12.5 rounded-2xl relative">
-          <Image
-            src="/images/about-us.png"
-            alt="About Us"
-            fill
-            className="object-contain"
-            priority
-          />
+          <div className="absolute top-0 md:right-25 w-full h-full">
+            <Image
+              src="/images/about-us.png"
+              alt="About Us"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
       </Container>
     </section>

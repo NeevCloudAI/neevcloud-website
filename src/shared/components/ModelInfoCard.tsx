@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import ModelInfoDetails from "@/shared/components/ModelInfoDetails";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import type { ModelInfoCardProps } from "@/shared/types/model-info-card.types";
 import LinkComponent from "../ui-lib/link";
 
@@ -61,7 +61,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
               className={cn(
                 "flex flex-col p-4 border-gray-60",
                 !isLastRow && "border-b",
-                !isRightColumn && "border-r",
+                !isRightColumn && "border-r"
               )}
             >
               <Text as="small" textColor="gray-75">

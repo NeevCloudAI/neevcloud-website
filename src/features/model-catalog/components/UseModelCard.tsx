@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { UseModelCardProps } from "@/shared/types/use-model-card.types";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import LinkComponent from "@/shared/ui-lib/link";
 
 const CTA_BUTTON_CLASS: Record<
@@ -67,7 +67,7 @@ const UseModelCard = ({ card }: UseModelCardProps) => {
         weight="semibold"
         className={cn(
           "mt-6 md:mt-7.5 w-full text-center",
-          CTA_BUTTON_CLASS[ctaVariant],
+          CTA_BUTTON_CLASS[ctaVariant]
         )}
       >
         {ctaLabel}

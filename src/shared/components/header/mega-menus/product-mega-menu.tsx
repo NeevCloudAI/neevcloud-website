@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text } from "@/shared/ui-lib";
 import Link from "next/link";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,

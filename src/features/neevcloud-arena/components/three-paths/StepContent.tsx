@@ -1,4 +1,4 @@
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import { YOU_WILL_LEARN_LABEL } from "../../constants/three-paths-section.constants";
 import type { PathsStep } from "../../types/three-paths-section.types";
 import LinkComponent from "@/shared/ui-lib/link";

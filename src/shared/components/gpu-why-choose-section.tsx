@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import type { GpuWhyChooseSectionProps } from "@/shared/types/gpu-why-choose-section.types";
-import { Button, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
 import LinkComponent from "../ui-lib/link";
 

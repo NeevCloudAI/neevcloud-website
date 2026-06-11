@@ -72,6 +72,24 @@ export const NVIDIA_B300_HERO: GpuHeroSectionContent = {
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
+export const NVIDIA_H200_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia H200",
+  titlePrefix: "Rent",
+  titleHighlight: "Nvidia H200",
+  titleSuffix: "GPU On-Demand",
+  description:
+    "Built for frontier AI research and memory-intensive workloads requiring massive compute power, now accessible through our high-performance cloud GPU infrastructure with flexible scaling. Teams can explore NVIDIA H200 price to plan enterprise deployments efficiently. Transparent pricing ensures predictable budgeting, allowing organizations to scale AI workloads seamlessly.",
+  bulletPoints: [
+    "Delivering up to 4,500 TFLOPS of AI compute with 141GB HBM3e memory",
+    "4.8 TB/s memory bandwidth, nearly 2X faster than H100",
+    "1.9X higher inference performance on Llama 2 70B models",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$2.39/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};
+
 export const NVIDIA_H100_HERO: GpuHeroSectionContent = {
   badgeText: "Nvidia H100",
   titlePrefix: "Rent",

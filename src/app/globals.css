@@ -36,6 +36,7 @@
   --color-gray-85: var(--gray-85);
   --color-gray-95: var(--gray-95);
   --color-gray-55: var(--gray-55);
+  --color-primary-210: var(--primary-210);
   --color-gray-100: var(--gray-100);
   --color-black-10: var(--black-10);
   --color-primary-65: var(--primary-65);
@@ -75,7 +76,9 @@
   --color-gray-84: var(--gray-84);
   --color-black-70: var(--black-70);
   --color-primary-170: var(--primary-170);
+  --color-blue-20: var(--blue-20);
   --color-black-29: var(--black-29);
+  --color-blue-10: var(--blue-10);
   --color-black-100: var(--black-100);
   --color-black-35: var(--black-35);
   --color-black-40: var(--black-40);
@@ -142,6 +145,7 @@
   --primary-150: #1b2c29;
   --primary-170: #e0eded;
   --primary-200: #c5f1e2;
+  --primary-210: #59d8a7;
 
   --orange-50: #d29922;
 
@@ -219,6 +223,9 @@
   --green-60: #000a08;
   --green-100: #001411;
 
+  --blue-10: #0c2233;
+  --blue-20: #071825;
+
   --red-10: #ff4d1c;
   --red-50: #ff4d48;
 
@@ -264,7 +271,7 @@ body {
   /* @apply text-sm font-normal leading-normal; */
   /* @apply text-xs block font-normal leading-normal; */
   h1 {
-    @apply text-[36px] leading-[70px] sm:text-[42px] md:text-[48px] lg:text-[60px] font-semibold;
+    @apply text-[36px] leading-[44px] sm:text-[42px] sm:leading-[52px] md:text-[48px] md:leading-[70px] lg:text-[60px] lg:leading-[72px] font-semibold;
   }
   h2 {
     @apply text-[28px] leading-[36px] tracking-[-0.015em] sm:text-[32px] sm:leading-[40px] sm:tracking-[-0.015em] md:text-[36px] md:leading-[44px] md:tracking-[-0.02em] lg:text-[40px] lg:leading-[48px] lg:tracking-[-0.02em] font-semibold;

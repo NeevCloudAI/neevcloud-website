@@ -8,8 +8,8 @@ type ModelsSectionStepTwoCardProps = {
 
 const ModelsSectionStepTwoCard = ({ card }: ModelsSectionStepTwoCardProps) => {
   return (
-    <div className="bg-gray-10 p-4 md:px-5 rounded-xl flex items-center justify-between">
-      <div className="flex items-center gap-5">
+    <div className="bg-gray-10 p-4 md:px-5 rounded-xl grid grid-cols-[1fr_auto_1fr] items-center gap-x-5">
+      <div className="flex items-center gap-5 min-w-0">
         <Text as="h6" fontFamily="spaceMono" textColor="gray-90">
           {card.id}
         </Text>
@@ -22,7 +22,9 @@ const ModelsSectionStepTwoCard = ({ card }: ModelsSectionStepTwoCardProps) => {
           {card.label}
         </Text>
       </div>
-      <ArrowRight size={16} className="text-gray-90" aria-hidden="true" />
+      <span className="flex items-center justify-center shrink-0">
+        <ArrowRight size={16} className="text-gray-90" aria-hidden="true" />
+      </span>
       <Text as="h5" fontFamily="spaceMono" textColor="primary">
         {card.value}
       </Text>

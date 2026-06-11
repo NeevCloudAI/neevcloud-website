@@ -156,6 +156,45 @@ export const NVIDIA_B300_USE_CASES_SECTION: GpuUseCasesSectionContent = {
   ],
 };
 
+export const NVIDIA_H200_USE_CASES_SECTION: GpuUseCasesSectionContent = {
+  titlePrefix: "Use Cases of",
+  titleHighlight: "Nvidia H200",
+  cards: [
+    {
+      id: "trillion-parameter-llm-training",
+      title: "Trillion-Parameter LLM Training",
+      imageSrc: "/images/h200-trillion-parameter-llm-training.png",
+      imageAlt: "Trillion-parameter LLM training on NVIDIA H200",
+      description:
+        "Rent NVIDIA H200 GPU cloud instances with 141GB HBM3E memory for training next-generation large language models. The H200 delivers 4.8TB/s bandwidth, nearly double H100 capacity, enabling trillion-parameter foundation models with larger batch sizes. Cloud-based H200 rental eliminates procurement delays, providing instant access to cutting-edge AI infrastructure for frontier models.",
+    },
+    {
+      id: "realtime-llm-inference-rag",
+      title: "Real-Time LLM Inference & RAG Applications",
+      imageSrc: "/images/h200-realtime-llm-inference-rag.png",
+      imageAlt: "Real-time LLM inference and RAG applications on NVIDIA H200",
+      description:
+        "Deploy H200 GPU cloud rental for production AI inference, delivering 1.9X faster performance than H100 on Llama2 70B models. Expanded memory bandwidth enables low-latency serving of large language models for retrieval-augmented generation (RAG), AI assistants, and knowledge systems. Rent H200 on-demand for scalable conversational AI supporting thousands of concurrent users.",
+    },
+    {
+      id: "memory-intensive-hpc",
+      title: "Memory-Intensive HPC & Scientific Simulation",
+      imageSrc: "/images/h200-memory-intensive-hpc.png",
+      imageAlt: "Memory-intensive HPC and scientific simulation on NVIDIA H200",
+      description:
+        "Access H200 GPU cloud instances for computational workloads requiring massive memory bandwidth, including weather forecasting, molecular simulations, and genomic analysis. The 141GB HBM3E memory handles datasets too large for standard GPUs, accelerating computational fluid dynamics, climate modeling, and protein folding research at unprecedented performance levels.",
+    },
+    {
+      id: "ai-accelerated-data-science",
+      title: "AI-Accelerated Data Science & Analytics",
+      imageSrc: "/images/h200-ai-accelerated-data-science.png",
+      imageAlt: "AI-accelerated data science and analytics on NVIDIA H200",
+      description:
+        "Rent NVIDIA H200 GPUs for large-scale data analytics, ETL pipelines, and GPU-accelerated machine learning workflows. Massive memory enables in-memory processing of multi-terabyte datasets for real-time business intelligence, fraud detection, and predictive analytics. Cloud-based H200 with RAPIDS acceleration transforms data warehousing, delivering insights faster while reducing ownership costs.",
+    },
+  ],
+};
+
 export const NVIDIA_H100_USE_CASES_SECTION: GpuUseCasesSectionContent = {
   titlePrefix: "Use Cases of",
   titleHighlight: "Nvidia H100",

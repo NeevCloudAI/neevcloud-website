@@ -12,12 +12,31 @@ export const FOOTER_BRANDING: FooterBranding = {
 };
 
 export const FOOTER_SOCIAL_LINKS: readonly FooterSocialLink[] = [
-  { label: "Facebook", href: "", icon: "/icons/facebook.svg" },
-  { label: "Instagram", href: "", icon: "/icons/instagram.svg" },
-  { label: "Twitter", href: "", icon: "/icons/twitter.svg" },
-  { label: "WhatsApp", href: "", icon: "/icons/whatsapp.svg" },
-  { label: "YouTube", href: "", icon: "/icons/youtube.svg" },
-  { label: "LinkedIn", href: "", icon: "/icons/linkedin.svg" },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/neevcloud/",
+    icon: "/icons/facebook.svg",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/neevcloud.in/",
+    icon: "/icons/instagram.svg",
+  },
+  {
+    label: "Twitter",
+    href: "https://x.com/neevcloud_IN/",
+    icon: "/icons/twitter.svg",
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@neevsupercloud/",
+    icon: "/icons/youtube.svg",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/neevcloud/",
+    icon: "/icons/linkedin.svg",
+  },
 ];
 
 export const FOOTER_LINK_GROUPS: readonly FooterLinkGroup[] = [

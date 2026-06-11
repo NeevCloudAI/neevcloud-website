@@ -7,6 +7,8 @@ import {
 import { MODEL_PRICING_ROWS } from "../../data/right-model-section.data";
 import { Text } from "@/shared/ui-lib";
 import RightModelPricingTableRow from "./RightModelPricingTableRow";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+import LinkComponent from "@/shared/ui-lib/link";
 
 const RightModelPricingTable = () => {
   return (
@@ -55,12 +57,17 @@ const RightModelPricingTable = () => {
       </div>
 
       <div className="mt-6.25 flex justify-end">
-        <Link
-          href="#"
-          className="font-space-mono text-sm text-primary underline underline-offset-4"
+        <LinkComponent
+          href={EXTERNAL_LINKS.aiInferencePlayground}
+          target="_blank"
+          variant="ghost"
+          fontFamily="spaceMono"
+          spacing="none"
+          textColor="primary"
+          className="underline"
         >
           Load more Models
-        </Link>
+        </LinkComponent>
       </div>
     </div>
   );

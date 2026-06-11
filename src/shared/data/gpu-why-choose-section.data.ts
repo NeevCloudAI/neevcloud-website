@@ -140,6 +140,45 @@ export const NVIDIA_B200_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
   imageAlt: "NVIDIA DGX B200 GPU",
 };
 
+export const NVIDIA_H200_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
+  titlePrefix: "Accelerate Your AI Journey with",
+  titleHighlight: "Nvidia H200",
+  titleSuffix: "GPUs",
+  description:
+    "The H200 will represent the apex of NVIDIA's roadmap, built with cutting-edge GPU innovations for the most computationally intense AI workloads. While full specifications haven't been released yet, the H200 is expected to deliver:",
+  features: [
+    {
+      id: "training-performance",
+      title: "Ground-breaking Training Performance",
+      description:
+        "Radically faster training enabled by next-gen Tensor Cores and Transformer Engines optimized for the largest AI models",
+    },
+    {
+      id: "inference-throughput",
+      title: "Unrivaled Inference Throughput",
+      description:
+        "Orders of magnitude higher inference throughput to power real-time AI applications at exceptional cost-efficiency",
+    },
+    {
+      id: "scalability",
+      title: "Uncompromised Scalability",
+      description:
+        "The ability to scale seamlessly from single GPU to multi-GPU systems using advanced GPU interconnects",
+    },
+    {
+      id: "cloud-optimized",
+      title: "Optimized for the Cloud",
+      description:
+        "Built from the ground up for multi-tenant, secure, and sustainable AI deployments at cloud scale",
+    },
+  ],
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
+  imageSrc: "/images/nvidia-h200-gpu.png",
+  imageAlt: "NVIDIA H200 GPU",
+};
+
 export const NVIDIA_H100_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
   titlePrefix: "Accelerate Your AI Journey with",
   titleHighlight: "Nvidia H100",

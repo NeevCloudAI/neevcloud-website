@@ -6,7 +6,7 @@ export const linkVariants = cva(
     variants: {
       variant: {
         default: `bg-primary text-white`,
-        secondary: `bg-secondary`,
+        secondary: `bg-secondary text-white`,
         tertiary: `bg-tertiary`,
         outline: `border border-black text-black`,
         "outline-gray": `border border-gray-85 text-gray-85`,
@@ -91,5 +91,5 @@ export const linkVariants = cva(
       weight: "medium",
       borderRadius: "default",
     },
-  },
+  }
 );

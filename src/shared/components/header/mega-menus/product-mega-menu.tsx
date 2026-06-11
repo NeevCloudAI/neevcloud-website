@@ -37,18 +37,6 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
           },
         ],
       },
-      {
-        heading: "ORCHESTRATION",
-        links: [
-          {
-            iconSrc: "/icons/managed-k8s.svg",
-            iconAlt: "Managed Kubernetes",
-            title: "Managed Kubernetes",
-            description: "NKE · GPU-aware scheduling",
-            href: "/managed-kubernetes",
-          },
-        ],
-      },
     ],
   },
   {
@@ -63,30 +51,17 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             href: "/nvme",
             description: "Sub-Millisecond Latency",
           },
-          // {
-          //   iconSrc: "/icons/object-storage.svg",
-          //   iconAlt: "Object storage",
-          //   title: "Object Storage",
-          //   description: "S3-compatible . India-resident",
-          // },
         ],
       },
       {
-        heading: "AI SERVICES",
+        heading: "ORCHESTRATION",
         links: [
           {
-            iconSrc: "/icons/serverless-api.svg",
-            iconAlt: "Serverless APIs",
-            title: "Serverless APIs",
-            description: "Inference Without Infra",
-            href: "/serverless-inference",
-          },
-          {
-            iconSrc: "/icons/model-playground.svg",
-            iconAlt: "Model Playground",
-            title: "Model Playground",
-            description: "Browser-Based Testing",
-            href: "/model-playground",
+            iconSrc: "/icons/managed-k8s.svg",
+            iconAlt: "Managed Kubernetes",
+            title: "Managed Kubernetes",
+            description: "NKE · GPU-aware scheduling",
+            href: "/managed-kubernetes",
           },
         ],
       },
@@ -105,7 +80,7 @@ const PRODUCT_MEGA_MENU_GPU_LINKS = [
 
 const gpuLinkClassName = cn(
   "outline-offset-2 transition-colors hover:text-primary",
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
 );
 
 export default function ProductMegaMenu() {

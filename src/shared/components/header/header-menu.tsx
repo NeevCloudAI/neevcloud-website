@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils";
 import type { HeaderNavId } from "./nav-items";
 import { NAV_ITEMS } from "./nav-items";
 import { getMegaMenu } from "./mega-menu-loaders";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type HeaderMenuProps = {
   children: React.ReactNode;
@@ -18,7 +20,7 @@ const megaMenuPanelClassName = cn(
   "absolute left-1/2 top-full z-100",
   "w-full max-w-[min(1000px,calc(100vw-2rem))]",
   "-translate-x-1/2",
-  "rounded-b-md bg-white shadow-md",
+  "rounded-b-md bg-white shadow-md"
 );
 
 const navLinkUnderlineClassName =
@@ -26,7 +28,7 @@ const navLinkUnderlineClassName =
 
 function shouldCloseMegaMenuOnClick(target: EventTarget | null): boolean {
   return Boolean(
-    target instanceof Element && target.closest("a, button[type='button']"),
+    target instanceof Element && target.closest("a, button[type='button']")
   );
 }
 
@@ -35,7 +37,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
   const [mobileExpandedNavId, setMobileExpandedNavId] =
     useState<HeaderNavId | null>(null);
   const [desktopOpenNavId, setDesktopOpenNavId] = useState<HeaderNavId | null>(
-    null,
+    null
   );
 
   const closeDesktopMegaMenu = () => setDesktopOpenNavId(null);
@@ -89,7 +91,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }}
                   onMouseLeave={() => {
                     setDesktopOpenNavId((current) =>
-                      current === navItem.id ? null : current,
+                      current === navItem.id ? null : current
                     );
                   }}
                   onFocusCapture={() => {
@@ -98,11 +100,11 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   onBlurCapture={(event) => {
                     if (
                       !event.currentTarget.contains(
-                        event.relatedTarget as Node | null,
+                        event.relatedTarget as Node | null
                       )
                     ) {
                       setDesktopOpenNavId((current) =>
-                        current === navItem.id ? null : current,
+                        current === navItem.id ? null : current
                       );
                     }
                   }}
@@ -131,16 +133,23 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
           </nav>
         </div>
         <div className="hidden w-full items-center gap-2 header-buttons:flex sm:gap-3 md:w-auto md:gap-5">
-          <Button
+          <LinkComponent
+            href={EXTERNAL_LINKS.signup}
+            target="_blank"
             variant="secondary"
             spacing="md"
             className="flex-1 whitespace-nowrap md:flex-none"
           >
             Login to CPU Cloud
-          </Button>
-          <Button className="flex-1 whitespace-nowrap md:flex-none">
+          </LinkComponent>
+
+          <LinkComponent
+            href={EXTERNAL_LINKS.aiSupercloudConsole}
+            target="_blank"
+            spacing="md"
+          >
             Login to AI Cloud
-          </Button>
+          </LinkComponent>
         </div>
         <button
           type="button"
@@ -214,12 +223,12 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }
                   className={cn(
                     "flex w-full items-center justify-between px-3 py-2.5 text-left text-sm",
-                    hasMegaMenu ? "gap-2 font-medium text-black-80" : undefined,
+                    hasMegaMenu ? "gap-2 font-medium text-black-80" : undefined
                   )}
                   onClick={() => {
                     if (!hasMegaMenu) return;
                     setMobileExpandedNavId((prev) =>
-                      prev === navItem.id ? null : navItem.id,
+                      prev === navItem.id ? null : navItem.id
                     );
                   }}
                 >
@@ -229,7 +238,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                       size={18}
                       className={cn(
                         "shrink-0 text-gray-75 transition-transform duration-200",
-                        isExpanded && "rotate-180",
+                        isExpanded && "rotate-180"
                       )}
                       aria-hidden
                     />

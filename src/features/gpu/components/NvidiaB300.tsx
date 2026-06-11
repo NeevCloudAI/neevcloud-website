@@ -26,7 +26,11 @@ const NvidiaB300 = () => {
       <GpuUseCasesSection {...NVIDIA_B300_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_B300_TECHNICAL_SPECS_SECTION} />
       <GpuOtherGpusSection excludeId="nvidia-b300" />
-      <FaqSection items={NVIDIA_B300_FAQ} description="Get Clarity Here!" />
+      <FaqSection
+        items={NVIDIA_B300_FAQ}
+        description="Get Clarity Here!"
+        className="pt-0 md:pt-0 2xl:pt-0"
+      />
       <GpuFooterSection {...NVIDIA_B300_FOOTER_SECTION} />
     </>
   );

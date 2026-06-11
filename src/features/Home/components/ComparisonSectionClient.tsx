@@ -5,40 +5,49 @@ import Container from "@/shared/components/container";
 import { Button, Divider, Text } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
 import {
-  COMPARISON_SUMMARY_CARDS,
   WITH_NEEVCLOUD_BULLETS,
+  WITH_NEEVCLOUD_SUMMARY_CARDS,
   WITHOUT_NEEVCLOUD_BULLETS,
+  WITHOUT_NEEVCLOUD_SUMMARY_CARDS,
 } from "../data/comparison-section.data";
 import type { ComparisonSummaryCard } from "../types/comparison-section.types";
 
-function ComparisonCard({
-  card,
-  inverted,
-}: {
-  card: ComparisonSummaryCard;
+type ComparisonCardsPanelProps = {
+  cards: ComparisonSummaryCard[];
   inverted: boolean;
-}) {
+};
+
+function ComparisonCardsPanel({ cards, inverted }: ComparisonCardsPanelProps) {
   return (
-    <div
-      className={cn(
-        "rounded-md p-4 md:p-8",
-        "flex flex-col md:flex-row items-start md:items-center justify-between gap-4",
-        inverted ? "bg-gray-80 text-white" : "bg-white text-black",
-      )}
-    >
-      <Text as="h1" className="text-5xl md:text-7xl">
-        {card.title}
-      </Text>
-      <div className="flex flex-col gap-2.5">
-        <Text as="small">{card.subtitle}</Text>
-        <Text as="h6" weight="semibold">
-          {card.subtitle2}
-        </Text>
-      </div>
-      <div>
-        <Text as="small">{card.description}</Text>
-        <Text as="small">{card.description2}</Text>
-      </div>
+    <div className="flex flex-col gap-4 md:grid md:grid-cols-[minmax(5.5rem,auto)_minmax(11rem,14rem)_minmax(0,1fr)] md:gap-x-10 md:gap-y-4">
+      {cards.map((card) => (
+        <div
+          key={card.id}
+          className={cn(
+            "grid grid-cols-1 gap-4 rounded-md p-4 md:col-span-3 md:grid-cols-subgrid md:items-center md:p-8",
+            inverted ? "bg-gray-80 text-white" : "bg-white text-black",
+          )}
+        >
+          <Text
+            as="h1"
+            weight="semibold"
+            className="mx-0 shrink-0 text-5xl leading-none md:text-[4.5rem]"
+          >
+            {card.title}
+          </Text>
+          <div className="flex min-w-0 flex-col gap-2.5">
+            <Text as="small" className="mx-0">
+              {card.subtitle}
+            </Text>
+            <Text as="h6" weight="semibold" className="mx-0">
+              {card.subtitle2}
+            </Text>
+          </div>
+          <Text as="small" className="mx-0 min-w-0">
+            {card.description}
+          </Text>
+        </div>
+      ))}
     </div>
   );
 }
@@ -51,11 +60,15 @@ export default function ComparisonSectionClient() {
     ? WITH_NEEVCLOUD_BULLETS
     : WITHOUT_NEEVCLOUD_BULLETS;
 
+  const summaryCards = isWithNeevCloud
+    ? WITH_NEEVCLOUD_SUMMARY_CARDS
+    : WITHOUT_NEEVCLOUD_SUMMARY_CARDS;
+
   return (
     <div
       className={cn(
         "py-8 md:py-16 2xl:py-25",
-        isWithNeevCloud ? "bg-gray-10" : "bg-black",
+        isWithNeevCloud ? "bg-gray-10" : "bg-black"
       )}
     >
       <Container className="flex flex-col items-center">
@@ -95,7 +108,7 @@ export default function ComparisonSectionClient() {
             variant="outline-primary"
             className={cn(
               "rounded-r-none",
-              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white",
+              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white"
             )}
             textColor="black"
             weight="semibold"
@@ -109,7 +122,7 @@ export default function ComparisonSectionClient() {
             weight="semibold"
             className={cn(
               "rounded-l-none",
-              isWithNeevCloud ? "" : "bg-gray-90 text-white",
+              isWithNeevCloud ? "" : "bg-gray-90 text-white"
             )}
             onClick={() => setIsWithNeevCloud(true)}
             aria-pressed={isWithNeevCloud}
@@ -122,17 +135,14 @@ export default function ComparisonSectionClient() {
         <div className="mt-4 md:mt-12.5 flex flex-col md:flex-row items-center gap-5 md:gap-4 w-full">
           <div
             className={cn(
-              "flex md:flex-2 flex-col p-4 md:p-8 rounded-md w-full gap-4",
+              "w-full rounded-md p-4 md:flex-2 md:p-8",
               isWithNeevCloud ? "bg-primary" : "bg-gray-90",
             )}
           >
-            {COMPARISON_SUMMARY_CARDS.map((card) => (
-              <ComparisonCard
-                key={card.id}
-                card={card}
-                inverted={!isWithNeevCloud}
-              />
-            ))}
+            <ComparisonCardsPanel
+              cards={summaryCards}
+              inverted={!isWithNeevCloud}
+            />
           </div>
 
           <div className="flex flex-col md:flex-1 w-full">
@@ -155,7 +165,7 @@ export default function ComparisonSectionClient() {
             <Text
               as="h6"
               className={cn(
-                isWithNeevCloud ? "mt-4 md:mt-12.5" : "mt-4 md:mt-7.5",
+                isWithNeevCloud ? "mt-4 md:mt-12.5" : "mt-4 md:mt-7.5"
               )}
               textColor={isWithNeevCloud ? "black-5" : "white"}
             >
@@ -165,7 +175,7 @@ export default function ComparisonSectionClient() {
               orientation="horizontal"
               className={cn(
                 "my-4.5",
-                isWithNeevCloud ? "bg-black-10" : "bg-white-10",
+                isWithNeevCloud ? "bg-black-10" : "bg-white-10"
               )}
             />
 
@@ -178,7 +188,7 @@ export default function ComparisonSectionClient() {
                   orientation="horizontal"
                   className={cn(
                     "my-4.5",
-                    isWithNeevCloud ? "bg-black-10" : "bg-white-10",
+                    isWithNeevCloud ? "bg-black-10" : "bg-white-10"
                   )}
                   aria-hidden={idx === bullets.length - 2}
                 />

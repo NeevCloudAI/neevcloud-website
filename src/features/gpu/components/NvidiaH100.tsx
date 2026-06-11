@@ -26,7 +26,11 @@ const NvidiaH100 = () => {
       <GpuUseCasesSection {...NVIDIA_H100_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_H100_TECHNICAL_SPECS_SECTION} />
       <GpuOtherGpusSection excludeId="nvidia-h100" />
-      <FaqSection items={NVIDIA_H100_FAQ} description="Get Clarity Here!" />
+      <FaqSection
+        items={NVIDIA_H100_FAQ}
+        description="Get Clarity Here!"
+        className="pt-0 md:pt-0 2xl:pt-0"
+      />
       <GpuFooterSection {...NVIDIA_H100_FOOTER_SECTION} />
     </>
   );

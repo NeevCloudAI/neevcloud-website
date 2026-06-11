@@ -28,7 +28,7 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     name: "Tanvi Ausare",
     title: "SE - Content & Brand Communications",
     quote:
-      "Working on complex network architectures that support AI workloads has sharpened my skills and given me the confidence to take on bigger challenges.",
+      "Creating content around AI infrastructure and cloud technologies has enhanced my technical expertise, encouraged continuous learning, and driven professional growth.",
     image: "/images/tanvi-ausare.png",
   },
   {

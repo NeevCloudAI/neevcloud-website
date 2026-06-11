@@ -49,6 +49,18 @@ export const NVIDIA_B300_FOOTER_SECTION: GpuFooterSectionContent = {
   buttonTarget: "_blank",
 };
 
+export const NVIDIA_H200_FOOTER_SECTION: GpuFooterSectionContent = {
+  gpuName: "H200",
+  titlePrefix: "",
+  titleHighlight: "Pre-Reserve",
+  titleSuffix: "Your H200 GPUs Now",
+  description:
+    "NeevCloud is excited to offer early access to the latest evolution in accelerated computing - the NVIDIA H200 Tensor Core GPU, available at highly competitive pricing. With up to 30% faster processing power than the H100, enhanced energy efficiency, and advanced AI capabilities, the H200 is designed to tackle the most demanding tasks with ease. It is now available on our advanced Cloud platform with flexible rental options at a competitive price.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
+};
+
 export const NVIDIA_H100_FOOTER_SECTION: GpuFooterSectionContent = {
   gpuName: "H100",
   titlePrefix: "",

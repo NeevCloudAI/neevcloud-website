@@ -360,6 +360,188 @@ export const NVIDIA_B300_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
     ],
   };
 
+export const NVIDIA_H200_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "gpu",
+        feature: "GPU",
+        specification: "NVIDIA H200 Tensor Core GPU",
+      },
+      {
+        id: "base-architecture",
+        feature: "Base Architecture",
+        specification: "Hopper (H100 Family)",
+      },
+      {
+        id: "gpu-count",
+        feature: "GPU Count (HGX H200)",
+        specification: "8 GPUs per server node",
+      },
+      {
+        id: "total-gpu-memory",
+        feature: "Total GPU Memory (Per Node)",
+        specification: "1.13 TB (8 x 141 GB)",
+      },
+      {
+        id: "memory-type",
+        feature: "Memory Type",
+        specification: "HBM3e (High Bandwidth Memory)",
+      },
+      {
+        id: "gpu-interconnect",
+        feature: "GPU Interconnect",
+        specification: "NVIDIA NVSwitch (Fully Connected Mesh)",
+      },
+      {
+        id: "host-interface",
+        feature: "Host Interface",
+        specification: "PCIe Gen 5",
+      },
+      {
+        id: "ai-performance",
+        feature: "AI Performance (FP8)",
+        specification: "Up to 32 PFLOPS per HGX System",
+      },
+      {
+        id: "power-efficiency",
+        feature: "Power Efficiency",
+        specification: "Optimized for energy-efficient AI compute",
+      },
+      {
+        id: "deployment-options",
+        feature: "Deployment Options",
+        specification:
+          "On-Prem, Private Cloud, and NeevCloud AI SuperCloud",
+      },
+    ],
+    charts: [
+      {
+        id: "llm-inference-performance",
+        title: "Up to 2X the LLM Inference Performance",
+        caption: "Relative LLM inference performance vs H100 baseline",
+        yAxisMax: 2,
+        yAxisStep: 0.5,
+        yAxisFormat: "multiplier",
+        bars: [
+          {
+            id: "h100-llama2-13b",
+            name: "Llama2 13B",
+            description: "H100",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "h200-llama2-13b",
+            name: "Llama2 13B",
+            description: "H200",
+            value: 1.4,
+            displayValue: "1.4X",
+            variant: "highlight",
+          },
+          {
+            id: "h100-gpt3-175b",
+            name: "GPT-3 175B",
+            description: "H100",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "h200-gpt3-175b",
+            name: "GPT-3 175B",
+            description: "H200",
+            value: 1.6,
+            displayValue: "1.6X",
+            variant: "highlight",
+          },
+          {
+            id: "h100-llama2-70b",
+            name: "Llama2 70B",
+            description: "H100",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "h200-llama2-70b",
+            name: "Llama2 70B",
+            description: "H200",
+            value: 1.9,
+            displayValue: "1.9X",
+            variant: "highlight",
+          },
+        ],
+        legend: [
+          {
+            label: "H100",
+            variant: "default",
+          },
+          {
+            label: "H200",
+            variant: "highlight",
+          },
+        ],
+      },
+      {
+        id: "energy-tco-reduction",
+        title: "H200 Reduces LLM Energy Use and TCO by 50%",
+        caption: "Llama2 70B LLM Inference Workload · Lower is Better",
+        yAxisMax: 100,
+        yAxisStep: 25,
+        yAxisFormat: "number",
+        bars: [
+          {
+            id: "h100-tco",
+            name: "Total Cost of Ownership",
+            description: "H100",
+            value: 100,
+            displayValue: "100%",
+            variant: "default",
+          },
+          {
+            id: "h200-tco",
+            name: "Total Cost of Ownership",
+            description: "H200",
+            value: 50,
+            displayValue: "50%",
+            variant: "highlight",
+          },
+          {
+            id: "h100-energy",
+            name: "Energy Use",
+            description: "H100",
+            value: 100,
+            displayValue: "100%",
+            variant: "default",
+          },
+          {
+            id: "h200-energy",
+            name: "Energy Use",
+            description: "H200",
+            value: 50,
+            displayValue: "50%",
+            variant: "highlight",
+          },
+        ],
+        legend: [
+          {
+            label: "H100",
+            variant: "default",
+          },
+          {
+            label: "H200",
+            variant: "highlight",
+          },
+        ],
+      },
+    ],
+  };
+
 export const NVIDIA_H100_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
   {
     buttonCta: "Reserve Now",

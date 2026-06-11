@@ -128,6 +128,38 @@ export const NVIDIA_B300_CHOOSE_SECTION: GpuChooseSectionContent = {
   terminalAriaLabel: "Nvidia DGX B300 pricing terminal",
 };
 
+export const NVIDIA_H200_CHOOSE_SECTION: GpuChooseSectionContent = {
+  titlePrefix: "Choose Your",
+  titleHighlight: "H200 Configuration",
+  description:
+    "Fully-integrated pricing optimized for the most challenging AI workloads in budget.",
+  terminalTitle: "~ nvidia-h200-pricing - bash - 80x24",
+  pricingCommand: "> --pricing --currency=INR",
+  pricingComment: "// sorted by hourly rate",
+  tableHeaders: [
+    "sku",
+    "hourly",
+    "3-months commitment",
+    "6-months commitment",
+    "1-year commitment",
+  ],
+  rows: [
+    {
+      id: "nvidia-h200-global",
+      sku: "Nvidia H200",
+      skuSubtitle: "(Location - Global)",
+      hourly: "₹48.60",
+      threeMonthPrice: "₹48.60",
+      threeMonthSavings: "save upto 2%",
+      sixMonthCommitment: "Based upon availability",
+      oneYearCommitment: "Based upon availability",
+    },
+  ],
+  footerComment:
+    "// reserved plans bill for full window · run `gpu calc <sku> --hours=N` to estimate",
+  terminalAriaLabel: "Nvidia H200 pricing terminal",
+};
+
 export const NVIDIA_H100_CHOOSE_SECTION: GpuChooseSectionContent = {
   titlePrefix: "Choose Your",
   titleHighlight: "H100 Configuration",

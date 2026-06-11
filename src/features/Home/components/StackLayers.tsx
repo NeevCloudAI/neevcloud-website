@@ -19,15 +19,16 @@ export default function StackLayers({ activeIndex, count }: StackLayersProps) {
             style={{
               top: index === 0 ? 0 : index === count - 1 ? 400 : index * 150,
               zIndex: isActive ? 6 : count - index,
-              opacity: isActive ? 1 : 0.65,
+              opacity: isActive ? 1 : 0.5,
             }}
           >
             <Image
-              src={
-                isActive
-                  ? `/icons/stack-${index + 1}.svg`
-                  : `/icons/stack-${index + 1}-shadow.svg`
-              }
+              // src={
+              //   isActive
+              //     ? `/icons/stack-${index + 1}.svg`
+              //     : `/icons/stack-${index + 1}-shadow.svg`
+              // }
+              src={`/icons/stack-${index + 1}.svg`}
               alt={`Stack layer ${index + 1}`}
               width={400}
               height={400}

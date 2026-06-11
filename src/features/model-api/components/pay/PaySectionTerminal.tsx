@@ -20,14 +20,14 @@ const PaySectionTerminal = () => {
           {`// fetched 4 models per-requests billing all amounts in ₹`}
         </Text>
 
-        <div className="flex items-center justify-between gap-2 mt-7.5">
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+        <div className="grid grid-cols-3 items-center gap-2 mt-7.5">
+          <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="left">
             category
           </Text>
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+          <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="left">
             Price / request
           </Text>
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+          <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="right">
             Pricing
           </Text>
         </div>

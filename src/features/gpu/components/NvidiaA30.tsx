@@ -26,7 +26,11 @@ const NvidiaA30 = () => {
       <GpuUseCasesSection {...NVIDIA_A30_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_A30_TECHNICAL_SPECS_SECTION} />
       <GpuOtherGpusSection excludeId="nvidia-a30" />
-      <FaqSection items={NVIDIA_A30_FAQ} description="Get Clarity Here!" />
+      <FaqSection
+        items={NVIDIA_A30_FAQ}
+        description="Get Clarity Here!"
+        className="pt-0 md:pt-0 2xl:pt-0"
+      />
       <GpuFooterSection {...NVIDIA_A30_FOOTER_SECTION} />
     </>
   );

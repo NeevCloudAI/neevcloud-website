@@ -61,3 +61,19 @@ Pending:
    1.1
    section: Hero section
    pending: hero section gradient
+
+<!--  -->
+   <!-- 1. Change without neevcloud section -->
+   <!-- 2. one dropdown should open at a time -->
+   <!-- 2. section: See Models in Action,Not Just in Theory -->
+   <!-- pending: in Learn without indra: arrows should be consistent -->
+   <!-- 3. Built for experimentation figma icon -->
+   <!-- 5.route: model-api, section: Pay for what you use.Nothing more. red text alignment -->
+   <!-- 3. route: why-ai-supercloud, section: Traditional Cloud vsAI Supercloud. change content -->
+   <!-- 3. route: neevcloud-arena, section: SEE AI, align INDUSTRY EXAMPLES -->
+   <!-- 7.route: cpu-cluster, section: Where CPU Fits in anAI Stack. add icons -->
+   <!-- 9. route: leadership, Narendra section needs to be weighted and add linkedin section instead of read more -->
+
+2. route: gpu-cluster, section: Every WorkloadFlat rate.Unmetered. Add pricing from sheet
+3. route: about-use. hero sections image
+<!--  -->

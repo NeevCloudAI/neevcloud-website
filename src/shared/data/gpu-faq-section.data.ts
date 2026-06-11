@@ -136,6 +136,38 @@ export const NVIDIA_B300_FAQ: readonly FaqItem[] = [
   },
 ] as const;
 
+export const NVIDIA_H200_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What is the H200 GPU and why is it important for AI workloads?",
+    answer:
+      "The NVIDIA H200 Tensor Core GPU is the latest evolution in accelerated computing, designed to handle the most computationally intensive AI workloads. With up to 30% faster processing than the H100, enhanced energy efficiency, and advanced AI capabilities, it excels at AI training, inference, deep learning, and LLM workloads. Whether you're scaling a single GPU or a multi-GPU AI SuperCluster, the H200 delivers unmatched performance for cloud-based AI.",
+  },
+  {
+    id: 2,
+    category: "Deployment",
+    question: "How can I pre-reserve or rent an H200 GPU on NeevCloud?",
+    answer:
+      "NeevCloud offers flexible H200 GPU rental options on a pay-as-you-go basis. By pre-reserving, you can lock in guaranteed access to H200 GPUs, ensuring your AI workloads run without delays. Pre-reservation also provides attractive early pricing, making it easy to scale AI experiments, deep learning, or LLM training efficiently.",
+  },
+  {
+    id: 3,
+    category: "Pricing",
+    question: "What is the H200 GPU pricing and rental cost?",
+    answer:
+      "The H200 GPU is available on NeevCloud for just $1.99/hr (limited-time offer), making it one of the most cost-effective options for high-performance AI. You can also explore H200 GPU rent price over time, on-demand H200 pricing, and hourly rental options tailored for both short-term experiments and long-term production workloads.",
+  },
+  {
+    id: 4,
+    category: "Use Cases",
+    question:
+      "What makes the H200 GPU ideal for AI, deep learning, and cloud deployments?",
+    answer:
+      "The H200 GPU is optimized for cloud-based AI workloads, offering unmatched scalability, inference throughput, and advanced GPU interconnects. It's perfect for AI training, deep learning, LLMs, and rendering tasks, enabling organizations to maximize performance while minimizing costs. Renting an H200 GPU from NeevCloud gives you instant access to enterprise-grade GPU power without the overhead of physical infrastructure.",
+  },
+] as const;
+
 export const NVIDIA_H100_FAQ: readonly FaqItem[] = [
   {
     id: 1,

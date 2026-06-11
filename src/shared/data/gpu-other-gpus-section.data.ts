@@ -424,6 +424,115 @@ export const GPU_OTHER_GPUS_CATALOG_B300: readonly GpuOtherGpuCard[] = [
   },
 ];
 
+export const GPU_OTHER_GPUS_CATALOG_H200: readonly GpuOtherGpuCard[] = [
+  {
+    id: "nvidia-h100",
+    title: "Nvidia H100",
+    description: "Optimize AI workloads with high-performance H100 GPUs.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "H100",
+      comparisonMultiplierLabel: "1.8x",
+    },
+  },
+  {
+    id: "nvidia-a100",
+    title: "Nvidia A100",
+    description: "Boost AI training and inference with NVIDIA A100 GPUs.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "A100",
+      comparisonMultiplierLabel: "1.4x",
+    },
+  },
+  {
+    id: "nvidia-t4",
+    title: "Nvidia T4",
+    description:
+      "The World's Most Powerful GPU for Visual Computing with Tesla T4.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "T4",
+      comparisonMultiplierLabel: "0.3x",
+    },
+  },
+  {
+    id: "nvidia-a30",
+    title: "Nvidia A30",
+    description:
+      "Nvidia A30 delivers AI Inference and Mainstream Compute for Every Enterprise.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "A30",
+      comparisonMultiplierLabel: "0.4x",
+    },
+  },
+  {
+    id: "nvidia-a6000",
+    title: "Nvidia A6000",
+    description:
+      "Nvidia a6000 accelerator for efficient video, AI, and graphics.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "RTX A6000",
+      comparisonMultiplierLabel: "0.5x",
+    },
+  },
+  {
+    id: "nvidia-rtx-pro-6000",
+    title: "Nvidia RTX Pro 6000",
+    description:
+      "Pro 6000 GPU accelerate AI, high performance computing, and graphics.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "RTX PRO 6000",
+      comparisonMultiplierLabel: "0.7x",
+    },
+  },
+  {
+    id: "nvidia-b200",
+    title: "Nvidia B200",
+    description:
+      "Experience unbeatable performance, power, and memory with Nvidia B200.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "B200",
+      comparisonMultiplierLabel: "2.6x",
+    },
+  },
+  {
+    id: "nvidia-rtx-5090",
+    title: "Nvidia RTX 5090",
+    description:
+      "Nvidia RTX 5090 GPU for LLM inference, large-scale training, and real-time graphics.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "RTX 5090",
+      comparisonMultiplierLabel: "0.65x",
+    },
+  },
+  {
+    id: "nvidia-rtx-3090",
+    title: "Nvidia RTX 3090",
+    description:
+      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
+    flipDetails: {
+      baselineCardName: "H200",
+      baselineMultiplierLabel: "2x",
+      comparisonCardName: "RTX 3090",
+      comparisonMultiplierLabel: "0.4x",
+    },
+  },
+];
+
 export const GPU_OTHER_GPUS_CATALOG_H100: readonly GpuOtherGpuCard[] = [
   {
     id: "nvidia-a100",
@@ -542,6 +651,7 @@ export const GPU_OTHER_GPUS_CATALOG_BY_PAGE: Record<
   "nvidia-b200": GPU_OTHER_GPUS_CATALOG_B200,
   "nvidia-b300": GPU_OTHER_GPUS_CATALOG_B300,
   "nvidia-h100": GPU_OTHER_GPUS_CATALOG_H100,
+  "nvidia-h200": GPU_OTHER_GPUS_CATALOG_H200,
 };
 
 export function getGpuOtherGpusCatalog(

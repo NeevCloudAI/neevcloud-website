@@ -8,14 +8,14 @@ type PaySectionPricingRowProps = {
 const PaySectionPricingRow = ({ row }: PaySectionPricingRowProps) => {
   return (
     <>
-      <div className="flex items-center justify-between gap-2 py-5">
-        <Text fontFamily="spaceMono" textColor="primary" as="h6">
+      <div className="grid grid-cols-3 items-center gap-2 py-5">
+        <Text fontFamily="spaceMono" textColor="primary" as="h6" align="left">
           {row.category}
         </Text>
-        <Text fontFamily="spaceMono" textColor="red-50" as="h6">
+        <Text fontFamily="spaceMono" textColor="red-50" as="h6" align="left">
           {row.price}
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-75" as="h6">
+        <Text fontFamily="spaceMono" textColor="gray-75" as="h6" align="right">
           {row.pricing}
         </Text>
       </div>

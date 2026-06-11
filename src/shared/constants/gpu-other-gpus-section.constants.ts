@@ -33,6 +33,10 @@ export const GPU_OTHER_GPUS_FLIP_CHART_CONFIG_BY_PAGE = {
     upToReferenceMultiplierLabel: "2x",
     upToMinRatio: 1,
   },
+  "nvidia-h200": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
 } as const;
 
 export const GPU_OTHER_GPUS_DEFAULT_FLIP_CHART_CONFIG =

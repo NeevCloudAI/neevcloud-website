@@ -105,7 +105,7 @@ const ComparisonTableSection = ({
                   </td>
                   <td className="p-4 md:px-7.5 md:py-3.75 border border-white-10">
                     <Text as="h6" textColor="primary" align="left">
-                      {row.traditional}
+                      {row.supercloud}
                     </Text>
                   </td>
                 </tr>

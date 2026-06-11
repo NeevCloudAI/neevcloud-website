@@ -6,6 +6,7 @@ export const EXTERNAL_LINKS = {
   aiInferenceDedicatedModel:
     "https://console.ai.neevcloud.com/ai-inference/dedicated-model",
   signup: "https://signup.neevcloud.com/",
+  varuna: "https://www.neevcloud.com/varuna/",
   aiSupercloudConsole: "https://console.ai.neevcloud.com/",
   deployGpu: "https://console.ai.neevcloud.com/deploy-gpu",
   storage: "https://console.ai.neevcloud.com/storage",

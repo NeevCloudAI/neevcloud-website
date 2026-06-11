@@ -76,9 +76,9 @@ export const HERO_SLIDES: HeroSlide[] = [
     headlineEmphasis: "Immersion Cooling Facility",
     headlineSuffix: "",
     subtitle:
-      "Delivering 100% carbon-neutral operations, up to 10× higher computational density, a 1.03 PUE, and up to 25% lower infrastructure costs. ",
+      "Delivering 100% carbon-neutral operations, up to 10x higher computational density, a 1.03 PUE, and up to 25% lower infrastructure costs. ",
     primaryCtaLabel: "View Solutions",
-    primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+    primaryCtaRoute: EXTERNAL_LINKS.varuna,
     primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Talk to our experts",
     secondaryCtaRoute: "/contact-neevcloud",

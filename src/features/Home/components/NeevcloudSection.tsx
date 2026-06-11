@@ -4,6 +4,8 @@ import Image from "next/image";
 import CloudComparisonCard from "./CloudComparisonCard";
 import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
 import { Button } from "@/shared/ui-lib";
+import LinkComponent from "@/shared/ui-lib/link";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const LEGACY_CLOUD_PROBLEMS = [
   "Vendor Lock-In",
@@ -129,12 +131,21 @@ export default function NeevcloudSection() {
               </div>
 
               <div className="flex gap-3 mt-2.5">
-                <Button size="full" textColor="black">
+                <LinkComponent
+                  href={EXTERNAL_LINKS.aiInferencePlayground}
+                  target="_blank"
+                  className="w-full text-black"
+                >
                   Play with a Demo
-                </Button>
-                <Button size="full" variant="black">
+                </LinkComponent>
+                <LinkComponent
+                  href={EXTERNAL_LINKS.aiSupercloudConsole}
+                  target="_blank"
+                  variant="black"
+                  className="w-full"
+                >
                   Get Started
-                </Button>
+                </LinkComponent>
               </div>
               <Text textColor="black" className="mt-3">
                 AI Agent building your app...

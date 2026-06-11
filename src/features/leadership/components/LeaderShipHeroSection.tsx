@@ -2,7 +2,7 @@ import Container from "@/shared/components/container";
 import { Divider, Text } from "@/shared/ui-lib";
 import { LEADERSHIP_HERO } from "../data/leadership-page.data";
 import Image from "next/image";
-import { ChevronDown } from "@/shared/icons/lucide-icon-map";
+import { ChevronDown, MoveRight } from "@/shared/icons/lucide-icon-map";
 import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
@@ -47,37 +47,63 @@ const LeaderShipHeroSection = () => {
           </LinkComponent>
         </div>
 
-        <div className="max-w-5xl mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
-          <div className="p-4 md:pl-24 ">
-            <div className="flex items-center gap-2">
-              <Divider orientation="horizontal" className="w-8 bg-primary" />
-              <Text textColor="gray-100" as="small">
-                FOUNDER & CEO
-              </Text>
-            </div>
+        <div className=" mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
+          <div className="p-4 md:pl-15 ">
             <Text
               as="h3"
               textColor="gray-100"
-              className="mt-5 text-[28px] md:text-[32px]"
+              className="text-[28px] md:text-[32px]"
               weight="semibold"
             >
               Narendra Sen
             </Text>
-            <Text className="mt-5" weight="medium">
-              Founder & CEO
-            </Text>
-            <Text as="h6" className="mt-5 max-w-xs">
+            <div className="w-fit">
+              <Text
+                as="h6"
+                className="mt-5"
+                weight="semibold"
+                textColor="gray-90"
+              >
+                Founder & CEO
+              </Text>
+              <Divider
+                orientation="horizontal"
+                className="mt-1 bg-primary-105"
+              />
+            </div>
+            <Text as="h6" className="mt-5 max-w-md">
               As Founder and CEO of NeevCloud, Narendra Sen is redefining how
               nations build and own AI infrastructure. His vision places India
               at the center of the Global AI Landscape through platforms that
               are secure, scalable, and sovereign by design.
             </Text>
-            <Text as="h6" className="mt-2.5 max-w-xs">
+            <Text as="h6" className="mt-2.5 max-w-md">
               By pioneering India’s first AI SuperCloud, he is laying the
               foundation for a digital future powered by innovation,
               independence, and long-term resilience.
             </Text>
-            <div className="flex items-center gap-1 mt-2.5">
+
+            <a
+              href={EXTERNAL_LINKS.narendraSenLinkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit flex mt-4 items-center gap-2 bg-primary-25 hover:bg-linear-to-r from-[#5CB7A8] to-[#92EFE0] p-1.5 rounded-md"
+              aria-label={`Narendra Sen on LinkedIn`}
+            >
+              <Image
+                src="/icons/linkedin-bg.svg"
+                alt=""
+                aria-hidden="true"
+                width={20}
+                height={20}
+              />
+              <Text weight="semibold" textColor="gray-100">
+                Narendra Sen
+              </Text>
+              <MoveRight className="size-6" />
+            </a>
+
+            {/* <div className="flex items-center gap-1 mt-2.5">
               <LinkComponent
                 href={EXTERNAL_LINKS.narendraSenLinkedin}
                 variant="ghost"
@@ -88,7 +114,7 @@ const LeaderShipHeroSection = () => {
                 Read More
                 <ChevronDown className="w-4 h-4 font-semibold" />
               </LinkComponent>
-            </div>
+            </div> */}
           </div>
           <div className="relative pt-4 md:pt-8">
             <Image

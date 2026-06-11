@@ -21,12 +21,7 @@ const GpuTransparentPricingSection = () => {
             GPU Configurations
           </Text>
         </Text>
-        <Text
-          as="h6"
-          textColor="gray-75"
-          align="center"
-          className="mt-2.5 max-w-3xl"
-        >
+        <Text as="h6" align="center" className="mt-2.5 max-w-3xl text-white/82">
           Real workloads from real institutions, fraud, risk, trading, claims,
           and compliance, running on GPU infrastructure with data sovereignty.
         </Text>

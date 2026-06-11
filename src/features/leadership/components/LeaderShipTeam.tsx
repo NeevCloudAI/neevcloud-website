@@ -79,7 +79,7 @@ const LEADERSHIP_TEAM: LeadershipTeamMember[] = [
   },
   {
     name: "Rashmeet Kaur Bedi",
-    title: "Senior HR Manager",
+    title: "Senior Brand Manager",
     description:
       "Shaping NeevCloud’s voice and presence, Rashmeet translates technology into compelling brand narratives. She drives positioning, storytelling, and consistency across every touchpoint.",
     image: "/images/rashmeet-kaur-bedi.png",

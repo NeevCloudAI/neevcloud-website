@@ -27,7 +27,7 @@ const CpuTransparentPricingSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-75"
+          textColor="gray-04"
           align="center"
           className="mt-2.5 max-w-3xl"
         >
@@ -36,7 +36,7 @@ const CpuTransparentPricingSection = () => {
         </Text>
 
         <div
-          className="mt-4 w-full rounded-lg border border-white-10 bg-white-5 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
+          className="mt-4 w-full rounded-lg border border-white/12 bg-white/6 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
           role="region"
           aria-label="Transparent CPU pricing terminal"
         >

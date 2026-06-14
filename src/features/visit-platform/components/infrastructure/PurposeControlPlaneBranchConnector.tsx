@@ -5,7 +5,7 @@ const PurposeControlPlaneBranchConnector = () => {
     <div className="flex w-full flex-col items-center" aria-hidden="true">
       <div className="flex flex-col items-center md:hidden">
         <div className="h-2 w-2 rounded-full bg-primary" />
-        <div className="h-5 w-px bg-blue-40" />
+        <div className="h-5 w-px bg-gray-02" />
         <div className="h-2 w-2 rounded-full bg-primary" />
       </div>
 
@@ -21,7 +21,7 @@ const PurposeControlPlaneBranchConnector = () => {
             y1="0"
             x2="167"
             y2="58"
-            stroke="var(--blue-40)"
+            stroke="var(--gray-02)"
             strokeWidth="1"
           />
           <line
@@ -29,7 +29,7 @@ const PurposeControlPlaneBranchConnector = () => {
             y1="0"
             x2="500"
             y2="58"
-            stroke="var(--blue-40)"
+            stroke="var(--gray-02)"
             strokeWidth="1"
           />
           <line
@@ -37,7 +37,7 @@ const PurposeControlPlaneBranchConnector = () => {
             y1="0"
             x2="833"
             y2="58"
-            stroke="var(--blue-40)"
+            stroke="var(--gray-02)"
             strokeWidth="1"
           />
         </svg>

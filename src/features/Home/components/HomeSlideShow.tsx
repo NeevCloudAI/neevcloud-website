@@ -63,7 +63,7 @@ const HomeSlideShow = ({ slides, onSlideChange }: HomeSlideShowProps) => {
               onClick={() => setActiveIndex(index)}
               aria-label={`Go to slide ${index + 1}`}
               className={`h-1.5 w-1.5 rounded-full ${
-                index === activeIndex ? "bg-secondary" : "bg-white"
+                index === activeIndex ? "bg-deep-forest" : "bg-white"
               }`}
             />
           ))}

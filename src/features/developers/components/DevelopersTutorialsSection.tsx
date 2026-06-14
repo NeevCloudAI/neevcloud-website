@@ -1,6 +1,5 @@
 import Container from "@/shared/components/container";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import {
   DEVELOPERS_TUTORIAL_CARDS,
   DEVELOPERS_TUTORIALS_SECTION,
@@ -10,7 +9,7 @@ import DevelopersTutorialCard from "./tutorials/DevelopersTutorialCard";
 const DevelopersTutorialsSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="developers-tutorials-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -28,7 +27,7 @@ const DevelopersTutorialsSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {DEVELOPERS_TUTORIALS_SECTION.description}

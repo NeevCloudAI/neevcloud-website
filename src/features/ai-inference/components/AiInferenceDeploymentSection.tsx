@@ -65,7 +65,7 @@ const AiInferenceDeploymentItem = ({
   item,
 }: AiInferenceDeploymentItemProps) => {
   return (
-    <article className="flex h-full flex-col justify-between rounded-md bg-black-80 p-4 md:p-9 border border-black-30">
+    <article className="flex h-full flex-col justify-between rounded-md bg-white/6 p-4 md:p-9 border border-white/12">
       <div>
         <div className="flex items-start justify-between">
           <Text
@@ -80,7 +80,7 @@ const AiInferenceDeploymentItem = ({
             as="h1"
             className="text-[3rem] md:text-[7rem]"
             fontFamily="spaceMono"
-            textColor="primary-180"
+            textColor="primary-230"
             weight="normal"
           >
             {item.stepNumber}
@@ -88,21 +88,21 @@ const AiInferenceDeploymentItem = ({
         </div>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           className="mt-5 md:mt-11.5"
           weight="regular"
         >
           {item.description}
         </Text>
       </div>
-      <div className="mt-5 md:mt-8.75 border border-black-5 rounded-md bg-black">
-        <div className="flex items-center justify-between gap-2 px-4 py-3 bg-black-100 rounded-t-md border-b border-black-5">
+      <div className="mt-5 md:mt-8.75 border border-white/8 rounded-md bg-black">
+        <div className="flex items-center justify-between gap-2 px-4 py-3 bg-blue/50 rounded-t-md border-b border-white/8">
           <div className="flex items-center gap-1" aria-hidden="true">
             <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
           </div>
-          <Text textColor="gray-75" fontFamily="spaceMono">
+          <Text textColor="gray-04" fontFamily="spaceMono">
             bash
           </Text>
         </div>

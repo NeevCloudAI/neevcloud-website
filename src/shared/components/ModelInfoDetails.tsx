@@ -32,13 +32,13 @@ const ModelInfoDetails = ({
       {isExpanded ? (
         <div id={detailsId}>
           <Divider
-            className="bg-gray-60 mt-7.5 mb-5"
+            className="bg-gray-01 mt-7.5 mb-5"
             orientation="horizontal"
           />
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
             <div>
-              <Text as="small" textColor="gray-85">
+              <Text as="small" textColor="gray-03">
                 Capabilities
               </Text>
               <div className="mt-3.75 space-y-1">
@@ -51,7 +51,7 @@ const ModelInfoDetails = ({
             </div>
 
             <div>
-              <Text as="small" textColor="gray-85">
+              <Text as="small" textColor="gray-03">
                 Use Cases
               </Text>
               <div className="mt-3.75 space-y-1">

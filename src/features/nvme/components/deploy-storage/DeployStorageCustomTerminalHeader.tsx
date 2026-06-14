@@ -2,7 +2,7 @@ import { Text } from "@/shared/ui-lib";
 
 const DeployStorageCustomTerminalHeader = () => {
   return (
-    <div className="flex items-center justify-between gap-2 p-2.5 border-b border-black-5">
+    <div className="flex items-center justify-between gap-2 p-2.5 border-b border-black/82">
       <div className="flex items-center gap-2">
         <span
           className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"
@@ -24,7 +24,7 @@ const DeployStorageCustomTerminalHeader = () => {
           Custom Capacity
         </Text>
       </div>
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         ~/create.sh ·
         <Text as="span" variant="p" textColor="primary">
           ready to copy

@@ -13,14 +13,14 @@ const ReservedNodePricingTier = ({
 }: ReservedNodePricingTierProps) => {
   return (
     <div className="flex flex-col items-center justify-center px-4 md:px-8 w-full">
-      <Text textColor="gray-75">{term}</Text>
+      <Text textColor="gray-04">{term}</Text>
       <Text as="h2" textColor="primary">
         {discount}
-        <Text as="span" textColor="gray-75" variant="h6">
+        <Text as="span" textColor="gray-04" variant="h6">
           off
         </Text>
       </Text>
-      <Text textColor="gray-75" align="center">
+      <Text textColor="gray-04" align="center">
         {description}
       </Text>
     </div>

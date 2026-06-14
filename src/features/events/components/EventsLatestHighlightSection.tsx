@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Container from "@/shared/components/container";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import { resolveLucideIcon } from "@/shared/icons/lucide-icon-map";
 import { LATEST_HIGHLIGHT_SECTION } from "../data/latest-highlight-section.data";
 
 const EventsLatestHighlightSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="events-latest-highlight-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -27,7 +26,7 @@ const EventsLatestHighlightSection = () => {
             <Text
               as="small"
               textColor="white"
-              className="inline-flex w-fit items-center gap-1.5 rounded-md bg-tertiary px-3.75 py-1.25"
+              className="inline-flex w-fit items-center gap-1.5 rounded-md bg-deep-blue px-3.75 py-1.25"
             >
               <span aria-hidden="true">•</span>
               {LATEST_HIGHLIGHT_SECTION.badge}
@@ -37,7 +36,7 @@ const EventsLatestHighlightSection = () => {
               {LATEST_HIGHLIGHT_SECTION.heading}
             </Text>
 
-            <Text as="h6" textColor="gray-90" className="mt-2.5">
+            <Text as="h6" textColor="gray-05" className="mt-2.5">
               {LATEST_HIGHLIGHT_SECTION.description}
             </Text>
 

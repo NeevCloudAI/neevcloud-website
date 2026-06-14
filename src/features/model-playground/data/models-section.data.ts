@@ -114,8 +114,8 @@ export const STEP_ONE_COST_COMPARISON_RESULTS: StorageComparisonMetric[] = [
     label: "kimi-k2-instruct",
     displayValue: "₹0.010",
     seconds: 35,
-    valueColor: "red-50",
-    barColor: "bg-red-50",
+    valueColor: "pulse-red",
+    barColor: "bg-pulse-red",
   },
 ];
 

@@ -23,7 +23,7 @@ const CPUConfigurationTable = ({ family }: CPUConfigurationTableProps) => {
         {family.subtitle}
       </Text>
 
-      <div className="mt-7.5">
+      <div className="mt-7.5 overflow-x-auto classy">
         <table
           className="w-full font-space-mono"
           aria-label={`${family.titleName} configuration options`}
@@ -32,7 +32,7 @@ const CPUConfigurationTable = ({ family }: CPUConfigurationTableProps) => {
             CPU instance configurations for {family.titleName}
           </caption>
           <thead>
-            <tr className="border-b border-black-30">
+            <tr className="border-b border-white/12">
               {CPU_CONFIG_TABLE_HEADERS.map((header) => (
                 <th
                   key={header}

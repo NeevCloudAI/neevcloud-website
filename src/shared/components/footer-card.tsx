@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Text } from "../ui-lib";
-import LinkComponent from "../ui-lib/link";
+import { Text, LinkComponent } from "../ui-lib";
 
 interface FooterCardProps {
   title: string;
@@ -28,22 +27,23 @@ const FooterCard = ({
   return (
     <section
       className={cn(
-        "relative w-full rounded-md bg-primary-105 py-6 md:py-29 px-6 md:px-17.5 flex flex-col overflow-hidden",
-        className,
+        "relative w-full rounded-md bg-primary-105 p-4 md:py-29 md:px-17.5 flex flex-col overflow-hidden",
+        className
       )}
     >
-      <Text as="h1" weight="medium" className="max-w-2xl">
+      <Text as="h1" weight="medium" className="max-w-2xl z-2">
         {title}
       </Text>
       <Text as="h6" className="z-2 mt-2.5 max-w-xl">
         {description}
       </Text>
-      <div className="mt-2 md:mt-7.5 flex gap-4 z-1">
+      <div className="mt-2 md:mt-7.5 flex flex-col md:flex-row gap-4 z-1">
         <LinkComponent
           href={primaryCtaRoute ?? ""}
           target={primaryCtaTarget}
           variant="outline-primary"
           spacing="lg"
+          className="w-full md:w-auto"
         >
           {primaryCta}
         </LinkComponent>
@@ -53,6 +53,7 @@ const FooterCard = ({
             target={secondaryCtaTarget}
             variant="black"
             spacing="lg"
+            className="w-full md:w-auto"
           >
             {secondaryCta}
           </LinkComponent>

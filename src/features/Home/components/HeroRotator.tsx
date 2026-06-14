@@ -1,16 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import HomeSlideShow, { type SlideShowSlide } from "./HomeSlideShow";
 import { HERO_SLIDES } from "../data/hero-slides";
-import LinkComponent from "@/shared/ui-lib/link";
 
 const SLIDESHOW_IMAGES: SlideShowSlide[] = [
-  { src: "/images/slide-show1.png", alt: "NeevCloud platform overview" },
-  { src: "/images/slide-show2.png", alt: "NeevCloud platform overview" },
-  { src: "/images/slide-show3.png", alt: "NeevCloud platform overview" },
-  { src: "/images/slide-show4.png", alt: "NeevCloud platform overview" },
+  { src: "/images/slide-show1.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/slide-show2.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/slide-show3.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/slide-show4.webp", alt: "NeevCloud platform overview" },
 ];
 
 export default function HeroRotator() {
@@ -51,8 +50,8 @@ export default function HeroRotator() {
     <>
       <Text
         as="small"
-        textColor="primary-70"
-        className="bg-primary-20 p-1 px-4 rounded-md border border-primary-30"
+        textColor="primary-90"
+        className="bg-primary-90/6 p-1 px-4 rounded-md border border-primary-90/12"
       >
         {activeHeroSlide.badge}
       </Text>

@@ -1,8 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import { PROVIDER_COMPARISON_SECTION_ID } from "../../constants/calculator-section.constants";
 import {
   TCO_CALCULATOR_PROVIDERS,
@@ -20,13 +19,13 @@ const TcoCalculatorSummaryPanel = ({
 }: TcoCalculatorSummaryPanelProps) => {
   const maxProviderTotal = Math.max(
     ...TCO_CALCULATOR_PROVIDERS.map(
-      (provider) => breakdown.providerTotals[provider.id],
-    ),
+      (provider) => breakdown.providerTotals[provider.id]
+    )
   );
 
   return (
     <div className="flex h-full flex-col rounded-xl bg-white p-4 md:p-6">
-      <Text as="small" textColor="gray-85" className="uppercase tracking-wide">
+      <Text as="small" textColor="gray-03" className="uppercase tracking-wide">
         {TCO_CALCULATOR_SECTION.summaryLabel}
       </Text>
 
@@ -39,13 +38,13 @@ const TcoCalculatorSummaryPanel = ({
         {formatCurrency(breakdown.monthlyTotal)}
       </Text>
 
-      <Text as="h6" textColor="gray-85" className="mt-2">
+      <Text as="h6" textColor="gray-03" className="mt-2">
         {breakdown.summaryLabel}
       </Text>
 
       <Text
         as="small"
-        textColor="gray-85"
+        textColor="gray-03"
         weight="semibold"
         className="mt-6 uppercase tracking-wide"
       >
@@ -61,7 +60,7 @@ const TcoCalculatorSummaryPanel = ({
           return (
             <li key={provider.id}>
               <div className="flex items-center justify-between gap-3">
-                <Text as="small" textColor="gray-85" className="shrink-0">
+                <Text as="small" textColor="gray-03" className="shrink-0">
                   {provider.label}
                 </Text>
                 <Text as="small" weight="semibold">
@@ -69,7 +68,7 @@ const TcoCalculatorSummaryPanel = ({
                 </Text>
               </div>
               <div
-                className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-gray-10"
+                className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-cloud-gray"
                 aria-hidden="true"
               >
                 <div

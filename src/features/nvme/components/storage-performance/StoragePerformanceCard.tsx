@@ -11,17 +11,17 @@ const StoragePerformanceCard = ({ card }: StoragePerformanceCardProps) => {
     <article className="flex w-full flex-col gap-5 rounded-md bg-white p-4 md:p-10">
       <div className="flex gap-5 items-center">
         <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-blue-40"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-gray-02"
           aria-hidden="true"
         />
         <div className="flex flex-col">
           <Text as="h3" weight="semibold">
             {card.title}
           </Text>
-          <Text textColor="gray-75">{card.subtitle}</Text>
+          <Text textColor="gray-04">{card.subtitle}</Text>
         </div>
       </div>
-      <Text as="h6" textColor="gray-75" className="mt-0.5">
+      <Text as="h6" textColor="gray-04" className="mt-0.5">
         {card.description}
       </Text>
       <ul className="mt-2 flex list-none flex-col gap-1.25 md:mt-4">

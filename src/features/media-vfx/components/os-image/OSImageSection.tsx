@@ -10,7 +10,7 @@ const OSImageSection = () => {
           as="h2"
           id="cpu-os-image-section-heading"
           align="center"
-          className="max-w-4xl font-semibold text-[30px]"
+          className="max-w-4xl font-semibold text-30px"
         >
           Supported Softwares
         </Text>

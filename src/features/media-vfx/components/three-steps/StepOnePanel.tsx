@@ -13,11 +13,11 @@ const StepOnePanel = () => {
               label: asset.name,
               displayValue: asset.size,
               seconds: asset.seconds,
-              valueColor: "text-gray-90",
+              valueColor: "text-gray-05",
               labelColor: "text-white",
               barColor: asset.barColor,
             }}
-            backgroundColor="bg-gray-10"
+            backgroundColor="bg-cloud-gray"
           />
         ))}
       </div>

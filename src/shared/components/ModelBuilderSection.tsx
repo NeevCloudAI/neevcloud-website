@@ -20,7 +20,7 @@ const ModelBuilderSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="max-w-xl mt-2.5"
         >

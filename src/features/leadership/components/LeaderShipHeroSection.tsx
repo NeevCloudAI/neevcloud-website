@@ -1,9 +1,8 @@
 import Container from "@/shared/components/container";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import { LEADERSHIP_HERO } from "../data/leadership-page.data";
 import Image from "next/image";
 import { MoveRight } from "@/shared/icons/lucide-icon-map";
-import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const LeaderShipHeroSection = () => {
@@ -12,8 +11,8 @@ const LeaderShipHeroSection = () => {
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
-          textColor="primary-70"
-          className="bg-primary-20 p-1 rounded-md border border-primary-30"
+          textColor="primary-90"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
         >
           {LEADERSHIP_HERO.badgeText}
         </Text>
@@ -51,7 +50,6 @@ const LeaderShipHeroSection = () => {
           <div className="p-4 md:pl-15 ">
             <Text
               as="h3"
-              textColor="gray-100"
               className="text-[28px] md:text-[32px]"
               weight="semibold"
             >
@@ -62,7 +60,7 @@ const LeaderShipHeroSection = () => {
                 as="h6"
                 className="mt-5"
                 weight="semibold"
-                textColor="gray-90"
+                textColor="gray-05"
               >
                 Founder & CEO
               </Text>
@@ -87,7 +85,7 @@ const LeaderShipHeroSection = () => {
               href={EXTERNAL_LINKS.narendraSenLinkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-fit flex mt-4 items-center gap-2 bg-primary-25 hover:bg-linear-to-r from-[#5CB7A8] to-[#92EFE0] p-1.5 rounded-md"
+              className="w-fit flex mt-4 items-center gap-2 bg-primary/15 hover:bg-linear-to-r from-[#5CB7A8] to-[#92EFE0] p-1.5 rounded-md"
               aria-label={`Narendra Sen on LinkedIn`}
             >
               <Image
@@ -102,19 +100,6 @@ const LeaderShipHeroSection = () => {
               </Text>
               <MoveRight className="size-6" />
             </a>
-
-            {/* <div className="flex items-center gap-1 mt-2.5">
-              <LinkComponent
-                href={EXTERNAL_LINKS.narendraSenLinkedin}
-                variant="ghost"
-                target="_blank"
-                spacing="none"
-                className="flex items-center gap-1"
-              >
-                Read More
-                <ChevronDown className="w-4 h-4 font-semibold" />
-              </LinkComponent>
-            </div> */}
           </div>
           <div className="relative pt-4 md:pt-8">
             <Image

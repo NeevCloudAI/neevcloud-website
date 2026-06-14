@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const MediaAmbitionSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="media-ambition-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const MediaAmbitionSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           {`High-resolution rendering, complex simulations, and real-time previews require infrastructure that delivers performance without the overhead of managing on-premise hardware. NeevCloud provides GPU compute optimized for media and VFX production.`}

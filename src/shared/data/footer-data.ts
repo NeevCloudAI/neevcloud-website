@@ -5,7 +5,7 @@ import type {
 } from "./footer-types";
 
 export const FOOTER_BRANDING: FooterBranding = {
-  logo: "/icons/logo-white.svg",
+  logo: "/icons/logo-white-with-name.svg",
   taglineLine1: "The AI SuperCloud",
   taglineLine2: "To Build and Scale Fearlessly",
   certificationImage: "/icons/iso.svg",
@@ -65,6 +65,7 @@ export const FOOTER_LINK_GROUPS: readonly FooterLinkGroup[] = [
       { label: "GPU Instance", href: "/gpu-cluster" },
       { label: "Managed Kubernetes", href: "/managed-kubernetes" },
       { label: "High-Performance NVMe", href: "/nvme" },
+      { label: "Object Storage", href: "/object-storage" },
       { label: "Serverless APIs", href: "/serverless-apis" },
       { label: "Model Playground", href: "/model-playground" },
     ],

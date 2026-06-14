@@ -2,7 +2,7 @@ import { Text } from "@/shared/ui-lib";
 
 const ScaleWorkloadContent = () => (
   <>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1 leading-7">
       # Scale H100 pool to 4 nodes
     </Text>
     <Text
@@ -22,7 +22,7 @@ const ScaleWorkloadContent = () => (
       --nodes 4
     </Text>
 
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-4 md:mt-6">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-4 md:mt-6">
       # Scale down to 0 (autoscaler can still scale up)
     </Text>
     <Text
@@ -42,7 +42,7 @@ const ScaleWorkloadContent = () => (
       --nodes 0
     </Text>
 
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-4">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-4">
       # Watch the scale event
     </Text>
     <Text

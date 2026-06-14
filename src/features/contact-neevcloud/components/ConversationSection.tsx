@@ -10,7 +10,7 @@ import ContactInfoCard from "./ContactInfoCard";
 const ConversationSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative overflow-hidden bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="conversation-section-heading"
       id="contact-form"
     >
@@ -29,7 +29,7 @@ const ConversationSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-xl"
         >
           {CONVERSATION_SECTION.description}

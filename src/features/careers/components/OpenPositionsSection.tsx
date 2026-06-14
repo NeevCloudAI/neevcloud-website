@@ -5,7 +5,7 @@ import { OPEN_POSITIONS_SECTION } from "../data/open-positions-section.data";
 const OpenPositionsSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="open-positions-section-heading"
       id="current-openings"
     >
@@ -21,7 +21,7 @@ const OpenPositionsSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {OPEN_POSITIONS_SECTION.description}

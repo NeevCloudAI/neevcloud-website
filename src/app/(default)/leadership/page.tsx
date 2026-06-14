@@ -1,19 +1,13 @@
 import { LeadershipPage } from "@/features/leadership";
-
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Leadership | NeevCloud",
   description:
     "Meet the leadership team behind NeevCloud, driving innovation and building the future of AI infrastructure.",
-  openGraph: {
-    title: "Leadership | NeevCloud",
-    description:
-      "Meet the leadership team behind NeevCloud, driving innovation and building the future of AI infrastructure.",
-  },
-};
+});
 
 const LeadershipRoutePage = () => {
   return <LeadershipPage />;

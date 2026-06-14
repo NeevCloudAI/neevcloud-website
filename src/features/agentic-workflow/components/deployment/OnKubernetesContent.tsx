@@ -104,7 +104,7 @@ const OnKubernetesContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image:
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         neevcloud.com/registry/research-agent:v1
       </Text>
     </Text>
@@ -183,7 +183,7 @@ const OnKubernetesContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value:
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;https://api.neevcloud.com/v1&quot;
       </Text>
     </Text>
@@ -210,7 +210,7 @@ const OnKubernetesContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memory:
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;4Gi&quot;
       </Text>
     </Text>
@@ -221,7 +221,7 @@ const OnKubernetesContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cpu:
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;2&quot;
       </Text>
     </Text>

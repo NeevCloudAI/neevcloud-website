@@ -34,7 +34,7 @@ const PurposeSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-15"
+          textColor="black/82"
           className="max-w-3.5xl mt-2.5"
         >
           All services connect through high-speed private networking. Deploy GPU
@@ -56,7 +56,7 @@ const PurposeSection = () => {
               <PurposeFlowCard
                 key={node.id}
                 node={node}
-                className="bg-gray-10"
+                className="bg-cloud-gray"
               />
             ))}
           </div>
@@ -64,19 +64,19 @@ const PurposeSection = () => {
           <PurposeServiceBranchConnector />
 
           {/* Private network block */}
-          <PurposeFlowCard node={PURPOSE_NETWORK_NODE} className="bg-gray-60" />
+          <PurposeFlowCard node={PURPOSE_NETWORK_NODE} className="bg-gray-01" />
 
           {/* Straight connector: private network → CPU */}
           <div className="flex flex-col items-center" aria-hidden="true">
             <div className="h-2 w-2 rounded-full bg-primary" />
-            <div className="h-10 w-px bg-blue-40" />
+            <div className="h-10 w-px bg-gray-02" />
             <div className="h-2 w-2 rounded-t-full bg-primary" />
           </div>
 
           {/* CPU Compute block */}
           <PurposeFlowCard
             node={PURPOSE_CPU_NODE}
-            className="bg-gray-10 -mt-1"
+            className="bg-cloud-gray -mt-1"
           />
         </div>
       </Container>

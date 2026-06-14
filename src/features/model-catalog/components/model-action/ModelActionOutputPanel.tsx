@@ -5,7 +5,7 @@ const ModelActionOutputPanel = () => {
     <div className="flex flex-1 flex-col px-4 py-4 md:px-5 md:py-5">
       <Text
         fontFamily="spaceMono"
-        textColor="gray-75"
+        textColor="gray-04"
         className="uppercase tracking-wide"
       >
         Output
@@ -16,7 +16,7 @@ const ModelActionOutputPanel = () => {
         aria-live="polite"
         aria-label="Model response output"
       >
-        <Text fontFamily="spaceMono" textColor="gray-75" align="center">
+        <Text fontFamily="spaceMono" textColor="gray-04" align="center">
           Model response will appear here.
         </Text>
       </div>

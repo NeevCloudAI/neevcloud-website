@@ -15,7 +15,12 @@ const HelmDeployCodeBlock = () => {
         <Text as="span" variant="p" textColor="white" fontFamily="spaceMono">
           model=
         </Text>
-        <Text as="span" variant="p" textColor="red-50" fontFamily="spaceMono">
+        <Text
+          as="span"
+          variant="p"
+          textColor="pulse-red"
+          fontFamily="spaceMono"
+        >
           llama-3-70b
         </Text>
       </Text>

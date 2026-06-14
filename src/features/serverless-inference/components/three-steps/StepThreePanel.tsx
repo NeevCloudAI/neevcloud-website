@@ -17,26 +17,26 @@ const StepThreePanel = () => {
           height={170}
         />
       </div>
-      <div className="p-6.25 border-b border-gray-60">
+      <div className="p-4 md:p-6.25 border-b border-gray-01">
         <Text as="h4" weight="semibold">
           {title}
         </Text>
-        <Text textColor="gray-85" className="my-1.25">
+        <Text textColor="gray-03" className="my-1.25">
           {subtitle}
         </Text>
       </div>
 
-      <div className="flex flex-col px-7.25 mb-3.75">
+      <div className="flex flex-col px-4 md:px-7.25 mb-3.75">
         {rows.map((row) => (
           <div
             key={row.label}
-            className="flex items-center justify-between py-3.75 border-b border-gray-60 "
+            className="flex items-center justify-between py-3.75 border-b border-gray-01"
           >
             <div>
               <Text as="h6" weight="semibold">
                 {row.label}
               </Text>
-              <Text textColor="gray-85" as="small">
+              <Text textColor="gray-03" as="small">
                 {row.sub}
               </Text>
             </div>
@@ -47,14 +47,14 @@ const StepThreePanel = () => {
         ))}
       </div>
 
-      <div className="mx-5 mb-5 bg-primary-40 z-1 relative border border-primary-45 rounded-xl p-3.75 text-center">
+      <div className="mx-4 md:mx-5 mb-5 bg-primary/10 z-1 relative border border-primary/18 rounded-xl p-3.75 text-center">
         <Text as="small" weight="semibold">
           {totalLabel}
         </Text>
         <Text as="h4" weight="semibold">
           {total}
         </Text>
-        <Text textColor="gray-85" as="small">
+        <Text textColor="gray-03" as="small">
           {totalSub}
         </Text>
       </div>

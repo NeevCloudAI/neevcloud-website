@@ -48,7 +48,7 @@ const GpuCostCalculatorClient = () => {
         hoursPerMonth,
         commitmentId,
       }),
-    [gpuTypeId, hoursPerMonth, commitmentId],
+    [gpuTypeId, hoursPerMonth, commitmentId]
   );
 
   const handleGpuTypeSelect = useCallback((id: GpuCostCalculatorGpuTypeId) => {
@@ -66,7 +66,7 @@ const GpuCostCalculatorClient = () => {
       setCommitmentId(id);
       setActivePresetId(null);
     },
-    [],
+    []
   );
 
   const handlePresetSelect = useCallback(
@@ -81,21 +81,21 @@ const GpuCostCalculatorClient = () => {
       setCommitmentId(config.commitmentId);
       setActivePresetId(config.presetId);
     },
-    [],
+    []
   );
 
   return (
     <div className="pricing-calculator w-full">
-      <div className="rounded-xl border border-gray-60 bg-white shadow-sm">
+      <div className="rounded-xl border border-gray-01 bg-white shadow-sm">
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-1 flex-col p-4 md:p-6 lg:p-8">
-            <Text as="small" textColor="gray-85" weight="semibold">
+            <Text as="small" textColor="gray-03" weight="semibold">
               {GPU_COST_CALCULATOR_SECTION.configureLabel}
             </Text>
             <Text as="h5" weight="semibold" className="mt-3">
               {GPU_COST_CALCULATOR_SECTION.configureTitle}
             </Text>
-            <Text as="h6" textColor="gray-85" className="mt-1">
+            <Text as="h6" textColor="gray-03" className="mt-1">
               {GPU_COST_CALCULATOR_SECTION.configureSubtitle}
             </Text>
 
@@ -103,7 +103,7 @@ const GpuCostCalculatorClient = () => {
 
             <Text
               as="small"
-              textColor="gray-85"
+              textColor="gray-03"
               weight="semibold"
               className="uppercase tracking-wide"
             >
@@ -120,7 +120,7 @@ const GpuCostCalculatorClient = () => {
               <div className="flex items-center justify-between gap-4">
                 <Text
                   as="small"
-                  textColor="gray-85"
+                  textColor="gray-03"
                   weight="semibold"
                   className="uppercase tracking-wide"
                   id="gpu-cost-calculator-hours-label"
@@ -140,11 +140,11 @@ const GpuCostCalculatorClient = () => {
               </div>
               <div className="mt-3 flex items-center justify-between gap-2">
                 {HOURS_SCALE_LABELS.map((label) => (
-                  <Text key={label} as="small" textColor="gray-85">
+                  <Text key={label} as="small" textColor="gray-03">
                     {label}
                   </Text>
                 ))}
-                <Text as="small" textColor="gray-85">
+                <Text as="small" textColor="gray-03">
                   {formatUsageHours(hoursPerMonth)}
                 </Text>
               </div>
@@ -154,13 +154,13 @@ const GpuCostCalculatorClient = () => {
               <div className="flex items-center justify-between gap-4">
                 <Text
                   as="small"
-                  textColor="gray-85"
+                  textColor="gray-03"
                   weight="semibold"
                   className="uppercase tracking-wide"
                 >
                   {GPU_COST_CALCULATOR_SECTION.commitmentLabel}
                 </Text>
-                <Text as="small" textColor="gray-85">
+                <Text as="small" textColor="gray-03">
                   {getCommitmentStatusLabel(commitmentId)}
                 </Text>
               </div>
@@ -182,7 +182,7 @@ const GpuCostCalculatorClient = () => {
                         "rounded-lg border px-3 py-2.5 text-left transition-colors",
                         isSelected
                           ? "border-primary bg-primary text-white"
-                          : "border-gray-60 bg-white hover:border-primary-50",
+                          : "border-gray-01 bg-white hover:border-primary"
                       )}
                     >
                       <Text
@@ -194,7 +194,7 @@ const GpuCostCalculatorClient = () => {
                       </Text>
                       <Text
                         as="small"
-                        textColor={isSelected ? "white" : "gray-85"}
+                        textColor={isSelected ? "white" : "gray-03"}
                         className="mt-0.5 block"
                       >
                         (-{commitment.discountPercent}%)
@@ -206,7 +206,7 @@ const GpuCostCalculatorClient = () => {
             </div>
           </div>
 
-          <div className="w-full border-t border-gray-60 p-4 md:p-6 lg:w-[38%] lg:border-t-0 lg:border-l">
+          <div className="w-full border-t border-gray-01 p-4 md:p-6 lg:w-[38%] lg:border-t-0 lg:border-l">
             <GpuCostCalculatorSummaryPanel
               breakdown={breakdown}
               ratePerHour={gpuType.ratePerHour}

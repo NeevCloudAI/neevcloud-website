@@ -8,11 +8,11 @@ const InferenceManagementPanel = () => {
     <ConsoleMockupCard title="LAUNCH GPU INSTANCE">
       <div className="px-7.5 py-5">
         <div
-          className="flex items-center gap-2.5 border border-gray-60 rounded-md px-3.75 py-2.25 mb-3"
+          className="flex items-center gap-2.5 border border-gray-01 rounded-md px-3.75 py-2.25 mb-3"
           role="search"
         >
-          <Search size={16} className="text-gray-85" aria-hidden="true" />
-          <span className="text-gray-85 text-sm">Search 20+ models...</span>
+          <Search size={16} className="text-gray-03" aria-hidden="true" />
+          <span className="text-gray-03 text-sm">Search 20+ models...</span>
         </div>
       </div>
       <div className="flex gap-1.25 px-7.5 flex-wrap">
@@ -20,8 +20,8 @@ const InferenceManagementPanel = () => {
           <Text
             as="small"
             key={f}
-            textColor={f === "All" ? "white" : "gray-75"}
-            className={`px-2.5 py-0.75 rounded-full ${f === "All" ? "bg-black" : "bg-gray-60"}`}
+            textColor={f === "All" ? "white" : "gray-04"}
+            className={`px-2.5 py-0.75 rounded-full ${f === "All" ? "bg-black" : "bg-gray-01"}`}
           >
             {f}
           </Text>
@@ -36,17 +36,17 @@ const InferenceManagementPanel = () => {
               i === 0
                 ? "border-l-3 border-l-primary [background:linear-gradient(to_right,#e6f7f5,transparent)]"
                 : ""
-            } ${i < INFERENCE_MODELS.length - 1 ? "border-b border-b-gray-60" : ""}`}
+            } ${i < INFERENCE_MODELS.length - 1 ? "border-b border-b-gray-01" : ""}`}
           >
             <div>
               <Text as="h4" weight="semibold">
                 {model.name}
               </Text>
-              <Text textColor="black-5" as="h6">
+              <Text textColor="black/82" as="h6">
                 {model.provider} · {model.context}
               </Text>
             </div>
-            <Text as="h6" weight="semibold" textColor="primary-70">
+            <Text as="h6" weight="semibold" textColor="primary-90">
               {model.price}
             </Text>
           </div>

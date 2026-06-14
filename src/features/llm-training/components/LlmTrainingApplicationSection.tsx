@@ -25,7 +25,7 @@ const LlmTrainingApplicationSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           Five strategic capability areas, pick one to explore the specific

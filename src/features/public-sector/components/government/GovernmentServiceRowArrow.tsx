@@ -9,7 +9,7 @@ const GovernmentServiceRowArrow = () => {
       <ArrowRight
         size={18}
         strokeWidth={2.5}
-        className="text-primary transition-colors group-hover:text-primary-80"
+        className="text-primary transition-colors group-hover:text-primary"
       />
     </span>
   );

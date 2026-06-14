@@ -21,7 +21,7 @@ const AvailableModelsSection = () => {
             Across Categories
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="max-w-3xl">
+        <Text as="h6" align="center" textColor="black/82" className="max-w-3xl">
           Access a curated collection of state-of-the-art models spanning
           language understanding, computer vision, audio processing, and
           specialized domains. Each model includes interactive demos and clear

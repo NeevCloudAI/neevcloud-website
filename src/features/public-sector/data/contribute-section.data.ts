@@ -1,4 +1,14 @@
 import type { CategoryFeatureItem } from "@/shared/components/category-feature-card";
+import {
+  FlaskConical,
+  FlagTriangleRight,
+  Landmark,
+  Star,
+  Trophy,
+  Microscope,
+  ChessPawn,
+} from "@/shared/icons/lucide-icon-map";
+import { Users } from "lucide-react";
 
 export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
   {
@@ -18,13 +28,13 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
         id: 2,
         title: "Public sector pricing",
         description: "Special rates for government and education",
-        icon: "/icons/bank.svg",
+        lucideIcon: Landmark,
       },
       {
         id: 3,
         title: "No scale minimum",
         description: "Start small, pay per second, scale instantly",
-        icon: "/icons/peoples.svg",
+        lucideIcon: Users,
       },
     ],
   },
@@ -39,19 +49,19 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
         id: 1,
         title: "100% Indian operations",
         description: "Operated entirely by Indian teams",
-        icon: "/icons/flag.svg",
+        lucideIcon: FlagTriangleRight,
       },
       {
         id: 2,
         title: "No foreign cloud dependency",
         description: "No AWS, GCP, Azure in the stack",
-        icon: "/icons/star.svg",
+        lucideIcon: Star,
       },
       {
         id: 3,
         title: "Architectural sovereignty",
         description: "Data stays in India by design, not promise",
-        icon: "/icons/trophy.svg",
+        lucideIcon: Trophy,
       },
     ],
   },
@@ -83,7 +93,7 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
     ],
   },
   {
-    icon: "/icons/microscope.svg",
+    lucideIcon: Microscope,
     badgeLabel: "Pillar 04 · Research",
     title: "Research & Skill Development",
     description:
@@ -93,13 +103,13 @@ export const CONTRIBUTE_CATEGORIES: readonly CategoryFeatureItem[] = [
         id: 1,
         title: "Academic GPU access",
         description: "IITs, IISc, national research labs",
-        icon: "/icons/academic.svg",
+        lucideIcon: FlaskConical,
       },
       {
         id: 2,
         title: "Skill development programs",
         description: "AI training with real GPU compute",
-        icon: "/icons/skill.svg",
+        lucideIcon: ChessPawn,
       },
       {
         id: 3,

@@ -100,10 +100,10 @@ export default function SolutionsMegaMenu() {
           >
             {column.sections.map((section) => (
               <div key={section.heading}>
-                <Text textColor="blue-40">{section.heading}</Text>
+                <Text textColor="gray-02">{section.heading}</Text>
                 <Divider
                   orientation="horizontal"
-                  className="my-2.5 bg-gray-60"
+                  className="my-2.5 bg-gray-01"
                 />
                 {section.links.map((link) => (
                   <MegaMenuLinkRow

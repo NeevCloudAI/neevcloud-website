@@ -1,8 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
-import LinkComponent from "@/shared/ui-lib/link";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import {
   DATA_TRANSFER_MAX_GB,
   DEFAULT_COMMITMENT_ID,
@@ -46,20 +45,20 @@ const TcoCalculatorConfigClient = () => {
   const [gpuCount, setGpuCount] = useState(DEFAULT_GPU_COUNT);
   const [hoursPerMonth, setHoursPerMonth] = useState(DEFAULT_HOURS_PER_MONTH);
   const [commitmentId, setCommitmentId] = useState<TcoCalculatorCommitmentId>(
-    DEFAULT_COMMITMENT_ID,
+    DEFAULT_COMMITMENT_ID
   );
   const [localNvmeGb, setLocalNvmeGb] = useState(DEFAULT_LOCAL_NVME_GB);
   const [networkStorageGb, setNetworkStorageGb] = useState(
-    DEFAULT_NETWORK_STORAGE_GB,
+    DEFAULT_NETWORK_STORAGE_GB
   );
   const [objectStorageGb, setObjectStorageGb] = useState(
-    DEFAULT_OBJECT_STORAGE_GB,
+    DEFAULT_OBJECT_STORAGE_GB
   );
   const [dataTransferGb, setDataTransferGb] = useState(
-    DEFAULT_DATA_TRANSFER_GB,
+    DEFAULT_DATA_TRANSFER_GB
   );
   const [inferenceTokensMn, setInferenceTokensMn] = useState(
-    DEFAULT_INFERENCE_TOKENS_MN,
+    DEFAULT_INFERENCE_TOKENS_MN
   );
 
   const breakdown = useMemo(
@@ -85,7 +84,7 @@ const TcoCalculatorConfigClient = () => {
       objectStorageGb,
       dataTransferGb,
       inferenceTokensMn,
-    ],
+    ]
   );
 
   const scrollToBreakdown = useCallback(() => {
@@ -97,7 +96,7 @@ const TcoCalculatorConfigClient = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:gap-5">
-        <div className="flex flex-1 flex-col rounded-xl border border-white-10 bg-white-5 p-4 md:p-6 lg:p-8">
+        <div className="flex flex-1 flex-col rounded-xl border border-white/12 bg-white/6 p-4 md:p-6 lg:p-8">
           <TcoCalculatorFormSection step={1} title="GPU Configuration">
             <TcoCalculatorGpuTypeGrid
               activeGpuTypeId={gpuTypeId}

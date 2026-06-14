@@ -32,11 +32,11 @@ const MultiStepPipelineContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;Step(
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;plan&quot;
       </Text>
       , agent=planner, prompt=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;{"{"}task{"}"}&quot;
       </Text>
       ),
@@ -48,11 +48,11 @@ const MultiStepPipelineContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;Step(
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;research&quot;
       </Text>
       , agent=researcher, depends_on=[
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;plan&quot;
       </Text>
       ]),
@@ -64,11 +64,11 @@ const MultiStepPipelineContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;Step(
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;summarize&quot;
       </Text>
       , agent=writer, depends_on=[
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;research&quot;
       </Text>
       ]),
@@ -88,7 +88,7 @@ const MultiStepPipelineContent = () => (
       className="mt-4 md:mt-6 leading-7"
     >
       result = pipeline.execute(task=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;Market analysis for Q2&quot;
       </Text>
       )

@@ -4,14 +4,14 @@ type TransparentPricingRowProps = {
   label: string;
   value: string;
   valueColor?: "primary" | "white";
-  labelColor?: "blue-40";
+  labelColor?: "gray-02";
 };
 
 const TransparentPricingRow = ({
   label,
   value,
   valueColor = "white",
-  labelColor = "blue-40",
+  labelColor = "gray-02",
 }: TransparentPricingRowProps) => {
   return (
     <>
@@ -23,7 +23,7 @@ const TransparentPricingRow = ({
           {value}
         </Text>
       </div>
-      <Divider orientation="horizontal" className="bg-black-5" />
+      <Divider orientation="horizontal" className="bg-black/8" />
     </>
   );
 };

@@ -17,7 +17,7 @@ const StreamingChatContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;model=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &apos;llama-3.1-70b-instruct&apos;
       </Text>
       ,
@@ -30,19 +30,39 @@ const StreamingChatContent = () => (
     >
       &nbsp;&nbsp;messages=[
       {`{`}
-      <Text as="span" variant="h6" textColor="red-50" className="mx-0 md:mx-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mx-0 md:mx-0"
+      >
         {`'role'`}
       </Text>
       :
-      <Text as="span" variant="h6" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         {`'user'`}
       </Text>
       ,
-      <Text as="span" variant="h6" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         {`'content'`}
       </Text>
       :
-      <Text as="span" variant="h6" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         {`'Explain quantum computing'`}
       </Text>
       {`}],`}
@@ -68,7 +88,7 @@ const StreamingChatContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Stream tokens to user

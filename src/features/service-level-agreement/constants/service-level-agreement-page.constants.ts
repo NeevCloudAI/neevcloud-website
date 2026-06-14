@@ -4,7 +4,7 @@ export const SERVICE_LEVEL_AGREEMENT_HERO = {
   badgeText: "Shared Standard",
   title: "Service Level Agreement",
   description:
-    "Welcome to our website! Before using our services, please read and agree to our terms and conditions outlined below.",
+    "We are committed to delivering exceptional services to our valued customers. To ensure transparency, accountability, and a clear understanding of our service commitments, we have established a Service Level Agreement (SLA).",
 } as const;
 
 export const SERVICE_LEVEL_AGREEMENT_FOOTER = {

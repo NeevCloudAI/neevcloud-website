@@ -19,8 +19,7 @@ import {
   sliderToRequests,
   updateWorkloadMix,
 } from "../../utils/pricing-calculator-utils";
-import { Divider, Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const PricingCalculatorClient = () => {
@@ -31,7 +30,7 @@ const PricingCalculatorClient = () => {
   const formattedRequests = formatRequests(totalRequests);
   const monthlyCost = useMemo(
     () => calculateMonthlyCost(totalRequests, mix),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const categoryCosts = useMemo(
@@ -41,9 +40,9 @@ const PricingCalculatorClient = () => {
           acc[id] = calculateCategoryCost(totalRequests, mix[id], id);
           return acc;
         },
-        {} as Record<WorkloadCategoryId, number>,
+        {} as Record<WorkloadCategoryId, number>
       ),
-    [totalRequests, mix],
+    [totalRequests, mix]
   );
 
   const handleMixChange = (category: WorkloadCategoryId, value: number) => {
@@ -58,7 +57,7 @@ const PricingCalculatorClient = () => {
 
       <div>
         <div className="flex items-center justify-between gap-4">
-          <Text as="h6" textColor="gray-75" className="mx-0">
+          <Text as="h6" textColor="gray-04" className="mx-0">
             Total monthly requests
           </Text>
           <Text as="h6">{formattedRequests}</Text>
@@ -70,7 +69,7 @@ const PricingCalculatorClient = () => {
         />
         <div className="mt-3 flex justify-between gap-2">
           {REQUEST_SCALE_LABELS.map((label) => (
-            <Text key={label} as="small" textColor="gray-85">
+            <Text key={label} as="small" textColor="gray-03">
               {label}
             </Text>
           ))}
@@ -81,10 +80,10 @@ const PricingCalculatorClient = () => {
 
       <div className="flex flex-1 flex-col mt-5">
         <div className="mb-4 flex items-center justify-between gap-4">
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             Workload mix
           </Text>
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             % of {formattedRequests} requests
           </Text>
         </div>

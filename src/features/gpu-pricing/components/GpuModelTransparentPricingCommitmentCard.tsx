@@ -10,11 +10,11 @@ const GpuModelTransparentPricingCommitmentCard = ({
   family,
 }: GpuModelTransparentPricingCommitmentCardProps) => {
   const headers = GPU_MODEL_COMMITMENT_TABLE_HEADERS.map((header) =>
-    header === "Example (8x H100)" ? family.commitmentExampleLabel : header,
+    header === "Example (8x H100)" ? family.commitmentExampleLabel : header
   );
 
   return (
-    <div className="rounded-md border border-white-10 bg-black-25 p-4 md:p-5">
+    <div className="rounded-md border border-white/12 bg-gray-80/18 p-4 md:p-5">
       <div className="flex items-start gap-3.5">
         <ArrowRight size={18} className="text-primary mt-0.75" />
         <Text as="h6" fontFamily="spaceMono" textColor="white">
@@ -34,7 +34,7 @@ const GpuModelTransparentPricingCommitmentCard = ({
             Commitment discount pricing for {family.sidebarLabel}
           </caption>
           <thead>
-            <tr className="border-b border-black-29">
+            <tr className="border-b border-white/12">
               {headers.map((header) => (
                 <th
                   key={header}
@@ -50,7 +50,7 @@ const GpuModelTransparentPricingCommitmentCard = ({
           </thead>
           <tbody>
             {family.commitmentRows.map((row) => (
-              <tr key={row.id} className="border-b border-black-29">
+              <tr key={row.id} className="border-b border-white/6">
                 <td className={GPU_MODEL_PRICING_TABLE_CELL_CLASS}>
                   <Text as="h6" fontFamily="spaceMono" textColor="primary">
                     {row.commitment}

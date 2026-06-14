@@ -6,13 +6,3 @@ export type ContactInfoCardItem = {
   description: string;
   icon: ContactInfoCardIcon;
 };
-
-export type ContactFormField = {
-  id: string;
-  label: string;
-  name: string;
-  type: "text" | "email" | "tel" | "textarea";
-  autoComplete?: string;
-  optional?: boolean;
-  fullWidth?: boolean;
-};

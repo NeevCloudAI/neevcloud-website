@@ -2,11 +2,11 @@ import { Text } from "@/shared/ui-lib";
 
 const DeployStorageCliCode = () => {
   return (
-    <div className="px-4 md:px-7.5 py-2 md:py-10">
+    <div className="p-4 md:px-7.5 md:py-10">
       <Text
         as="h6"
         fontFamily="spaceMono"
-        textColor="gray-75"
+        textColor="gray-04"
         className="leading-6"
       >
         Provision additional NVMe storage when launching GPU instances or add
@@ -20,7 +20,7 @@ const DeployStorageCliCode = () => {
           </Text>
           <Text
             fontFamily="spaceMono"
-            textColor="gray-75"
+            textColor="gray-04"
             className="leading-6"
           >
             # Launch GPU with 500GB local NVMe
@@ -30,7 +30,7 @@ const DeployStorageCliCode = () => {
           </Text>
           <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             &nbsp; &nbsp; &nbsp; {`--gpu`}
-            <Text as="span" textColor="red-50" variant="p">
+            <Text as="span" textColor="pulse-red" variant="p">
               h100
             </Text>
             <Text as="span" variant="p" className="mx-0 md:mx-0">
@@ -45,7 +45,7 @@ const DeployStorageCliCode = () => {
           </Text>
           <Text
             fontFamily="spaceMono"
-            textColor="gray-75"
+            textColor="gray-04"
             className="leading-6"
           >
             # Add storage to running instance
@@ -57,7 +57,7 @@ const DeployStorageCliCode = () => {
             &nbsp; &nbsp; &nbsp; {`- instance - id `}
             <Text
               as="span"
-              textColor="red-50"
+              textColor="pulse-red"
               variant="p"
               className="mr-0 md:mr-0"
             >

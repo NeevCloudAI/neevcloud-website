@@ -9,7 +9,7 @@ const GpuTransparentPricingModelFamilySidebar = ({
 }: GpuTransparentPricingModelFamilySidebarProps) => {
   return (
     <div>
-      <Text as="h6" textColor="gray-75" fontFamily="spaceMono">
+      <Text as="h6" textColor="gray-04" fontFamily="spaceMono">
         Instance Families
       </Text>
       <div
@@ -35,15 +35,15 @@ const GpuTransparentPricingModelFamilySidebar = ({
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => onFamilySelect(option.id)}
                   className={cn(
-                    "w-full rounded-md border bg-black-25/60 px-5 py-2.5 text-left md:w-70",
-                    isActive ? "border-primary-105" : "border-gray-97",
+                    "w-full rounded-md border bg-white/6 px-5 py-2.5 text-left md:w-70",
+                    isActive ? "border-primary-105" : "border-white/12"
                   )}
                 >
                   <Text as="h6" fontFamily="spaceMono" textColor="white">
                     <Text
                       as="span"
                       fontFamily="spaceMono"
-                      textColor={isActive ? "primary" : "gray-75"}
+                      textColor={isActive ? "primary" : "gray-04"}
                     >
                       {option.number}
                     </Text>

@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const AmbitionSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="public-sector-ambition-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const AmbitionSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           {`As India accelerates AI adoption across government, public services, and strategic sectors, infrastructure requirements extend beyond technical specifications to include sovereignty, compliance, and alignment with national development goals.`}

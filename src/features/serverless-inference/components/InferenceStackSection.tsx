@@ -29,7 +29,6 @@ const InferenceStackSection = () => {
                 title={feature.title}
                 description={feature.description}
                 theme="dark"
-                className="bg-gray-120"
               />
             </li>
           ))}

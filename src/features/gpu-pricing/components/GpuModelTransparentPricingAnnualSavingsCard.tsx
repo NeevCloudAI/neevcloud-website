@@ -10,7 +10,7 @@ const GpuModelTransparentPricingAnnualSavingsCard = ({
   family,
 }: GpuModelTransparentPricingAnnualSavingsCardProps) => {
   return (
-    <div className="rounded-md border border-white-10 bg-black-25 p-4 md:p-5">
+    <div className="rounded-md border border-white/12 bg-gray-80/18 p-4 md:p-5">
       <div className="flex items-start gap-3.5">
         <ArrowRight size={18} className="text-primary mt-0.75" />
         <Text as="h6" fontFamily="spaceMono" textColor="white">
@@ -27,7 +27,7 @@ const GpuModelTransparentPricingAnnualSavingsCard = ({
             Annual savings comparison for {family.sidebarLabel}
           </caption>
           <thead>
-            <tr className="border-b border-black-29">
+            <tr className="border-b border-white/12">
               {GPU_MODEL_ANNUAL_SAVINGS_HEADERS.map((header) => (
                 <th
                   key={header}

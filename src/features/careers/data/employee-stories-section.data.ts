@@ -13,7 +13,7 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     title: "Sales Engineer",
     quote:
       "Joining the sales team was a game-changer. From the get-go, the training was spot-on, and the team's been like a second family. Feeling stoked about diving into the sales world here!",
-    image: "/images/ayushi-shekhawat.png",
+    image: "/images/ayushi-shekhawat.webp",
   },
   {
     id: "venktesh-sharma",
@@ -21,7 +21,7 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     title: "Cloud Consultant",
     quote:
       "I've experienced immense growth in understanding cloud and AI solutions. Helping clients transition to AI-first infrastructure has been a fulfilling journey.",
-    image: "/images/venktesh-sharma.png",
+    image: "/images/venktesh-sharma.webp",
   },
   {
     id: "tanvi-ausare",
@@ -29,7 +29,7 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     title: "SE - Content & Brand Communications",
     quote:
       "Creating content around AI infrastructure and cloud technologies has enhanced my technical expertise, encouraged continuous learning, and driven professional growth.",
-    image: "/images/tanvi-ausare.png",
+    image: "/images/tanvi-ausare.webp",
   },
   {
     id: "yatharth-shelat",
@@ -37,7 +37,7 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     title: "Network Engineer - L2",
     quote:
       "Working on complex network architectures that support AI workloads has sharpened my skills and given me the confidence to take on bigger challenges.",
-    image: "/images/yatharth-shelat.png",
+    image: "/images/yatharth-shelat.webp",
   },
   {
     id: "akansha-dubey",
@@ -45,7 +45,7 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     title: "Server Engineer - L2",
     quote:
       "I've had the chance to work on advanced server systems, collaborate with an inspiring team, and contribute directly to building India's AI-first infrastructure.",
-    image: "/images/akansha-dubey.png",
+    image: "/images/akansha-dubey.webp",
   },
   {
     id: "sanjay-singh-rajawat",
@@ -53,6 +53,6 @@ export const EMPLOYEE_STORIES: readonly EmployeeStory[] = [
     title: "Associate Software Engineer",
     quote:
       "I've been able to work on impactful projects in AI cloud development. The supportive environment and access to advanced technologies have accelerated my learning.",
-    image: "/images/sanjay-singh-rajawat.png",
+    image: "/images/sanjay-singh-rajawat.webp",
   },
 ] as const;

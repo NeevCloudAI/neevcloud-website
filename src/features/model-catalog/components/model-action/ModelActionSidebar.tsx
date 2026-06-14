@@ -16,12 +16,12 @@ const ModelActionSidebar = ({
 }: ModelActionSidebarProps) => {
   return (
     <aside
-      className="flex shrink-0 flex-col bg-black-80 p-4 md:p-7.5 md:rounded-l-xl"
+      className="flex shrink-0 flex-col bg-white/6 p-4 md:p-7.5 md:rounded-l-xl"
       aria-label="Model selection"
     >
       <Text
         fontFamily="spaceMono"
-        textColor="gray-75"
+        textColor="gray-04"
         className="uppercase tracking-wide"
       >
         Select model

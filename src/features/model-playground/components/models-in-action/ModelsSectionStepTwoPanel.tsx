@@ -21,11 +21,11 @@ const ModelsSectionStepTwoPanel = () => {
         ))}
       </div>
 
-      <div className="border-gray-55 bg-gray-05/80 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-5 flex items-center justify-between flex-col">
+      <div className="border border-black/24 bg-black/10 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-5 flex items-center justify-between flex-col">
         <Text fontFamily="spaceMono" textColor="primary" as="h3">
           ≤ 60s
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-90">
+        <Text fontFamily="spaceMono" textColor="gray-05">
           from landing page to first instance
         </Text>
       </div>

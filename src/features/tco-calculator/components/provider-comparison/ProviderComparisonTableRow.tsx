@@ -10,7 +10,7 @@ const ProviderComparisonTableRow = ({
   row,
 }: ProviderComparisonTableRowProps) => {
   return (
-    <tr className="border-b border-black-7">
+    <tr className="border-b border-white/6">
       <td className={PROVIDER_COMPARISON_TABLE_CELL_CLASS}>
         <Text
           as="h6"
@@ -45,12 +45,12 @@ const ProviderComparisonTableRow = ({
           <Text
             as="h6"
             fontFamily="spaceMono"
-            textColor={row.isPrimary ? "red-50" : "white"}
+            textColor={row.isPrimary ? "pulse-red" : "white"}
           >
             {row.total}
           </Text>
           {row.savingsLabel ? (
-            <Text as="small" fontFamily="spaceMono" textColor="primary-60">
+            <Text as="small" fontFamily="spaceMono" textColor="neev-green">
               {row.savingsLabel}
             </Text>
           ) : null}

@@ -50,7 +50,7 @@ type HowWeLeadCardProps = {
 
 const HowWeLeadCard = ({ item }: HowWeLeadCardProps) => {
   return (
-    <article className="flex h-full flex-col rounded-md border border-gray-05 bg-white p-4 md:p-5">
+    <article className="flex h-full flex-col rounded-md border border-black/10 bg-white p-4 md:p-5">
       <div className="flex items-center justify-between">
         <div>
           <Text as="small" textColor="primary" fontFamily="spaceMono">
@@ -71,7 +71,7 @@ const HowWeLeadCard = ({ item }: HowWeLeadCardProps) => {
           {item.number}
         </Text>
       </div>
-      <Text as="h6" textColor="gray-66" className="mt-6 md:mt-12">
+      <Text as="h6" textColor="black/60" className="mt-6 md:mt-12">
         {item.description}
       </Text>
     </article>
@@ -81,14 +81,14 @@ const HowWeLeadCard = ({ item }: HowWeLeadCardProps) => {
 const LeaderHowWeLeadsSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="how-we-lead-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
-          textColor="primary-70"
-          className="rounded-md border border-primary-30 bg-primary-20 p-1"
+          textColor="primary-90"
+          className="rounded-md border border-primary-90/12 bg-primary-90/6 p-1"
         >
           Our Approach
         </Text>

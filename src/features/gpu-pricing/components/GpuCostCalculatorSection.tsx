@@ -10,12 +10,12 @@ const GpuCostCalculatorSection = () => {
       aria-labelledby="gpu-cost-calculator-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
-        <span className="inline-flex items-center gap-1.5 rounded-md border border-primary-30 bg-primary-20 px-2 py-1">
+        <span className="inline-flex items-center gap-1.5 rounded-md border border-primary-90/12 bg-primary-90/6 px-2 py-1">
           <span
             className="size-1.5 rounded-full bg-primary"
             aria-hidden="true"
           />
-          <Text as="small" textColor="primary-70">
+          <Text as="small" textColor="primary-90">
             {GPU_COST_CALCULATOR_SECTION.badgeText}
           </Text>
         </span>
@@ -34,7 +34,7 @@ const GpuCostCalculatorSection = () => {
 
         <Text
           as="h6"
-          textColor="gray-85"
+          textColor="gray-03"
           align="center"
           className="mt-2.5 max-w-3xl"
         >

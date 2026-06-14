@@ -7,8 +7,7 @@ import {
   GPU_TECHNICAL_SPECS_TITLE_PREFIX,
 } from "@/shared/constants/gpu-technical-specs-section.constants";
 import type { GpuTechnicalSpecsSectionProps } from "@/shared/types/gpu-technical-specs-section.types";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "../ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 
 const GpuTechnicalSpecsSection = ({
   rows,
@@ -22,7 +21,10 @@ const GpuTechnicalSpecsSection = ({
 
   return (
     <section
-      className={cn("relative bg-primary-5 py-8 md:py-16 2xl:py-25", className)}
+      className={cn(
+        "relative bg-cloud-gray py-8 md:py-16 2xl:py-25",
+        className
+      )}
       aria-labelledby="gpu-technical-specs-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -43,7 +45,7 @@ const GpuTechnicalSpecsSection = ({
             "mt-4 w-full md:mt-12.5",
             hasCharts
               ? "grid grid-cols-1 items-start gap-2.5 lg:grid-cols-[1.15fr_0.85fr]"
-              : "max-w-4xl",
+              : "max-w-4xl"
           )}
         >
           <GpuTechnicalSpecsTable rows={rows} />

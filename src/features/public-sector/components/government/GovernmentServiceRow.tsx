@@ -22,8 +22,8 @@ const GovernmentServiceRow = ({
     <Link
       href={href}
       className={cn(
-        "group flex w-full items-center justify-between rounded-lg border border-white-10 bg-white-5 p-4 backdrop-blur-md transition-colors hover:bg-primary-120/80 md:px-10 md:py-7",
-        className,
+        "group flex w-full items-center justify-between rounded-lg border border-white/12 bg-white/6 p-4 backdrop-blur-md transition-colors hover:bg-primary/12 md:px-10 md:py-7",
+        className
       )}
       aria-label={`${title}: ${description}`}
     >
@@ -32,7 +32,7 @@ const GovernmentServiceRow = ({
           as="h3"
           textColor="primary"
           weight="semibold"
-          className="text-[30px] leading-none w-fit"
+          className="text-30px leading-none w-fit"
           aria-hidden="true"
         >
           {index}
@@ -42,13 +42,13 @@ const GovernmentServiceRow = ({
           <Text as="h3" textColor="white" weight="semibold">
             {title}
           </Text>
-          <Text as="small" textColor="gray-75">
+          <Text as="small" textColor="gray-04">
             {specs}
           </Text>
         </div>
       </div>
 
-      <Text as="h6" textColor="gray-60" className="ml-4 md:ml-25 max-w-lg">
+      <Text as="h6" textColor="gray-01" className="ml-4 md:ml-25 max-w-lg">
         {description}
       </Text>
 
@@ -57,7 +57,7 @@ const GovernmentServiceRow = ({
           <Text as="h6" textColor="primary">
             {highlight}
           </Text>
-          <Text as="h6" textColor="gray-75">
+          <Text as="h6" textColor="gray-04">
             {highlightSubtext}
           </Text>
         </div>

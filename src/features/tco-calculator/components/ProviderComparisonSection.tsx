@@ -5,9 +5,9 @@ import ProviderComparisonTable from "./provider-comparison/ProviderComparisonTab
 const ProviderComparisonSection = () => {
   return (
     <section
-      id="provider-comparison-section"
-      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="provider-comparison-section-heading"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
+      id="provider-comparison-section"
     >
       <Container className="flex flex-col items-center justify-center">
         <Text
@@ -24,7 +24,7 @@ const ProviderComparisonSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="max-w-3xl mt-2.5"
         >
@@ -33,7 +33,7 @@ const ProviderComparisonSection = () => {
         </Text>
 
         <div
-          className="mt-4 md:mt-12.5 bg-white-5 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white-10"
+          className="mt-4 md:mt-12.5 bg-white/6 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white/12 overflow-x-auto classy"
           role="region"
           aria-label="Provider cost comparison terminal"
         >

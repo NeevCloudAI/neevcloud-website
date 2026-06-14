@@ -18,7 +18,7 @@ const EventsGridSectionClient = ({
 
   const filteredEvents = useMemo(
     () => events.filter((event) => matchesEventFilter(event, activeFilter)),
-    [events, activeFilter],
+    [events, activeFilter]
   );
 
   return (
@@ -49,12 +49,12 @@ const EventsGridSectionClient = ({
               onClick={() => setActiveFilter(filter.id)}
               className={cn(
                 "rounded-none py-4 text-sm transition-colors",
-                !isLast && "border-r border-gray-90",
+                !isLast && "border-r border-gray-05",
                 isFirst && "rounded-l-md",
                 isLast && "rounded-r-md",
                 isSelected
-                  ? "bg-primary-100 text-black"
-                  : "border-gray-90 text-gray-65",
+                  ? "bg-primary-105 text-black"
+                  : "border-gray-05 text-gray-04"
               )}
             >
               {filter.label}

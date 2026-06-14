@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const UseModelSection = () => {
   return (
     <section
-      className="relative bg-primary-20 py-8 md:py-16 2xl:py-25"
+      className="relative bg-primary-90/6 py-8 md:py-16 2xl:py-25"
       aria-labelledby="model-catalog-use-model-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -25,7 +25,7 @@ const UseModelSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-2xl mt-2.5"
         >
           Pick the integration style that matches your stack. All three hit the

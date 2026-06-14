@@ -15,7 +15,7 @@ import { Divider } from "@/shared/ui-lib";
 
 const CpuTransparentPricingPanelClient = () => {
   const [activeType, setActiveType] = useState<CpuInstanceTypeId>(
-    DEFAULT_CPU_INSTANCE_TYPE,
+    DEFAULT_CPU_INSTANCE_TYPE
   );
 
   const activeOption =
@@ -28,7 +28,7 @@ const CpuTransparentPricingPanelClient = () => {
 
   const rows = useMemo(
     () => CPU_PRICING_ROWS_BY_INSTANCE_TYPE[activeType],
-    [activeType],
+    [activeType]
   );
 
   const handleTypeSelect = useCallback((id: CpuInstanceTypeId) => {
@@ -47,12 +47,12 @@ const CpuTransparentPricingPanelClient = () => {
 
         <Divider
           orientation="vertical"
-          className="bg-white-10 hidden md:block"
+          className="bg-white/12 hidden md:block"
         />
 
         <Divider
           orientation="horizontal"
-          className="bg-white-10 block md:hidden"
+          className="bg-white/12 block md:hidden"
         />
 
         <CpuTransparentPricingTable

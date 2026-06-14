@@ -1,6 +1,5 @@
 import Container from "@/shared/components/container";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import {
   DEVELOPERS_DOCUMENTATION_CATEGORIES,
   DEVELOPERS_DOCUMENTATION_SECTION,
@@ -28,7 +27,7 @@ const DevelopersDocumentationSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {DEVELOPERS_DOCUMENTATION_SECTION.description}

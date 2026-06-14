@@ -12,8 +12,8 @@ const FlowBand = ({ direction }: FlowBandProps) => {
       className="relative flex h-20 w-fit flex-col items-center justify-between px-0.5 sm:px-1 md:h-3 md:w-full md:flex-row md:px-0"
       aria-hidden="true"
     >
-      <div className="absolute bottom-0 left-1/2 top-0 -translate-x-1/2 border-l border-[0.5px] border-dashed border-gray-60 md:hidden" />
-      <div className="absolute left-0 hidden w-full border-t border-[0.5px] border-dashed border-gray-60 md:block" />
+      <div className="absolute bottom-0 left-1/2 top-0 -translate-x-1/2 border-l border-[0.5px] border-dashed border-gray-01 md:hidden" />
+      <div className="absolute left-0 hidden w-full border-t border-[0.5px] border-dashed border-gray-01 md:block" />
       {Array.from({ length: FLOW_ARROW_COUNT }, (_, index) => (
         <FlowArrowIcon
           key={index}

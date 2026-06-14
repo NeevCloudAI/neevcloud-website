@@ -57,7 +57,7 @@ const ExploreApiStepsTabsClient = ({
                     "flex h-12 w-12 shrink-0 items-center justify-center rounded-md text-2xl transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white",
+                      : "bg-gray-01 text-black hover:bg-gray-65 hover:text-white"
                   )}
                 >
                   {index + 1}
@@ -65,7 +65,7 @@ const ExploreApiStepsTabsClient = ({
                 {index < steps.length - 1 ? (
                   <Divider
                     orientation="horizontal"
-                    className="mx-2 w-8 md:w-10 bg-blue-40"
+                    className="mx-2 w-8 md:w-10 bg-gray-02"
                     aria-hidden="true"
                   />
                 ) : null}
@@ -74,13 +74,13 @@ const ExploreApiStepsTabsClient = ({
           })}
         </div>
 
-        <div className="overflow-hidden rounded-lg px-4 md:px-12 mt-4 md:mt-7.5">
+        <div className="overflow-hidden rounded-lg md:px-12 mt-4 md:mt-7.5">
           <div className="flex flex-col md:flex-row md:min-h-[400px]">
             <div
               role="tabpanel"
               id={activePanelId}
               aria-labelledby={activeTabId}
-              className="w-full bg-gray-10 p-4 md:rounded-l-lg md:p-8 flex flex-col justify-center"
+              className="w-full bg-cloud-gray p-4 md:rounded-l-lg md:p-8 flex flex-col justify-center"
             >
               <Text
                 as="small"
@@ -88,7 +88,7 @@ const ExploreApiStepsTabsClient = ({
               >
                 • &nbsp; Step {activeStep + 1} - {current.badgeLabel}
               </Text>
-              <Text as="h3" className="mt-4 md:mt-6 text-[30px]">
+              <Text as="h3" className="mt-4 md:mt-6 text-30px">
                 {current.title}
               </Text>
               <Text as="h6" className="mt-2.5">

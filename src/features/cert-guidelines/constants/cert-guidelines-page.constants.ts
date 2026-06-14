@@ -3,8 +3,7 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 export const CERT_GUIDELINES_HERO = {
   badgeText: "Shared Standard",
   title: "Cert Guidelines",
-  description:
-    "Welcome to our website! Before using our services, please read and agree to our terms and conditions outlined below.",
+  description: "",
 } as const;
 
 export const CERT_GUIDELINES_FOOTER = {

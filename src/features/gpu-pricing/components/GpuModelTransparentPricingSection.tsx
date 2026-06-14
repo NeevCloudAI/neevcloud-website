@@ -27,7 +27,7 @@ const GpuModelTransparentPricingSection = () => {
         </Text>
 
         <div
-          className="mt-4 w-full rounded-lg border border-white-10 bg-white-5 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
+          className="mt-4 w-full rounded-lg border border-white/12 bg-white/6 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
           role="region"
           aria-label="Transparent GPU pricing terminal"
         >

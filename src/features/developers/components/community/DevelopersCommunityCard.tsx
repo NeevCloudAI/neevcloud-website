@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import type { DevelopersCommunityCardItem } from "../../types/community-section.types";
 
 type DevelopersCommunityCardProps = {
@@ -9,7 +8,7 @@ type DevelopersCommunityCardProps = {
 
 const DevelopersCommunityCard = ({ card }: DevelopersCommunityCardProps) => {
   return (
-    <article className="flex h-full flex-col rounded-lg border border-white-10 bg-white-5 p-5 backdrop-blur-md md:p-7.5">
+    <article className="flex h-full flex-col rounded-lg border border-white/12 bg-white/6 p-5 backdrop-blur-md md:p-7.5">
       <Image
         src={card.iconSrc}
         alt=""
@@ -20,7 +19,7 @@ const DevelopersCommunityCard = ({ card }: DevelopersCommunityCardProps) => {
       <Text as="h3" textColor="white" weight="semibold" className="mt-5">
         {card.title}
       </Text>
-      <Text as="h6" textColor="gray-10" className="mt-2.5 ">
+      <Text as="h6" textColor="cloud-gray" className="mt-2.5 ">
         {card.description}
       </Text>
       <LinkComponent

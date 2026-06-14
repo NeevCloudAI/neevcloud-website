@@ -18,12 +18,12 @@ export function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div
-      className={`flex w-full h-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white-5 backdrop-blur-md" : theme === "dark" ? "bg-gray-105 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
+      className={`flex w-full h-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white/6 border border-white/12 backdrop-blur-md" : theme === "dark" ? "bg-white/6 border border-white/12 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
     >
       {icon ? (
         <Image src={icon} alt={title} width={30} height={30} />
       ) : (
-        <div className="h-7.5 w-7.5 shrink-0 bg-gray-50"></div>
+        <div className="h-7.5 w-7.5 shrink-0 bg-gray-01"></div>
       )}
       <Text
         as="h3"
@@ -39,9 +39,9 @@ export function FeatureCard({
         as="h6"
         textColor={
           theme === "transparent"
-            ? "gray-10"
+            ? "cloud-gray"
             : theme === "dark"
-              ? "gray-10"
+              ? "cloud-gray"
               : "black"
         }
         className="mt-2.5"

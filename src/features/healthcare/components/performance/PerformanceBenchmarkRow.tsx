@@ -14,14 +14,14 @@ const PerformanceBenchmarkRow = ({
   workloadDetail,
 }: PerformanceBenchmarkRowProps) => {
   return (
-    <tr className="border-b border-white-10 last:border-b-0">
+    <tr className="border-b border-white/12 last:border-b-0">
       <td className={`${PERFORMANCE_BENCHMARK_TABLE_CELL_CLASS} `}>
         <Text as="h6" textColor="white" fontFamily="spaceMono">
           {workloadTitle}
         </Text>
         <Text
           as="small"
-          textColor="gray-75"
+          textColor="gray-04"
           fontFamily="spaceMono"
           weight="medium"
         >
@@ -44,10 +44,10 @@ const PerformanceBenchmarkRow = ({
           aria-valuemin={0}
           aria-valuemax={100}
           aria-label={`Relative time for ${row.gpu}`}
-          className="relative h-2.75 w-full overflow-hidden rounded-full bg-white-10"
+          className="relative h-2.75 w-full overflow-hidden rounded-full bg-white/12"
         >
           <div
-            className={`absolute inset-y-0 left-0 rounded-full ${row.isBaseline ? "bg-gray-75" : "bg-primary"}`}
+            className={`absolute inset-y-0 left-0 rounded-full ${row.isBaseline ? "bg-gray-04" : "bg-primary"}`}
             style={{ width: `${row.relativeTimePercent}%` }}
           />
         </div>

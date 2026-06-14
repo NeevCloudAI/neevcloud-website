@@ -31,7 +31,7 @@ const AIStackSection = () => {
               className={cn(
                 "md:col-span-2",
                 index === 3 && "md:col-start-2",
-                index === 4 && "md:col-start-4",
+                index === 4 && "md:col-start-4"
               )}
             >
               <FeatureCard
@@ -39,7 +39,6 @@ const AIStackSection = () => {
                 description={feature.description}
                 theme="dark"
                 icon={feature.icon}
-                className="bg-gray-120"
               />
             </li>
           ))}

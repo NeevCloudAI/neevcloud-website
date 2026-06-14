@@ -3,8 +3,7 @@ import {
   Calendar,
   MapPinned,
 } from "@/shared/icons/lucide-icon-map";
-import { Divider, Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import { cn } from "@/lib/utils";
 import type { EventCardItem } from "../../types/events-grid-section.types";
 
@@ -16,29 +15,30 @@ const EventCard = ({ event }: EventCardProps) => {
   const isUpcoming = event.status === "upcoming";
 
   return (
-    <article className="flex h-full flex-col rounded-lg bg-gray-10 p-5 md:p-7.5">
+    <article className="flex h-full flex-col rounded-lg bg-cloud-gray p-5 md:p-7.5">
       <div className="flex items-start justify-between gap-3">
-        <Text textColor="gray-85">{event.categoryLabel}</Text>
+        <Text textColor="gray-03">{event.categoryLabel}</Text>
         <Text
           as="small"
+          textColor={isUpcoming ? "primary-90" : "gray-05"}
           className={cn(
             "rounded-sm px-2.5 py-1 capitalize",
             isUpcoming
-              ? "bg-primary-25 text-primary-70 border border-primary-45"
-              : "bg-gray-25 text-gray-90 border border-gray-50",
+              ? "bg-primary/12 border border-primary/18"
+              : "bg-gray-05/12 border border-gray-05/18"
           )}
         >
           {event.status}
         </Text>
       </div>
 
-      <Divider orientation="horizontal" className="bg-gray-60 my-4 md:my-5" />
+      <Divider orientation="horizontal" className="bg-gray-01 my-4 md:my-5" />
 
       <Text as="h4" weight="semibold">
         {event.title}
       </Text>
 
-      <Text as="h6" textColor="gray-90" className="mt-2.5">
+      <Text as="h6" textColor="gray-05" className="mt-2.5">
         {event.description}
       </Text>
 
@@ -53,7 +53,7 @@ const EventCard = ({ event }: EventCardProps) => {
         </div>
       </div>
 
-      <Divider orientation="horizontal" className="bg-gray-60 my-4 md:my-5" />
+      <Divider orientation="horizontal" className="bg-gray-01 my-4 md:my-5" />
 
       <LinkComponent
         href={event.ctaHref}

@@ -5,7 +5,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 const TransparentPricingTerminal = () => {
   return (
     <div
-      className="bg-white-5 rounded-xl w-full shadow-sm font-mono border border-white-10 backdrop-blur-md"
+      className="bg-white/6 rounded-xl w-full shadow-sm font-mono border border-white/12 backdrop-blur-md"
       role="region"
       aria-label="NVMe pricing terminal"
     >
@@ -19,13 +19,13 @@ const TransparentPricingTerminal = () => {
         <Text
           as="h6"
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="mt-1.25"
         >
           {`// sub-millisecond access no network path`}
         </Text>
 
-        <Divider orientation="horizontal" className="mt-7.25 bg-black-5" />
+        <Divider orientation="horizontal" className="mt-7.25 bg-black/8" />
 
         <TransparentPricingRow
           label="First 25GB"

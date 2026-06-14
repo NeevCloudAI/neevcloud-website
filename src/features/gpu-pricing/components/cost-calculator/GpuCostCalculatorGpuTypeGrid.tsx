@@ -27,15 +27,15 @@ const GpuCostCalculatorGpuTypeGrid = ({
               className={cn(
                 "relative flex h-full w-full flex-col items-start rounded-lg border px-3 py-2.5 text-left transition-colors",
                 isSelected
-                  ? "border-primary bg-primary-20"
-                  : "border-gray-60 bg-white hover:border-primary-50",
+                  ? "border-primary bg-primary-90/6"
+                  : "border-gray-01 bg-white hover:border-primary"
               )}
             >
               {gpuType.badge ? (
                 <Text
                   as="small"
                   textColor="primary"
-                  className="absolute top-2 right-2 rounded bg-primary-30 px-1.5 py-0.5"
+                  className="absolute top-2 right-2 rounded bg-primary-90/12 px-1.5 py-0.5"
                 >
                   {gpuType.badge}
                 </Text>
@@ -43,7 +43,7 @@ const GpuCostCalculatorGpuTypeGrid = ({
               <Text as="h6" weight="semibold" className="mx-0">
                 {gpuType.label}
               </Text>
-              <Text as="small" textColor="gray-85" className="mt-0.5">
+              <Text as="small" textColor="gray-03" className="mt-0.5">
                 {formatRatePerHour(gpuType.ratePerHour)}
               </Text>
             </button>

@@ -1,9 +1,8 @@
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import { Button, Divider, Text } from "@/shared/ui-lib";
+import { Button, Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
-import LinkComponent from "@/shared/ui-lib/link";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -66,10 +65,10 @@ export default function AiSupercloudMegaMenu() {
             >
               {column.sections.map((section) => (
                 <div key={section.heading}>
-                  <Text textColor="blue-40">{section.heading}</Text>
+                  <Text textColor="gray-02">{section.heading}</Text>
                   <Divider
                     orientation="horizontal"
-                    className="my-2.5 bg-gray-60"
+                    className="my-2.5 bg-gray-01"
                   />
                   {section.links.map((link) => (
                     <MegaMenuLinkRow
@@ -82,7 +81,7 @@ export default function AiSupercloudMegaMenu() {
             </div>
           ))}
         </div>
-        <div className="flex justify-between min-w-0 w-full flex-col rounded-md bg-gray-10 p-5 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
+        <div className="flex justify-between min-w-0 w-full flex-col rounded-md bg-cloud-gray p-5 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
           <div>
             <Text
               as="small"
@@ -94,7 +93,7 @@ export default function AiSupercloudMegaMenu() {
             <Text as="h6" weight="semibold" className="mt-2.5">
               AI Infrastructure Without Limits
             </Text>
-            <Text as="small" textColor="black-20">
+            <Text as="small" textColor="black/82">
               Removing the limits of geography and latency to redefine how AI is
               deployed and scaled.
             </Text>
@@ -105,7 +104,7 @@ export default function AiSupercloudMegaMenu() {
             target="_blank"
             spacing="none"
             size="xs"
-            textColor="red-50"
+            textColor="pulse-red"
           >
             Explore Project Noun -&gt;
           </LinkComponent>
@@ -114,10 +113,10 @@ export default function AiSupercloudMegaMenu() {
       <Divider orientation="horizontal" />
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-1">
-          <Text textColor="blue-40">All Systems Normal · </Text>
-          <Text textColor="gray-75">in-ind-1</Text>
+          <Text textColor="gray-02">All Systems Normal · </Text>
+          <Text textColor="gray-04">in-ind-1</Text>
         </div>
-        <Button variant="ghost" className="text-gray-75" spacing="none">
+        <Button variant="ghost" className="text-gray-04" spacing="none">
           View Status -&gt;
         </Button>
       </div>

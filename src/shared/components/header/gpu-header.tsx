@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Container from "../container";
 import Image from "next/image";
-import LinkComponent from "@/shared/ui-lib/link";
+import { LinkComponent } from "@/shared/ui-lib";
 
 const GpuHeader = () => {
   return (
@@ -9,7 +9,7 @@ const GpuHeader = () => {
       <Container className="shadow-md relative flex flex-wrap items-center justify-between gap-3 py-3 md:flex-nowrap md:py-6.5 ">
         <Link href="/">
           <Image
-            src="/icons/logo-white.svg"
+            src="/icons/logo-white-with-name.svg"
             alt="logo"
             width={100}
             height={100}

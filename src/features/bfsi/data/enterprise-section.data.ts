@@ -1,4 +1,5 @@
 import { EnterpriseSecurityCategory } from "../types/enterprise-section.types";
+import { Microscope } from "@/shared/icons/lucide-icon-map";
 
 export const ENTERPRISE_SECURITY_CATEGORIES: readonly EnterpriseSecurityCategory[] =
   [
@@ -40,7 +41,7 @@ export const ENTERPRISE_SECURITY_CATEGORIES: readonly EnterpriseSecurityCategory
       ],
     },
     {
-      icon: "/icons/microscope.svg",
+      lucideIcon: Microscope,
       title: "Compliance Documentation",
       description:
         "SOC 2 reports, ISO certificates, security attestations - available on request for qualified BFSI organizations.",

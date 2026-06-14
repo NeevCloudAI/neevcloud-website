@@ -1,8 +1,7 @@
 import { LogOut } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import { ModelCardData } from "../../types/models-section.types";
-import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type ModelCardProps = {
@@ -13,7 +12,7 @@ const ModelCard = ({ model }: ModelCardProps) => {
   const { name, provider, icon, tags, context, price, params } = model;
 
   return (
-    <article className="relative bg-gray-10 rounded-lg p-4 md:p-6.25 flex flex-col gap-5 overflow-hidden">
+    <article className="relative bg-cloud-gray rounded-lg p-4 md:p-6.25 flex flex-col gap-5 overflow-hidden">
       <div className="flex gap-5">
         <div className="p-3.25 bg-white rounded-md h-fit">
           <Image src={icon} alt={`${name} logo`} width={35} height={35} />
@@ -22,7 +21,7 @@ const ModelCard = ({ model }: ModelCardProps) => {
           <Text as="h4" weight="semibold" className="text-[22px]">
             {name}
           </Text>
-          <Text textColor="black-5">{provider}</Text>
+          <Text textColor="black/82">{provider}</Text>
         </div>
       </div>
 
@@ -39,17 +38,17 @@ const ModelCard = ({ model }: ModelCardProps) => {
 
       <div className="bg-white rounded-md py-2.5 px-9 flex justify-between gap-4 z-1 relative">
         <div className="flex flex-col items-center justify-between">
-          <Text textColor="blue-40">CONTEXT</Text>
+          <Text textColor="gray-02">CONTEXT</Text>
           <Text>{context}</Text>
         </div>
-        <Divider className="bg-gray-60 h-10" />
+        <Divider className="bg-gray-01 h-10" />
         <div className="flex flex-col items-center justify-between">
-          <Text textColor="blue-40">PRICE/1M</Text>
+          <Text textColor="gray-02">PRICE/1M</Text>
           <Text textColor="primary">{price}</Text>
         </div>
-        <Divider className="bg-gray-60 h-10" />
+        <Divider className="bg-gray-01 h-10" />
         <div className="flex flex-col items-center justify-between">
-          <Text textColor="blue-40">PARAMS</Text>
+          <Text textColor="gray-02">PARAMS</Text>
           <Text>{params}</Text>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const IntelligenceSection = () => {
   return (
     <section
-      className="bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="model-api-intelligence-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const IntelligenceSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="gray-75"
+          textColor="gray-04"
           className="max-w-4xl mt-2.5"
         >
           {`Building AI applications shouldn't require expertise in model

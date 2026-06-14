@@ -5,7 +5,7 @@ import TokenPricingTable from "./TokenPricingTable";
 const TokenPricingTerminal = () => {
   return (
     <div
-      className="bg-white-5 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white-10"
+      className="bg-white/6 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white/12"
       role="region"
       aria-label="Inference pricing terminal"
     >

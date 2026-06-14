@@ -12,21 +12,21 @@ type GpuTechnicalSpecsBarChartProps = {
 
 const barVariantClassName: Record<GpuTechnicalSpecsBarVariant, string> = {
   black: "bg-black text-white",
-  default: "border border-gray-92 bg-gray-106 text-black",
+  default: "bg-gray-01 text-black",
   highlight: "bg-linear-to-t from-[#022C3C] to-[#59D8A7] text-white",
   "highlight-light": "bg-linear-to-t from-[#46a481] to-[#96f7e4] text-black",
 };
 
 const legendVariantClassName: Record<GpuTechnicalSpecsBarVariant, string> = {
   black: "bg-black",
-  default: "bg-gray-106 border border-gray-92",
+  default: "bg-gray-01",
   highlight: "bg-linear-to-t from-[#022C3C] to-[#59D8A7]",
   "highlight-light": "bg-linear-to-t from-[#46a481] to-[#96f7e4]",
 };
 
 function formatYAxisTick(
   value: number,
-  format: GpuTechnicalSpecsChart["yAxisFormat"],
+  format: GpuTechnicalSpecsChart["yAxisFormat"]
 ): string {
   if (format === "number") {
     return Number.isInteger(value) ? value.toString() : value.toFixed(1);
@@ -191,7 +191,7 @@ const GpuTechnicalSpecsBarChart = ({
                     <div
                       className={cn(
                         "relative flex w-full min-w-10 items-center justify-center px-1 py-1",
-                        barVariantClassName[bar.variant],
+                        barVariantClassName[bar.variant]
                       )}
                       style={{
                         height: Math.max(barHeight, 18),
@@ -242,7 +242,7 @@ const GpuTechnicalSpecsBarChart = ({
         <Text
           as="small"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="text-[9px]"
         >
           {chart.caption}
@@ -256,11 +256,11 @@ const GpuTechnicalSpecsBarChart = ({
               <span
                 className={cn(
                   "size-2.5 shrink-0 rounded-xs",
-                  legendVariantClassName[item.variant],
+                  legendVariantClassName[item.variant]
                 )}
                 aria-hidden="true"
               />
-              <Text as="small" textColor="black-5" className="text-[10px]">
+              <Text as="small" textColor="black/82" className="text-[10px]">
                 {item.label}
               </Text>
             </li>

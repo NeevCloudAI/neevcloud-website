@@ -6,7 +6,7 @@ import AiInferenceScenarioCard from "./AiInferenceScenarioCard";
 const AiInferenceScenariosSection = () => {
   return (
     <section
-      className="relative bg-gray-10 pb-8 md:pb-16 2xl:pb-25"
+      className="relative bg-cloud-gray pb-8 md:pb-16 2xl:pb-25"
       aria-labelledby="ai-inference-scenarios-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

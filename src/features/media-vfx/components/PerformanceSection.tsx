@@ -32,7 +32,7 @@ const EnterpriseSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           Blender Cycles with path tracing on a single 4K frame. Actual times

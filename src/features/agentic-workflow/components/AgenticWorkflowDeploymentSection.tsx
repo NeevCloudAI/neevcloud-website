@@ -6,7 +6,7 @@ import AgenticWorkflowDeploymentSectionClient from "./AgenticWorkflowDeploymentS
 const AgenticWorkflowDeploymentSection = () => {
   return (
     <section
-      className="bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="agentic-workflow-deployment-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -24,7 +24,7 @@ const AgenticWorkflowDeploymentSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="black-5"
+          textColor="black/82"
           align="center"
           className="max-w-3xl mt-2.5 mb-6 md:mb-12.5"
         >

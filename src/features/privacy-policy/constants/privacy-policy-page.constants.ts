@@ -4,7 +4,7 @@ export const PRIVACY_POLICY_HERO = {
   badgeText: "Shared Standard",
   title: "Privacy Policy",
   description:
-    "Welcome to our website! Before using our services, please read and agree to our terms and conditions outlined below.",
+    "Our Privacy Policy outlines how we collect, use, and protect your personal information. We prioritize your privacy and data security.",
 } as const;
 
 export const PRIVACY_POLICY_FOOTER = {

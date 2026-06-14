@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider, LinkComponent, Text } from "@/shared/ui-lib";
 import Image from "next/image";
-import LinkComponent from "../ui-lib/link";
+import { type LucideIcon } from "@/shared/icons/lucide-icon-map";
 
 export type AmbitionDetailBullet = {
   id: number;
@@ -11,7 +11,8 @@ export type AmbitionDetailBullet = {
 export type AmbitionDetailItem = {
   id: string;
   label: string;
-  iconSrc: string;
+  lucideIcon?: LucideIcon;
+  iconSrc?: string;
   iconColor?: string;
   iconAlt: string;
   size?: "small" | "large";
@@ -58,50 +59,66 @@ export function AmbitionDetailCard({
     <article
       className={cn(
         "flex h-full flex-col rounded-md bg-white p-4 md:px-7.5 md:py-10",
-        className,
+        className
       )}
     >
-      <Text textColor="gray-85">{label}</Text>
+      <Text textColor="gray-03">{label}</Text>
       {size === "small" ? (
         <div className="flex items-center justify-end mt-2.5 mb-4">
           <div
             className={cn(
-              "p-3 bg-primary-40 rounded-lg",
+              "p-3 bg-primary/10 rounded-lg",
               iconColor && `bg-${iconColor}`,
-              iconClassName,
+              iconClassName
             )}
           >
-            <Image
-              src={iconSrc}
-              alt={iconAlt}
-              width={20}
-              height={20}
-              className="self-end"
-            />
+            {iconSrc ? (
+              <Image
+                src={iconSrc}
+                alt={iconAlt}
+                width={20}
+                height={20}
+                className="self-end"
+              />
+            ) : item.lucideIcon ? (
+              <item.lucideIcon
+                className="text-primary size-5"
+                strokeWidth={1}
+              />
+            ) : null}
           </div>
         </div>
       ) : (
-        <Image
-          src={iconSrc}
-          alt={iconAlt}
-          width={60}
-          height={60}
-          className="mt-2.5 self-end"
-        />
+        <>
+          {iconSrc ? (
+            <Image
+              src={iconSrc}
+              alt={iconAlt}
+              width={60}
+              height={60}
+              className="mt-2.5 self-end"
+            />
+          ) : item.lucideIcon ? (
+            <item.lucideIcon
+              className="text-primary size-15 mt-2.5 self-end"
+              strokeWidth={1}
+            />
+          ) : null}
+        </>
       )}
 
       <Divider
         orientation="horizontal"
-        className="my-5 rounded-md bg-gray-60"
+        className="my-5 rounded-md bg-gray-01"
       />
       <Text as="h3" weight="semibold">
         {title}
       </Text>
-      <Text as="h6" textColor="gray-90" className="mt-2.5">
+      <Text as="h6" textColor="gray-05" className="mt-2.5">
         {description}
       </Text>
       {bulletsHeading && bullets.length > 0 ? (
-        <Text as="h6" textColor="gray-85" className="mt-4 md:mt-10">
+        <Text as="h6" textColor="gray-03" className="mt-4 md:mt-10">
           {bulletsHeading}
         </Text>
       ) : null}
@@ -109,13 +126,13 @@ export function AmbitionDetailCard({
         <ul
           className={cn(
             "flex list-none flex-col gap-1.25",
-            bulletsHeading ? "mt-2.5" : "mt-4 md:mt-10",
+            bulletsHeading ? "mt-2.5" : "mt-4 md:mt-10"
           )}
         >
           {bullets.map((bullet) => (
             <li
               key={bullet.id}
-              className="flex gap-2.5 rounded-md bg-gray-10 px-3.75 py-2.5"
+              className="flex gap-2.5 rounded-md bg-cloud-gray px-3.75 py-2.5"
             >
               <Text as="h6" textColor="primary" className="shrink-0">
                 •

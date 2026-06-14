@@ -4,7 +4,7 @@ export const ACCEPTABLE_USER_POLICY_HERO = {
   badgeText: "Shared Standard",
   title: "Acceptable User Policy",
   description:
-    "Welcome to our website! Before using our services, please read and agree to our terms and conditions outlined below.",
+    "Our Acceptable Use Policy sets guidelines for the appropriate use of our services, ensuring a safe and respectful environment for all users.",
 } as const;
 
 export const ACCEPTABLE_USER_POLICY_FOOTER = {

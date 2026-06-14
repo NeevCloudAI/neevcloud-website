@@ -12,7 +12,7 @@ const AiInferenceTransparentPricingTable = ({
       id={`${family.id}-panel`}
       role="tabpanel"
       aria-labelledby={`${family.id}-tab`}
-      className="classy h-100 overflow-auto min-w-0 flex-1 rounded-md border border-white-10 bg-black-25 p-4 md:p-5"
+      className="classy h-100 overflow-auto min-w-0 flex-1 rounded-md border border-white/12 bg-gray-80/18 p-4 md:p-5"
     >
       <div className="flex items-start gap-3.5">
         <ArrowRight size={18} className="text-primary mt-0.75" />
@@ -24,7 +24,7 @@ const AiInferenceTransparentPricingTable = ({
         {family.subtitle}
       </Text>
 
-      <div className="mt-5">
+      <div className="mt-5 overflow-x-auto classy">
         <table
           className="min-w-4xl w-full border-collapse"
           aria-label={`${family.sidebarLabel} inference pricing`}
@@ -33,7 +33,7 @@ const AiInferenceTransparentPricingTable = ({
             Per-model token pricing for {family.sidebarLabel}
           </caption>
           <thead>
-            <tr className="border-b border-black-29">
+            <tr className="border-b border-white/12">
               {family.tableHeaders.map((header) => (
                 <th
                   key={header}

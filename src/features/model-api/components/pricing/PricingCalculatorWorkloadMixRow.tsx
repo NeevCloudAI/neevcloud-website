@@ -19,14 +19,14 @@ const PricingCalculatorWorkloadMixRow = ({
 }: PricingCalculatorWorkloadMixRowProps) => {
   return (
     <div className="grid grid-cols-[3.5rem_minmax(0,1fr)_2.5rem_3rem] items-center gap-x-3 md:grid-cols-[5rem_minmax(0,1fr)_3rem_3.5rem]">
-      <Text textColor="gray-90">{label}</Text>
+      <Text textColor="gray-05">{label}</Text>
       <PricingCalculatorSlider
         value={percentage}
         onChange={onChange}
         variant="neutral"
         ariaLabel={`${label} workload percentage`}
       />
-      <Text as="small" textColor="gray-85" align="right">
+      <Text as="small" textColor="gray-03" align="right">
         {percentage}%
       </Text>
       <Text as="h6" align="right">

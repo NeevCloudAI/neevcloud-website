@@ -58,7 +58,7 @@ const GpuDeploymentComparisonSection = () => {
               as="small"
               textColor="white"
               fontFamily="spaceMono"
-              className="text-gray-10/60"
+              className="text-cloud-gray/60"
             >
               FEATURE
             </Text>
@@ -69,10 +69,10 @@ const GpuDeploymentComparisonSection = () => {
               <DeploymentComparisonServiceCard key={card.id} card={card} />
             ))}
             <div className="flex w-full items-center gap-3 rounded-lg border border-primary/14 bg-blue-10 p-3">
-              <span className="text-gray-10/25" aria-hidden="true">
+              <span className="text-cloud-gray/25" aria-hidden="true">
                 •
               </span>
-              <Text as="small" className="text-gray-10/60">
+              <Text as="small" className="text-cloud-gray/60">
                 {DEPLOYMENT_COMPARISON_HARDWARE_NOTE}
               </Text>
             </div>
@@ -83,7 +83,7 @@ const GpuDeploymentComparisonSection = () => {
               as="small"
               textColor="white"
               fontFamily="spaceMono"
-              className="text-gray-10/60 lg:hidden"
+              className="text-cloud-gray/60 lg:hidden"
             >
               FEATURE
             </Text>
@@ -95,7 +95,7 @@ const GpuDeploymentComparisonSection = () => {
               />
             ))}
 
-            <Divider orientation="horizontal" className="bg-gray-10/10" />
+            <Divider orientation="horizontal" className="bg-cloud-gray/10" />
             <DeploymentComparisonLegend />
           </div>
         </div>

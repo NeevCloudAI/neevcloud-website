@@ -30,11 +30,11 @@ const LinkComponent = ({
           backgroundColor,
           borderRadius,
           textColor,
-        }),
+        })
       )}
       {...props}
     />
   );
 };
 
-export default LinkComponent;
+export { LinkComponent };

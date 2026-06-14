@@ -37,7 +37,7 @@ const ThreeStepsSectionClient = () => {
               >
                 <Text
                   as="h6"
-                  textColor={activeStep === i ? "gray-10" : "gray-90"}
+                  textColor={activeStep === i ? "cloud-gray" : "gray-05"}
                 >
                   {s.label}
                 </Text>

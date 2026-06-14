@@ -8,7 +8,7 @@ type TokenPricingTableRowProps = {
 
 const TokenPricingTableRow = ({ row }: TokenPricingTableRowProps) => {
   return (
-    <tr className="border-b border-black-7">
+    <tr className="border-b border-white/6">
       <td className={TOKEN_PRICING_TABLE_CELL_CLASS}>
         <Text as="h6" textColor="primary-105" fontFamily="spaceMono">
           {row.model.title}
@@ -18,12 +18,12 @@ const TokenPricingTableRow = ({ row }: TokenPricingTableRowProps) => {
         </Text>
       </td>
       <td className={TOKEN_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-04">
           {row.params}
         </Text>
       </td>
       <td className={TOKEN_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-04">
           {row.context}
         </Text>
       </td>
@@ -33,7 +33,7 @@ const TokenPricingTableRow = ({ row }: TokenPricingTableRowProps) => {
         </Text>
       </td>
       <td className={TOKEN_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="red-50">
+        <Text as="h6" fontFamily="spaceMono" textColor="pulse-red">
           {row.output}
         </Text>
       </td>
@@ -41,7 +41,7 @@ const TokenPricingTableRow = ({ row }: TokenPricingTableRowProps) => {
         <Text
           as="h6"
           fontFamily="spaceMono"
-          textColor={row.free ? "orange-50" : "white"}
+          textColor={row.free ? "yellow" : "white"}
         >
           {row.free || "-"}
         </Text>

@@ -10,13 +10,13 @@ function InfrastructureNativeFlowDiagram() {
       <div className="flex w-full gap-8">
         <Text
           textColor="white"
-          className="w-full border border-black-90 bg-black-50 rounded-lg px-2 py-2 text-center shadow-sm"
+          className="w-full border border-black/62 bg-black/32 rounded-lg px-2 py-2 text-center shadow-sm"
         >
           Gen AI Models
         </Text>
         <Text
           textColor="white"
-          className="w-full border border-black-90 bg-black-50 rounded-lg px-2 py-2 text-center "
+          className="w-full border border-black/62 bg-black/32 rounded-lg px-2 py-2 text-center "
         >
           Your Applications
         </Text>
@@ -45,7 +45,7 @@ function InfrastructureNativeFlowDiagram() {
         as="h4"
         weight="semibold"
         textColor="white"
-        className="border border-gray-25 bg-gray-83 rounded-lg px-4 md:px-5 py-2 md:py-3 text-center shadow-sm"
+        className="border border-white/62 bg-white/32 rounded-lg px-4 md:px-5 py-2 md:py-3 text-center shadow-sm"
       >
         AI SuperCloud
       </Text>
@@ -56,9 +56,9 @@ function InfrastructureNativeFlowDiagram() {
         height={20}
       />
 
-      <div className="flex items-center justify-center gap-2 rounded-lg border border-primary-65 bg-primary-110 px-6 md:px-12 py-2 md:py-4">
+      <div className="flex items-center justify-center gap-2 rounded-lg border border-primary-105/62 bg-primary-105/32 px-6 md:px-12 py-2 md:py-4">
         <Image
-          src="/icons/logo-white.svg"
+          src="/icons/logo-white-with-name.svg"
           alt="NeevCloud Logo"
           width={150}
           height={150}
@@ -80,7 +80,7 @@ export default function InfrastructureSectionContent() {
             as="span"
             variant="h2"
             textColor="primary"
-            className="w-full max-w-4xl mr-0 md:mr-0"
+            className="w-full mr-0 md:mr-0"
           >
             Removes Barriers
           </Text>
@@ -90,7 +90,7 @@ export default function InfrastructureSectionContent() {
         <Text
           as="h6"
           className="mt-2.5 max-w-2xl"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
         >
           We built NeevCloud to give every innovator access to world-class AI
@@ -99,21 +99,21 @@ export default function InfrastructureSectionContent() {
         </Text>
 
         <div className="flex flex-col md:flex-row mt-4 md:mt-12.5 gap-5">
-          <div className="flex-2 bg-black-95 rounded-md">
+          <div className="flex-2 bg-white/6 border border-white/12 rounded-md">
             <div className="p-4 md:p-10">
-              <Text as="h3" weight="semibold" className="text-[30px]">
+              <Text as="h3" weight="semibold" className="text-30px">
                 On-Demand GPU Access
               </Text>
               <Text as="h4" textColor="primary" className="mt-1.25">
                 Available When You Need It
               </Text>
-              <Text as="h6" className="mt-3.75" textColor="gray-10">
+              <Text as="h6" className="mt-3.75" textColor="cloud-gray">
                 Provision GPU resources in minutes without long wait times or
                 complex procurement processes. Start training immediately and
                 scale as your projects grow.
               </Text>
             </div>
-            <Divider orientation="horizontal" className="bg-white-10" />
+            <Divider orientation="horizontal" className="bg-white/12" />
             {INFRASTRUCTURE_GPU_AVAILABILITY_ROWS.map((row, index) => (
               <GpuAvailabilityRow
                 key={row.id}
@@ -123,14 +123,14 @@ export default function InfrastructureSectionContent() {
               />
             ))}
           </div>
-          <div className="flex flex-1.5 flex-col rounded-md p-4 md:p-10 bg-black-95">
-            <Text as="h3" weight="semibold" className="text-[30px]">
+          <div className="flex flex-1.5 flex-col rounded-md p-4 md:p-10 bg-white/6 border border-white/12">
+            <Text as="h3" weight="semibold" className="text-30px">
               AI-Native Infrastructure
             </Text>
             <Text as="h4" textColor="primary" className="mt-1.25">
               Purpose-Built for Modern AI
             </Text>
-            <Text as="h6" className="mt-3.75 max-w-md" textColor="gray-10">
+            <Text as="h6" className="mt-3.75 max-w-md" textColor="cloud-gray">
               Every layer of our stack is designed specifically for AI
               workloads. We engineer for performance and efficiency.
             </Text>
@@ -139,14 +139,14 @@ export default function InfrastructureSectionContent() {
         </div>
 
         <div className=" w-full flex flex-col md:flex-row mt-5 gap-5">
-          <div className="relative flex-1 rounded-md p-4 md:p-10 bg-black-95">
-            <Text as="h3" weight="semibold" className="text-[30px]">
+          <div className="relative flex-1 rounded-md p-4 md:p-10 bg-white/6 border border-white/12">
+            <Text as="h3" weight="semibold" className="text-30px">
               High Memory Capacity
             </Text>
             <Text as="h4" textColor="primary" className="mt-1.25">
               Handle Larger Models, Faster
             </Text>
-            <Text as="h6" textColor="gray-10" className="mt-3.75">
+            <Text as="h6" textColor="cloud-gray" className="mt-3.75">
               Work with massive datasets and complex models without hitting
               memory bottlenecks. Our GPU configurations provide the capacity
               your most ambitious projects demand.{" "}
@@ -161,14 +161,14 @@ export default function InfrastructureSectionContent() {
               />
             </div>
           </div>
-          <div className="flex-2 rounded-md p-4 md:p-10 bg-black-95">
-            <Text as="h3" weight="semibold" className="text-[30px]">
+          <div className="flex-2 rounded-md p-4 md:p-10 bg-white/6 border border-white/12">
+            <Text as="h3" weight="semibold" className="text-30px">
               24x7 Best-in-Class Support
             </Text>
             <Text as="h4" textColor="primary" className="mt-1.25">
               Expert Help, Always Available
             </Text>
-            <Text as="h6" textColor="gray-10" className="mt-3.75">
+            <Text as="h6" textColor="cloud-gray" className="mt-3.75">
               Our team understands AI infrastructure because we built it. Get
               responsive support from engineers who know the platform inside and
               out, whenever you need it.

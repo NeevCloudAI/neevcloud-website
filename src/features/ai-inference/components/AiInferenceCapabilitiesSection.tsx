@@ -6,7 +6,7 @@ import { AI_INFERENCE_CAPABILITIES_ITEMS } from "../data/capabilities-section.da
 const AiInferenceCapabilitiesSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="ai-inference-capabilities-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -25,7 +25,7 @@ const AiInferenceCapabilitiesSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-4xl"
         >
           Going from a fine-tuned model to a production API shouldn&apos;t

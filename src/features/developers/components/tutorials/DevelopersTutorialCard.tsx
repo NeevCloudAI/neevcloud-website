@@ -1,6 +1,5 @@
 import { ArrowRight } from "@/shared/icons/lucide-icon-map";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import type { DevelopersTutorialCardItem } from "../../types/tutorials-section.types";
 import { DEVELOPERS_TUTORIALS_SECTION } from "../../data/tutorials-section.data";
 
@@ -15,11 +14,11 @@ const DevelopersTutorialCard = ({ card }: DevelopersTutorialCardProps) => {
         <Text as="h5" weight="semibold">
           {card.title}
         </Text>
-        <Text textColor="gray-85" weight="medium">
+        <Text textColor="gray-03" weight="medium">
           {card.duration}
         </Text>
       </div>
-      <Text as="h6" textColor="gray-90" className="mt-2.5">
+      <Text as="h6" textColor="gray-05" className="mt-2.5">
         {card.difficulty}
       </Text>
       <LinkComponent

@@ -49,7 +49,7 @@ const HuggingFaceLoraContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Load base model
@@ -69,7 +69,12 @@ const HuggingFaceLoraContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;
-      <Text as="span" variant="p" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="p"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         &quot;meta-llama/Llama-3.1-70b&quot;
       </Text>
       ,
@@ -93,7 +98,12 @@ const HuggingFaceLoraContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;device_map=
-      <Text as="span" variant="p" textColor="red-50" className="mx-0 md:mx-0">
+      <Text
+        as="span"
+        variant="p"
+        textColor="pulse-red"
+        className="mx-0 md:mx-0"
+      >
         &quot;auto&quot;
       </Text>
     </Text>
@@ -115,7 +125,7 @@ const HuggingFaceLoraContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Configure LoRA
@@ -151,11 +161,16 @@ const HuggingFaceLoraContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;target_modules=[
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         &quot;q_proj&quot;
       </Text>
       ,
-      <Text as="span" variant="p" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="p"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         &quot;v_proj&quot;
       </Text>
       ],
@@ -171,7 +186,12 @@ const HuggingFaceLoraContent = () => (
         0.05
       </Text>
       , bias=
-      <Text as="span" variant="p" textColor="red-50" className="mx-0 md:mx-0">
+      <Text
+        as="span"
+        variant="p"
+        textColor="pulse-red"
+        className="mx-0 md:mx-0"
+      >
         &quot;none&quot;
       </Text>
     </Text>
@@ -193,7 +213,7 @@ const HuggingFaceLoraContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Load dataset · checkpoints auto-saved
@@ -205,11 +225,11 @@ const HuggingFaceLoraContent = () => (
       className="leading-7"
     >
       dataset = load_dataset(
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         &quot;json&quot;
       </Text>
       , data_files=
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         &quot;s3://neevcloud-storage/train.jsonl&quot;
       </Text>
       )

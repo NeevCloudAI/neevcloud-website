@@ -21,17 +21,18 @@ const InfrastructureSection = () => {
           <div>
             <div className="flex flex-col gap-5 md:gap-7.5">
               {INFRASTRUCTURE_SECTION.paragraphs.map((paragraph) => (
-                <Text key={paragraph} as="h6" textColor="black-5">
+                <Text key={paragraph} as="h6" textColor="black/82">
                   {paragraph}
                 </Text>
               ))}
             </div>
-            <ul className="mt-6 flex list-none flex-wrap gap-2.5 md:mt-20">
+
+            <ul className="mt-6 flex flex-wrap gap-2.5 md:mt-20">
               {INFRASTRUCTURE_SECTION.tags.map((tag) => (
                 <li key={tag}>
                   <Text
                     as="h6"
-                    className="inline-block rounded-sm bg-gray-10 px-4 py-2 md:px-7.5 md:py-3"
+                    className="inline-block rounded-sm bg-cloud-gray px-4 py-2 md:px-7.5 md:py-3"
                   >
                     {tag}
                   </Text>

@@ -2,7 +2,7 @@ import { Text } from "@/shared/ui-lib";
 
 const FleetManagementContent = () => (
   <>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1 leading-7">
       # Scale agent fleet across GPU nodes
     </Text>
     <Text
@@ -50,7 +50,7 @@ const FleetManagementContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Rolling update with zero downtime
@@ -70,7 +70,7 @@ const FleetManagementContent = () => (
       className="leading-7"
     >
       &nbsp; --image
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         neevcloud.com/registry/research-agent:v2
       </Text>
       \

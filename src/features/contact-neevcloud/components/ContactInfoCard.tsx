@@ -22,7 +22,7 @@ const ContactInfoCard = ({ card }: ContactInfoCardProps) => {
         <Text as="h3" weight="semibold" className="mt-4">
           {card.title}
         </Text>
-        <Text as="h4" textColor="black-5" className="mt-2.5">
+        <Text as="h4" textColor="black/82" className="mt-2.5">
           {card.description}
         </Text>
       </div>

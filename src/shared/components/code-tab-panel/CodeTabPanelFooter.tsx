@@ -1,11 +1,10 @@
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import { Divider } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Divider, LinkComponent } from "@/shared/ui-lib";
 
 const CodeTabPanelFooter = () => {
   return (
     <>
-      <Divider orientation="horizontal" className="mb-4 bg-black-5" />
+      <Divider orientation="horizontal" className="mb-4 bg-white/12" />
       <div className="flex items-center justify-end pb-4 pr-4">
         <LinkComponent
           href={EXTERNAL_LINKS.documentation}

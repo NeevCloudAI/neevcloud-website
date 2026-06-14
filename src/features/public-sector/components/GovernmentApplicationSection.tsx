@@ -6,7 +6,7 @@ import ApplicationCard from "@/shared/components/application-card";
 const GovernmentApplicationSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="bfsi-applications-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -25,7 +25,7 @@ const GovernmentApplicationSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           {`Real workloads from real institutions, fraud, risk, trading, claims, and compliance, running on GPU infrastructure with data sovereignty.`}

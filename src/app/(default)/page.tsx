@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
 import { HomeComponent } from "@/features/Home";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "NeevCloud | India's AI SuperCloud",
   description:
     "Full-stack AI infrastructure built to scale fearlessly. Run AI workloads with sovereign control, security, and scalability on India-resident GPU and CPU compute.",
-  openGraph: {
-    title: "NeevCloud | India's AI SuperCloud",
-    description:
-      "Full-stack AI infrastructure built to scale fearlessly. Run AI workloads with sovereign control, security, and scalability on India-resident GPU and CPU compute.",
-  },
-};
+});
 
 const HomePage = () => {
   return <HomeComponent />;

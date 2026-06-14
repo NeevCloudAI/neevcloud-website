@@ -38,7 +38,7 @@ const ServiceListSection = ({
         <Text
           as="h6"
           align="center"
-          textColor="gray-10"
+          textColor="cloud-gray"
           className="max-w-2xl mt-2.5"
         >
           {description}

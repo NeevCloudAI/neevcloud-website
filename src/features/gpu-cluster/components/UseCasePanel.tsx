@@ -24,7 +24,7 @@ const UseCasePanel = ({
       role="tabpanel"
       aria-labelledby={labelledBy}
       hidden={hidden}
-      className="relative bg-gray-10 w-full p-4 md:p-12.5 flex flex-col md:flex-row gap-5 overflow-hidden"
+      className="relative bg-cloud-gray w-full p-4 md:p-12.5 flex flex-col md:flex-row gap-5 overflow-hidden"
     >
       <div>
         <div className="absolute bottom-[-45%] left-0">
@@ -36,10 +36,10 @@ const UseCasePanel = ({
           />
         </div>
         <div
-          className="w-fit p-3.75 bg-white rounded-sm border border-gray-60"
+          className="w-fit p-3.75 bg-white rounded-sm border border-gray-01"
           aria-hidden="true"
         >
-          <Loader size={30} className="text-gray-60" />
+          <Loader size={30} className="text-gray-01" />
         </div>
         <Text as="h2" className="mt-4 md:mt-10">
           {useCase.heading}

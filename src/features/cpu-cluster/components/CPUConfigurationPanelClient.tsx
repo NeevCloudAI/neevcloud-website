@@ -12,7 +12,7 @@ import type { CpuInstanceFamilyId } from "../types/cpu-configuration.types";
 
 const CPUConfigurationPanelClient = () => {
   const [activeFamilyId, setActiveFamilyId] = useState<CpuInstanceFamilyId>(
-    DEFAULT_CPU_INSTANCE_FAMILY,
+    DEFAULT_CPU_INSTANCE_FAMILY
   );
 
   const activeFamily = CPU_INSTANCE_FAMILY_BY_ID[activeFamilyId];
@@ -24,7 +24,7 @@ const CPUConfigurationPanelClient = () => {
   return (
     <div className="flex flex-col md:flex-row">
       <aside
-        className="md:border-r md:border-gray-95 md:pr-10 pb-5 md:pb-0 mb-5 md:mb-0 border-b md:border-b-0 border-gray-95"
+        className="md:border-r md:border-white/12 md:pr-10 pb-5 md:pb-0 mb-5 md:mb-0 border-b md:border-b-0 border-white/12"
         aria-label="Instance families"
       >
         <Text as="h6" fontFamily="spaceMono" textColor="gray-80">
@@ -50,7 +50,7 @@ const CPUConfigurationPanelClient = () => {
                 id={`cpu-config-tab-${family.id}`}
                 tabIndex={isActive ? 0 : -1}
                 onClick={() => handleFamilySelect(family.id)}
-                className="rounded-md border border-gray-97 px-5 py-2.5 text-left bg-black-25"
+                className="rounded-md border border-white/12 px-5 py-2.5 text-left bg-gray-80/18"
               >
                 <Text as="h6" fontFamily="spaceMono" textColor="white">
                   <Text

@@ -5,7 +5,7 @@ export type GpuPricingCommitment = {
 
 export type GpuPricingStatus = {
   text: "notify" | "·ready";
-  textVariant: "primary" | "orange-50";
+  textVariant: "primary" | "yellow";
 };
 
 export type GpuPricingRow = {

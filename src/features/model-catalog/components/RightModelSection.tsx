@@ -33,7 +33,7 @@ const RightModelSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="max-w-3xl mt-2.5"
         >
@@ -42,7 +42,7 @@ const RightModelSection = () => {
         </Text>
 
         <div
-          className="mt-4 w-full rounded-lg border border-white-10 bg-white-5 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
+          className="mt-4 w-full rounded-lg border border-white/12 bg-white/6 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
           aria-label="Model pricing terminal preview"
         >
           <RightModelTerminalHeader />

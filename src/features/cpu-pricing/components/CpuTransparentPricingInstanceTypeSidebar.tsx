@@ -9,7 +9,7 @@ const CpuTransparentPricingInstanceTypeSidebar = ({
 }: CpuTransparentPricingInstanceTypeSidebarProps) => {
   return (
     <div className="">
-      <Text as="h6" textColor="gray-75" fontFamily="spaceMono">
+      <Text as="h6" textColor="gray-04" fontFamily="spaceMono">
         Instance Type
       </Text>
       <div role="tablist" aria-label="CPU instance type tabs" className="mt-4">
@@ -24,17 +24,19 @@ const CpuTransparentPricingInstanceTypeSidebar = ({
                 key={option.id}
                 onClick={() => onTypeSelect(option.id)}
                 className={cn(
-                  "w-full flex items-center gap-3 border bg-black-25/60 p-3 md:w-70",
-                  isActive ? "border-primary-105" : "border-gray-97",
+                  "w-full flex items-center gap-3 border p-3 md:w-70 rounded-md",
+                  isActive
+                    ? "bg-primary-210/6 border-primary-210/60"
+                    : "bg-white/6 border-white/12"
                 )}
               >
                 <option.icon
                   size={18}
-                  className={cn(isActive ? "text-primary" : "text-gray-75")}
+                  className={cn(isActive ? "text-primary" : "text-gray-04")}
                 />
                 <Text
                   as="h6"
-                  textColor={isActive ? "white" : "gray-106"}
+                  textColor={isActive ? "white" : "white/60"}
                   fontFamily="spaceMono"
                 >
                   {option.label}

@@ -12,8 +12,8 @@ const SecurityByDesignCard = ({
   return (
     <article
       className={cn(
-        "flex h-full flex-col overflow-hidden rounded-md bg-gray-10 shadow-sm",
-        className,
+        "flex h-full flex-col overflow-hidden rounded-md bg-cloud-gray shadow-sm",
+        className
       )}
     >
       <Image
@@ -25,7 +25,7 @@ const SecurityByDesignCard = ({
       />
 
       <div className="flex flex-1 flex-col p-4 md:px-5 md:py-10">
-        <Text as="h3" weight="semibold" className="text-2xl md:text-3xl">
+        <Text as="h3" weight="semibold" className="md:text-30px">
           {title}
         </Text>
         <ul className="m-0 mt-5 md:mt-7.5 flex list-none flex-col gap-5 md:gap-7.5 p-0">

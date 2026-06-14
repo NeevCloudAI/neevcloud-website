@@ -12,7 +12,7 @@ const UseCasesSection = () => {
             Cases
           </Text>
         </Text>
-        <Text as="h6" textColor="black-5">
+        <Text as="h6" textColor="black/82">
           Built for Every AI Workload
         </Text>
         <UseCasesSectionClient />

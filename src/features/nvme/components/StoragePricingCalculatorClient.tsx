@@ -20,17 +20,17 @@ import StoragePricingIncludedFeatures from "./pricing/StoragePricingIncludedFeat
 
 const StoragePricingCalculatorClient = () => {
   const [additionalStorageGb, setAdditionalStorageGb] = useState(
-    DEFAULT_ADDITIONAL_STORAGE_GB,
+    DEFAULT_ADDITIONAL_STORAGE_GB
   );
 
   const storageSlider = storageToSlider(
     additionalStorageGb,
     MIN_ADDITIONAL_STORAGE_GB,
-    MAX_ADDITIONAL_STORAGE_GB,
+    MAX_ADDITIONAL_STORAGE_GB
   );
   const monthlyCost = useMemo(
     () => calculateMonthlyStorageCost(additionalStorageGb),
-    [additionalStorageGb],
+    [additionalStorageGb]
   );
 
   return (
@@ -41,7 +41,7 @@ const StoragePricingCalculatorClient = () => {
 
       <div className="mt-5">
         <div className="mb-2 flex items-center justify-between gap-4">
-          <Text as="h6" textColor="gray-75" id="additional-storage-label">
+          <Text as="h6" textColor="gray-04" id="additional-storage-label">
             Additional storage (GB)
           </Text>
           <Text as="h6" aria-live="polite">
@@ -55,8 +55,8 @@ const StoragePricingCalculatorClient = () => {
               sliderToStorage(
                 value,
                 MIN_ADDITIONAL_STORAGE_GB,
-                MAX_ADDITIONAL_STORAGE_GB,
-              ),
+                MAX_ADDITIONAL_STORAGE_GB
+              )
             )
           }
           ariaLabel="Additional storage in gigabytes"

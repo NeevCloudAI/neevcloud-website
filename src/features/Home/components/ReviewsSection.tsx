@@ -5,7 +5,7 @@ import ReviewsCarousel from "./ReviewsCarousel";
 const ReviewsSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative overflow-hidden bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="reviews-section-heading"
     >
       <Container
@@ -22,7 +22,7 @@ const ReviewsSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-2xl mt-2.5"
         >
           From startups building their first models to enterprises deploying AI

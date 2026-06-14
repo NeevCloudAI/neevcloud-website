@@ -16,13 +16,13 @@ const ModelActionSidebarCard = ({
       className={cn(
         "md:min-w-100 w-full rounded-md border px-3.75 py-2.5 text-left",
         isActive
-          ? "border-primary-75 bg-primary-95"
-          : "border-black-35 bg-black-70 hover:border-gray-100",
+          ? "border-primary-90/18 bg-primary-90/12"
+          : "border-gray-80/18 bg-gray-80/12"
       )}
     >
       <Text
         fontFamily="spaceMono"
-        textColor={isActive ? "primary" : "gray-75"}
+        textColor={isActive ? "primary" : "gray-04"}
         className="truncate"
       >
         {model.name}
@@ -30,7 +30,7 @@ const ModelActionSidebarCard = ({
       <Text
         as="small"
         fontFamily="spaceMono"
-        textColor="gray-75"
+        textColor="gray-04"
         className="text-[10px]"
       >
         {model.provider} · {model.context} context

@@ -15,11 +15,11 @@ const PurposeFlowCard = ({ node, className }: PurposeFlowCardProps) => {
       className={cn(
         "flex flex-col items-center rounded-lg py-5",
         isNetwork ? "px-12.5" : "px-15.5",
-        className,
+        className
       )}
     >
       {node.subtitle && !node.badge && (
-        <Text as="h6" textColor="gray-90">
+        <Text as="h6" textColor="gray-05">
           {node.subtitle}
         </Text>
       )}
@@ -40,12 +40,12 @@ const PurposeFlowCard = ({ node, className }: PurposeFlowCardProps) => {
         {node.title}
       </Text>
       {node.subtitle && node.badge && (
-        <Text as="h6" textColor="gray-85" className="mt-1.25">
+        <Text as="h6" textColor="gray-03" className="mt-1.25">
           {node.subtitle}
         </Text>
       )}
       {node.footer && !node.badge && (
-        <Text textColor="green-10" className="mt-1.25">
+        <Text textColor="deep-forest" className="mt-1.25">
           {node.footer}
         </Text>
       )}

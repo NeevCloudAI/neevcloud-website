@@ -22,9 +22,9 @@ export default function StackPanel({
   return (
     <article
       className={cn(
-        "flex flex-col rounded-lg p-2 text-gray-90",
+        "flex flex-col rounded-lg p-2 text-gray-05",
         isActive ? "opacity-100" : "opacity-50",
-        className,
+        className
       )}
       aria-labelledby={`stack-panel-${panel.id}-title`}
     >
@@ -41,7 +41,7 @@ export default function StackPanel({
               id={`stack-item-button-${panel.id}-${item.id}`}
               type="button"
               onClick={() => onToggleItem(item.id)}
-              className="flex w-full cursor-pointer items-center justify-between border-b border-gray-50 py-3 text-left transition-colors hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="flex w-full cursor-pointer items-center justify-between border-b border-gray-01 py-3 text-left transition-colors hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               aria-expanded={activeItemId === item.id}
               aria-controls={`stack-item-content-${panel.id}-${item.id}`}
             >
@@ -50,7 +50,7 @@ export default function StackPanel({
                 as="h3"
                 className={cn(
                   "transition-transform duration-200",
-                  activeItemId === item.id && "rotate-45",
+                  activeItemId === item.id && "rotate-45"
                 )}
                 aria-hidden
               >
@@ -66,7 +66,7 @@ export default function StackPanel({
                 "grid transition-[grid-template-rows,opacity] duration-300 ease-out",
                 activeItemId === item.id
                   ? "grid-rows-[1fr] opacity-100"
-                  : "grid-rows-[0fr] opacity-0",
+                  : "grid-rows-[0fr] opacity-0"
               )}
               aria-labelledby={`stack-item-button-${panel.id}-${item.id}`}
             >

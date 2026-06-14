@@ -81,3 +81,12 @@ Pending:
    <!-- 3. route: about-use. hero sections image -->
    <!-- 2. route: gpu-cluster, section: Every WorkloadFlat rate.Unmetered. Add pricing from sheet -->
 <!--  -->
+
+<!--  -->
+
+1. Refactor list items
+2. Refactor colors according to figma colors
+3. announcement component needs to be responsive for mobile screen
+4. Header needs to be responsive for mobile screen and add scrollbar
+5. Missing redirection link for view status in AI Supercloud mega menu
+6. Pending page: Object storage

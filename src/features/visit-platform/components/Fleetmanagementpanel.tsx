@@ -16,17 +16,17 @@ const FleetManagementPanel = () => {
               i === 0
                 ? "border-l-3 border-l-primary [background:linear-gradient(to_right,#e6f7f5,transparent)]"
                 : ""
-            } ${i < 4 - 1 ? "border-b border-b-gray-60" : ""}`}
+            } ${i < 4 - 1 ? "border-b border-b-gray-01" : ""}`}
           >
             <div>
               <Text as="h4" weight="semibold">
                 {vol.name}
               </Text>
-              <Text textColor="black-5" as="h6">
+              <Text textColor="black/82" as="h6">
                 {vol.type} · {vol.attached}
               </Text>
             </div>
-            <Text as="h6" weight="semibold" textColor="primary-70">
+            <Text as="h6" weight="semibold" textColor="primary-90">
               {vol.size}
             </Text>
           </div>

@@ -11,7 +11,7 @@ const ComputeInstanceCard = ({
   transferHint,
 }: ComputeInstance) => {
   return (
-    <article className="flex-1 rounded-xl bg-gray-90 p-4 md:px-7.5 md:py-8.5">
+    <article className="flex-1 rounded-xl bg-gray-05 p-4 md:px-7.5 md:py-8.5">
       <div className="flex items-center gap-2.5">
         <ComputePill label={typeLabel} variant={variant} />
         <Text as="h4" weight="semibold" textColor="white">
@@ -19,7 +19,7 @@ const ComputeInstanceCard = ({
         </Text>
       </div>
       <ComputeSpecs specs={specs} />
-      <Text as="small" textColor="primary-60" className="mt-2.5">
+      <Text as="small" textColor="neev-green" className="mt-2.5">
         {transferHint}
       </Text>
     </article>

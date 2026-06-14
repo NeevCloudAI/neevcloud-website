@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import { ArrowRight } from "lucide-react";
 import type { DeploymentComparisonServiceCardProps } from "../../types/deployment-comparison-section.types";
 import DeploymentComparisonIcon from "./DeploymentComparisonIcon";
@@ -58,7 +57,7 @@ const DeploymentComparisonServiceCard = ({
       </div>
       <Text
         as="small"
-        className="mt-3 text-gray-10/80"
+        className="mt-3 text-cloud-gray/80"
       >{`"${card.tagline}"`}</Text>
 
       <ul className="mt-3 flex list-none flex-col gap-1.5 p-0">
@@ -67,7 +66,7 @@ const DeploymentComparisonServiceCard = ({
             <span className={styles.bullet} aria-hidden="true">
               •
             </span>
-            <Text as="small" className="text-gray-10/80">
+            <Text as="small" className="text-cloud-gray/80">
               {bullet}
             </Text>
           </li>
@@ -78,7 +77,7 @@ const DeploymentComparisonServiceCard = ({
         target="_blank"
         className={cn(
           "mt-3 flex w-full items-center justify-center gap-2 rounded-md",
-          styles.cta,
+          styles.cta
         )}
         spacing="lg"
       >

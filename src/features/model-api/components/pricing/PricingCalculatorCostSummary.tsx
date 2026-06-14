@@ -11,7 +11,7 @@ const PricingCalculatorCostSummary = ({
   return (
     <div className="flex items-start justify-between gap-4">
       <div>
-        <Text as="small" textColor="gray-85" className="uppercase">
+        <Text as="small" textColor="gray-03" className="uppercase">
           live estimate
         </Text>
         <Text as="h5" weight="semibold" className="mt-1.25">
@@ -22,7 +22,7 @@ const PricingCalculatorCostSummary = ({
         <Text as="h2" weight="bold" className="mx-0 leading-none">
           {formatCurrency(monthlyCost)}
         </Text>
-        <Text as="small" textColor="gray-85" className="mt-1.25">
+        <Text as="small" textColor="gray-03" className="mt-1.25">
           / month at current mix
         </Text>
       </div>

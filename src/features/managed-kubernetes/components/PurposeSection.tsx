@@ -16,7 +16,7 @@ import PurposeFeaturesGrid from "./purpose/PurposeFeaturesGrid";
 const PurposeSection = () => {
   return (
     <section
-      className="bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="purpose-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -36,7 +36,7 @@ const PurposeSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-15"
+          textColor="black/82"
           className="max-w-2xl mt-2.5"
         >
           Click any node to inspect it. The diagram is the deploy: everything
@@ -45,7 +45,7 @@ const PurposeSection = () => {
         </Text>
 
         <div
-          className="mt-6 md:mt-12.5 flex w-full gap-4 md:gap-12.5 flex-col items-center "
+          className="mt-6 md:mt-12.5 flex w-full gap-8 md:gap-12.5 flex-col items-center "
           role="img"
           aria-label="Kubernetes architecture diagram showing team, tools, control plane, node pools, and storage"
         >

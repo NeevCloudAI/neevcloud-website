@@ -10,8 +10,8 @@ const UseCaseTag = ({ tag }: UseCaseTagProps) => {
     <Text
       className={
         tag.variant === "primary"
-          ? "bg-primary text-white px-4 py-1 rounded-full"
-          : "bg-gray-70 text-white px-4 py-1 rounded-full"
+          ? "bg-primary text-cloud-gray px-4 py-1 rounded-full"
+          : "bg-black/32 text-cloud-gray px-4 py-1 rounded-full"
       }
     >
       {tag.text}

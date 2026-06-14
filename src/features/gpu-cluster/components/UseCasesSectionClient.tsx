@@ -16,7 +16,7 @@ const UseCasesSectionClient = () => {
         id={tabListId}
         role="tablist"
         aria-label="GPU workload use cases"
-        className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b border-gray-60 items-center justify-center mt-4 md:mt-12.5"
+        className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-b border-gray-01 items-center justify-center mt-4 md:mt-12.5"
       >
         {USE_CASES.map((tab) => {
           const tabId = `use-case-tab-${tab.id}`;
@@ -36,7 +36,7 @@ const UseCasesSectionClient = () => {
               textColor="black"
               size="full"
               onClick={() => setActiveTab(tab.id)}
-              className={`flex gap-1 flex-col items-start p-5 border border-b-0 border-gray-60 rounded-lg rounded-b-none ${isSelected ? "bg-tertiary text-white" : ""}`}
+              className={`flex gap-1 flex-col items-start p-5 border border-b-0 border-gray-01 rounded-lg rounded-b-none ${isSelected ? "bg-deep-blue text-white" : ""}`}
             >
               <Text as="h6">{tab.id}</Text>
               <Text as="h4" weight="semibold">

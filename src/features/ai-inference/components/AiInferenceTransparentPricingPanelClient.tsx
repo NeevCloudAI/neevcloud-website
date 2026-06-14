@@ -11,7 +11,7 @@ import AiInferenceTransparentPricingTerminalHeader from "./AiInferenceTransparen
 
 const AiInferenceTransparentPricingPanelClient = () => {
   const [activeFamily, setActiveFamily] = useState<AiInferenceModelFamilyId>(
-    DEFAULT_AI_INFERENCE_MODEL_FAMILY,
+    DEFAULT_AI_INFERENCE_MODEL_FAMILY
   );
 
   const family =
@@ -34,12 +34,12 @@ const AiInferenceTransparentPricingPanelClient = () => {
 
         <Divider
           orientation="vertical"
-          className="hidden bg-white-10 md:block"
+          className="hidden bg-white/12 md:block"
         />
 
         <Divider
           orientation="horizontal"
-          className="block bg-white-10 md:hidden"
+          className="block bg-white/12 md:hidden"
         />
 
         <AiInferenceTransparentPricingTable family={family} />

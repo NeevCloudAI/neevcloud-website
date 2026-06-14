@@ -7,10 +7,10 @@ type OSImageSelectionBarProps = {
 
 const OSImageSelectionBar = ({ selectedImage }: OSImageSelectionBarProps) => {
   return (
-    <div className="mt-10 w-full rounded-lg bg-tertiary px-4 md:px-12.5 py-4 md:py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div className="mt-10 w-full rounded-lg bg-deep-blue px-4 md:px-12.5 py-4 md:py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       {selectedImage ? (
         <div className="flex items-center gap-1">
-          <Text as="h4" textColor="blue-40" weight="normal">
+          <Text as="h4" textColor="gray-02" weight="normal">
             Selected:
           </Text>
           <Text as="h4" textColor="white" weight="normal">

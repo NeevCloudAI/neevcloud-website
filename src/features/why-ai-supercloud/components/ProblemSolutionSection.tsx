@@ -10,7 +10,7 @@ import ProblemSolutionColumn from "./ProblemSolutionColumn";
 const ProblemSolutionSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="problem-solution-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -28,7 +28,7 @@ const ProblemSolutionSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {PROBLEM_SOLUTION_SECTION.description}

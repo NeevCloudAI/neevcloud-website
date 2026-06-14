@@ -3,6 +3,7 @@ type HubSpotFormOptions = {
   formId: string;
   region: string;
   target: string;
+  cssClass?: string;
 };
 
 interface Window {

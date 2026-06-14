@@ -12,8 +12,8 @@ const NumberedDetailCard = ({
   return (
     <article
       className={cn(
-        "flex h-full flex-col rounded-md border border-gray-05 bg-white p-4 md:p-5",
-        className,
+        "flex h-full flex-col rounded-md border border-black/10 bg-white p-4 md:p-5",
+        className
       )}
     >
       <div className="flex items-start justify-between gap-4">
@@ -36,7 +36,7 @@ const NumberedDetailCard = ({
           {number}
         </Text>
       </div>
-      <Text as="h6" textColor="gray-66" className="mt-5 md:mt-10">
+      <Text as="h6" textColor="black/60" className="mt-5 md:mt-10">
         {description}
       </Text>
     </article>

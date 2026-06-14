@@ -1,9 +1,8 @@
 import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import type { GpuWhyChooseSectionProps } from "@/shared/types/gpu-why-choose-section.types";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import Image from "next/image";
-import LinkComponent from "../ui-lib/link";
 
 const GpuWhyChooseSection = ({
   titlePrefix,
@@ -49,7 +48,7 @@ const GpuWhyChooseSection = ({
                   <Text as="span" textColor="primary" className="mt-0.5">
                     •
                   </Text>
-                  <Text as="h6" textColor="gray-90">
+                  <Text as="h6" textColor="gray-05">
                     {feature.title} {feature.description}
                   </Text>
                 </li>

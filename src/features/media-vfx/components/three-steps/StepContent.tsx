@@ -11,18 +11,14 @@ const StepContent = ({ step }: StepContentProps) => {
       <Text
         as="h1"
         weight="semibold"
-        textColor="gray-60"
+        textColor="gray-01"
         className="text-[3rem] md:text-[5rem]"
         aria-hidden="true"
       >
         {step.number}
       </Text>
 
-      <Text
-        as="h3"
-        weight="semibold"
-        className="mt-4 md:mt-8 text-[20px] md:text-[30px]"
-      >
+      <Text as="h3" weight="semibold" className="mt-4 md:mt-8 md:text-30px">
         {step.heading}
       </Text>
 

@@ -6,7 +6,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 const PaySectionTerminal = () => {
   return (
     <div
-      className="bg-white-5 rounded-xl w-full shadow-sm font-mono border border-white-10 backdrop-blur-md"
+      className="bg-white/6 rounded-xl w-full shadow-sm font-mono border border-white/12 backdrop-blur-md"
       aria-label="Model API pricing terminal preview"
     >
       <PaySectionTerminalHeader />
@@ -16,27 +16,27 @@ const PaySectionTerminal = () => {
           {`> model api list --pricing --currency=INR`}
         </Text>
 
-        <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1">
+        <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1">
           {`// fetched 4 models per-requests billing all amounts in ₹`}
         </Text>
 
         <div className="grid grid-cols-3 items-center gap-2 mt-7.5">
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="left">
+          <Text as="h6" fontFamily="spaceMono" textColor="gray-04" align="left">
             category
           </Text>
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75" align="left">
+          <Text as="h6" fontFamily="spaceMono" textColor="gray-04" align="left">
             Price / request
           </Text>
           <Text
             as="h6"
             fontFamily="spaceMono"
-            textColor="gray-75"
+            textColor="gray-04"
             align="right"
           >
             Pricing
           </Text>
         </div>
-        <Divider orientation="horizontal" className="mt-4 bg-black-5" />
+        <Divider orientation="horizontal" className="mt-4 bg-black/8" />
 
         {PAY_SECTION_PRICING_ROWS.map((row) => (
           <PaySectionPricingRow key={row.category} row={row} />
@@ -44,7 +44,7 @@ const PaySectionTerminal = () => {
 
         <Text
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="mt-7.5"
           as="h6"
         >
@@ -61,7 +61,7 @@ const PaySectionTerminal = () => {
         </Text>
         <Text
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="mt-1"
           as="h6"
         >

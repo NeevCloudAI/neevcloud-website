@@ -6,7 +6,7 @@ import { WORKPLACE_ITEMS } from "../data/workplace-section.data";
 const WorkplaceSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="life-at-neevcloud-workplace-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -38,7 +38,7 @@ const WorkplaceSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           From focused work zones to collaborative spaces, NeevCloud thrives on

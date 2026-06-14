@@ -15,13 +15,13 @@ const PurposeFeatureItem = ({
       {showDivider ? (
         <Divider
           orientation="vertical"
-          className="absolute left-0 top-0 hidden h-full bg-gray-60 md:block"
+          className="absolute left-0 top-0 hidden h-full bg-gray-01 md:block"
         />
       ) : null}
       {showDivider ? (
         <Divider
           orientation="horizontal"
-          className="absolute top-0 left-4 right-4 bg-gray-60 md:hidden"
+          className="absolute top-0 left-4 right-4 bg-gray-01 md:hidden"
         />
       ) : null}
       <Text as="small" textColor="primary">
@@ -30,7 +30,7 @@ const PurposeFeatureItem = ({
       <Text as="h4" weight="semibold">
         {feature.title}
       </Text>
-      <Text as="h6" textColor="gray-85">
+      <Text as="h6" textColor="gray-03">
         {feature.description}
       </Text>
     </div>

@@ -50,23 +50,23 @@ const GpuCostCalculatorPresetCards = ({
               className={cn(
                 "flex h-full w-full flex-col rounded-lg border bg-white p-4 text-left transition-colors",
                 isActive
-                  ? "border-primary bg-primary-5"
-                  : "border-gray-60 hover:border-primary-50",
+                  ? "border-primary bg-cloud-gray"
+                  : "border-gray-01 hover:border-primary"
               )}
             >
-              <Text as="small" textColor="gray-85" weight="semibold">
+              <Text as="small" textColor="gray-03" weight="semibold">
                 {preset.title}
               </Text>
-              <Text as="small" textColor="gray-85" className="mt-0.5">
+              <Text as="small" textColor="gray-03" className="mt-0.5">
                 {preset.subtitle}
               </Text>
               <Text as="h5" weight="semibold" className="mt-3">
                 {formatCurrency(breakdown.monthlyCost)}
-                <Text as="span" variant="small" textColor="gray-85">
+                <Text as="span" variant="small" textColor="gray-03">
                   /mo
                 </Text>
               </Text>
-              <Text as="small" textColor="gray-85" className="mt-1">
+              <Text as="small" textColor="gray-03" className="mt-1">
                 {breakdown.summaryLabel}
               </Text>
             </button>

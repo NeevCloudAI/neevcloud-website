@@ -5,7 +5,7 @@ import { Text } from "@/shared/ui-lib";
 const ModelsSection = () => {
   return (
     <section
-      className="bg-gray-10 relative py-8 md:py-16 2xl:py-25"
+      className="bg-cloud-gray relative py-8 md:py-16 2xl:py-25"
       aria-labelledby="models-in-action-section-heading"
     >
       <Container className="relative flex flex-col items-center justify-center">
@@ -23,7 +23,7 @@ const ModelsSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           Understanding what a model can do is easier when you can actually use

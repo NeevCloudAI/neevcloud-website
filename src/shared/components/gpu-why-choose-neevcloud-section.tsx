@@ -2,8 +2,7 @@ import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import GpuWhyChooseNeevcloudCard from "@/shared/components/gpu-why-choose-neevcloud-card";
 import type { GpuWhyChooseNeevcloudSectionProps } from "@/shared/types/gpu-why-choose-neevcloud-section.types";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "../ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 
 const GpuWhyChooseNeevcloudSection = ({
   whyChoose,
@@ -65,7 +64,7 @@ const GpuWhyChooseNeevcloudSection = ({
         {roi.description ? (
           <Text
             as="h6"
-            textColor="gray-10"
+            textColor="cloud-gray"
             align="center"
             className="mt-2.5 max-w-3xl"
           >

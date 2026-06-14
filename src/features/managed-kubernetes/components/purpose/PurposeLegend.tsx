@@ -11,7 +11,7 @@ const PurposeLegend = () => {
             className={cn("h-5 w-5 shrink-0 rounded-sm", item.swatchClass)}
             aria-hidden="true"
           />
-          <Text textColor="gray-75">{item.label}</Text>
+          <Text textColor="gray-04">{item.label}</Text>
         </li>
       ))}
     </ul>

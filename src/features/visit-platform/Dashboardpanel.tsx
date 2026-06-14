@@ -8,7 +8,7 @@ const DashboardPanel = () => {
       <div className="px-4 md:px-7.5 mb-5 mt-2.5">
         <Divider orientation="horizontal" />
       </div>
-      <div className="grid grid-cols-3 gap-4 mb-4 px-7.5 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 px-4 md:px-7.5 ">
         {DASHBOARD_STATS.map((stat) => (
           <div
             key={stat.label}
@@ -17,7 +17,7 @@ const DashboardPanel = () => {
             <Text
               as="h6"
               className="font-medium uppercase tracking-widest"
-              textColor="gray-75"
+              textColor="gray-04"
             >
               {stat.label}
             </Text>

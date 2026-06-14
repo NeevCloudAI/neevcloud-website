@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
 import Image from "next/image";
-import LinkComponent from "@/shared/ui-lib/link";
 
 type MegaMenuSectionBlock = {
   heading: string;
@@ -69,14 +68,14 @@ export default function InferenceMegaMenu() {
               {column.sections.map((section, sectionIndex) => (
                 <div key={section.heading}>
                   <Text
-                    textColor="blue-40"
+                    textColor="gray-02"
                     className={sectionIndex > 0 ? "mt-4 md:mt-10" : undefined}
                   >
                     {section.heading}
                   </Text>
                   <Divider
                     orientation="horizontal"
-                    className="my-2.5 bg-gray-60"
+                    className="my-2.5 bg-gray-01"
                   />
                   {section.links.map((link) => (
                     <MegaMenuLinkRow
@@ -89,7 +88,7 @@ export default function InferenceMegaMenu() {
             </div>
           ))}
         </div>
-        <div className="flex justify-between min-w-0 w-full flex-col rounded-md bg-gray-10 p-5 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
+        <div className="flex justify-between min-w-0 w-full flex-col rounded-md bg-cloud-gray p-5 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
           <Text
             as="small"
             textColor="white"
@@ -100,7 +99,7 @@ export default function InferenceMegaMenu() {
           <Text as="h6" weight="semibold" className="mt-2.5">
             Hermes-4-405B is Live
           </Text>
-          <Text as="small" textColor="black-20">
+          <Text as="small" textColor="black/82">
             Try our highest-throughput open-weight model on serverless
             infrastructure.
           </Text>
@@ -117,7 +116,7 @@ export default function InferenceMegaMenu() {
             target="_blank"
             spacing="none"
             size="xs"
-            textColor="red-50"
+            textColor="pulse-red"
             className="mt-4"
           >
             Open Playground -&gt;
@@ -126,11 +125,11 @@ export default function InferenceMegaMenu() {
       </div>
       <Divider orientation="horizontal" />
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <Text textColor="blue-40">
+        <Text textColor="gray-02">
           All endpoints hosted in India · DPDP-aligned
         </Text>
         <Link href={EXTERNAL_LINKS.aiInferenceDedicatedModel} target="_blank">
-          <Text textColor="gray-75">View ALL Models -&gt;</Text>
+          <Text textColor="gray-04">View ALL Models -&gt;</Text>
         </Link>
       </div>
     </div>

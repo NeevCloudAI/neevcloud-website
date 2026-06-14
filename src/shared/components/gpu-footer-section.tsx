@@ -5,9 +5,8 @@ import {
   GPU_FOOTER_SECTION_COPYRIGHT,
 } from "@/shared/constants/gpu-footer-section.constants";
 import type { GpuFooterSectionContent } from "@/shared/types/gpu-footer-section.types";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import Image from "next/image";
-import LinkComponent from "../ui-lib/link";
 
 const GpuFooterSection = ({
   buttonCta,
@@ -41,7 +40,7 @@ const GpuFooterSection = ({
         <Text
           as="h6"
           align="center"
-          textColor="gray-60"
+          textColor="gray-01"
           className="mt-2.5 max-w-3xl"
         >
           {description}
@@ -64,7 +63,7 @@ const GpuFooterSection = ({
           className="mt-8 h-auto w-full max-w-xs object-contain md:mt-12.5"
         />
 
-        <Text align="center" textColor="gray-60" className="mt-6 md:mt-12.5">
+        <Text align="center" textColor="gray-01" className="mt-6 md:mt-12.5">
           {GPU_FOOTER_SECTION_COPYRIGHT}
         </Text>
       </Container>

@@ -18,15 +18,15 @@ const OSImageCard = memo(function OSImageCard({
   cards,
 }: OSImageCardProps) {
   return (
-    <div className="relative rounded-md p-6.25 flex flex-col overflow-hidden text-left bg-gray-10">
+    <div className="relative rounded-md p-4 md:p-6.25 flex flex-col overflow-hidden text-left bg-cloud-gray">
       <div className="flex items-center gap-5">
         <div
-          className={`w-14 h-14 p-2 ${image ? "bg-white" : "bg-gray-60"} rounded-md flex items-center justify-center`}
+          className={`w-14 h-14 p-2 ${image ? "bg-white" : "bg-gray-01"} rounded-md flex items-center justify-center`}
         >
           {image ? (
             <Image src={image} alt={title} width={35} height={35} />
           ) : (
-            <Text as="h4" textColor="gray-75">
+            <Text as="h4" textColor="gray-04">
               +
             </Text>
           )}
@@ -47,7 +47,7 @@ const OSImageCard = memo(function OSImageCard({
             className={
               card.isActive
                 ? "bg-primary text-white px-2.5 py-1 rounded-full"
-                : "bg-gray-60 px-2.5 py-1 rounded-full"
+                : "bg-gray-01 px-2.5 py-1 rounded-full"
             }
           >
             {card.name}

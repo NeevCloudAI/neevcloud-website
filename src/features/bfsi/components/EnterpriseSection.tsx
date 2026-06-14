@@ -24,7 +24,7 @@ const EnterpriseSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           NeevCloud infrastructure meets enterprise security and compliance

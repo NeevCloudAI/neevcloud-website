@@ -20,19 +20,19 @@ const StackSection = () => {
 
   const handleToggleItem = (itemId: string) => {
     setActiveItemId((currentItemId) =>
-      currentItemId === itemId ? "" : itemId,
+      currentItemId === itemId ? "" : itemId
     );
   };
 
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
-      panel.items.some((item) => item.id === activeItemId),
+      panel.items.some((item) => item.id === activeItemId)
     );
     return idx === -1 ? 0 : idx;
   })();
 
   return (
-    <section className="relative overflow-hidden bg-gray-10 py-[3vh] md:py-[10vh]">
+    <section className="relative overflow-hidden bg-cloud-gray py-[3vh] md:py-[10vh]">
       <Container className="relative flex flex-col">
         <header className="flex flex-col items-center text-center">
           <Text as="h2">
@@ -47,7 +47,7 @@ const StackSection = () => {
             </Text>
             . Silicon to endpoint.
           </Text>
-          <Text as="h6" textColor="black-5" className="mt-2.5">
+          <Text as="h6" textColor="black/82" className="mt-2.5">
             Deploy AI on infrastructure designed for scale, resilience, and
             speed.
           </Text>

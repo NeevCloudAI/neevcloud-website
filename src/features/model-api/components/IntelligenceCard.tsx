@@ -10,14 +10,10 @@ const IntelligenceCard = ({ card }: IntelligenceCardProps) => {
   return (
     <article className="w-full rounded-lg bg-white p-4 md:p-4 flex flex-col justify-between md:px-10 md:py-7.5">
       <div>
-        <Text as="h6" textColor="blue-40">
+        <Text as="h6" textColor="gray-02">
           {card.badgeLabel}
         </Text>
-        <Text
-          as="h3"
-          weight="semibold"
-          className="mt-2 md:mt-7.5 text-[24px] md:text-[30px]"
-        >
+        <Text as="h3" weight="semibold" className="mt-2 md:mt-7.5 md:text-30px">
           {card.title}
         </Text>
         <Text as="h6" className="mt-2.5">
@@ -28,7 +24,7 @@ const IntelligenceCard = ({ card }: IntelligenceCardProps) => {
         {card.highlights.map((highlight, index) => (
           <li
             key={`${card.id}-highlight-${index}`}
-            className="flex gap-4 rounded-lg bg-gray-20 px-3.75 py-2.5"
+            className="flex gap-4 rounded-lg bg-cloud-gray px-3.75 py-2.5"
           >
             <SquareCheck
               size={24}

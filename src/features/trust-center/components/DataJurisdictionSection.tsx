@@ -46,7 +46,7 @@ const DataJurisdictionSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="gray-10"
+          textColor="cloud-gray"
           className="mt-2.5 max-w-3xl"
         >
           {DATA_JURISDICTION_SECTION.description}
@@ -55,11 +55,10 @@ const DataJurisdictionSection = () => {
           {DATA_JURISDICTION_CARDS.map((feature) => (
             <li key={feature.title}>
               <FeatureCard
+                theme="transparent"
                 title={feature.title}
                 icon={feature.icon}
                 description={feature.description}
-                theme="transparent"
-                className="bg-gray-120 backdrop-blur-md"
               />
             </li>
           ))}

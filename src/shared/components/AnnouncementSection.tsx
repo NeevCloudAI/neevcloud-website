@@ -18,7 +18,7 @@ export default function AnnouncementSection() {
 
   return (
     <section
-      className="bg-tertiary py-2.5 text-center text-white"
+      className="bg-deep-blue py-2.5 text-center text-white"
       aria-label="Announcement"
     >
       <span

@@ -13,8 +13,8 @@ const ZeroEgressCallout = () => {
         <Text
           as="h3"
           weight="semibold"
-          textColor="tertiary"
-          className="text-[40px] bg-gray-10 rounded-md w-fit h-fit leading-none p-4 py-5"
+          textColor="deep-blue"
+          className="text-30px bg-cloud-gray rounded-md w-fit h-fit leading-none p-4 md:p-5"
           aria-hidden="true"
         >
           {ZERO_EGRESS_PRICE}

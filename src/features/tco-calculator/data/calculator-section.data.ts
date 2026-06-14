@@ -57,7 +57,7 @@ export const TCO_CALCULATOR_PROVIDERS: readonly TcoCalculatorProvider[] = [
     id: "aws",
     label: "AWS",
     costMultiplier: 1.4665,
-    barColorClass: "bg-gray-75",
+    barColorClass: "bg-gray-04",
   },
   {
     id: "google-cloud",
@@ -69,13 +69,13 @@ export const TCO_CALCULATOR_PROVIDERS: readonly TcoCalculatorProvider[] = [
     id: "azure",
     label: "Azure",
     costMultiplier: 1.5599,
-    barColorClass: "bg-red-50",
+    barColorClass: "bg-pulse-red",
   },
   {
     id: "lambda-labs",
     label: "Lambda Labs",
     costMultiplier: 1.1451,
-    barColorClass: "bg-orange-50",
+    barColorClass: "bg-yellow",
   },
 ] as const;
 
@@ -88,9 +88,9 @@ export const TCO_CALCULATOR_STORAGE_RATES = {
 } as const;
 
 export const TCO_CALCULATOR_GPU_TYPE_BY_ID = Object.fromEntries(
-  TCO_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType]),
+  TCO_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType])
 ) as Record<TcoCalculatorGpuType["id"], TcoCalculatorGpuType>;
 
 export const TCO_CALCULATOR_COMMITMENT_BY_ID = Object.fromEntries(
-  TCO_CALCULATOR_COMMITMENTS.map((commitment) => [commitment.id, commitment]),
+  TCO_CALCULATOR_COMMITMENTS.map((commitment) => [commitment.id, commitment])
 ) as Record<TcoCalculatorCommitment["id"], TcoCalculatorCommitment>;

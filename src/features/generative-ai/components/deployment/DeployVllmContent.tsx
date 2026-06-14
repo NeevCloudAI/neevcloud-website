@@ -2,7 +2,7 @@ import { Text } from "@/shared/ui-lib";
 
 const DeployVllmContent = () => (
   <>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1 leading-7">
       # Launch production LLM endpoint
     </Text>
     <Text
@@ -60,7 +60,7 @@ const DeployVllmContent = () => (
       className="leading-7"
     >
       &nbsp; --replicas
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         2
       </Text>
       \
@@ -72,18 +72,18 @@ const DeployVllmContent = () => (
       className="leading-7"
     >
       &nbsp; --autoscale-max
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         8
       </Text>
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Returns endpoint URL immediately
     </Text>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1 leading-7">
       # https://your-model.neevcloud.ai
     </Text>
   </>

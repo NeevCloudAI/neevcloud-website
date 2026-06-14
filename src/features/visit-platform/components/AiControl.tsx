@@ -14,7 +14,12 @@ const CompleteAISection = () => {
         aria-hidden="true"
       />
       <Container className="flex flex-col items-center justify-center">
-        <Text as="h2" id="experimentation-section-heading" textColor="white">
+        <Text
+          as="h2"
+          id="experimentation-section-heading"
+          textColor="white"
+          align="center"
+        >
           Complete
           <Text as="span" variant="h2" textColor="primary">
             AI infrastructure control
@@ -24,11 +29,10 @@ const CompleteAISection = () => {
           {COMPLETE_AI_CARDS.map((feature) => (
             <li key={feature.title}>
               <FeatureCard
+                theme="transparent"
                 title={feature.title}
                 icon={feature.icon}
                 description={feature.description}
-                theme="transparent"
-                className="bg-gray-120 backdrop-blur-md"
               />
             </li>
           ))}

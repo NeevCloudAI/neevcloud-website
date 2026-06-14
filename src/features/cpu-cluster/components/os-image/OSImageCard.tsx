@@ -28,8 +28,8 @@ const OSImageCard = memo(function OSImageCard({
   return (
     <div
       className={cn(
-        "relative rounded-xl p-8 flex flex-col text-left cursor-pointer",
-        isSelected ? "bg-primary text-white" : "bg-gray-10",
+        "relative rounded-xl p-4 md:p-8 flex flex-col text-left cursor-pointer",
+        isSelected ? "bg-primary text-white" : "bg-cloud-gray"
       )}
       onClick={() => onSelect(title)}
       onKeyDown={(event) => {
@@ -45,12 +45,18 @@ const OSImageCard = memo(function OSImageCard({
     >
       <div className="flex items-center gap-5">
         <div
-          className={`w-14 h-14 p-2 ${image ? "bg-white" : "bg-gray-60"} rounded-md flex items-center justify-center`}
+          className={`md:w-14 md:h-14 p-2 ${image ? "bg-white" : "bg-gray-01"} rounded-md flex items-center justify-center`}
         >
           {image ? (
-            <Image src={image} alt={title} width={35} height={35} />
+            <Image
+              src={image}
+              alt={title}
+              width={35}
+              height={35}
+              className="w-5 h-5 md:w-8.75 md:h-8.75"
+            />
           ) : (
-            <Text as="h4" textColor="gray-75">
+            <Text as="h4" textColor="gray-04">
               +
             </Text>
           )}
@@ -65,7 +71,7 @@ const OSImageCard = memo(function OSImageCard({
 
       <Divider
         orientation="horizontal"
-        className="my-2.5 bg-gray-60 rounded-md"
+        className="my-2.5 bg-gray-01 rounded-md"
       />
 
       <div className="flex items-center gap-2">
@@ -80,7 +86,7 @@ const OSImageCard = memo(function OSImageCard({
                   ? "bg-primary text-white px-2.5 py-1 rounded-full"
                   : isSelected
                     ? "bg-white/20 text-white px-2.5 py-1 rounded-full"
-                    : "bg-gray-60 px-2.5 py-1 rounded-full",
+                    : "bg-gray-01 px-2.5 py-1 rounded-full"
             )}
           >
             {card.name}

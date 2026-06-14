@@ -4,7 +4,7 @@ export type MetricCardData = {
   id: string;
   icon: LucideIcon;
   value: string;
-  valueColor: "primary" | "black" | "tertiary" | "secondary" | "red-50";
+  valueColor: "primary" | "black" | "deep-blue" | "pulse-red" | "deep-forest";
   unit: string;
   label: string;
 };

@@ -24,14 +24,14 @@ const ImageGenerationContent = () => (
       className="mt-4 md:mt-6 leading-7"
     >
       client = NeevCloud(api_key=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &apos;nc-...&apos;
       </Text>
       )
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Generate images
@@ -51,7 +51,12 @@ const ImageGenerationContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;model=
-      <Text as="span" variant="h6" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         &quot;flux-1-dev&quot;
       </Text>
       ,
@@ -63,7 +68,12 @@ const ImageGenerationContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;prompt=
-      <Text as="span" variant="h6" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         &quot;A futuristic city with flying cars at sunset&quot;
       </Text>
       ,
@@ -87,7 +97,7 @@ const ImageGenerationContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;size=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;1024x1024&quot;
       </Text>
     </Text>
@@ -101,7 +111,7 @@ const ImageGenerationContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Get image URLs

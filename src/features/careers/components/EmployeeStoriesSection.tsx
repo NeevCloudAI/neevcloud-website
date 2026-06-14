@@ -9,7 +9,7 @@ import EmployeeStoriesCarouselClient from "./EmployeeStoriesCarouselClient";
 const EmployeeStoriesSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="employee-stories-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -27,7 +27,7 @@ const EmployeeStoriesSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           {EMPLOYEE_STORIES_SECTION.description}

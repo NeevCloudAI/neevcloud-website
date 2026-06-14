@@ -2,8 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Search } from "@/shared/icons/lucide-icon-map";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import type { DevelopersDocumentationSearchClientProps } from "../../types/documentation-section.types";
 import Image from "next/image";
 
@@ -27,7 +26,7 @@ const DevelopersDocumentationSearchClient = ({
 
     return categories.map((category) => {
       const visibleTags = category.tags.filter((tag) =>
-        tag.label.toLowerCase().includes(normalizedQuery),
+        tag.label.toLowerCase().includes(normalizedQuery)
       );
 
       return {
@@ -45,7 +44,7 @@ const DevelopersDocumentationSearchClient = ({
       </label>
       <div className="relative max-w-3xl mx-auto">
         <Search
-          className="pointer-events-none absolute top-1/2 left-4 size-5.5 -translate-y-1/2 text-gray-85"
+          className="pointer-events-none absolute top-1/2 left-4 size-5.5 -translate-y-1/2 text-gray-03"
           aria-hidden="true"
         />
         <input
@@ -54,7 +53,7 @@ const DevelopersDocumentationSearchClient = ({
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder={searchPlaceholder}
-          className="w-full rounded-lg bg-gray-10 py-3.75 pr-4 pl-12 text-md text-black outline-none focus:border-primary max-w-3xl"
+          className="w-full rounded-lg bg-cloud-gray py-3.75 pr-4 pl-12 text-md text-black outline-none focus:border-primary max-w-3xl"
         />
       </div>
 
@@ -66,7 +65,7 @@ const DevelopersDocumentationSearchClient = ({
         {filteredCategories.map((category) => (
           <li
             key={category.id}
-            className="grid grid-cols-[20%_80%] gap-3 border-b border-gray-60 py-5 last:border-b-0"
+            className="grid grid-cols-1 md:grid-cols-[20%_80%] gap-3 border-b border-gray-01 py-5 last:border-b-0"
           >
             <div className="flex items-center gap-2.5">
               <Image src={category.iconSrc} alt="" width={30} height={30} />
@@ -85,7 +84,7 @@ const DevelopersDocumentationSearchClient = ({
                       variant="ghost"
                       spacing="xs"
                       weight="medium"
-                      className="rounded-md text-blue-40 bg-primary-20 px-3 py-1.5"
+                      className="rounded-md text-gray-02 bg-cloud-gray px-3 py-1.5"
                     >
                       {tag.label}
                     </LinkComponent>
@@ -93,7 +92,7 @@ const DevelopersDocumentationSearchClient = ({
                 ))}
               </ul>
             ) : (
-              <Text as="h6" textColor="gray-85">
+              <Text as="h6" textColor="gray-03">
                 {noMatchesLabel}
               </Text>
             )}

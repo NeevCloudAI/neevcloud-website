@@ -6,7 +6,7 @@ import { GPU_PRICING_SECTION_ITEMS } from "../data/gpu-pricing-section.data";
 const GpuAiSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="gpu-ai-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -25,7 +25,7 @@ const GpuAiSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           NeevCloud offers two purpose-built GPU compute modes: GPU AI Service

@@ -17,12 +17,12 @@ const GpuTechnicalSpecsTable = ({ rows }: GpuTechnicalSpecsTableProps) => {
         </caption>
         <thead>
           <tr>
-            <th className="p-5 border-b border-gray-60 text-left">
+            <th className="p-5 border-b border-gray-01 text-left">
               <Text as="h4" weight="semibold" textColor="black">
                 {GPU_TECHNICAL_SPECS_TABLE_HEADERS.feature}
               </Text>
             </th>
-            <th className="border-b border-gray-60 bg-primary p-5 text-center">
+            <th className="border-b border-gray-01 bg-primary p-5 text-center">
               <Text as="h4" weight="semibold" textColor="white">
                 {GPU_TECHNICAL_SPECS_TABLE_HEADERS.specification}
               </Text>
@@ -34,13 +34,13 @@ const GpuTechnicalSpecsTable = ({ rows }: GpuTechnicalSpecsTableProps) => {
             <tr
               key={row.id}
               className={cn(
-                "border-b border-gray-60 last:border-b-0",
-                index % 2 === 1 && "bg-primary-5",
+                "border-b border-gray-01 last:border-b-0",
+                index % 2 === 1 && "bg-cloud-gray"
               )}
             >
               <th
                 scope="row"
-                className="text-left px-5 py-2.5 border-r border-gray-60"
+                className="text-left px-5 py-2.5 border-r border-gray-01"
               >
                 <Text as="h6" weight="normal" textColor="black">
                   {row.feature}

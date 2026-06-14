@@ -3,7 +3,7 @@ import { STEP_TWO_TERMINAL_PATH } from "../../data/three-steps-section.data";
 
 const StepTwoPanel = () => {
   return (
-    <div className="bg-black rounded-md overflow-hidden w-full shadow-sm h-125">
+    <div className="bg-black rounded-md overflow-hidden w-full shadow-sm md:h-125">
       <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
         <span
           className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"
@@ -17,20 +17,20 @@ const StepTwoPanel = () => {
           className="w-2.5 h-2.5 rounded-full bg-[#28c840]"
           aria-hidden="true"
         />
-        <Text as="small" align="right" textColor="gray-75" className="ml-auto">
+        <Text as="small" align="right" textColor="gray-04" className="ml-auto">
           {STEP_TWO_TERMINAL_PATH}
         </Text>
       </div>
 
-      <div className="px-2 md:px-8.75 py-2 md:py-11.5 font-mono">
-        <Text fontFamily="spaceMono" textColor="gray-75">
+      <div className="p-4 md:px-8.75 md:py-11.5 font-mono">
+        <Text fontFamily="spaceMono" textColor="gray-04">
           # Two-line integration
         </Text>
         <pre>
           <code>
             <Text
               fontFamily="spaceMono"
-              textColor="red-50"
+              textColor="pulse-red"
               className="leading-7"
             >
               from
@@ -66,7 +66,7 @@ const StepTwoPanel = () => {
               client =
               <Text
                 as="span"
-                textColor="green-10"
+                textColor="deep-forest"
                 variant="p"
                 className="mx-0 ml-1 md:mx-0 md:ml-1.5 leading-7"
               >
@@ -84,7 +84,7 @@ const StepTwoPanel = () => {
               {`base_url="`}
               <Text
                 as="span"
-                textColor="blue-40"
+                textColor="gray-02"
                 variant="p"
                 className="mx-0 md:mx-0"
               >
@@ -102,7 +102,7 @@ const StepTwoPanel = () => {
               {`response = client.chat.completion.`}
               <Text
                 as="span"
-                textColor="green-10"
+                textColor="deep-forest"
                 variant="p"
                 className="mx-0 md:mx-0"
               >
@@ -201,7 +201,7 @@ const StepTwoPanel = () => {
             </Text>
             <Text
               as="span"
-              textColor="green-10"
+              textColor="deep-forest"
               variant="p"
               className="mx-0 md:mx-0 leading-7"
             >
@@ -218,7 +218,7 @@ const StepTwoPanel = () => {
             </Text>
             <Text
               fontFamily="spaceMono"
-              textColor="gray-75"
+              textColor="gray-04"
               className="leading-7"
             >
               # ✓ 200 OK · 412ms · 30 tokens # Your existing OpenAI code just

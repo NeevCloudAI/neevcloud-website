@@ -37,6 +37,18 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
           },
         ],
       },
+      {
+        heading: "ORCHESTRATION",
+        links: [
+          {
+            iconSrc: "/icons/managed-k8s.svg",
+            iconAlt: "Managed Kubernetes",
+            title: "Managed Kubernetes",
+            description: "NKE · GPU-aware scheduling",
+            href: "/managed-kubernetes",
+          },
+        ],
+      },
     ],
   },
   {
@@ -51,17 +63,12 @@ const PRODUCT_MEGA_MENU_COLUMNS: MegaMenuColumn[] = [
             href: "/nvme",
             description: "Sub-Millisecond Latency",
           },
-        ],
-      },
-      {
-        heading: "ORCHESTRATION",
-        links: [
           {
-            iconSrc: "/icons/managed-k8s.svg",
-            iconAlt: "Managed Kubernetes",
-            title: "Managed Kubernetes",
-            description: "NKE · GPU-aware scheduling",
-            href: "/managed-kubernetes",
+            iconSrc: "/icons/object-storage.svg",
+            iconAlt: "Object storage",
+            title: "Object Storage",
+            href: "/object-storage",
+            description: "S3-Compatible Storage",
           },
         ],
       },
@@ -80,7 +87,7 @@ const PRODUCT_MEGA_MENU_GPU_LINKS = [
 
 const gpuLinkClassName = cn(
   "outline-offset-2 transition-colors hover:text-primary",
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary",
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
 );
 
 export default function ProductMegaMenu() {
@@ -95,14 +102,14 @@ export default function ProductMegaMenu() {
             {column.sections.map((section, sectionIndex) => (
               <div key={section.heading}>
                 <Text
-                  textColor="blue-40"
+                  textColor="gray-02"
                   className={sectionIndex > 0 ? "mt-4 md:mt-8" : undefined}
                 >
                   {section.heading}
                 </Text>
                 <Divider
                   orientation="horizontal"
-                  className="my-2.5 bg-gray-60"
+                  className="my-2.5 bg-gray-01"
                 />
                 {section.links.map((link) => (
                   <MegaMenuLinkRow
@@ -122,19 +129,19 @@ export default function ProductMegaMenu() {
             {PRODUCT_MEGA_MENU_GPU_LINKS.map((link, index) => (
               <li key={link.label} className="flex items-center">
                 {index > 0 ? (
-                  <Text textColor="blue-40" aria-hidden="true">
+                  <Text textColor="gray-02" aria-hidden="true">
                     &nbsp; · &nbsp;
                   </Text>
                 ) : null}
                 <Link href={link.href} className={gpuLinkClassName}>
-                  <Text textColor="blue-40">{link.label}</Text>
+                  <Text textColor="gray-02">{link.label}</Text>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
         <Link href={EXTERNAL_LINKS.aiSupercloudConsole} target="_blank">
-          <Text textColor="gray-75">Compare GPUs -&gt;</Text>
+          <Text textColor="gray-04">Compare GPUs -&gt;</Text>
         </Link>
       </div>
     </div>

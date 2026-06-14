@@ -47,7 +47,7 @@ const StatePersistenceContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;model=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;kimi-k2-instruct&quot;
       </Text>
       ,
@@ -67,7 +67,7 @@ const StatePersistenceContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;url=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;redis://neevcloud-state:6379&quot;
       </Text>
       ,
@@ -79,7 +79,7 @@ const StatePersistenceContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;namespace=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;research-agent&quot;
       </Text>
     </Text>
@@ -101,7 +101,7 @@ const StatePersistenceContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Resume long-running workflow after restart
@@ -113,7 +113,7 @@ const StatePersistenceContent = () => (
       className="leading-7"
     >
       state = agent.load_checkpoint(session_id=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;sess_abc123&quot;
       </Text>
       )
@@ -125,7 +125,7 @@ const StatePersistenceContent = () => (
       className="leading-7"
     >
       response = agent.run(
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;Continue analysis&quot;
       </Text>
       , state=state)

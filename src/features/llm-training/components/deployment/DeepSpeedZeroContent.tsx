@@ -12,7 +12,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -26,7 +26,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -40,7 +40,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -51,12 +51,17 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&quot;type&quot;:
-      <Text as="span" variant="p" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="p"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         &quot;AdamW&quot;
       </Text>
       <Text as="span" variant="p" textColor="white" className="ml-0 md:ml-0">
@@ -65,7 +70,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -73,24 +78,14 @@ const DeepSpeedZeroContent = () => (
       <Text as="span" variant="p" textColor="white">
         {" { "}
       </Text>
-      <Text
-        as="span"
-        variant="p"
-        textColor="orange-50"
-        className="mr-0 md:mr-0"
-      >
+      <Text as="span" variant="p" textColor="yellow" className="mr-0 md:mr-0">
         &quot;lr&quot;
       </Text>
       :
       <Text as="span" variant="p" textColor="primary" className="mr-0 md:mr-0">
         2e-5,
       </Text>
-      <Text
-        as="span"
-        variant="p"
-        textColor="orange-50"
-        className="mr-0 md:mr-0"
-      >
+      <Text as="span" variant="p" textColor="yellow" className="mr-0 md:mr-0">
         &quot;weight_decay&quot;
       </Text>
       :
@@ -111,7 +106,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -122,7 +117,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -136,7 +131,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -147,12 +142,17 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;device&quot;:
-      <Text as="span" variant="p" textColor="red-50" className="mr-0 md:mr-0">
+      <Text
+        as="span"
+        variant="p"
+        textColor="pulse-red"
+        className="mr-0 md:mr-0"
+      >
         &quot;cpu&quot;
       </Text>
       <Text as="span" variant="p" textColor="white" className="ml-0 md:ml-0">
@@ -174,7 +174,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -188,7 +188,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -202,7 +202,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -221,7 +221,7 @@ const DeepSpeedZeroContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="orange-50"
+      textColor="yellow"
       as="h6"
       className="leading-7"
     >
@@ -229,7 +229,7 @@ const DeepSpeedZeroContent = () => (
       <Text as="span" variant="p" textColor="white">
         {"{"}
       </Text>
-      <Text as="span" variant="p" textColor="orange-50">
+      <Text as="span" variant="p" textColor="yellow">
         &quot;enabled&quot;:
       </Text>
       <Text as="span" variant="p" textColor="primary" className="mx-0 md:mx-0">
@@ -238,7 +238,7 @@ const DeepSpeedZeroContent = () => (
       <Text as="span" variant="p" textColor="white" className="ml-0 md:ml-0">
         ,
       </Text>
-      <Text as="span" variant="p" textColor="orange-50">
+      <Text as="span" variant="p" textColor="yellow">
         &quot;loss_scale&quot;:
       </Text>
       <Text as="span" variant="p" textColor="primary">

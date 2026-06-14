@@ -17,7 +17,7 @@ const GpuResourceCodeBlock = () => {
           <Text
             as="span"
             variant="p"
-            textColor="gray-75"
+            textColor="gray-04"
             fontFamily="spaceMono"
           >
             # Just works

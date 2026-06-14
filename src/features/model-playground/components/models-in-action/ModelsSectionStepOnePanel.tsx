@@ -9,7 +9,7 @@ import {
 
 const ModelsSectionStepOnePanel = () => {
   return (
-    <div className="relative bg-white rounded-xl w-full shadow-sm p-4 md:p-6.25 h-140">
+    <div className="relative bg-white rounded-xl w-full shadow-sm p-4 md:p-6.25 md:h-140">
       <ModelsSectionPanelLogo />
       <div className="flex items-center justify-between">
         <Text as="h5" weight="semibold">
@@ -19,7 +19,7 @@ const ModelsSectionStepOnePanel = () => {
       </div>
       <Text
         fontFamily="spaceMono"
-        textColor="gray-90"
+        textColor="gray-05"
         as="h6"
         className="mt-5.5"
       >
@@ -31,13 +31,13 @@ const ModelsSectionStepOnePanel = () => {
           <StorageComparisonBar
             key={metric.id}
             metric={metric}
-            backgroundColor="bg-gray-10"
+            backgroundColor="bg-cloud-gray"
           />
         ))}
       </div>
       <Text
         fontFamily="spaceMono"
-        textColor="gray-90"
+        textColor="gray-05"
         as="h6"
         className="mt-5.5"
       >
@@ -49,18 +49,18 @@ const ModelsSectionStepOnePanel = () => {
           <StorageComparisonBar
             key={metric.id}
             metric={metric}
-            backgroundColor="bg-gray-10"
+            backgroundColor="bg-cloud-gray"
           />
         ))}
       </div>
-      <div className="border border-primary-45 bg-primary-40/60 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-4 md:mt-7.5 space-y-2 z-1 relative">
+      <div className="border border-primary/18 bg-primary/10 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-4 md:mt-7.5 space-y-2 z-1 relative">
         <Text
           fontFamily="spaceMono"
-          textColor="gray-90"
+          textColor="gray-05"
         >{`// llama-3.1-70b wins for cost · kimi-k2 wins for quality`}</Text>
         <Text
           fontFamily="spaceMono"
-          textColor="gray-90"
+          textColor="gray-05"
         >{`// choose based on your use case`}</Text>
       </div>
     </div>

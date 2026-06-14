@@ -22,11 +22,11 @@ const StepOnePanel = () => {
 
       <div className="p-6.25 pb-5">
         <div
-          className="flex items-center gap-2.5 border border-gray-60 rounded-md px-3.75 py-2.25 mb-3"
+          className="flex items-center gap-2.5 border border-gray-01 rounded-md px-3.75 py-2.25 mb-3"
           role="search"
         >
-          <Search size={16} className="text-gray-85" aria-hidden="true" />
-          <span className="text-gray-85 text-sm">Search 20+ models...</span>
+          <Search size={16} className="text-gray-03" aria-hidden="true" />
+          <span className="text-gray-03 text-sm">Search 20+ models...</span>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ const StepOnePanel = () => {
           <Text
             as="small"
             key={f}
-            className={`px-2.5 py-0.75 rounded-full cursor-pointer font-medium ${f === "All" ? "bg-black text-white" : "bg-gray-60 text-gray-75"}`}
+            className={`px-2.5 py-0.75 rounded-full cursor-pointer font-medium ${f === "All" ? "bg-black text-white" : "bg-gray-01 text-gray-04"}`}
           >
             {f}
           </Text>
@@ -49,18 +49,18 @@ const StepOnePanel = () => {
             className={`flex items-center justify-between px-6.25 py-3.75 ${
               i === 0
                 ? "border-l-3 border-l-primary border-b border-b-gray-200 [background:linear-gradient(to_right,#e6f7f5,transparent)]"
-                : "border-b border-b-gray-60"
+                : "border-b border-b-gray-01"
             }`}
           >
             <div>
               <Text as="h4" weight="semibold">
                 {m.name}
               </Text>
-              <Text textColor="black-5" as="h6">
+              <Text textColor="black/82" as="h6">
                 {m.meta}
               </Text>
             </div>
-            <Text as="h6" weight="semibold" textColor="primary-70">
+            <Text as="h6" weight="semibold" textColor="primary-90">
               {m.price}
             </Text>
           </div>

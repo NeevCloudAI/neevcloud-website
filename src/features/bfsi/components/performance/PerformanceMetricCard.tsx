@@ -11,8 +11,8 @@ const PerformanceMetricCard = ({
   return (
     <article
       className={cn(
-        "rounded-md bg-white-5 p-4 backdrop-blur-md md:px-7.5 md:py-10",
-        className,
+        "rounded-md bg-white/6 p-4 backdrop-blur-md md:px-7.5 md:py-10",
+        className
       )}
     >
       <Text as="h1" textColor="primary">
@@ -26,7 +26,7 @@ const PerformanceMetricCard = ({
       <Text as="h3" textColor="white" className="mt-2.5">
         {title}
       </Text>
-      <Text as="h6" textColor="gray-75">
+      <Text as="h6" textColor="gray-04">
         {description}
       </Text>
     </article>

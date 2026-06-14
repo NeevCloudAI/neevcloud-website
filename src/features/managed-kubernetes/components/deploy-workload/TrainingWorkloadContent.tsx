@@ -104,7 +104,7 @@ const TrainingWorkloadContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image:
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         neevcloud.com/registry/pytorch:2.4
       </Text>
     </Text>
@@ -118,19 +118,34 @@ const TrainingWorkloadContent = () => (
       <Text as="span" variant="h6" textColor="white" className="mx-0 md:mx-0">
         [
       </Text>
-      <Text as="span" variant="h6" textColor="red-50" className="mx-0 md:mx-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mx-0 md:mx-0"
+      >
         &quot;torchrun&quot;
       </Text>
       <Text as="span" variant="h6" textColor="white" className="mx-0 md:mx-0">
         ,{" "}
       </Text>
-      <Text as="span" variant="h6" textColor="red-50" className="mx-0 md:mx-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mx-0 md:mx-0"
+      >
         &quot;--nproc_per_node=8&quot;
       </Text>
       <Text as="span" variant="h6" textColor="white" className="mx-0 md:mx-0">
         ,{" "}
       </Text>
-      <Text as="span" variant="h6" textColor="red-50" className="mx-0 md:mx-0">
+      <Text
+        as="span"
+        variant="h6"
+        textColor="pulse-red"
+        className="mx-0 md:mx-0"
+      >
         &quot;train.py&quot;
       </Text>
       <Text as="span" variant="h6" textColor="white" className="mx-0 md:mx-0">

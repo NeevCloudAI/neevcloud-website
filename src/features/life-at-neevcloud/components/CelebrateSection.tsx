@@ -29,7 +29,7 @@ const CelebrateSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {CELEBRATE_SECTION.description}

@@ -5,7 +5,7 @@ const GenerativeAiPerformanceCard = ({
   card,
 }: GenerativeAiPerformanceCardProps) => {
   return (
-    <article className="rounded-md border border-white-10 bg-white-5 p-4 backdrop-blur-md md:p-7.5">
+    <article className="rounded-md border border-white/12 bg-white/6 p-4 backdrop-blur-md md:p-7.5">
       <Text as="h3" textColor="white" weight="semibold">
         {card.title}
       </Text>
@@ -16,9 +16,9 @@ const GenerativeAiPerformanceCard = ({
         {card.metrics.map((metric) => (
           <li
             key={metric.id}
-            className="flex items-center justify-between gap-4 border-b border-white-10 py-2.5 last:border-b-0"
+            className="flex items-center justify-between gap-4 border-b border-white/12 py-2.5 last:border-b-0"
           >
-            <Text as="h6" textColor="gray-75">
+            <Text as="h6" textColor="gray-04">
               {metric.label}
             </Text>
             <Text

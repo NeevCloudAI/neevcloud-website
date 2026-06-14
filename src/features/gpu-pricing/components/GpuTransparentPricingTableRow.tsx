@@ -6,7 +6,7 @@ const GpuTransparentPricingTableRow = ({
   row,
 }: GpuTransparentPricingTableRowProps) => {
   return (
-    <tr className="border-b border-black-29">
+    <tr className="border-b border-white/12">
       <td className={GPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="primary">
           {row.gpuType}

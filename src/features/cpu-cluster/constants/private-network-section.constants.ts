@@ -15,5 +15,5 @@ export const ZERO_EGRESS_DESCRIPTION_LINES = [
 
 export const PILL_VARIANT_STYLES: Record<ComputePillVariant, string> = {
   cpu: "bg-primary text-white",
-  gpu: "bg-red-50 text-white",
+  gpu: "bg-pulse-red text-white",
 };

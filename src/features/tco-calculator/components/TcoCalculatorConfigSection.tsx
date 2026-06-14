@@ -6,9 +6,9 @@ import TcoCalculatorConfigClient from "./calculator/TcoCalculatorConfigClient";
 const TcoCalculatorConfigSection = () => {
   return (
     <section
-      id="tco-calculator-tool"
-      className="relative bg-black py-8 md:py-16 2xl:py-25"
       aria-labelledby="tco-calculator-config-section-heading"
+      className="relative bg-black py-8 md:py-16 2xl:py-25"
+      id="tco-calculator-tool"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-full md:w-[30%] h-[60%] top-20 right-[-5%] opacity-40 md:opacity-100"
@@ -29,7 +29,7 @@ const TcoCalculatorConfigSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="mt-2.5 max-w-3xl"
         >

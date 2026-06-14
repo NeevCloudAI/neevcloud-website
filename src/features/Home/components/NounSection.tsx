@@ -1,7 +1,6 @@
 import Container from "@/shared/components/container";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import { Divider, Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import Image from "next/image";
 
 const NounSection = () => {
@@ -25,7 +24,7 @@ const NounSection = () => {
           <Text as="h4" textColor="primary" weight="semibold">
             NOUN
           </Text>
-          <Divider className="bg-gray-75 h-6 mx-2" />
+          <Divider className="bg-gray-04 h-6 mx-2" />
           <Text as="h3" weight="semibold" textColor="white">
             Connecting People, Places, and Things.
           </Text>
@@ -47,7 +46,11 @@ const NounSection = () => {
             </Text>
           </div>
 
-          <Text as="h6" textColor="gray-10" className="mt-2 md:mt-5 max-w-2xl">
+          <Text
+            as="h6"
+            textColor="cloud-gray"
+            className="mt-2 md:mt-5 max-w-2xl"
+          >
             Project Noun is NeevCloud&apos;s leap beyond traditional
             infrastructure, removing the limits of geography and latency to
             redefine how AI is deployed and scaled. Built as a next-gen layer,

@@ -1,5 +1,4 @@
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import type { DevelopersChangelogCardItem } from "../../types/community-section.types";
 
 type DevelopersChangelogCardProps = {
@@ -8,7 +7,7 @@ type DevelopersChangelogCardProps = {
 
 const DevelopersChangelogCard = ({ card }: DevelopersChangelogCardProps) => {
   return (
-    <article className="flex flex-col rounded-lg border border-white-10 bg-white-5 p-5 backdrop-blur-md md:p-7.5">
+    <article className="flex flex-col rounded-lg border border-white/12 bg-white/6 p-5 backdrop-blur-md md:p-7.5">
       <Text as="h6" textColor="white" weight="regular">
         {card.label}
       </Text>

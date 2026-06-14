@@ -9,7 +9,7 @@ type RightModelPricingTableRowProps = {
 
 const RightModelPricingTableRow = ({ row }: RightModelPricingTableRowProps) => {
   return (
-    <tr className="border-b border-black-7">
+    <tr className="border-b border-white/6">
       <td
         className={`${RIGHT_MODEL_TABLE_CELL_CLASS} min-w-44 whitespace-normal`}
       >
@@ -21,17 +21,17 @@ const RightModelPricingTableRow = ({ row }: RightModelPricingTableRowProps) => {
         </Text>
       </td>
       <td className={RIGHT_MODEL_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-04">
           {row.provider}
         </Text>
       </td>
       <td className={RIGHT_MODEL_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-04">
           {row.size}
         </Text>
       </td>
       <td className={RIGHT_MODEL_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+        <Text as="h6" fontFamily="spaceMono" textColor="gray-04">
           {row.context}
         </Text>
       </td>

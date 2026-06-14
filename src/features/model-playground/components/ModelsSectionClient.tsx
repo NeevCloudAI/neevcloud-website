@@ -9,7 +9,7 @@ import ModelsSectionStepContent from "./models-in-action/ModelsSectionStepConten
 
 const ModelsSectionClient = () => {
   const [activeStep, setActiveStep] = useState(
-    DEFAULT_MODELS_SECTION_STEP_INDEX,
+    DEFAULT_MODELS_SECTION_STEP_INDEX
   );
   const step = MODELS_SECTION_STEPS[activeStep];
   const ActivePanel = MODELS_SECTION_STEP_PANELS[activeStep];
@@ -38,7 +38,7 @@ const ModelsSectionClient = () => {
               >
                 <Text
                   as="h6"
-                  textColor={activeStep === i ? "gray-10" : "gray-90"}
+                  textColor={activeStep === i ? "cloud-gray" : "gray-05"}
                 >
                   {s.label}
                 </Text>
@@ -53,7 +53,7 @@ const ModelsSectionClient = () => {
               {i < MODELS_SECTION_STEPS.length - 1 && (
                 <Divider
                   orientation="horizontal"
-                  className="hidden shrink-0 bg-blue-40 w-5 md:block"
+                  className="hidden shrink-0 bg-gray-02 w-5 md:block"
                   aria-hidden="true"
                 />
               )}
@@ -62,7 +62,7 @@ const ModelsSectionClient = () => {
         </div>
       </div>
 
-      <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 items-center">
         <ModelsSectionStepContent step={step} />
         <div
           id={`models-in-action-panel-${activeStep}`}

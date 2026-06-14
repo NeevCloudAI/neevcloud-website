@@ -13,19 +13,26 @@ const EnterpriseSecurityCard = ({
   return (
     <article
       className={cn(
-        "flex w-full flex-col rounded-md bg-gray-10 p-4 md:p-10",
-        className,
+        "flex w-full flex-col rounded-md bg-cloud-gray p-4 md:p-10",
+        className
       )}
     >
       <div className="w-fit rounded-md bg-white p-3.75">
-        <Image
-          src={category.icon}
-          alt={title}
-          width={iconSize}
-          height={iconSize}
-        />
+        {category.icon ? (
+          <Image
+            src={category.icon}
+            alt={title}
+            width={iconSize}
+            height={iconSize}
+          />
+        ) : category.lucideIcon ? (
+          <category.lucideIcon
+            className="text-primary size-7.5"
+            strokeWidth={1}
+          />
+        ) : null}
       </div>
-      <Text as="h3" weight="semibold" className="pt-5 text-2xl md:text-3xl">
+      <Text as="h3" weight="semibold" className="pt-5 md:text-30px">
         {title}
       </Text>
       <Text as="h6" className="mt-2.5">

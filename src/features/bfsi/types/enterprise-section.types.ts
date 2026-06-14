@@ -1,3 +1,5 @@
+import { type LucideIcon } from "@/shared/icons/lucide-icon-map";
+
 export type EnterpriseSecurityFeature = {
   id: number;
   title: string;
@@ -5,7 +7,8 @@ export type EnterpriseSecurityFeature = {
 };
 
 export type EnterpriseSecurityCategory = {
-  icon: string;
+  icon?: string;
+  lucideIcon?: LucideIcon;
   title: string;
   description: string;
   features: readonly EnterpriseSecurityFeature[];

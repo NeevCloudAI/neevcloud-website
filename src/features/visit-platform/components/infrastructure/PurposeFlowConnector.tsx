@@ -11,7 +11,7 @@ const PurposeFlowConnector = ({ className }: PurposeFlowConnectorProps) => {
       aria-hidden="true"
     >
       <div className="z-3 h-2 w-2 rounded-full bg-primary" />
-      <div className="h-2 w-px bg-gray-60 md:h-10" />
+      <div className="h-2 w-px bg-gray-01 md:h-10" />
       <div className="h-2 w-2 rounded-full bg-primary" />
     </div>
   );

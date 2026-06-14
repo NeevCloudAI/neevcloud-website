@@ -12,12 +12,12 @@ const DeploymentComparisonTableRow = ({
         <div className="rounded-lg bg-blue-20 p-1.5">
           <DeploymentComparisonIcon
             name={row.icon}
-            className="size-3 text-gray-10/40"
+            className="size-3 text-cloud-gray/40"
           />
         </div>
         <Text
           as="small"
-          textColor="gray-10"
+          textColor="cloud-gray"
           weight="medium"
           fontFamily="spaceMono"
         >

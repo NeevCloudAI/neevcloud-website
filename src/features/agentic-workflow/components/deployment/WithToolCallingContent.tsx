@@ -19,7 +19,7 @@ const WithToolCallingContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       @tool
@@ -34,7 +34,7 @@ const WithToolCallingContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       as="h6"
       className="leading-7"
     >
@@ -51,7 +51,7 @@ const WithToolCallingContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       @tool
@@ -66,7 +66,7 @@ const WithToolCallingContent = () => (
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       as="h6"
       className="leading-7"
     >
@@ -96,7 +96,7 @@ const WithToolCallingContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;model=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;kimi-k2-instruct&quot;
       </Text>
       ,
@@ -116,7 +116,7 @@ const WithToolCallingContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;api_key=
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;nc-...&quot;
       </Text>
     </Text>
@@ -135,7 +135,7 @@ const WithToolCallingContent = () => (
       className="mt-4 md:mt-6 leading-7"
     >
       response = agent.run(
-      <Text as="span" variant="h6" textColor="red-50">
+      <Text as="span" variant="h6" textColor="pulse-red">
         &quot;Research competitors and summarize findings&quot;
       </Text>
       )

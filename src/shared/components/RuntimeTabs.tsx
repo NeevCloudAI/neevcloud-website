@@ -51,27 +51,27 @@ const RuntimeTabs = () => {
   const highlightedLines = useMemo(() => {
     const { codeLines } = RUNTIME_TAB_BY_ID[activeTab];
     return codeLines.map((tokens, lineIdx) =>
-      renderLineTokens(tokens, `${activeTab}-${lineIdx}`),
+      renderLineTokens(tokens, `${activeTab}-${lineIdx}`)
     );
   }, [activeTab]);
 
   return (
     <div className="w-full flex-2 overflow-hidden">
-      <div className="rounded-lg border border-gray-95 bg-black-95">
-        <div className="flex items-center justify-between border-b border-gray-95 p-3">
+      <div className="rounded-lg border border-white/12 bg-white/6">
+        <div className="flex items-center justify-between border-b border-white/12 p-3">
           <div className="flex items-center gap-1.5" aria-hidden>
             <span className="size-2.5 rounded-full bg-[#ff5f57]" />
             <span className="size-2.5 rounded-full bg-[#febc2e]" />
             <span className="size-2.5 rounded-full bg-[#28c840]" />
           </div>
-          <Text as="small" textColor="white-50" className="tracking-wide mr-4">
+          <Text as="small" textColor="gray-80" className="tracking-wide mr-4">
             {MODEL_BUILDER_COPY.terminalPath}
           </Text>
         </div>
 
         <pre
           id="runtime-code-panel"
-          className="max-h-85 overflow-x-auto classy overflow-y-auto p-6 text-xs leading-relaxed sm:px-10 sm:py-7.5"
+          className="max-h-85 overflow-x-auto classy overflow-y-auto p-4 text-xs leading-relaxed md:px-10 md:py-7.5"
           role="tabpanel"
           aria-labelledby={`runtime-tab-${activeTab}`}
         >
@@ -80,7 +80,7 @@ const RuntimeTabs = () => {
       </div>
 
       <div
-        className="mt-4 flex items-stretch gap-px overflow-hidden rounded-md border border-white-10 md:mt-8 relative z-20"
+        className="mt-4 flex items-stretch gap-px overflow-hidden rounded-md border border-white/12 md:mt-8 relative z-20"
         role="tablist"
         aria-label="Runtime examples"
       >

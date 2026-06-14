@@ -29,7 +29,7 @@ const AiInferenceTransparentPricingSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-75"
+          textColor="gray-04"
           align="center"
           className="mt-2.5 max-w-3xl"
         >
@@ -38,14 +38,14 @@ const AiInferenceTransparentPricingSection = () => {
         </Text>
 
         <div
-          className="mt-4 w-full rounded-lg border border-white-10 bg-white-5 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
+          className="mt-4 w-full rounded-lg border border-white/12 bg-white/6 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
           role="region"
           aria-label="Transparent inference pricing terminal"
         >
           <AiInferenceTransparentPricingPanel />
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 mt-4 md:mt-7.5">
-          <div className="bg-black-80 border border-black-30 rounded-md p-4 md:px-5">
+          <div className="bg-white/6 border border-white/12 rounded-md p-4 md:px-5">
             <Text as="small" textColor="gray-80">
               FREE TIER
             </Text>
@@ -76,7 +76,7 @@ const AiInferenceTransparentPricingSection = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-black-80 border border-black-30 rounded-md p-4 md:px-5">
+          <div className="bg-white/6 border border-white/12 rounded-md p-4 md:px-5">
             <Text as="small" textColor="gray-80">
               VOLUME DISCOUNTS
             </Text>

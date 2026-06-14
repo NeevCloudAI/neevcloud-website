@@ -6,16 +6,15 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default: `bg-primary`,
-        secondary: `bg-secondary`,
-        tertiary: `bg-tertiary`,
+        "deep-blue": `bg-deep-blue`,
         outline: `border border-black`,
         black: `bg-black text-white`,
         "outline-primary": `bg-white`,
         white: `bg-white`,
-        "white-outline-right": `border-r border-white-10`,
+        "white-outline-right": `border-r border-white/12`,
         "white-outline": `border border-white`,
         ghost: `bg-transparent`,
-        gray: "bg-gray-10",
+        gray: "bg-cloud-gray",
       },
       size: {
         default: "text-sm",
@@ -47,12 +46,11 @@ export const buttonVariants = cva(
       textColor: {
         default: "text-white",
         primary: "text-primary",
-        secondary: "text-secondary",
         destructive: "text-destructive",
-        outline: "text-gray-10",
-        blue: "text-blue-40",
+        outline: "text-cloud-gray",
+        blue: "text-gray-02",
         black: "text-black",
-        ghost: "text-black-80",
+        ghost: "text-white/6",
         gray: "text-gray-80",
       },
       fontFamily: {
@@ -61,12 +59,11 @@ export const buttonVariants = cva(
       backgroundColor: {
         default: "bg-white",
         primary: "bg-primary",
-        secondary: "bg-secondary",
         destructive: "bg-destructive",
         outline: "bg-white",
-        blue: "bg-blue-40",
-        ghost: "bg-black-80",
-        "cloud-gray": "bg-gray-10",
+        blue: "bg-gray-02",
+        ghost: "bg-white/6",
+        "cloud-gray": "bg-cloud-gray",
         transparent: "bg-transparent",
       },
       borderRadius: {
@@ -88,5 +85,5 @@ export const buttonVariants = cva(
       textColor: "default",
       borderRadius: "default",
     },
-  },
+  }
 );

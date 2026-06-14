@@ -13,8 +13,8 @@ const GpuUseCasesCard = ({
   return (
     <article
       className={cn(
-        "flex h-full w-full flex-col overflow-hidden rounded-md bg-gray-10",
-        className,
+        "flex h-full w-full flex-col overflow-hidden rounded-md bg-cloud-gray",
+        className
       )}
     >
       <div className="relative aspect-694/280 w-full">

@@ -25,7 +25,7 @@ const MetricsSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
           align="center"
         >

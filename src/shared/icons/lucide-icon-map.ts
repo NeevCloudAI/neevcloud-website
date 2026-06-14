@@ -2,6 +2,7 @@ import {
   ArrowRight,
   Calendar,
   Check,
+  ChessPawn,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -11,12 +12,17 @@ import {
   Command,
   Cpu,
   CpuIcon,
+  DatabaseIcon,
   Eye,
+  FlagTriangleRight,
+  FlaskConical,
   Gauge,
   Gift,
+  GpuIcon,
   HardDrive,
   ImageIcon,
   IndianRupee,
+  Landmark,
   Languages,
   LayoutList,
   LogOut,
@@ -26,6 +32,7 @@ import {
   Menu,
   MessageSquare,
   Mic,
+  Microscope,
   MoveLeft,
   MoveRight,
   PenLine,
@@ -33,9 +40,12 @@ import {
   Play,
   Search,
   Server,
+  ShieldCheck,
   Shuffle,
   SquareCheck,
   Star,
+  Trophy,
+  Users,
   Zap,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -56,6 +66,7 @@ export {
   Cpu,
   CpuIcon,
   Eye,
+  FlaskConical,
   Gauge,
   Gift,
   HardDrive,
@@ -64,10 +75,12 @@ export {
   Languages,
   LayoutList,
   LogOut,
+  GpuIcon,
   Mail,
   MapPinned,
   MemoryStick,
   Menu,
+  Landmark,
   MessageSquare,
   Mic,
   MoveLeft,
@@ -81,6 +94,12 @@ export {
   SquareCheck,
   Star,
   Zap,
+  FlagTriangleRight,
+  Trophy,
+  Microscope,
+  DatabaseIcon,
+  ChessPawn,
+  ShieldCheck,
 };
 
 export const LUCIDE_ICONS = {
@@ -122,12 +141,22 @@ export const LUCIDE_ICONS = {
   "square-check": SquareCheck,
   star: Star,
   zap: Zap,
+  landmark: Landmark,
+  flaskConical: FlaskConical,
+  users: Users,
+  flagTriangleRight: FlagTriangleRight,
+  trophy: Trophy,
+  microscope: Microscope,
+  chessPawn: ChessPawn,
+  protected: ShieldCheck,
+  gpuIcon: GpuIcon,
+  databaseIcon: DatabaseIcon,
 } as const satisfies Record<string, LucideIcon>;
 
 export type LucideIconName = keyof typeof LUCIDE_ICONS;
 
 export function resolveLucideIcon(
-  icon: LucideIconName | LucideIcon,
+  icon: LucideIconName | LucideIcon
 ): LucideIcon {
   return typeof icon === "string" ? LUCIDE_ICONS[icon] : icon;
 }

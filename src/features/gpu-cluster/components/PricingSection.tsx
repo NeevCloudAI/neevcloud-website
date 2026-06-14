@@ -24,13 +24,13 @@ const PricingSection = () => {
         >
           Every Workload
           <Text as="span" variant="h2" textColor="primary">
-            Flat rate.
+            Scale Without Limits.
           </Text>
-          Unmetered.
+          Pay Per Minute.
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="max-w-3xl mt-2.5"
         >
@@ -38,7 +38,7 @@ const PricingSection = () => {
         </Text>
 
         <div
-          className="bg-white-5 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white-10 mt-4 md:mt-12.5"
+          className="bg-white/6 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white/12 mt-4 md:mt-12.5"
           role="region"
           aria-label="Terminal-style GPU pricing listing"
         >
@@ -51,7 +51,7 @@ const PricingSection = () => {
 
             <Text
               as="h6"
-              textColor="gray-75"
+              textColor="gray-04"
               className="mt-1"
               fontFamily="spaceMono"
             >
@@ -60,7 +60,7 @@ const PricingSection = () => {
             <GpuPricingTable />
           </div>
 
-          <Divider orientation="horizontal" className="mt-4 mb-5 bg-gray-95" />
+          <Divider orientation="horizontal" className="mt-4 mb-5 bg-white/12" />
 
           <Text
             textColor="gray-80"

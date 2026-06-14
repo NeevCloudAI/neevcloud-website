@@ -27,8 +27,8 @@ const GpuHeroSection = ({
         <div className="flex flex-col justify-center">
           <Text
             as="small"
-            textColor="primary-70"
-            className="bg-green-60 p-1 rounded-md border border-green-40 w-fit"
+            textColor="primary-90"
+            className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12 w-fit"
           >
             {badgeText}
           </Text>
@@ -67,7 +67,7 @@ const GpuHeroSection = ({
                 <Text as="span" textColor="primary">
                   •
                 </Text>
-                <Text as="h6" textColor="gray-60">
+                <Text as="h6" textColor="gray-01">
                   {point}
                 </Text>
               </li>
@@ -81,7 +81,7 @@ const GpuHeroSection = ({
                 className="flex items-center gap-2.5"
               >
                 <SquareCheck size={24} className="text-primary" />
-                <Text as="h6" textColor="gray-60">
+                <Text as="h6" textColor="gray-01">
                   {feature}
                 </Text>
               </li>
@@ -89,7 +89,7 @@ const GpuHeroSection = ({
           </ul>
 
           <div className="mt-4 md:mt-12.5">
-            <Text as="h6" textColor="gray-60">
+            <Text as="h6" textColor="gray-01">
               {pricingPrefix}
               <Text
                 as="span"
@@ -100,7 +100,7 @@ const GpuHeroSection = ({
                 {pricingAmount}
               </Text>
             </Text>
-            <Text as="h6" textColor="gray-60">
+            <Text as="h6" textColor="gray-01">
               {pricingFooter}
             </Text>
           </div>

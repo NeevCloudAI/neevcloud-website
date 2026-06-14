@@ -14,7 +14,7 @@ const ProviderComparisonTable = () => {
         Lambda Labs
       </caption>
       <thead>
-        <tr className="border-b border-black-30">
+        <tr className="border-b border-white/12">
           {PROVIDER_COMPARISON_TABLE_HEADERS.map((header) => (
             <th
               key={header.id}

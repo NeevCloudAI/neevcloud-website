@@ -6,7 +6,7 @@ import { CPU_PRICING_SECTION_ITEMS } from "../data/cpu-pricing-section.data";
 const CpuAiSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="cpu-ai-section-heading"
       id="cpu-ai-section"
     >
@@ -26,7 +26,7 @@ const CpuAiSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           {`Production AI systems involve preprocessing pipelines, API endpoints, databases, monitoring tools, and workflow orchestration. These workloads don't need GPUs-they need reliable, flexible CPU infrastructure that integrates seamlessly with your GPU resources.`}

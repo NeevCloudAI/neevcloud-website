@@ -13,7 +13,7 @@ function WindowChrome() {
       </div>
       <Text
         as="small"
-        textColor="gray-75"
+        textColor="gray-04"
         className="truncate text-right text-[10px]"
       >
         {EXPLORE_API_MOCK_URL}
@@ -25,12 +25,12 @@ function WindowChrome() {
 function Step1Preview() {
   return (
     <div className="p-4 md:px-8.75 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 1 - GET API CREDENTIALS
       </Text>
 
-      <div className="rounded-md border border-gray-125 bg-gray-110 p-2.5 md:px-5 md:py-2.5">
-        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-7">
+      <div className="rounded-md border border-gray-80/18 bg-gray-80/12 p-2.5 md:px-5 md:py-2.5">
+        <Text fontFamily="spaceMono" textColor="gray-04" className="leading-7">
           $
           <Text
             as="span"
@@ -42,7 +42,7 @@ function Step1Preview() {
           </Text>
           <Text
             as="span"
-            textColor="gray-75"
+            textColor="gray-04"
             variant="p"
             className="bg-red-100 px-2 py-0.5 rounded-md"
           >
@@ -57,7 +57,7 @@ function Step1Preview() {
             copied ✔
           </Text>
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-7">
+        <Text fontFamily="spaceMono" textColor="gray-04" className="leading-7">
           →
           <Text as="span" textColor="white" variant="p">
             key active in 0.4s
@@ -71,11 +71,11 @@ function Step1Preview() {
 function Step2Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 2 - SELECT A MODEL
       </Text>
       <div className="flex flex-col gap-2">
-        <div className="rounded-md border border-green-50 bg-green-100 px-3.75 py-2.5">
+        <div className="rounded-md border border-primary-90/18 bg-primary-90/12 px-3.75 py-2.5">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
               <Text fontFamily="spaceMono" textColor="primary">
@@ -84,7 +84,7 @@ function Step2Preview() {
               <Text
                 as="small"
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 Meta · 120K context
@@ -101,16 +101,16 @@ function Step2Preview() {
           </div>
         </div>
 
-        <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-2.5">
+        <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-2.5">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
-              <Text fontFamily="spaceMono" textColor="gray-75">
+              <Text fontFamily="spaceMono" textColor="gray-04">
                 kimi-k2-instruct
               </Text>
               <Text
                 as="small"
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 Moonshot · 128K context
@@ -127,16 +127,16 @@ function Step2Preview() {
           </div>
         </div>
 
-        <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-2.5">
+        <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-2.5">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
-              <Text fontFamily="spaceMono" textColor="gray-75">
+              <Text fontFamily="spaceMono" textColor="gray-04">
                 deepseek-coder-v2
               </Text>
               <Text
                 as="small"
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 DeepSeek · 128K
@@ -154,7 +154,7 @@ function Step2Preview() {
         </div>
       </div>
 
-      <div className="rounded-md border border-green-50 bg-green-100 px-3.75 py-2.5 mt-2.5">
+      <div className="rounded-md border border-primary-90/18 bg-primary-90/12 px-3.75 py-2.5 mt-2.5">
         <Text fontFamily="spaceMono" textColor="primary">
           {"// llama-3.1-70b selected · 128K context · free tier available"}
         </Text>
@@ -166,10 +166,10 @@ function Step2Preview() {
 function Step3Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         step 3 - make your first request
       </Text>
-      <div className="border border-gray-125 bg-gray-110 rounded-md px-3.75 py-2.5 ">
+      <div className="border border-gray-80/18 bg-gray-80/12 rounded-md px-3.75 py-2.5 ">
         <Text
           fontFamily="spaceMono"
           textColor="primary"
@@ -182,14 +182,14 @@ function Step3Preview() {
         </Text>
         <Text
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="py-1 leading-7"
         >
           Authorization: Bearer ***
         </Text>
         <Text
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="py-1 leading-7"
         >
           Content-Type: application/json
@@ -225,7 +225,7 @@ function Step3Preview() {
         <Text
           fontFamily="spaceMono"
           as="small"
-          textColor="red-50"
+          textColor="pulse-red"
           className="py-1 leading-7"
         >
           ↑ sending
@@ -238,7 +238,7 @@ function Step3Preview() {
 function ResponseMetaRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-center px-3.75 py-2.5 md:grid-cols-[6.5rem_minmax(0,1fr)] md:gap-x-8">
-      <Text fontFamily="spaceMono" textColor="gray-75">
+      <Text fontFamily="spaceMono" textColor="gray-04">
         {label}
       </Text>
       <Text fontFamily="spaceMono" textColor="white" className="min-w-0">
@@ -251,10 +251,10 @@ function ResponseMetaRow({ label, value }: { label: string; value: string }) {
 function Step4Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         step 4 - handle responses
       </Text>
-      <div className="divide-y divide-gray-125 rounded-md border border-gray-125 bg-gray-110">
+      <div className="divide-y divide-gray-80/18 rounded-md border border-gray-80/18 bg-gray-80/12">
         {EXPLORE_API_RESPONSE_META_ROWS.map((row) => (
           <ResponseMetaRow
             key={row.label}
@@ -274,7 +274,7 @@ export default function ExploreApiStepPreview({
   stepIndex,
 }: ExploreApiStepPreviewProps) {
   return (
-    <div className="w-full bg-black md:min-h-0 md:rounded-r-lg h-120">
+    <div className="w-full bg-black md:min-h-0 md:rounded-r-lg md:h-120">
       <WindowChrome />
       {stepIndex === 0 && <Step1Preview />}
       {stepIndex === 1 && <Step2Preview />}

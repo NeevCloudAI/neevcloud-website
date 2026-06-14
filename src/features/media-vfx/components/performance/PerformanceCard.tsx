@@ -32,14 +32,14 @@ export const PerformanceBenchmarkCard = ({
     <article
       className={cn(
         "flex w-full flex-col rounded-xl bg-gray-950 p-3 md:px-3.75 md:py-2.5",
-        className,
+        className
       )}
     >
-      <div className="flex items-center justify-between border-b border-gray-95 pb-2.5">
-        <Text textColor="gray-75" fontFamily="spaceMono">
+      <div className="flex items-center justify-between border-b border-white/12 pb-2.5">
+        <Text textColor="gray-04" fontFamily="spaceMono">
           4K Frame · Cycles Path Tracing
         </Text>
-        <Text textColor="gray-75" fontFamily="spaceMono">
+        <Text textColor="gray-04" fontFamily="spaceMono">
           lower is better
         </Text>
       </div>
@@ -50,7 +50,7 @@ export const PerformanceBenchmarkCard = ({
           <StorageComparisonBar
             key={item.id}
             metric={toMetric(item)}
-            backgroundColor="bg-gray-90"
+            backgroundColor="bg-gray-05"
             labelClassName="items-end"
           />
         ))}
@@ -58,7 +58,7 @@ export const PerformanceBenchmarkCard = ({
 
       {/* Footnote */}
       {footnote && (
-        <Text className="text-xs text-gray-85 leading-relaxed border-t border-gray-95 mt-4 md:mt-7.5 pt-3.75">
+        <Text className="text-xs text-gray-03 leading-relaxed border-t border-white/12 mt-4 md:mt-7.5 pt-3.75">
           {footnote}
         </Text>
       )}
@@ -76,7 +76,7 @@ const FastestConfigFeatureItem = ({
       <Text as="h6" textColor="primary" aria-hidden="true" weight="semibold">
         •
       </Text>
-      <Text as="h6" textColor="gray-85">
+      <Text as="h6" textColor="gray-03">
         {feature.label}
       </Text>
     </div>
@@ -92,8 +92,8 @@ export const FastestConfigCard = ({
   return (
     <article
       className={cn(
-        "flex w-full flex-col rounded-xl bg-gray-10 p-5 md:p-10",
-        className,
+        "flex w-full flex-col rounded-xl bg-cloud-gray p-4 md:p-10",
+        className
       )}
     >
       {/* Label */}
@@ -110,19 +110,16 @@ export const FastestConfigCard = ({
         >
           {minutesPerFrame}
         </Text>
-        <Text
-          as="h3"
-          className="text-[20px] md:text-[30px] font-semibold text-primary"
-        >
+        <Text as="h3" className="md:text-30px font-semibold text-primary">
           min
         </Text>
-        <Text as="h3" className="text-[30px] font-semibold">
+        <Text as="h3" className="text-30px font-semibold">
           per 4K frame
         </Text>
       </div>
 
       {/* Description */}
-      <Text as="h6" textColor="gray-90" className="mt-6 md:mt-7.5">
+      <Text as="h6" textColor="gray-05" className="mt-6 md:mt-7.5">
         8x H100 with NVLink delivers a 20M-poly path-traced 4K frame in 2
         minutes,
         <Text as="span" textColor="primary" variant="h6">

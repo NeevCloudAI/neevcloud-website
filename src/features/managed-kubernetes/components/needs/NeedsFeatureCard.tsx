@@ -7,11 +7,11 @@ const NeedsFeatureCard = ({
   footer,
 }: NeedsFeatureCardProps) => {
   return (
-    <article className="flex h-full flex-col rounded-md bg-gray-10 p-4 md:px-7.5 md:py-10">
+    <article className="flex h-full flex-col rounded-md bg-cloud-gray p-4 md:px-7.5 md:py-10">
       <Text as="h3" weight="semibold">
         {title}
       </Text>
-      <Text as="h6" textColor="gray-85" className="mt-2.5">
+      <Text as="h6" textColor="gray-03" className="mt-2.5">
         {description}
       </Text>
       {footer ? <div className="mt-auto">{footer}</div> : null}

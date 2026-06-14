@@ -18,7 +18,7 @@ function WindowChrome() {
         <span className="size-2.5 rounded-full bg-[#febc2e]" />
         <span className="size-2.5 rounded-full bg-[#28c840]" />
       </div>
-      <Text as="small" textColor="gray-75" className="truncate text-right">
+      <Text as="small" textColor="gray-04" className="truncate text-right">
         {EXPLORE_MODELS_MOCK_URL}
       </Text>
     </div>
@@ -28,11 +28,11 @@ function WindowChrome() {
 function Step1Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 1 - CHOOSE A CATEGORY
       </Text>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-        <div className="border border-green-50 bg-green-100 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
+        <div className="border border-primary-90/18 bg-primary-90/12 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
           <div className="flex min-w-0 items-center gap-2.5">
             <Languages size={16} className="shrink-0 text-primary" />
             <Text textColor="primary" fontFamily="spaceMono">
@@ -48,48 +48,48 @@ function Step1Preview() {
             12 Models
           </Text>
         </div>
-        <div className="border border-gray-125 bg-gray-110 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
+        <div className="border border-gray-80/18 bg-gray-80/12 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
           <div className="flex min-w-0 items-center gap-2.5">
-            <Eye size={16} className="shrink-0 text-gray-75" />
-            <Text fontFamily="spaceMono" textColor="gray-75">
+            <Eye size={16} className="shrink-0 text-gray-04" />
+            <Text fontFamily="spaceMono" textColor="gray-04">
               Vision
             </Text>
           </div>
           <Text
             as="small"
-            textColor="gray-75"
+            textColor="gray-04"
             fontFamily="spaceMono"
             className="text-[10px]"
           >
             5 Models
           </Text>
         </div>
-        <div className="border border-gray-125 bg-gray-110 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
+        <div className="border border-gray-80/18 bg-gray-80/12 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
           <div className="flex min-w-0 items-center gap-2.5">
-            <Mic size={16} className="shrink-0 text-gray-75 pr-1" />
-            <Text fontFamily="spaceMono" textColor="gray-75">
+            <Mic size={16} className="shrink-0 text-gray-04 pr-1" />
+            <Text fontFamily="spaceMono" textColor="gray-04">
               Audio
             </Text>
           </div>
           <Text
             as="small"
-            textColor="gray-75"
+            textColor="gray-04"
             fontFamily="spaceMono"
             className="text-[10px]"
           >
             4 Models
           </Text>
         </div>
-        <div className="border border-gray-125 bg-gray-110 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
+        <div className="border border-gray-80/18 bg-gray-80/12 rounded-md p-3 md:px-3.75 md:py-2.75 flex items-center justify-between gap-2">
           <div className="flex min-w-0 items-center gap-2.5">
-            <Command size={16} className="shrink-0 text-gray-75 pr-1" />
-            <Text fontFamily="spaceMono" textColor="gray-75">
+            <Command size={16} className="shrink-0 text-gray-04 pr-1" />
+            <Text fontFamily="spaceMono" textColor="gray-04">
               Specialized
             </Text>
           </div>
           <Text
             as="small"
-            textColor="gray-75"
+            textColor="gray-04"
             fontFamily="spaceMono"
             className="text-[10px]"
           >
@@ -98,10 +98,10 @@ function Step1Preview() {
         </div>
       </div>
 
-      <div className="rounded-md border border-gray-125 bg-gray-110 p-3 md:px-4.5 md:py-2.75">
+      <div className="rounded-md border border-gray-80/18 bg-gray-80/12 p-3 md:px-4.5 md:py-2.75">
         <Text
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="text-xs md:text-sm"
         >
           {"// Language selected · showing 12 models · click to switch"}
@@ -114,11 +114,11 @@ function Step1Preview() {
 function Step2Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 2 - SELECT A MODEL
       </Text>
       <div className="flex flex-col gap-2">
-        <div className="rounded-md border border-green-50 bg-green-100 px-3.75 py-2.5">
+        <div className="rounded-md border border-primary-90/18 bg-primary-90/12 px-3.75 py-2.5">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
               <Text fontFamily="spaceMono" textColor="primary">
@@ -127,7 +127,7 @@ function Step2Preview() {
               <Text
                 as="small"
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 Meta · 120K context
@@ -144,16 +144,16 @@ function Step2Preview() {
           </div>
         </div>
 
-        <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-2.5">
+        <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-2.5">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
-              <Text fontFamily="spaceMono" textColor="gray-75">
+              <Text fontFamily="spaceMono" textColor="gray-04">
                 kimi-k2-instruct
               </Text>
               <Text
                 as="small"
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 Moonshot · 128K context
@@ -170,16 +170,16 @@ function Step2Preview() {
           </div>
         </div>
 
-        <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-2.5">
+        <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-2.5">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
-              <Text fontFamily="spaceMono" textColor="gray-75">
+              <Text fontFamily="spaceMono" textColor="gray-04">
                 deepseek-coder-v2
               </Text>
               <Text
                 as="small"
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 DeepSeek · 128K
@@ -197,7 +197,7 @@ function Step2Preview() {
         </div>
       </div>
 
-      <div className="rounded-md border border-green-50 bg-green-100 px-3.75 py-2.5 mt-2.5">
+      <div className="rounded-md border border-primary-90/18 bg-primary-90/12 px-3.75 py-2.5 mt-2.5">
         <Text fontFamily="spaceMono" textColor="primary">
           {"// llama-3.1-70b selected · 128K context · free tier available"}
         </Text>
@@ -209,34 +209,34 @@ function Step2Preview() {
 function Step3Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 3 - TRY IT OUT
       </Text>
-      <div className="border border-gray-125 bg-gray-110 rounded-md">
+      <div className="border border-gray-80/18 bg-gray-80/12 rounded-md">
         <Text
           as="small"
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="px-3.75 py-2.5 text-[10px]"
         >
           PROMPT · LLAMA-3.1-70B-INSTRUCT
         </Text>
-        <Divider orientation="horizontal" className="bg-gray-125" />
+        <Divider orientation="horizontal" className="bg-gray-80/18" />
         <div className="px-3.75 py-5">
           <Text
             fontFamily="spaceMono"
-            textColor="gray-75"
-            className="bg-gray-125 px-3.75 py-5 rounded-md"
+            textColor="gray-04"
+            className="bg-gray-80/18 px-3.75 py-5 border border-gray-80/24 rounded-md"
           >
             Summarize the benefits of serverless AI inference for a startup with
             limited DevOps resources.
           </Text>
         </div>
-        <Divider orientation="horizontal" className="bg-gray-125 " />
+        <Divider orientation="horizontal" className="bg-gray-80/18 " />
         <div className="flex flex-wrap items-center justify-between gap-2 p-3.75">
           <Text
             fontFamily="spaceMono"
-            textColor="gray-75"
+            textColor="gray-04"
             className="text-[10px]"
           >
             press ctrl + enter to run
@@ -267,12 +267,12 @@ function MetricRow({
 }) {
   return (
     <div className="flex justify-between gap-2 text-xs">
-      <Text fontFamily="spaceMono" textColor="gray-75" className="text-[10px]">
+      <Text fontFamily="spaceMono" textColor="gray-04" className="text-[10px]">
         {label}
       </Text>
       <Text
         fontFamily="spaceMono"
-        textColor={highlight ? "primary" : "gray-75"}
+        textColor={highlight ? "primary" : "gray-04"}
         className="text-[10px]"
       >
         {value}
@@ -284,11 +284,11 @@ function MetricRow({
 function Step4Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 4 - ITERATE AND COMPARE
       </Text>
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-2.5">
+        <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-2.5">
           <Text
             fontFamily="spaceMono"
             textColor="white"
@@ -297,7 +297,7 @@ function Step4Preview() {
             llama-3.1-70b
           </Text>
 
-          <Divider orientation="horizontal" className="bg-gray-125 mb-2.5" />
+          <Divider orientation="horizontal" className="bg-gray-80/18 mb-2.5" />
 
           <div className="flex flex-col gap-1.25">
             <MetricRow label="latency" value="312ms" highlight />
@@ -306,7 +306,7 @@ function Step4Preview() {
             <div className="flex items-center justify-between gap-2 text-xs">
               <Text
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 quality
@@ -316,13 +316,13 @@ function Step4Preview() {
                 <Star className="size-2.25 fill-white text-white" />
                 <Star className="size-2.25 fill-white text-white" />
                 <Star className="size-2.25 fill-white text-white" />
-                <Star className="size-2.25 fill-gray-125 text-white" />
+                <Star className="size-2.25 fill-gray-80/18 text-white" />
               </span>
             </div>
             <MetricRow label="context" value="128K" />
           </div>
         </div>
-        <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-2.5">
+        <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-2.5">
           <Text
             fontFamily="spaceMono"
             textColor="white"
@@ -331,7 +331,7 @@ function Step4Preview() {
             kimi-k2-instruct
           </Text>
 
-          <Divider orientation="horizontal" className="bg-gray-125 mb-2.5" />
+          <Divider orientation="horizontal" className="bg-gray-80/18 mb-2.5" />
 
           <div className="flex flex-col gap-1.25">
             <MetricRow label="latency" value="320ms" />
@@ -340,7 +340,7 @@ function Step4Preview() {
             <div className="flex items-center justify-between gap-2 text-xs">
               <Text
                 fontFamily="spaceMono"
-                textColor="gray-75"
+                textColor="gray-04"
                 className="text-[10px]"
               >
                 quality
@@ -360,7 +360,7 @@ function Step4Preview() {
       <Text
         fontFamily="spaceMono"
         textColor="primary"
-        className="px-7.5 py-2.5 border border-green-50 bg-green-100 rounded-md"
+        className="px-7.5 py-2.5 border border-primary-90/18 bg-primary-90/12 rounded-md"
       >
         {
           "// llama-70b wins on cost · kimi-k2 wins on quality · pick based on use case"
@@ -373,19 +373,19 @@ function Step4Preview() {
 function Step5Preview() {
   return (
     <div className="px-4 md:px-8.75 py-4 md:py-10 flex flex-col gap-4 md:gap-5">
-      <Text textColor="gray-75" fontFamily="spaceMono">
+      <Text textColor="gray-04" fontFamily="spaceMono">
         STEP 5 - MOVE TO PRODUCTION
       </Text>
 
-      <div className="rounded-md border border-gray-125 bg-gray-110 px-3.75 py-5">
-        <Text fontFamily="spaceMono" textColor="gray-75" className="leading-7">
+      <div className="rounded-md border border-gray-80/18 bg-gray-80/12 px-3.75 py-5">
+        <Text fontFamily="spaceMono" textColor="gray-04" className="leading-7">
           # from playground to production · one line
         </Text>
         <pre>
           <code>
             <Text
               fontFamily="spaceMono"
-              textColor="red-50"
+              textColor="pulse-red"
               className="leading-7"
             >
               from
@@ -421,7 +421,7 @@ function Step5Preview() {
               client =
               <Text
                 as="span"
-                textColor="green-10"
+                textColor="deep-forest"
                 variant="p"
                 className="mx-0 ml-1 md:mx-0 md:ml-1.5"
               >
@@ -439,7 +439,7 @@ function Step5Preview() {
               {`base_url="`}
               <Text
                 as="span"
-                textColor="blue-40"
+                textColor="gray-02"
                 variant="p"
                 className="mx-0 md:mx-0"
               >
@@ -457,7 +457,7 @@ function Step5Preview() {
               {`response = client.chat.completion.`}
               <Text
                 as="span"
-                textColor="green-10"
+                textColor="deep-forest"
                 variant="p"
                 className="mx-0 md:mx-0"
               >
@@ -499,7 +499,7 @@ function Step5Preview() {
       <Text
         fontFamily="spaceMono"
         textColor="primary"
-        className="px-6 md:px-7.5 py-2.5 border border-green-50 bg-green-100 rounded-md"
+        className="px-6 md:px-7.5 py-2.5 border border-primary-90/18 bg-primary-90/12 rounded-md"
       >
         {"// Same model · same API · billed in INR"}
         <br />

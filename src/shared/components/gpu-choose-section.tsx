@@ -19,7 +19,10 @@ const GpuChooseSection = ({
 }: GpuChooseSectionProps) => {
   return (
     <section
-      className={cn("relative bg-gray-10 py-8 md:py-16 2xl:py-25", className)}
+      className={cn(
+        "relative bg-cloud-gray py-8 md:py-16 2xl:py-25",
+        className
+      )}
     >
       <Container className="flex flex-col items-center justify-center">
         <Text as="h2" align="center" className="max-w-5xl mt-4 md:mt-6">
@@ -29,16 +32,16 @@ const GpuChooseSection = ({
           </Text>
         </Text>
 
-        <Text as="h6" className="mt-2.5" align="center" textColor="black-5">
+        <Text as="h6" className="mt-2.5" align="center" textColor="black/82">
           {description}
         </Text>
 
         <div
-          className="mt-4 w-full rounded-lg border border-white-10 bg-black font-mono shadow-sm backdrop-blur-md md:mt-12.5"
+          className="mt-4 w-full rounded-lg border border-white/12 bg-black font-mono shadow-sm backdrop-blur-md md:mt-12.5"
           role="region"
           aria-label={terminalAriaLabel}
         >
-          <div className="flex items-center border-b border-white-10 p-3.5">
+          <div className="flex items-center border-b border-white/12 p-3.5">
             <div className="flex items-center gap-1.5" aria-hidden="true">
               <span className="size-2.5 rounded-full bg-[#ff5f57]" />
               <span className="size-2.5 rounded-full bg-[#febc2e]" />
@@ -70,7 +73,7 @@ const GpuChooseSection = ({
             <div className="my-5">
               <table className="w-full border-collapse">
                 <thead>
-                  <tr className="border-b border-black-29">
+                  <tr className="border-b border-white/12">
                     {tableHeaders.map((header) => (
                       <th
                         key={header}
@@ -89,7 +92,7 @@ const GpuChooseSection = ({
                 </thead>
                 <tbody>
                   {rows.map((row) => (
-                    <tr key={row.id} className="border-b border-black-29">
+                    <tr key={row.id} className="border-b border-white/6">
                       <td className={GPU_CHOOSE_SECTION_TABLE_CELL_CLASS}>
                         <Text
                           as="h6"

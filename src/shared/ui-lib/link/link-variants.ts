@@ -1,22 +1,23 @@
 import { cva } from "class-variance-authority";
 
 export const linkVariants = cva(
-  "cursor-pointer w-fit whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed text-center block",
+  "cursor-pointer w-fit disabled:opacity-50 disabled:cursor-not-allowed text-center block",
   {
     variants: {
       variant: {
         default: `bg-primary text-white`,
-        secondary: `bg-secondary text-white`,
-        tertiary: `bg-tertiary`,
+        secondary: `bg-deep-forest text-white`,
+        "deep-blue": `bg-deep-blue`,
         outline: `border border-black text-black`,
-        "outline-gray": `border border-gray-85 text-gray-85`,
+        "outline-gray": `border border-gray-03 text-gray-03`,
         black: `bg-black text-white`,
         "outline-primary": `bg-white`,
         white: `bg-white`,
-        "white-outline-right": `border-r border-white-10`,
+        "white-outline-right": `border-r border-white/12`,
         "white-outline": `border border-white text-white`,
         ghost: `bg-transparent`,
-        gray: "bg-gray-10",
+        gray: "bg-cloud-gray",
+        link: "decoration cursor-pointer inline",
       },
       size: {
         default: "text-sm",
@@ -34,13 +35,13 @@ export const linkVariants = cva(
         primary: "text-primary",
         secondary: "text-secondary",
         destructive: "text-destructive",
-        outline: "text-gray-10",
-        blue: "text-blue-40",
+        outline: "text-cloud-gray",
+        blue: "text-gray-02",
         black: "text-black",
-        ghost: "text-black-80",
+        ghost: "text-white/6",
         gray: "text-gray-80",
-        "gray-85": "text-gray-85",
-        "red-50": "text-red-50",
+        "gray-03": "text-gray-03",
+        "pulse-red": "text-pulse-red",
       },
       weight: {
         default: "font-normal",
@@ -53,6 +54,7 @@ export const linkVariants = cva(
         none: "p-0",
         default: "px-3 py-2",
         xs: "px-2 py-1",
+        xxs: "px-1 py-0",
         sm: "px-3 py-1.5",
         md: "px-4 py-2",
         lg: "px-8 py-2",
@@ -67,9 +69,9 @@ export const linkVariants = cva(
         secondary: "bg-secondary",
         destructive: "bg-destructive",
         outline: "bg-white",
-        blue: "bg-blue-40",
-        ghost: "bg-black-80",
-        "cloud-gray": "bg-gray-10",
+        blue: "bg-gray-02",
+        ghost: "bg-white/6",
+        "cloud-gray": "bg-cloud-gray",
         transparent: "bg-transparent",
       },
       borderRadius: {
@@ -91,5 +93,5 @@ export const linkVariants = cva(
       weight: "medium",
       borderRadius: "default",
     },
-  },
+  }
 );

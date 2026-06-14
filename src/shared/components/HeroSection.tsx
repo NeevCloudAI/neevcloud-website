@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
 import { CircleCheck } from "@/shared/icons/lucide-icon-map";
-import LinkComponent from "@/shared/ui-lib/link";
 
 const trustBadgesData = [
   "Data residency in India",
@@ -48,8 +47,8 @@ const HeroSection = ({
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
-          textColor="primary-70"
-          className="bg-primary-20 p-1 rounded-md border border-primary-30"
+          textColor="primary-90"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
         >
           {badgeText}
         </Text>
@@ -61,12 +60,13 @@ const HeroSection = ({
         </Text>
 
         {primaryCta || secondaryCta ? (
-          <div className="z-10 mt-4 flex gap-4 md:mt-7.5">
+          <div className="w-full z-10 mt-4 flex gap-4 flex-wrap items-center justify-center md:mt-7.5">
             {primaryCta ? (
               <LinkComponent
                 href={primaryCtaRoute ?? ""}
                 target={primaryCtaTarget}
                 spacing="lg"
+                className="w-full md:w-auto"
               >
                 {primaryCta}
               </LinkComponent>
@@ -77,6 +77,7 @@ const HeroSection = ({
                 variant="outline"
                 target={secondaryCtaTarget}
                 spacing="lg"
+                className="w-full md:w-auto"
               >
                 {secondaryCta}
               </LinkComponent>
@@ -89,11 +90,11 @@ const HeroSection = ({
             {trustBadges.map((badge, index) => (
               <div key={badge} className="flex items-center gap-3">
                 {badgeIcon && <CircleCheck size={16} />}
-                <span className="text-foreground text-sm whitespace-nowrap">
+                <span className="text-black text-sm whitespace-nowrap">
                   {badge}
                 </span>
                 {!badgeIcon && index < trustBadges.length - 1 && (
-                  <span className="text-foreground text-sm">•</span>
+                  <span className="text-black text-sm">•</span>
                 )}
               </div>
             ))}

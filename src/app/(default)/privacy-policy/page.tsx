@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
 import { PrivacyPolicyComponent } from "@/features/privacy-policy";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Privacy Policy | NeevCloud",
   description:
     "NeevCloud privacy policy describing how we collect, use, and protect your data.",
-  openGraph: {
-    title: "Privacy Policy | NeevCloud",
-    description:
-      "NeevCloud privacy policy describing how we collect, use, and protect your data.",
-  },
-};
+});
 
 const PrivacyPolicyPage = () => {
   return <PrivacyPolicyComponent />;

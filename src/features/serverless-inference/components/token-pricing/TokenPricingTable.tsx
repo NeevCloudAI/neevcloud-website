@@ -8,7 +8,7 @@ import TokenPricingTableRow from "./TokenPricingTableRow";
 
 const TokenPricingTable = () => {
   return (
-    <div className="mt-7.5 overflow-x-auto">
+    <div className="mt-7.5 overflow-x-auto classy">
       <table
         className="w-full font-space-mono"
         aria-label="Model inference token pricing in INR"
@@ -17,7 +17,7 @@ const TokenPricingTable = () => {
           Per-model token pricing with input and output rates per million tokens
         </caption>
         <thead>
-          <tr className="border-b border-black-30">
+          <tr className="border-b border-white/12">
             {TOKEN_PRICING_TABLE_HEADERS.map((header) => (
               <th
                 key={header.id}

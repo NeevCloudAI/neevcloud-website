@@ -25,7 +25,7 @@ const HealthcarePerformanceSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-75"
+          textColor="gray-04"
           align="center"
           className="max-w-3xl mt-2.5"
         >

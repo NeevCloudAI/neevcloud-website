@@ -11,14 +11,14 @@ const ModelsSectionStepContent = ({ step }: ModelsSectionStepContentProps) => {
     <div>
       <Text
         as="h1"
-        textColor="gray-60"
+        textColor="gray-01"
         className="text-[5rem]"
         aria-hidden="true"
       >
         {step.number}
       </Text>
 
-      <Text as="h3" weight="semibold" className="text-[30px] mt-5">
+      <Text as="h3" weight="semibold" className="text-30px mt-5">
         {step.heading}
       </Text>
 
@@ -41,7 +41,7 @@ const ModelsSectionStepContent = ({ step }: ModelsSectionStepContentProps) => {
               <Text as="h6" weight="regular">
                 {item.text}
               </Text>
-              <Text textColor="gray-75">{item.description}</Text>
+              <Text textColor="gray-04">{item.description}</Text>
             </div>
           </li>
         ))}

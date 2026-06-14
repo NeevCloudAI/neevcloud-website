@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Text } from "@/shared/ui-lib";
 import { GETTING_STARTED_STEPS } from "../data/getting-started-section.data";
 import type { GettingStartedStep } from "../types/getting-started-section.types";
 import Container from "@/shared/components/container";
@@ -15,23 +15,23 @@ const GettingStartedStepItem = ({
 }) => (
   <>
     <div
-      className={`flex items-start gap-4 py-5 ${index < 3 ? "border-b border-gray-60" : ""}`}
+      className={`flex items-start gap-4 py-5 ${index < 3 ? "border-b border-gray-01" : ""}`}
     >
       <div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-full bg-white">
         <Text
           as="h4"
-          textColor="blue-40"
+          textColor="gray-02"
           weight="semibold"
-          className="text-[30px]"
+          className="text-30px"
         >
           {step.number}
         </Text>
       </div>
       <div className="flex flex-col">
-        <Text as="h5" weight="semibold" textColor="gray-90">
+        <Text as="h5" weight="semibold" textColor="gray-05">
           {step.title}
         </Text>
-        <Text textColor="gray-85" className="pt-1.25">
+        <Text textColor="gray-03" className="pt-1.25">
           {step.description}
           {step.link && (
             <Link
@@ -52,7 +52,6 @@ const GettingStartedStepItem = ({
         )}
       </div>
     </div>
-    {!isLast && <Divider orientation="horizontal" className="bg-gray-20" />}
   </>
 );
 
@@ -76,7 +75,7 @@ const GettingStartedSection = () => {
           </Text>
         </Text>
 
-        <div className="mt-6 md:mt-12.5 w-full max-w-2xl rounded-xl bg-gray-10 p-6 md:p-10 ">
+        <div className="mt-6 md:mt-12.5 w-full max-w-2xl rounded-xl bg-cloud-gray p-6 md:p-10 ">
           <Text as="h3" weight="semibold">
             GETTING STARTED
           </Text>

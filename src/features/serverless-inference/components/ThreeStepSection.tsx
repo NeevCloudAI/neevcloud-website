@@ -10,7 +10,7 @@ import ThreeStepsSectionClient from "./ThreeStepsSectionClient";
 const ThreeStepSection = () => {
   return (
     <section
-      className="bg-gray-10 relative py-8 md:py-16 2xl:py-25"
+      className="bg-cloud-gray relative py-8 md:py-16 2xl:py-25"
       aria-labelledby="three-steps-section-heading"
     >
       <Container className="relative">
@@ -25,7 +25,7 @@ const ThreeStepSection = () => {
             {THREE_STEPS_HEADING_PRIMARY}
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="mt-2.5">
+        <Text as="h6" align="center" textColor="black/82" className="mt-2.5">
           {THREE_STEPS_SUBTEXT}
         </Text>
 

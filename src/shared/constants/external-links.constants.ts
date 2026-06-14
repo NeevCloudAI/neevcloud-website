@@ -34,6 +34,10 @@ export const EXTERNAL_LINKS = {
   mohitMehroliyaLinkedin:
     "https://www.linkedin.com/in/mohit-mehroliya-humanresource/",
   kushalKothariLinkedin: "https://www.linkedin.com/in/kushal-kothari2807/",
+  certInGuidelines:
+    "https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf",
+  zataAi: "https://zata.ai/",
+  zataAiSignup: "https://zata.ai/signup",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

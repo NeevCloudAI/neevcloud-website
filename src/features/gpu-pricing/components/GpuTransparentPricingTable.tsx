@@ -15,7 +15,7 @@ const GpuTransparentPricingTable = ({
       id={`${family.id}-panel`}
       role="tabpanel"
       aria-labelledby={`${family.id}-tab`}
-      className="h-100 min-w-0 flex-1 overflow-auto rounded-md border border-white-10 bg-black-25 p-4 md:p-5"
+      className="h-100 min-w-0 flex-1 overflow-auto rounded-md border border-white/12 bg-gray-80/18 p-4 md:p-5"
     >
       <div className="flex items-start gap-3.5">
         <ArrowRight size={18} className="text-primary mt-0.75" />
@@ -27,7 +27,7 @@ const GpuTransparentPricingTable = ({
         {family.subtitle}
       </Text>
 
-      <div className="mt-5">
+      <div className="mt-5 overflow-x-auto classy">
         <table
           className="min-w-4xl w-full border-collapse"
           aria-label={`${family.sidebarLabel} GPU configuration pricing`}
@@ -36,7 +36,7 @@ const GpuTransparentPricingTable = ({
             GPU configurations and hourly pricing for {family.sidebarLabel}
           </caption>
           <thead>
-            <tr className="border-b border-black-29">
+            <tr className="border-b border-white/12">
               {GPU_TRANSPARENT_PRICING_TABLE_HEADERS.map((header) => (
                 <th
                   key={header}

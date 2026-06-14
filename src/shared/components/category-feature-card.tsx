@@ -1,8 +1,7 @@
 import { cn } from "@/lib/utils";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import { SquareCheck, type LucideIcon } from "@/shared/icons/lucide-icon-map";
 import Image from "next/image";
-import LinkComponent from "../ui-lib/link";
 
 export type CategoryFeatureHoverDetail = {
   label?: string;
@@ -13,7 +12,8 @@ export type CategoryFeatureHoverDetail = {
 };
 
 export type CategoryFeatureItem = {
-  icon: string;
+  icon?: string;
+  lucideIcon?: LucideIcon;
   badgeLabel: string;
   title: string;
   description: string;
@@ -21,7 +21,8 @@ export type CategoryFeatureItem = {
     id: number;
     title: string;
     description?: string;
-    icon?: string | LucideIcon;
+    icon?: string;
+    lucideIcon?: LucideIcon;
   }[];
 };
 
@@ -46,34 +47,37 @@ export function CategoryFeatureCard({
   return (
     <article
       className={cn(
-        "flex w-full flex-col rounded-md bg-gray-10 p-4 md:p-10",
+        "flex w-full flex-col rounded-md bg-cloud-gray p-4 md:p-10",
         showHoverOverlay && "group relative overflow-hidden",
-        className,
+        className
       )}
     >
       <div
         className={cn(
           "flex flex-col",
           showHoverOverlay &&
-            "transition-opacity duration-300 ease-out group-hover:pointer-events-none group-focus-within:pointer-events-none",
+            "transition-opacity duration-300 ease-out group-hover:pointer-events-none group-focus-within:pointer-events-none"
         )}
       >
         <div className="w-fit rounded-md bg-white p-3.75">
-          <Image
-            src={category.icon}
-            alt={title}
-            width={iconSize}
-            height={iconSize}
-          />
+          {category.icon ? (
+            <Image
+              src={category.icon}
+              alt={title}
+              width={iconSize}
+              height={iconSize}
+            />
+          ) : category.lucideIcon ? (
+            <category.lucideIcon
+              className="text-primary size-7.5"
+              strokeWidth={1}
+            />
+          ) : null}
         </div>
         <Text as="h5" className="pt-5">
           {badgeLabel}
         </Text>
-        <Text
-          as="h3"
-          weight="semibold"
-          className="mt-2.5 text-[24px] md:text-[30px]"
-        >
+        <Text as="h3" weight="semibold" className="mt-2.5 md:text-30px">
           {title}
         </Text>
         <Text as="h6" className="mt-2.5">
@@ -87,10 +91,15 @@ export function CategoryFeatureCard({
             >
               {feature.icon ? (
                 <Image
-                  src={feature.icon as string}
+                  src={feature.icon}
                   alt={feature.title}
                   width={22}
                   height={22}
+                />
+              ) : feature.lucideIcon ? (
+                <feature.lucideIcon
+                  className="text-primary h-9 w-5.5"
+                  strokeWidth={1}
                 />
               ) : (
                 <Text as="h6" textColor="primary" className="shrink-0">
@@ -102,7 +111,7 @@ export function CategoryFeatureCard({
                   <Text as="h6" weight="regular">
                     {feature.title}
                   </Text>
-                  <Text as="small" textColor="gray-85">
+                  <Text as="small" textColor="gray-03">
                     {feature.description}
                   </Text>
                 </div>
@@ -118,14 +127,10 @@ export function CategoryFeatureCard({
         <div
           className={cn(
             "absolute inset-0 flex translate-y-full flex-col bg-primary/92 p-4 backdrop-blur-md transition-transform duration-500 ease-out md:py-25 md:px-10",
-            "group-hover:translate-y-0 group-focus-within:translate-y-0",
+            "group-hover:translate-y-0 group-focus-within:translate-y-0"
           )}
         >
-          <Text
-            as="h5"
-            textColor="white-50"
-            className="uppercase tracking-wide"
-          >
+          <Text as="h5" className="uppercase tracking-wide text-white/62">
             {hover.label ?? "TRY THESE TASKS"}
           </Text>
 

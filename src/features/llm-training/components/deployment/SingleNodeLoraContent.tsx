@@ -2,7 +2,7 @@ import { Text } from "@/shared/ui-lib";
 
 const SingleNodeLoraContent = () => (
   <>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1 leading-7">
       # Launch H100 instance with fine-tuning template
     </Text>
     <Text
@@ -56,7 +56,7 @@ const SingleNodeLoraContent = () => (
       className="leading-7"
     >
       &nbsp; --dataset
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         gs://my-bucket/training-data
       </Text>
       \
@@ -68,18 +68,18 @@ const SingleNodeLoraContent = () => (
       className="leading-7"
     >
       &nbsp; --output
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         gs://my-bucket/checkpoints
       </Text>
     </Text>
     <Text
       fontFamily="spaceMono"
-      textColor="gray-75"
+      textColor="gray-04"
       className="mt-4 md:mt-6 leading-7"
     >
       # Instance starts with pre-configured environment
     </Text>
-    <Text fontFamily="spaceMono" textColor="gray-75" className="mt-1 leading-7">
+    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-1 leading-7">
       # HuggingFace, DeepSpeed, Axolotl already installed
     </Text>
   </>

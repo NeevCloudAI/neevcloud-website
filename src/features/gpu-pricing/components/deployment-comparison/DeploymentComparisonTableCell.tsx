@@ -38,7 +38,7 @@ const DeploymentComparisonTableCell = ({
       className={cn(
         "w-full rounded-lg border p-4",
         CELL_VARIANT_STYLES[variant],
-        isHighlight ? "flex flex-col gap-1.5" : "flex items-center",
+        isHighlight ? "flex flex-col gap-1.5" : "flex items-center"
       )}
     >
       {mobileLabel ? (
@@ -54,11 +54,11 @@ const DeploymentComparisonTableCell = ({
       <Text
         as="small"
         fontFamily="spaceMono"
-        textColor={isHighlight ? undefined : "gray-10"}
+        textColor={isHighlight ? undefined : "cloud-gray"}
         weight={isHighlight ? undefined : "medium"}
         className={cn(
           isHighlight && columnStyles.text,
-          !isHighlight && "text-gray-10",
+          !isHighlight && "text-cloud-gray"
         )}
       >
         {cell.text}
@@ -70,7 +70,7 @@ const DeploymentComparisonTableCell = ({
           className={cn(
             "flex items-center gap-2",
             columnStyles.subtext,
-            !cell.showCheck && "mt-1.5",
+            !cell.showCheck && "mt-1.5"
           )}
         >
           {cell.showCheck ? (

@@ -28,7 +28,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
         >
           {card.headline}
         </Text>
-        <Text textColor="gray-10">{card.subline}</Text>
+        <Text textColor="cloud-gray">{card.subline}</Text>
       </article>
     );
   }
@@ -39,7 +39,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
         key={`${card.companyLabel}-${index}`}
         data-slide
         className={
-          "flex min-w-80 flex-col justify-between gap-5 bg-white p-4 md:p-10 border-r border-gray-10"
+          "flex min-w-80 flex-col justify-between gap-5 bg-white p-4 md:p-10 border-r border-cloud-gray"
         }
       >
         <Image
@@ -67,7 +67,7 @@ function renderCard(card: ReviewSectionCard, index: number) {
     <article
       key="rating"
       data-slide
-      className="flex min-w-76 flex-col items-center justify-center bg-white border-r border-gray-10"
+      className="flex min-w-76 flex-col items-center justify-center bg-white border-r border-cloud-gray"
       aria-label={`${card.score} average from ${card.reviewCountLabel} on Google`}
     >
       <Text as="h1" weight="normal" className="text-5xl md:text-7xl">
@@ -78,10 +78,10 @@ function renderCard(card: ReviewSectionCard, index: number) {
         aria-hidden
       >
         {Array.from({ length: 5 }).map((_, i) => (
-          <Star key={i} className="size-10 fill-primary-100" strokeWidth={0} />
+          <Star key={i} className="size-10 fill-primary-105" strokeWidth={0} />
         ))}
       </div>
-      <Text className="mt-2 text-black-5">{card.reviewCountLabel}</Text>
+      <Text className="mt-2 text-black/82">{card.reviewCountLabel}</Text>
       <Image
         src="/icons/google-wordmark.svg"
         alt="Google"
@@ -127,8 +127,8 @@ export default function ReviewsCarousel() {
         <button
           type="button"
           className={cn(
-            "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black cursor-pointer",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "inline-flex size-11 items-center justify-center rounded-full border border-gray-01 bg-white text-black cursor-pointer",
+            "transition-colors hover:bg-cloud-gray focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show previous reviews"
           onClick={() => scrollByDirection("left")}
@@ -138,8 +138,8 @@ export default function ReviewsCarousel() {
         <button
           type="button"
           className={cn(
-            "inline-flex size-11 items-center justify-center rounded-full border border-gray-50 bg-white text-black cursor-pointer",
-            "transition-colors hover:bg-gray-10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            "inline-flex size-11 items-center justify-center rounded-full border border-gray-01 bg-white text-black cursor-pointer",
+            "transition-colors hover:bg-cloud-gray focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           )}
           aria-label="Show next reviews"
           onClick={() => scrollByDirection("right")}

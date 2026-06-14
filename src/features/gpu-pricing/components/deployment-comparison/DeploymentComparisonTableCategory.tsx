@@ -12,7 +12,7 @@ const DeploymentComparisonTableCategory = ({
           as="small"
           textColor="white"
           fontFamily="spaceMono"
-          className="text-gray-10/60"
+          className="text-cloud-gray/60"
         >
           {category.label}
         </Text>

@@ -25,7 +25,7 @@ const HealthcareApplicationSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           From hospital networks to research labs to digital-health startups,

@@ -1,8 +1,7 @@
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import { ABOUT_US_HERO } from "../data/about-us-page.data";
 import Container from "@/shared/components/container";
 import Image from "next/image";
-import LinkComponent from "@/shared/ui-lib/link";
 
 const AboutUsHeroSection = () => {
   return (
@@ -10,8 +9,8 @@ const AboutUsHeroSection = () => {
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
-          textColor="primary-70"
-          className="bg-primary-20 p-1 rounded-md border border-primary-30"
+          textColor="primary-90"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
         >
           {ABOUT_US_HERO.badgeText}
         </Text>
@@ -48,18 +47,18 @@ const AboutUsHeroSection = () => {
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">
           {ABOUT_US_HERO.trustBadges.map((badge, index) => (
             <div key={badge} className="flex items-center gap-3">
-              <span className="text-foreground text-sm whitespace-nowrap">
+              <span className="text-black text-sm whitespace-nowrap">
                 {badge}
               </span>
               {index < ABOUT_US_HERO.trustBadges.length - 1 && (
-                <span className="text-foreground text-sm">•</span>
+                <span className="text-black text-sm">•</span>
               )}
             </div>
           ))}
         </div>
 
         <div className="w-full min-h-50 md:min-h-[80vh] mt-4 md:mt-12.5 rounded-2xl relative">
-          <div className="absolute top-0 md:right-25 w-full h-full">
+          <div className="absolute top-0 right-5 md:right-25 w-full h-full">
             <Image
               src="/images/about-us.png"
               alt="About Us"

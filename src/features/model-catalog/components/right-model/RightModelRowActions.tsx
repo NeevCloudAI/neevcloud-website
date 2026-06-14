@@ -1,5 +1,5 @@
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import LinkComponent from "@/shared/ui-lib/link";
+import { LinkComponent } from "@/shared/ui-lib";
 
 const RightModelRowActions = () => {
   return (
@@ -19,9 +19,9 @@ const RightModelRowActions = () => {
         target="_blank"
         size="xs"
         fontFamily="spaceMono"
-        textColor="gray-85"
+        textColor="gray-03"
         spacing="md"
-        className="border-gray-85"
+        className="border-gray-03"
       >
         Docs
       </LinkComponent>
@@ -31,9 +31,9 @@ const RightModelRowActions = () => {
         target="_blank"
         size="xs"
         fontFamily="spaceMono"
-        textColor="gray-85"
+        textColor="gray-03"
         spacing="md"
-        className="border-gray-85"
+        className="border-gray-03"
       >
         Deploy
       </LinkComponent>

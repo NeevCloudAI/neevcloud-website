@@ -25,7 +25,7 @@ const ThreeStepSection = () => {
             {THREE_STEPS_HEADING_PRIMARY}
           </Text>
         </Text>
-        <Text as="h6" align="center" textColor="black-5" className="mt-2.5">
+        <Text as="h6" align="center" textColor="black/82" className="mt-2.5">
           {THREE_STEPS_SUBTEXT}
         </Text>
         <ThreeStepsSectionClient />

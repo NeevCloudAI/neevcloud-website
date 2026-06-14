@@ -15,7 +15,7 @@ const GpuDeploymentPanel = () => {
           return (
             <div
               key={i}
-              className="flex items-center gap-3 rounded-lg border border-gray-20 p-5 bg-gray-10 mx-7.5"
+              className="flex items-center gap-3 rounded-lg p-5 bg-cloud-gray mx-7.5"
             >
               {isDone ? (
                 <Text
@@ -29,8 +29,8 @@ const GpuDeploymentPanel = () => {
                   as="h6"
                   className={`flex h-6 w-6 items-center justify-center rounded-full ${
                     isPending
-                      ? "bg-gray-60 text-gray-90"
-                      : "bg-tertiary text-white"
+                      ? "bg-gray-01 text-gray-05"
+                      : "bg-deep-blue text-white"
                   }`}
                 >
                   {step.number}
@@ -39,7 +39,7 @@ const GpuDeploymentPanel = () => {
 
               <Text
                 as="h6"
-                className="flex-1 text-gray-90"
+                className="flex-1 text-gray-05"
                 fontFamily="spaceMono"
               >
                 {step.label}

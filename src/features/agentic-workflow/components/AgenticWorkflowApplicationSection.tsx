@@ -26,10 +26,10 @@ const AgenticWorkflowApplicationSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
-          Six strategic capability areas, pick one to explore the specific
+          Five strategic capability areas, pick one to explore the specific
           workloads, applications, and deployment patterns NeevCloud supports.
         </Text>
         <ul className="grid w-full list-none grid-cols-1 gap-6 p-0 m-0 pt-4 md:grid-cols-6 md:pt-12.5">

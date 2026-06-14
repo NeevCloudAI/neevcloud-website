@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Poppins, Space_Mono } from "next/font/google";
+import { defaultMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -14,23 +14,7 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://neevcloud.com"),
-  title: {
-    default: "NeevCloud | India's AI SuperCloud",
-    template: "%s",
-  },
-  description:
-    "Full-stack AI infrastructure built to scale fearlessly. Run AI workloads with sovereign control, security, and scalability on India-resident GPU and CPU compute.",
-  openGraph: {
-    type: "website",
-    siteName: "NeevCloud",
-    locale: "en_IN",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
+export const metadata = defaultMetadata;
 
 export default function RootLayout({
   children,

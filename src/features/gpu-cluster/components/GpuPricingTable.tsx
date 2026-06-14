@@ -8,9 +8,9 @@ import GpuPricingTableRow from "./GpuPricingTableRow";
 
 const GpuPricingTable = () => {
   return (
-    <div className="mt-7.5">
+    <div className="mt-7.5 overflow-auto">
       <table
-        className="min-w-6xl w-full border-collapse font-space-mono text-xs md:text-sm"
+        className="w-full border-collapse font-space-mono text-xs md:text-sm"
         aria-label="GPU pricing by SKU and commitment term"
       >
         <caption className="sr-only">
@@ -18,7 +18,7 @@ const GpuPricingTable = () => {
           INR per hour per GPU
         </caption>
         <thead>
-          <tr className="border-b border-black-30">
+          <tr className="border-b border-white/12">
             {GPU_PRICING_TABLE_HEADERS.map((header) => (
               <th
                 key={header}

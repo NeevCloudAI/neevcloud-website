@@ -4,7 +4,7 @@ export const BILLING_GUIDELINES_HERO = {
   badgeText: "Shared Standard",
   title: "Billing Guidelines",
   description:
-    "Welcome to our website! Before using our services, please read and agree to our terms and conditions outlined below.",
+    "We believe in providing clear and transparent billing practices to ensure a seamless and trustworthy experience for our valued customers.",
 } as const;
 
 export const BILLING_GUIDELINES_FOOTER = {

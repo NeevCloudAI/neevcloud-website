@@ -1,18 +1,17 @@
 import { AmbitionDetailCard } from "@/shared/components/ambition-detail-card";
 import Container from "@/shared/components/container";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import {
   EXPERIENCE_CTA_CARDS,
   EXPERIENCE_CTA_SECTION,
   EXPERIENCE_ITEMS,
   EXPERIENCE_SECTION,
 } from "../data/experience-section.data";
-import LinkComponent from "@/shared/ui-lib/link";
 
 const ExperienceSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="arena-experience-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -31,7 +30,7 @@ const ExperienceSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {EXPERIENCE_SECTION.description}
@@ -53,7 +52,10 @@ const ExperienceSection = () => {
           </Text>
           <ul className="grid list-none grid-cols-1 gap-5 p-0 m-0 mt-4 md:grid-cols-3 md:mt-12.5">
             {EXPERIENCE_CTA_CARDS.map((card) => (
-              <li key={card.id} className="rounded-md bg-gray-120 p-4 md:p-10">
+              <li
+                key={card.id}
+                className="rounded-md bg-white/6 border border-white/12 p-4 md:p-10"
+              >
                 <Text as="h3" textColor="white" weight="semibold">
                   {card.title}
                 </Text>
@@ -68,6 +70,7 @@ const ExperienceSection = () => {
                 <LinkComponent
                   href={card.primaryCtaRoute}
                   target={card.primaryCtaTarget}
+                  className="w-full md:w-auto"
                 >
                   {card.primaryCtaLabel}
                 </LinkComponent>

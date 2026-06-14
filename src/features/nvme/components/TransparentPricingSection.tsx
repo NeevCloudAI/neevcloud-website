@@ -10,7 +10,7 @@ const TransparentPricingSection = () => {
       aria-labelledby="nvme-transparent-pricing-section-heading"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"
+        className="pointer-events-none absolute inset-0 bg-[url('/icons/logo-mid.svg')] bg-cover bg-center bg-no-repeat w-[50%] md:w-[30%] h-[35%] md:h-[75%] top-5 md:top-10 right-[-5%] opacity-50 md:opacity-100"
         aria-hidden="true"
       />
       <Container className="flex flex-col items-center justify-center">
@@ -28,7 +28,7 @@ const TransparentPricingSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="max-w-3xl mt-2.5"
         >
@@ -37,7 +37,7 @@ const TransparentPricingSection = () => {
         </Text>
         <div className="flex flex-col md:flex-row gap-4 mt-4 md:mt-12.5 w-full">
           <TransparentPricingTerminal />
-          <div className="w-full rounded-xl border border-black-5 bg-primary-5 p-4 md:p-10">
+          <div className="w-full rounded-xl border border-black/82 bg-cloud-gray p-4 md:p-10">
             <StoragePricingCalculator />
           </div>
         </div>

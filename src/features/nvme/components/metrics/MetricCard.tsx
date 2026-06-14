@@ -9,7 +9,7 @@ const MetricCard = ({ metric }: MetricCardProps) => {
   const Icon = metric.icon;
 
   return (
-    <article className="flex flex-col items-center rounded-md bg-gray-10 px-4 py-7.5">
+    <article className="flex flex-col items-center rounded-md bg-cloud-gray p-4 md:px-4 md:py-7.5">
       <Icon
         size={14}
         className={`text-${metric.valueColor}`}
@@ -31,7 +31,7 @@ const MetricCard = ({ metric }: MetricCardProps) => {
           {metric.unit}
         </Text>
       </Text>
-      <Text as="small" textColor="gray-85" align="center">
+      <Text as="small" textColor="gray-03" align="center">
         {metric.label}
       </Text>
     </article>

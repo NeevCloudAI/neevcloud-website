@@ -35,7 +35,7 @@ const ComparisonTableSection = ({
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           {description}
@@ -50,27 +50,27 @@ const ComparisonTableSection = ({
             </caption>
             <thead>
               <tr>
-                <th className="p-4 md:px-7.5 md:py-6.25 border border-white-10">
+                <th className="p-4 md:px-7.5 md:py-6.25 border border-white/12">
                   <Text
                     as="h6"
-                    textColor="blue-40"
+                    textColor="gray-02"
                     weight="semibold"
                     align="left"
                   >
                     Aspect
                   </Text>
                 </th>
-                <th className="p-4 md:px-7.5 md:py-6.25 border border-white-10">
+                <th className="p-4 md:px-7.5 md:py-6.25 border border-white/12">
                   <Text
                     as="h6"
-                    textColor="blue-40"
+                    textColor="gray-02"
                     weight="semibold"
                     align="left"
                   >
                     {traditionalColumnLabel}
                   </Text>
                 </th>
-                <th className="p-4 md:px-7.5 md:py-6.25 border border-white-10">
+                <th className="p-4 md:px-7.5 md:py-6.25 border border-white/12">
                   <Text
                     as="h6"
                     textColor="primary"
@@ -86,9 +86,9 @@ const ComparisonTableSection = ({
               {rows.map((row) => (
                 <tr
                   key={row.id}
-                  className="border border-white-10 last:border-b-0"
+                  className="border border-white/12 last:border-b-0"
                 >
-                  <th className="p-4 md:px-7.5 md:py-3.75 border border-white-10">
+                  <th className="p-4 md:px-7.5 md:py-3.75 border border-white/12">
                     <Text
                       as="h6"
                       textColor="white"
@@ -98,12 +98,12 @@ const ComparisonTableSection = ({
                       {row.aspect}
                     </Text>
                   </th>
-                  <td className="p-4 md:px-7.5 md:py-3.75 border border-white-10">
-                    <Text as="h6" textColor="gray-75" align="left">
+                  <td className="p-4 md:px-7.5 md:py-3.75 border border-white/12">
+                    <Text as="h6" textColor="gray-04" align="left">
                       {row.traditional}
                     </Text>
                   </td>
-                  <td className="p-4 md:px-7.5 md:py-3.75 border border-white-10">
+                  <td className="p-4 md:px-7.5 md:py-3.75 border border-white/12">
                     <Text as="h6" textColor="primary" align="left">
                       {row.supercloud}
                     </Text>

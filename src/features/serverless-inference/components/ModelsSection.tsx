@@ -1,8 +1,7 @@
 import Container from "@/shared/components/container";
 import ModelCard from "./models/ModelCard";
 import { MODELS } from "../data/models-section.data";
-import { Text } from "@/shared/ui-lib";
-import LinkComponent from "@/shared/ui-lib/link";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const ModelsSection = () => {
@@ -27,7 +26,7 @@ const ModelsSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           From Kimi K2 to Llama 3 405B to GLM 4.5, every model runs on

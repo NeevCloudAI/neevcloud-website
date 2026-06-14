@@ -10,9 +10,9 @@ const ACCENT_LINE_CLASSES: Record<
   string
 > = {
   primary: "bg-primary",
-  "primary-muted": "bg-primary-110",
-  gray: "bg-gray-75",
-  red: "bg-red-50",
+  "primary-muted": "bg-gray-05",
+  gray: "bg-gray-04",
+  red: "bg-pulse-red",
   white: "bg-white",
 };
 
@@ -20,11 +20,11 @@ const StatsByNumbersCard = ({ item, className }: StatsByNumbersCardProps) => {
   return (
     <article
       className={cn(
-        "flex h-full flex-col rounded-md border border-white-10 bg-white-5 backdrop-blur-md p-4 md:px-7.5 md:py-10",
-        className,
+        "flex h-full flex-col rounded-md border border-white/12 bg-white/6 backdrop-blur-md p-4 md:px-7.5 md:py-10",
+        className
       )}
     >
-      <Text as="h6" textColor="gray-85">
+      <Text as="h6" textColor="gray-03">
         {item.label}
       </Text>
       <Text
@@ -35,7 +35,7 @@ const StatsByNumbersCard = ({ item, className }: StatsByNumbersCardProps) => {
       >
         {item.value}
       </Text>
-      <Text as="h6" textColor="gray-10">
+      <Text as="h6" textColor="cloud-gray">
         {item.description}
       </Text>
       {item.accentLine ? (
@@ -44,7 +44,7 @@ const StatsByNumbersCard = ({ item, className }: StatsByNumbersCardProps) => {
             "mt-auto pt-4",
             item.accentLine.dashed
               ? "border-b-6 border-dashed border-primary"
-              : "",
+              : ""
           )}
           aria-hidden="true"
         >
@@ -52,7 +52,7 @@ const StatsByNumbersCard = ({ item, className }: StatsByNumbersCardProps) => {
             <div
               className={cn(
                 "h-1.5 w-full rounded-full",
-                ACCENT_LINE_CLASSES[item.accentLine.color],
+                ACCENT_LINE_CLASSES[item.accentLine.color]
               )}
             />
           ) : null}

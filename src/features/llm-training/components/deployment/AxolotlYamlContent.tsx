@@ -157,7 +157,7 @@ const AxolotlYamlContent = () => (
       className="leading-7"
     >
       &nbsp;&nbsp;- path:
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         s3://neevcloud-storage/instruction-data.jsonl
       </Text>
     </Text>
@@ -223,7 +223,7 @@ const AxolotlYamlContent = () => (
       className="leading-7"
     >
       output_dir:
-      <Text as="span" variant="p" textColor="red-50">
+      <Text as="span" variant="p" textColor="pulse-red">
         s3://neevcloud-storage/checkpoints
       </Text>
     </Text>

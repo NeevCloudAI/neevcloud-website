@@ -15,7 +15,7 @@ const UseCaseSummaryCard = ({ block }: UseCaseSummaryCardProps) => {
         {block.title}
       </Text>
       {block.subtitle ? (
-        <Text as="h6" weight="semibold" textColor="gray-90">
+        <Text as="h6" weight="semibold" textColor="gray-05">
           {block.subtitle}
         </Text>
       ) : null}

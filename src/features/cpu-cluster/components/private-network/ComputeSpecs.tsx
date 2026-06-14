@@ -10,11 +10,11 @@ const ComputeSpecs = ({ specs }: ComputeSpecsProps) => {
     <div className="flex items-center gap-2 mt-1">
       {specs.map((spec, index) => (
         <div key={spec} className="flex items-center gap-2">
-          <Text as="h6" textColor="gray-60">
+          <Text as="h6" textColor="gray-01">
             {spec}
           </Text>
           {index < specs.length - 1 && (
-            <Text as="h6" textColor="gray-60" aria-hidden="true">
+            <Text as="h6" textColor="gray-01" aria-hidden="true">
               {INSTANCE_STAT_SEPARATOR}
             </Text>
           )}

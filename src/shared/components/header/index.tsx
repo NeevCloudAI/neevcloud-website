@@ -8,15 +8,15 @@ import HeaderMenu from "./header-menu";
 const HeaderComponent = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-xs shadow-sm">
-      <Container className="relative flex flex-wrap items-center gap-3 py-3 md:flex-nowrap md:py-0">
+      <Container className="relative flex flex-wrap items-center gap-3 py-4 md:flex-nowrap md:py-0">
         <HeaderMenu>
           <Link href="/">
             <Image
-              src={"/icons/logo-black.svg"}
+              src={"/icons/logo-black-with-name.svg"}
               alt="logo"
               width={100}
               height={100}
-              className="h-7 w-auto"
+              className="h-6 md:h-7 w-auto"
             />
           </Link>
           <AiSupercloudDesktopTrigger />

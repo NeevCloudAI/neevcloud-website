@@ -11,7 +11,7 @@ const ProblemSolutionColumn = ({
     <div
       className={cn(
         "flex h-full flex-col p-4 md:p-10",
-        theme === "problem" ? "bg-red-50" : "bg-primary",
+        theme === "problem" ? "bg-pulse-red" : "bg-primary"
       )}
     >
       <Text as="h5" textColor="white">
@@ -21,7 +21,7 @@ const ProblemSolutionColumn = ({
         as="h3"
         textColor="white"
         weight="semibold"
-        className="mt-2.5 md:mt-5 text-2xl  md:text-3xl"
+        className="mt-2.5 md:mt-5 md:text-30px"
       >
         {column.heading}
       </Text>
@@ -32,7 +32,7 @@ const ProblemSolutionColumn = ({
       <ul className="m-0 mt-4 flex list-none flex-col gap-3 p-0 md:mt-7.5 md:gap-5">
         {column.items.map((item) => (
           <li key={item.id}>
-            <article className="rounded-md bg-white-10 p-4 md:p-5 flex gap-2.5">
+            <article className="rounded-md bg-white/12 p-4 md:p-5 flex gap-2.5">
               <Image src={item.icon} alt={item.title} width={77} height={77} />
               <div>
                 <Text as="h4" textColor="white" weight="semibold">

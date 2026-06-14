@@ -4,10 +4,9 @@ import {
   RIGHT_MODEL_TABLE_HEADERS,
 } from "../../constants/right-model-section.constants";
 import { MODEL_PRICING_ROWS } from "../../data/right-model-section.data";
-import { Text } from "@/shared/ui-lib";
+import { Text, LinkComponent } from "@/shared/ui-lib";
 import RightModelPricingTableRow from "./RightModelPricingTableRow";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import LinkComponent from "@/shared/ui-lib/link";
 
 const RightModelPricingTable = () => {
   return (
@@ -33,7 +32,7 @@ const RightModelPricingTable = () => {
         <table className="w-full min-w-272 font-space-mono">
           <caption className="sr-only">Model pricing comparison table</caption>
           <thead>
-            <tr className="border-b border-black-30">
+            <tr className="border-b border-white/12">
               {RIGHT_MODEL_TABLE_HEADERS.map((header) => (
                 <th
                   key={header.id}

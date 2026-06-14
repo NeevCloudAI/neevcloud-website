@@ -6,7 +6,7 @@ const NeedsFeatureList = ({ items }: NeedsFeatureListProps) => {
   return (
     <ul className="mt-4 list-inside list-disc space-y-2.5 marker:text-primary">
       {items.map((item) => (
-        <li key={item} className="text-sm text-gray-90">
+        <li key={item} className="text-sm text-gray-05">
           {item}
         </li>
       ))}

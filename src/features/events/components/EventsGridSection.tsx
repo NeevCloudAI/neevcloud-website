@@ -25,7 +25,7 @@ const EventsGridSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-3xl"
         >
           Where you can find NeevCloud - summits, conferences, workshops, and

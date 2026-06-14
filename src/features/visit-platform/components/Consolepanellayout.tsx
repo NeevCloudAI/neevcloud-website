@@ -21,23 +21,19 @@ const ConsolePanelLayout = ({
   rightPanel,
 }: ConsolePanelLayoutProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-25 items-center w-full mt-10 px-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-25 items-center w-full mt-10 md:px-10">
       <div>
         <Text
           as="h1"
           weight="semibold"
-          textColor="gray-60"
+          textColor="gray-01"
           className="text-[3rem] md:text-[5rem] leading-none"
           aria-hidden="true"
         >
           {number}
         </Text>
 
-        <Text
-          as="h3"
-          weight="semibold"
-          className="mt-4 text-[30px] md:text-[32px]"
-        >
+        <Text as="h3" weight="semibold" className="mt-4 text-30px">
           {heading}
         </Text>
 

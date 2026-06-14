@@ -5,20 +5,15 @@ import {
 } from "@/features/careers/data/open-positions-section.data";
 import Script from "next/script";
 
-import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Careers | NeevCloud",
   description:
     "Join NeevCloud in creating systems that remove traditional barriers of cost, access, and control. Make world-class AI computing available to anyone with an idea worth building.",
-  openGraph: {
-    title: "Careers | NeevCloud",
-    description:
-      "Join NeevCloud in creating systems that remove traditional barriers of cost, access, and control. Make world-class AI computing available to anyone with an idea worth building.",
-  },
-};
+});
 
 const CareersRoutePage = () => {
   return (

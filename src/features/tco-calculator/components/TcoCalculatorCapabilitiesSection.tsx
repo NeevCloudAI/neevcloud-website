@@ -6,8 +6,8 @@ import { TCO_CALCULATOR_CAPABILITIES_ITEMS } from "../data/capabilities-section.
 const TcoCalculatorCapabilitiesSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
       aria-labelledby="tco-calculator-capabilities-section-heading"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       id="tco-calculator-capabilities-section"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -27,7 +27,7 @@ const TcoCalculatorCapabilitiesSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="mt-2.5 max-w-4xl"
         >
           Cloud GPU costs add up fast. The NeevCloud TCO Calculator gives you an

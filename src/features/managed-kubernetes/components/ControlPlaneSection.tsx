@@ -30,7 +30,7 @@ const ControlPlaneSection = () => {
         </Text>
         <Text
           as="h6"
-          textColor="gray-10"
+          textColor="cloud-gray"
           align="center"
           className="max-w-2xl mt-2.5"
         >

@@ -16,8 +16,8 @@ export default function FaqAccordionItem({
     <details
       name="faq"
       className={cn(
-        "rounded-xl border border-white-10 bg-black-80 p-5 md:px-10 md:py-7.5",
-        "[&[open]_summary_.faq-chevron]:rotate-180",
+        "rounded-xl border border-white/12 bg-white/6 p-4 md:px-10 md:py-7.5",
+        "[&[open]_summary_.faq-chevron]:rotate-180"
       )}
       open={defaultOpen}
     >
@@ -30,7 +30,11 @@ export default function FaqAccordionItem({
           aria-hidden="true"
         />
       </summary>
-      <Text as="h6" textColor="gray-10" className="mt-3">
+      <Text
+        as="h6"
+        textColor="cloud-gray"
+        className="mt-3 border-t border-white/12 pt-4 md:border-none md:pt-0"
+      >
         {faq.answer}
       </Text>
     </details>

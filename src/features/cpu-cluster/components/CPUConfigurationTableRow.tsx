@@ -8,7 +8,7 @@ type CPUConfigurationTableRowProps = {
 
 const CPUConfigurationTableRow = ({ row }: CPUConfigurationTableRowProps) => {
   return (
-    <tr className="border-b border-black-7">
+    <tr className="border-b border-white/6">
       <td className={CPU_CONFIG_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="primary-105">
           {row.configuration}

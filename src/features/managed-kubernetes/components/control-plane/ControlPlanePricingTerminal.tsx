@@ -4,7 +4,7 @@ import ControlPlaneTerminalHeader from "./ControlPlaneTerminalHeader";
 const ControlPlanePricingTerminal = () => {
   return (
     <div
-      className="bg-white-5 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white-10"
+      className="bg-white/6 backdrop-blur-md rounded-lg w-full shadow-sm font-mono border border-white/12"
       role="region"
       aria-label="NKS pricing terminal"
     >
@@ -18,57 +18,57 @@ const ControlPlanePricingTerminal = () => {
         <Text
           as="h6"
           fontFamily="spaceMono"
-          textColor="gray-75"
+          textColor="gray-04"
           className="mt-1.25"
         >
           {`// what you pay for all amounts in ₹`}
         </Text>
 
         <div className="flex items-center justify-between gap-2 md:pl-3.75">
-          <Text as="h6" fontFamily="spaceMono" textColor="gray-75">
+          <Text as="h6" fontFamily="spaceMono" textColor="gray-04">
             category
           </Text>
           <Text as="h6" fontFamily="spaceMono" textColor="primary">
             Pricing
           </Text>
         </div>
-        <Divider orientation="horizontal" className="my-5 bg-black-5" />
+        <Divider orientation="horizontal" className="my-5 bg-white/12" />
 
         <div className="flex items-center justify-between gap-2 md:pl-3.75">
           <Text fontFamily="spaceMono" textColor="primary" as="h6">
             GPU nodes
           </Text>
-          <Text fontFamily="spaceMono" textColor="red-50" as="h6">
+          <Text fontFamily="spaceMono" textColor="pulse-red" as="h6">
             on-demand pricing
           </Text>
         </div>
-        <Divider orientation="horizontal" className="my-5 bg-black-5" />
+        <Divider orientation="horizontal" className="my-5 bg-white/12" />
 
         <div className="flex items-center justify-between gap-2 md:pl-3.75">
           <Text fontFamily="spaceMono" textColor="primary" as="h6">
             CPU nodes
           </Text>
-          <Text fontFamily="spaceMono" textColor="red-50" as="h6">
+          <Text fontFamily="spaceMono" textColor="pulse-red" as="h6">
             on-demand pricing
           </Text>
         </div>
-        <Divider orientation="horizontal" className="my-5 bg-black-5" />
+        <Divider orientation="horizontal" className="my-5 bg-white/12" />
 
         <div className="flex items-center justify-between gap-2 md:pl-3.75">
           <Text fontFamily="spaceMono" textColor="primary" as="h6">
             Persistent storage
           </Text>
-          <Text fontFamily="spaceMono" textColor="red-50" as="h6">
+          <Text fontFamily="spaceMono" textColor="pulse-red" as="h6">
             ₹8.35/GB/mo
           </Text>
         </div>
-        <Divider orientation="horizontal" className="my-5 bg-black-5" />
+        <Divider orientation="horizontal" className="my-5 bg-white/12" />
 
         <div className="flex items-center justify-between gap-2 md:pl-3.75">
           <Text fontFamily="spaceMono" textColor="primary" as="h6">
             Egress (within India)
           </Text>
-          <Text fontFamily="spaceMono" textColor="red-50" as="h6">
+          <Text fontFamily="spaceMono" textColor="pulse-red" as="h6">
             free
           </Text>
         </div>

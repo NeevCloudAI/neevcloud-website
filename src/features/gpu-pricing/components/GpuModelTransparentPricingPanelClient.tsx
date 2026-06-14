@@ -11,7 +11,7 @@ import GpuTransparentPricingTerminalHeader from "./GpuTransparentPricingTerminal
 
 const GpuModelTransparentPricingPanelClient = () => {
   const [activeFamily, setActiveFamily] = useState<GpuModelFamilyId>(
-    DEFAULT_GPU_MODEL_FAMILY,
+    DEFAULT_GPU_MODEL_FAMILY
   );
 
   const family =
@@ -34,12 +34,12 @@ const GpuModelTransparentPricingPanelClient = () => {
 
         <Divider
           orientation="vertical"
-          className="hidden bg-white-10 md:block"
+          className="hidden bg-white/12 md:block"
         />
 
         <Divider
           orientation="horizontal"
-          className="block bg-white-10 md:hidden"
+          className="block bg-white/12 md:hidden"
         />
 
         <GpuModelTransparentPricingContent family={family} />

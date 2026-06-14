@@ -10,7 +10,7 @@ export const BENCHMARK_ITEMS: BenchmarkItem[] = [
     subtitle: "Medium · 5M polys",
     minutes: 12,
     valueColor: "text-white",
-    barColor: "bg-gray-85",
+    barColor: "bg-gray-03",
   },
   {
     id: "h100-medium",
@@ -19,7 +19,7 @@ export const BENCHMARK_ITEMS: BenchmarkItem[] = [
     subtitle: "Medium · 5M polys",
     minutes: 4,
     valueColor: "text-white",
-    barColor: "bg-gray-85",
+    barColor: "bg-gray-03",
   },
   {
     id: "a100-high",
@@ -28,7 +28,7 @@ export const BENCHMARK_ITEMS: BenchmarkItem[] = [
     subtitle: "High · 20M polys",
     minutes: 45,
     valueColor: "text-white",
-    barColor: "bg-gray-85",
+    barColor: "bg-gray-03",
   },
   {
     id: "h100-high",
@@ -37,7 +37,7 @@ export const BENCHMARK_ITEMS: BenchmarkItem[] = [
     subtitle: "High · 20M polys",
     minutes: 14,
     valueColor: "text-white",
-    barColor: "bg-gray-85",
+    barColor: "bg-gray-03",
   },
   {
     id: "h100x8-high",

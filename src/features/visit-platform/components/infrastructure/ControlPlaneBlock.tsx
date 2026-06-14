@@ -15,10 +15,10 @@ const ControlPlaneBlock = ({
     <div
       className={cn(
         "flex flex-col bg-black items-center rounded-lg p-5 md:px-30",
-        className,
+        className
       )}
     >
-      <Text as="h6" textColor="gray-85">
+      <Text as="h6" textColor="gray-03">
         {node.subtitle}
       </Text>
       <Text

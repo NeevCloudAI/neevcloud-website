@@ -3,7 +3,7 @@ import type { GpuStoragePricingCardProps } from "../types/storage-pricing-sectio
 
 const GpuStoragePricingCard = ({ item }: GpuStoragePricingCardProps) => {
   return (
-    <article className="flex h-full flex-col rounded-md border border-black-30 bg-black-80 p-4 md:px-8.75 md:py-6.5">
+    <article className="flex h-full flex-col rounded-md border border-white/12 bg-white/6 p-4 md:px-8.75 md:py-6.5">
       <Text as="h6" fontFamily="spaceMono" textColor="white">
         {item.title}
       </Text>

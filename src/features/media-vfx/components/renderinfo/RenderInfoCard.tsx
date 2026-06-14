@@ -18,7 +18,7 @@ const RenderInfoCard = ({
         {rows.map((row, index) => (
           <div
             key={index}
-            className={`bg-gray-90 rounded-lg p-4 md:px-5 md:py-2.5 flex items-center ${
+            className={`bg-gray-05 rounded-lg p-4 md:px-5 md:py-2.5 flex items-center ${
               variant === "config" ? "justify-start" : "justify-between"
             }`}
           >
@@ -28,7 +28,7 @@ const RenderInfoCard = ({
                   <Text
                     as="h6"
                     fontFamily="spaceMono"
-                    textColor={row.leftColor || "gray-85"}
+                    textColor={row.leftColor || "gray-03"}
                   >
                     {row.left}
                   </Text>
@@ -47,7 +47,7 @@ const RenderInfoCard = ({
                   {row.icon && (
                     <Text
                       fontFamily="spaceMono"
-                      textColor={row.iconColor || "gray-85"}
+                      textColor={row.iconColor || "gray-03"}
                     >
                       {row.icon}
                     </Text>
@@ -63,7 +63,7 @@ const RenderInfoCard = ({
 
                 <Text
                   fontFamily="spaceMono"
-                  textColor={row.rightColor || "gray-85"}
+                  textColor={row.rightColor || "gray-03"}
                 >
                   {row.right}
                 </Text>

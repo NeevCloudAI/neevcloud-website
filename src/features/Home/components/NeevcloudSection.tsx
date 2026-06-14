@@ -1,8 +1,7 @@
 import Container from "@/shared/components/container";
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import CloudComparisonCard from "./CloudComparisonCard";
 import { CLOUD_COMPARISON_CARDS } from "../data/cloud-comparison-cards";
-import LinkComponent from "@/shared/ui-lib/link";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const LEGACY_CLOUD_PROBLEMS = [
@@ -35,7 +34,7 @@ export default function NeevcloudSection() {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           Legacy cloud providers and expensive &quot;neoclouds&quot; often force
@@ -52,7 +51,7 @@ export default function NeevcloudSection() {
                 Problems you face today
               </Text>
               <Text
-                textColor="gray-66"
+                textColor="black/60"
                 className="max-w-60 mt-2.5"
                 fontFamily="spaceMono"
               >
@@ -82,7 +81,7 @@ export default function NeevcloudSection() {
               </div>
             </div>
 
-            <div className="bg-red-light py-3 text-center -mx-6 mt-4">
+            <div className="bg-red-text/20 py-3 text-center -mx-6 mt-4">
               <Text
                 as="h6"
                 fontFamily="spaceMono"
@@ -106,7 +105,7 @@ export default function NeevcloudSection() {
             <Text as="small">neevcloud.com</Text>
           </div>
 
-          <div className="flex-1 flex flex-col justify-between p-8 bg-[url('/images/compute.png')] bg-right bg-contain bg-no-repeat">
+          <div className="flex-1 flex flex-col justify-between p-4 md:p-8 bg-[url('/images/compute.png')] bg-right bg-contain bg-no-repeat">
             <div className="max-w-md">
               <div>
                 <Text as="h3" weight="semibold">

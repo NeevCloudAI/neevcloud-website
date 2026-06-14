@@ -1,18 +1,13 @@
-import type { Metadata } from "next";
 import { AcceptableUserPolicyComponent } from "@/features/acceptable-user-policy";
+import { buildPageMetadata } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Acceptable User Policy | NeevCloud",
   description:
     "NeevCloud acceptable use policy for platform and infrastructure services.",
-  openGraph: {
-    title: "Acceptable User Policy | NeevCloud",
-    description:
-      "NeevCloud acceptable use policy for platform and infrastructure services.",
-  },
-};
+});
 
 const AcceptableUserPolicyPage = () => {
   return <AcceptableUserPolicyComponent />;

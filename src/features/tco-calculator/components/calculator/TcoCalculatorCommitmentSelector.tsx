@@ -33,7 +33,7 @@ const TcoCalculatorCommitmentSelector = ({
               "rounded-lg border px-3 py-2.5 text-left transition-colors",
               isSelected
                 ? "border-primary bg-primary text-white"
-                : "border-white-10 bg-white-5 hover:border-primary-50",
+                : "border-white/12 bg-white/6 hover:border-primary"
             )}
           >
             <Text

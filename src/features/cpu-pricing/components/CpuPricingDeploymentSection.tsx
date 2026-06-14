@@ -70,7 +70,7 @@ type CpuPricingDeploymentItemProps = {
 
 const CpuPricingDeploymentItem = ({ item }: CpuPricingDeploymentItemProps) => {
   return (
-    <article className="flex h-full flex-col rounded-md bg-white p-4 md:p-9 border border-primary-130">
+    <article className="flex h-full flex-col rounded-md bg-white p-4 md:p-9 border border-primary/60">
       <div className="flex items-center justify-between">
         <div>
           <Text as="small" textColor="primary" fontFamily="spaceMono">
@@ -92,7 +92,7 @@ const CpuPricingDeploymentItem = ({ item }: CpuPricingDeploymentItemProps) => {
       </div>
       <Text
         as="h6"
-        textColor="gray-66"
+        textColor="black/60"
         className="mt-5 md:mt-11.5"
         weight="regular"
       >
@@ -105,14 +105,14 @@ const CpuPricingDeploymentItem = ({ item }: CpuPricingDeploymentItemProps) => {
               <Text as="h6" textColor="primary" className="shrink-0">
                 •
               </Text>
-              <Text as="h6" textColor="gray-66">
+              <Text as="h6" textColor="black/60">
                 {item}
               </Text>
             </li>
           ))}
         </ul>
       ) : (
-        <pre className="mt-5 md:mt-8.75 flex gap-1 flex-col p-4 md:px-4.25 md:py-3 border border-primary rounded-md bg-primary-40">
+        <pre className="mt-5 md:mt-8.75 flex gap-1 flex-col p-4 md:px-4.25 md:py-3 border border-primary rounded-md bg-primary/10">
           {item.codeSnippet?.map((item) => (
             <code key={item.code} className={`text-${item.textColor} text-xs`}>
               {item.code}
@@ -127,7 +127,7 @@ const CpuPricingDeploymentItem = ({ item }: CpuPricingDeploymentItemProps) => {
 const CpuPricingDeploymentSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="cpu-pricing-deployment-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

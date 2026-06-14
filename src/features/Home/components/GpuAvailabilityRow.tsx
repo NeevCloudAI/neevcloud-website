@@ -7,7 +7,7 @@ type GpuAvailabilityRowProps = {
   showDividerBelow: boolean;
 };
 
-const BADGE_CLASS = "bg-white-10 rounded-xl px-2.5 py-1";
+const BADGE_CLASS = "bg-white/12 rounded-xl px-2.5 py-1";
 
 export default function GpuAvailabilityRow({
   rowId,
@@ -16,7 +16,7 @@ export default function GpuAvailabilityRow({
 }: GpuAvailabilityRowProps) {
   return (
     <>
-      <div className="grid grid-cols-[minmax(120px,1fr)_auto_auto] items-center gap-2 px-4 py-4 text-gray-10 sm:gap-3 md:grid-cols-[minmax(180px,1fr)_auto_minmax(120px,1fr)] md:gap-4 md:px-14 md:py-5">
+      <div className="grid grid-cols-[minmax(120px,1fr)_auto_auto] items-center gap-2 px-4 py-4 text-cloud-gray sm:gap-3 md:grid-cols-[minmax(180px,1fr)_auto_minmax(120px,1fr)] md:gap-4 md:px-14 md:py-5">
         <Text className="justify-self-start">{modelName}</Text>
         <div className="flex flex-wrap items-center justify-start gap-2 ">
           {INFRASTRUCTURE_GPU_SPEC_BADGES.map((label, index) => (
@@ -38,7 +38,7 @@ export default function GpuAvailabilityRow({
         </Text>
       </div>
       {showDividerBelow ? (
-        <Divider orientation="horizontal" className="bg-white-10" />
+        <Divider orientation="horizontal" className="bg-white/12" />
       ) : null}
     </>
   );

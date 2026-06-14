@@ -9,7 +9,7 @@ import {
 const PrinciplesSection = () => {
   return (
     <section
-      className="relative overflow-hidden bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative overflow-hidden bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="principles-section-heading"
     >
       <Container className="relative flex flex-col items-center justify-center">

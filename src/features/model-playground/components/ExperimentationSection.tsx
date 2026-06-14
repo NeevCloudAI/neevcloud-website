@@ -33,7 +33,6 @@ const ExperimentationSection = () => {
                 description={feature.description}
                 theme="transparent"
                 icon={feature.icon}
-                className="bg-gray-120 backdrop-blur-md"
               />
             </li>
           ))}

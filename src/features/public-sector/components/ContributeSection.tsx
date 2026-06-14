@@ -26,7 +26,7 @@ const ContributeSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black-5"
+          textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
           {`The India AI Mission aims to democratize AI access, build indigenous

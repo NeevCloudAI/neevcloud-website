@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const StoragePerformanceSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="nvme-storage-performance-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -22,7 +22,7 @@ const StoragePerformanceSection = () => {
             GPU Performance
           </Text>
         </Text>
-        <Text align="center" textColor="black-5" className="max-w-3xl mt-2.5">
+        <Text align="center" textColor="black/82" className="max-w-3xl mt-2.5">
           NeevCloud&apos;s high-performance NVMe local disks deliver sustained
           throughput and microsecond-level latency, so your compute never waits
           on your storage.

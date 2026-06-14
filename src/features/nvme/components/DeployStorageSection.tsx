@@ -6,7 +6,7 @@ import { Text } from "@/shared/ui-lib";
 const DeployStorageSection = () => {
   return (
     <section
-      className="relative bg-gray-10 py-8 md:py-16 2xl:py-25"
+      className="relative bg-cloud-gray py-8 md:py-16 2xl:py-25"
       aria-labelledby="nvme-deploy-storage-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const DeployStorageSection = () => {
           as="h6"
           className="max-w-3xl mt-2.5"
           align="center"
-          textColor="gray-90"
+          textColor="gray-05"
         >
           Choose your deployment mode, automatic provisioning at launch or
           custom capacity. Generate your exact CLI command instantly.

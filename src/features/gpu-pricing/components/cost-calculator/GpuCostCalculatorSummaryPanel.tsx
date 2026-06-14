@@ -1,11 +1,10 @@
-import { Divider, Text } from "@/shared/ui-lib";
+import { Divider, Text, LinkComponent } from "@/shared/ui-lib";
 import { GPU_COST_CALCULATOR_SECTION } from "../../data/cost-calculator-section.data";
 import type { GpuCostCalculatorBreakdown } from "../../types/cost-calculator-section.types";
 import {
   formatCurrency,
   formatRatePerHour,
 } from "../../utils/gpu-cost-calculator-utils";
-import LinkComponent from "@/shared/ui-lib/link";
 
 type GpuCostCalculatorSummaryPanelProps = {
   breakdown: GpuCostCalculatorBreakdown;
@@ -24,13 +23,13 @@ const GpuCostCalculatorSummaryPanel = ({
       : "-";
 
   return (
-    <div className="flex h-full flex-col rounded-lg bg-gray-10 p-4 md:p-6">
-      <Text as="small" textColor="gray-85" className="uppercase">
+    <div className="flex h-full flex-col rounded-lg bg-cloud-gray p-4 md:p-6">
+      <Text as="small" textColor="gray-03" className="uppercase">
         {GPU_COST_CALCULATOR_SECTION.summaryLiveLabel}
       </Text>
       <Text
         as="small"
-        textColor="gray-85"
+        textColor="gray-03"
         weight="semibold"
         className="mt-4 uppercase tracking-wide"
       >
@@ -47,7 +46,7 @@ const GpuCostCalculatorSummaryPanel = ({
         {formatCurrency(breakdown.monthlyCost)}
       </Text>
 
-      <Text as="h6" textColor="gray-85" className="mt-2">
+      <Text as="h6" textColor="gray-03" className="mt-2">
         {breakdown.summaryLabel}
       </Text>
 
@@ -55,7 +54,7 @@ const GpuCostCalculatorSummaryPanel = ({
 
       <ul className="m-0 flex list-none flex-col gap-2 p-0">
         <li className="flex items-center justify-between gap-4">
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             Base rate
           </Text>
           <Text as="small" textColor="primary">
@@ -63,13 +62,13 @@ const GpuCostCalculatorSummaryPanel = ({
           </Text>
         </li>
         <li className="flex items-center justify-between gap-4">
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             Hours / month
           </Text>
           <Text as="small">{hoursPerMonth}</Text>
         </li>
         <li className="flex items-center justify-between gap-4">
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             Subtotal
           </Text>
           <Text as="small" textColor="primary">
@@ -77,15 +76,15 @@ const GpuCostCalculatorSummaryPanel = ({
           </Text>
         </li>
         <li className="flex items-center justify-between gap-4">
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             {breakdown.commitmentLabel} discount
           </Text>
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             {discountLabel}
           </Text>
         </li>
         <li className="flex items-center justify-between gap-4">
-          <Text as="small" textColor="gray-85">
+          <Text as="small" textColor="gray-03">
             Annualized
           </Text>
           <Text as="small" textColor="primary">

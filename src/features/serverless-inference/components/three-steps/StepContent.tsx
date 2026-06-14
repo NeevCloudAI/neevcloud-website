@@ -12,14 +12,14 @@ const StepContent = ({ step }: StepContentProps) => {
       <Text
         as="h1"
         weight="semibold"
-        textColor="gray-60"
+        textColor="gray-01"
         className="text-[5rem]"
         aria-hidden="true"
       >
         {step.number}
       </Text>
 
-      <Text className="bg-gray-60 text-gray-90 rounded-full px-3.75 py-1.25 w-fit mt-2">
+      <Text className="bg-gray-01 text-gray-05 rounded-full px-3.75 py-1.25 w-fit mt-2">
         {step.badge}
       </Text>
 
@@ -49,13 +49,13 @@ const StepContent = ({ step }: StepContentProps) => {
               />
             ) : (
               <Clock
-                className="w-4.5 h-4.5 text-blue-40 shrink-0"
+                className="w-4.5 h-4.5 text-gray-02 shrink-0"
                 aria-hidden="true"
               />
             )}
             <Text
               as="h6"
-              textColor={item.type === "check" ? "black" : "blue-40"}
+              textColor={item.type === "check" ? "black" : "gray-02"}
             >
               {item.text}
             </Text>

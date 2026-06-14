@@ -28,7 +28,10 @@ const StepsTabsSection = ({
 
   return (
     <section
-      className={cn("relative bg-gray-10 py-8 md:py-16 2xl:py-25", className)}
+      className={cn(
+        "relative bg-cloud-gray py-8 md:py-16 2xl:py-25",
+        className
+      )}
     >
       <Container className="flex flex-col items-center justify-center">
         {heading}
@@ -57,7 +60,7 @@ const StepsTabsSection = ({
                     "flex pl-5.25 pr-5 py-2.25 shrink-0 items-center justify-center rounded-md text-2xl font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-60 text-black hover:bg-gray-65 hover:text-white",
+                      : "bg-gray-01 text-black hover:bg-gray-65 hover:text-white"
                   )}
                 >
                   {index + 1}
@@ -65,7 +68,7 @@ const StepsTabsSection = ({
                 {index < steps.length - 1 ? (
                   <Divider
                     orientation="horizontal"
-                    className="mx-2 w-8 md:w-10 bg-blue-40"
+                    className="mx-2 w-8 md:w-10 bg-gray-02"
                   />
                 ) : null}
               </div>
@@ -73,7 +76,7 @@ const StepsTabsSection = ({
           })}
         </div>
 
-        <div className="overflow-hidden rounded-lg mt-4 md:mt-7.5 flex flex-col md:flex-row h-120">
+        <div className="overflow-hidden rounded-lg mt-4 md:mt-7.5 flex flex-col md:flex-row md:h-120">
           <div
             role="tabpanel"
             id={activePanelId}
@@ -86,11 +89,7 @@ const StepsTabsSection = ({
             >
               • &nbsp; Step {activeStep + 1} - {current.badgeLabel}
             </Text>
-            <Text
-              as="h3"
-              weight="semibold"
-              className="mt-4 md:mt-6 text-[30px]"
-            >
+            <Text as="h3" weight="semibold" className="mt-4 md:mt-6 text-30px">
               {current.title}
             </Text>
             <Text as="h6" className="mt-2.5">
@@ -100,19 +99,19 @@ const StepsTabsSection = ({
               {current.features?.map((feature) => (
                 <li
                   key={feature}
-                  className="flex gap-2.5 rounded-md bg-gray-20 px-3.75 py-2.5"
+                  className="flex gap-2.5 rounded-md bg-gray-01 px-3.75 py-2.5"
                 >
                   <Text as="h6" textColor="primary" className="shrink-0">
                     •
                   </Text>
-                  <Text as="h6" textColor="gray-90">
+                  <Text as="h6" textColor="gray-05">
                     {feature}
                   </Text>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="w-full">
+          <div className="w-full bg-black">
             {previews.map((preview, index) => (
               <div
                 key={`${tabIdPrefix}-preview-${index}`}

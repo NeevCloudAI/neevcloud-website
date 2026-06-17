@@ -17,8 +17,8 @@ const GettingStartedPanelClient = () => {
       GETTING_STARTED_STEPS.map((step, index) => [
         index,
         step.tabs[0]?.id ?? "",
-      ])
-    )
+      ]),
+    ),
   );
 
   const handleStepSelect = useCallback((index: number) => {
@@ -32,7 +32,7 @@ const GettingStartedPanelClient = () => {
         [activeStep]: tabId,
       }));
     },
-    [activeStep]
+    [activeStep],
   );
 
   const handlePrevious = useCallback(() => {
@@ -41,7 +41,7 @@ const GettingStartedPanelClient = () => {
 
   const handleNext = useCallback(() => {
     setActiveStep((current) =>
-      Math.min(current + 1, GETTING_STARTED_STEPS.length - 1)
+      Math.min(current + 1, GETTING_STARTED_STEPS.length - 1),
     );
   }, []);
 

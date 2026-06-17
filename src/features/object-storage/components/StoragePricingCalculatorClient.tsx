@@ -24,27 +24,27 @@ import StoragePricingTierTabs from "./pricing/StoragePricingTierTabs";
 
 const StoragePricingCalculatorClient = () => {
   const [selectedTierId, setSelectedTierId] = useState<StoragePricingTierId>(
-    DEFAULT_STORAGE_TIER_ID
+    DEFAULT_STORAGE_TIER_ID,
   );
   const [additionalStorageGb, setAdditionalStorageGb] = useState(
-    DEFAULT_ADDITIONAL_STORAGE_GB
+    DEFAULT_ADDITIONAL_STORAGE_GB,
   );
 
   const selectedTier = STORAGE_PRICING_TIERS.find(
-    (tier) => tier.id === selectedTierId
+    (tier) => tier.id === selectedTierId,
   );
   const storageSlider = storageToSlider(
     additionalStorageGb,
     MIN_ADDITIONAL_STORAGE_GB,
-    MAX_ADDITIONAL_STORAGE_GB
+    MAX_ADDITIONAL_STORAGE_GB,
   );
   const monthlyCost = useMemo(
     () =>
       calculateMonthlyStorageCost(
         additionalStorageGb,
-        selectedTier?.pricePerGbMonth ?? 0
+        selectedTier?.pricePerGbMonth ?? 0,
       ),
-    [additionalStorageGb, selectedTier?.pricePerGbMonth]
+    [additionalStorageGb, selectedTier?.pricePerGbMonth],
   );
 
   return (
@@ -81,8 +81,8 @@ const StoragePricingCalculatorClient = () => {
               sliderToStorage(
                 value,
                 MIN_ADDITIONAL_STORAGE_GB,
-                MAX_ADDITIONAL_STORAGE_GB
-              )
+                MAX_ADDITIONAL_STORAGE_GB,
+              ),
             )
           }
           ariaLabel="Additional storage in gigabytes"

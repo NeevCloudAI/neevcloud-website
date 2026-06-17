@@ -3,7 +3,8 @@ import type { StoragePricingTierId } from "../types/transparent-pricing-section.
 export const MIN_ADDITIONAL_STORAGE_GB = 0;
 export const MAX_ADDITIONAL_STORAGE_GB = 500;
 export const DEFAULT_ADDITIONAL_STORAGE_GB = 100;
-export const DEFAULT_STORAGE_TIER_ID: StoragePricingTierId = "infrequent-access";
+export const DEFAULT_STORAGE_TIER_ID: StoragePricingTierId =
+  "infrequent-access";
 
 export const INCLUDED_FEATURES = [
   "99.999999999% durability",

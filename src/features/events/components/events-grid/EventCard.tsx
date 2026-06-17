@@ -25,7 +25,7 @@ const EventCard = ({ event }: EventCardProps) => {
             "rounded-sm px-2.5 py-1 capitalize",
             isUpcoming
               ? "bg-primary/12 border border-primary/18"
-              : "bg-gray-05/12 border border-gray-05/18"
+              : "bg-gray-05/12 border border-gray-05/18",
           )}
         >
           {event.status}

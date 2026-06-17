@@ -25,7 +25,7 @@ const megaMenuPanelClassName = cn(
   "absolute left-1/2 top-full z-100",
   "w-full max-w-[min(1000px,calc(100vw-2rem))]",
   "-translate-x-1/2",
-  "rounded-b-md bg-white shadow-md"
+  "rounded-b-md bg-white shadow-md",
 );
 
 const navLinkUnderlineClassName =
@@ -54,7 +54,7 @@ const LOGIN_OPTIONS = [
 
 function shouldCloseMegaMenuOnClick(target: EventTarget | null): boolean {
   return Boolean(
-    target instanceof Element && target.closest("a, button[type='button']")
+    target instanceof Element && target.closest("a, button[type='button']"),
   );
 }
 
@@ -63,7 +63,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
   const [mobileExpandedNavId, setMobileExpandedNavId] =
     useState<HeaderNavId | null>(null);
   const [desktopOpenNavId, setDesktopOpenNavId] = useState<HeaderNavId | null>(
-    null
+    null,
   );
 
   const closeDesktopMegaMenu = () => setDesktopOpenNavId(null);
@@ -117,7 +117,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }}
                   onMouseLeave={() => {
                     setDesktopOpenNavId((current) =>
-                      current === navItem.id ? null : current
+                      current === navItem.id ? null : current,
                     );
                   }}
                   onFocusCapture={() => {
@@ -126,11 +126,11 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   onBlurCapture={(event) => {
                     if (
                       !event.currentTarget.contains(
-                        event.relatedTarget as Node | null
+                        event.relatedTarget as Node | null,
                       )
                     ) {
                       setDesktopOpenNavId((current) =>
-                        current === navItem.id ? null : current
+                        current === navItem.id ? null : current,
                       );
                     }
                   }}
@@ -269,7 +269,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   onClick={() => {
                     if (!hasMegaMenu) return;
                     setMobileExpandedNavId((prev) =>
-                      prev === navItem.id ? null : navItem.id
+                      prev === navItem.id ? null : navItem.id,
                     );
                   }}
                 >
@@ -279,7 +279,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                       size={18}
                       className={cn(
                         "shrink-0 text-gray-04 transition-transform duration-200",
-                        isExpanded && "rotate-180"
+                        isExpanded && "rotate-180",
                       )}
                       aria-hidden
                     />

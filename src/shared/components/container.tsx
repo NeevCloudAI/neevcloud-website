@@ -16,7 +16,7 @@ export default function Container({
       className={cn(
         "max-w-screen-1xl 2xl:max-w-screen-2xl",
         alignRight ? "mx-auto w-full px-4" : "mx-auto w-full px-4",
-        className
+        className,
       )}
     >
       {children}

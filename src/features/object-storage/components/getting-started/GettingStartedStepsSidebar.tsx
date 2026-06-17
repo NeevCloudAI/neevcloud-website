@@ -38,7 +38,7 @@ const GettingStartedStepsSidebar = ({
                   "rounded-md border px-5 py-2.5 text-left flex items-center gap-2.5",
                   isActive
                     ? "border-primary-90/18 bg-primary-90/12"
-                    : "border-white/12 bg-white/6"
+                    : "border-white/12 bg-white/6",
                 )}
               >
                 <Text

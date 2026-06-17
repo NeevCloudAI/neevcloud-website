@@ -22,7 +22,7 @@ const MlWorkflowCard = ({ card }: MlWorkflowCardProps) => {
   return (
     <article
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-lg bg-cloud-gray p-4 sm:p-10"
+        "group relative flex flex-col overflow-hidden rounded-lg bg-cloud-gray p-4 sm:p-10",
       )}
     >
       <MlWorkflowCardPreview variant={variant} />
@@ -48,7 +48,7 @@ const MlWorkflowCard = ({ card }: MlWorkflowCardProps) => {
       <div
         className={cn(
           "absolute inset-0 flex translate-y-full flex-col bg-primary/92 p-4 backdrop-blur-md transition-transform duration-500 ease-out md:p-10",
-          "group-hover:translate-y-0 group-focus-within:translate-y-0"
+          "group-hover:translate-y-0 group-focus-within:translate-y-0",
         )}
       >
         <Text as="h6" textColor="white/62">

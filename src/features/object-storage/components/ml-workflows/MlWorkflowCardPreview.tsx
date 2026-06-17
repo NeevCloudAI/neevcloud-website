@@ -28,7 +28,7 @@ function VersioningPreview() {
             <span
               className={cn(
                 "size-2 shrink-0 rounded-full",
-                row.active ? "bg-primary" : "bg-gray-04"
+                row.active ? "bg-primary" : "bg-gray-04",
               )}
             />
             <Text
@@ -62,7 +62,7 @@ function ReplicationPreview() {
     <div
       className={cn(
         PREVIEW_FRAME_CLASS,
-        "flex-row items-center justify-between md:p-10"
+        "flex-row items-center justify-between md:p-10",
       )}
       aria-hidden="true"
     >
@@ -147,7 +147,7 @@ function PerformancePreview() {
             <div
               className={cn(
                 "h-full rounded-full bg-linear-to-r from-primary-210 to-primary-90",
-                row.width
+                row.width,
               )}
             />
           </div>

@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Button, Text } from "@/shared/ui-lib";
+import { Button } from "@/shared/ui-lib";
 import type { GettingStartedStep } from "../../types/getting-started-section.types";
 
 type GettingStartedLanguageTabsProps = {
@@ -36,7 +36,7 @@ const GettingStartedLanguageTabs = ({
             onClick={() => onTabSelect(tab.id)}
             className={cn(
               "transition-colors",
-              isActive ? "border-b border-primary text-primary" : "text-white"
+              isActive ? "border-b border-primary text-primary" : "text-white",
             )}
           >
             {tab.label}

@@ -30,7 +30,7 @@ const StepsTabsSection = ({
     <section
       className={cn(
         "relative bg-cloud-gray py-8 md:py-16 2xl:py-25",
-        className
+        className,
       )}
     >
       <Container className="flex flex-col items-center justify-center">
@@ -60,7 +60,7 @@ const StepsTabsSection = ({
                     "flex pl-5.25 pr-5 py-2.25 shrink-0 items-center justify-center rounded-md text-2xl font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
                     isActive
                       ? "bg-primary text-white"
-                      : "bg-gray-01 text-black hover:bg-gray-65 hover:text-white"
+                      : "bg-gray-01 text-black hover:bg-gray-65 hover:text-white",
                   )}
                 >
                   {index + 1}

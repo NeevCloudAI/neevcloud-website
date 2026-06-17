@@ -30,7 +30,7 @@ export default function AnnouncementSection() {
           style={{ transform: `translateY(-${i}lh)` }}
         >
           {HEADINGS.map((text) => (
-            <Text as="span" key={text} className="h-lh leading-lh">
+            <Text as="span" key={text}>
               {text}
             </Text>
           ))}

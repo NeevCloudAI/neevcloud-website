@@ -15,7 +15,7 @@ const PurposeFlowCard = ({ node, className }: PurposeFlowCardProps) => {
       className={cn(
         "flex flex-col items-center rounded-lg py-5",
         isNetwork ? "px-12.5" : "px-15.5",
-        className
+        className,
       )}
     >
       {node.subtitle && !node.badge && (

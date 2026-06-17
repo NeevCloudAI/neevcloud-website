@@ -33,22 +33,22 @@ const navLinkUnderlineClassName =
 
 const LOGIN_OPTIONS = [
   {
+    label: "Login to AI SuperCloud",
+    href: EXTERNAL_LINKS.aiSupercloudConsole,
+    icon: GpuIcon,
+    variant: "default" as const,
+  },
+  {
     label: "Login to CPU Cloud",
     href: EXTERNAL_LINKS.signup,
     icon: CpuIcon,
     variant: "secondary" as const,
   },
   {
-    label: "Login to AI Cloud",
-    href: EXTERNAL_LINKS.aiSupercloudConsole,
-    icon: GpuIcon,
-    variant: "default" as const,
-  },
-  {
     label: "Login to Cloud Storage",
     href: EXTERNAL_LINKS.zataAiSignup,
     icon: DatabaseIcon,
-    variant: "default" as const,
+    variant: "deep-blue" as const,
   },
 ];
 
@@ -161,7 +161,8 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
         <div className="group relative hidden header-buttons:block">
           <Button
             spacing="md"
-            className="gap-1.5 flex items-center drop-shadow-[0_0_10px_#58D7A7]"
+            borderRadius="xl"
+            className="gap-1.5 flex items-center drop-shadow-[0_0_10px_#58D7A7] px-4 md:px-8 "
           >
             Login
             <ChevronDown
@@ -170,7 +171,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
               aria-hidden
             />
           </Button>
-          <div className="invisible absolute right-0 top-full z-100 p-2 overflow-hidden rounded-md border border-cloud-gray bg-white opacity-0 transition-opacity group-hover:visible group-hover:opacity-100">
+          <div className="mt-0.5 invisible absolute right-0 top-full z-100 p-2 overflow-hidden rounded-md border border-cloud-gray bg-white opacity-0 transition-opacity group-hover:visible group-hover:opacity-100">
             {LOGIN_OPTIONS.map(({ label, href, icon: LoginIcon }) => (
               <LinkComponent
                 key={label}
@@ -178,7 +179,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                 target="_blank"
                 variant="ghost"
                 spacing="md"
-                className="w-full rounded-none flex items-center gap-2 hover:bg-cloud-gray"
+                className="w-full rounded-none flex items-center gap-2 hover:bg-cloud-gray whitespace-nowrap"
               >
                 <LoginIcon size={16} aria-hidden />
                 {label}

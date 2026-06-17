@@ -27,7 +27,7 @@ const CpuTransparentPricingInstanceTypeSidebar = ({
                   "w-full flex items-center gap-3 border p-3 md:w-70 rounded-md",
                   isActive
                     ? "bg-primary-210/6 border-primary-210/60"
-                    : "bg-white/6 border-white/12"
+                    : "bg-white/6 border-white/12",
                 )}
               >
                 <option.icon

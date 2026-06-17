@@ -11,7 +11,7 @@ import AiInferenceTransparentPricingTerminalHeader from "./AiInferenceTransparen
 
 const AiInferenceTransparentPricingPanelClient = () => {
   const [activeFamily, setActiveFamily] = useState<AiInferenceModelFamilyId>(
-    DEFAULT_AI_INFERENCE_MODEL_FAMILY
+    DEFAULT_AI_INFERENCE_MODEL_FAMILY,
   );
 
   const family =

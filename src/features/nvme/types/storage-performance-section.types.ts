@@ -1,4 +1,4 @@
-import type { LucideIconName } from "@/shared/icons/lucide-icon-map";
+import type { LucideIcon } from "@/shared/icons/lucide-icon-map";
 
 export type StoragePerformanceFeature = {
   text: string;
@@ -7,7 +7,7 @@ export type StoragePerformanceFeature = {
 
 export type StoragePerformanceCardData = {
   id: string;
-  icon: LucideIconName;
+  icon: LucideIcon;
   title: string;
   subtitle: string;
   description: string;

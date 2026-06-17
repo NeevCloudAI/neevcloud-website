@@ -25,7 +25,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
     title: "KubeCon India 2026",
     description:
       "Meet the NeevCloud team at India's premier Kubernetes and cloud-native conference.",
-    date: "Aug, 2026",
+    date: "18-19 June, 2026",
     location: "Mumbai, India",
     ctaLabel: "Register Now",
     ctaHref: EXTERNAL_LINKS.discord,
@@ -39,11 +39,8 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
     title: "India AI Impact Summit 2026",
     description:
       "NeevCloud showcased its Sovereign End-to-End SuperAI Cloud Platform at India's flagship AI summit.",
-    date: "2026",
-    location: "Hyderabad, India",
-    ctaLabel: "View Recap",
-    ctaHref: EXTERNAL_LINKS.neevcloudLinkedin,
-    ctaTarget: "_blank",
+    date: "Feb 2026",
+    location: "Delhi, India",
   },
   {
     id: "gpu-infrastructure-workshop-jan-2026",
@@ -55,9 +52,6 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "Hands-on session covering GPU provisioning, workload placement, and production inference patterns.",
     date: "Jan, 2026",
     location: "Bengaluru / Online",
-    ctaLabel: "Join Workshop",
-    ctaHref: EXTERNAL_LINKS.tutorials,
-    ctaTarget: "_blank",
   },
   {
     id: "building-sovereign-ai-webinar",
@@ -69,9 +63,6 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "Learn how teams design India-first AI stacks with data residency, GPU scale, and unified APIs.",
     date: "Jul, 2026",
     location: "Online",
-    ctaLabel: "Save Seat",
-    ctaHref: EXTERNAL_LINKS.signup,
-    ctaTarget: "_blank",
   },
   {
     id: "inference-at-scale-webinar",
@@ -83,9 +74,6 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "Engineering leaders share how they optimize latency, cost, and throughput on production GPU fleets.",
     date: "Mar, 2026",
     location: "Online",
-    ctaLabel: "Watch Recording",
-    ctaHref: EXTERNAL_LINKS.tutorials,
-    ctaTarget: "_blank",
   },
   {
     id: "gpu-infrastructure-deep-dive",
@@ -97,9 +85,6 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "Deep-dive into cluster design, scheduling, and observability for large-scale AI training and inference.",
     date: "Jan, 2026",
     location: "Bangalore / Online",
-    ctaLabel: "Join Workshop",
-    ctaHref: EXTERNAL_LINKS.tutorials,
-    ctaTarget: "_blank",
   },
   {
     id: "community-meetup",
@@ -111,9 +96,6 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "Monthly meetup for builders, operators, and researchers working on AI infrastructure in India.",
     date: "Monthly",
     location: "Hyderabad, India",
-    ctaLabel: "RSVP",
-    ctaHref: EXTERNAL_LINKS.discord,
-    ctaTarget: "_blank",
   },
   {
     id: "ai-developer-day",
@@ -125,9 +107,6 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "A full-day experience with keynotes, live demos, and technical sessions on the NeevCloud platform.",
     date: "May 2026",
     location: "Bengaluru, India",
-    ctaLabel: "View Recap",
-    ctaHref: EXTERNAL_LINKS.neevcloudLinkedin,
-    ctaTarget: "_blank",
   },
   {
     id: "open-office-hours",
@@ -139,15 +118,12 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
       "Weekly open sessions with the NeevCloud engineering team for architecture reviews and Q&A.",
     date: "Every Thursday",
     location: "Discord / Online",
-    ctaLabel: "Join Discord",
-    ctaHref: EXTERNAL_LINKS.discord,
-    ctaTarget: "_blank",
   },
 ] as const;
 
 export function matchesEventFilter(
   event: EventCardItem,
-  filter: EventFilterId,
+  filter: EventFilterId
 ): boolean {
   switch (filter) {
     case "all":

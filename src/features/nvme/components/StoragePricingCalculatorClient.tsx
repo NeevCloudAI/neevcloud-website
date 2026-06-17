@@ -20,17 +20,17 @@ import StoragePricingIncludedFeatures from "./pricing/StoragePricingIncludedFeat
 
 const StoragePricingCalculatorClient = () => {
   const [additionalStorageGb, setAdditionalStorageGb] = useState(
-    DEFAULT_ADDITIONAL_STORAGE_GB
+    DEFAULT_ADDITIONAL_STORAGE_GB,
   );
 
   const storageSlider = storageToSlider(
     additionalStorageGb,
     MIN_ADDITIONAL_STORAGE_GB,
-    MAX_ADDITIONAL_STORAGE_GB
+    MAX_ADDITIONAL_STORAGE_GB,
   );
   const monthlyCost = useMemo(
     () => calculateMonthlyStorageCost(additionalStorageGb),
-    [additionalStorageGb]
+    [additionalStorageGb],
   );
 
   return (
@@ -55,8 +55,8 @@ const StoragePricingCalculatorClient = () => {
               sliderToStorage(
                 value,
                 MIN_ADDITIONAL_STORAGE_GB,
-                MAX_ADDITIONAL_STORAGE_GB
-              )
+                MAX_ADDITIONAL_STORAGE_GB,
+              ),
             )
           }
           ariaLabel="Additional storage in gigabytes"

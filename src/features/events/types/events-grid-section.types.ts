@@ -24,9 +24,9 @@ export type EventCardItem = {
   description: string;
   date: string;
   location: string;
-  ctaLabel: string;
-  ctaHref: string;
-  ctaTarget: "_blank" | "_self" | "_parent" | "_top";
+  ctaLabel?: string;
+  ctaHref?: string;
+  ctaTarget?: "_blank" | "_self" | "_parent" | "_top";
 };
 
 export type EventsGridSectionClientProps = {

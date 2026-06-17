@@ -57,7 +57,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
               className={cn(
                 "flex flex-col p-4 border-gray-01",
                 !isLastRow && "border-b",
-                !isRightColumn && "border-r"
+                !isRightColumn && "border-r",
               )}
             >
               <Text as="small" textColor="gray-04">

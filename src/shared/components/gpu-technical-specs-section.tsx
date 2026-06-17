@@ -23,7 +23,7 @@ const GpuTechnicalSpecsSection = ({
     <section
       className={cn(
         "relative bg-cloud-gray py-8 md:py-16 2xl:py-25",
-        className
+        className,
       )}
       aria-labelledby="gpu-technical-specs-section-heading"
     >
@@ -45,7 +45,7 @@ const GpuTechnicalSpecsSection = ({
             "mt-4 w-full md:mt-12.5",
             hasCharts
               ? "grid grid-cols-1 items-start gap-2.5 lg:grid-cols-[1.15fr_0.85fr]"
-              : "max-w-4xl"
+              : "max-w-4xl",
           )}
         >
           <GpuTechnicalSpecsTable rows={rows} />

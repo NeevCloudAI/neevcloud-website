@@ -77,7 +77,7 @@ const DeploymentComparisonServiceCard = ({
         target="_blank"
         className={cn(
           "mt-3 flex w-full items-center justify-center gap-2 rounded-md",
-          styles.cta
+          styles.cta,
         )}
         spacing="lg"
       >

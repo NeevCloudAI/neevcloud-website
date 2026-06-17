@@ -13,10 +13,6 @@ import { cn } from "@/lib/utils";
 
 const footerLinkClassName = "flex flex-col text-white/62 pb-2.5 text-sm";
 
-function hasFooterHref(href: string): boolean {
-  return href.trim().length > 0;
-}
-
 const FooterComponent = ({
   title,
   description,
@@ -45,23 +41,24 @@ const FooterComponent = ({
         />
 
         <div className="mb-4 md:mb-16 w-full flex flex-col md:flex-row gap-8 md:gap-16 text-white">
-          <div className="flex flex-col gap-5">
-            <Image
-              src={FOOTER_BRANDING.logo}
-              alt="NeevCloud logo"
-              width={150}
-              height={150}
-            />
-            <div>
-              <Text>{FOOTER_BRANDING.taglineLine1}</Text>
-              <Text>{FOOTER_BRANDING.taglineLine2}</Text>
-            </div>
-            <ul className="flex gap-2 md:gap-4 mb-2">
-              {FOOTER_SOCIAL_LINKS.map((social) => (
-                <li key={social.label}>
-                  {hasFooterHref(social.href) ? (
+          <div className="flex flex-col justify-between gap-5">
+            <div className="flex flex-col gap-5">
+              <Image
+                src={FOOTER_BRANDING.logo}
+                alt="NeevCloud logo"
+                width={150}
+                height={150}
+              />
+              <div>
+                <Text>{FOOTER_BRANDING.taglineLine1}</Text>
+                <Text>{FOOTER_BRANDING.taglineLine2}</Text>
+              </div>
+              <ul className="flex gap-2 md:gap-4 mb-2">
+                {FOOTER_SOCIAL_LINKS.map((social) => (
+                  <li key={social.label}>
                     <Link
                       href={social.href}
+                      target="_blank"
                       aria-label={social.label}
                       className="inline-flex"
                     >
@@ -72,25 +69,19 @@ const FooterComponent = ({
                         height={20}
                       />
                     </Link>
-                  ) : (
-                    <span className="inline-flex" aria-hidden>
-                      <Image
-                        src={social.icon}
-                        alt={social.label}
-                        width={20}
-                        height={20}
-                      />
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <Image
-              src={FOOTER_BRANDING.certificationImage}
-              alt="ISO Certifications"
-              width={300}
-              height={300}
-            />
+                  </li>
+                ))}
+              </ul>
+              <Image
+                src={FOOTER_BRANDING.certificationImage}
+                alt="ISO Certifications"
+                width={350}
+                height={350}
+              />
+            </div>
+            <Text textColor="white/32" className="whitespace-nowrap">
+              © 2026, NeevAI SuperCloud Pvt. Ltd.
+            </Text>
           </div>
           <nav
             aria-label="Footer"
@@ -119,18 +110,12 @@ const FooterLinkColumn = ({ group }: FooterLinkColumnProps) => {
       <ul>
         {group.links.map((link) => (
           <li key={link.label}>
-            {hasFooterHref(link.href) ? (
-              <Link
-                href={link.href}
-                className={cn(footerLinkClassName, "hover:text-white")}
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <Text as="span" className={footerLinkClassName}>
-                {link.label}
-              </Text>
-            )}
+            <Link
+              href={link.href}
+              className={cn(footerLinkClassName, "hover:text-white")}
+            >
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>

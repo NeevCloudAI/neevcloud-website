@@ -19,8 +19,8 @@ const TcoCalculatorSummaryPanel = ({
 }: TcoCalculatorSummaryPanelProps) => {
   const maxProviderTotal = Math.max(
     ...TCO_CALCULATOR_PROVIDERS.map(
-      (provider) => breakdown.providerTotals[provider.id]
-    )
+      (provider) => breakdown.providerTotals[provider.id],
+    ),
   );
 
   return (

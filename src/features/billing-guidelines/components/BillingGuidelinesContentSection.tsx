@@ -4,7 +4,7 @@ import { Li, LinkComponent, List, Text } from "@/shared/ui-lib";
 const BillingGuidelinesContentSection = () => {
   return (
     <section className=" bg-cloud-gray py-8 md:py-16 2xl:py-25">
-      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-5">
+      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-2.5">
         <Text>
           All our signups go through a stringent fraud-detection procedure. Our
           verification department cross-checks all the information given during
@@ -208,25 +208,25 @@ const BillingGuidelinesContentSection = () => {
           Steps the customer need to follow to make payment for Non-Rupee Bank
           Transfer.
         </Text>
-        <List as="ol" variant="legal" className="list-none">
-          <Li>1. &nbsp;Login into your online Bank Account.</Li>
-          <Li>2. &nbsp;Click on Online Transfer</Li>
+        <List as="ol" variant="decimal">
+          <Li>Login into your online Bank Account.</Li>
+          <Li>Click on Online Transfer</Li>
           <Li>
-            3. &nbsp;Add Payee to your online banking account with following
-            details mentioned below.
+            Add Payee to your online banking account with following details
+            mentioned below.
           </Li>
           <Li>
-            4. &nbsp;If you are unable to add payee; kindly contact customer
-            care department of your bank and ask them to add “Rackbank®
-            Datacenters Private Ltd.” manually.
+            If you are unable to add payee; kindly contact customer care
+            department of your bank and ask them to add “Rackbank® Datacenters
+            Private Ltd.” manually.
           </Li>
           <Li>
-            5. &nbsp;Once added; transfer the amount as per the discussion /
-            quote / commercials sent.
+            Once added; transfer the amount as per the discussion / quote /
+            commercials sent.
           </Li>
           <Li>
-            6. &nbsp;Please be sure to send us all the details mentioned below
-            on the completion of a successful transaction.
+            Please be sure to send us all the details mentioned below on the
+            completion of a successful transaction.
           </Li>
           <List>
             <Li>Name of the organization</Li>

@@ -17,7 +17,7 @@ export default function FaqAccordionItem({
       name="faq"
       className={cn(
         "rounded-xl border border-white/12 bg-white/6 p-4 md:px-10 md:py-7.5",
-        "[&[open]_summary_.faq-chevron]:rotate-180"
+        "[&[open]_summary_.faq-chevron]:rotate-180",
       )}
       open={defaultOpen}
     >

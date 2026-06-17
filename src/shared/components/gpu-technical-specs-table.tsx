@@ -35,7 +35,7 @@ const GpuTechnicalSpecsTable = ({ rows }: GpuTechnicalSpecsTableProps) => {
               key={row.id}
               className={cn(
                 "border-b border-gray-01 last:border-b-0",
-                index % 2 === 1 && "bg-cloud-gray"
+                index % 2 === 1 && "bg-cloud-gray",
               )}
             >
               <th

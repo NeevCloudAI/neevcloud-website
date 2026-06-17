@@ -30,7 +30,7 @@ const TcoCalculatorGpuTypeGrid = ({
                 "flex h-full w-full flex-col items-start rounded-lg border px-3 py-2.5 text-left transition-colors",
                 isSelected
                   ? "border-primary bg-primary-90/6"
-                  : "border-white/12 bg-white/6 hover:border-primary"
+                  : "border-white/12 bg-white/6 hover:border-primary",
               )}
             >
               <Text

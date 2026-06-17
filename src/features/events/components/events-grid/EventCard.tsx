@@ -55,16 +55,18 @@ const EventCard = ({ event }: EventCardProps) => {
 
       <Divider orientation="horizontal" className="bg-gray-01 my-4 md:my-5" />
 
-      <LinkComponent
-        href={event.ctaHref}
-        target={event.ctaTarget}
-        variant="ghost"
-        spacing="none"
-        className="flex items-center gap-1.5 underline text-primary"
-      >
-        {event.ctaLabel}
-        <ArrowRight size={16} aria-hidden="true" />
-      </LinkComponent>
+      {event.ctaHref && (
+        <LinkComponent
+          href={event.ctaHref}
+          target={event.ctaTarget}
+          variant="ghost"
+          spacing="none"
+          className="flex items-center gap-1.5 underline text-primary"
+        >
+          {event.ctaLabel}
+          <ArrowRight size={16} aria-hidden="true" />
+        </LinkComponent>
+      )}
     </article>
   );
 };

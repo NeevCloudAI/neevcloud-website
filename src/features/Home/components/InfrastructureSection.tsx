@@ -62,6 +62,7 @@ function InfrastructureNativeFlowDiagram() {
           alt="NeevCloud Logo"
           width={150}
           height={150}
+          className="w-26 md:w-auto"
         />
       </div>
     </figure>

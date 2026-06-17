@@ -51,7 +51,7 @@ const GpuCostCalculatorPresetCards = ({
                 "flex h-full w-full flex-col rounded-lg border bg-white p-4 text-left transition-colors",
                 isActive
                   ? "border-primary bg-cloud-gray"
-                  : "border-gray-01 hover:border-primary"
+                  : "border-gray-01 hover:border-primary",
               )}
             >
               <Text as="small" textColor="gray-03" weight="semibold">

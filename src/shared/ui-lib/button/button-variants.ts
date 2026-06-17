@@ -85,5 +85,5 @@ export const buttonVariants = cva(
       textColor: "default",
       borderRadius: "default",
     },
-  }
+  },
 );

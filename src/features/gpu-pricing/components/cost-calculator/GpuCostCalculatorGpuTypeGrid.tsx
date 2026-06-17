@@ -28,7 +28,7 @@ const GpuCostCalculatorGpuTypeGrid = ({
                 "relative flex h-full w-full flex-col items-start rounded-lg border px-3 py-2.5 text-left transition-colors",
                 isSelected
                   ? "border-primary bg-primary-90/6"
-                  : "border-gray-01 bg-white hover:border-primary"
+                  : "border-gray-01 bg-white hover:border-primary",
               )}
             >
               {gpuType.badge ? (

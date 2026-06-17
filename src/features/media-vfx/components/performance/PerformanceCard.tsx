@@ -32,7 +32,7 @@ export const PerformanceBenchmarkCard = ({
     <article
       className={cn(
         "flex w-full flex-col rounded-xl bg-gray-950 p-3 md:px-3.75 md:py-2.5",
-        className
+        className,
       )}
     >
       <div className="flex items-center justify-between border-b border-white/12 pb-2.5">
@@ -93,7 +93,7 @@ export const FastestConfigCard = ({
     <article
       className={cn(
         "flex w-full flex-col rounded-xl bg-cloud-gray p-4 md:p-10",
-        className
+        className,
       )}
     >
       {/* Label */}

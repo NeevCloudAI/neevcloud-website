@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   ArrowRight,
   Calendar,
   Check,
@@ -16,6 +17,7 @@ import {
   Eye,
   FlagTriangleRight,
   FlaskConical,
+  FolderOpen,
   Gauge,
   Gift,
   GpuIcon,
@@ -38,6 +40,7 @@ import {
   PenLine,
   Phone,
   Play,
+  Replace,
   Search,
   Server,
   ShieldCheck,
@@ -92,18 +95,22 @@ export {
   Server,
   Shuffle,
   SquareCheck,
+  FolderOpen,
   Star,
   Zap,
+  Replace,
   FlagTriangleRight,
   Trophy,
   Microscope,
   DatabaseIcon,
   ChessPawn,
   ShieldCheck,
+  ArrowLeft,
 };
 
 export const LUCIDE_ICONS = {
   "arrow-right": ArrowRight,
+  "arrow-left": ArrowLeft,
   calendar: Calendar,
   check: Check,
   "chevron-down": ChevronDown,
@@ -151,6 +158,8 @@ export const LUCIDE_ICONS = {
   protected: ShieldCheck,
   gpuIcon: GpuIcon,
   databaseIcon: DatabaseIcon,
+  folderOpen: FolderOpen,
+  replace: Replace,
 } as const satisfies Record<string, LucideIcon>;
 
 export type LucideIconName = keyof typeof LUCIDE_ICONS;

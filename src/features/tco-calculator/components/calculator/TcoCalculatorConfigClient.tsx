@@ -45,20 +45,20 @@ const TcoCalculatorConfigClient = () => {
   const [gpuCount, setGpuCount] = useState(DEFAULT_GPU_COUNT);
   const [hoursPerMonth, setHoursPerMonth] = useState(DEFAULT_HOURS_PER_MONTH);
   const [commitmentId, setCommitmentId] = useState<TcoCalculatorCommitmentId>(
-    DEFAULT_COMMITMENT_ID
+    DEFAULT_COMMITMENT_ID,
   );
   const [localNvmeGb, setLocalNvmeGb] = useState(DEFAULT_LOCAL_NVME_GB);
   const [networkStorageGb, setNetworkStorageGb] = useState(
-    DEFAULT_NETWORK_STORAGE_GB
+    DEFAULT_NETWORK_STORAGE_GB,
   );
   const [objectStorageGb, setObjectStorageGb] = useState(
-    DEFAULT_OBJECT_STORAGE_GB
+    DEFAULT_OBJECT_STORAGE_GB,
   );
   const [dataTransferGb, setDataTransferGb] = useState(
-    DEFAULT_DATA_TRANSFER_GB
+    DEFAULT_DATA_TRANSFER_GB,
   );
   const [inferenceTokensMn, setInferenceTokensMn] = useState(
-    DEFAULT_INFERENCE_TOKENS_MN
+    DEFAULT_INFERENCE_TOKENS_MN,
   );
 
   const breakdown = useMemo(
@@ -84,7 +84,7 @@ const TcoCalculatorConfigClient = () => {
       objectStorageGb,
       dataTransferGb,
       inferenceTokensMn,
-    ]
+    ],
   );
 
   const scrollToBreakdown = useCallback(() => {

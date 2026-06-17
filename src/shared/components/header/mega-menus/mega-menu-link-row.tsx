@@ -9,6 +9,7 @@ export type MegaMenuLinkRowProps = {
   title: string;
   description: string;
   href?: string;
+  target?: "_blank" | "_self" | "_parent" | "_top";
 };
 
 export default function MegaMenuLinkRow({
@@ -17,6 +18,7 @@ export default function MegaMenuLinkRow({
   title,
   description,
   href,
+  target,
 }: MegaMenuLinkRowProps) {
   const rowClassName = cn(
     "p-2 mt-2 flex items-center gap-2 rounded-md",
@@ -42,7 +44,7 @@ export default function MegaMenuLinkRow({
 
   if (href) {
     return (
-      <Link href={href} className={rowClassName}>
+      <Link href={href} className={rowClassName} target={target}>
         {content}
       </Link>
     );

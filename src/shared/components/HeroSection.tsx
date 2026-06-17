@@ -107,7 +107,7 @@ const HeroSection = ({
               src={image}
               alt="Gradient Background"
               fill
-              className="object-contain"
+              className="object-cover"
               priority
             />
           </div>

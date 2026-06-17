@@ -4,7 +4,7 @@ import { Li, LinkComponent, List, Text } from "@/shared/ui-lib";
 const AcceptableUserPolicyContentSection = () => {
   return (
     <section className=" bg-cloud-gray py-8 md:py-16 2xl:py-25">
-      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-5">
+      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-2.5">
         <Text>
           This Acceptable Use Policy (this “AUP”) describes material and
           activities that are not allowed in connection with the Services

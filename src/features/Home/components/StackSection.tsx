@@ -24,6 +24,12 @@ const StackSection = () => {
     );
   };
 
+  const handleSelectPanel = (panelIndex: number) => {
+    const firstItemId = stackPanels[panelIndex]?.items[0]?.id;
+    if (!firstItemId) return;
+    setActiveItemId(firstItemId);
+  };
+
   const resolvedActivePanelIndex = (() => {
     const idx = stackPanels.findIndex((panel) =>
       panel.items.some((item) => item.id === activeItemId)
@@ -72,6 +78,8 @@ const StackSection = () => {
           <StackLayers
             activeIndex={resolvedActivePanelIndex}
             count={stackPanels.length}
+            layers={stackPanels.map((panel) => ({ title: panel.title }))}
+            onSelectLayer={handleSelectPanel}
           />
 
           <div className="flex flex-col gap-4 flex-1 md:mt-20">

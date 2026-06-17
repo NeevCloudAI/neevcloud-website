@@ -36,7 +36,7 @@ const GpuModelTransparentPricingSidebar = ({
                   onClick={() => onFamilySelect(option.id)}
                   className={cn(
                     "w-full rounded-md border bg-white/6 px-5 py-2.5 text-left",
-                    isActive ? "border-primary-105" : "border-white/12"
+                    isActive ? "border-primary-105" : "border-white/12",
                   )}
                 >
                   <Text as="h6" fontFamily="spaceMono" textColor="white">

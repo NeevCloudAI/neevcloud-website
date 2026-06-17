@@ -13,7 +13,7 @@ const SecurityByDesignCard = ({
     <article
       className={cn(
         "flex h-full flex-col overflow-hidden rounded-md bg-cloud-gray shadow-sm",
-        className
+        className,
       )}
     >
       <Image

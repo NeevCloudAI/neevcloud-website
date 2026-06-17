@@ -17,7 +17,7 @@ const ModelActionSidebarCard = ({
         "md:min-w-100 w-full rounded-md border px-3.75 py-2.5 text-left",
         isActive
           ? "border-primary-90/18 bg-primary-90/12"
-          : "border-gray-80/18 bg-gray-80/12"
+          : "border-gray-80/18 bg-gray-80/12",
       )}
     >
       <Text

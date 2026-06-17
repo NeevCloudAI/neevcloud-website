@@ -88,9 +88,9 @@ export const TCO_CALCULATOR_STORAGE_RATES = {
 } as const;
 
 export const TCO_CALCULATOR_GPU_TYPE_BY_ID = Object.fromEntries(
-  TCO_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType])
+  TCO_CALCULATOR_GPU_TYPES.map((gpuType) => [gpuType.id, gpuType]),
 ) as Record<TcoCalculatorGpuType["id"], TcoCalculatorGpuType>;
 
 export const TCO_CALCULATOR_COMMITMENT_BY_ID = Object.fromEntries(
-  TCO_CALCULATOR_COMMITMENTS.map((commitment) => [commitment.id, commitment])
+  TCO_CALCULATOR_COMMITMENTS.map((commitment) => [commitment.id, commitment]),
 ) as Record<TcoCalculatorCommitment["id"], TcoCalculatorCommitment>;

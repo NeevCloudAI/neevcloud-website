@@ -1,21 +1,16 @@
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-import type { MlWorkflowCategory } from "../types/ml-workflows-section.types";
+import type { MlWorkflowCardData } from "../types/ml-workflows-section.types";
 
-export const ML_WORKFLOW_CATEGORIES: readonly MlWorkflowCategory[] = [
+export const ML_WORKFLOW_CARDS: readonly MlWorkflowCardData[] = [
   {
-    category: {
-      icon: "/icons/test.svg",
-      badgeLabel: "DATA · LIFECYCLE",
-      title: "Versioning and Lifecycle",
-      description:
-        "Track model checkpoint versions, restore previous artifacts, and automate data lifecycle management with bucket policies.",
-      features: [
-        { id: 1, title: "model_v3.pt — latest checkpoint" },
-        { id: 2, title: "model_v2.pt — 2 days ago" },
-        { id: 3, title: "model_v1.pt — 7 days ago" },
-        { id: 4, title: "Automated bucket lifecycle policies" },
-      ],
-    },
+    id: 1,
+    variant: "versioning",
+    title: "Versioning and Lifecycle",
+    description:
+      "Track model checkpoint versions, restore previous artifacts, and automate data lifecycle management with bucket policies.",
+    linkLabel: "+ Explore Features",
+    linkHref: EXTERNAL_LINKS.storage,
+    linkTarget: "_blank",
     hover: {
       label: "VERSION CONTROL",
       tasks: [
@@ -30,19 +25,14 @@ export const ML_WORKFLOW_CATEGORIES: readonly MlWorkflowCategory[] = [
     },
   },
   {
-    category: {
-      icon: "/icons/test.svg",
-      badgeLabel: "AVAILABILITY · DR",
-      title: "Multi-Region Replication",
-      description:
-        "Replicate datasets and models across availability zones for high availability and disaster recovery.",
-      features: [
-        { id: 1, title: "AZ-1 availability zone replication" },
-        { id: 2, title: "AZ-2 availability zone replication" },
-        { id: 3, title: "AZ-3 availability zone replication" },
-        { id: 4, title: "Cross-zone disaster recovery" },
-      ],
-    },
+    id: 2,
+    variant: "replication",
+    title: "Multi-Region Replication",
+    description:
+      "Replicate datasets and models across availability zones for high availability and disaster recovery.",
+    linkLabel: "+ Explore Features",
+    linkHref: EXTERNAL_LINKS.storage,
+    linkTarget: "_blank",
     hover: {
       label: "REPLICATION FEATURES",
       tasks: [
@@ -57,19 +47,14 @@ export const ML_WORKFLOW_CATEGORIES: readonly MlWorkflowCategory[] = [
     },
   },
   {
-    category: {
-      icon: "/icons/test.svg",
-      badgeLabel: "SECURITY · ACCESS",
-      title: "Access Control",
-      description:
-        "Granular permissions with bucket policies, IAM integration, and pre-signed URLs for secure sharing.",
-      features: [
-        { id: 1, title: "training-data/ — read-write" },
-        { id: 2, title: "checkpoints/ — read-only" },
-        { id: 3, title: "secrets/ — deny" },
-        { id: 4, title: "Granular bucket policies" },
-      ],
-    },
+    id: 3,
+    variant: "access-control",
+    title: "Access Control",
+    description:
+      "Granular permissions with bucket policies, IAM integration, and pre-signed URLs for secure sharing.",
+    linkLabel: "+ Explore Features",
+    linkHref: EXTERNAL_LINKS.storage,
+    linkTarget: "_blank",
     hover: {
       label: "SECURITY CONTROLS",
       tasks: [
@@ -84,19 +69,14 @@ export const ML_WORKFLOW_CATEGORIES: readonly MlWorkflowCategory[] = [
     },
   },
   {
-    category: {
-      icon: "/icons/test.svg",
-      badgeLabel: "SPEED · THROUGHPUT",
-      title: "Performance Optimization",
-      description:
-        "Multipart uploads, parallel transfers, and intelligent tiering for optimal performance across workload sizes.",
-      features: [
-        { id: 1, title: "Multipart uploads — ~7 GB/s" },
-        { id: 2, title: "Parallel transfers — ~6 GB/s" },
-        { id: 3, title: "Standard uploads — ~1.2 GB/s" },
-        { id: 4, title: "Intelligent tiering" },
-      ],
-    },
+    id: 4,
+    variant: "performance",
+    title: "Performance Optimization",
+    description:
+      "Multipart uploads, parallel transfers, and intelligent tiering for optimal performance across workload sizes.",
+    linkLabel: "+ Explore Features",
+    linkHref: EXTERNAL_LINKS.storage,
+    linkTarget: "_blank",
     hover: {
       label: "PERFORMANCE FEATURES",
       tasks: [

@@ -5,9 +5,8 @@ export const listVariants = cva("", {
     variant: {
       none: "list-none",
       disc: "list-disc list-outside pl-5",
-      decimal: "list-decimal list-outside pl-5",
-      legal: "list-disc list-outside text-sm text-gray-05 space-y-5",
-      legalAlpha: "legal-alpha-list list-outside text-sm text-gray-05",
+      decimal: "list-decimal text-sm list-outside space-y-2.5 pl-2.5",
+      legal: "list-disc list-outside text-sm text-gray-05 space-y-2.5 pl-2.5",
     },
     weight: {
       default: "",

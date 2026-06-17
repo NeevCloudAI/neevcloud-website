@@ -25,7 +25,7 @@ export function Tooltip({
     <span
       className={cn(
         "group/tooltip relative inline-block outline-none",
-        className
+        className,
       )}
       tabIndex={0}
     >
@@ -38,7 +38,7 @@ export function Tooltip({
           "invisible opacity-0 transition-opacity duration-200",
           "group-hover/tooltip:visible group-hover/tooltip:opacity-100",
           "group-focus-within/tooltip:visible group-focus-within/tooltip:opacity-100",
-          TOOLTIP_SIDE_CLASSES[side]
+          TOOLTIP_SIDE_CLASSES[side],
         )}
       >
         {content}

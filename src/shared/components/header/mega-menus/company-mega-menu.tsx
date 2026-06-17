@@ -2,6 +2,7 @@ import { Divider, Text } from "@/shared/ui-lib";
 import MegaMenuLinkRow, {
   type MegaMenuLinkRowProps,
 } from "./mega-menu-link-row";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const COMPANY_SECTION_HEADING = "COMPANY";
 
@@ -27,6 +28,13 @@ const COMPANY_COLUMN_LEFT: MegaMenuLinkRowProps[] = [
     description: "Build the Sovereign Cloud",
     href: "/careers",
   },
+  {
+    iconSrc: "/icons/newsroom.svg",
+    iconAlt: "Newsroom",
+    title: "Newsroom",
+    description: "NeevCloud - Beyond the Headlines",
+    href: "/newsroom",
+  },
 ];
 
 const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
@@ -50,6 +58,14 @@ const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
     title: "Contact Us",
     description: "Talk to Sales or Support",
     href: "/contact-neevcloud",
+  },
+  {
+    iconSrc: "/icons/blogs.svg",
+    iconAlt: "Blogs",
+    title: "Blogs",
+    description: "Discover AIML, cloud in or blogs.",
+    href: EXTERNAL_LINKS.blogs,
+    target: "_blank",
   },
 ];
 

@@ -69,5 +69,5 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["Neevcloud"]
+  "cSpell.words": ["NeevCloud"]
 }

@@ -8,7 +8,7 @@ import { MODEL_ACTION_ITEMS } from "../../data/model-action-section.data";
 
 const ModelActionPlaygroundClient = () => {
   const [selectedModelId, setSelectedModelId] = useState(
-    MODEL_ACTION_ITEMS[0].id
+    MODEL_ACTION_ITEMS[0].id,
   );
   const [prompt, setPrompt] = useState("");
 
@@ -23,14 +23,14 @@ const ModelActionPlaygroundClient = () => {
         onSelectModel={setSelectedModelId}
       />
 
-      <main className="flex min-w-0 flex-1 flex-col md:rounded-r-xl">
+      <div className="flex min-w-0 flex-1 flex-col md:rounded-r-xl">
         <ModelActionPromptPanel
           selectedModel={selectedModel}
           prompt={prompt}
           onPromptChange={setPrompt}
         />
         <ModelActionOutputPanel />
-      </main>
+      </div>
     </div>
   );
 };

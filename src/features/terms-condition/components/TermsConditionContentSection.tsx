@@ -5,7 +5,7 @@ import { Li, LinkComponent, List, Text } from "@/shared/ui-lib";
 const TermsConditionContentSection = () => {
   return (
     <section className=" bg-cloud-gray py-8 md:py-16 2xl:py-25">
-      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-5">
+      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-2.5">
         <Text>
           NeevAI SuperCloud Private Limited (“<strong>NeevCloud</strong>”, “
           <strong>we</strong>”, “<strong>us</strong>”) provides cloud platform

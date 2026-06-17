@@ -7,13 +7,24 @@ type StoragePerformanceCardProps = {
 };
 
 const StoragePerformanceCard = ({ card }: StoragePerformanceCardProps) => {
+  const Icon = card.icon;
+
   return (
     <article className="flex w-full flex-col gap-5 rounded-md bg-white p-4 md:p-10">
       <div className="flex gap-5 items-center">
-        <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-gray-02"
-          aria-hidden="true"
-        />
+        {Icon ? (
+          <div
+            className="flex h-12.5 w-12.5 items-center justify-center rounded-md bg-cloud-gray"
+            aria-hidden="true"
+          >
+            <Icon size={30} className="text-primary" />
+          </div>
+        ) : (
+          <div
+            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-gray-02"
+            aria-hidden="true"
+          />
+        )}
         <div className="flex flex-col">
           <Text as="h3" weight="semibold">
             {card.title}

@@ -21,7 +21,7 @@ const GpuChooseSection = ({
     <section
       className={cn(
         "relative bg-cloud-gray py-8 md:py-16 2xl:py-25",
-        className
+        className,
       )}
     >
       <Container className="flex flex-col items-center justify-center">

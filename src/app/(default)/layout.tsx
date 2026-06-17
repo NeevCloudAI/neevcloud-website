@@ -12,7 +12,7 @@ export default function DefaultLayout({
       <AnnouncementSection />
       <HeaderComponent />
       <Divider orientation="horizontal" />
-      {children}
+      <main>{children}</main>
     </div>
   );
 }

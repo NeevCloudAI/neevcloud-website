@@ -45,19 +45,19 @@ export const GALLERY_SECTION = {
 export const GALLERY_LEFT_COLUMN: readonly GalleryImageItem[] = [
   {
     id: "gallery-1",
-    src: "/images/gallery-1.webp",
+    src: "/images/webp/gallery-1.webp",
     alt: "",
     aspectClass: "aspect-[3/4]",
   },
   {
     id: "gallery-2",
-    src: "/images/gallery-3.webp",
+    src: "/images/webp/gallery-3.webp",
     alt: "",
     aspectClass: "aspect-[4/3]",
   },
   {
     id: "gallery-3",
-    src: "/images/gallery-6.webp",
+    src: "/images/webp/gallery-6.webp",
     alt: "",
     aspectClass: "aspect-[4/3]",
   },
@@ -66,28 +66,28 @@ export const GALLERY_LEFT_COLUMN: readonly GalleryImageItem[] = [
 export const GALLERY_RIGHT_COLUMN: readonly GalleryImageItem[] = [
   {
     id: "gallery-4",
-    src: "/images/gallery-2.webp",
+    src: "/images/webp/gallery-2.webp",
     alt: "",
     aspectClass: "aspect-[21/8]",
     colSpan: 2,
   },
   {
     id: "gallery-5",
-    src: "/images/gallery-4.webp",
+    src: "/images/webp/gallery-4.webp",
     alt: "",
     aspectClass: "aspect-[4/5]",
     colSpan: 1,
   },
   {
     id: "gallery-7",
-    src: "/images/gallery-5.webp",
+    src: "/images/webp/gallery-5.webp",
     alt: "",
     aspectClass: "aspect-[4/5]",
     colSpan: 1,
   },
   {
     id: "gallery-6",
-    src: "/images/gallery-7.webp",
+    src: "/images/webp/gallery-7.webp",
     alt: "",
     aspectClass: "aspect-[21/8]",
     colSpan: 2,

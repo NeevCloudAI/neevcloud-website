@@ -19,14 +19,22 @@ export default function StackPanel({
 }: StackPanelProps) {
   const isActive = panel.items.some((item) => item.id === activeItemId);
 
+  const handlePanelClick = () => {
+    const firstItemId = panel.items[0]?.id;
+    if (!firstItemId || isActive) return;
+    onToggleItem(firstItemId);
+  };
+
   return (
     <article
       className={cn(
         "flex flex-col rounded-lg p-2 text-gray-05",
         isActive ? "opacity-100" : "opacity-50",
+        !isActive && "cursor-pointer",
         className
       )}
       aria-labelledby={`stack-panel-${panel.id}-title`}
+      onClick={handlePanelClick}
     >
       <Text as="h3" weight="semibold" id={`stack-panel-${panel.id}-title`}>
         {panel.title}
@@ -34,7 +42,10 @@ export default function StackPanel({
       <Text as="h6" className="my-2">
         {panel.description}
       </Text>
-      <div className="flex flex-col">
+      <div
+        className="flex flex-col"
+        onClick={(event) => event.stopPropagation()}
+      >
         {panel.items.map((item) => (
           <div key={item.id} className="w-full">
             <button

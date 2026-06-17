@@ -113,6 +113,9 @@ body {
     font-feature-settings: normal;
     font-variation-settings: normal;
   }
+  strong {
+    font-weight: 600;
+  }
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
@@ -158,10 +161,6 @@ body {
   input:focus {
     --tw-ring-color: var(--gray-80);
   }
-}
-
-.text-30px {
-  @apply text-[22px] leading-[30px] sm:text-[24px] md:text-[27px] md:leading-[36px] lg:text-[30px];
 }
 
 @layer utilities {
@@ -302,4 +301,12 @@ body {
     break-inside: avoid;
     margin-bottom: 1.25rem;
   }
+}
+
+.text-30px {
+  @apply text-[22px] leading-[30px] sm:text-[24px] md:text-[27px] md:leading-[36px] lg:text-[30px];
+}
+
+.text-112px {
+  @apply text-[56px] leading-[56px] sm:text-[72px] md:text-[88px] md:leading-[80px] lg:text-[112px];
 }

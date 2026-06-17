@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
-import { CategoryFeatureCard } from "@/shared/components/category-feature-card";
 import { Text } from "@/shared/ui-lib";
-import { ML_WORKFLOW_CATEGORIES } from "../data/ml-workflows-section.data";
+import MlWorkflowCard from "./ml-workflows/MlWorkflowCard";
+import { ML_WORKFLOW_CARDS } from "../data/ml-workflows-section.data";
 
 const MlWorkflowsSection = () => {
   return (
@@ -26,13 +26,11 @@ const MlWorkflowsSection = () => {
           performance optimization, designed from the ground up for production
           ML pipelines.
         </Text>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 md:pt-12.5 list-none p-0 m-0 w-full">
-          {ML_WORKFLOW_CATEGORIES.map(({ category, hover }) => (
-            <li key={category.title}>
-              <CategoryFeatureCard category={category} hover={hover} hasHover />
-            </li>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4 md:mt-12.5 list-none w-full">
+          {ML_WORKFLOW_CARDS.map((card) => (
+            <MlWorkflowCard key={card.id} card={card} />
           ))}
-        </ul>
+        </div>
       </Container>
     </section>
   );

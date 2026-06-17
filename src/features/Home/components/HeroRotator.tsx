@@ -6,10 +6,10 @@ import HomeSlideShow, { type SlideShowSlide } from "./HomeSlideShow";
 import { HERO_SLIDES } from "../data/hero-slides";
 
 const SLIDESHOW_IMAGES: SlideShowSlide[] = [
-  { src: "/images/slide-show1.webp", alt: "NeevCloud platform overview" },
-  { src: "/images/slide-show2.webp", alt: "NeevCloud platform overview" },
-  { src: "/images/slide-show3.webp", alt: "NeevCloud platform overview" },
-  { src: "/images/slide-show4.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/webp/slide-show1.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/webp/slide-show2.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/webp/slide-show3.webp", alt: "NeevCloud platform overview" },
+  { src: "/images/webp/slide-show4.webp", alt: "NeevCloud platform overview" },
 ];
 
 export default function HeroRotator() {
@@ -62,11 +62,12 @@ export default function HeroRotator() {
         {activeHeroSlide.subtitle}
       </Text>
 
-      <div className="flex gap-5 mt-5 z-10">
+      <div className="flex w-full md:w-auto flex-wrap gap-5 mt-5 z-10">
         <LinkComponent
           href={activeHeroSlide.primaryCtaRoute ?? ""}
           variant={activeHeroSlide.primaryCtaVariant}
           target={activeHeroSlide.primaryCtaTarget}
+          className="w-full md:w-auto"
         >
           {activeHeroSlide.primaryCtaLabel}
         </LinkComponent>
@@ -74,6 +75,7 @@ export default function HeroRotator() {
           href={activeHeroSlide.secondaryCtaRoute ?? ""}
           variant={activeHeroSlide.secondaryCtaVariant}
           target={activeHeroSlide.secondaryCtaTarget}
+          className="w-full md:w-auto"
         >
           {activeHeroSlide.secondaryCtaLabel}
         </LinkComponent>

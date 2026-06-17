@@ -25,7 +25,7 @@ function ComparisonCardsPanel({ cards, inverted }: ComparisonCardsPanelProps) {
           key={card.id}
           className={cn(
             "grid grid-cols-1 gap-4 rounded-md p-4 md:col-span-3 md:grid-cols-subgrid md:items-center md:p-8",
-            inverted ? "bg-gray-80 text-white" : "bg-white text-black"
+            inverted ? "bg-gray-80 text-white" : "bg-white text-black",
           )}
         >
           <Text
@@ -68,7 +68,7 @@ export default function ComparisonSectionClient() {
     <div
       className={cn(
         "py-8 md:py-16 2xl:py-25",
-        isWithNeevCloud ? "bg-cloud-gray" : "bg-black"
+        isWithNeevCloud ? "bg-cloud-gray" : "bg-black",
       )}
     >
       <Container className="flex flex-col items-center">
@@ -108,7 +108,7 @@ export default function ComparisonSectionClient() {
             variant="outline-primary"
             className={cn(
               "rounded-r-none",
-              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white"
+              isWithNeevCloud ? "bg-white" : "bg-gray-80 text-white",
             )}
             textColor="black"
             weight="semibold"
@@ -122,7 +122,7 @@ export default function ComparisonSectionClient() {
             weight="semibold"
             className={cn(
               "rounded-l-none",
-              isWithNeevCloud ? "" : "bg-gray-05 text-white"
+              isWithNeevCloud ? "" : "bg-gray-05 text-white",
             )}
             onClick={() => setIsWithNeevCloud(true)}
             aria-pressed={isWithNeevCloud}
@@ -136,7 +136,7 @@ export default function ComparisonSectionClient() {
           <div
             className={cn(
               "w-full rounded-md p-4 md:flex-2 md:p-8",
-              isWithNeevCloud ? "bg-primary" : "bg-gray-05"
+              isWithNeevCloud ? "bg-primary" : "bg-gray-05",
             )}
           >
             <ComparisonCardsPanel
@@ -165,7 +165,7 @@ export default function ComparisonSectionClient() {
             <Text
               as="h6"
               className={cn(
-                isWithNeevCloud ? "mt-4 md:mt-12.5" : "mt-4 md:mt-7.5"
+                isWithNeevCloud ? "mt-4 md:mt-12.5" : "mt-4 md:mt-7.5",
               )}
               textColor={isWithNeevCloud ? "black/82" : "white"}
             >
@@ -175,7 +175,7 @@ export default function ComparisonSectionClient() {
               orientation="horizontal"
               className={cn(
                 "my-4.5",
-                isWithNeevCloud ? "bg-black/12" : "bg-white/12"
+                isWithNeevCloud ? "bg-black/12" : "bg-white/12",
               )}
             />
 
@@ -188,7 +188,7 @@ export default function ComparisonSectionClient() {
                   orientation="horizontal"
                   className={cn(
                     "my-4.5",
-                    isWithNeevCloud ? "bg-black/12" : "bg-white/12"
+                    isWithNeevCloud ? "bg-black/12" : "bg-white/12",
                   )}
                   aria-hidden={idx === bullets.length - 2}
                 />

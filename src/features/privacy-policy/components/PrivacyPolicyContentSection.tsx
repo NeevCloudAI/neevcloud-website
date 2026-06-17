@@ -4,7 +4,7 @@ import { Li, LinkComponent, List, Text } from "@/shared/ui-lib";
 const PrivacyPolicyContentSection = () => {
   return (
     <section className=" bg-cloud-gray py-8 md:py-16 2xl:py-25">
-      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-5">
+      <Container className="text-gray-05 justify-center max-w-3xl 2xl:max-w-4xl space-y-2.5">
         <Text>
           Neev AI Supercloud Private Limited (also referred to as “
           <strong>NeevCloud</strong>,” “<strong>our</strong>,” “

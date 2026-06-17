@@ -11,7 +11,7 @@ const ProblemSolutionColumn = ({
     <div
       className={cn(
         "flex h-full flex-col p-4 md:p-10",
-        theme === "problem" ? "bg-pulse-red" : "bg-primary"
+        theme === "problem" ? "bg-pulse-red" : "bg-primary",
       )}
     >
       <Text as="h5" textColor="white">

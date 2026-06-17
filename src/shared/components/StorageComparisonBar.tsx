@@ -33,7 +33,7 @@ const StorageComparisonBar = ({
         <div
           className={cn(
             "flex items-start justify-between gap-4",
-            labelClassName
+            labelClassName,
           )}
         >
           {/* Label + optional subtitle stacked on the left */}

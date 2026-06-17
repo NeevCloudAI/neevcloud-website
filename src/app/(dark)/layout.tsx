@@ -10,7 +10,7 @@ export default function DarkLayout({
     <div className="relative">
       <GpuHeader />
       <Divider orientation="horizontal" className="bg-gray-05" />
-      {children}
+      <main>{children}</main>
     </div>
   );
 }

@@ -38,6 +38,31 @@ export const EXTERNAL_LINKS = {
     "https://www.cert-in.org.in/PDF/CERT-In_Directions_70B_28.04.2022.pdf",
   zataAi: "https://zata.ai/",
   zataAiSignup: "https://zata.ai/signup",
+  blogs: "https://blog.neevcloud.com/",
+  ndtv: "https://www.ndtv.com/india-news/uninterrupted-solar-power-free-cooling-indias-data-centres-may-soon-go-orbital-11111308",
+  news18:
+    "https://www.news18.com/agency-feeds/agnikul-neevcloud-to-launch-space-based-ai-data-centres-by-year-end-9899631.html",
+  news1:
+    "https://b2b.economictimes.indiatimes.com/news/entrepreneur/neevcloud-and-agnikul-cosmos-announce-indias-first-ai-data-centre-in-space/128265637",
+  news2:
+    "https://w.media/neevcloud-and-agnikul-cosmos-to-launch-indias-first-indigenous-ai-data-center-in-space/",
+  news3:
+    "https://cxotoday.com/corner-office/neevcloud-powering-indias-ai-first-future-with-sovereign-sustainable-cloud-infrastructure/",
+  news4:
+    "https://www.techcircle.in/2025/06/06/india-can-build-its-own-ai-cloud-reduce-reliance-on-foreign-compute-power-says-rackbank-ceo",
+  news5:
+    "https://www.linkedin.com/feed/update/urn:li:activity:7364226641050382337/",
+  news6:
+    "https://www.youtube.com/watch?si=dQPYety78aKK2xkn&t=12&v=M9bOLbl6zoQ&feature=youtu.be",
+  news7:
+    "https://timesofindia.indiatimes.com/technology/tech-news/indian-ai-cloud-infra-company-neevcloud-appoints-vijayakumar-as-head-of-engineering-product-development-ai/articleshow/122337955.cms",
+  news8:
+    "https://thetechcapital.com/ex-goldman-sachs-exec-to-lead-indias-first-ai-super-cloud/",
+  news9: "https://www.youtube.com/watch?v=irqtM-1MTnY",
+  news10:
+    "https://analyticsindiamag.com/deep-tech/another-indian-startup-entering-ai-cloud-space-40000-gpus/",
+  news11:
+    "https://www.techcircle.in/2025/06/06/india-can-build-its-own-ai-cloud-reduce-reliance-on-foreign-compute-power-says-rackbank-ceo",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

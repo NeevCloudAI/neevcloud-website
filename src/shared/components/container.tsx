@@ -14,7 +14,7 @@ export default function Container({
   return (
     <div
       className={cn(
-        "max-w-7xl 2xl:max-w-screen-2xl",
+        "max-w-screen-1xl 2xl:max-w-screen-2xl",
         alignRight ? "mx-auto w-full px-4" : "mx-auto w-full px-4",
         className
       )}

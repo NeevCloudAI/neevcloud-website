@@ -48,11 +48,7 @@ const LeaderShipHeroSection = () => {
 
         <div className=" mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">
           <div className="p-4 md:pl-15 ">
-            <Text
-              as="h3"
-              className="text-[28px] md:text-[32px]"
-              weight="semibold"
-            >
+            <Text as="h3" className="text-30" weight="semibold">
               Narendra Sen
             </Text>
             <div className="w-fit">

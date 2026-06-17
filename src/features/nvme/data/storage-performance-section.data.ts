@@ -1,10 +1,16 @@
+import {
+  FolderOpen,
+  HardDrive,
+  LogOut,
+  Replace,
+} from "@/shared/icons/lucide-icon-map";
 import { StoragePerformanceCardData } from "../types/storage-performance-section.types";
 
 export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
   [
     {
       id: "sub-millisecond-access",
-      icon: "zap",
+      icon: LogOut,
       title: "Sub-Millisecond Access",
       subtitle: "Microsecond-level latency",
       description:
@@ -18,7 +24,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
     },
     {
       id: "high-sequential-throughput",
-      icon: "gauge",
+      icon: Replace,
       title: "High Sequential Throughput",
       subtitle: "Up to 7,000 MB/s reads",
       description:
@@ -32,7 +38,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
     },
     {
       id: "per-instance-attachment",
-      icon: "hard-drive",
+      icon: FolderOpen,
       title: "Per-Instance Attachment",
       subtitle: "Dedicated, no noisy neighbors",
       description:
@@ -46,7 +52,7 @@ export const STORAGE_PERFORMANCE_CARDS: readonly StoragePerformanceCardData[] =
     },
     {
       id: "cost-effective-storage",
-      icon: "indian-rupee",
+      icon: HardDrive,
       title: "Cost-Effective Storage",
       subtitle: "25GB free with every GPU",
       description:

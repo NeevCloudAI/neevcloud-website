@@ -26,7 +26,7 @@ const DeployStorageCliCode = () => {
             # Launch GPU with 500GB local NVMe
           </Text>
           <Text fontFamily="spaceMono" textColor="white" className="leading-6">
-            Neevcloud gpu create \
+            NeevCloud gpu create \
           </Text>
           <Text fontFamily="spaceMono" textColor="white" className="leading-6">
             &nbsp; &nbsp; &nbsp; {`--gpu`}

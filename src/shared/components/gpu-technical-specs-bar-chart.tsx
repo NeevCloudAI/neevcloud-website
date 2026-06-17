@@ -26,7 +26,7 @@ const legendVariantClassName: Record<GpuTechnicalSpecsBarVariant, string> = {
 
 function formatYAxisTick(
   value: number,
-  format: GpuTechnicalSpecsChart["yAxisFormat"]
+  format: GpuTechnicalSpecsChart["yAxisFormat"],
 ): string {
   if (format === "number") {
     return Number.isInteger(value) ? value.toString() : value.toFixed(1);
@@ -191,7 +191,7 @@ const GpuTechnicalSpecsBarChart = ({
                     <div
                       className={cn(
                         "relative flex w-full min-w-10 items-center justify-center px-1 py-1",
-                        barVariantClassName[bar.variant]
+                        barVariantClassName[bar.variant],
                       )}
                       style={{
                         height: Math.max(barHeight, 18),
@@ -256,7 +256,7 @@ const GpuTechnicalSpecsBarChart = ({
               <span
                 className={cn(
                   "size-2.5 shrink-0 rounded-xs",
-                  legendVariantClassName[item.variant]
+                  legendVariantClassName[item.variant],
                 )}
                 aria-hidden="true"
               />

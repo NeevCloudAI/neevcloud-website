@@ -25,7 +25,7 @@ function List({
           markerColor,
           weight,
           className,
-        })
+        }),
       )}
       {...props}
     />

@@ -81,33 +81,81 @@ export default function AiSupercloudMegaMenu() {
             </div>
           ))}
         </div>
-        <div className="flex justify-between min-w-0 w-full flex-col rounded-md bg-cloud-gray p-5 md:min-w-[280px] md:p-6 lg:min-w-[350px]">
-          <div>
-            <Text
-              as="small"
-              textColor="white"
-              className="w-fit rounded-full bg-primary px-3.5 py-1.5"
-            >
-              PROJECT NOUN
-            </Text>
-            <Text as="h6" weight="semibold" className="mt-2.5">
-              AI Infrastructure Without Limits
-            </Text>
-            <Text as="small" textColor="black/82">
-              Removing the limits of geography and latency to redefine how AI is
-              deployed and scaled.
-            </Text>
+        <div className="grid gap-2.5 grid-rows-1 md:grid-cols-2 justify-between w-full flex-col md:min-w-[280px]">
+          <div className="relative border p-4 md:p-5">
+            <div
+              className="pointer-events-none absolute inset-0 bg-[url('/images/webp/satelite-bg.webp')] bg-cover bg-center bg-position-center bg-no-repeat z-0"
+              aria-hidden
+            />
+            <div className="relative flex flex-col justify-between z-1 h-full">
+              <div>
+                <Text
+                  as="small"
+                  textColor="white"
+                  className="w-fit rounded-full bg-primary px-3.5 py-1.5"
+                >
+                  PROJECT NOUN
+                </Text>
+                <Text
+                  as="h6"
+                  weight="semibold"
+                  textColor="white"
+                  className="mt-2.5"
+                >
+                  AI Infrastructure Without Limits
+                </Text>
+              </div>
+              <LinkComponent
+                href={EXTERNAL_LINKS.projectOrion}
+                variant="ghost"
+                target="_blank"
+                spacing="none"
+                size="xs"
+                textColor="pulse-red"
+              >
+                Explore Project Noun -&gt;
+              </LinkComponent>
+            </div>
           </div>
-          <LinkComponent
-            href={EXTERNAL_LINKS.projectOrion}
-            variant="ghost"
-            target="_blank"
-            spacing="none"
-            size="xs"
-            textColor="pulse-red"
-          >
-            Explore Project Noun -&gt;
-          </LinkComponent>
+          <div className="relative border p-4 md:p-5">
+            <div
+              className="pointer-events-none absolute inset-0 bg-[url('/images/webp/varuna.webp')] bg-cover bg-center bg-position-center bg-no-repeat z-0"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-0 bg-linear-to-b from-black via-black/50 to-transparent z-0"
+              aria-hidden
+            />
+            <div className="relative flex flex-col justify-between z-1 h-full">
+              <div>
+                <Text
+                  as="small"
+                  textColor="white"
+                  className="w-fit rounded-full bg-primary px-3.5 py-1.5"
+                >
+                  VARUNA
+                </Text>
+                <Text
+                  as="h6"
+                  weight="semibold"
+                  textColor="white"
+                  className="mt-2.5"
+                >
+                  The Ultimate Data Machine for Next-Gen AI
+                </Text>
+              </div>
+              <LinkComponent
+                href={EXTERNAL_LINKS.varuna}
+                variant="ghost"
+                target="_blank"
+                spacing="none"
+                size="xs"
+                textColor="pulse-red"
+              >
+                Know About Varuna -&gt;
+              </LinkComponent>
+            </div>
+          </div>
         </div>
       </div>
       <Divider orientation="horizontal" />

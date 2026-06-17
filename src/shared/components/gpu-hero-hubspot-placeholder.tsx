@@ -51,7 +51,7 @@ export default function GpuHeroHubspotPlaceholder() {
   }, []);
 
   return (
-    <div className="relative min-h-[320px]">
+    <div className="relative min-h-[320px] bg-linear-to-r from-[#59D8A7] to-[#022C3C] p-4 md:p-10 rounded-md">
       {isLoading && (
         <div
           className="absolute inset-0 flex items-center justify-center"

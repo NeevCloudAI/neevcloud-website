@@ -29,6 +29,8 @@ const InferenceStackSection = () => {
                 title={feature.title}
                 description={feature.description}
                 theme="dark"
+                image={feature.image}
+                lucideIcon={feature.lucideIcon}
               />
             </li>
           ))}

@@ -24,7 +24,7 @@ const ComputeSection = () => {
                 title={feature.title}
                 description={feature.description}
                 theme="dark"
-                icon={feature.icon}
+                image={feature.image}
               />
             </li>
           ))}

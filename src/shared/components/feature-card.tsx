@@ -1,10 +1,12 @@
 import { Text } from "@/shared/ui-lib";
 import Image from "next/image";
+import { type LucideIcon } from "@/shared/icons/lucide-icon-map";
 
 export type FeatureCardProps = {
   title: string;
   description: string;
-  icon?: string;
+  image?: string;
+  lucideIcon?: LucideIcon;
   theme?: "light" | "dark" | "transparent";
   className?: string;
 };
@@ -12,7 +14,8 @@ export type FeatureCardProps = {
 export function FeatureCard({
   title,
   description,
-  icon,
+  image,
+  lucideIcon: Icon,
   theme = "light",
   className,
 }: FeatureCardProps) {
@@ -20,10 +23,12 @@ export function FeatureCard({
     <div
       className={`flex w-full h-full flex-col overflow-hidden rounded-md ${theme === "transparent" ? "bg-white/6 border border-white/12 backdrop-blur-md" : theme === "dark" ? "bg-white/6 border border-white/12 text-white" : "bg-white text-black"} p-4 md:p-7.5 ${className}`}
     >
-      {icon ? (
-        <Image src={icon} alt={title} width={30} height={30} />
+      {image ? (
+        <Image src={image} alt={title} width={30} height={30} />
+      ) : Icon ? (
+        <Icon className="text-primary size-8.5" strokeWidth={1.5} />
       ) : (
-        <div className="h-7.5 w-7.5 shrink-0 bg-gray-01"></div>
+        <div className="h-8 w-8 shrink-0 bg-gray-01"></div>
       )}
       <Text
         as="h3"

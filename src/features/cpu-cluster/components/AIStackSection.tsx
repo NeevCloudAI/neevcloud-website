@@ -31,14 +31,14 @@ const AIStackSection = () => {
               className={cn(
                 "md:col-span-2",
                 index === 3 && "md:col-start-2",
-                index === 4 && "md:col-start-4",
+                index === 4 && "md:col-start-4"
               )}
             >
               <FeatureCard
                 title={feature.title}
                 description={feature.description}
                 theme="dark"
-                icon={feature.icon}
+                image={feature.image}
               />
             </li>
           ))}

@@ -63,6 +63,7 @@ export const EXTERNAL_LINKS = {
     "https://analyticsindiamag.com/deep-tech/another-indian-startup-entering-ai-cloud-space-40000-gpus/",
   news11:
     "https://www.techcircle.in/2025/06/06/india-can-build-its-own-ai-cloud-reduce-reliance-on-foreign-compute-power-says-rackbank-ceo",
+  kubeconIndia2026: "https://www.neevcloud.com/events/2026/kubecon-india-2026/",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

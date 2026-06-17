@@ -57,7 +57,7 @@ const DataJurisdictionSection = () => {
               <FeatureCard
                 theme="transparent"
                 title={feature.title}
-                icon={feature.icon}
+                image={feature.image}
                 description={feature.description}
               />
             </li>

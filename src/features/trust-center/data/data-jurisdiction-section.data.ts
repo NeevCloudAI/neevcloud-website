@@ -12,19 +12,19 @@ export const DATA_JURISDICTION_SECTION = {
 export const DATA_JURISDICTION_CARDS: FeatureCardProps[] = [
   {
     title: "Data Security",
-    icon: "/icons/shield.svg",
+    image: "/icons/shield.svg",
     description:
       "Encryption at rest and in transit. Multi-zone redundancy. Automated backup and recovery.",
   },
   {
     title: "Regulatory Compliance",
-    icon: "/icons/compliance.svg",
+    image: "/icons/compliance.svg",
     description:
       "Designed to meet requirements for Indian government, defense, healthcare, and finance.",
   },
   {
     title: "Transparent Data Handling",
-    icon: "/icons/data-handling.svg",
+    image: "/icons/data-handling.svg",
     description:
       "Clear policies on data access, retention, and deletion. No third-party access.",
   },

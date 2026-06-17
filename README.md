@@ -102,13 +102,12 @@ next/image resizes at runtime, but multi-MB originals still hurt build/cache and
    issue: On clicking Heading, it should open -->
 
 2. Aisupercloud image
-<!-- 3. Press & Newsroom dropdown and page -->
-3. Add new UI in AI supercloud mega menu
-<!-- 5. Add copyright icon in footer -->
-4. route: /events, section: ALL Events
-   issue: 1. change kubecon data, month to 18-19june 2.India AI Impact location feb 2026 delhi. 3. Remove all the links expect Kubecon 4.replace kubecon link
-5. route: /life-at-neevcloud
-   issue: replace hero image, remove space below and no curve
-6. route: /a100 add form's bg gradient
-7. route: /nvme. section: Storage That Matches YourGPU Performance
-   issue: add icons
+      <!-- 3. Press & Newsroom dropdown and page -->
+      <!-- 3. Add new UI in AI supercloud mega menu -->
+      <!-- 5. Add copyright icon in footer -->
+   <!-- 3. route: /events, section: ALL Events
+      issue: 1. change kubecon data, month to 18-19june 2.India AI Impact location feb 2026 delhi. 3. Remove all the links expect Kubecon 4.replace kubecon link -->
+3. route: /life-at-neevcloud issue: replace hero image
+   <!-- 4. route: /a100 add form's bg gradient -->
+   <!-- 4. route: /nvme. section: Storage That Matches YourGPU Performance
+      issue: add icons -->

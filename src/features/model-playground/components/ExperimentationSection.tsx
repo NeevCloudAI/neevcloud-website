@@ -32,7 +32,7 @@ const ExperimentationSection = () => {
                 title={feature.title}
                 description={feature.description}
                 theme="transparent"
-                icon={feature.icon}
+                image={feature.image}
               />
             </li>
           ))}

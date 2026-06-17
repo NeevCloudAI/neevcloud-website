@@ -28,7 +28,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
     date: "18-19 June, 2026",
     location: "Mumbai, India",
     ctaLabel: "Register Now",
-    ctaHref: EXTERNAL_LINKS.discord,
+    ctaHref: EXTERNAL_LINKS.kubeconIndia2026,
     ctaTarget: "_blank",
   },
   {
@@ -123,7 +123,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
 
 export function matchesEventFilter(
   event: EventCardItem,
-  filter: EventFilterId,
+  filter: EventFilterId
 ): boolean {
   switch (filter) {
     case "all":

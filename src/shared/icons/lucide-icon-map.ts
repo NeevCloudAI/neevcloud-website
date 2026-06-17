@@ -1,6 +1,8 @@
 import {
   ArrowLeft,
   ArrowRight,
+  Bot,
+  Brain,
   Calendar,
   Check,
   ChessPawn,
@@ -41,7 +43,9 @@ import {
   Phone,
   Play,
   Replace,
+  ScrollText,
   Search,
+  SearchCode,
   Server,
   ShieldCheck,
   Shuffle,
@@ -106,9 +110,17 @@ export {
   ChessPawn,
   ShieldCheck,
   ArrowLeft,
+  Bot,
+  SearchCode,
+  Brain,
+  ScrollText,
 };
 
 export const LUCIDE_ICONS = {
+  bot: Bot,
+  scrollText: ScrollText,
+  brain: Brain,
+  searchCode: SearchCode,
   "arrow-right": ArrowRight,
   "arrow-left": ArrowLeft,
   calendar: Calendar,
@@ -165,7 +177,7 @@ export const LUCIDE_ICONS = {
 export type LucideIconName = keyof typeof LUCIDE_ICONS;
 
 export function resolveLucideIcon(
-  icon: LucideIconName | LucideIcon,
+  icon: LucideIconName | LucideIcon
 ): LucideIcon {
   return typeof icon === "string" ? LUCIDE_ICONS[icon] : icon;
 }

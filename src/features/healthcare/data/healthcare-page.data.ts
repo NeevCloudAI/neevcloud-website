@@ -8,7 +8,7 @@ export const HEALTHCARE_HERO = {
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Compliance",
   secondaryCtaRoute: "/privacy-policy",
-  image: "/images/healthcare.png",
+  image: "/images/webp/healthcare.webp",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",

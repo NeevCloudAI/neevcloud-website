@@ -36,7 +36,7 @@ const ExploreModelsSection = () => {
           title="Model Documentation"
           description="Each model includes detailed documentation explaining architecture, training data, intended use cases, and known limitations."
           primaryCta="Browse Model Playground Docs"
-          primaryCtaRoute={EXTERNAL_LINKS.documentation}
+          primaryCtaRoute={EXTERNAL_LINKS.aiInferenceOverview2}
           primaryCtaTarget="_blank"
         />
       </div>

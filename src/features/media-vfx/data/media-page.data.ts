@@ -5,7 +5,7 @@ export const MEDIA_HERO = {
   primaryCta: "Start Rendering",
   secondaryCta: "Talk to Sales",
   secondaryCtaRoute: "/contact-neevcloud",
-  image: "/images/media.png",
+  image: "/images/webp/media-vfx.webp",
   trustBadges: [
     "H100 and A100 GPUs",
     "Real-time rendering",

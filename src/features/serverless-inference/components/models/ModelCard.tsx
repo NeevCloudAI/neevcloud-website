@@ -63,7 +63,7 @@ const ModelCard = ({ model }: ModelCardProps) => {
           Try in Playground
         </LinkComponent>
         <LinkComponent
-          href={EXTERNAL_LINKS.documentation}
+          href={EXTERNAL_LINKS.aiInferenceOverview2}
           target="_blank"
           variant="outline"
           textColor="black"

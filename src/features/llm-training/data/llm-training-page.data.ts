@@ -10,7 +10,7 @@ export const LLM_TRAINING_HERO = {
   secondaryCta: "Browse GPU Configs",
   secondaryCtaRoute: EXTERNAL_LINKS.templates,
   secondaryCtaTarget: "_blank",
-  image: "/images/playground.png",
+  image: "/images/webp/model-api.webp",
   trustBadges: [
     "H100 & A100 clusters",
     "Multi-node training",

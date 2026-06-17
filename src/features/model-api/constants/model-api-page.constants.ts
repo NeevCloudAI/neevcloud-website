@@ -10,7 +10,7 @@ export const MODEL_API_HERO = {
   secondaryCta: "View Documentation",
   secondaryCtaRoute: EXTERNAL_LINKS.documentation,
   secondaryCtaTarget: "_blank",
-  image: "/images/playground.png",
+  image: "/images/webp/model-api.webp",
   trustBadges: [
     "Sub-100ms Latency",
     "RESTful APIs",

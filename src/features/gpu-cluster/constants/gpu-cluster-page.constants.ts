@@ -10,7 +10,7 @@ export const GPU_CLUSTER_HERO = {
   secondaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   secondaryCtaTarget: "_blank",
   badgeText: "Bare GPU Compute - Billed in INR",
-  image: "/images/gpu.png",
+  image: "/images/webp/gpu-cluster.webp",
 } as const;
 
 export const GPU_CLUSTER_FOOTER = {

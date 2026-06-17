@@ -1,5 +1,3 @@
-import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
-
 export const DEFENCE_HERO = {
   badgeText: "National Security & Defence",
   description:
@@ -8,7 +6,7 @@ export const DEFENCE_HERO = {
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Compliance",
   secondaryCtaRoute: "/privacy-policy",
-  image: "/images/defence.png",
+  image: "/images/webp/defence.webp",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",

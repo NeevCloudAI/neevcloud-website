@@ -5,7 +5,7 @@ export const NEWSROOM_HERO = {
   description:
     "News, updates, and resources for media and press covering NeevCloud.",
   primaryCta: "Download Media Kit",
-  primaryCtaRoute: "/files/neevcloud-media-kit.pdf",
+  primaryCtaRoute: "/files/neevcloud_brand_logos.zip",
   primaryCtaTarget: "_blank",
   image: "/images/webp/newsroom.webp",
   trustBadges: [] as const,

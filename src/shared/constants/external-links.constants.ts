@@ -67,6 +67,8 @@ export const EXTERNAL_LINKS = {
   news11:
     "https://www.techcircle.in/2025/06/06/india-can-build-its-own-ai-cloud-reduce-reliance-on-foreign-compute-power-says-rackbank-ceo",
   kubeconIndia2026: "https://www.neevcloud.com/events/2026/kubecon-india-2026/",
+  aiInferenceOverview2: "https://docs.ai.neevcloud.com/ai-inference/overview-2",
+  zataAiPricing: "https://zata.ai/pricing",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

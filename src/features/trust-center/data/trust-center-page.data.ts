@@ -6,6 +6,7 @@ export const TRUST_CENTER_HERO = {
     "Enterprise-grade security, international compliance certifications, and transparent operations for teams building mission-critical AI systems.",
   primaryCta: "View Certifications",
   secondaryCta: "Explore Security",
+  secondaryCtaRoute: "/privacy-policy",
   trustBadges: [
     "Try in Minutes",
     "Real Infrastructure",

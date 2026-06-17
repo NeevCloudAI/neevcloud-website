@@ -10,7 +10,7 @@ export const NVME_HERO = {
   secondaryCtaRoute: EXTERNAL_LINKS.storage,
   secondaryCtaTarget: "_blank",
   badgeText: "High-Performance NVMe Storage",
-  image: "/images/nvme.png",
+  image: "/images/webp/nvme.webp",
   trustBadges: [
     "Sub-millisecond latency",
     "High sequential throughput",

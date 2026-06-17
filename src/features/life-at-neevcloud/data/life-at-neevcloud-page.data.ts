@@ -1,5 +1,6 @@
 export const LIFE_AT_NEEVCLOUD_HERO = {
   badgeText: "Life at NeevCloud",
+  image: "/images/webp/life-at-neevcloud.webp",
   description:
     "At NeevCloud, we're not just building AI infrastructure; we're building a culture where ideas move fast, teams grow together, and every day feels dynamic.",
   primaryCta: "View Current Openings",

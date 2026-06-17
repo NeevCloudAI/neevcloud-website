@@ -8,7 +8,7 @@ export const MANAGED_KUBERNETES_HERO = {
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
   badgeText: "GPU-Aware Kubernetes",
-  image: "/images/kubernetes.png",
+  image: "/images/webp/managed-kubernetes.webp",
   trustBadges: [
     "Zero manual GPU config",
     "InfiniBand ready",

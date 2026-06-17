@@ -14,7 +14,6 @@ const LifeAtNeevcloudHeroSection = () => {
         </Text>
       }
       {...LIFE_AT_NEEVCLOUD_HERO}
-      image="/images/gallery-2.webp"
     />
   );
 };

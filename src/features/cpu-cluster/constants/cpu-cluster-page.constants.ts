@@ -9,7 +9,7 @@ export const CPU_CLUSTER_HERO = {
   secondaryCta: "View Pricing",
   secondaryCtaRoute: "/cpu-cluster#cpu-workload-section",
   badgeText: "CPU Compute for AI Infrastructure",
-  image: "/images/cpu.png",
+  image: "/images/webp/cpu-cluster.webp",
 } as const;
 
 export const CPU_CLUSTER_FOOTER = {

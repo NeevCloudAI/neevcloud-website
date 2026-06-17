@@ -5,7 +5,7 @@ export const AGENTIC_WORKFLOW_HERO = {
   primaryCta: "Deploy Your Agent Stack",
   secondaryCta: "Talk to an Engineer",
   secondaryCtaRoute: "/contact-neevcloud",
-  image: "/images/playground.png",
+  image: "/images/webp/model-api.webp",
   trustBadges: [
     "Container-native",
     "Long-running workloads",

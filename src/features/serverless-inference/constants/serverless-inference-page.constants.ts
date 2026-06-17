@@ -9,7 +9,7 @@ export const SERVERLESS_INFERENCE_HERO = {
   secondaryCta: "View Pricing",
   secondaryCtaRoute: "/ai-inference#ai-inference-transparent-pricing-section",
   badgeText: "India's Sovereign Inference Cloud",
-  image: "/images/serverless.png",
+  image: "/images/webp/model-api.webp",
 } as const;
 
 export const SERVERLESS_INFERENCE_FOOTER = {

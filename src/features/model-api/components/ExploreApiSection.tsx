@@ -42,7 +42,7 @@ const ExploreApiSection = () => {
           title="Documentation and Resources"
           description="Detailed reference documentation for every endpoint, including request parameters, response formats, error codes, and usage examples."
           primaryCta="View Full Model API Docs"
-          primaryCtaRoute={EXTERNAL_LINKS.documentation}
+          primaryCtaRoute={EXTERNAL_LINKS.inferenceOverview}
           primaryCtaTarget="_blank"
         />
       </div>

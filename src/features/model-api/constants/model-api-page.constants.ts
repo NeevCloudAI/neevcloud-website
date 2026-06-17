@@ -8,7 +8,7 @@ export const MODEL_API_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.modelApi,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.inferenceOverview,
   secondaryCtaTarget: "_blank",
   image: "/images/webp/model-api.webp",
   trustBadges: [

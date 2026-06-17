@@ -7,7 +7,7 @@ const CodeTabPanelFooter = () => {
       <Divider orientation="horizontal" className="mb-4 bg-white/12" />
       <div className="flex items-center justify-end pb-4 pr-4">
         <LinkComponent
-          href={EXTERNAL_LINKS.documentation}
+          href={EXTERNAL_LINKS.gpuAiServiceOverview}
           target="_blank"
           variant="ghost"
           textColor="primary"

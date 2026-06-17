@@ -7,10 +7,10 @@ export const MODEL_PLAYGROUND_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.gpuDocs,
   secondaryCtaTarget: "_blank",
   badgeText: "AI SuperCloud Platform",
-  image: "/images/playground.png",
+  image: "/images/webp/ai-supercloud.webp",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",
@@ -28,6 +28,6 @@ export const MODEL_PLAYGROUND_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "Read Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.gpuDocs,
   secondaryCtaTarget: "_blank",
 } as const;

@@ -14,7 +14,7 @@ export const TRUST_CENTER_HERO = {
     "Zero Setup",
     "99.9% uptime SLA",
   ],
-  dashboardImage: "/images/playground.png",
+  image: "/images/webp/ai-supercloud.webp",
 } as const;
 
 export const TRUST_CENTER_FOOTER = {

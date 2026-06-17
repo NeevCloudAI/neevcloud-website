@@ -9,7 +9,7 @@ export const DEVELOPERS_HERO = {
   primaryCtaTarget: "_blank",
   secondaryCta: "Talk to an Engineer",
   secondaryCtaRoute: "/contact-neevcloud",
-  image: "/images/playground.png",
+  image: "/images/webp/model-api.webp",
   trustBadges: [
     "OpenAI-compatible",
     "Python & Node SDKs",

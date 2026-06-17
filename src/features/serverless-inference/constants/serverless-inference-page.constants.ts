@@ -20,6 +20,6 @@ export const SERVERLESS_INFERENCE_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.apiKeys,
   primaryCtaTarget: "_blank",
   secondaryCta: "Read the Docs",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.inferenceDocs,
   secondaryCtaTarget: "_blank",
 } as const;

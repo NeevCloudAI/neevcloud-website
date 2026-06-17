@@ -24,6 +24,6 @@ export const PUBLIC_SECTOR_FOOTER = {
   primaryCta: "Talk to Sales",
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "Read the Docs",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.inferenceDocs,
   secondaryCtaTarget: "_blank",
 } as const;

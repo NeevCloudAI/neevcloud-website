@@ -16,7 +16,7 @@ export const NEEVCLOUD_ARENA_HERO = {
     "Zero Setup",
     "99.9% uptime SLA",
   ],
-  image: "/images/playground.png",
+  image: "/images/webp/model-api.webp",
 } as const;
 
 export const NEEVCLOUD_ARENA_FOOTER = {
@@ -27,6 +27,6 @@ export const NEEVCLOUD_ARENA_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "Read Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.gpuAiServiceOverview,
   secondaryCtaTarget: "_blank",
 } as const;

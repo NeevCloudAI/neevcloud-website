@@ -39,6 +39,6 @@ export const DEVELOPERS_CHANGELOG_CARD: DevelopersChangelogCardItem = {
   description:
     "SDK updates, new models, API improvements, all documented in the changelog.",
   ctaLabel: "View Full Changelog",
-  ctaHref: EXTERNAL_LINKS.documentation,
+  ctaHref: EXTERNAL_LINKS.agenticStudioOverview,
   ctaTarget: "_blank",
 };

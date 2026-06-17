@@ -28,6 +28,6 @@ export const MODEL_CATALOG_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.apiKeys,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.inferenceOverview,
   secondaryCtaTarget: "_blank",
 } as const;

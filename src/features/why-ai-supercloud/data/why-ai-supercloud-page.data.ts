@@ -8,7 +8,7 @@ export const WHY_AI_SUPERCLOUD_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.gpuAiServiceOverview,
   secondaryCtaTarget: "_blank",
   trustBadges: [
     "Data residency in India",
@@ -17,7 +17,7 @@ export const WHY_AI_SUPERCLOUD_HERO = {
     "Data never used for training",
     "99.9% uptime SLA",
   ],
-  image: "/images/playground.png",
+  image: "/images/webp/ai-supercloud.webp",
 } as const;
 
 export const WHY_AI_SUPERCLOUD_FOOTER = {
@@ -28,6 +28,6 @@ export const WHY_AI_SUPERCLOUD_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaRoute: EXTERNAL_LINKS.gpuAiServiceOverview,
   secondaryCtaTarget: "_blank",
 } as const;

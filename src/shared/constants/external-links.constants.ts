@@ -69,6 +69,18 @@ export const EXTERNAL_LINKS = {
   kubeconIndia2026: "https://www.neevcloud.com/events/2026/kubecon-india-2026/",
   aiInferenceOverview2: "https://docs.ai.neevcloud.com/ai-inference/overview-2",
   zataAiPricing: "https://zata.ai/pricing",
+  createAccount:
+    "https://docs.ai.neevcloud.com/getting-started/manage-account#steps-to-create-an-account",
+  apiKeyCreation:
+    "https://docs.ai.neevcloud.com/api-reference/tenant/api-keys#create-api-key",
+  agenticStudioOverview:
+    "https://docs.ai.neevcloud.com/agentic-studio/overview",
+  firstInferenceCall:
+    "https://docs.ai.neevcloud.com/ai-inference/overview-1/getting-started",
+  gpuAiServiceOverview: "https://docs.ai.neevcloud.com/gpu-ai-service/overview",
+  quickStart:
+    "https://docs.ai.neevcloud.com/ai-inference/overview-2/quick-start",
+  inferenceOverview: "https://docs.ai.neevcloud.com/ai-inference/overview-1",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

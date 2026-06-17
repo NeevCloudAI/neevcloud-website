@@ -27,6 +27,6 @@ export const ABOUT_US_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.apiKeys,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.tutorials,
+  secondaryCtaRoute: EXTERNAL_LINKS.firstInferenceCall,
   secondaryCtaTarget: "_blank",
 } as const;

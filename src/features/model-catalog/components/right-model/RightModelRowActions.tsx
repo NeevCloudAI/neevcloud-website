@@ -14,7 +14,7 @@ const RightModelRowActions = () => {
         Try
       </LinkComponent>
       <LinkComponent
-        href={EXTERNAL_LINKS.documentation}
+        href={EXTERNAL_LINKS.quickStart}
         variant="white-outline"
         target="_blank"
         size="xs"

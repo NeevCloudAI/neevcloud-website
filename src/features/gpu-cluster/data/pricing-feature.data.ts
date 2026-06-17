@@ -1,15 +1,16 @@
 import type { FeatureCardProps } from "@/shared/components/feature-card";
+import { RadioTower, Shield, Star, ClipboardCheck } from "lucide-react";
 
 export const PRICING_FEATURES: FeatureCardProps[] = [
   {
     title: "InfiniBand Networking",
     description: "High-bandwidth inter-GPU communication",
-    image: "/icons/infiniband-networking.svg",
+    lucideIcon: RadioTower,
   },
   {
     title: "NVMe-Attached Storage",
     description: "Fast local storage for datasets",
-    image: "/icons/nvme-attached-storage.svg",
+    image: "/icons/nvme-storage.svg",
   },
   {
     title: "Pre-Built ML Images",
@@ -19,16 +20,16 @@ export const PRICING_FEATURES: FeatureCardProps[] = [
   {
     title: "DDoS Protection",
     description: "Included at no additional cost",
-    image: "/icons/ddos.svg",
+    lucideIcon: Shield,
   },
   {
     title: "India Data Centers",
     description: "Complete data sovereignty",
-    image: "/icons/data-center.svg",
+    lucideIcon: Star,
   },
   {
     title: "99.9% Uptime SLA",
     description: "Enterprise-grade reliability",
-    image: "/icons/sla-uptime.svg",
+    lucideIcon: ClipboardCheck,
   },
 ];

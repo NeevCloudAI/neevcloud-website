@@ -7,6 +7,7 @@ export const PUBLIC_SECTOR_HERO = {
   primaryCta: "Discuss Requirements",
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Complaince",
+  secondaryCtaRoute: "/privacy-policy",
   image: "/images/public-sector.png",
   trustBadges: [
     "India-based infrastructure",

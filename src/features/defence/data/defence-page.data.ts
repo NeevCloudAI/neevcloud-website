@@ -7,6 +7,7 @@ export const DEFENCE_HERO = {
   primaryCta: "Talk to Sales",
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Compliance",
+  secondaryCtaRoute: "/privacy-policy",
   image: "/images/defence.png",
   trustBadges: [
     "Data residency in India",
@@ -24,6 +25,5 @@ export const DEFENCE_FOOTER = {
   primaryCta: "Talk to Sales",
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Compliance",
-  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
-  secondaryCtaTarget: "_blank",
+  secondaryCtaRoute: "/privacy-policy",
 } as const;

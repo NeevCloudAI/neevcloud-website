@@ -49,6 +49,8 @@ const PrivateNetworkSection = () => {
               <FeatureCard
                 title={feature.title}
                 description={feature.description}
+                lucideIcon={feature.lucideIcon}
+                image={feature.image}
               />
             </li>
           ))}

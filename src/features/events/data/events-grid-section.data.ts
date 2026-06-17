@@ -123,7 +123,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
 
 export function matchesEventFilter(
   event: EventCardItem,
-  filter: EventFilterId
+  filter: EventFilterId,
 ): boolean {
   switch (filter) {
     case "all":

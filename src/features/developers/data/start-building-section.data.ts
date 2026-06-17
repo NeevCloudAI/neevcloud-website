@@ -22,8 +22,8 @@ export const DEVELOPERS_START_BUILDING_ITEMS: readonly AmbitionDetailItem[] = [
       { id: 3, title: "Python SDK" },
       { id: 4, title: "OpenAI Compatibility" },
     ],
-    exploreCta: "Explore Inference APIs",
-    exploreCtaRoute: EXTERNAL_LINKS.aiInferenceOverview,
+    exploreCta: "Explore Inference Docs",
+    exploreCtaRoute: EXTERNAL_LINKS.inferenceDocs,
     exploreCtaTarget: "_blank",
     code: [
       "# Install and call in 3 lines",
@@ -46,8 +46,8 @@ export const DEVELOPERS_START_BUILDING_ITEMS: readonly AmbitionDetailItem[] = [
       { id: 3, title: "Pre-built Environments" },
       { id: 4, title: "CLI Tools" },
     ],
-    exploreCta: "Explore Inference APIs",
-    exploreCtaRoute: EXTERNAL_LINKS.aiInferenceOverview,
+    exploreCta: "Explore Compute Docs",
+    exploreCtaRoute: EXTERNAL_LINKS.gpuDocs,
     exploreCtaTarget: "_blank",
     code: [
       "# Launch an H100 and SSH in",
@@ -69,8 +69,8 @@ export const DEVELOPERS_START_BUILDING_ITEMS: readonly AmbitionDetailItem[] = [
       { id: 3, title: "MLflow" },
       { id: 4, title: "Spot Optimization" },
     ],
-    exploreCta: "Explore Inference APIs",
-    exploreCtaRoute: EXTERNAL_LINKS.aiInferenceOverview,
+    exploreCta: "Explore Orchestration Docs",
+    exploreCtaRoute: EXTERNAL_LINKS.documentation,
     exploreCtaTarget: "_blank",
     code: [
       "# Submit a distributed training job",

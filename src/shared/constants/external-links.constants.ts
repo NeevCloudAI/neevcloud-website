@@ -11,6 +11,9 @@ export const EXTERNAL_LINKS = {
   deployGpu: "https://console.ai.neevcloud.com/deploy-gpu",
   storage: "https://console.ai.neevcloud.com/storage",
   documentation: "https://docs.ai.neevcloud.com/",
+  inferenceDocs: "https://docs.ai.neevcloud.com/ai-inference/overview",
+  gpuDocs: "https://docs.ai.neevcloud.com/gpu-ai-service/deploying-gpu",
+
   apiKeys: "https://console.ai.neevcloud.com/api-keys",
   templates: "https://console.ai.neevcloud.com/templates",
   modelApi: "https://console.ai.neevcloud.com/ai-inference/model-api",

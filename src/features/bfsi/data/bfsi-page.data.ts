@@ -7,6 +7,7 @@ export const BFSI_HERO = {
   primaryCta: "Talk to Sales",
   primaryCtaRoute: "/contact-neevcloud",
   secondaryCta: "View Compliance",
+  secondaryCtaRoute: "/privacy-policy",
   image: "/images/bfsi.png",
   trustBadges: [
     "SOC 2 Type II certified",

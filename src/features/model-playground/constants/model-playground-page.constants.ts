@@ -10,7 +10,7 @@ export const MODEL_PLAYGROUND_HERO = {
   secondaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   secondaryCtaTarget: "_blank",
   badgeText: "Test AI Models Free",
-  image: "/images/playground.png",
+  image: "/images/webp/model-playground.webp",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",

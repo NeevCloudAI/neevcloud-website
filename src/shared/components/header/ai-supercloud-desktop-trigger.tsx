@@ -10,12 +10,12 @@ const megaMenuPanelClassName = cn(
   "w-full max-w-[min(900px,calc(100vw-2rem))] 2xl:max-w-[min(1200px,calc(100vw-2rem))]",
   "-translate-x-1/2",
   "rounded-b-md bg-white shadow-md",
-  "transition-opacity duration-150"
+  "transition-opacity duration-150",
 );
 
 function shouldCloseMegaMenuOnClick(target: EventTarget | null): boolean {
   return Boolean(
-    target instanceof Element && target.closest("a, button[type='button']")
+    target instanceof Element && target.closest("a, button[type='button']"),
   );
 }
 
@@ -46,7 +46,7 @@ export default function AiSupercloudDesktopTrigger() {
           megaMenuPanelClassName,
           isOpen
             ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+            : "pointer-events-none opacity-0",
         )}
         role="presentation"
         onClickCapture={(event) => {

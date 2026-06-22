@@ -9,7 +9,7 @@ export const DEFENCE_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
     description:
       "GPU infrastructure for processing reconnaissance data, satellite imagery analysis, signals intelligence, and pattern recognition.",
     icon: "/icons/intelligence-surveillance.svg",
-    image: "/images/defence-intelligence-surveillance.png",
+    image: "/images/webp/defence-intelligence-surveillance.webp",
     theme: "gray",
     imageSpacing: true,
   },

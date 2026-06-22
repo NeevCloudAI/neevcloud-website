@@ -14,16 +14,18 @@ const GpuUseCasesCard = ({
     <article
       className={cn(
         "flex h-full w-full flex-col overflow-hidden rounded-md bg-cloud-gray",
-        className,
+        className
       )}
     >
       <div className="relative aspect-694/280 w-full">
         <Image
           src={imageSrc}
           alt={imageAlt}
-          fill
-          className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          width={694}
+          height={280}
+          // fill
+          className="h-full w-full"
+          // sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
       <div className="flex flex-1 flex-col p-4 md:px-10 md:py-7.5">

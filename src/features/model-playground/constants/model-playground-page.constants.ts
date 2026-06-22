@@ -28,5 +28,5 @@ export const MODEL_PLAYGROUND_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.aiInferenceOverview,
   primaryCtaTarget: "_blank",
   secondaryCta: "Talk to Our Team",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
 } as const;

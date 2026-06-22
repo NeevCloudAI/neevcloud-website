@@ -11,7 +11,7 @@ export const SECURITY_BY_DESIGN_ITEMS: readonly SecurityByDesignCardItem[] = [
   {
     id: "infrastructure-security",
     title: "Infrastructure Security",
-    imageSrc: "/images/infrastructure-security.png",
+    imageSrc: "/images/webp/infrastructure-security.webp",
     imageAlt: "Server room with secure infrastructure",
     features: [
       {
@@ -43,7 +43,7 @@ export const SECURITY_BY_DESIGN_ITEMS: readonly SecurityByDesignCardItem[] = [
   {
     id: "platform-security",
     title: "Platform Security",
-    imageSrc: "/images/platform-security.png",
+    imageSrc: "/images/webp/platform-security.webp",
     imageAlt: "Digital shield representing platform security",
     features: [
       {
@@ -75,7 +75,7 @@ export const SECURITY_BY_DESIGN_ITEMS: readonly SecurityByDesignCardItem[] = [
   {
     id: "operational-security",
     title: "Operational Security",
-    imageSrc: "/images/operational-security.png",
+    imageSrc: "/images/webp/operational-security.webp",
     imageAlt: "Security operations monitoring dashboard",
     features: [
       {

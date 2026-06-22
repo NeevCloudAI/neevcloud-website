@@ -4,7 +4,7 @@ export const MEDIA_HERO = {
     "From 3D animation to cinematic effects, media workflows demand massive compute on tight deadlines. NeevCloud provides GPU infrastructure that scales with your production, so you can render faster, iterate in real time, and deliver on schedule.",
   primaryCta: "Start Rendering",
   secondaryCta: "Talk to Sales",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
   image: "/images/webp/media-vfx.webp",
   trustBadges: [
     "H100 and A100 GPUs",
@@ -21,5 +21,5 @@ export const MEDIA_FOOTER = {
     "Scale your render farm on-demand. H100 and A100 GPUs for feature films, animation, and VFX. Per-second billing, instant provisioning.",
   primaryCta: "Start Rendering",
   secondaryCta: "Talk to Sales",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
 } as const;

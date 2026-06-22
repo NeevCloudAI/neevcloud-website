@@ -16,7 +16,7 @@ export const AI_DEVELOPMENT_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Manage GPUs, inference, storage, and CPU compute from a single dashboard. No jumping between separate portals or tools.",
     icon: "/icons/spark.svg",
-    image: "/images/buildings.png",
+    image: "/images/webp/buildings.webp",
     imageSpacing: true,
     theme: "light",
   },

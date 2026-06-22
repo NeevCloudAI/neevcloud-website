@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/events",
   title: "Events | NeevCloud",
   description:
     "From global summits to exclusive experiences, connect with the minds shaping the future of AI infrastructure at NeevCloud events.",

@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/object-storage",
   title: "Object Storage | NeevCloud",
   description:
     "Durable, scalable cloud storage with zero API migration friction, works with every tool you already use. Move datasets, model artifacts, and application data without changing a single line of code.",

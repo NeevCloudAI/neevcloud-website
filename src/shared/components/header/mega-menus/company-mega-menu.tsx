@@ -57,7 +57,7 @@ const COMPANY_COLUMN_RIGHT: MegaMenuLinkRowProps[] = [
     iconAlt: "Contact us",
     title: "Contact Us",
     description: "Talk to Sales or Support",
-    href: "/contact-neevcloud",
+    href: "/contact-neevcloud#contact-form",
   },
   {
     iconSrc: "/icons/blogs.svg",

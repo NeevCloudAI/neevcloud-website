@@ -642,16 +642,40 @@ export const GPU_OTHER_GPUS_CATALOG_H100: readonly GpuOtherGpuCard[] = [
   },
 ];
 
+export const GPU_OTHER_GPUS_CATALOG_RTX_3090: readonly GpuOtherGpuCard[] =
+  GPU_OTHER_GPUS_CATALOG_H100;
+
+export const GPU_OTHER_GPUS_CATALOG_RTX_5090: readonly GpuOtherGpuCard[] =
+  GPU_OTHER_GPUS_CATALOG_H100;
+
+export const GPU_OTHER_GPUS_CATALOG_A6000: readonly GpuOtherGpuCard[] =
+  GPU_OTHER_GPUS_CATALOG_H100;
+
+export const GPU_OTHER_GPUS_CATALOG_A6000_SE: readonly GpuOtherGpuCard[] =
+  GPU_OTHER_GPUS_CATALOG_H100;
+
+export const GPU_OTHER_GPUS_CATALOG_TESLA_T4: readonly GpuOtherGpuCard[] =
+  GPU_OTHER_GPUS_CATALOG_H100;
+
+export const GPU_OTHER_GPUS_CATALOG_NVL72: readonly GpuOtherGpuCard[] =
+  GPU_OTHER_GPUS_CATALOG_H100;
+
 export const GPU_OTHER_GPUS_CATALOG_BY_PAGE: Record<
   string,
   readonly GpuOtherGpuCard[]
 > = {
   "nvidia-a100": GPU_OTHER_GPUS_CATALOG_A100,
   "nvidia-a30": GPU_OTHER_GPUS_CATALOG_A30,
+  "nvidia-a6000": GPU_OTHER_GPUS_CATALOG_A6000,
+  "nvidia-a6000se": GPU_OTHER_GPUS_CATALOG_A6000_SE,
   "nvidia-b200": GPU_OTHER_GPUS_CATALOG_B200,
   "nvidia-b300": GPU_OTHER_GPUS_CATALOG_B300,
   "nvidia-h100": GPU_OTHER_GPUS_CATALOG_H100,
   "nvidia-h200": GPU_OTHER_GPUS_CATALOG_H200,
+  "nvidia-nvl72": GPU_OTHER_GPUS_CATALOG_NVL72,
+  "nvidia-rtx-3090": GPU_OTHER_GPUS_CATALOG_RTX_3090,
+  "nvidia-rtx-5090": GPU_OTHER_GPUS_CATALOG_RTX_5090,
+  "nvidia-teslat4": GPU_OTHER_GPUS_CATALOG_TESLA_T4,
 };
 
 export function getGpuOtherGpusCatalog(

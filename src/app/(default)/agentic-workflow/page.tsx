@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/agentic-workflow",
   title: "Agentic Workflow | NeevCloud",
   description:
     "Run multi-step, multi-model agent pipelines on reliable, low-latency GPU compute. Container-native, Kubernetes-backed infrastructure for autonomous AI agents in India.",

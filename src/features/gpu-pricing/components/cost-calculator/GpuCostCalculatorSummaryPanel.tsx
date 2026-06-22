@@ -102,7 +102,7 @@ const GpuCostCalculatorSummaryPanel = ({
           {GPU_COST_CALCULATOR_SECTION.deployCta}
         </LinkComponent>
         <LinkComponent
-          href="/contact-neevcloud"
+          href="/contact-neevcloud#contact-form"
           variant="outline"
           className="w-full"
         >

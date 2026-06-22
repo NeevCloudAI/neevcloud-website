@@ -35,7 +35,7 @@ const GpuTechnicalSpecsTable = ({ rows }: GpuTechnicalSpecsTableProps) => {
               key={row.id}
               className={cn(
                 "border-b border-gray-01 last:border-b-0",
-                index % 2 === 1 && "bg-cloud-gray",
+                index % 2 === 1 && "bg-cloud-gray"
               )}
             >
               <th
@@ -46,7 +46,7 @@ const GpuTechnicalSpecsTable = ({ rows }: GpuTechnicalSpecsTableProps) => {
                   {row.feature}
                 </Text>
               </th>
-              <td className="px-4 py-3 text-center align-middle md:px-6 md:py-3.5">
+              <td className="px-4 py-3 text-center align-middle md:px-6 md:py-2.5">
                 <Text as="h6" weight="normal" textColor="black">
                   {row.specification}
                 </Text>

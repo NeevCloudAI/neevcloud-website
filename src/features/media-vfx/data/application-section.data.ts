@@ -9,7 +9,7 @@ export const MEDIA_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Render thousands of frames in parallel for feature animation and live-action visual effects. Path-traced light, volumetrics, and crowd sims available.",
     icon: "/icons/brain.svg",
-    image: "/images/fraud-detection.png",
+    image: "/images/webp/fraud-detection.webp",
   },
   {
     id: "simulations-fx",

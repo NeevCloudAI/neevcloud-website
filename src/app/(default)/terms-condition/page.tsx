@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/terms-condition",
   title: "Terms & Conditions | NeevCloud",
   description:
     "NeevCloud terms and conditions for using our AI infrastructure platform and services.",

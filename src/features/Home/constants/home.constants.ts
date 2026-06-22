@@ -8,5 +8,5 @@ export const HOME_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "Talk to Our Team",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
 } as const;

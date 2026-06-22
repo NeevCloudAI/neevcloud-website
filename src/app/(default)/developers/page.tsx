@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/developers",
   title: "Developers | NeevCloud",
   description:
     "OpenAI-compatible APIs, Python and Node SDKs, CLI, Terraform support, and developer-first documentation. From zero to first inference call in under 5 minutes.",

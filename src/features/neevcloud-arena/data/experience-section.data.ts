@@ -22,7 +22,7 @@ export const EXPERIENCE_CTA_SECTION = {
   titleHighlight: "Experience",
   footerText: "Not sure where to start?",
   footerButtonLabel: "Book a Guided Session",
-  footerButtonRoute: "/contact-neevcloud",
+  footerButtonRoute: "/contact-neevcloud#contact-form",
 } as const;
 
 export const EXPERIENCE_CTA_CARDS: readonly ExperienceCtaCard[] = [

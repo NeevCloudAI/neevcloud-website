@@ -99,7 +99,7 @@ export const FOOTER_LINK_GROUPS: readonly FooterLinkGroup[] = [
       { label: "Careers", href: "/careers" },
       { label: "Life at NeevCloud", href: "/life-at-neevcloud" },
       { label: "Event", href: "/events" },
-      { label: "Contact Us", href: "/contact-neevcloud" },
+      { label: "Contact Us", href: "/contact-neevcloud#contact-form" },
     ],
   },
   {

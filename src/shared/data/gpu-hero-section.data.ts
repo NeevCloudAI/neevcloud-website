@@ -107,3 +107,111 @@ export const NVIDIA_H100_HERO: GpuHeroSectionContent = {
   pricingAmount: "$1.99/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
+
+export const NVIDIA_RTX_3090_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia RTX 3090",
+  titlePrefix: "Rent",
+  titleHighlight: "Nvidia RTX 3090",
+  titleSuffix: "GPU On-Demand",
+  description:
+    "Ideal for professional video production, 3D modeling, and machine learning prototyping. Supercharge your AI and ML training with NVIDIA RTX 3090 GPUs featuring 24GB of blazing-fast memory on NeevCloud. Get started now and boost your projects with flexible hourly rental options.",
+  bulletPoints: [
+    "Delivering 35.6 TFLOPS of FP32 performance with 2nd-gen RT Cores",
+    "24GB GDDR6X memory for 8K video editing and high-resolution rendering",
+    "Real-time viewport ray tracing in Maya, 3ds Max, Cinema 4D, Blender",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$0.54/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};
+
+export const NVIDIA_A6000_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia RTX A6000",
+  titlePrefix: "Rent",
+  titleHighlight: "Nvidia RTX A6000",
+  titleSuffix: "GPU On-Demand",
+  description:
+    "Purpose-built for professional 3D rendering, AI-powered CAD workflows, and photorealistic visualization, now accessible through our RTX-optimized cloud platform. Teams can rent A6000 online GPU for high-performance workloads and instant scalability for creative and AI projects.",
+  bulletPoints: [
+    "Delivering up to 309 TFLOPS of GPU compute with advanced RT Cores",
+    "48GB GDDR6 memory with ECC support for mission-critical applications",
+    "Real-time ray tracing and AI-accelerated rendering in Blender, V-Ray, and Arnold",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$0.54/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};
+
+export const NVIDIA_RTX_5090_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia RTX 5090",
+  titlePrefix: "Rent",
+  titleHighlight: "Nvidia RTX 5090",
+  titleSuffix: "GPU On-Demand",
+  description:
+    "Ultimate solution for 8K Rendering, professional content creation, and AI-powered video editing, now accessible through our high-performance cloud gaming platform. Teams can rent RTX 5090 for high-performance workloads and instant scalability. Transparent NVIDIA 5090 rental ensures predictable access for creators and enterprises alike.",
+  bulletPoints: [
+    "Delivering next-generation ray tracing with Blackwell architecture and DLSS 4",
+    "32GB GDDR7 memory for 8K video editing and real-time rendering",
+    "AI-accelerated workflows in Adobe Creative Suite, DaVinci Resolve, and Unreal Engine",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$0.54/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};
+
+export const NVIDIA_A6000_SE_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia RTX PRO 6000 SE",
+  titlePrefix: "Rent",
+  titleHighlight: "Nvidia RTX PRO 6000 SE",
+  titleSuffix: "GPU On-Demand",
+  description:
+    "Enterprise-grade solution for AI deployment and professional visualization as a service, now accessible through our Blackwell-powered data center infrastructure. Organizations can rent RTX Pro 6000 on-demand for high-performance workloads, enabling scalable and efficient AI and visualization projects.",
+  bulletPoints: [
+    "Delivering cutting-edge AI inference with Blackwell Tensor Cores for enterprise workloads",
+    "Enhanced security and reliability for mission-critical generative AI applications",
+    "vGPU technology for multi-user desktop virtualization and remote visualization",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$1.54/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};
+
+export const NVIDIA_TESLA_T4_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia Tesla T4",
+  titlePrefix: "Rent",
+  titleHighlight: "Nvidia Tesla T4",
+  titleSuffix: "GPU On-Demand",
+  description:
+    "Optimized for production AI inference and cost-effective deep learning deployment, now accessible through our enterprise cloud platform with pay-per-hour pricing. Explore NVIDIA T4 GPU specs, memory and price. Nvidia T4 gpu on rent in India and USA. Learn about Tesla T4 performance, Tensor Cores, and T4 GPU benchmarks. Get started with T4 rental at $0.29 today!",
+  bulletPoints: [
+    "Delivering up to 260 TOPS of INT8 inference performance in a 70W power envelope",
+    "16GB GDDR6 memory with multi-precision Tensor Core support",
+    "40X faster AI inference than CPUs with real-time video analytics",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$1.54/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};
+
+export const NVIDIA_NVL72_HERO: GpuHeroSectionContent = {
+  badgeText: "Nvidia GB200 NVL72",
+  titlePrefix: "Driving Next-Gen AI Infra with",
+  titleHighlight: "NVIDIA GB200 NVL72",
+  titleSuffix: "",
+  description:
+    "NVIDIA GB200 NVL72 is built to power massive AI workloads with breakthrough performance, enabling enterprises to scale training and inference across large, interconnected GPU systems. For those reviewing GB200 NVL72 specs, the platform offers cutting-edge architecture, high-bandwidth connectivity, and enterprise-grade efficiency at competitive prices. Compared to traditional AI servers, it delivers superior scalability, higher bandwidth, and advanced architecture—making it a more efficient choice for next-generation AI platforms, especially for those evaluating GB200 NVL72 specs and pricing.",
+  bulletPoints: [
+    "Massive-Scale AI Compute: Designed to support large-scale AI training and inference workloads with high-performance GPU architecture",
+    "High-Speed Interconnect: Advanced NVLink connectivity enables seamless communication across GPUs for distributed computing",
+    "Optimized for AI Factories: Built for next-generation AI data centers handling complex, high-throughput workloads",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$5.00/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};

@@ -16,7 +16,7 @@ const GpuHeader = () => {
             className="h-7 w-auto"
           />
         </Link>
-        <LinkComponent href={"/contact-neevcloud"}>
+        <LinkComponent href={"/contact-neevcloud#contact-form"}>
           Request a Call
         </LinkComponent>
       </Container>

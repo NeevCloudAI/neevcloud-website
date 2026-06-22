@@ -9,7 +9,7 @@ export const GOVERNMENT_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Traffic optimization, public safety analytics, resource allocation, and citizen service platforms powered by AI on sovereign infrastructure.",
     icon: "/icons/brain.svg",
-    image: "/images/fraud-detection.png",
+    image: "/images/webp/fraud-detection.webp",
   },
   {
     id: "healthcare-medical-research",

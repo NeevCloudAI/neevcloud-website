@@ -17,7 +17,7 @@ export const LEADERSHIP_FOOTER = {
   description:
     "Whether you're training models, deploying inference, or designing sovereign AI infrastructure - we'd like to hear what you're building.",
   primaryCta: "Get in touch",
-  primaryCtaRoute: "/contact-neevcloud",
+  primaryCtaRoute: "/contact-neevcloud#contact-form",
   secondaryCta: "Follow on Linkedin",
   secondaryCtaRoute: EXTERNAL_LINKS.neevcloudLinkedin,
   secondaryCtaTarget: "_blank",

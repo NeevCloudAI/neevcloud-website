@@ -9,7 +9,7 @@ export const BFSI_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Real-time transaction monitoring using ML models. Detect anomalies, prevent fraud, and reduce false positives with GPU-accelerated inference.",
     icon: "/icons/brain.svg",
-    image: "/images/fraud-detection.png",
+    image: "/images/webp/fraud-detection.webp",
   },
   {
     id: "credit-risk",

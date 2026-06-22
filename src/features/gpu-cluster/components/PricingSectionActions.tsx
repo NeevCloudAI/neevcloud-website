@@ -7,7 +7,7 @@ const PricingSectionActions = () => {
         View Complete Pricing
       </LinkComponent>
       <LinkComponent
-        href="/contact-neevcloud"
+        href="/contact-neevcloud#contact-form"
         variant="white"
         textColor="black"
         className="w-full md:w-auto"

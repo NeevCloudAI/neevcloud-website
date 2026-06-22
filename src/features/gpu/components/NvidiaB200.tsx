@@ -10,7 +10,6 @@ import { NVIDIA_B200_HERO } from "@/shared/data/gpu-hero-section.data";
 import { GPU_WHY_CHOOSE_NEEVCLOUD_SECTION } from "@/shared/data/gpu-why-choose-neevcloud.data";
 import { NVIDIA_B200_USE_CASES_SECTION } from "@/shared/data/gpu-use-cases-section.data";
 import { NVIDIA_B200_WHY_CHOOSE_SECTION } from "@/shared/data/gpu-why-choose-section.data";
-import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 import GpuFooterSection from "@/shared/components/gpu-footer-section";
 import GpuTechnicalSpecsSection from "@/shared/components/gpu-technical-specs-section";
 import { NVIDIA_B200_FOOTER_SECTION } from "@/shared/data/gpu-footer.data";
@@ -25,11 +24,11 @@ const NvidiaB200 = () => {
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />
       <GpuUseCasesSection {...NVIDIA_B200_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_B200_TECHNICAL_SPECS_SECTION} />
-      <GpuOtherGpusSection excludeId="nvidia-b200" />
+      {/* <GpuOtherGpusSection excludeId="nvidia-b200" /> */}
       <FaqSection
         items={NVIDIA_B200_FAQ}
         description="Get Clarity Here!"
-        className="pt-0 md:pt-0 2xl:pt-0"
+        // className="pt-0 md:pt-0 2xl:pt-0"
       />
       <GpuFooterSection {...NVIDIA_B200_FOOTER_SECTION} />
     </>

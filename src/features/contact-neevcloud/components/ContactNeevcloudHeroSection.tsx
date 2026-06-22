@@ -61,7 +61,7 @@ const ContactNeevcloudHeroSection = () => {
 
         <div className="w-full min-h-50 md:min-h-80 mt-4 md:mt-12.5 rounded-2xl overflow-hidden relative">
           <Image
-            src="/images/contact.png"
+            src="/images/webp/contact.webp"
             alt="Gradient Background"
             fill
             className="object-contain"

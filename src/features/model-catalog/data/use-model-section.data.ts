@@ -48,7 +48,7 @@ export const USE_MODEL_CARDS: readonly UseModelCardData[] = [
       { label: "Best For", value: "Enterprise workloads" },
     ],
     ctaLabel: "Contact Sales",
-    ctaHref: "/contact-neevcloud",
+    ctaHref: "/contact-neevcloud#contact-form",
     ctaVariant: "outline",
     footnote: "Enterprise consultation included",
   },

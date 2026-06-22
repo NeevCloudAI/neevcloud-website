@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/newsroom",
   title: "Newsroom | NeevCloud",
   description:
     "News, updates, and resources for media and press covering NeevCloud.",

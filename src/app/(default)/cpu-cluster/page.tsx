@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/cpu-cluster",
   title: "CPU Cluster | NeevCloud",
   description:
     "Model API gateways, data pipelines, orchestration control planes, and monitoring stacks - every AI deployment needs CPU alongside its GPUs. NeevCloud CPU instances are co-located with GPU clusters in the same private network.",

@@ -20,5 +20,5 @@ export const GPU_CLUSTER_FOOTER = {
   primaryCta: "Configure Now",
   primaryCtaRoute: "/gpu-pricing",
   secondaryCta: "Talk to Our Team",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
 } as const;

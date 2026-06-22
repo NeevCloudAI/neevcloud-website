@@ -8,7 +8,7 @@ export const NEEVCLOUD_ARENA_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "Book a Session",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
   trustBadges: [
     "Try in Minutes",
     "Real Infrastructure",

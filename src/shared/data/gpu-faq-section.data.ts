@@ -168,6 +168,234 @@ export const NVIDIA_H200_FAQ: readonly FaqItem[] = [
   },
 ] as const;
 
+export const NVIDIA_RTX_3090_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What is AI compute, and why use GPUs?",
+    answer:
+      "AI computing powers model training and inference. RTX 3090 GPUs excel at parallel AI tasks.",
+  },
+  {
+    id: 2,
+    category: "Use Cases",
+    question: "Why choose RTX 3090 for AI workloads?",
+    answer:
+      "Its parallel processing and high memory make RTX 3090 ideal for training large AI and deep learning models efficiently.",
+  },
+  {
+    id: 3,
+    category: "Overview",
+    question: "How to choose the right GPU?",
+    answer: "Use RTX 3090 for large models; CPUs may suffice for smaller tasks.",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    question: "Can I scale RTX 3090 clusters on NeevCloud?",
+    answer:
+      "Yes. NeevCloud offers scalable GPU clusters for dynamic workloads.",
+  },
+  {
+    id: 5,
+    category: "Infrastructure",
+    question: "Benefits of cloud-based RTX 3090 clusters?",
+    answer:
+      "Flexible, cost-efficient, high-performance AI compute without on-prem hardware.",
+  },
+] as const;
+
+export const NVIDIA_RTX_5090_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What is AI compute, and why use GPUs?",
+    answer:
+      "AI computing powers model training and inference. GPUs like RTX 5090 accelerate AI and GenAI workloads via massive parallelism.",
+  },
+  {
+    id: 2,
+    category: "Use Cases",
+    question: "Why is RTX 5090 ideal for AI and GenAI?",
+    answer:
+      "Its massive parallel cores and high memory make RTX 5090 perfect for LLMs, deep learning, and generative AI workloads.",
+  },
+  {
+    id: 3,
+    category: "Overview",
+    question: "How to choose the right GPU?",
+    answer:
+      "Pick based on model size, workload (training vs inference), and scaling. The RTX 5090 is ideal for LLMs and deep learning applications.",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    question: "Can I deploy GPU clusters for research?",
+    answer:
+      "Yes. NeevCloud supports RTX 5090 clusters and AI superclusters for training and enterprise AI.",
+  },
+  {
+    id: 5,
+    category: "Infrastructure",
+    question: "What is GPU virtualization and cloud hosting?",
+    answer:
+      "GPU virtualization enables multiple users per GPU, while cloud hosting provides scalable, on-demand RTX 5090 access.",
+  },
+] as const;
+
+export const NVIDIA_A6000_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What makes RTX A6000 ideal for AI?",
+    answer:
+      "48GB GDDR6, 10,752 CUDA cores, and Tensor Cores power deep learning, AI training, and large-scale rendering.",
+  },
+  {
+    id: 2,
+    category: "Use Cases",
+    question: "Why use RTX A6000 for AI workloads?",
+    answer:
+      "Its massive cores and Tensor Cores accelerate deep learning and large AI models far faster than CPUs.",
+  },
+  {
+    id: 3,
+    category: "Infrastructure",
+    question: "Can I use multiple RTX A6000 GPUs?",
+    answer:
+      "Yes. NeevCloud supports multi-GPU scaling for LLMs, GenAI, and large AI workloads.",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    question: "Benefits of renting RTX A6000 on NeevCloud?",
+    answer: "Instant access, flexible GPU allocation, and scalable performance.",
+  },
+  {
+    id: 5,
+    category: "Use Cases",
+    question: "Is RTX A6000 good for 3D and visualization?",
+    answer:
+      "Yes. Real-time rendering, ray tracing, and VFX-ready performance.",
+  },
+] as const;
+
+export const NVIDIA_A6000_SE_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What makes NVIDIA RTX PRO 6000 ideal for AI workloads?",
+    answer:
+      "448GB ECC VRAM and powerful Tensor Cores deliver fast, reliable AI, HPC, and GenAI performance.",
+  },
+  {
+    id: 2,
+    category: "Overview",
+    question: "What's the difference between CPU and GPU in AI?",
+    answer:
+      "GPUs handle parallel workloads, making AI training and inference much faster than CPUs.",
+  },
+  {
+    id: 3,
+    category: "Infrastructure",
+    question:
+      "Can I build multi-GPU clusters with RTX PRO 6000 on NeevCloud?",
+    answer:
+      "Yes. NeevCloud supports scalable multi-GPU AI and HPC clusters.",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    question: "How does NeevCloud support AI training and inference?",
+    answer: "Dedicated RTX PRO 6000 instances optimized for both workloads.",
+  },
+  {
+    id: 5,
+    category: "Use Cases",
+    question: "Is RTX PRO 6000 suitable for Generative AI?",
+    answer:
+      "Yes. It efficiently accelerates text, image, and multimodal GenAI models.",
+  },
+] as const;
+
+export const NVIDIA_TESLA_T4_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question:
+      "What is the NVIDIA Tesla T4 GPU and what workloads is it best for?",
+    answer:
+      "The NVIDIA Tesla T4 GPU is built on the advanced Turing architecture and is designed to accelerate AI, machine learning, deep learning inference, and data analytics. With 2,560 CUDA cores, 320 Tensor Cores, and 16GB GDDR6 memory, it delivers high-performance compute for enterprise workloads, virtual workstations, and cloud-based AI applications.",
+  },
+  {
+    id: 2,
+    category: "Use Cases",
+    question:
+      "How does the Tesla T4 GPU optimize AI and ML performance in the cloud?",
+    answer:
+      "The Tesla T4 supports multi-precision compute (FP32, INT8, INT4) and integrates seamlessly with CUDA, NVIDIA TensorRT™, and ONNX, enabling faster AI training and inference. Its compact, energy-efficient design allows scale-out deployments in cloud environments, making it ideal for virtualized GPU workloads and enterprise AI applications.",
+  },
+  {
+    id: 3,
+    category: "Pricing",
+    question: "What is the NVIDIA T4 GPU price and rental cost on NeevCloud?",
+    answer:
+      "The NVIDIA T4 GPU price varies depending on rental duration and instance configuration. On NeevCloud, you can access Tesla T4 GPU instances at flexible hourly rates, ensuring cost-effective access to enterprise-grade AI acceleration without the upfront expense of purchasing the hardware. Check the platform to view the latest nvidia t4 price and rental options.",
+  },
+  {
+    id: 4,
+    category: "NeevCloud",
+    question:
+      "Why should I choose NeevCloud for Tesla T4 GPU cloud deployment?",
+    answer:
+      "NeevCloud offers pre-configured Tesla T4 GPU instances optimized for cloud and hybrid deployments. By renting T4 GPUs on NeevCloud, teams can scale quickly, gain high performance for AI and ML workloads, and save on operational costs compared to on-premise setups. Flexible deployment ensures you get the best T4 GPU price for your workload requirements.",
+  },
+] as const;
+
+export const NVIDIA_NVL72_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What is NVIDIA GB200 NVL72 designed for?",
+    answer:
+      "It is designed for large-scale AI training and inference across hyperscale environments.",
+  },
+  {
+    id: 2,
+    category: "Overview",
+    question: "What architecture powers GB200 NVL72?",
+    answer: "It is based on NVIDIA Blackwell architecture.",
+  },
+  {
+    id: 3,
+    category: "Infrastructure",
+    question: "How does GB200 NVL72 enable scalability?",
+    answer:
+      "It uses high-speed NVLink interconnect to support large, distributed GPU clusters.",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    question: "Is GB200 NVL72 suitable for AI datacenters?",
+    answer:
+      "Yes, it is optimized for AI factories and next-generation datacenters.",
+  },
+  {
+    id: 5,
+    category: "Use Cases",
+    question: "What type of workloads can it handle?",
+    answer:
+      "It supports high-performance AI workloads, including training and inference.",
+  },
+  {
+    id: 6,
+    category: "Overview",
+    question: "How does the NVIDIA GB200 compare to other data center servers?",
+    answer:
+      "The NVIDIA GB200 outperforms traditional data center servers with higher AI performance, faster processing, and better efficiency. Its advanced architecture delivers improved scalability and a more cost-effective price for large workloads.",
+  },
+] as const;
+
 export const NVIDIA_H100_FAQ: readonly FaqItem[] = [
   {
     id: 1,

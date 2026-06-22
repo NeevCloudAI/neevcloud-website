@@ -5,7 +5,7 @@ export const BFSI_HERO = {
   description:
     "From fraud detection to risk modeling, BFSI workloads demand infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute and AI infrastructure designed to meet the requirements of banking, fintech, and insurance.",
   primaryCta: "Talk to Sales",
-  primaryCtaRoute: "/contact-neevcloud",
+  primaryCtaRoute: "/contact-neevcloud#contact-form",
   secondaryCta: "View Compliance",
   secondaryCtaRoute: "/privacy-policy",
   image: "/images/webp/bfsi.webp",

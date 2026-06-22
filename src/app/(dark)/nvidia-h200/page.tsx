@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/nvidia-h200",
   title: "NVIDIA H200 | NeevCloud",
   description:
     "NVIDIA H200 is a Hopper-architecture GPU with 141GB HBM3e memory, designed for trillion-parameter LLM training and memory-intensive AI workloads at scale.",

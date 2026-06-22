@@ -1,4 +1,5 @@
-import GpuHeader from "@/shared/components/header/gpu-header";
+import AnnouncementSection from "@/shared/components/AnnouncementSection";
+import HeaderComponent from "@/shared/components/header";
 import { Divider } from "@/shared/ui-lib";
 
 export default function DarkLayout({
@@ -8,8 +9,9 @@ export default function DarkLayout({
 }>) {
   return (
     <div className="relative">
-      <GpuHeader />
-      <Divider orientation="horizontal" className="bg-gray-05" />
+      <AnnouncementSection />
+      <HeaderComponent />
+      <Divider orientation="horizontal" />
       <main>{children}</main>
     </div>
   );

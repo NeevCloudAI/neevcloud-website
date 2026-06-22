@@ -20,5 +20,5 @@ export const CPU_CLUSTER_FOOTER = {
   primaryCtaRoute: EXTERNAL_LINKS.signup,
   primaryCtaTarget: "_blank",
   secondaryCta: "Talk to Our Team",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
 } as const;

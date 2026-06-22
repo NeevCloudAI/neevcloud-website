@@ -10,7 +10,7 @@ const NounSection = () => {
       aria-labelledby="noun-section-heading"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[url('/images/satelite.png')] bg-cover bg-center bg-position-center bg-no-repeat opacity-85"
+        className="pointer-events-none absolute inset-0 bg-[url('/images/webp/satelite.webp')] bg-cover bg-center bg-position-center bg-no-repeat opacity-85"
         aria-hidden
       />
       <div

@@ -7,7 +7,7 @@ export const EVENTS_HERO = {
   primaryCta: "Join Discord Community",
   primaryCtaRoute: EXTERNAL_LINKS.discord,
   primaryCtaTarget: "_blank",
-  image: "/images/neevcloud.png",
+  image: "/images/webp/neevcloud.webp",
   trustBadges: [
     "Work that matters",
     "Team events",

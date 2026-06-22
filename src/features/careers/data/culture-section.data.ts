@@ -15,7 +15,7 @@ export const CULTURE_CARDS: readonly ApplicationCardItem[] = [
     description:
       "You own your work end-to-end: design, build, ship, support. No hand-offs that dilute accountability. You see the full arc of what you create.",
     icon: "/icons/drug-discovery.svg",
-    image: "/images/healthcare-drug-discovery.png",
+    image: "/images/webp/healthcare-drug-discovery.webp",
     imageSpacing: true,
     theme: "gray",
   },

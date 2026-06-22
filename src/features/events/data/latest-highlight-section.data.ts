@@ -18,7 +18,7 @@ export const LATEST_HIGHLIGHT_SECTION = {
   secondaryCta: "Read Recap",
   secondaryCtaRoute: EXTERNAL_LINKS.neevcloudLinkedin,
   secondaryCtaTarget: "_blank",
-  image: "/images/supercloud.png",
+  image: "/images/webp/supercloud.webp",
   imageAlt:
     "NeevCloud booth at India AI Impact Summit 2026 showcasing the Sovereign End-to-End SuperAI Cloud Platform",
 } as const;

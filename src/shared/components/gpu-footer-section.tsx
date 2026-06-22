@@ -28,7 +28,7 @@ const GpuFooterSection = ({
           id="gpu-footer-section-heading"
           align="center"
           textColor="white"
-          className="max-w-6xl"
+          className="max-w-3xl"
         >
           {titlePrefix}
           <Text as="span" variant="h2" textColor="primary">

@@ -7,7 +7,7 @@ export const TCO_CALCULATOR_HERO = {
   primaryCta: "Open TCO Calculator",
   primaryCtaRoute: "/tco-calculator#tco-calculator-tool",
   secondaryCta: "Talk to Sales",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
   trustBadges: [
     "No signup required",
     "Provider comparison",

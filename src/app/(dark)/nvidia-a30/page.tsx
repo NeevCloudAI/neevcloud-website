@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/nvidia-a30",
   title: "NVIDIA A30 | NeevCloud",
   description:
     "NVIDIA A30 is a high-performance GPU designed for AI inference and enterprise virtualization workloads.",

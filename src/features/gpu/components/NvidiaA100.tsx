@@ -1,7 +1,6 @@
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
-import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 import GpuFooterSection from "@/shared/components/gpu-footer-section";
 import GpuTechnicalSpecsSection from "@/shared/components/gpu-technical-specs-section";
 import GpuUseCasesSection from "@/shared/components/gpu-use-cases-section";
@@ -25,11 +24,11 @@ const NvidiaA100 = () => {
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />
       <GpuUseCasesSection {...NVIDIA_A100_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_A100_TECHNICAL_SPECS_SECTION} />
-      <GpuOtherGpusSection excludeId="nvidia-a100" />
+      {/* <GpuOtherGpusSection excludeId="nvidia-a100" /> */}
       <FaqSection
         items={NVIDIA_A100_FAQ}
         description="Get Clarity Here!"
-        className="pt-0 md:pt-0 2xl:pt-0"
+        // className="pt-0 md:pt-0 2xl:pt-0"
       />
       <GpuFooterSection {...NVIDIA_A100_FOOTER_SECTION} />
     </>

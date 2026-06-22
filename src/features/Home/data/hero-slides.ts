@@ -49,7 +49,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaRoute: EXTERNAL_LINKS.projectOrion,
     primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Request Demo",
-    secondaryCtaRoute: "/contact-neevcloud",
+    secondaryCtaRoute: "/contact-neevcloud#contact-form",
     secondaryCtaVariant: "white",
   },
   {
@@ -65,7 +65,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
     primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Talk to our experts",
-    secondaryCtaRoute: "/contact-neevcloud",
+    secondaryCtaRoute: "/contact-neevcloud#contact-form",
     secondaryCtaVariant: "outline",
   },
   {
@@ -81,7 +81,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     primaryCtaRoute: EXTERNAL_LINKS.varuna,
     primaryCtaTarget: "_blank",
     secondaryCtaLabel: "Talk to our experts",
-    secondaryCtaRoute: "/contact-neevcloud",
+    secondaryCtaRoute: "/contact-neevcloud#contact-form",
     secondaryCtaVariant: "outline",
   },
 ];

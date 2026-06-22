@@ -11,6 +11,6 @@ export const INFRASTRUCTURE_SECTION = {
     "Orchestration",
     "Serving Infrastructure",
   ],
-  image: "/images/infrastructure.png",
+  image: "/images/webp/infrastructure.webp",
   imageAlt: "NeevCloud AI infrastructure stack illustration",
 } as const;

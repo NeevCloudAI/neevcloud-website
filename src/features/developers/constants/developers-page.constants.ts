@@ -8,7 +8,7 @@ export const DEVELOPERS_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "Talk to an Engineer",
-  secondaryCtaRoute: "/contact-neevcloud",
+  secondaryCtaRoute: "/contact-neevcloud#contact-form",
   image: "/images/webp/model-api.webp",
   trustBadges: [
     "OpenAI-compatible",

@@ -10,7 +10,7 @@ export const AGENTIC_WORKFLOW_APPLICATION_CARDS: readonly ApplicationCardItem[] 
       description:
         "Autonomous research agents that gather information, synthesize findings, and generate reports across multiple sources.",
       icon: "/icons/drug-discovery.svg",
-      image: "/images/healthcare-drug-discovery.png",
+      image: "/images/webp/healthcare-drug-discovery.webp",
       imageSpacing: true,
       theme: "gray",
     },

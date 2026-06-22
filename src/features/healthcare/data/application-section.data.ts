@@ -9,7 +9,7 @@ export const HEALTHCARE_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Molecular modeling, protein folding, and compound screening on multi-GPU clusters. Accelerate drug identification and reduce development timelines.",
     icon: "/icons/drug-discovery.svg",
-    image: "/images/healthcare-drug-discovery.png",
+    image: "/images/webp/healthcare-drug-discovery.webp",
     imageSpacing: true,
     theme: "gray",
   },

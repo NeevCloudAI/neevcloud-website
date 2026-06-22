@@ -37,6 +37,30 @@ export const GPU_OTHER_GPUS_FLIP_CHART_CONFIG_BY_PAGE = {
     upToReferenceMultiplierLabel: "2x",
     upToMinRatio: 1,
   },
+  "nvidia-rtx-3090": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
+  "nvidia-rtx-5090": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
+  "nvidia-a6000": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
+  "nvidia-a6000se": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
+  "nvidia-teslat4": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
+  "nvidia-nvl72": {
+    upToReferenceMultiplierLabel: "2x",
+    upToMinRatio: 1,
+  },
 } as const;
 
 export const GPU_OTHER_GPUS_DEFAULT_FLIP_CHART_CONFIG =

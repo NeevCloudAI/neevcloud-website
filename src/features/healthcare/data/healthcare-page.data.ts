@@ -5,7 +5,7 @@ export const HEALTHCARE_HERO = {
   description:
     "From medical imaging to drug discovery, healthcare AI requires infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute designed for medical workloads with certifications healthcare organizations need.",
   primaryCta: "Talk to Sales",
-  primaryCtaRoute: "/contact-neevcloud",
+  primaryCtaRoute: "/contact-neevcloud#contact-form",
   secondaryCta: "View Compliance",
   secondaryCtaRoute: "/privacy-policy",
   image: "/images/webp/healthcare.webp",
@@ -23,7 +23,7 @@ export const HEALTHCARE_FOOTER = {
   description:
     "Secure, compliant infrastructure for medical imaging, drug discovery, and healthcare research. ISO 27001 and SOC 2 Type II certified.",
   primaryCta: "Talk to Sales",
-  primaryCtaRoute: "/contact-neevcloud",
+  primaryCtaRoute: "/contact-neevcloud#contact-form",
   secondaryCta: "View Documentation",
   secondaryCtaRoute: EXTERNAL_LINKS.documentation,
   secondaryCtaTarget: "_blank",

@@ -664,3 +664,561 @@ export const NVIDIA_H100_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
       },
     ],
   };
+
+export const NVIDIA_RTX_3090_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "gpu-architecture",
+        feature: "GPU Architecture",
+        specification: "Ampere",
+      },
+      {
+        id: "tensor-cores",
+        feature: "Tensor Cores",
+        specification: "3rd Generation",
+      },
+      {
+        id: "gpu-memory",
+        feature: "GPU Memory",
+        specification: "24 GB GDDR6X",
+      },
+      {
+        id: "cuda-cores",
+        feature: "NVIDIA CUDA® Cores",
+        specification: "10496",
+      },
+      {
+        id: "nvlink-bandwidth",
+        feature: "NVIDIA NVLink™ (SLI-Ready)",
+        specification: "Yes",
+      },
+      {
+        id: "supplementary-power-connectors",
+        feature: "Supplementary Power Connectors",
+        specification: "Yes",
+      },
+      {
+        id: "graphics-card-power",
+        feature: "Graphics Card Power",
+        specification: "350W",
+      },
+      {
+        id: "form-factor",
+        feature: "Form Factor",
+        specification: "Scalable data center platform",
+      },
+      {
+        id: "power-efficiency",
+        feature: "Power Efficiency",
+        specification: "Optimized for maximum throughput per watt",
+      },
+    ],
+  };
+
+export const NVIDIA_RTX_5090_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "gpu",
+        feature: "GPU",
+        specification: "NVIDIA RTX 5090",
+      },
+      {
+        id: "architecture",
+        feature: "Architecture",
+        specification: "Blackwell Next-Gen",
+      },
+      {
+        id: "gpu-memory",
+        feature: "GPU Memory",
+        specification: "32 GB GDDR7",
+      },
+      {
+        id: "memory-bandwidth",
+        feature: "Memory Bandwidth",
+        specification: "1.7 TB/s",
+      },
+      {
+        id: "cuda-cores",
+        feature: "CUDA Cores",
+        specification: "21760",
+      },
+      {
+        id: "tensor-cores",
+        feature: "Tensor Cores",
+        specification: "Advanced 5th-gen for enhanced AI workloads",
+      },
+      {
+        id: "rt-cores",
+        feature: "Ray Tracing Cores",
+        specification: "4th-gen RT cores for accelerated computation",
+      },
+      {
+        id: "power-consumption",
+        feature: "Power Consumption",
+        specification: "575W (Cloud-optimized configurations)",
+      },
+    ],
+    charts: [
+      {
+        id: "rtx-5090-performance-comparison",
+        caption: "Relative performance vs RTX 4090 baseline",
+        yAxisMax: 2.6,
+        yAxisStep: 0.5,
+        yAxisFormat: "multiplier",
+        referenceLine: 1,
+        bars: [
+          {
+            id: "rtx-4090-cyberpunk",
+            name: "Cyberpunk 2077",
+            description: "RTX 4090",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "rtx-5090-cyberpunk",
+            name: "Cyberpunk 2077",
+            description: "RTX 5090",
+            value: 2.4,
+            displayValue: "2.4X",
+            variant: "highlight",
+          },
+          {
+            id: "rtx-4090-indiana-jones",
+            name: "Indiana Jones",
+            description: "RTX 4090",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "rtx-5090-indiana-jones",
+            name: "Indiana Jones",
+            description: "RTX 5090",
+            value: 2.1,
+            displayValue: "2.1X",
+            variant: "highlight",
+          },
+          {
+            id: "rtx-4090-davinci",
+            name: "DaVinci Resolve",
+            description: "RTX 4090",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "rtx-5090-davinci",
+            name: "DaVinci Resolve",
+            description: "RTX 5090",
+            value: 1.4,
+            displayValue: "1.4X",
+            variant: "highlight",
+          },
+          {
+            id: "rtx-4090-d5-render",
+            name: "D5 Render",
+            description: "RTX 4090",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "rtx-5090-d5-render",
+            name: "D5 Render",
+            description: "RTX 5090",
+            value: 2.6,
+            displayValue: "2.6X",
+            variant: "highlight",
+          },
+          {
+            id: "rtx-4090-genai",
+            name: "Generative AI",
+            description: "RTX 4090",
+            value: 1,
+            displayValue: "1X",
+            variant: "default",
+          },
+          {
+            id: "rtx-5090-genai",
+            name: "Generative AI",
+            description: "RTX 5090",
+            value: 2.1,
+            displayValue: "2.1X",
+            variant: "highlight",
+          },
+        ],
+        legend: [
+          {
+            label: "RTX 4090",
+            variant: "default",
+          },
+          {
+            label: "RTX 5090",
+            variant: "highlight",
+          },
+        ],
+      },
+    ],
+  };
+
+export const NVIDIA_A6000_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "gpu",
+        feature: "GPU",
+        specification: "NVIDIA RTX™ A6000",
+      },
+      {
+        id: "gpu-memory",
+        feature: "GPU Memory",
+        specification: "48GB GDDR6 with error-correcting code (ECC)",
+      },
+      {
+        id: "display-ports",
+        feature: "Display Ports",
+        specification: "4x Display Port 1.4a",
+      },
+      {
+        id: "thermal",
+        feature: "Thermal",
+        specification: "Active cooling for optimal temperature management",
+      },
+      {
+        id: "nvlink",
+        feature: "NVLink",
+        specification:
+          "2-way low profile; enables connection of 2 RTX A6000 GPUs",
+      },
+      {
+        id: "vgpu-software",
+        feature: "vGPU Software Support",
+        specification:
+          "NVIDIA vPC/vApps, NVIDIA RTX Virtual Workstation, NVIDIA Virtual Compute Server",
+      },
+      {
+        id: "vr-ready",
+        feature: "VR Ready",
+        specification: "Yes",
+      },
+    ],
+    charts: [
+      {
+        id: "bert-large-training",
+        title:
+          "Over 3X Higher Out-of-the-Box Performance with TF32 for AI Training",
+        caption: "BERT Large Training",
+        yAxisMax: 3.5,
+        yAxisStep: 0.5,
+        yAxisFormat: "multiplier",
+        referenceLine: 1,
+        bars: [
+          {
+            id: "rtx-6000-tf32",
+            name: "RTX 6000 TF32",
+            value: 1,
+            displayValue: "1.0X",
+            variant: "default",
+          },
+          {
+            id: "rtx-a6000-tf32",
+            name: "RTX A6000 TF32",
+            value: 3.1,
+            displayValue: "3.1X",
+            variant: "highlight",
+          },
+        ],
+        legend: [
+          {
+            label: "RTX 6000 TF32",
+            variant: "default",
+          },
+          {
+            label: "RTX A6000 TF32",
+            variant: "highlight",
+          },
+        ],
+      },
+    ],
+  };
+
+export const NVIDIA_A6000_SE_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "gpu-architecture",
+        feature: "GPU Architecture",
+        specification: "NVIDIA Blackwell",
+      },
+      {
+        id: "cuda-cores",
+        feature: "CUDA Cores",
+        specification: "24,064",
+      },
+      {
+        id: "tensor-cores",
+        feature: "Tensor Cores",
+        specification: "5th Generation",
+      },
+      {
+        id: "rt-cores",
+        feature: "Ray Tracing Cores",
+        specification: "4th Generation",
+      },
+      {
+        id: "ai-tops",
+        feature: "AI TOPS",
+        specification: "4000 TOPS",
+      },
+      {
+        id: "fp32-performance",
+        feature: "Single-Precision FP32",
+        specification: "125 TFLOPS",
+      },
+      {
+        id: "rt-core-performance",
+        feature: "RT Core Performance",
+        specification: "380 TFLOPS",
+      },
+      {
+        id: "gpu-memory",
+        feature: "GPU Memory",
+        specification: "96 GB GDDR7 with ECC",
+      },
+      {
+        id: "memory-interface",
+        feature: "Memory Interface",
+        specification: "512-bit",
+      },
+      {
+        id: "memory-bandwidth",
+        feature: "Memory Bandwidth",
+        specification: "1792 GB/s",
+      },
+      {
+        id: "compute-apis",
+        feature: "Compute APIs",
+        specification: "CUDA 12.8, OpenCL 3.0, DirectCompute",
+      },
+    ],
+    charts: [
+      {
+        id: "memory-comparison",
+        caption: "Memory (GB)",
+        yAxisMax: 140,
+        yAxisStep: 20,
+        yAxisFormat: "number",
+        bars: [
+          {
+            id: "rtx-pro-6000-memory",
+            name: "NVIDIA RTX Pro6000",
+            value: 96,
+            displayValue: "96 GB",
+            variant: "highlight",
+          },
+          {
+            id: "rtx-6000-ada-memory",
+            name: "NVIDIA RTX 6000 Ada",
+            value: 48,
+            displayValue: "48 GB",
+            variant: "default",
+          },
+          {
+            id: "a100-memory",
+            name: "NVIDIA A100",
+            value: 40,
+            displayValue: "40 GB",
+            variant: "default",
+          },
+          {
+            id: "h100-memory",
+            name: "NVIDIA H100",
+            value: 80,
+            displayValue: "80 GB",
+            variant: "default",
+          },
+        ],
+        legend: [
+          {
+            label: "NVIDIA RTX Pro6000",
+            variant: "highlight",
+          },
+          {
+            label: "NVIDIA RTX 6000 Ada",
+            variant: "default",
+          },
+          {
+            label: "NVIDIA A100",
+            variant: "default",
+          },
+          {
+            label: "NVIDIA H100",
+            variant: "default",
+          },
+        ],
+      },
+      {
+        id: "memory-bandwidth-comparison",
+        caption: "Memory Bandwidth (GB/s)",
+        yAxisMax: 4000,
+        yAxisStep: 500,
+        yAxisFormat: "number",
+        bars: [
+          {
+            id: "rtx-pro-6000-bandwidth",
+            name: "NVIDIA RTX Pro6000",
+            value: 1792,
+            displayValue: "1792 GB/s",
+            variant: "highlight",
+          },
+          {
+            id: "rtx-6000-ada-bandwidth",
+            name: "NVIDIA RTX 6000 Ada",
+            value: 960,
+            displayValue: "960 GB/s",
+            variant: "default",
+          },
+          {
+            id: "a100-bandwidth",
+            name: "NVIDIA A100",
+            value: 1555,
+            displayValue: "1555 GB/s",
+            variant: "default",
+          },
+          {
+            id: "h100-bandwidth",
+            name: "NVIDIA H100",
+            value: 2000,
+            displayValue: "2000 GB/s",
+            variant: "default",
+          },
+        ],
+        legend: [
+          {
+            label: "NVIDIA RTX Pro6000",
+            variant: "highlight",
+          },
+          {
+            label: "NVIDIA RTX 6000 Ada",
+            variant: "default",
+          },
+          {
+            label: "NVIDIA A100",
+            variant: "default",
+          },
+          {
+            label: "NVIDIA H100",
+            variant: "default",
+          },
+        ],
+      },
+    ],
+  };
+
+export const NVIDIA_TESLA_T4_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "gpu-architecture",
+        feature: "GPU Architecture",
+        specification: "NVIDIA Turing",
+      },
+      {
+        id: "cuda-cores",
+        feature: "CUDA Cores",
+        specification: "2,560",
+      },
+      {
+        id: "tensor-cores",
+        feature: "Tensor Cores",
+        specification: "320",
+      },
+      {
+        id: "gpu-memory",
+        feature: "GPU Memory",
+        specification: "16 GB GDDR6",
+      },
+      {
+        id: "ecc-support",
+        feature: "ECC Support",
+        specification: "Yes",
+      },
+      {
+        id: "fp32-performance",
+        feature: "FP32 (Single Precision)",
+        specification: "8.1 TFLOPS",
+      },
+      {
+        id: "interconnect-bandwidth",
+        feature: "Interconnect Bandwidth",
+        specification: "32 GB/sec",
+      },
+      {
+        id: "memory-bandwidth",
+        feature: "Memory Bandwidth",
+        specification: "300 GB/sec",
+      },
+      {
+        id: "compute-apis",
+        feature: "Compute APIs",
+        specification: "CUDA, NVIDIA TensorRT™, ONNX",
+      },
+      {
+        id: "vgpu-support",
+        feature: "Virtualization (vGPU) Support",
+        specification: "Yes",
+      },
+    ],
+  };
+
+export const NVIDIA_NVL72_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "architecture",
+        feature: "Architecture",
+        specification: "NVIDIA Blackwell Architecture",
+      },
+      {
+        id: "configuration",
+        feature: "Configuration",
+        specification: "NVL72 System",
+      },
+      {
+        id: "gpu-interconnect",
+        feature: "GPU Interconnect",
+        specification: "NVLink",
+      },
+      {
+        id: "performance",
+        feature: "Performance",
+        specification: "High-performance AI training & inference",
+      },
+      {
+        id: "deployment",
+        feature: "Deployment",
+        specification: "Large-scale AI clusters & datacenters",
+      },
+    ],
+  };

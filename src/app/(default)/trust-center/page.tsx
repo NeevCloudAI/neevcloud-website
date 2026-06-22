@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/trust-center",
   title: "Trust Center | NeevCloud",
   description:
     "Enterprise-grade security, international compliance certifications, and transparent operations for teams building mission-critical AI systems.",

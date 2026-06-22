@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/cpu-pricing",
   title: "CPU Pricing | NeevCloud",
   description:
     "General-purpose, compute-optimized, and memory-optimized CPU instances on-demand in India. Container or VM modes with on-demand and reserved plans and per-second billing.",

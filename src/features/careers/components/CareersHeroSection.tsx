@@ -14,7 +14,7 @@ const CareersHeroSection = () => {
         </Text>
       }
       {...CAREERS_HERO}
-      image="/images/career.png"
+      image="/images/webp/career.webp"
     />
   );
 };

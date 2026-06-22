@@ -9,7 +9,7 @@ export const GENERATIVE_AI_APPLICATION_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Create visual content from text prompts. Power creative tools, design assistants, and media applications with FLUX, SD, and SVD.",
     icon: "/icons/drug-discovery.svg",
-    image: "/images/healthcare-drug-discovery.png",
+    image: "/images/webp/healthcare-drug-discovery.webp",
     imageSpacing: true,
     theme: "gray",
   },

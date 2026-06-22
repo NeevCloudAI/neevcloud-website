@@ -17,7 +17,7 @@ export const ARENA_DIFFERENT_CARDS: readonly ApplicationCardItem[] = [
     description:
       "Test on the same production infrastructure your workloads would run on. H100, A100, and other GPU configurations available immediately.",
     icon: "/icons/spark.svg",
-    image: "/images/buildings.png",
+    image: "/images/webp/buildings.webp",
     imageSpacing: true,
     theme: "light",
   },

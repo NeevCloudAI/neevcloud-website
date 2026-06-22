@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/nvidia-h100",
   title: "NVIDIA H100 | NeevCloud",
   description:
     "NVIDIA H100 is a Hopper-architecture GPU designed for trillion-parameter LLM training and enterprise AI workloads at scale.",

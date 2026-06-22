@@ -107,7 +107,7 @@ const LeaderShipHeroSection = () => {
             />
             <div className="z-2 relative">
               <Image
-                src="/images/narendra-sen.png"
+                src="/images/webp/narendra-sen.webp"
                 alt="Leadership"
                 width={380}
                 height={380}

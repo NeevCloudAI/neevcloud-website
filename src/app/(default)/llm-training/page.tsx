@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/llm-training",
   title: "LLM Fine-Tuning | NeevCloud",
   description:
     "Purpose-built GPU infrastructure for domain adaptation, instruction tuning, and RLHF. H100 and A100 clusters with framework-agnostic fine-tuning in India.",

@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
+  path: "/about-us",
   title: "About Us | NeevCloud",
   description:
     "NeevCloud is india's first AI SuperCloud, infrastructure designed from the ground up to make advanced AI computing accessible to anyone with the ambition to build.",

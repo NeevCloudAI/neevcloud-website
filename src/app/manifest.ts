@@ -1,9 +1,5 @@
 import type { MetadataRoute } from "next";
-import {
-  DEFAULT_DESCRIPTION,
-  SITE_ICONS,
-  SITE_NAME,
-} from "@/lib/seo";
+import { DEFAULT_DESCRIPTION, SITE_ICONS, SITE_NAME } from "@/lib/seo";
 
 export const dynamic = "force-static";
 

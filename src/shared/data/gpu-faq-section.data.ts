@@ -187,7 +187,8 @@ export const NVIDIA_RTX_3090_FAQ: readonly FaqItem[] = [
     id: 3,
     category: "Overview",
     question: "How to choose the right GPU?",
-    answer: "Use RTX 3090 for large models; CPUs may suffice for smaller tasks.",
+    answer:
+      "Use RTX 3090 for large models; CPUs may suffice for smaller tasks.",
   },
   {
     id: 4,
@@ -269,14 +270,14 @@ export const NVIDIA_A6000_FAQ: readonly FaqItem[] = [
     id: 4,
     category: "Infrastructure",
     question: "Benefits of renting RTX A6000 on NeevCloud?",
-    answer: "Instant access, flexible GPU allocation, and scalable performance.",
+    answer:
+      "Instant access, flexible GPU allocation, and scalable performance.",
   },
   {
     id: 5,
     category: "Use Cases",
     question: "Is RTX A6000 good for 3D and visualization?",
-    answer:
-      "Yes. Real-time rendering, ray tracing, and VFX-ready performance.",
+    answer: "Yes. Real-time rendering, ray tracing, and VFX-ready performance.",
   },
 ] as const;
 
@@ -298,10 +299,8 @@ export const NVIDIA_A6000_SE_FAQ: readonly FaqItem[] = [
   {
     id: 3,
     category: "Infrastructure",
-    question:
-      "Can I build multi-GPU clusters with RTX PRO 6000 on NeevCloud?",
-    answer:
-      "Yes. NeevCloud supports scalable multi-GPU AI and HPC clusters.",
+    question: "Can I build multi-GPU clusters with RTX PRO 6000 on NeevCloud?",
+    answer: "Yes. NeevCloud supports scalable multi-GPU AI and HPC clusters.",
   },
   {
     id: 4,

@@ -25,10 +25,7 @@ const NvidiaTeslaT4 = () => {
       <GpuUseCasesSection {...NVIDIA_TESLA_T4_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_TESLA_T4_TECHNICAL_SPECS_SECTION} />
       {/* <GpuOtherGpusSection excludeId="nvidia-teslat4" /> */}
-      <FaqSection
-        items={NVIDIA_TESLA_T4_FAQ}
-        description="Get Clarity Here!"
-      />
+      <FaqSection items={NVIDIA_TESLA_T4_FAQ} description="Get Clarity Here!" />
       <GpuFooterSection {...NVIDIA_TESLA_T4_FOOTER_SECTION} />
     </>
   );

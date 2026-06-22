@@ -25,10 +25,7 @@ const NvidiaA6000Se = () => {
       <GpuUseCasesSection {...NVIDIA_A6000_SE_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_A6000_SE_TECHNICAL_SPECS_SECTION} />
       {/* <GpuOtherGpusSection excludeId="nvidia-a6000se" /> */}
-      <FaqSection
-        items={NVIDIA_A6000_SE_FAQ}
-        description="Get Clarity Here!"
-      />
+      <FaqSection items={NVIDIA_A6000_SE_FAQ} description="Get Clarity Here!" />
       <GpuFooterSection {...NVIDIA_A6000_SE_FOOTER_SECTION} />
     </>
   );

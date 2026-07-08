@@ -27,7 +27,7 @@ export default function HeroSection() {
       />
 
       <Container className="relative z-10 flex flex-col items-start gap-14 pb-20 pt-32 md:min-h-[810px] md:gap-24 md:pt-44">
-        <div className="flex w-full flex-col gap-10 md:gap-12">
+        <div className="hero-in flex w-full flex-col gap-10 md:gap-12">
           <div className="flex flex-col gap-4 md:gap-6">
             <h1
               id="hero-heading"
@@ -44,7 +44,8 @@ export default function HeroSection() {
 
         <section
           aria-labelledby="latest-news-heading"
-          className="flex w-full flex-col gap-4"
+          className="hero-in flex w-full flex-col gap-4"
+          style={{ animationDelay: "0.2s" }}
         >
           <h2
             id="latest-news-heading"

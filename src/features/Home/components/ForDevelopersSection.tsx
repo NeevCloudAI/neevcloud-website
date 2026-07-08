@@ -13,19 +13,25 @@ export default function ForDevelopersSection() {
       aria-labelledby="developers-heading"
       className="relative isolate overflow-hidden bg-black py-16 md:py-24"
     >
-      {/* Paper MeshGradient shader background */}
+      {/* Paper MeshGradient shader — 800×800, pinned top-right, with fade overlays */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
-        <Mesh
-          speed={1}
-          scale={1}
-          distortion={1}
-          swirl={0.2}
-          colors={["#55D2A2", "#000000"]}
-          className="h-full w-full opacity-50"
-        />
+        <div className="absolute -right-px -top-px h-[800px] max-h-full w-[800px] max-w-full">
+          <Mesh
+            speed={1}
+            scale={1}
+            distortion={1}
+            swirl={0.2}
+            colors={["#55D2A2", "#000000"]}
+            className="h-full w-full opacity-50"
+            style={{ transform: "rotate(270deg)" }}
+          />
+          {/* fade to black — bottom + left */}
+          <div className="absolute inset-x-0 bottom-0 h-[252px] bg-gradient-to-b from-transparent to-black" />
+          <div className="absolute inset-y-0 left-0 w-[346px] bg-gradient-to-l from-transparent to-black" />
+        </div>
       </div>
       <Container className="flex flex-col items-center gap-10 md:gap-12">
         <div className="flex max-w-3xl flex-col items-center gap-4 text-center">

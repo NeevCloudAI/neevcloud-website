@@ -50,7 +50,7 @@ export default function ForDevelopersSection() {
         <ul className="grid w-full list-none gap-8 text-center sm:grid-cols-3">
           {DEVELOPER_FEATURES.map((feature) => (
             <li key={feature.title} className="flex flex-col gap-2">
-              <h3 className="text-[18px] font-semibold text-white md:text-[20px]">
+              <h3 className="text-[18px] font-medium text-white md:text-[20px]">
                 {feature.title}
               </h3>
               <p className="text-[14px] leading-[150%] text-white/60">

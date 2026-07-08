@@ -67,7 +67,7 @@ export default function WhyComparisonCards() {
               />
             </svg>
           </span>
-          <h3 className="text-[20px] font-semibold text-black">Legacy Cloud</h3>
+          <h3 className="text-[20px] font-medium text-black">Legacy Cloud</h3>
         </div>
         <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
           {LEGACY_CLOUD_ITEMS.map((item) => (
@@ -102,7 +102,7 @@ export default function WhyComparisonCards() {
             height={32}
             className="size-8"
           />
-          <h3 className="text-[20px] font-semibold text-white">
+          <h3 className="text-[20px] font-medium text-white">
             The NeevCloud Advantage
           </h3>
         </div>

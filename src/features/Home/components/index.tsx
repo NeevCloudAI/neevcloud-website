@@ -1,26 +1,22 @@
 import HeroSection from "./HeroSection";
-import NeevcloudSection from "./NeevcloudSection";
-import ComparisonSection from "./ComparisonSection";
-import NounSection from "./NounSection";
-import FooterComponent from "@/shared/components/footer";
-import ModelBuilderSection from "@/shared/components/ModelBuilderSection";
 import StackSection from "./StackSection";
-import InfrastructureSection from "./InfrastructureSection";
-import ReviewsSection from "./ReviewsSection";
-import { HOME_FOOTER } from "../constants/home.constants";
+import WhyNeevcloudSection from "./WhyNeevcloudSection";
+import ForDevelopersSection from "./ForDevelopersSection";
+import LeverageSection from "./LeverageSection";
+import Footer2026 from "@/shared/components/footer-2026";
 
+// 2026 homepage — built section by section against the Paper design.
+// TODO: Infra Bento (section 6). Footer2026 is homepage-only for now; roll it
+// out to all pages (swap in every layout) once the design is approved.
 const HomeComponent = () => {
   return (
     <>
       <HeroSection />
       <StackSection />
-      <NeevcloudSection />
-      <ModelBuilderSection />
-      <ComparisonSection />
-      <InfrastructureSection />
-      <ReviewsSection />
-      <NounSection />
-      <FooterComponent {...HOME_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <WhyNeevcloudSection />
+      <ForDevelopersSection />
+      <LeverageSection />
+      <Footer2026 />
     </>
   );
 };

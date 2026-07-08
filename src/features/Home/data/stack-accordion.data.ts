@@ -6,8 +6,7 @@ export const STACK_SECTION = {
     "Deploy AI on infrastructure designed for scale, resilience, and speed.",
 } as const;
 
-// Only "AI Service" is detailed in the Paper design; the other tiers show as
-// collapsed rows. TODO: add real headings + features for the remaining tiers.
+// Tier content sourced from the existing NeevCloud homepage stack data.
 export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
   {
     id: "ai-service",
@@ -32,19 +31,61 @@ export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
   {
     id: "platform-services",
     label: "Platform Services",
-    heading: "Platform Services",
-    features: [],
+    heading:
+      "Platform Services: VMs, Bare Metal, And Managed Kubernetes Or Slurm Orchestration.",
+    features: [
+      {
+        icon: "cpu",
+        text: "GPU Instance. Dedicated GPU instances with configurable networking, security, and scaling policies.",
+      },
+      {
+        icon: "playground",
+        text: "CPU Instances. Elastic CPU capacity for preprocessing, orchestration, and high-throughput services.",
+      },
+      {
+        icon: "api",
+        text: "Managed Kubernetes (NKE). Run containerized workloads with managed control planes and production-grade operations.",
+      },
+    ],
   },
   {
     id: "infrastructure-services",
     label: "Infrastructure Services",
-    heading: "Infrastructure Services",
-    features: [],
+    heading:
+      "Infrastructure Services: High-Throughput, Low-Latency Backbone For AI And HPC Workloads.",
+    features: [
+      {
+        icon: "cpu",
+        text: "Compute. GPU and CPU capacity that scales with jobs, quotas, and throughput requirements.",
+      },
+      {
+        icon: "playground",
+        text: "Storage. Fast, durable data volumes for datasets, checkpoints, and model artifacts.",
+      },
+      {
+        icon: "api",
+        text: "Networking. Optimized fabric for low-latency transfers across nodes, clusters, and regions.",
+      },
+    ],
   },
   {
     id: "infinite-infrastructure",
     label: "Infinite Infrastructure",
-    heading: "Infinite Infrastructure",
-    features: [],
+    heading:
+      "Infinite Infrastructure: Sovereign, Sustainable, Modular Data Centers.",
+    features: [
+      {
+        icon: "cpu",
+        text: "AI Factory. A standardized delivery path for AI infrastructure from provisioning to deployment.",
+      },
+      {
+        icon: "playground",
+        text: "Project Noun. A modular initiative for sovereignty-focused compute and workload portability.",
+      },
+      {
+        icon: "api",
+        text: "Project Terra Vault. Sustainable storage and data management for long-lived model and dataset lifecycles.",
+      },
+    ],
   },
 ];

@@ -19,7 +19,7 @@ function CompareBar({
       <span
         className={
           tone === "neev"
-            ? "w-24 shrink-0 text-[13px] font-semibold leading-4 text-primary-90"
+            ? "w-24 shrink-0 text-[13px] font-medium leading-4 text-primary-90"
             : "w-24 shrink-0 text-[13px] leading-4 text-gray-03"
         }
       >

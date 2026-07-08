@@ -1,6 +1,6 @@
-import HeaderComponent from "@/shared/components/header";
+import HomeHeader from "@/features/Home/components/HomeHeader";
 
-// Homepage-only layout: transparent header overlaid on the dark 2026 hero.
+// Homepage-only layout: transparent nav (matching Paper) overlaid on the dark hero.
 // All other pages keep the standard (default) layout with the white header.
 export default function HomeLayout({
   children,
@@ -9,7 +9,7 @@ export default function HomeLayout({
 }>) {
   return (
     <div className="relative">
-      <HeaderComponent transparent />
+      <HomeHeader />
       <main>{children}</main>
     </div>
   );

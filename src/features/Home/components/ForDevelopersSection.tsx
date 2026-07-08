@@ -1,4 +1,5 @@
 import Container from "@/shared/components/container";
+import Mesh from "@/shared/components/mesh-gradient";
 import HeroGetStartedButton from "./HeroGetStartedButton";
 import DeveloperTerminalClient from "./DeveloperTerminalClient";
 import {
@@ -12,11 +13,20 @@ export default function ForDevelopersSection() {
       aria-labelledby="developers-heading"
       className="relative isolate overflow-hidden bg-black py-16 md:py-24"
     >
-      {/* Mesh-gradient glow (approximation of the design's shader background) */}
+      {/* Paper MeshGradient shader background */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(50%_60%_at_78%_0%,rgba(89,216,167,0.38),transparent_58%),radial-gradient(45%_55%_at_100%_50%,rgba(0,167,138,0.32),transparent_60%),radial-gradient(40%_50%_at_12%_100%,rgba(89,216,167,0.22),transparent_60%),radial-gradient(35%_40%_at_50%_120%,rgba(0,81,80,0.5),transparent_55%)]"
-      />
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      >
+        <Mesh
+          speed={1}
+          scale={1}
+          distortion={1}
+          swirl={0.2}
+          colors={["#55D2A2", "#000000"]}
+          className="h-full w-full opacity-50"
+        />
+      </div>
       <Container className="flex flex-col items-center gap-10 md:gap-12">
         <div className="flex max-w-3xl flex-col items-center gap-4 text-center">
           <h2

@@ -310,3 +310,48 @@ body {
 .text-112px {
   @apply text-[56px] leading-[56px] sm:text-[72px] md:text-[88px] md:leading-[80px] lg:text-[112px];
 }
+
+/* Animated mesh gradient — reconstruction of the Stack section's moving shader */
+.stack-mesh {
+  background:
+    radial-gradient(60% 60% at 20% 30%, #7fe3c0 0%, transparent 55%),
+    radial-gradient(55% 55% at 80% 25%, #59d8a7 0%, transparent 55%),
+    radial-gradient(70% 70% at 70% 80%, #2f4a44 0%, transparent 60%),
+    radial-gradient(60% 60% at 25% 85%, #d3ded9 0%, transparent 55%),
+    linear-gradient(135deg, #4f8f7d, #1c2320);
+  background-size: 180% 180%;
+  animation: stack-mesh-drift 14s ease-in-out infinite;
+}
+
+@keyframes stack-mesh-drift {
+  0% {
+    background-position:
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%,
+      0% 0%;
+  }
+  50% {
+    background-position:
+      100% 50%,
+      0% 60%,
+      30% 0%,
+      70% 100%,
+      100% 100%;
+  }
+  100% {
+    background-position:
+      0% 0%,
+      100% 0%,
+      100% 100%,
+      0% 100%,
+      0% 0%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-mesh {
+    animation: none;
+  }
+}

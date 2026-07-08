@@ -4,7 +4,7 @@ export const DEVELOPER_SECTION = {
   subtitle:
     "The AI cloud built for Frontier model builders. No ticket-driven DevEx. A single CLI, typed SDKs for every runtime, and infrastructure that respects your repo structure.",
   ctaLabel: "GET STARTED",
-  ctaHref: "#",
+  ctaHref: "/developers",
   terminalTitle: "~/MODELS/AVATAR · ZSH",
 } as const;
 

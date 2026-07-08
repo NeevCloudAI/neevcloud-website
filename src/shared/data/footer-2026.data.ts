@@ -3,7 +3,7 @@ export const FOOTER_2026 = {
   ctaSubtext:
     "Join thousands of innovators using NeevCloud to train, deploy, and scale AI without barriers.",
   ctaLabel: "Get Started",
-  ctaHref: "#",
+  ctaHref: "/contact-neevcloud",
 } as const;
 
 export type FooterColumn = {
@@ -11,10 +11,31 @@ export type FooterColumn = {
   links: { label: string; href: string }[];
 };
 
-// TODO: point hrefs at real routes (gpu-pricing, ai-inference, careers, …).
+const ROUTE_MAP: Record<string, string> = {
+  "GPU AI Service": "/gpu-cluster",
+  "AI Inference": "/ai-inference",
+  "CPU Compute": "/cpu-cluster",
+  Storage: "/object-storage",
+  "Public Sector & National AI": "/public-sector",
+  "GPU Pricing": "/gpu-pricing",
+  "CPU Compute Pricing": "/cpu-pricing",
+  "Cost Efficiency Explained": "/tco-calculator",
+  "API Reference": "/developers",
+  "Status Page": "/trust-center",
+  Blogs: "/newsroom",
+  "Events & Webinar": "/events",
+  "About NeevCloud": "/about-us",
+  "Press & Media": "/newsroom",
+  Careers: "/careers",
+  "Vision & Mission": "/about-us",
+  "Why NeevCloud": "/why-ai-supercloud",
+  Leadership: "/leadership",
+  "Contact Us": "/contact-neevcloud",
+};
+
 const link = (label: string): { label: string; href: string } => ({
   label,
-  href: "#",
+  href: ROUTE_MAP[label] ?? "#",
 });
 
 export const FOOTER_COLUMNS: FooterColumn[] = [

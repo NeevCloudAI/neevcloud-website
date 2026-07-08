@@ -11,14 +11,14 @@ type NavItem = { label: string; href: string; dropdown?: boolean };
 
 // Order + labels taken from the Paper navbar (node 3-0).
 const NAV_ITEMS: NavItem[] = [
-  { label: "AI SuperCloud", href: "#" },
-  { label: "Inference Hub", href: "#", dropdown: true },
-  { label: "Product", href: "#", dropdown: true },
-  { label: "Solutions", href: "#", dropdown: true },
-  { label: "Developers", href: "#", dropdown: true },
-  { label: "Resources", href: "#", dropdown: true },
-  { label: "Company", href: "#", dropdown: true },
-  { label: "Pricing", href: "#" },
+  { label: "AI SuperCloud", href: "/why-ai-supercloud" },
+  { label: "Inference Hub", href: "/ai-inference", dropdown: true },
+  { label: "Product", href: "/gpu-cluster", dropdown: true },
+  { label: "Solutions", href: "/public-sector", dropdown: true },
+  { label: "Developers", href: "/developers", dropdown: true },
+  { label: "Resources", href: "/newsroom", dropdown: true },
+  { label: "Company", href: "/about-us", dropdown: true },
+  { label: "Pricing", href: "/gpu-pricing" },
 ];
 
 export default function HomeHeader() {
@@ -64,7 +64,7 @@ export default function HomeHeader() {
             <ChevronDown size={14} aria-hidden />
           </Link>
           <Link
-            href="#"
+            href="/contact-neevcloud"
             className="rounded-md bg-white px-4 py-2 text-[14px] font-medium text-black transition-colors hover:bg-white/90"
           >
             Contact Sales

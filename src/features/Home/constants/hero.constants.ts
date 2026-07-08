@@ -3,6 +3,5 @@ export const HERO = {
   subheadline:
     "To Build and Scale Fearlessly for all Demanding real AI Workloads.",
   ctaLabel: "GET STARTED",
-  // TODO: point at the real "Get Started" destination (console / signup).
-  ctaHref: "#",
+  ctaHref: "/contact-neevcloud",
 } as const;

@@ -4,6 +4,14 @@ export const FOOTER_2026 = {
     "Join thousands of innovators using NeevCloud to train, deploy, and scale AI without barriers.",
   ctaLabel: "Get Started",
   ctaHref: "/contact-neevcloud",
+  copyright: "© 2026, NeevAI SuperCloud Pvt. Ltd.",
+  legal: [
+    { label: "Terms of Usage", href: "/terms-condition" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "AUP", href: "/acceptable-user-policy" },
+    { label: "SLA", href: "/service-level-agreement" },
+    { label: "MSA", href: "#" },
+  ],
 } as const;
 
 export type FooterColumn = {

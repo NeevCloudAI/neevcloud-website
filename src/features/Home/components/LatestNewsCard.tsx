@@ -5,6 +5,7 @@ import type { LatestNewsItem } from "../types/latest-news.types";
 
 type LatestNewsCardProps = {
   item: LatestNewsItem;
+  priority?: boolean;
 };
 
 function ArrowIcon() {
@@ -28,7 +29,10 @@ function ArrowIcon() {
   );
 }
 
-export default function LatestNewsCard({ item }: LatestNewsCardProps) {
+export default function LatestNewsCard({
+  item,
+  priority = false,
+}: LatestNewsCardProps) {
   const isDark = item.theme === "dark";
 
   return (
@@ -41,6 +45,8 @@ export default function LatestNewsCard({ item }: LatestNewsCardProps) {
         alt={item.imageAlt}
         fill
         sizes="(max-width: 640px) 280px, (max-width: 1024px) 360px, 412px"
+        loading={priority ? "eager" : "lazy"}
+        priority={priority}
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
       <div

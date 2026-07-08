@@ -1,4 +1,16 @@
-export type StackFeatureIcon = "cpu" | "playground" | "api";
+export type StackFeatureIcon =
+  | "inference"
+  | "playground"
+  | "api"
+  | "gpu"
+  | "cpu"
+  | "kubernetes"
+  | "compute"
+  | "storage"
+  | "networking"
+  | "factory"
+  | "sovereign"
+  | "vault";
 
 export type StackFeature = {
   icon: StackFeatureIcon;

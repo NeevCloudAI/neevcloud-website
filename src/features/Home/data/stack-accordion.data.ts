@@ -15,7 +15,7 @@ export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
       "AI Service: Inference Endpoints, Fine-Tuning, And A Unified Prompt Engineering Workbench.",
     features: [
       {
-        icon: "cpu",
+        icon: "inference",
         text: "Serverless Inference. Spin up inference endpoints on demand with low-latency routing and autoscaling.",
       },
       {
@@ -35,15 +35,15 @@ export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
       "Platform Services: VMs, Bare Metal, And Managed Kubernetes Or Slurm Orchestration.",
     features: [
       {
-        icon: "cpu",
+        icon: "gpu",
         text: "GPU Instance. Dedicated GPU instances with configurable networking, security, and scaling policies.",
       },
       {
-        icon: "playground",
+        icon: "cpu",
         text: "CPU Instances. Elastic CPU capacity for preprocessing, orchestration, and high-throughput services.",
       },
       {
-        icon: "api",
+        icon: "kubernetes",
         text: "Managed Kubernetes (NKE). Run containerized workloads with managed control planes and production-grade operations.",
       },
     ],
@@ -55,15 +55,15 @@ export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
       "Infrastructure Services: High-Throughput, Low-Latency Backbone For AI And HPC Workloads.",
     features: [
       {
-        icon: "cpu",
+        icon: "compute",
         text: "Compute. GPU and CPU capacity that scales with jobs, quotas, and throughput requirements.",
       },
       {
-        icon: "playground",
+        icon: "storage",
         text: "Storage. Fast, durable data volumes for datasets, checkpoints, and model artifacts.",
       },
       {
-        icon: "api",
+        icon: "networking",
         text: "Networking. Optimized fabric for low-latency transfers across nodes, clusters, and regions.",
       },
     ],
@@ -75,15 +75,15 @@ export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
       "Infinite Infrastructure: Sovereign, Sustainable, Modular Data Centers.",
     features: [
       {
-        icon: "cpu",
+        icon: "factory",
         text: "AI Factory. A standardized delivery path for AI infrastructure from provisioning to deployment.",
       },
       {
-        icon: "playground",
+        icon: "sovereign",
         text: "Project Noun. A modular initiative for sovereignty-focused compute and workload portability.",
       },
       {
-        icon: "api",
+        icon: "vault",
         text: "Project Terra Vault. Sustainable storage and data management for long-lived model and dataset lifecycles.",
       },
     ],

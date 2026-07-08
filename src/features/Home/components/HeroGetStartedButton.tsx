@@ -18,7 +18,7 @@ export default function HeroGetStartedButton({
       className="group relative inline-flex w-fit p-1.5"
     >
       <span
-        className="relative block overflow-hidden px-6 py-2.5 text-sm font-medium tracking-[-0.02em] text-white transition-all duration-300 group-hover:scale-[1.03] group-hover:shadow-[0_0_30px_rgba(89,216,167,0.7)]"
+        className="relative block overflow-hidden px-6 py-2.5 text-sm font-medium tracking-[-0.02em] text-white transition-all duration-300 group-hover:scale-[1.03]"
         style={{
           backgroundImage:
             "linear-gradient(126deg, #00A78B 10%, #00A78B 69%, #59D8A7 98%)",

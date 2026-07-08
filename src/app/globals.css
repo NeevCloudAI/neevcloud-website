@@ -102,6 +102,8 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {

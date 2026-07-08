@@ -27,25 +27,30 @@ export default function HeroSection() {
       />
 
       <Container className="relative z-10 flex flex-col items-start gap-14 pb-20 pt-32 md:min-h-[810px] md:gap-24 md:pt-44">
-        <div className="hero-in flex w-full flex-col gap-10 md:gap-12">
+        <div className="flex w-full flex-col gap-10 md:gap-12">
           <div className="flex flex-col gap-4 md:gap-6">
             <h1
               id="hero-heading"
-              className="text-[40px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white sm:text-[54px] md:text-[64px] lg:text-[74px] xl:whitespace-nowrap"
+              className="hero-in text-[40px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white sm:text-[54px] md:text-[64px] lg:text-[74px] xl:whitespace-nowrap"
             >
               {HERO.headline}
             </h1>
-            <p className="text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-white/90 sm:text-[18px] md:text-[22px] xl:whitespace-nowrap">
+            <p
+              className="hero-in text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-white/90 sm:text-[18px] md:text-[22px] xl:whitespace-nowrap"
+              style={{ animationDelay: "0.12s" }}
+            >
               {HERO.subheadline}
             </p>
           </div>
-          <HeroGetStartedButton label={HERO.ctaLabel} href={HERO.ctaHref} />
+          <div className="hero-in" style={{ animationDelay: "0.24s" }}>
+            <HeroGetStartedButton label={HERO.ctaLabel} href={HERO.ctaHref} />
+          </div>
         </div>
 
         <section
           aria-labelledby="latest-news-heading"
           className="hero-in flex w-full flex-col gap-4"
-          style={{ animationDelay: "0.2s" }}
+          style={{ animationDelay: "0.36s" }}
         >
           <h2
             id="latest-news-heading"

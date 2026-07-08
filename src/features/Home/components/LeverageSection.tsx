@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/shared/components/container";
 import {
   LEVERAGE_ROWS,
@@ -42,9 +43,18 @@ export default function LeverageSection() {
   return (
     <section
       aria-labelledby="leverage-heading"
-      className="bg-cloud-gray py-16 md:py-24"
+      className="relative isolate overflow-hidden bg-cloud-gray py-16 md:py-24"
     >
-      <Container className="flex flex-col gap-10 md:gap-14">
+      <Image
+        src="/images/home/compare-bg.jpg"
+        alt=""
+        aria-hidden
+        fill
+        sizes="100vw"
+        unoptimized
+        className="-z-10 object-cover opacity-60"
+      />
+      <Container className="flex max-w-6xl flex-col gap-10 md:gap-14">
         <div className="flex flex-col gap-3">
           <h2
             id="leverage-heading"
@@ -61,7 +71,7 @@ export default function LeverageSection() {
           {LEVERAGE_ROWS.map((row) => (
             <li
               key={row.stat + row.unit}
-              className="grid gap-6 rounded-2xl bg-white p-6 md:grid-cols-2 md:gap-10 md:p-8"
+              className="grid gap-6 rounded-lg bg-white p-5 md:grid-cols-2 md:gap-10"
             >
               <div className="flex flex-col gap-3 md:border-r md:border-cloud-gray md:pr-10">
                 <p className="flex items-baseline">

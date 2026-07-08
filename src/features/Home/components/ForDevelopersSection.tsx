@@ -15,7 +15,7 @@ export default function ForDevelopersSection() {
       {/* Mesh-gradient glow (approximation of the design's shader background) */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_45%_at_82%_8%,rgba(89,216,167,0.20),transparent_60%),radial-gradient(45%_40%_at_8%_92%,rgba(0,167,138,0.16),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(50%_60%_at_78%_0%,rgba(89,216,167,0.38),transparent_58%),radial-gradient(45%_55%_at_100%_50%,rgba(0,167,138,0.32),transparent_60%),radial-gradient(40%_50%_at_12%_100%,rgba(89,216,167,0.22),transparent_60%),radial-gradient(35%_40%_at_50%_120%,rgba(0,81,80,0.5),transparent_55%)]"
       />
       <Container className="flex flex-col items-center gap-10 md:gap-12">
         <div className="flex max-w-3xl flex-col items-center gap-4 text-center">

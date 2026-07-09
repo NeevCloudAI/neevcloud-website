@@ -40,21 +40,21 @@ const NAV_ITEMS: NavItem[] = [
     href: "/ai-inference",
     items: [
       { label: "AI Inference", href: "/ai-inference" },
-      { label: "Model Catalog", href: "/model-catalog" },
-      { label: "Model Playground", href: "/model-playground" },
       { label: "Serverless Inference", href: "/serverless-inference" },
-      { label: "Model API", href: "/model-api" },
+      { label: "Model Playground", href: "/model-playground" },
+      { label: "Model APIs", href: "/model-api" },
+      { label: "Model Catalog", href: "/model-catalog" },
     ],
   },
   {
     label: "Product",
     href: "/gpu-cluster",
     items: [
-      { label: "GPU Cluster", href: "/gpu-cluster" },
-      { label: "CPU Cluster", href: "/cpu-cluster" },
+      { label: "GPU Instance", href: "/gpu-cluster" },
+      { label: "CPU Instance", href: "/cpu-cluster" },
       { label: "Managed Kubernetes", href: "/managed-kubernetes" },
+      { label: "High-Performance NVMe", href: "/nvme" },
       { label: "Object Storage", href: "/object-storage" },
-      { label: "GPU Pricing", href: "/gpu-pricing" },
     ],
   },
   {
@@ -62,10 +62,13 @@ const NAV_ITEMS: NavItem[] = [
     href: "/public-sector",
     items: [
       { label: "Public Sector", href: "/public-sector" },
-      { label: "Healthcare", href: "/healthcare" },
       { label: "BFSI", href: "/bfsi" },
       { label: "Media & VFX", href: "/media-vfx" },
-      { label: "LLM Training", href: "/llm-training" },
+      { label: "Healthcare", href: "/healthcare" },
+      { label: "Defence", href: "/defence" },
+      { label: "LLM Fine-Tuning", href: "/llm-training" },
+      { label: "Generative AI", href: "/generative-ai" },
+      { label: "Agentic Workflows", href: "/agentic-workflow" },
     ],
   },
   {
@@ -73,8 +76,8 @@ const NAV_ITEMS: NavItem[] = [
     href: "/developers",
     items: [
       { label: "Developers Hub", href: "/developers" },
-      { label: "Model API", href: "/model-api" },
-      { label: "Agentic Workflow", href: "/agentic-workflow" },
+      { label: "Model APIs", href: "/model-api" },
+      { label: "Agentic Workflows", href: "/agentic-workflow" },
     ],
   },
   {
@@ -82,6 +85,7 @@ const NAV_ITEMS: NavItem[] = [
     href: "/newsroom",
     items: [
       { label: "Newsroom", href: "/newsroom" },
+      { label: "Blogs", href: EXTERNAL_LINKS.blogs },
       { label: "Events", href: "/events" },
       { label: "Trust Center", href: "/trust-center" },
       { label: "NeevCloud Arena", href: "/neevcloud-arena" },
@@ -93,9 +97,9 @@ const NAV_ITEMS: NavItem[] = [
     items: [
       { label: "About Us", href: "/about-us" },
       { label: "Leadership", href: "/leadership" },
-      { label: "Careers", href: "/careers" },
+      { label: "Career", href: "/careers" },
       { label: "Life at NeevCloud", href: "/life-at-neevcloud" },
-      { label: "Contact", href: "/contact-neevcloud" },
+      { label: "Contact Us", href: "/contact-neevcloud" },
     ],
   },
   { label: "Pricing", href: "/gpu-pricing" },
@@ -138,12 +142,19 @@ export default function HomeHeader() {
                   </Link>
                   {/* pt-3 bridges the gap so hover isn't lost moving to the panel */}
                   <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
-                    <div className="min-w-[200px] rounded-md border border-cloud-gray bg-white p-2 shadow-lg">
+                    <div
+                      className={cn(
+                        "rounded-lg border border-black/[0.06] bg-white p-1.5 shadow-[0_16px_44px_#0000001f]",
+                        item.items.length > 6
+                          ? "grid grid-cols-2 gap-x-1"
+                          : "min-w-[210px]",
+                      )}
+                    >
                       {item.items.map((sub) => (
                         <Link
                           key={sub.label}
                           href={sub.href}
-                          className="block whitespace-nowrap rounded px-3 py-2 text-[13px] font-medium leading-6 tracking-[-0.02em] text-black transition-colors hover:bg-cloud-gray hover:text-primary-90"
+                          className="block whitespace-nowrap rounded-md px-3 py-2 text-[13px] font-medium leading-6 tracking-[-0.02em] text-gray-05 transition-colors hover:bg-cloud-gray hover:text-primary-90"
                         >
                           {sub.label}
                         </Link>

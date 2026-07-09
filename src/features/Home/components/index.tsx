@@ -11,7 +11,7 @@ import Footer2026 from "@/shared/components/footer-2026";
 // out to all pages (swap in every layout) once the design is approved.
 const HomeComponent = () => {
   return (
-    <>
+    <div className="home-2026">
       <HeroSection />
       <StackSection />
       <WhyNeevcloudSection />
@@ -19,7 +19,7 @@ const HomeComponent = () => {
       <LeverageSection />
       <InfraBentoSection />
       <Footer2026 />
-    </>
+    </div>
   );
 };
 

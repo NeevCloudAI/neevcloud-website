@@ -37,26 +37,37 @@ export default function LatestNewsCard({ item }: LatestNewsCardProps) {
   return (
     <Link
       href={item.href}
-      className="group relative flex h-[227px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] sm:w-[360px] lg:w-[412px]"
+      className="group relative flex h-[227px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] group-hover:justify-center sm:w-[360px] lg:w-[412px]"
     >
       <div
         aria-hidden
-        className="absolute left-[46.7%] top-[18.5%] h-[199%] w-[112%] -translate-x-1/2 -translate-y-1/2 bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.04]"
+        className="absolute left-[46.7%] top-[18.5%] h-[199%] w-[112%] -translate-x-1/2 -translate-y-1/2 bg-cover bg-center"
         style={{ backgroundImage: `url(${item.image})` }}
       />
-      {/* Scrim: covers the bottom half by default, grows to cover more on hover
-          so the revealed subtext stays legible (Accenture-style reveal). */}
+      {/* Base bottom scrim keeps the title legible over the image in the default
+          (non-hover) state; it fades out as the solid fill takes over on hover. */}
       <div
         aria-hidden
         className={cn(
-          "absolute inset-x-0 bottom-0 top-[49%] transition-all duration-500 ease-out group-hover:top-[24%]",
+          "absolute inset-x-0 bottom-0 top-1/2 transition-opacity duration-500 ease-out group-hover:opacity-0",
           isDark
             ? "bg-gradient-to-b from-transparent to-black"
             : "bg-gradient-to-b from-transparent to-[#e9f3f3]",
         )}
       />
-      {/* Title always visible; on hover the block lifts and reveals subtext + CTA. */}
-      <div className="relative flex flex-col transition-transform duration-500 ease-out group-hover:-translate-y-0.5">
+      {/* Solid colour fills the whole card on hover, covering the image
+          (Accenture-style) so the revealed copy sits on a clean panel. */}
+      <div
+        aria-hidden
+        className={cn(
+          "absolute inset-0 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100",
+          isDark ? "bg-deep-forest" : "bg-[#e9f3f3]",
+        )}
+      />
+      {/* Title always visible (default: bottom-left). On hover the whole block
+          moves to the card's centre (justify-center on the card) while the text
+          stays left-aligned, and subtext + CTA reveal (Accenture-style). */}
+      <div className="relative flex flex-col items-start text-left">
         <h3
           className={cn(
             "text-[20px] font-normal capitalize leading-[120%] tracking-[-0.01em]",
@@ -67,7 +78,7 @@ export default function LatestNewsCard({ item }: LatestNewsCardProps) {
         </h3>
 
         <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-focus-visible:grid-rows-[1fr] group-focus-visible:opacity-100">
-          <div className="flex flex-col gap-3 overflow-hidden pt-2">
+          <div className="flex flex-col items-start gap-3 overflow-hidden pt-2">
             <p
               className={cn(
                 "text-[13px] font-normal leading-[142%] tracking-[-0.02em]",

@@ -377,6 +377,34 @@ body {
   animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Balance homepage headings so a heading never drops a single lonely word
+   onto its own last line (avoids typographic "widows/orphans"). */
+.home-2026 :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+/* Smooth cross-fade when switching developer SDK tabs. */
+@keyframes code-swap {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.code-swap {
+  animation: code-swap 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .code-swap {
+    animation: none;
+  }
+}
+
 /* Slow turntable motion for the first Why NeevCloud glass icon. */
 .home-why-icon-turntable {
   perspective: 760px;

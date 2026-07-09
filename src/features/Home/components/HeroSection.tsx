@@ -27,12 +27,12 @@ export default function HeroSection() {
         className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-forest/40"
       />
 
-      <Container className="relative z-10 flex flex-col items-start gap-14 pb-20 pt-28 md:min-h-[810px] md:gap-24 md:pt-[145px]">
+      <Container className="relative z-10 flex min-h-[100svh] flex-col items-start justify-between gap-14 pb-20 pt-28 md:gap-24 md:pt-[145px]">
         <div className="flex w-full flex-col gap-10 md:gap-12">
           <div className="flex flex-col gap-4 md:gap-6">
             <h1
               id="hero-heading"
-              className="hero-in text-[40px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white sm:text-[54px] md:text-[64px] lg:text-[74px] xl:whitespace-nowrap"
+              className="hero-in text-[58px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white md:text-[64px] lg:text-[74px] xl:whitespace-nowrap"
             >
               {HERO.headline}
             </h1>

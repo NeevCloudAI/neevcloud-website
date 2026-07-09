@@ -10,6 +10,7 @@ import { LATEST_NEWS_ITEMS } from "../data/latest-news.data";
 export default function LatestNewsCarouselClient() {
   const ref = useRef<HTMLUListElement>(null);
   const [edges, setEdges] = useState({ left: false, right: true });
+  const [masked, setMasked] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -20,6 +21,8 @@ export default function LatestNewsCarouselClient() {
       setEdges((prev) =>
         prev.left === left && prev.right === right ? prev : { left, right },
       );
+      // The edge fade reads as an ugly "blur" on phones — only mask from sm up.
+      setMasked(window.innerWidth >= 640);
     };
     update();
     el.addEventListener("scroll", update, { passive: true });
@@ -32,7 +35,7 @@ export default function LatestNewsCarouselClient() {
 
   const from = edges.left ? "transparent 0%, #000 5%" : "#000 0%";
   const to = edges.right ? "#000 95%, transparent 100%" : "#000 100%";
-  const mask = `linear-gradient(to right, ${from}, ${to})`;
+  const mask = masked ? `linear-gradient(to right, ${from}, ${to})` : undefined;
 
   return (
     <ul

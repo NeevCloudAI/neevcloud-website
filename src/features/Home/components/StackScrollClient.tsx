@@ -56,7 +56,10 @@ function IconTile({ children }: { children: React.ReactNode }) {
 }
 
 export default function StackScrollClient() {
-  const items = STACK_ACCORDION_ITEMS;
+  // Build the stack silicon-to-endpoint: the bottom tier (Infinite
+  // Infrastructure) is shown first and the tower grows upward to AI Service.
+  // The data is authored top-to-bottom, so reverse it for display.
+  const items = [...STACK_ACCORDION_ITEMS].reverse();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
 
@@ -156,12 +159,16 @@ export default function StackScrollClient() {
               {/* Glass tier plates — they stack into a tower one plate at a time
                   as you scroll through the tiers (Legora-style). */}
               {items.map((item, index) => {
+                // Plates keep their physical tower positions (Layer_01 = top …
+                // Layer_04 = bottom) but reveal from the bottom up as the tiers
+                // advance, so the tower builds silicon → endpoint.
+                const platePos = items.length - 1 - index; // 0 = top … n-1 = bottom
                 const shown = index <= activeIndex;
                 return (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
                     key={item.id}
-                    src={`/images/home/stack/Layer_0${index + 1}.png`}
+                    src={`/images/home/stack/Layer_0${platePos + 1}.png`}
                     alt=""
                     aria-hidden
                     className={cn(
@@ -169,8 +176,8 @@ export default function StackScrollClient() {
                       shown ? "opacity-100" : "opacity-0",
                     )}
                     style={{
-                      top: `${3 + index * 15.3}%`,
-                      zIndex: 20 - index,
+                      top: `${3 + platePos * 15.3}%`,
+                      zIndex: 20 - platePos,
                       transform: `translateX(-50%) translateY(${shown ? 0 : 36}px)`,
                     }}
                   />

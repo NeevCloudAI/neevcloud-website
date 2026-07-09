@@ -2,12 +2,11 @@ import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import { INFRA_BENTO, INFRA_BENTO_CARDS } from "../data/infra-bento.data";
 
-// Per-card placement of the visual (bleeds off the card edges), matching Paper.
+// Per-card placement of the visual (bleeds off the card edges), matching Paper 6OL-0.
 const IMAGE_CLASS: Record<string, string> = {
-  gpu: "absolute right-0 top-1/2 w-[56%] max-w-none -translate-y-1/2 translate-x-[3%]",
-  memory:
-    "absolute bottom-0 left-1/2 w-[82%] max-w-none -translate-x-1/2 translate-y-[14%]",
-  "ai-native": "absolute -left-2 bottom-0 w-[64%] max-w-none translate-y-[6%]",
+  gpu: "absolute right-0 top-1/2 w-[54%] max-w-none -translate-y-1/2 translate-x-[2%]",
+  memory: "absolute left-3 top-[46%] w-[76%] max-w-none",
+  "ai-native": "absolute -left-2 bottom-0 w-[62%] max-w-none translate-y-[4%]",
   support: "absolute bottom-0 right-0 w-[52%] max-w-none",
 };
 
@@ -37,16 +36,10 @@ export default function InfraBentoSection() {
               <li
                 key={card.key}
                 className={cn(
-                  "relative flex min-h-[380px] flex-col overflow-hidden rounded-2xl bg-black p-8 lg:min-h-[460px]",
+                  "relative flex h-[360px] flex-col overflow-hidden rounded-lg bg-gradient-to-b from-black to-deep-forest p-6 lg:h-[400px]",
                   isRight ? "justify-center" : "justify-start",
                 )}
               >
-                {/* subtle teal glow rising from the bottom-left */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(130%_90%_at_18%_105%,rgba(0,81,80,0.5),transparent_58%)]"
-                />
-
                 {/* visual — bleeds off the card edges */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -62,7 +55,7 @@ export default function InfraBentoSection() {
                 <div
                   className={cn(
                     "relative z-10 flex flex-col gap-3",
-                    isRight ? "max-w-[48%]" : "max-w-[92%]",
+                    isRight ? "max-w-[46%]" : "max-w-[92%]",
                   )}
                 >
                   <h3 className="text-[22px] font-medium leading-[120%] tracking-[-0.01em] text-white md:text-[24px]">
@@ -71,16 +64,6 @@ export default function InfraBentoSection() {
                   <p className="max-w-sm text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-white/70">
                     {card.description}
                   </p>
-                  {card.stat && (
-                    <div className="mt-3">
-                      <div className="text-[52px] font-medium leading-none text-neev-green md:text-[64px]">
-                        {card.stat.value}
-                      </div>
-                      <div className="mt-1 text-[16px] leading-[132%] text-white/80">
-                        {card.stat.label}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </li>
             );

@@ -61,7 +61,7 @@ export default function LeverageStatClient({
       <span className="text-[60px] font-medium leading-none text-[#00A78B]">
         {display}
       </span>
-      <span className="text-[60px] font-medium leading-none text-[#00A78B]/50">
+      <span className="text-[60px] font-medium leading-none text-[#00A78B]">
         {unit}
       </span>
     </p>

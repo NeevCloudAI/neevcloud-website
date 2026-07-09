@@ -61,7 +61,9 @@ export default function StackScrollClient() {
   // The data is authored top-to-bottom, so reverse it for display.
   const items = [...STACK_ACCORDION_ITEMS].reverse();
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const itemCount = items.length;
 
   useEffect(() => {
     let raf = 0;
@@ -74,16 +76,25 @@ export default function StackScrollClient() {
         Math.max(-el.getBoundingClientRect().top, 0),
         Math.max(total, 1),
       );
-      setProgress(total > 0 ? scrolled / total : 0);
+      const progress = total > 0 ? scrolled / total : 0;
+      // Progress bar is ref-driven so continuous scroll doesn't re-render the
+      // whole tier list every frame — React state only changes per tier.
+      if (barRef.current) {
+        barRef.current.style.width = `${Math.round(progress * 100)}%`;
+      }
+      const idx = Math.min(
+        itemCount - 1,
+        Math.floor(progress * itemCount + 0.0001),
+      );
+      setActiveIndex((prev) => (prev === idx ? prev : idx));
     };
     // rAF-throttle so we read layout at most once per frame (smoother, no jank).
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(compute);
     };
     compute();
-    // The layout scrolls inside <body> (overflow-y-auto), so a window-only
-    // scroll listener can miss events — listen on document (capture) too.
-    window.addEventListener("scroll", onScroll, { passive: true });
+    // The layout scrolls inside <body> (overflow-y-auto), so window "scroll"
+    // never fires — a capturing document listener catches every scroller.
     document.addEventListener("scroll", onScroll, {
       passive: true,
       capture: true,
@@ -91,27 +102,29 @@ export default function StackScrollClient() {
     window.addEventListener("resize", onScroll);
     return () => {
       if (raf) cancelAnimationFrame(raf);
-      window.removeEventListener("scroll", onScroll);
       document.removeEventListener("scroll", onScroll, { capture: true });
       window.removeEventListener("resize", onScroll);
     };
-  }, []);
+  }, [itemCount]);
 
-  const activeIndex = Math.min(
-    items.length - 1,
-    Math.floor(progress * items.length + 0.0001),
-  );
   const openId = items[activeIndex]?.id;
   const scrollToItem = (index: number) => {
     const el = wrapperRef.current;
     if (!el) return;
 
     const total = Math.max(el.offsetHeight - window.innerHeight, 1);
-    const sectionTop = window.scrollY + el.getBoundingClientRect().top;
+    // The page can scroll on either the root or <body> (globals.css makes body
+    // overflow-y-auto) — window.scrollTo silently no-ops when body is the
+    // scroller, so pick whichever element actually scrolls.
+    const scroller =
+      [document.scrollingElement, document.body].find(
+        (s): s is Element => !!s && s.scrollHeight - s.clientHeight > 1,
+      ) ?? document.documentElement;
+    const sectionTop = scroller.scrollTop + el.getBoundingClientRect().top;
     // Aim for the middle of the target tier's scroll band and let the scroll
     // listener drive `progress` — setting it here too caused a jump/flicker.
     const targetProgress = Math.min((index + 0.5) / items.length, 0.999);
-    window.scrollTo({
+    scroller.scrollTo({
       top: sectionTop + total * targetProgress,
       behavior: "smooth",
     });
@@ -171,6 +184,8 @@ export default function StackScrollClient() {
                     src={`/images/home/stack/Layer_0${platePos + 1}.png`}
                     alt=""
                     aria-hidden
+                    loading="lazy"
+                    decoding="async"
                     className={cn(
                       "pointer-events-none absolute left-1/2 w-[45.36%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
                       shown ? "opacity-100" : "opacity-0",
@@ -255,11 +270,12 @@ export default function StackScrollClient() {
             </ul>
           </div>
 
-          {/* Scroll progress indicator (Legora-style) */}
+          {/* Scroll progress indicator (Legora-style) — width driven via ref */}
           <div className="mx-auto h-1.5 w-40 overflow-hidden rounded-full bg-black/10">
             <div
+              ref={barRef}
               className="h-full rounded-full bg-black/50 transition-[width] duration-150 ease-out"
-              style={{ width: `${Math.round(progress * 100)}%` }}
+              style={{ width: "0%" }}
             />
           </div>
         </Container>

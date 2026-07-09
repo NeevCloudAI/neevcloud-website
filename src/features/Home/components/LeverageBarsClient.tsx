@@ -23,8 +23,8 @@ function Bar({
       <span
         className={
           tone === "neev"
-            ? "w-28 shrink-0 text-[18px] font-medium leading-tight text-primary-90"
-            : "w-28 shrink-0 text-[18px] leading-tight text-gray-03"
+            ? "w-32 shrink-0 text-[18px] font-medium leading-tight text-primary-90"
+            : "w-32 shrink-0 text-[18px] leading-tight text-gray-03"
         }
       >
         {label}

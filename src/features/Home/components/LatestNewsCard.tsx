@@ -37,7 +37,7 @@ export default function LatestNewsCard({ item }: LatestNewsCardProps) {
   return (
     <Link
       href={item.href}
-      className="group relative flex h-[227px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] group-hover:justify-center sm:w-[360px] lg:w-[412px]"
+      className="group relative flex h-[227px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] transition-all duration-500 hover:justify-center focus-visible:justify-center sm:w-[360px] lg:w-[412px]"
     >
       <div
         aria-hidden

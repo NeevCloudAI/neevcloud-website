@@ -42,7 +42,6 @@ export default function WhyNeevcloudSection() {
                   alt=""
                   aria-hidden
                   fill
-                  loading="eager"
                   sizes="(min-width: 640px) 240px, 88px"
                   className="object-contain"
                 />

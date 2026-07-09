@@ -216,10 +216,11 @@ export default function HomeHeader() {
 
         <button
           type="button"
-          aria-label="Open menu"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
+          aria-controls="home-mobile-nav"
           onClick={() => setIsOpen((v) => !v)}
-          className="text-white xl:hidden"
+          className="-m-2 grid size-11 place-items-center text-white xl:hidden"
         >
           <Menu size={24} aria-hidden />
         </button>
@@ -227,6 +228,7 @@ export default function HomeHeader() {
 
       {isOpen && (
         <nav
+          id="home-mobile-nav"
           aria-label="Mobile"
           className="mx-4 flex flex-col gap-1 rounded-xl border border-white/10 bg-black/95 p-3 backdrop-blur xl:hidden"
         >
@@ -244,13 +246,13 @@ export default function HomeHeader() {
           ))}
           <div className="mt-2 flex flex-col gap-2 border-t border-white/10 pt-3">
             <Link
-              href="#"
+              href={LOGIN_OPTIONS[0].href}
               className="rounded-md border border-white/20 px-4 py-2.5 text-center text-[14px] font-medium text-white"
             >
               Login
             </Link>
             <Link
-              href="#"
+              href="/contact-neevcloud"
               className="rounded-md bg-white px-4 py-2.5 text-center text-[14px] font-medium text-black"
             >
               Contact Sales

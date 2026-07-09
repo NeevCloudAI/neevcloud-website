@@ -7,11 +7,14 @@ import {
 } from "../data/infra-bento.data";
 
 // Per-card placement of the visual (bleeds off the card edges), matching Paper 6OL-0.
+// The two image-right cards (gpu, support) fall back to a stacked text-over-image
+// flow below lg — absolutely-positioned art crushed the copy on phones.
 const IMAGE_CLASS: Record<string, string> = {
-  gpu: "absolute right-0 top-[46%] w-[66%] max-w-none -translate-y-1/2 translate-x-[4%]",
+  gpu: "relative order-last mt-auto w-[78%] self-end lg:absolute lg:order-none lg:right-0 lg:top-[46%] lg:mt-0 lg:w-[66%] lg:max-w-none lg:-translate-y-1/2 lg:translate-x-[4%] lg:self-auto",
   memory: "absolute bottom-0 left-1/2 w-[75.6%] max-w-none -translate-x-1/2",
   "ai-native": "absolute -left-6 bottom-0 w-[102%] max-w-none translate-y-[4%]",
-  support: "absolute -bottom-1 right-0 w-[58%] max-w-none",
+  support:
+    "relative order-last mt-auto w-[70%] self-end lg:absolute lg:order-none lg:-bottom-1 lg:right-0 lg:mt-0 lg:w-[58%] lg:max-w-none lg:self-auto",
 };
 
 function BentoCard({ card }: { card: InfraBentoCard }) {
@@ -19,8 +22,8 @@ function BentoCard({ card }: { card: InfraBentoCard }) {
   return (
     <div
       className={cn(
-        "relative flex h-[360px] flex-col overflow-hidden rounded-lg bg-gradient-to-b from-black to-deep-forest p-6 lg:h-[400px]",
-        isRight ? "justify-center" : "justify-start",
+        "relative flex min-h-[360px] flex-col overflow-hidden rounded-lg bg-gradient-to-b from-black to-deep-forest p-6 lg:h-[400px]",
+        isRight ? "justify-start gap-6 lg:justify-center lg:gap-0" : "justify-start",
       )}
     >
       {/* visual — bleeds off the card edges */}
@@ -29,13 +32,15 @@ function BentoCard({ card }: { card: InfraBentoCard }) {
         src={card.image}
         alt=""
         aria-hidden
+        loading="lazy"
+        decoding="async"
         className={cn("pointer-events-none select-none", IMAGE_CLASS[card.key])}
       />
 
       <div
         className={cn(
           "relative z-10 flex flex-col gap-3",
-          isRight ? "max-w-[46%]" : "max-w-[92%]",
+          isRight ? "max-w-full lg:max-w-[46%]" : "max-w-[92%]",
         )}
       >
         <h3 className="text-[22px] font-medium leading-[120%] tracking-[-0.01em] text-white md:text-[24px]">

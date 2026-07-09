@@ -32,7 +32,7 @@ export default function HeroSection() {
           <div className="flex flex-col gap-4 md:gap-6">
             <h1
               id="hero-heading"
-              className="hero-in text-[58px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white md:text-[64px] lg:text-[74px] xl:whitespace-nowrap"
+              className="hero-in text-[58px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white md:text-[64px] lg:text-[74px] 1.5xl:whitespace-nowrap"
             >
               {HERO.headline}
             </h1>

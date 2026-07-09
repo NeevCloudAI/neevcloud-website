@@ -80,7 +80,6 @@ export default function WhyComparisonCards() {
             src="/images/home/why/legacy-cloud-lock.jpg"
             alt="Legacy cloud infrastructure locked behind vendor walls"
             fill
-            loading="eager"
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover object-center"
           />
@@ -99,7 +98,7 @@ export default function WhyComparisonCards() {
           {NEEVCLOUD_ADVANTAGE_ITEMS.map((item) => (
             <li
               key={item}
-              className="flex min-w-0 items-center gap-2 font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-white sm:whitespace-nowrap"
+              className="flex min-w-0 items-center gap-2 font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-white md:whitespace-nowrap"
             >
               <CheckIcon />
               {item}

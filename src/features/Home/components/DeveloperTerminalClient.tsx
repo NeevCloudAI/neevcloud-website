@@ -32,6 +32,10 @@ export default function DeveloperTerminalClient() {
 
         <pre
           key={active.id}
+          role="tabpanel"
+          id={`sdk-panel-${active.id}`}
+          aria-labelledby={`sdk-tab-${active.id}`}
+          tabIndex={0}
           className="classy code-swap min-h-[340px] overflow-x-auto px-6 py-6 font-space-mono text-[14px] leading-[22px] text-white md:min-h-[370px]"
         >
           <code>{active.code}</code>
@@ -51,7 +55,9 @@ export default function DeveloperTerminalClient() {
               key={tab.id}
               type="button"
               role="tab"
+              id={`sdk-tab-${tab.id}`}
               aria-selected={selected}
+              aria-controls={`sdk-panel-${tab.id}`}
               onClick={() => setActiveId(tab.id)}
               className={cn(
                 "px-1 py-3.5 text-center font-space-mono text-[11px] uppercase tracking-tight transition-colors sm:py-2 sm:px-3 sm:text-[14px] sm:tracking-[0.08em]",

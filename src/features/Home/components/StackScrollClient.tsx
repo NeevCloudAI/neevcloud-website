@@ -128,6 +128,21 @@ export default function StackScrollClient() {
                 aria-hidden
                 className="absolute inset-y-0 left-0 w-[97%] bg-gradient-to-r from-cloud-gray via-cloud-gray/70 to-transparent"
               />
+
+              {/* Glass tier plates — the active tier crossfades in over the shader */}
+              {items.map((item, index) => (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  key={item.id}
+                  src={`/images/home/stack/Layer_0${index + 1}.png`}
+                  alt=""
+                  aria-hidden
+                  className={cn(
+                    "pointer-events-none absolute inset-0 m-auto max-h-[78%] max-w-[82%] object-contain saturate-[1.35] drop-shadow-[0_20px_40px_#00000047] transition-opacity duration-700 ease-out",
+                    index === activeIndex ? "opacity-100" : "opacity-0",
+                  )}
+                />
+              ))}
             </div>
 
             {/* Accordion (left) — scroll-driven active tier */}

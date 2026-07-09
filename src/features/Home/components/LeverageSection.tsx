@@ -40,15 +40,15 @@ export default function LeverageSection() {
           {LEVERAGE_ROWS.map((row) => (
             <li
               key={row.stat + row.unit}
-              className="grid gap-6 rounded-lg bg-white p-5 md:grid-cols-2 md:gap-10"
+              className="grid gap-6 bg-white p-5 md:grid-cols-2 md:gap-10"
             >
               <div className="flex flex-col gap-3 md:border-r md:border-cloud-gray md:pr-10">
                 <LeverageStatClient value={Number(row.stat)} unit={row.unit} />
-                <p className="text-[16px] font-medium capitalize leading-6">
+                <p className="text-[16px] font-medium capitalize leading-6 text-black">
                   <span className="font-semibold text-[#00A78B]">
-                    {row.highlight}{" "}
+                    {row.highlight}
                   </span>
-                  <span className="text-gray-02">{row.rest}</span>
+                  <span className="mt-1 block text-black">{row.rest}</span>
                 </p>
               </div>
 

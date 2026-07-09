@@ -55,7 +55,7 @@ export default function WhyComparisonCards() {
   return (
     <div className="flex flex-col items-start overflow-hidden lg:flex-row">
       {/* Legacy Cloud */}
-      <div className="flex min-w-0 flex-1 basis-[670px] flex-col items-start gap-6 overflow-hidden bg-white px-5 py-10">
+      <div className="flex w-full min-w-0 flex-col items-start gap-6 overflow-hidden bg-white px-5 py-10 lg:w-auto lg:flex-1 lg:basis-[670px]">
         <div className="flex items-center gap-3">
           <span className="grid size-8 shrink-0 place-items-center bg-[#C1C2C7] text-[#606060]">
             <RiPencilLine size={16} aria-hidden />
@@ -75,7 +75,7 @@ export default function WhyComparisonCards() {
             </li>
           ))}
         </ul>
-        <div className="relative mt-auto h-[200px] w-full shrink-0 overflow-hidden bg-[#EFEFEF]">
+        <div className="relative h-[200px] w-full shrink-0 overflow-hidden bg-[#EFEFEF] lg:mt-auto">
           <Image
             src="/images/home/why/legacy-cloud-lock.jpg"
             alt="Legacy cloud infrastructure locked behind vendor walls"
@@ -88,7 +88,7 @@ export default function WhyComparisonCards() {
       </div>
 
       {/* The NeevCloud Advantage */}
-      <div className="relative flex min-w-0 flex-1 basis-[670px] flex-col items-start gap-6 overflow-hidden bg-black px-5 py-10 lg:h-[444px]">
+      <div className="relative flex w-full min-w-0 flex-col items-start gap-6 overflow-hidden bg-black px-5 py-10 lg:h-[444px] lg:w-auto lg:flex-1 lg:basis-[670px]">
         <div className="flex items-center gap-3">
           <NeevCloudMark />
           <h3 className="text-[20px] font-medium capitalize leading-[120%] tracking-[-0.01em] text-white">
@@ -99,7 +99,7 @@ export default function WhyComparisonCards() {
           {NEEVCLOUD_ADVANTAGE_ITEMS.map((item) => (
             <li
               key={item}
-              className="flex min-w-0 items-center gap-2 whitespace-nowrap font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-white"
+              className="flex min-w-0 items-center gap-2 font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-white sm:whitespace-nowrap"
             >
               <CheckIcon />
               {item}

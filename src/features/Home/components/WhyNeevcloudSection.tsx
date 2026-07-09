@@ -23,30 +23,32 @@ export default function WhyNeevcloudSection() {
           </p>
         </div>
 
-        <ul className="flex list-none flex-wrap items-start gap-2">
+        <ul className="flex list-none flex-wrap items-start gap-5 sm:gap-2">
           {WHY_FEATURES.map((feature, index) => (
             <li
               key={feature.title}
-              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-col items-center gap-4 overflow-hidden text-center"
+              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden text-left sm:flex-col sm:text-center"
             >
-	              <div
-	                className={cn(
-	                  "relative h-[179px] w-[204px] shrink-0",
-	                  index === 0 && "home-why-icon-turntable",
-	                )}
-	              >
+              {/* Mobile: compact row — text left, small icon right. Desktop:
+                  centred column with the large icon on top. */}
+              <div
+                className={cn(
+                  "relative order-2 h-[76px] w-[88px] shrink-0 sm:order-1 sm:h-[179px] sm:w-[204px]",
+                  index === 0 && "home-why-icon-turntable",
+                )}
+              >
                 <Image
                   src={feature.icon}
                   alt=""
                   aria-hidden
                   fill
                   loading="eager"
-                  sizes="(min-width: 640px) 240px, 180px"
+                  sizes="(min-width: 640px) 240px, 88px"
                   className="object-contain"
                 />
               </div>
-              <div className="flex w-full flex-col items-center gap-2">
-                <h3 className="text-[20px] font-medium leading-[120%] tracking-[-0.01em] text-black">
+              <div className="order-1 flex flex-1 flex-col items-start gap-1 sm:order-2 sm:w-full sm:flex-none sm:items-center sm:gap-2">
+                <h3 className="text-[18px] font-medium leading-[120%] tracking-[-0.01em] text-black sm:text-[20px]">
                   {feature.title}
                 </h3>
                 <p className="max-w-[441px] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black">

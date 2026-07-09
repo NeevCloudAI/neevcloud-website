@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RiClaudeFill, RiOpenaiFill } from "@remixicon/react";
+import {
+  RiClaudeFill,
+  RiGeminiFill,
+  RiOpenaiFill,
+  RiPerplexityFill,
+} from "@remixicon/react";
 import Container from "./container";
 import { FOOTER_2026, FOOTER_COLUMNS } from "../data/footer-2026.data";
 import { FOOTER_SOCIAL_LINKS } from "../data/footer-data";
@@ -20,6 +25,16 @@ const LLM_LINKS = [
     label: "Ask ChatGPT",
     href: `https://chatgpt.com/?q=${LLM_PROMPT}`,
     icon: RiOpenaiFill,
+  },
+  {
+    label: "Ask Perplexity",
+    href: `https://www.perplexity.ai/search?q=${LLM_PROMPT}`,
+    icon: RiPerplexityFill,
+  },
+  {
+    label: "Ask Gemini",
+    href: `https://gemini.google.com/app?q=${LLM_PROMPT}`,
+    icon: RiGeminiFill,
   },
 ];
 

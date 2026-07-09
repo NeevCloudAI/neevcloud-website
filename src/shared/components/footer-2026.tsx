@@ -120,10 +120,16 @@ export default function Footer2026() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="block opacity-70 transition-opacity hover:opacity-100"
+                    className="grid size-9 place-items-center rounded-md bg-[#7d8590] transition-colors hover:bg-white"
                   >
+                    {/* white source glyphs render black inside the tile */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={social.icon} alt="" aria-hidden className="size-6" />
+                    <img
+                      src={social.icon}
+                      alt=""
+                      aria-hidden
+                      className="size-5 brightness-0"
+                    />
                   </a>
                 </li>
               ))}

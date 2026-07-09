@@ -34,7 +34,7 @@ export const LATEST_NEWS_ITEMS: LatestNewsItem[] = [
     description:
       "100% carbon-neutral operations, up to 10x higher compute density, a 1.03 PUE, and up to 25% lower infrastructure costs.",
     href: "/newsroom",
-    image: "/images/home/latest/varuna-cooling.png",
+    image: "/images/home/latest/varuna-cooling.jpg",
     imageAlt: "Varuna liquid immersion cooling facility",
     theme: "dark",
   },

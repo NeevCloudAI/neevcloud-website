@@ -50,7 +50,9 @@ export default function WhyNeevcloudSection() {
                 <h3 className="text-[18px] font-medium leading-[120%] tracking-[-0.01em] text-black sm:text-[20px]">
                   {feature.title}
                 </h3>
-                <p className="max-w-[441px] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black">
+                {/* max-w in ch + balance keeps every subtext on exactly two
+                    even lines on desktop. */}
+                <p className="max-w-[52ch] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance]">
                   {feature.description}
                 </p>
               </div>

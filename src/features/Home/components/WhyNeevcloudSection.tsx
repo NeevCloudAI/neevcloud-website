@@ -26,24 +26,27 @@ export default function WhyNeevcloudSection() {
           {WHY_FEATURES.map((feature) => (
             <li
               key={feature.title}
-              className="flex flex-col items-center gap-3 text-center"
+              className="flex flex-col items-center gap-4 text-center"
             >
-              <div className="relative h-28 w-28">
+              <div className="relative h-40 w-full">
                 <Image
                   src={feature.icon}
                   alt=""
                   aria-hidden
                   fill
-                  sizes="112px"
+                  loading="eager"
+                  sizes="(min-width: 640px) 240px, 180px"
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-[20px] font-medium text-black">
-                {feature.title}
-              </h3>
-              <p className="max-w-xs text-[14px] leading-[150%] text-gray-04">
-                {feature.description}
-              </p>
+              <div className="flex flex-col items-center gap-2">
+                <h3 className="text-[20px] font-medium leading-[120%] tracking-[-0.01em] text-black">
+                  {feature.title}
+                </h3>
+                <p className="max-w-xs text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-gray-04">
+                  {feature.description}
+                </p>
+              </div>
             </li>
           ))}
         </ul>

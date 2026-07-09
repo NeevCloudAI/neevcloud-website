@@ -8,19 +8,19 @@ export const WHY_NEEVCLOUD = {
 
 export const WHY_FEATURES: WhyFeature[] = [
   {
-    icon: "/images/home/why/icon-no-vendor-lock-in.png",
+    icon: "/images/home/why/glass-lock-rings.png",
     title: "No Vendor Lock-In",
     description:
       "Move your data and models freely. We believe in technology freedom, not walled gardens.",
   },
   {
-    icon: "/images/home/why/icon-transparent-pricing.png",
+    icon: "/images/home/why/glass-pricing-plates.png",
     title: "Transparent Pricing",
     description:
       "What you see is what you pay. No hidden egress fees or surprise billing.",
   },
   {
-    icon: "/images/home/why/icon-sovereign-secure.png",
+    icon: "/images/home/why/glass-secure-vault.png",
     title: "Sovereign & Secure",
     description:
       "Your data remains under your control, secured by strict global standards and local compliance.",

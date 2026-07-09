@@ -1,5 +1,6 @@
 import Container from "@/shared/components/container";
 import LeverageBarsClient from "./LeverageBarsClient";
+import LeverageStatClient from "./LeverageStatClient";
 import {
   LEVERAGE_ROWS,
   LEVERAGE_SECTION,
@@ -42,19 +43,12 @@ export default function LeverageSection() {
               className="grid gap-6 rounded-lg bg-white p-5 md:grid-cols-2 md:gap-10"
             >
               <div className="flex flex-col gap-3 md:border-r md:border-cloud-gray md:pr-10">
-                <p className="flex items-baseline">
-                  <span className="text-[48px] font-semibold leading-none text-primary-90 md:text-[56px]">
-                    {row.stat}
-                  </span>
-                  <span className="text-[48px] font-semibold leading-none text-primary-90/50 md:text-[56px]">
-                    {row.unit}
-                  </span>
-                </p>
-                <p className="text-[14px] capitalize leading-6">
-                  <span className="text-[14px] text-primary-90">
+                <LeverageStatClient value={Number(row.stat)} unit={row.unit} />
+                <p className="text-[16px] font-medium capitalize leading-6">
+                  <span className="font-semibold text-[#00A78B]">
                     {row.highlight}{" "}
                   </span>
-                  <span className="text-[14px] text-gray-02">{row.rest}</span>
+                  <span className="text-gray-02">{row.rest}</span>
                 </p>
               </div>
 

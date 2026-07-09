@@ -17,27 +17,24 @@ export const LEVERAGE_ROWS: LeverageRow[] = [
   {
     stat: "73",
     unit: "%",
-    highlight:
-      "Cost Reduction - Vs. Hyperscale On-Demand. Committed Capacity Plus Idle Reclamation.",
-    rest: "Your Finance Team Will Notice.",
+    highlight: "Cost Reduction - Vs. Hyperscale On-Demand.",
+    rest: "Committed Capacity Plus Idle Reclamation. Your Finance Team Will Notice.",
     neev: 20,
     legacy: 90,
   },
   {
     stat: "10",
     unit: "X",
-    highlight:
-      "Throughput. Faster Iteration On Large Runs. Deterministic Interconnect Eliminates Straggler",
-    rest: "Nodes In Distributed Training.",
+    highlight: "Throughput. Faster Iteration On Large Runs.",
+    rest: "Deterministic Interconnect Eliminates Straggler Nodes In Distributed Training.",
     neev: 98,
     legacy: 15,
   },
   {
     stat: "30",
     unit: "%",
-    highlight:
-      "Low Latency. Guaranteed Reduction. Removing The Limits Of Geography And Latency To Redefine How",
-    rest: "AI Is Deployed And Scaled.",
+    highlight: "Low Latency. Guaranteed Reduction.",
+    rest: "Removing The Limits Of Geography And Latency To Redefine How AI Is Deployed And Scaled.",
     neev: 92,
     legacy: 42,
   },

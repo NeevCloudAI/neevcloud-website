@@ -108,9 +108,9 @@ export default function StackScrollClient() {
 
     const total = Math.max(el.offsetHeight - window.innerHeight, 1);
     const sectionTop = window.scrollY + el.getBoundingClientRect().top;
-    const targetProgress = Math.min(index / items.length + 0.02, 1);
-
-    setProgress(targetProgress);
+    // Aim for the middle of the target tier's scroll band and let the scroll
+    // listener drive `progress` — setting it here too caused a jump/flicker.
+    const targetProgress = Math.min((index + 0.5) / items.length, 0.999);
     window.scrollTo({
       top: sectionTop + total * targetProgress,
       behavior: "smooth",

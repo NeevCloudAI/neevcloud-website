@@ -23,19 +23,19 @@ function Bar({
       <span
         className={
           tone === "neev"
-            ? "w-24 shrink-0 text-[13px] font-medium leading-4 text-primary-90"
-            : "w-24 shrink-0 text-[13px] leading-4 text-gray-03"
+            ? "w-28 shrink-0 text-[18px] font-medium leading-tight text-primary-90"
+            : "w-28 shrink-0 text-[18px] leading-tight text-gray-03"
         }
       >
         {label}
       </span>
-      <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-cloud-gray">
+      <div className="h-[18px] flex-1 overflow-hidden rounded-full bg-cloud-gray">
         <div
           className={cn(
             "h-full rounded-full transition-[width] duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
             tone === "neev"
               ? "bg-gradient-to-r from-primary to-neev-green"
-              : "bg-gray-01",
+              : "bg-[#8f949b]",
           )}
           style={{ width: shown ? `${value}%` : "0%", transitionDelay: `${delay}ms` }}
         />

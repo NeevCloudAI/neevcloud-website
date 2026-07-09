@@ -64,6 +64,10 @@ export default function StackScrollClient() {
   const items = [...STACK_ACCORDION_ITEMS].reverse();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
+  // While a click-triggered glide is in flight, scroll events must not drive
+  // activeIndex — otherwise every tier between source and target flaps
+  // open/closed mid-scroll.
+  const glidingRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
   // Mobile (below lg) swaps the scroll-driven accordion for a Legora-style
   // manual carousel with its own index.
@@ -87,6 +91,7 @@ export default function StackScrollClient() {
       if (barRef.current) {
         barRef.current.style.width = `${Math.round(progress * 100)}%`;
       }
+      if (glidingRef.current) return;
       const idx = Math.min(
         itemCount - 1,
         Math.floor(progress * itemCount + 0.0001),
@@ -126,13 +131,29 @@ export default function StackScrollClient() {
         (s): s is Element => !!s && s.scrollHeight - s.clientHeight > 1,
       ) ?? document.documentElement;
     const sectionTop = scroller.scrollTop + el.getBoundingClientRect().top;
-    // Aim for the middle of the target tier's scroll band and let the scroll
-    // listener drive `progress` — setting it here too caused a jump/flicker.
     const targetProgress = Math.min((index + 0.5) / items.length, 0.999);
-    scroller.scrollTo({
-      top: sectionTop + total * targetProgress,
-      behavior: "smooth",
-    });
+    const from = scroller.scrollTop;
+    const to = sectionTop + total * targetProgress;
+
+    // Open the target tier immediately and glide there over a fixed duration.
+    // Native smooth scroll takes distance-proportional time and lets every
+    // in-between tier flap open/closed — this keeps one clean transition.
+    setActiveIndex(index);
+    glidingRef.current = true;
+    const duration = 650;
+    const start = performance.now();
+    const ease = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const step = (now: number) => {
+      const t = Math.min((now - start) / duration, 1);
+      scroller.scrollTop = from + (to - from) * ease(t);
+      if (t < 1) {
+        requestAnimationFrame(step);
+      } else {
+        glidingRef.current = false;
+      }
+    };
+    requestAnimationFrame(step);
   };
 
   return (

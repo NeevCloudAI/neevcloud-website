@@ -139,7 +139,7 @@ export default function Footer2026() {
               src="/icons/iso.svg"
               alt="AICPA SOC 2, ISO 9001, ISO 27002 and ISO 27018 certifications"
               loading="lazy"
-              className="h-[88px] w-auto"
+              className="h-[62px] w-auto"
             />
           </div>
 

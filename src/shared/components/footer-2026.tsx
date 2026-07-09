@@ -51,7 +51,7 @@ export default function Footer2026() {
       <Container className="relative z-10 flex flex-col gap-14 pb-8 pt-16 md:gap-20 md:pt-20">
         {/* CTA band */}
         <div className="flex flex-col items-center gap-6 text-center">
-          <h2 className="max-w-3xl text-[32px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-white md:text-[48px]">
+          <h2 className="text-[32px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-white md:text-[48px]">
             {FOOTER_2026.ctaHeading}
           </h2>
           <p className="max-w-2xl text-[16px] leading-[132%] tracking-[-0.02em] text-white/70 md:text-[20px]">

@@ -69,7 +69,7 @@ export default function WhyComparisonCards() {
           </span>
           <h3 className="text-[20px] font-medium text-black">Legacy Cloud</h3>
         </div>
-        <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+        <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
           {LEGACY_CLOUD_ITEMS.map((item) => (
             <li
               key={item}
@@ -82,7 +82,7 @@ export default function WhyComparisonCards() {
         </ul>
         <div className="relative mt-auto h-40 overflow-hidden rounded-lg md:h-48">
           <Image
-            src="/images/home/why/legacy-cloud.png"
+            src="/images/home/why/legacy-dark.png"
             alt="Legacy cloud infrastructure locked behind vendor walls"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -106,7 +106,7 @@ export default function WhyComparisonCards() {
             The NeevCloud Advantage
           </h3>
         </div>
-        <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+        <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
           {NEEVCLOUD_ADVANTAGE_ITEMS.map((item) => (
             <li
               key={item}
@@ -117,6 +117,15 @@ export default function WhyComparisonCards() {
             </li>
           ))}
         </ul>
+        <div className="relative mt-auto h-40 overflow-hidden rounded-lg md:h-48">
+          <Image
+            src="/images/home/why/neevcloud-green.png"
+            alt="NeevCloud infrastructure with open, high-speed data flow"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );

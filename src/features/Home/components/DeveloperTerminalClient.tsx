@@ -7,6 +7,8 @@ import {
   DEVELOPER_TERMINAL_TABS,
 } from "../data/developer-section.data";
 
+// Matches Paper node 6L8-0: 932px window (#1E1E1E), header + code on a
+// white/6% panel, separate tab bar with a teal active tab.
 export default function DeveloperTerminalClient() {
   const [activeId, setActiveId] = useState(DEVELOPER_TERMINAL_TABS[0].id);
   const active =
@@ -14,28 +16,32 @@ export default function DeveloperTerminalClient() {
     DEVELOPER_TERMINAL_TABS[0];
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-white/10 bg-[#0c1310] shadow-2xl">
-      <div className="flex items-center justify-between gap-4 border-b border-white/10 bg-white/[0.04] px-4 py-3">
-        <div className="flex items-center gap-2" aria-hidden>
-          <span className="size-3 rounded-full bg-[#ff5f57]" />
-          <span className="size-3 rounded-full bg-[#febc2e]" />
-          <span className="size-3 rounded-full bg-[#28c840]" />
+    <div className="mx-auto w-full max-w-[932px] overflow-hidden rounded-xl bg-[#1E1E1E] shadow-2xl">
+      {/* body panel */}
+      <div className="bg-white/[0.06]">
+        <div className="flex items-center justify-between gap-4 border-b border-white/10 px-4 py-3">
+          <div className="flex items-center gap-2" aria-hidden>
+            <span className="size-2.5 rounded-full bg-[#ff5f57]" />
+            <span className="size-2.5 rounded-full bg-[#febc2e]" />
+            <span className="size-2.5 rounded-full bg-[#28c840]" />
+          </div>
+          <span className="font-space-mono text-[13px] uppercase tracking-[0.1em] text-[#868686]">
+            {DEVELOPER_SECTION.terminalTitle}
+          </span>
         </div>
-        <span className="font-space-mono text-[11px] tracking-[0.15em] text-white/40">
-          {DEVELOPER_SECTION.terminalTitle}
-        </span>
+
+        <pre className="classy min-h-[340px] overflow-x-auto px-6 py-6 font-space-mono text-[14px] leading-[22px] text-white md:min-h-[370px]">
+          <code>{active.code}</code>
+        </pre>
       </div>
 
-      <pre className="classy min-h-[340px] overflow-x-auto px-5 py-5 font-space-mono text-[13px] leading-6 text-[#d7e3df] md:min-h-[420px]">
-        <code>{active.code}</code>
-      </pre>
-
+      {/* tab bar */}
       <div
         role="tablist"
         aria-label="SDK examples"
         className="grid grid-cols-5 border-t border-white/10"
       >
-        {DEVELOPER_TERMINAL_TABS.map((tab) => {
+        {DEVELOPER_TERMINAL_TABS.map((tab, index) => {
           const selected = tab.id === activeId;
           return (
             <button
@@ -45,10 +51,11 @@ export default function DeveloperTerminalClient() {
               aria-selected={selected}
               onClick={() => setActiveId(tab.id)}
               className={cn(
-                "border-r border-white/10 px-3 py-3 text-center font-space-mono text-[12px] tracking-[0.12em] transition-colors last:border-r-0",
+                "px-3 py-2 text-center font-space-mono text-[14px] uppercase tracking-[0.08em] transition-colors",
+                index > 0 && "border-l border-white/10",
                 selected
-                  ? "bg-primary-90/15 text-neev-green"
-                  : "text-white/45 hover:text-white/80",
+                  ? "bg-[#00A78B29] text-[#00A78B]"
+                  : "text-[#868686] hover:text-white/80",
               )}
             >
               {tab.label}

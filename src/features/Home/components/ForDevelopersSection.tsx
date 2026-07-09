@@ -34,26 +34,31 @@ export default function ForDevelopersSection() {
         </div>
       </div>
       <Container className="flex flex-col items-center gap-10 md:gap-12">
-        <div className="flex max-w-3xl flex-col items-center gap-4 text-center">
+        <div className="flex w-full flex-col items-center gap-4 text-center">
           <h2
             id="developers-heading"
             className="flex flex-wrap items-center justify-center gap-x-3 text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-white sm:text-[36px] md:text-[44px]"
           >
             {DEVELOPER_SECTION.titleLead}
-            <span className="text-neev-green">{DEVELOPER_SECTION.titleCode}</span>
+            <span className="text-[24px] text-neev-green sm:text-[32px] md:text-[44px]">
+              {DEVELOPER_SECTION.titleCode}
+            </span>
           </h2>
-          <p className="text-[16px] leading-[150%] tracking-[-0.01em] text-white/70">
+          <p className="max-w-2xl text-[16px] leading-[150%] tracking-[-0.01em] text-white/70">
             {DEVELOPER_SECTION.subtitle}
           </p>
         </div>
 
-        <ul className="grid w-full list-none gap-8 text-center sm:grid-cols-3">
+        <ul className="grid w-full list-none gap-4 text-center sm:grid-cols-3">
           {DEVELOPER_FEATURES.map((feature) => (
-            <li key={feature.title} className="flex flex-col gap-2">
-              <h3 className="text-[18px] font-medium text-white md:text-[20px]">
+            <li
+              key={feature.title}
+              className="flex flex-col items-center justify-center gap-2 rounded-md border border-white/[0.06] bg-black/20 p-4"
+            >
+              <h3 className="text-[20px] font-medium leading-[120%] text-white">
                 {feature.title}
               </h3>
-              <p className="text-[14px] leading-[150%] text-white/60">
+              <p className="text-[14px] font-normal leading-[142%] text-white/70">
                 {feature.description}
               </p>
             </li>

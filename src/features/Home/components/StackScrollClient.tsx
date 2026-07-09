@@ -145,7 +145,7 @@ export default function StackScrollClient() {
                     <div
                       className={cn(
                         "flex items-center justify-between gap-4 px-5",
-                        isOpen ? "pt-8" : "py-4",
+                        isOpen ? "pt-5" : "py-4",
                       )}
                     >
                       <h3
@@ -169,7 +169,7 @@ export default function StackScrollClient() {
                         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
                       )}
                     >
-                      <ul className="flex list-none flex-col gap-4 overflow-hidden px-5 [&:not(:empty)]:pb-8 [&:not(:empty)]:pt-7">
+                      <ul className="flex list-none flex-col gap-4 overflow-hidden px-5 [&:not(:empty)]:pb-5 [&:not(:empty)]:pt-7">
                         {isOpen &&
                           item.features.map((feature) => {
                             const Icon = FEATURE_ICONS[feature.icon];

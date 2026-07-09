@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Container from "@/shared/components/container";
 import LeverageBarsClient from "./LeverageBarsClient";
 import {
@@ -12,15 +11,17 @@ export default function LeverageSection() {
       aria-labelledby="leverage-heading"
       className="relative isolate overflow-hidden bg-cloud-gray py-16 md:py-24"
     >
-      <Image
-        src="/images/home/compare-bg.jpg"
-        alt=""
+      <video
         aria-hidden
-        fill
-        sizes="100vw"
-        unoptimized
-        className="-z-10 object-cover opacity-60"
-      />
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/images/home/compare-bg.jpg"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
+      >
+        <source src="/images/home/compare-bg.mp4" type="video/mp4" />
+      </video>
       <Container className="flex max-w-6xl flex-col gap-10 md:gap-14">
         <div className="flex flex-col gap-3">
           <h2

@@ -14,7 +14,8 @@ import Container from "@/shared/components/container";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { cn } from "@/lib/utils";
 
-type NavItem = { label: string; href: string; dropdown?: boolean };
+type NavLink = { label: string; href: string };
+type NavItem = { label: string; href: string; items?: NavLink[] };
 
 const LOGIN_OPTIONS = [
   {
@@ -30,15 +31,73 @@ const LOGIN_OPTIONS = [
   },
 ];
 
-// Order + labels taken from the Paper navbar (node 3-0).
+// Order + labels taken from the Paper navbar (node 3-0). Dropdown items link to
+// the real inner pages.
 const NAV_ITEMS: NavItem[] = [
   { label: "AI SuperCloud", href: "/why-ai-supercloud" },
-  { label: "Inference Hub", href: "/ai-inference", dropdown: true },
-  { label: "Product", href: "/gpu-cluster", dropdown: true },
-  { label: "Solutions", href: "/public-sector", dropdown: true },
-  { label: "Developers", href: "/developers", dropdown: true },
-  { label: "Resources", href: "/newsroom", dropdown: true },
-  { label: "Company", href: "/about-us", dropdown: true },
+  {
+    label: "Inference Hub",
+    href: "/ai-inference",
+    items: [
+      { label: "AI Inference", href: "/ai-inference" },
+      { label: "Model Catalog", href: "/model-catalog" },
+      { label: "Model Playground", href: "/model-playground" },
+      { label: "Serverless Inference", href: "/serverless-inference" },
+      { label: "Model API", href: "/model-api" },
+    ],
+  },
+  {
+    label: "Product",
+    href: "/gpu-cluster",
+    items: [
+      { label: "GPU Cluster", href: "/gpu-cluster" },
+      { label: "CPU Cluster", href: "/cpu-cluster" },
+      { label: "Managed Kubernetes", href: "/managed-kubernetes" },
+      { label: "Object Storage", href: "/object-storage" },
+      { label: "GPU Pricing", href: "/gpu-pricing" },
+    ],
+  },
+  {
+    label: "Solutions",
+    href: "/public-sector",
+    items: [
+      { label: "Public Sector", href: "/public-sector" },
+      { label: "Healthcare", href: "/healthcare" },
+      { label: "BFSI", href: "/bfsi" },
+      { label: "Media & VFX", href: "/media-vfx" },
+      { label: "LLM Training", href: "/llm-training" },
+    ],
+  },
+  {
+    label: "Developers",
+    href: "/developers",
+    items: [
+      { label: "Developers Hub", href: "/developers" },
+      { label: "Model API", href: "/model-api" },
+      { label: "Agentic Workflow", href: "/agentic-workflow" },
+    ],
+  },
+  {
+    label: "Resources",
+    href: "/newsroom",
+    items: [
+      { label: "Newsroom", href: "/newsroom" },
+      { label: "Events", href: "/events" },
+      { label: "Trust Center", href: "/trust-center" },
+      { label: "NeevCloud Arena", href: "/neevcloud-arena" },
+    ],
+  },
+  {
+    label: "Company",
+    href: "/about-us",
+    items: [
+      { label: "About Us", href: "/about-us" },
+      { label: "Leadership", href: "/leadership" },
+      { label: "Careers", href: "/careers" },
+      { label: "Life at NeevCloud", href: "/life-at-neevcloud" },
+      { label: "Contact", href: "/contact-neevcloud" },
+    ],
+  },
   { label: "Pricing", href: "/gpu-pricing" },
 ];
 
@@ -63,18 +122,45 @@ export default function HomeHeader() {
             aria-label="Primary"
             className="hidden items-center gap-5 xl:flex"
           >
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
-              >
-                {item.label}
-                {item.dropdown && (
-                  <ChevronDown size={14} aria-hidden className="text-white" />
-                )}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) =>
+              item.items ? (
+                <div key={item.label} className="group/nav relative">
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
+                  >
+                    {item.label}
+                    <ChevronDown
+                      size={14}
+                      aria-hidden
+                      className="text-white transition-transform duration-200 group-hover/nav:rotate-180 group-focus-within/nav:rotate-180"
+                    />
+                  </Link>
+                  {/* pt-3 bridges the gap so hover isn't lost moving to the panel */}
+                  <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
+                    <div className="min-w-[200px] rounded-md border border-cloud-gray bg-white p-2 shadow-lg">
+                      {item.items.map((sub) => (
+                        <Link
+                          key={sub.label}
+                          href={sub.href}
+                          className="block whitespace-nowrap rounded px-3 py-2 text-[13px] font-medium leading-6 tracking-[-0.02em] text-black transition-colors hover:bg-cloud-gray hover:text-primary-90"
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
         </div>
 

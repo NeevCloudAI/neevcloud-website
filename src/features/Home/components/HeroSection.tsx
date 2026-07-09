@@ -37,7 +37,7 @@ export default function HeroSection() {
               {HERO.headline}
             </h1>
             <p
-              className="hero-in text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-white/90 sm:text-[18px] md:text-[22px] xl:whitespace-nowrap"
+              className="hero-in text-[20px] font-normal leading-[132%] tracking-[-0.02em] text-white/90 md:text-[22px] xl:whitespace-nowrap"
               style={{ animationDelay: "0.12s" }}
             >
               {HERO.subheadline}

@@ -155,6 +155,14 @@ body {
   span {
     @apply text-xs sm:text-xs md:text-sm lg:text-base font-normal leading-normal;
   }
+  /* …but a <span> used inside a heading must not be shrunk by the rule above —
+     it should take the heading's own size/weight (color utilities still win). */
+  :is(h1, h2, h3, h4, h5, h6) span {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
   input {
     background-color: var(--white);
     border-color: var(--cloud-gray);

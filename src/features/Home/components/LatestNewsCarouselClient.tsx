@@ -1,11 +1,45 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import LatestNewsCard from "./LatestNewsCard";
 import { LATEST_NEWS_ITEMS } from "../data/latest-news.data";
 
-// Horizontal scroll row (no arrow controls). Bleeds to the right so the next
-// card peeks; scroll/drag to advance.
+// Horizontal scroll row that fades whichever edge has more cards off-screen, so
+// cards never cut abruptly. Left fade appears only once scrolled; right fade
+// drops at the end.
 export default function LatestNewsCarouselClient() {
+  const ref = useRef<HTMLUListElement>(null);
+  const [edges, setEdges] = useState({ left: false, right: true });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => {
+      const left = el.scrollLeft > 8;
+      const right = el.scrollLeft < el.scrollWidth - el.clientWidth - 8;
+      setEdges((prev) =>
+        prev.left === left && prev.right === right ? prev : { left, right },
+      );
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      el.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
+  const from = edges.left ? "transparent 0%, #000 5%" : "#000 0%";
+  const to = edges.right ? "#000 95%, transparent 100%" : "#000 100%";
+  const mask = `linear-gradient(to right, ${from}, ${to})`;
+
   return (
-    <ul className="flex list-none snap-x snap-mandatory gap-4 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden [-webkit-mask-image:linear-gradient(to_right,#000_0%,#000_90%,transparent_100%)] [mask-image:linear-gradient(to_right,#000_0%,#000_90%,transparent_100%)]">
+    <ul
+      ref={ref}
+      className="flex list-none snap-x snap-mandatory gap-4 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden"
+      style={{ maskImage: mask, WebkitMaskImage: mask }}
+    >
       {LATEST_NEWS_ITEMS.map((item, index) => (
         <li key={item.title} className="snap-start">
           <LatestNewsCard item={item} priority={index < 3} />

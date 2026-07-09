@@ -61,7 +61,9 @@ export default function StackScrollClient() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => {
+    let raf = 0;
+    const compute = () => {
+      raf = 0;
       const el = wrapperRef.current;
       if (!el) return;
       const total = el.offsetHeight - window.innerHeight;
@@ -71,7 +73,11 @@ export default function StackScrollClient() {
       );
       setProgress(total > 0 ? scrolled / total : 0);
     };
-    onScroll();
+    // rAF-throttle so we read layout at most once per frame (smoother, no jank).
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(compute);
+    };
+    compute();
     // The layout scrolls inside <body> (overflow-y-auto), so a window-only
     // scroll listener can miss events — listen on document (capture) too.
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -81,6 +87,7 @@ export default function StackScrollClient() {
     });
     window.addEventListener("resize", onScroll);
     return () => {
+      if (raf) cancelAnimationFrame(raf);
       window.removeEventListener("scroll", onScroll);
       document.removeEventListener("scroll", onScroll, { capture: true });
       window.removeEventListener("resize", onScroll);
@@ -129,20 +136,29 @@ export default function StackScrollClient() {
                 className="absolute inset-y-0 left-0 w-[97%] bg-gradient-to-r from-cloud-gray via-cloud-gray/70 to-transparent"
               />
 
-              {/* Glass tier plates — the active tier crossfades in over the shader */}
-              {items.map((item, index) => (
-                /* eslint-disable-next-line @next/next/no-img-element */
-                <img
-                  key={item.id}
-                  src={`/images/home/stack/Layer_0${index + 1}.png`}
-                  alt=""
-                  aria-hidden
-                  className={cn(
-                    "pointer-events-none absolute inset-0 m-auto max-h-[78%] max-w-[82%] object-contain saturate-[1.35] drop-shadow-[0_20px_40px_#00000047] transition-opacity duration-700 ease-out",
-                    index === activeIndex ? "opacity-100" : "opacity-0",
-                  )}
-                />
-              ))}
+              {/* Glass tier plates — they stack into a tower one plate at a time
+                  as you scroll through the tiers (Legora-style). */}
+              {items.map((item, index) => {
+                const shown = index <= activeIndex;
+                return (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    key={item.id}
+                    src={`/images/home/stack/Layer_0${index + 1}.png`}
+                    alt=""
+                    aria-hidden
+                    className={cn(
+                      "pointer-events-none absolute left-1/2 w-[56%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
+                      shown ? "opacity-100" : "opacity-0",
+                    )}
+                    style={{
+                      top: `${index * 17}%`,
+                      zIndex: 20 - index,
+                      transform: `translateX(-50%) translateY(${shown ? 0 : 36}px)`,
+                    }}
+                  />
+                );
+              })}
             </div>
 
             {/* Accordion (left) — scroll-driven active tier */}

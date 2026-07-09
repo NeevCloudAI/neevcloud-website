@@ -15,6 +15,8 @@ import {
   RiFlashlightLine,
   RiRobot2Line,
   RiAddLine,
+  RiArrowLeftLine,
+  RiArrowRightLine,
 } from "@remixicon/react";
 import Mesh from "@/shared/components/mesh-gradient";
 import Container from "@/shared/components/container";
@@ -63,6 +65,9 @@ export default function StackScrollClient() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  // Mobile (below lg) swaps the scroll-driven accordion for a Legora-style
+  // manual carousel with its own index.
+  const [mobileIndex, setMobileIndex] = useState(0);
   const itemCount = items.length;
 
   useEffect(() => {
@@ -148,7 +153,7 @@ export default function StackScrollClient() {
 
       <div
         ref={wrapperRef}
-        className="relative"
+        className="relative hidden lg:block"
         style={{ height: `${items.length * 60 + 40}vh` }}
       >
         <div className="sticky top-0 flex min-h-screen flex-col justify-center overflow-hidden pb-16">
@@ -280,6 +285,72 @@ export default function StackScrollClient() {
           </div>
         </Container>
       </div>
+      </div>
+
+      {/* Mobile (below lg): Legora-style manual carousel — full plate tower,
+          caption card at the bottom, prev/next arrows switch tiers. */}
+      <div className="relative pb-14 pt-8 lg:hidden">
+        <div className="relative mx-auto h-[430px] w-full max-w-[480px]">
+          {items.map((item, index) => {
+            const platePos = items.length - 1 - index;
+            const shown = index <= mobileIndex;
+            return (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                key={item.id}
+                src={`/images/home/stack/Layer_0${platePos + 1}.png`}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                decoding="async"
+                className={cn(
+                  "pointer-events-none absolute left-1/2 w-[76%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
+                  shown ? "opacity-100" : "opacity-0",
+                )}
+                style={{
+                  top: `${4 + platePos * 16}%`,
+                  zIndex: 20 - platePos,
+                  transform: `translateX(-50%) translateY(${shown ? 0 : 36}px)`,
+                }}
+              />
+            );
+          })}
+
+          {/* Caption card + arrows */}
+          <div className="absolute inset-x-4 bottom-0 z-30 flex items-center gap-3">
+            <button
+              type="button"
+              aria-label="Previous tier"
+              disabled={mobileIndex === 0}
+              onClick={() => setMobileIndex((i) => Math.max(0, i - 1))}
+              className="grid size-10 shrink-0 place-items-center rounded-full bg-black/80 text-white backdrop-blur-[8px] transition-opacity disabled:opacity-40"
+            >
+              <RiArrowLeftLine size={18} aria-hidden />
+            </button>
+            <div
+              aria-live="polite"
+              className="flex min-h-[104px] flex-1 flex-col justify-center gap-1 rounded-2xl bg-black/80 p-4 backdrop-blur-[8px]"
+            >
+              <p className="text-[12px] font-medium uppercase tracking-[0.06em] text-neev-green">
+                {items[mobileIndex].label}
+              </p>
+              <h3 className="text-[14px] font-normal leading-[142%] text-white">
+                {items[mobileIndex].heading}
+              </h3>
+            </div>
+            <button
+              type="button"
+              aria-label="Next tier"
+              disabled={mobileIndex === items.length - 1}
+              onClick={() =>
+                setMobileIndex((i) => Math.min(items.length - 1, i + 1))
+              }
+              className="grid size-10 shrink-0 place-items-center rounded-full bg-black/80 text-white backdrop-blur-[8px] transition-opacity disabled:opacity-40"
+            >
+              <RiArrowRightLine size={18} aria-hidden />
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

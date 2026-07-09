@@ -142,19 +142,20 @@ export default function HomeHeader() {
                   </Link>
                   {/* pt-3 bridges the gap so hover isn't lost moving to the panel */}
                   <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
+                    {/* Legora-style frosted glass panel */}
                     <div
                       className={cn(
-                        "rounded-lg border border-black/[0.06] bg-white p-1.5 shadow-[0_16px_44px_#0000001f]",
+                        "rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-2.5 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
                         item.items.length > 6
-                          ? "grid grid-cols-2 gap-x-1"
-                          : "min-w-[210px]",
+                          ? "grid grid-cols-2 gap-x-1.5"
+                          : "min-w-[230px]",
                       )}
                     >
                       {item.items.map((sub) => (
                         <Link
                           key={sub.label}
                           href={sub.href}
-                          className="block whitespace-nowrap rounded-md px-3 py-2 text-[13px] font-medium leading-6 tracking-[-0.02em] text-gray-05 transition-colors hover:bg-cloud-gray hover:text-primary-90"
+                          className="block whitespace-nowrap rounded-xl px-4 py-2.5 text-[14px] font-normal leading-6 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
                         >
                           {sub.label}
                         </Link>

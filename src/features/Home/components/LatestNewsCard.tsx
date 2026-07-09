@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RiArrowRightLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import type { LatestNewsItem } from "../types/latest-news.types";
 
@@ -6,27 +7,6 @@ type LatestNewsCardProps = {
   item: LatestNewsItem;
   priority?: boolean;
 };
-
-function ArrowIcon() {
-  return (
-    <svg
-      viewBox="0 0 14 8"
-      width="16"
-      height="10"
-      fill="none"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path
-        d="M0 4h14M10 0l4 4-4 4"
-        stroke="currentColor"
-        strokeWidth="1.25"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 // Matches Paper node 2C-0: the product image is a background layer sized 112%×199%
 // and offset so it sits prominent in the upper area; a scrim fades only the bottom
@@ -94,7 +74,7 @@ export default function LatestNewsCard({ item }: LatestNewsCardProps) {
               )}
             >
               Learn more
-              <ArrowIcon />
+              <RiArrowRightLine size={18} aria-hidden className="shrink-0" />
             </span>
           </div>
         </div>

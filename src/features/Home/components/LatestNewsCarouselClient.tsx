@@ -37,10 +37,12 @@ export default function LatestNewsCarouselClient() {
   const to = edges.right ? "#000 95%, transparent 100%" : "#000 100%";
   const mask = masked ? `linear-gradient(to right, ${from}, ${to})` : undefined;
 
+  // Full-bleed: the track spans the viewport; padding aligns the first card
+  // with the Container's content edge (max-w 1360px, 1536px from 2xl).
   return (
     <ul
       ref={ref}
-      className="flex list-none snap-x snap-mandatory gap-4 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden"
+      className="flex w-full list-none snap-x snap-mandatory gap-4 overflow-x-auto pb-1 px-[max(1rem,calc((100%-1360px)/2+1rem))] scroll-pl-[max(1rem,calc((100%-1360px)/2+1rem))] 2xl:px-[max(1rem,calc((100%-1536px)/2+1rem))] 2xl:scroll-pl-[max(1rem,calc((100%-1536px)/2+1rem))] [&::-webkit-scrollbar]:hidden"
       style={{ maskImage: mask, WebkitMaskImage: mask }}
     >
       {LATEST_NEWS_ITEMS.map((item, index) => (

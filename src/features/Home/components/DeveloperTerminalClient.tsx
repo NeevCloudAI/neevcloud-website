@@ -51,7 +51,7 @@ export default function DeveloperTerminalClient() {
               aria-selected={selected}
               onClick={() => setActiveId(tab.id)}
               className={cn(
-                "px-3 py-2 text-center font-space-mono text-[14px] uppercase tracking-[0.08em] transition-colors",
+                "px-1 py-2 text-center font-space-mono text-[10px] uppercase tracking-normal transition-colors sm:px-3 sm:text-[14px] sm:tracking-[0.08em]",
                 index > 0 && "border-l border-white/10",
                 selected
                   ? "bg-[#00A78B29] text-[#00A78B]"

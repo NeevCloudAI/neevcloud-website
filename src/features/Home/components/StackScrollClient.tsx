@@ -99,28 +99,45 @@ export default function StackScrollClient() {
     Math.floor(progress * items.length + 0.0001),
   );
   const openId = items[activeIndex]?.id;
+  const scrollToItem = (index: number) => {
+    const el = wrapperRef.current;
+    if (!el) return;
+
+    const total = Math.max(el.offsetHeight - window.innerHeight, 1);
+    const sectionTop = window.scrollY + el.getBoundingClientRect().top;
+    const targetProgress = Math.min(index / items.length + 0.02, 1);
+
+    setProgress(targetProgress);
+    window.scrollTo({
+      top: sectionTop + total * targetProgress,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <div
-      ref={wrapperRef}
-      className="relative"
-      style={{ height: `${items.length * 60 + 40}vh` }}
-    >
-      <div className="sticky top-0 flex min-h-screen flex-col justify-start overflow-hidden bg-cloud-gray pb-16 pt-20 md:pt-[120px]">
-        <Container className="flex flex-col gap-8 md:gap-12">
-          <div className="flex flex-col items-center gap-3 text-center">
-            <h2
-              id="stack-heading"
-              className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
-            >
-              {STACK_SECTION.title}
-            </h2>
-            <p className="max-w-2xl text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-black">
-              {STACK_SECTION.subtitle}
-            </p>
-          </div>
+    <section className="bg-cloud-gray">
+      {/* Heading scrolls normally (not pinned) — only the stack below sticks,
+          matching legora.com. */}
+      <Container className="flex flex-col items-center gap-3 pt-20 text-center md:pt-[120px]">
+        <h2
+          id="stack-heading"
+          className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
+        >
+          {STACK_SECTION.title}
+        </h2>
+        <p className="max-w-2xl text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-black">
+          {STACK_SECTION.subtitle}
+        </p>
+      </Container>
 
-          <div className="relative flex min-h-[420px] items-center lg:min-h-[560px]">
+      <div
+        ref={wrapperRef}
+        className="relative"
+        style={{ height: `${items.length * 60 + 40}vh` }}
+      >
+        <div className="sticky top-0 flex min-h-screen flex-col justify-center overflow-hidden pb-16">
+          <Container className="flex flex-col gap-8 md:gap-12">
+            <div className="relative flex min-h-[420px] items-center lg:min-h-[560px]">
             {/* Mesh shader (right) + horizontal fade overlay on its left edge */}
             <div className="absolute right-0 top-0 hidden h-full w-[min(800px,58%)] overflow-hidden rounded-2xl lg:block">
               <Mesh
@@ -148,11 +165,11 @@ export default function StackScrollClient() {
                     alt=""
                     aria-hidden
                     className={cn(
-                      "pointer-events-none absolute left-1/2 w-[56%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
+                      "pointer-events-none absolute left-1/2 w-[45.36%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
                       shown ? "opacity-100" : "opacity-0",
                     )}
                     style={{
-                      top: `${index * 17}%`,
+                      top: `${3 + index * 15.3}%`,
                       zIndex: 20 - index,
                       transform: `translateX(-50%) translateY(${shown ? 0 : 36}px)`,
                     }}
@@ -163,7 +180,7 @@ export default function StackScrollClient() {
 
             {/* Accordion (left) — scroll-driven active tier */}
             <ul className="relative z-10 flex w-full list-none flex-col items-start gap-2 lg:max-w-[660px]">
-              {items.map((item) => {
+              {items.map((item, index) => {
                 const isOpen = item.id === openId;
                 return (
                   <li
@@ -173,28 +190,33 @@ export default function StackScrollClient() {
                       isOpen ? "w-full" : "w-auto",
                     )}
                   >
-                    <div
+                    <button
+                      type="button"
+                      aria-controls={`stack-panel-${item.id}`}
+                      aria-expanded={isOpen}
+                      onClick={() => scrollToItem(index)}
                       className={cn(
-                        "flex items-center justify-between gap-4 px-5",
+                        "flex w-full items-center justify-between gap-4 px-5 text-left",
                         isOpen ? "pt-5" : "py-4",
                       )}
                     >
-                      <h3
+                      <span
                         className={cn(
                           "font-medium capitalize leading-[120%] tracking-[-0.01em] text-white",
                           isOpen ? "text-[20px]" : "text-[16px]",
                         )}
                       >
                         {isOpen ? item.heading : item.label}
-                      </h3>
+                      </span>
                       {!isOpen && (
                         <IconTile>
                           <RiAddLine size={14} />
                         </IconTile>
                       )}
-                    </div>
+                    </button>
 
                     <div
+                      id={`stack-panel-${item.id}`}
                       className={cn(
                         "grid transition-all duration-500 ease-out",
                         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
@@ -235,6 +257,7 @@ export default function StackScrollClient() {
           </div>
         </Container>
       </div>
-    </div>
+      </div>
+    </section>
   );
 }

@@ -1,4 +1,4 @@
-import { Poppins, Space_Mono } from "next/font/google";
+import { Instrument_Sans, Poppins, Space_Mono } from "next/font/google";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { defaultMetadata } from "@/lib/seo";
 import { GTM_ID, GA_ID } from "@/shared/constants/analytics.constants";
@@ -7,6 +7,12 @@ import "./globals.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -27,7 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {GTM_ID && <GoogleTagManager gtmId={GTM_ID} />}
-      <body className={`${poppins.variable} ${spaceMono.variable}`}>
+      <body
+        className={`${poppins.variable} ${instrumentSans.variable} ${spaceMono.variable}`}
+      >
         {children}
         {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
         <MicrosoftClarity />

@@ -8,6 +8,9 @@ import {
 } from "../data/developer-section.data";
 
 export default function ForDevelopersSection() {
+  const brandName = "NeevCloud";
+  const titleRest = DEVELOPER_SECTION.titleLead.replace(brandName, "").trim();
+
   return (
     <section
       aria-labelledby="developers-heading"
@@ -37,10 +40,13 @@ export default function ForDevelopersSection() {
         <div className="flex w-full flex-col items-center gap-4 text-center">
           <h2
             id="developers-heading"
-            className="flex flex-wrap items-center justify-center gap-x-3 text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-white sm:text-[36px] md:text-[44px]"
+            className="text-[28px] font-normal leading-[120%] tracking-[-0.01em] text-white sm:text-[36px] md:text-[44px]"
           >
-            {DEVELOPER_SECTION.titleLead}
-            <span className="text-[24px] text-neev-green sm:text-[32px] md:text-[44px]">
+            <span className="block">
+              <span className="text-neev-green">{brandName}</span>
+              {titleRest ? ` ${titleRest}` : ""}
+            </span>
+            <span className="block text-white">
               {DEVELOPER_SECTION.titleCode}
             </span>
           </h2>

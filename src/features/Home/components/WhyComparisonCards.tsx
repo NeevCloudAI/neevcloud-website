@@ -1,133 +1,111 @@
 import Image from "next/image";
 import {
+  RiCheckLine,
+  RiErrorWarningLine,
+  RiPencilLine,
+} from "@remixicon/react";
+import {
   LEGACY_CLOUD_ITEMS,
   NEEVCLOUD_ADVANTAGE_ITEMS,
 } from "../data/why-neevcloud.data";
 
 function WarningIcon() {
   return (
-    <svg
-      viewBox="0 0 16 16"
-      width="16"
-      height="16"
-      fill="none"
+    <RiErrorWarningLine
+      size={16}
       aria-hidden
-      className="mt-0.5 shrink-0"
-    >
-      <path
-        d="M8 2.2l6 10.8H2L8 2.2z"
-        stroke="#FE4D47"
-        strokeWidth="1.3"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M8 6.6v3M8 11.4v.02"
-        stroke="#FE4D47"
-        strokeWidth="1.3"
-        strokeLinecap="round"
-      />
-    </svg>
+      className="shrink-0 text-[#C62A12]"
+    />
   );
 }
 
 function CheckIcon() {
   return (
-    <svg
-      viewBox="0 0 16 16"
-      width="16"
-      height="16"
-      fill="none"
+    <RiCheckLine
+      size={16}
       aria-hidden
-      className="mt-0.5 shrink-0"
+      className="shrink-0 text-[#00A78B]"
+    />
+  );
+}
+
+function NeevCloudMark() {
+  return (
+    <span
+      aria-hidden
+      className="relative grid size-8 shrink-0 place-items-center bg-[#58D7A7]"
     >
-      <path
-        d="M3 8.5l3.2 3.2L13 5"
-        stroke="#59D8A7"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+      <svg
+        viewBox="0 0 21.3 21.3"
+        width="21"
+        height="21"
+        fill="none"
+        className="size-[21px]"
+      >
+        <path
+          d="M14.992 3.959V.31c0-.171-.139-.31-.31-.31H6.615c-.171 0-.31.139-.31.31v5.672c0 .151-.106.281-.253.312L.246 7.505A.31.31 0 0 0 0 7.808v13.184c0 .171.139.31.31.31h5.691c.171 0 .309-.139.309-.31V6.54c0-.151.106-.281.253-.312l8.038-1.695a.318.318 0 0 1 .384.312v16.147c0 .171.139.31.31.31h5.691c.171 0 .309-.139.309-.31V3.418a.31.31 0 0 0-.373-.303l-5.546 1.156a.318.318 0 0 1-.384-.312Z"
+          fill="black"
+        />
+      </svg>
+    </span>
   );
 }
 
 export default function WhyComparisonCards() {
   return (
-    <div className="grid overflow-hidden rounded-3xl lg:grid-cols-2">
+    <div className="flex flex-col items-start overflow-hidden lg:flex-row">
       {/* Legacy Cloud */}
-      <div className="flex flex-col gap-6 bg-white px-5 py-10">
+      <div className="flex min-w-0 flex-1 basis-[670px] flex-col items-start gap-6 overflow-hidden bg-white px-5 py-10">
         <div className="flex items-center gap-3">
-          <span className="grid size-8 place-items-center rounded-md bg-cloud-gray text-gray-04">
-            <svg viewBox="0 0 16 16" width="15" height="15" fill="none">
-              <path
-                d="M10.5 2.5l3 3-8 8H2.5v-3l8-8z"
-                stroke="currentColor"
-                strokeWidth="1.2"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <span className="grid size-8 shrink-0 place-items-center bg-[#C1C2C7] text-[#606060]">
+            <RiPencilLine size={16} aria-hidden />
           </span>
-          <h3 className="text-[20px] font-medium text-black">Legacy Cloud</h3>
+          <h3 className="text-[20px] font-medium capitalize leading-[120%] tracking-[-0.01em] text-black">
+            Legacy Cloud
+          </h3>
         </div>
-        <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
+        <ul className="grid w-full list-none grid-cols-1 gap-x-3 gap-y-3 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
           {LEGACY_CLOUD_ITEMS.map((item) => (
             <li
               key={item}
-              className="flex items-start gap-2 text-[14px] leading-6 text-gray-04"
+              className="flex min-w-0 items-center gap-2 font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-black"
             >
               <WarningIcon />
               {item}
             </li>
           ))}
         </ul>
-        <div className="relative mt-auto h-[200px] overflow-hidden rounded-lg">
+        <div className="relative mt-auto h-[200px] w-full shrink-0 overflow-hidden bg-[#EFEFEF]">
           <Image
-            src="/images/home/why/legacy-dark.png"
+            src="/images/home/why/legacy-cloud-lock.jpg"
             alt="Legacy cloud infrastructure locked behind vendor walls"
             fill
             loading="eager"
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
       </div>
 
       {/* The NeevCloud Advantage */}
-      <div className="flex flex-col gap-6 bg-black px-5 py-10">
+      <div className="relative flex min-w-0 flex-1 basis-[670px] flex-col items-start gap-6 overflow-hidden bg-black px-5 py-10 lg:h-[444px]">
         <div className="flex items-center gap-3">
-          <Image
-            src="/icons/green-logo.svg"
-            alt=""
-            aria-hidden
-            width={32}
-            height={32}
-            className="size-8"
-          />
-          <h3 className="text-[20px] font-medium text-white">
+          <NeevCloudMark />
+          <h3 className="text-[20px] font-medium capitalize leading-[120%] tracking-[-0.01em] text-white">
             The NeevCloud Advantage
           </h3>
         </div>
-        <ul className="grid list-none grid-cols-1 gap-x-8 gap-y-3 sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3">
+        <ul className="grid w-full list-none grid-cols-1 gap-x-3 gap-y-3 sm:grid-flow-col sm:grid-cols-[max-content_max-content] sm:grid-rows-3 sm:justify-between">
           {NEEVCLOUD_ADVANTAGE_ITEMS.map((item) => (
             <li
               key={item}
-              className="flex items-start gap-2 text-[14px] leading-6 text-white/80"
+              className="flex min-w-0 items-center gap-2 whitespace-nowrap font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-white"
             >
               <CheckIcon />
               {item}
             </li>
           ))}
         </ul>
-        <div className="relative mt-auto h-[200px] overflow-hidden rounded-lg">
-          <Image
-            src="/images/home/why/neevcloud-green.png"
-            alt="NeevCloud infrastructure with open, high-speed data flow"
-            fill
-            loading="eager"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </div>
       </div>
     </div>
   );

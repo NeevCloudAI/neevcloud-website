@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 import Container from "@/shared/components/container";
 import WhyComparisonCards from "./WhyComparisonCards";
 import { WHY_FEATURES, WHY_NEEVCLOUD } from "../data/why-neevcloud.data";
@@ -7,28 +8,33 @@ export default function WhyNeevcloudSection() {
   return (
     <section
       aria-labelledby="why-heading"
-      className="bg-cloud-gray py-16 md:py-24"
+      className="bg-cloud-gray px-4 py-16 sm:px-8 md:px-[50px] md:py-20"
     >
-      <Container className="flex flex-col gap-12 md:gap-16">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+      <Container className="flex max-w-[1340px] flex-col gap-12 px-0">
+        <div className="flex w-full flex-col items-center gap-4 text-center">
           <h2
             id="why-heading"
-            className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
+            className="w-full text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
           >
             {WHY_NEEVCLOUD.title}
           </h2>
-          <p className="text-[16px] leading-[150%] tracking-[-0.01em] text-gray-04">
+          <p className="max-w-[830px] text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-black sm:text-[18px] md:text-[20px]">
             {WHY_NEEVCLOUD.description}
           </p>
         </div>
 
-        <ul className="grid list-none gap-10 sm:grid-cols-3">
-          {WHY_FEATURES.map((feature) => (
+        <ul className="flex list-none flex-wrap items-start gap-2">
+          {WHY_FEATURES.map((feature, index) => (
             <li
               key={feature.title}
-              className="flex flex-col items-center gap-4 text-center"
+              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-col items-center gap-4 overflow-hidden text-center"
             >
-              <div className="relative h-40 w-full">
+	              <div
+	                className={cn(
+	                  "relative h-[179px] w-[204px] shrink-0",
+	                  index === 0 && "home-why-icon-turntable",
+	                )}
+	              >
                 <Image
                   src={feature.icon}
                   alt=""
@@ -39,11 +45,11 @@ export default function WhyNeevcloudSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="flex flex-col items-center gap-2">
+              <div className="flex w-full flex-col items-center gap-2">
                 <h3 className="text-[20px] font-medium leading-[120%] tracking-[-0.01em] text-black">
                   {feature.title}
                 </h3>
-                <p className="max-w-sm text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-gray-04">
+                <p className="max-w-[441px] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black">
                   {feature.description}
                 </p>
               </div>

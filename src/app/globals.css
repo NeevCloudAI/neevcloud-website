@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-instrument-sans: var(--font-instrument-sans);
   --font-space-mono: var(--font-space-mono);
 
   --color-primary: var(--primary);
@@ -376,8 +377,60 @@ body {
   animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Slow turntable motion for the first Why NeevCloud glass icon. */
+.home-why-icon-turntable {
+  perspective: 760px;
+}
+
+.home-why-icon-turntable img {
+  animation: home-why-icon-turntable 16s ease-in-out infinite;
+  filter: drop-shadow(0 14px 24px rgb(0 167 139 / 0.14));
+  transform-origin: 50% 54%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.home-why-icon-turntable::after {
+  animation: home-why-icon-turntable-glow 16s ease-in-out infinite;
+  background: radial-gradient(
+    ellipse,
+    rgb(89 216 167 / 0.16) 0%,
+    rgb(89 216 167 / 0.06) 42%,
+    transparent 72%
+  );
+  border-radius: 9999px;
+  content: "";
+  inset: 20% 14% 8%;
+  pointer-events: none;
+  position: absolute;
+}
+
+@keyframes home-why-icon-turntable {
+  0%,
+  100% {
+    transform: rotateY(-18deg) rotateZ(-0.5deg) scale(0.995);
+  }
+  50% {
+    transform: rotateY(18deg) rotateZ(0.5deg) scale(1.01);
+  }
+}
+
+@keyframes home-why-icon-turntable-glow {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scaleX(0.92);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleX(1.08);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hero-in {
+  .hero-in,
+  .home-why-icon-turntable img,
+  .home-why-icon-turntable::after {
     animation: none;
   }
 }

@@ -9,8 +9,8 @@ import {
 // Per-card placement of the visual (bleeds off the card edges), matching Paper 6OL-0.
 const IMAGE_CLASS: Record<string, string> = {
   gpu: "absolute right-0 top-[46%] w-[66%] max-w-none -translate-y-1/2 translate-x-[4%]",
-  memory: "absolute left-2 top-[42%] w-[90%] max-w-none",
-  "ai-native": "absolute -left-3 bottom-0 w-[74%] max-w-none translate-y-[4%]",
+  memory: "absolute bottom-0 left-1/2 w-[75.6%] max-w-none -translate-x-1/2",
+  "ai-native": "absolute -left-6 bottom-0 w-[102%] max-w-none translate-y-[4%]",
   support: "absolute -bottom-1 right-0 w-[58%] max-w-none",
 };
 

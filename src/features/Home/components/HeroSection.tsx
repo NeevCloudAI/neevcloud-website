@@ -17,7 +17,7 @@ export default function HeroSection() {
         muted
         playsInline
         poster="/images/home/hero-supercloud.jpg"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full origin-center -translate-y-[12%] scale-[0.75] object-cover object-center [mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
       >
         <source src="/images/home/hero-supercloud.mp4" type="video/mp4" />
       </video>

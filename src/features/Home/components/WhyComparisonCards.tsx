@@ -53,9 +53,9 @@ function CheckIcon() {
 
 export default function WhyComparisonCards() {
   return (
-    <div className="grid overflow-hidden rounded-2xl border border-cloud-gray lg:grid-cols-2">
+    <div className="grid overflow-hidden rounded-3xl lg:grid-cols-2">
       {/* Legacy Cloud */}
-      <div className="flex flex-col gap-6 bg-white p-6 md:p-8">
+      <div className="flex flex-col gap-6 bg-white px-5 py-10">
         <div className="flex items-center gap-3">
           <span className="grid size-8 place-items-center rounded-md bg-cloud-gray text-gray-04">
             <svg viewBox="0 0 16 16" width="15" height="15" fill="none">
@@ -80,11 +80,12 @@ export default function WhyComparisonCards() {
             </li>
           ))}
         </ul>
-        <div className="relative mt-auto h-40 overflow-hidden rounded-lg md:h-48">
+        <div className="relative mt-auto h-[200px] overflow-hidden rounded-lg">
           <Image
             src="/images/home/why/legacy-dark.png"
             alt="Legacy cloud infrastructure locked behind vendor walls"
             fill
+            loading="eager"
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />
@@ -92,7 +93,7 @@ export default function WhyComparisonCards() {
       </div>
 
       {/* The NeevCloud Advantage */}
-      <div className="flex flex-col gap-6 bg-black p-6 md:p-8">
+      <div className="flex flex-col gap-6 bg-black px-5 py-10">
         <div className="flex items-center gap-3">
           <Image
             src="/icons/green-logo.svg"
@@ -117,11 +118,12 @@ export default function WhyComparisonCards() {
             </li>
           ))}
         </ul>
-        <div className="relative mt-auto h-40 overflow-hidden rounded-lg md:h-48">
+        <div className="relative mt-auto h-[200px] overflow-hidden rounded-lg">
           <Image
             src="/images/home/why/neevcloud-green.png"
             alt="NeevCloud infrastructure with open, high-speed data flow"
             fill
+            loading="eager"
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />

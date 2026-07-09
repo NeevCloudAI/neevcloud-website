@@ -3,6 +3,7 @@ import StackSection from "./StackSection";
 import WhyNeevcloudSection from "./WhyNeevcloudSection";
 import ForDevelopersSection from "./ForDevelopersSection";
 import LeverageSection from "./LeverageSection";
+import InfraBentoSection from "./InfraBentoSection";
 import Footer2026 from "@/shared/components/footer-2026";
 
 // 2026 homepage — built section by section against the Paper design.
@@ -16,6 +17,7 @@ const HomeComponent = () => {
       <WhyNeevcloudSection />
       <ForDevelopersSection />
       <LeverageSection />
+      <InfraBentoSection />
       <Footer2026 />
     </>
   );

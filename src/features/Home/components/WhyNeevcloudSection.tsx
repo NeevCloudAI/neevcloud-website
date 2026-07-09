@@ -43,7 +43,7 @@ export default function WhyNeevcloudSection() {
                 <h3 className="text-[20px] font-medium leading-[120%] tracking-[-0.01em] text-black">
                   {feature.title}
                 </h3>
-                <p className="max-w-xs text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-gray-04">
+                <p className="max-w-sm text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-gray-04">
                   {feature.description}
                 </p>
               </div>

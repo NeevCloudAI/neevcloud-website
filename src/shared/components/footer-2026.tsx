@@ -1,7 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import { RiClaudeFill, RiOpenaiFill } from "@remixicon/react";
 import Container from "./container";
 import { FOOTER_2026, FOOTER_COLUMNS } from "../data/footer-2026.data";
+import { FOOTER_SOCIAL_LINKS } from "../data/footer-data";
+
+// Prefilled "explore NeevCloud with your preferred LLM" prompt (V7-style).
+const LLM_PROMPT = encodeURIComponent(
+  "Tell me about NeevCloud (https://neevcloud.com), India's AI SuperCloud. What GPU infrastructure, inference services, and AI cloud products do they offer, and how could I use them for my AI workloads?",
+);
+
+const LLM_LINKS = [
+  {
+    label: "Ask Claude",
+    href: `https://claude.ai/new?q=${LLM_PROMPT}`,
+    icon: RiClaudeFill,
+  },
+  {
+    label: "Ask ChatGPT",
+    href: `https://chatgpt.com/?q=${LLM_PROMPT}`,
+    icon: RiOpenaiFill,
+  },
+];
 
 // Teal gradient CTA matching the hero button: shine-sweep on hover + four
 // "targeting bracket" corners that spread out on hover. No drop shadow.
@@ -88,6 +108,55 @@ export default function Footer2026() {
             </div>
           ))}
         </nav>
+
+        {/* Socials + certifications (left) and LLM explore block (right) */}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col gap-8">
+            <ul className="flex list-none items-center gap-5">
+              {FOOTER_SOCIAL_LINKS.map((social) => (
+                <li key={social.label}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="block opacity-70 transition-opacity hover:opacity-100"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={social.icon} alt="" aria-hidden className="size-6" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/icons/iso.svg"
+              alt="AICPA SOC 2, ISO 9001, ISO 27002 and ISO 27018 certifications"
+              loading="lazy"
+              className="h-[88px] w-auto"
+            />
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <h3 className="text-[16px] font-medium text-white">
+              How could I use NeevCloud
+            </h3>
+            <div className="flex flex-col gap-2">
+              {LLM_LINKS.map(({ label, href, icon: LlmIcon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full min-w-[260px] items-center gap-3 rounded-lg border border-white/15 px-4 py-3 text-[15px] text-white/60 transition-colors hover:border-white/35 hover:text-white"
+                >
+                  <LlmIcon size={20} aria-hidden />
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Giant subtle wordmark watermark, clipped at the bottom edge */}
         <div

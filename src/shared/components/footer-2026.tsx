@@ -159,15 +159,14 @@ export default function Footer2026() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="grid size-9 place-items-center rounded-md bg-[#7d8590] transition-colors hover:bg-white"
+                      className="group grid size-11 place-items-center rounded-lg border border-white/15 transition-colors hover:border-white/35"
                     >
-                      {/* white source glyphs render black inside the tile */}
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={social.icon}
                         alt=""
                         aria-hidden
-                        className="size-5 brightness-0"
+                        className="size-5 opacity-60 transition-opacity group-hover:opacity-100"
                       />
                     </a>
                   </li>

@@ -114,7 +114,7 @@ export default function WhyComparisonCards() {
           aria-hidden
           loading="lazy"
           decoding="async"
-          className="pointer-events-none mx-auto -mt-2 w-[280px] max-w-[70%] select-none lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:w-[46%] lg:max-w-none lg:-translate-x-1/2"
+          className="pointer-events-none mx-auto -mt-2 w-[350px] max-w-[85%] select-none lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:w-[57%] lg:max-w-none lg:-translate-x-1/2"
         />
       </div>
     </div>

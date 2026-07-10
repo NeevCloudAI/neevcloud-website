@@ -344,6 +344,11 @@ body {
   }
 }
 
+/* Tailwind v4 preflight drops cursor:pointer on buttons — restore it. */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 /* Hero load-in reveal */
 @keyframes hero-in {
   from {

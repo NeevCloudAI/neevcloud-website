@@ -86,7 +86,10 @@ export default function Footer2026() {
         {/* CTA band */}
         <div className="flex flex-col items-center gap-6 text-center">
           <h2 className="text-[32px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-white md:text-[48px]">
-            {FOOTER_2026.ctaHeading}
+            {/* "NeevCloud" carries the brand green */}
+            {FOOTER_2026.ctaHeading.split("NeevCloud")[0]}
+            <span className="text-[#59D9A7]">NeevCloud</span>
+            {FOOTER_2026.ctaHeading.split("NeevCloud")[1]}
           </h2>
           <p className="max-w-2xl text-[16px] leading-[132%] tracking-[-0.02em] text-white/70 md:text-[20px]">
             {FOOTER_2026.ctaSubtext}

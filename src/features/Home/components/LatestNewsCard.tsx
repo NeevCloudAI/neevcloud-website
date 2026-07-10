@@ -82,12 +82,12 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
             </p>
             <span
               className={cn(
-                "flex items-center gap-2 text-base font-medium tracking-[-0.02em]",
+                "flex items-center gap-2 text-[14px] font-medium uppercase tracking-[-0.02em]",
                 isDark ? "text-neev-green" : "text-primary-90",
               )}
             >
               Learn more
-              <RiArrowRightLine size={18} aria-hidden className="shrink-0" />
+              <RiArrowRightLine size={16} aria-hidden className="shrink-0" />
             </span>
           </div>
         </div>

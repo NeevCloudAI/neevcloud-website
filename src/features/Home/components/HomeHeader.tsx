@@ -257,7 +257,7 @@ export default function HomeHeader() {
                     />
                   </Link>
                   {/* pt-3 bridges the gap so hover isn't lost moving to the panel */}
-                  <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
+                  <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-150 delay-150 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-hover/nav:delay-0 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
                     {/* Legora-style frosted glass panel — grouped rows with
                         section labels + icons, mirroring the site mega-menus */}
                     <div

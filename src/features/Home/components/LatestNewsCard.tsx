@@ -20,7 +20,7 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
       href={item.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex h-[266px] w-[324px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] transition-all duration-500 sm:h-[227px] sm:w-[360px] sm:hover:justify-center sm:focus-visible:justify-center lg:w-[412px]"
+      className="group relative flex h-[266px] w-[324px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] focus-visible:outline-2 focus-visible:outline-neev-green transition-all duration-500 sm:h-[227px] sm:w-[360px] sm:hover:justify-center sm:focus-visible:justify-center lg:w-[412px]"
     >
       {/* Same geometry as the old CSS background layer, but served through
           next/image so mobile gets a properly-sized webp instead of raw JPEG. */}

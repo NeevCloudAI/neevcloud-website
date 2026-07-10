@@ -110,12 +110,18 @@ export default function Footer2026() {
               <ul className="flex list-none flex-col gap-3">
                 {column.links.map((item) => (
                   <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-[14px] leading-[142%] text-white/70 transition-colors hover:text-neev-green"
-                    >
-                      {item.label}
-                    </Link>
+                    {item.href === "#" ? (
+                      <span className="text-[14px] leading-[142%] text-white/40">
+                        {item.label}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-[14px] leading-[142%] text-white/70 transition-colors hover:text-neev-green"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -66,6 +66,9 @@ export default function StackScrollClient() {
   // activeIndex — otherwise every tier between source and target flaps
   // open/closed mid-scroll.
   const glidingRef = useRef(false);
+  // Active glide frame id so a new click cancels the previous animation
+  // instead of two rAF loops fighting over scrollTop.
+  const glideRafRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const itemCount = items.length;
 
@@ -134,7 +137,17 @@ export default function StackScrollClient() {
     // Native smooth scroll takes distance-proportional time and lets every
     // in-between tier flap open/closed — this keeps one clean transition.
     setActiveIndex(index);
+    // cancel any in-flight glide from a previous click
+    if (glideRafRef.current) cancelAnimationFrame(glideRafRef.current);
     glidingRef.current = true;
+
+    // honour prefers-reduced-motion: jump instantly, no animation
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      scroller.scrollTo({ top: to, behavior: "instant" as ScrollBehavior });
+      glidingRef.current = false;
+      return;
+    }
+
     const duration = 650;
     const start = performance.now();
     const ease = (t: number) =>
@@ -149,12 +162,13 @@ export default function StackScrollClient() {
         behavior: "instant" as ScrollBehavior,
       });
       if (t < 1) {
-        requestAnimationFrame(step);
+        glideRafRef.current = requestAnimationFrame(step);
       } else {
         glidingRef.current = false;
+        glideRafRef.current = 0;
       }
     };
-    requestAnimationFrame(step);
+    glideRafRef.current = requestAnimationFrame(step);
   };
 
   return (

@@ -10,7 +10,6 @@ export const FOOTER_2026 = {
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "AUP", href: "/acceptable-user-policy" },
     { label: "SLA", href: "/service-level-agreement" },
-    { label: "MSA", href: "#" },
   ],
 } as const;
 

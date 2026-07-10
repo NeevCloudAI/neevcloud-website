@@ -1,4 +1,5 @@
 import Container from "@/shared/components/container";
+import LazyBgVideo from "@/shared/components/lazy-bg-video";
 import LeverageBarsClient from "./LeverageBarsClient";
 import LeverageStatClient from "./LeverageStatClient";
 import {
@@ -12,17 +13,12 @@ export default function LeverageSection() {
       aria-labelledby="leverage-heading"
       className="relative isolate overflow-hidden bg-cloud-gray py-16 md:py-24"
     >
-      <video
-        aria-hidden
-        autoPlay
-        loop
-        muted
-        playsInline
+      {/* 3.3MB decorative loop — deferred until the section nears the viewport */}
+      <LazyBgVideo
+        src="/images/home/compare-bg.mp4"
         poster="/images/home/compare-bg.jpg"
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
-      >
-        <source src="/images/home/compare-bg.mp4" type="video/mp4" />
-      </video>
+      />
       <Container className="flex max-w-6xl flex-col gap-10 md:gap-14">
         <div className="flex flex-col gap-3">
           <h2

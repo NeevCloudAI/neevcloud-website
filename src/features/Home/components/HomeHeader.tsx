@@ -234,10 +234,10 @@ export default function HomeHeader() {
         <nav
           id="home-mobile-nav"
           aria-label="Mobile"
-          className="fixed inset-0 z-[60] bg-black/50 p-2 xl:hidden"
+          className="fixed inset-0 z-[60] xl:hidden"
         >
           {/* Taito-style full-screen card */}
-          <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-[#0d1110] px-5 pb-6 pt-4">
+          <div className="flex h-full flex-col overflow-hidden bg-[#0d1110] px-5 pb-8 pt-4">
             <div className="flex items-center justify-between">
               <Link href="/" onClick={() => setIsOpen(false)}>
                 <Image

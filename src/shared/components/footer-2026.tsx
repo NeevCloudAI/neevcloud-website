@@ -128,7 +128,7 @@ export default function Footer2026() {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-3">
               <h3 className="text-[14px] font-medium text-white/40">
-                How could I use NeevCloud
+                Summarize what NeevCloud does
               </h3>
               <div className="flex flex-wrap gap-2">
                 {LLM_LINKS.map(({ label, href, icon: LlmIcon }) => (

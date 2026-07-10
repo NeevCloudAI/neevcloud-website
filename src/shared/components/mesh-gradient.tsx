@@ -1,9 +1,16 @@
 "use client";
 
-import { MeshGradient } from "@paper-design/shaders-react";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import type { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
+
+// Code-split the WebGL shader library out of the initial bundle — it only
+// loads once a Mesh actually renders on the client.
+const MeshGradient = dynamic(
+  () => import("@paper-design/shaders-react").then((m) => m.MeshGradient),
+  { ssr: false },
+);
 
 // Client wrapper around Paper's WebGL MeshGradient shader so it can be dropped
 // into server-component sections. Same props as the Paper design export, plus:

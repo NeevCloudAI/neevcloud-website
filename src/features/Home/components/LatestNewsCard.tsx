@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
@@ -11,7 +12,7 @@ type LatestNewsCardProps = {
 // Matches Paper node 2C-0: the product image is a background layer sized 112%×199%
 // and offset so it sits prominent in the upper area; a scrim fades only the bottom
 // half (to the card's theme colour) so the title reads without washing the image out.
-export default function LatestNewsCard({ item }: LatestNewsCardProps) {
+export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) {
   const isDark = item.theme === "dark";
 
   return (
@@ -19,11 +20,21 @@ export default function LatestNewsCard({ item }: LatestNewsCardProps) {
       href={item.href}
       className="group relative flex h-[227px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] transition-all duration-500 hover:justify-center focus-visible:justify-center sm:w-[360px] lg:w-[412px]"
     >
+      {/* Same geometry as the old CSS background layer, but served through
+          next/image so mobile gets a properly-sized webp instead of raw JPEG. */}
       <div
         aria-hidden
-        className="absolute left-[46.7%] top-[18.5%] h-[199%] w-[112%] -translate-x-1/2 -translate-y-1/2 bg-cover bg-center"
-        style={{ backgroundImage: `url(${item.image})` }}
-      />
+        className="absolute left-[46.7%] top-[18.5%] h-[199%] w-[112%] -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+      >
+        <Image
+          src={item.image}
+          alt=""
+          fill
+          priority={priority}
+          sizes="(max-width: 640px) 320px, 470px"
+          className="object-cover object-center"
+        />
+      </div>
       {/* Base bottom scrim keeps the title legible over the image in the default
           (non-hover) state; it fades out as the solid fill takes over on hover. */}
       <div

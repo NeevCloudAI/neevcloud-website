@@ -1,4 +1,5 @@
 import Container from "@/shared/components/container";
+import HeroBgVideoClient from "./HeroBgVideoClient";
 import HeroGetStartedButton from "./HeroGetStartedButton";
 import LatestNewsCarouselClient from "./LatestNewsCarouselClient";
 import { HERO } from "../constants/hero.constants";
@@ -9,18 +10,9 @@ export default function HeroSection() {
       aria-labelledby="hero-heading"
       className="relative isolate overflow-hidden bg-black"
     >
-      {/* 3D SuperCloud render — animated loop, poster for fast first paint */}
-      <video
-        aria-hidden
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/images/home/hero-supercloud.jpg"
-        className="absolute inset-0 h-full w-full origin-center translate-x-[12%] -translate-y-[7%] scale-[0.75] object-cover object-center [mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
-      >
-        <source src="/images/home/hero-supercloud.mp4" type="video/mp4" />
-      </video>
+      {/* 3D SuperCloud render — poster paints first; the loop mounts
+          immediately on desktop, after load on mobile */}
+      <HeroBgVideoClient />
       {/* teal scrim for depth + text legibility */}
       <div
         aria-hidden

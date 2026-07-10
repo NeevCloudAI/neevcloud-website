@@ -36,7 +36,7 @@ export default function WhyNeevcloudSection() {
                   centred column with the large icon on top. */}
               <div
                 className={cn(
-                  "relative order-2 h-[76px] w-[88px] shrink-0 sm:order-1 sm:h-[179px] sm:w-[204px]",
+                  "relative order-2 h-[76px] w-[88px] shrink-0 sm:order-1 sm:h-[134px] sm:w-[153px]",
                   index === 0 && "home-why-icon-turntable",
                 )}
               >
@@ -55,7 +55,7 @@ export default function WhyNeevcloudSection() {
                 </h3>
                 {/* max-w in ch + balance keeps every subtext on exactly two
                     even lines on desktop. */}
-                <p className="max-w-[52ch] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance]">
+                <p className="max-w-[46ch] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance]">
                   {feature.description}
                 </p>
               </div>

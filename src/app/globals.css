@@ -322,6 +322,28 @@ body {
   @apply text-[56px] leading-[56px] sm:text-[72px] md:text-[88px] md:leading-[80px] lg:text-[112px];
 }
 
+/* Footer wordmark watermark glow: the mask itself is set inline in
+   footer-2026.tsx (Turbopack drops url() masks from bundled CSS); only the
+   drift animation lives here. */
+.footer-watermark-glow {
+  animation: footer-glow-drift 11s ease-in-out infinite alternate;
+}
+
+@keyframes footer-glow-drift {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-watermark-glow {
+    animation: none;
+  }
+}
+
 /* Hero load-in reveal */
 @keyframes hero-in {
   from {

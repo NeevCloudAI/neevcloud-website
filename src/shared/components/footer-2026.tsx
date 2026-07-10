@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   RiClaudeFill,
@@ -184,18 +183,28 @@ export default function Footer2026() {
           />
         </div>
 
-        {/* Giant subtle wordmark watermark, clipped at the bottom edge */}
+        {/* Giant subtle wordmark watermark, clipped at the bottom edge, with a
+            teal glow that drifts through the letters */}
         <div
           aria-hidden
           className="pointer-events-none relative h-[110px] select-none overflow-hidden sm:h-[160px] lg:h-[220px]"
         >
-          <Image
-            src="/icons/logo-white-with-name.svg"
-            alt=""
-            width={1440}
-            height={270}
-            className="absolute inset-x-0 top-0 w-full opacity-[0.06]"
-          />
+          <div
+            className="absolute inset-x-0 top-0 overflow-hidden bg-white/[0.06]"
+            style={{
+              aspectRatio: "1440 / 270",
+              maskImage: "url(/icons/logo-white-with-name.svg)",
+              maskRepeat: "no-repeat",
+              maskSize: "100% auto",
+              maskPosition: "top center",
+              WebkitMaskImage: "url(/icons/logo-white-with-name.svg)",
+              WebkitMaskRepeat: "no-repeat",
+              WebkitMaskSize: "100% auto",
+              WebkitMaskPosition: "top center",
+            }}
+          >
+            <div className="footer-watermark-glow absolute -top-1/2 h-[200%] w-[45%] rounded-full bg-[#00A78B]/60 blur-[70px]" />
+          </div>
         </div>
 
         {/* Bottom legal row */}

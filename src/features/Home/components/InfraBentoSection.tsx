@@ -62,14 +62,20 @@ export default function InfraBentoSection() {
       className="bg-gray-light py-16 md:py-24"
     >
       <Container className="flex flex-col gap-12 md:gap-16">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+        <div className="mx-auto flex max-w-none flex-col items-center gap-4 text-center">
           <h2
             id="infra-bento-heading"
             className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
           >
-            {INFRA_BENTO.title}
+            {/* Line 1 in brand teal, "Not Adds Them!" on its own line */}
+            <span className="block text-[#00A78A]">
+              Infrastructure That Removes Barriers,
+            </span>
+            <span className="block">
+              {INFRA_BENTO.title.split("Barriers,")[1]?.trim()}
+            </span>
           </h2>
-          <p className="text-[16px] leading-[150%] tracking-[-0.01em] text-gray-04">
+          <p className="max-w-3xl text-[16px] leading-[150%] tracking-[-0.01em] text-gray-04">
             {INFRA_BENTO.subtitle}
           </p>
         </div>

@@ -44,9 +44,13 @@ export default function LeverageSection() {
             >
               <div className="flex flex-col gap-4">
                 <LeverageStatClient value={Number(row.stat)} unit={row.unit} />
-                <p className="text-[20px] font-medium leading-[142%] tracking-[-0.02em]">
-                  <span className="block text-[#01A78B]">{row.titleTeal}</span>
-                  <span className="block text-black">{row.titleRest}</span>
+                <p className="text-[14px] font-medium leading-[142%] tracking-[-0.02em]">
+                  <span className="block text-[14px] font-medium text-[#01A78B]">
+                    {row.titleTeal}
+                  </span>
+                  <span className="block text-[14px] font-medium text-black">
+                    {row.titleRest}
+                  </span>
                 </p>
                 <p className="text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black">
                   {row.description}

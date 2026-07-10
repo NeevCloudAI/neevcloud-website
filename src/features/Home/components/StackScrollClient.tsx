@@ -141,7 +141,13 @@ export default function StackScrollClient() {
       t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     const step = (now: number) => {
       const t = Math.min((now - start) / duration, 1);
-      scroller.scrollTop = from + (to - from) * ease(t);
+      // behavior:"instant" — the page has CSS scroll-behavior:smooth, and a
+      // plain scrollTop assignment would start a new smooth animation every
+      // frame, compounding into a rubber-band bounce.
+      scroller.scrollTo({
+        top: from + (to - from) * ease(t),
+        behavior: "instant" as ScrollBehavior,
+      });
       if (t < 1) {
         requestAnimationFrame(step);
       } else {

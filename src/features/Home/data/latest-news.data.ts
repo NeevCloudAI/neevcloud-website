@@ -1,12 +1,11 @@
 import type { LatestNewsItem } from "../types/latest-news.types";
 
-// TODO: point `href`s at the real destinations (newsroom / product pages).
 export const LATEST_NEWS_ITEMS: LatestNewsItem[] = [
   {
     title: "Full-Stack AI Infrastructure Built to Scale Fearlessly",
     description:
       "Run AI workloads with sovereign control, security, and scalability.",
-    href: "/newsroom",
+    href: "/why-ai-supercloud",
     image: "/images/home/latest/full-stack-infrastructure.jpg",
     imageAlt: "Full-stack AI infrastructure module",
     theme: "light",
@@ -15,7 +14,7 @@ export const LATEST_NEWS_ITEMS: LatestNewsItem[] = [
     title: "Secure. Scalable. Sovereign. Enterprise-Ready AI Cloud",
     description:
       "Build AI applications with compliance-ready infrastructure and complete data sovereignty.",
-    href: "/newsroom",
+    href: "/trust-center",
     image: "/images/home/latest/secure-sovereign-cloud.jpg",
     imageAlt: "Secure sovereign enterprise-ready AI cloud",
     theme: "light",

@@ -15,7 +15,9 @@ export default function FaqSection() {
   return (
     <section
       aria-labelledby="faq-heading"
-      className="bg-cloud-gray py-16 md:py-24"
+      // overflow-anchor:none — accordion height changes otherwise trigger the
+      // browser's scroll anchoring, which visibly nudges the page ("dancing").
+      className="bg-cloud-gray py-16 [overflow-anchor:none] md:py-24"
     >
       <Container className="flex flex-col gap-10 md:gap-14">
         <h2

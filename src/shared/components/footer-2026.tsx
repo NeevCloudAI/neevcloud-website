@@ -137,7 +137,7 @@ export default function Footer2026() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 rounded-lg border border-white/15 px-4 py-3 text-[15px] text-white/60 transition-colors hover:border-white/35 hover:text-white"
+                    className="flex items-center gap-3 border border-white/15 px-4 py-3 text-[15px] text-white/60 transition-colors hover:border-white/35 hover:text-white"
                   >
                     <LlmIcon size={20} aria-hidden />
                     {label}
@@ -158,7 +158,7 @@ export default function Footer2026() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="group grid size-11 place-items-center rounded-lg border border-white/15 transition-colors hover:border-white/35"
+                      className="group grid size-11 place-items-center border border-white/15 transition-colors hover:border-white/35"
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img

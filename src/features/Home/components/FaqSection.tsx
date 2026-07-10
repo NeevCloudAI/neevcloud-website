@@ -54,6 +54,7 @@ export default function FaqSection() {
                   </button>
                   <div
                     id={`faq-panel-${index}`}
+                    aria-hidden={!isOpen}
                     className={cn(
                       "grid transition-all duration-300 ease-out",
                       isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",

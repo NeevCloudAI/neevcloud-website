@@ -19,6 +19,8 @@ export default function LazyBgVideo({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // reduced-motion users keep the static poster (WCAG 2.2.2)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

@@ -9,6 +9,8 @@ export default function HeroBgVideoClient() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    // reduced-motion users keep the static poster (WCAG 2.2.2)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (window.matchMedia("(min-width: 1024px)").matches) {
       setReady(true);
       return;

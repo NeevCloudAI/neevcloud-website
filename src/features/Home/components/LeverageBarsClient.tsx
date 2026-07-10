@@ -58,15 +58,19 @@ function Bar({
           {label}
         </span>
       </span>
-      <div
-        className={cn(
-          "h-4 transition-[width] duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
-          tone === "neev"
-            ? "bg-[linear-gradient(126deg,#00A78B_9%,#00A78B_69%,#59D8A7_99%)]"
-            : "bg-[#CADAD7]",
-        )}
-        style={{ width: shown ? `${value}%` : "0%", transitionDelay: `${delay}ms` }}
-      />
+      {/* the % resolves against this track, so ratios stay correct on any
+          viewport (a bare flex child gets clamped by flex-shrink on phones) */}
+      <div className="min-w-0 flex-1">
+        <div
+          className={cn(
+            "h-4 transition-[width] duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+            tone === "neev"
+              ? "bg-[linear-gradient(126deg,#00A78B_9%,#00A78B_69%,#59D8A7_99%)]"
+              : "bg-[#CADAD7]",
+          )}
+          style={{ width: shown ? `${value}%` : "0%", transitionDelay: `${delay}ms` }}
+        />
+      </div>
     </div>
   );
 }

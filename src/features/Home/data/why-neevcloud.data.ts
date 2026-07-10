@@ -36,11 +36,10 @@ export const LEGACY_CLOUD_ITEMS: string[] = [
 ];
 
 // TODO: the "Advantage" copy below reads like placeholder text in the Paper
-// design — confirm the real NeevCloud advantage points.
-export const NEEVCLOUD_ADVANTAGE_ITEMS: string[] = [
+export const NEEVCLOUD_ADVANTAGE_ITEMS = [
   "AI-native infrastructure",
-  "Deadlines, owners & reminders in one place",
-  "Inspection dossier ready on demand",
-  "Your team freed for the judgment calls",
-  "Nothing slips — and an expert on call",
-];
+  "Transparent committed-capacity pricing",
+  "Sovereign — data stays in India",
+  "10x throughput on dedicated fabric",
+  "24x7 support from platform engineers",
+] as const;

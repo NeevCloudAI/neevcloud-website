@@ -1,10 +1,24 @@
-import { RiArrowRightLine } from "@remixicon/react";
+"use client";
+
+import { useRef } from "react";
+import { RiArrowLeftLine, RiArrowRightLine } from "@remixicon/react";
 import Container from "@/shared/components/container";
 import { BLOG_POSTS, BLOG_SECTION } from "../data/blog.data";
 
 // Latest posts from blog.neevcloud.com — Jeton-style cards (cover + pill,
-// title, date) in NeevCloud styling.
+// title, date) in NeevCloud styling. Arrow buttons page the snap carousel.
 export default function BlogSection() {
+  const trackRef = useRef<HTMLUListElement>(null);
+
+  const page = (dir: 1 | -1) => {
+    const el = trackRef.current;
+    if (!el) return;
+    // one card + gap per click
+    const card = el.querySelector("li");
+    const step = card ? card.getBoundingClientRect().width + 24 : 344;
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
   return (
     <section
       aria-labelledby="blog-heading"
@@ -19,19 +33,41 @@ export default function BlogSection() {
             {BLOG_SECTION.title.split("Blog")[0]}
             <span className="text-[#00A78A]">Blog</span>
           </h2>
-          <a
-            href={BLOG_SECTION.ctaHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[14px] font-medium uppercase tracking-[-0.02em] text-[#00A78B] transition-colors hover:text-primary-90"
-          >
-            {BLOG_SECTION.ctaLabel}
-            <RiArrowRightLine size={16} aria-hidden />
-          </a>
+          <div className="flex items-center gap-5">
+            <a
+              href={BLOG_SECTION.ctaHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[14px] font-medium uppercase tracking-[-0.02em] text-[#00A78B] transition-colors hover:text-primary-90"
+            >
+              {BLOG_SECTION.ctaLabel}
+              <RiArrowRightLine size={16} aria-hidden />
+            </a>
+            <div className="hidden items-center gap-2 sm:flex">
+              <button
+                type="button"
+                aria-label="Previous posts"
+                onClick={() => page(-1)}
+                className="grid size-10 place-items-center border border-black/15 text-black transition-colors hover:border-black/40"
+              >
+                <RiArrowLeftLine size={18} aria-hidden />
+              </button>
+              <button
+                type="button"
+                aria-label="Next posts"
+                onClick={() => page(1)}
+                className="grid size-10 place-items-center border border-black/15 text-black transition-colors hover:border-black/40"
+              >
+                <RiArrowRightLine size={18} aria-hidden />
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Snap carousel — up to 10 posts */}
-        <ul className="flex list-none snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden">
+        <ul
+          ref={trackRef}
+          className="flex list-none snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden">
           {BLOG_POSTS.map((post) => (
             <li key={post.href} className="w-[280px] shrink-0 snap-start sm:w-[320px]">
               <a

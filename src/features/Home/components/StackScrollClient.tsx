@@ -110,6 +110,8 @@ export default function StackScrollClient() {
     window.addEventListener("resize", onScroll);
     return () => {
       if (raf) cancelAnimationFrame(raf);
+      if (glideRafRef.current) cancelAnimationFrame(glideRafRef.current);
+      glidingRef.current = false;
       document.removeEventListener("scroll", onScroll, { capture: true });
       window.removeEventListener("resize", onScroll);
     };

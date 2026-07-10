@@ -12,7 +12,9 @@ export default function LeverageStatClient({
   unit: string;
 }) {
   const ref = useRef<HTMLParagraphElement>(null);
-  const [display, setDisplay] = useState(0);
+  // SSR/no-JS shows the real value; the count-up resets to 0 only when
+  // the card scrolls into view (below the fold, so the reset is invisible).
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     const el = ref.current;
@@ -28,6 +30,7 @@ export default function LeverageStatClient({
 
     let raf = 0;
     const run = () => {
+      setDisplay(0);
       const duration = 1400;
       const start = performance.now();
       const tick = (now: number) => {

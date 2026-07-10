@@ -26,8 +26,8 @@ export const LEVERAGE_ROWS: LeverageRow[] = [
     titleRest: "vs. hyperscale on-demand.",
     description:
       "Committed capacity plus idle reclamation. Your finance team will notice.",
-    neev: 20,
-    legacy: 55,
+    neev: 37,
+    legacy: 100,
   },
   {
     stat: "10",
@@ -36,8 +36,8 @@ export const LEVERAGE_ROWS: LeverageRow[] = [
     titleRest: "Faster iteration on large runs",
     description:
       "Deterministic interconnect eliminates straggler nodes in distributed training.",
-    neev: 55,
-    legacy: 13,
+    neev: 100,
+    legacy: 23,
   },
   {
     stat: "30",
@@ -46,7 +46,7 @@ export const LEVERAGE_ROWS: LeverageRow[] = [
     titleRest: "Guaranteed Reduction",
     description:
       "Removing the limits of geography and latency to redefine how AI is deployed and scaled.",
-    neev: 55,
-    legacy: 26,
+    neev: 100,
+    legacy: 47,
   },
 ];

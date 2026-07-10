@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -224,6 +224,25 @@ export default function HomeHeader() {
   // which mobile nav group is expanded (Taito-style accordion)
   const [openGroup, setOpenGroup] = useState<string | null>(null);
 
+  // While the mobile menu is open: lock the page scroller (body), close on
+  // Escape, and clear any expanded group when it closes.
+  useEffect(() => {
+    if (!isOpen) {
+      setOpenGroup(null);
+      return;
+    }
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [isOpen]);
+
   return (
     <header className="absolute inset-x-0 top-0 z-50 w-full border-b border-white/[0.12]">
       <Container className="flex items-center justify-between gap-4 py-4">
@@ -397,7 +416,7 @@ export default function HomeHeader() {
               </button>
             </div>
 
-            <ul className="mt-8 flex flex-1 list-none flex-col overflow-y-auto">
+            <ul className="mt-8 flex flex-1 list-none flex-col overflow-y-auto overscroll-contain">
               {NAV_ITEMS.map((item) =>
                 item.groups ? (
                   <li key={item.label}>
@@ -422,6 +441,7 @@ export default function HomeHeader() {
                       />
                     </button>
                     <div
+                      aria-hidden={openGroup !== item.label}
                       className={cn(
                         "grid transition-all duration-300 ease-out",
                         openGroup === item.label

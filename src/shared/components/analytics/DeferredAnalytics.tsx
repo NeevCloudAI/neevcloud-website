@@ -64,12 +64,20 @@ export default function DeferredAnalytics() {
         document.head.appendChild(s);
       }
 
-      events.forEach((e) => window.removeEventListener(e, inject));
+      events.forEach((e) =>
+        window.removeEventListener(e, inject, { capture: true }),
+      );
     };
 
+    // capture:true — the page scrolls inside <body>, so a plain window scroll
+    // listener never fires (scroll doesn't bubble).
     const events = ["pointerdown", "keydown", "touchstart", "scroll"] as const;
     events.forEach((e) =>
-      window.addEventListener(e, inject, { once: true, passive: true }),
+      window.addEventListener(e, inject, {
+        once: true,
+        passive: true,
+        capture: true,
+      }),
     );
 
     let timer: number | undefined;
@@ -85,7 +93,9 @@ export default function DeferredAnalytics() {
     return () => {
       window.removeEventListener("load", armTimer);
       if (timer) window.clearTimeout(timer);
-      events.forEach((e) => window.removeEventListener(e, inject));
+      events.forEach((e) =>
+        window.removeEventListener(e, inject, { capture: true }),
+      );
     };
   }, []);
 

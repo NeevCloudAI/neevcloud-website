@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -219,6 +219,50 @@ export default function HomeHeader() {
   // which mobile nav group is expanded (Taito-style accordion)
   const [openGroup, setOpenGroup] = useState<string | null>(null);
 
+  // Desktop dropdowns are ONE shared Stripe-style panel: it glides to the
+  // hovered item and resizes to its content instead of separate per-item
+  // panels cross-fading.
+  const [openNav, setOpenNav] = useState<string | null>(null);
+  const [panelBox, setPanelBox] = useState({ x: 0, w: 0, h: 0 });
+  // true once the panel is already showing — switches glide, first open snaps
+  const glideRef = useRef(false);
+  const closeTimerRef = useRef(0);
+  const triggerRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  const openPanel = (label: string) => {
+    window.clearTimeout(closeTimerRef.current);
+    setOpenNav(label);
+  };
+  const cancelClose = () => window.clearTimeout(closeTimerRef.current);
+  const scheduleClose = () => {
+    window.clearTimeout(closeTimerRef.current);
+    closeTimerRef.current = window.setTimeout(() => setOpenNav(null), 140);
+  };
+
+  useEffect(() => {
+    if (!openNav) {
+      glideRef.current = false;
+      return;
+    }
+    const trigger = triggerRefs.current[openNav];
+    const content = contentRefs.current[openNav];
+    if (trigger && content) {
+      setPanelBox({
+        x: trigger.offsetLeft,
+        w: content.offsetWidth,
+        h: content.offsetHeight,
+      });
+    }
+    // once the first position/size has painted, later switches animate
+    const id = requestAnimationFrame(() => {
+      glideRef.current = true;
+    });
+    return () => cancelAnimationFrame(id);
+  }, [openNav]);
+
+  useEffect(() => () => window.clearTimeout(closeTimerRef.current), []);
+
   // While the mobile menu is open: lock the page scroller (body), close on
   // Escape, and clear any expanded group when it closes.
   useEffect(() => {
@@ -263,72 +307,132 @@ export default function HomeHeader() {
 
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-5 xl:flex"
+            className="relative hidden items-center gap-5 xl:flex"
+            onPointerEnter={cancelClose}
+            onPointerLeave={scheduleClose}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") setOpenNav(null);
+            }}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                setOpenNav(null);
+              }
+            }}
           >
             {NAV_ITEMS.map((item) =>
               item.groups ? (
-                <div key={item.label} className="group/nav relative">
+                <div
+                  key={item.label}
+                  ref={(el) => {
+                    triggerRefs.current[item.label] = el;
+                  }}
+                >
                   <Link
                     href={item.href}
+                    aria-haspopup="true"
+                    aria-expanded={openNav === item.label}
+                    onPointerEnter={() => openPanel(item.label)}
+                    onFocus={() => openPanel(item.label)}
                     className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
                   >
                     {item.label}
                     <ChevronDown
                       size={14}
                       aria-hidden
-                      className="text-white transition-transform duration-200 group-hover/nav:rotate-180 group-focus-within/nav:rotate-180"
+                      className={cn(
+                        "text-white transition-transform duration-200",
+                        openNav === item.label && "rotate-180",
+                      )}
                     />
                   </Link>
-                  {/* pt-3 bridges the gap so hover isn't lost moving to the panel */}
-                  <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-150 delay-150 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-hover/nav:delay-0 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
-                    {/* Legora-style frosted glass panel — grouped rows with
-                        section labels + icons, mirroring the site mega-menus */}
-                    <div
-                      className={cn(
-                        "rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-2 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
-                        item.groups.length > 1
-                          ? "grid min-w-[440px] grid-cols-2 gap-x-2"
-                          : "min-w-[240px]",
-                      )}
-                    >
-                      {item.groups.map((group) => (
-                        <div key={group.heading ?? item.label}>
-                          {group.heading && (
-                            <p className="px-3 pb-1 pt-2.5 text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">
-                              {group.heading}
-                            </p>
-                          )}
-                          {group.links.map((sub) => (
-                            <Link
-                              key={sub.label}
-                              href={sub.href}
-                              className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-                            >
-                              {sub.icon && (
-                                <sub.icon
-                                  size={15}
-                                  aria-hidden
-                                  className="shrink-0 text-neev-green/80"
-                                />
-                              )}
-                              {sub.label}
-                            </Link>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               ) : (
                 <Link
                   key={item.label}
                   href={item.href}
+                  onPointerEnter={scheduleClose}
                   className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
                 >
                   {item.label}
                 </Link>
               ),
             )}
+
+            {/* Shared floating panel (Stripe-style): pt-3 bridges the hover
+                gap; the glass box glides on X and morphs width/height while
+                the per-item contents cross-fade inside it. */}
+            <div
+              className={cn(
+                "absolute left-0 top-full z-50 pt-3",
+                glideRef.current
+                  ? "transition-[translate,transform,opacity,visibility] duration-200"
+                  : "transition-[translate,opacity,visibility] duration-200",
+                openNav
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible translate-y-1 opacity-0",
+              )}
+              style={{ transform: `translateX(${panelBox.x}px)` }}
+            >
+              <div
+                className={cn(
+                  "relative overflow-hidden rounded-2xl border border-white/10 bg-[#1c1f1e]/70 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
+                  glideRef.current
+                    ? "transition-[width,height] duration-300 ease-out"
+                    : "transition-none",
+                )}
+                style={{
+                  width: panelBox.w || undefined,
+                  height: panelBox.h || undefined,
+                }}
+              >
+                {NAV_ITEMS.filter(
+                  (i): i is NavItem & { groups: NavGroup[] } => !!i.groups,
+                ).map((item) => (
+                  <div
+                    key={item.label}
+                    ref={(el) => {
+                      contentRefs.current[item.label] = el;
+                    }}
+                    className={cn(
+                      "absolute left-0 top-0 w-max p-2 transition-opacity duration-200",
+                      item.groups.length > 1
+                        ? "grid min-w-[440px] grid-cols-2 gap-x-2"
+                        : "min-w-[240px]",
+                      openNav === item.label
+                        ? "opacity-100"
+                        : "pointer-events-none opacity-0",
+                    )}
+                  >
+                    {item.groups.map((group) => (
+                      <div key={group.heading ?? item.label}>
+                        {group.heading && (
+                          <p className="px-3 pb-1 pt-2.5 text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">
+                            {group.heading}
+                          </p>
+                        )}
+                        {group.links.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            tabIndex={openNav === item.label ? 0 : -1}
+                            className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                          >
+                            {sub.icon && (
+                              <sub.icon
+                                size={15}
+                                aria-hidden
+                                className="shrink-0 text-neev-green/80"
+                              />
+                            )}
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
           </nav>
         </div>
 

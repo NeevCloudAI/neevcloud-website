@@ -40,7 +40,7 @@ export default function LeverageSection() {
           {LEVERAGE_ROWS.map((row) => (
             <li
               key={row.stat + row.unit}
-              className="flex min-h-[380px] flex-col justify-between gap-10 bg-white p-6 lg:min-h-[443px]"
+              className="flex min-h-[380px] flex-col justify-between gap-10 bg-white p-4 lg:min-h-[443px] lg:p-6"
             >
               <div className="flex flex-col gap-4">
                 <LeverageStatClient value={Number(row.stat)} unit={row.unit} />

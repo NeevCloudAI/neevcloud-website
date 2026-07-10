@@ -45,12 +45,13 @@ function Bar({
 }) {
   return (
     <div className="flex w-full items-center gap-4">
-      {/* narrower label + smaller type on mobile so the bars keep room */}
-      <span className="flex w-[118px] shrink-0 items-center gap-2 lg:w-[160px]">
+      {/* mobile: 12px single-line labels in a narrow column so the bars
+          keep room; lg restores the Paper 160px/16px spec */}
+      <span className="flex w-[112px] shrink-0 items-center gap-2 lg:w-[160px]">
         {tone === "neev" ? <NeevMark /> : <CloudMark />}
         <span
           className={cn(
-            "text-[14px] font-semibold leading-6 lg:text-[16px]",
+            "whitespace-nowrap text-[12px] font-semibold leading-6 lg:text-[16px]",
             tone === "neev"
               ? "bg-gradient-to-br from-[#59D8A7] to-[#00A78B] bg-clip-text text-transparent"
               : "text-[#34504B]",

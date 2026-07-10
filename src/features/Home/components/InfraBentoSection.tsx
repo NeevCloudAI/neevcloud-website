@@ -7,14 +7,15 @@ import {
 } from "../data/infra-bento.data";
 
 // Per-card placement of the visual (bleeds off the card edges), matching Paper 6OL-0.
-// The two image-right cards (gpu, support) fall back to a stacked text-over-image
-// flow below lg — absolutely-positioned art crushed the copy on phones.
+// Mobile (<lg): all cards are 300px tall with the copy on top and the visual
+// anchored to the bottom (per the mobile bento design).
 const IMAGE_CLASS: Record<string, string> = {
-  gpu: "relative order-last mt-auto w-[78%] self-end lg:absolute lg:order-none lg:right-0 lg:top-[46%] lg:mt-0 lg:w-[66%] lg:max-w-none lg:-translate-y-1/2 lg:translate-x-[4%] lg:self-auto",
-  memory: "absolute bottom-0 left-1/2 w-[75.6%] max-w-none -translate-x-1/2",
+  gpu: "absolute -bottom-2 left-0 w-full max-w-none lg:bottom-auto lg:left-auto lg:right-0 lg:top-[46%] lg:w-[66%] lg:-translate-y-1/2 lg:translate-x-[4%]",
+  memory:
+    "absolute bottom-0 right-0 w-[82%] max-w-none lg:left-1/2 lg:right-auto lg:w-[75.6%] lg:-translate-x-1/2",
   "ai-native": "absolute -left-6 bottom-0 w-[102%] max-w-none translate-y-[4%]",
   support:
-    "relative order-last mt-auto w-[70%] self-end lg:absolute lg:order-none lg:-bottom-1 lg:right-0 lg:mt-0 lg:w-[58%] lg:max-w-none lg:self-auto",
+    "absolute bottom-0 left-0 w-full max-w-none lg:-bottom-1 lg:left-auto lg:right-0 lg:w-[58%]",
 };
 
 function BentoCard({ card }: { card: InfraBentoCard }) {
@@ -22,8 +23,8 @@ function BentoCard({ card }: { card: InfraBentoCard }) {
   return (
     <div
       className={cn(
-        "relative flex min-h-[360px] flex-col overflow-hidden rounded-lg bg-gradient-to-b from-black to-deep-forest p-6 lg:h-[400px]",
-        isRight ? "justify-start gap-6 lg:justify-center lg:gap-0" : "justify-start",
+        "relative flex h-[300px] flex-col overflow-hidden rounded-lg bg-gradient-to-b from-black to-deep-forest p-6 lg:h-[400px]",
+        isRight ? "justify-start lg:justify-center" : "justify-start",
       )}
     >
       {/* visual — bleeds off the card edges */}

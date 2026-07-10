@@ -29,7 +29,9 @@ export default function LeverageSection() {
             id="leverage-heading"
             className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
           >
-            {LEVERAGE_SECTION.title}
+            {/* "AI-scale leverage" carries the brand teal */}
+            {LEVERAGE_SECTION.title.split("AI-scale leverage")[0]}
+            <span className="text-[#00A78A]">AI-scale leverage</span>
           </h2>
           <p className="text-[15px] leading-[150%] text-gray-04">
             {LEVERAGE_SECTION.subtitle}

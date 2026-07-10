@@ -16,7 +16,10 @@ export default function WhyNeevcloudSection() {
             id="why-heading"
             className="w-full text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
           >
-            {WHY_NEEVCLOUD.title}
+            {/* "NeevCloud" carries the brand teal */}
+            {WHY_NEEVCLOUD.title.split("NeevCloud")[0]}
+            <span className="text-[#00A78A]">NeevCloud</span>
+            {WHY_NEEVCLOUD.title.split("NeevCloud")[1]}
           </h2>
           <p className="max-w-[830px] text-[16px] font-normal leading-[132%] tracking-[-0.02em] text-black sm:text-[18px] md:text-[20px]">
             {WHY_NEEVCLOUD.description}

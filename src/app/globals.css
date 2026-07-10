@@ -344,30 +344,6 @@ body {
   }
 }
 
-/* Kaiko-style headline entrance: the heading appears scaled up and settles
-   down into place while fading in. One-shot on load; styling untouched. */
-.hero-appear {
-  transform-origin: 0% 60%;
-  animation: hero-appear 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes hero-appear {
-  from {
-    opacity: 0;
-    transform: scale(1.35);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-appear {
-    animation: none;
-  }
-}
-
 /* Hero load-in reveal */
 @keyframes hero-in {
   from {

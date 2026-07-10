@@ -14,8 +14,50 @@ import Container from "@/shared/components/container";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { cn } from "@/lib/utils";
 
-type NavLink = { label: string; href: string };
-type NavItem = { label: string; href: string; items?: NavLink[] };
+import type { RemixiconComponentType } from "@remixicon/react";
+import {
+  RiWindowLine,
+  RiCompass3Line,
+  RiTrophyLine,
+  RiShieldCheckLine,
+  RiFlashlightLine,
+  RiSparkling2Line,
+  RiTerminalBoxLine,
+  RiBook2Line,
+  RiCpuLine as RiCpuChipLine,
+  RiStackLine,
+  RiHardDrive2Line,
+  RiDatabase2Line,
+  RiPriceTag3Line,
+  RiCoinsLine,
+  RiBankLine,
+  RiGovernmentLine,
+  RiMovie2Line,
+  RiHeartPulseLine,
+  RiShieldStarLine,
+  RiBrainLine,
+  RiMagicLine,
+  RiFlowChart,
+  RiCodeSSlashLine,
+  RiTeamLine,
+  RiUserStarLine,
+  RiBriefcase4Line,
+  RiEmotionHappyLine,
+  RiCalendarEventLine,
+  RiMailSendLine,
+  RiNewspaperLine,
+  RiArticleLine,
+  RiServerLine,
+} from "@remixicon/react";
+
+type NavLink = { label: string; href: string; icon?: RemixiconComponentType };
+type NavGroup = { heading?: string; links: NavLink[] };
+type NavItem = { label: string; href: string; groups?: NavGroup[] };
+
+// All dropdown links for a nav item, flattened (used by the mobile menu).
+function flatLinks(item: NavItem): NavLink[] {
+  return item.groups?.flatMap((g) => g.links) ?? [];
+}
 
 const LOGIN_OPTIONS = [
   {
@@ -31,78 +73,150 @@ const LOGIN_OPTIONS = [
   },
 ];
 
-// Order + labels taken from the Paper navbar (node 3-0). Dropdown items link to
-// the real inner pages.
+// Structure and links mirror the sitewide mega-menus (src/shared/components/
+// header/mega-menus) so the homepage nav matches every other page.
 const NAV_ITEMS: NavItem[] = [
-  { label: "AI SuperCloud", href: "/why-ai-supercloud" },
+  {
+    label: "AI SuperCloud",
+    href: "/why-ai-supercloud",
+    groups: [
+      {
+        heading: "AI SuperCloud",
+        links: [
+          { label: "Visit the Platform", href: "/visit-platform", icon: RiWindowLine },
+          { label: "Why AI SuperCloud", href: "/why-ai-supercloud", icon: RiCompass3Line },
+          { label: "NeevCloud Arena", href: "/neevcloud-arena", icon: RiTrophyLine },
+          { label: "Trust Center", href: "/trust-center", icon: RiShieldCheckLine },
+        ],
+      },
+    ],
+  },
   {
     label: "Inference Hub",
     href: "/ai-inference",
-    items: [
-      { label: "AI Inference", href: "/ai-inference" },
-      { label: "Serverless Inference", href: "/serverless-inference" },
-      { label: "Model Playground", href: "/model-playground" },
-      { label: "Model APIs", href: "/model-api" },
-      { label: "Model Catalog", href: "/model-catalog" },
+    groups: [
+      {
+        heading: "Inference Hub",
+        links: [
+          { label: "Serverless Inference", href: "/serverless-inference", icon: RiFlashlightLine },
+          { label: "Model Playground", href: "/model-playground", icon: RiSparkling2Line },
+          { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
+          { label: "Model Catalog", href: "/model-catalog", icon: RiBook2Line },
+        ],
+      },
     ],
   },
   {
     label: "Product",
     href: "/gpu-cluster",
-    items: [
-      { label: "GPU Instance", href: "/gpu-cluster" },
-      { label: "CPU Instance", href: "/cpu-cluster" },
-      { label: "Managed Kubernetes", href: "/managed-kubernetes" },
-      { label: "High-Performance NVMe", href: "/nvme" },
-      { label: "Object Storage", href: "/object-storage" },
+    groups: [
+      {
+        heading: "Compute",
+        links: [
+          { label: "CPU Instance", href: "/cpu-cluster", icon: RiCpuChipLine },
+          { label: "GPU Instance", href: "/gpu-cluster", icon: RiServerLine },
+        ],
+      },
+      {
+        heading: "Storage",
+        links: [
+          { label: "High-Performance NVMe", href: "/nvme", icon: RiHardDrive2Line },
+          { label: "Object Storage", href: "/object-storage", icon: RiDatabase2Line },
+        ],
+      },
+      {
+        heading: "Orchestration",
+        links: [
+          { label: "Managed Kubernetes", href: "/managed-kubernetes", icon: RiStackLine },
+        ],
+      },
+      {
+        heading: "Available GPUs",
+        links: [
+          { label: "H100", href: "/nvidia-h100", icon: RiCpuChipLine },
+          { label: "H200", href: "/nvidia-h200", icon: RiCpuChipLine },
+          { label: "B200", href: "/nvidia-b200", icon: RiCpuChipLine },
+          { label: "B300", href: "/nvidia-b300", icon: RiCpuChipLine },
+        ],
+      },
     ],
   },
   {
     label: "Solutions",
     href: "/public-sector",
-    items: [
-      { label: "Public Sector", href: "/public-sector" },
-      { label: "BFSI", href: "/bfsi" },
-      { label: "Media & VFX", href: "/media-vfx" },
-      { label: "Healthcare", href: "/healthcare" },
-      { label: "Defence", href: "/defence" },
-      { label: "LLM Fine-Tuning", href: "/llm-training" },
-      { label: "Generative AI", href: "/generative-ai" },
-      { label: "Agentic Workflows", href: "/agentic-workflow" },
+    groups: [
+      {
+        heading: "By Industry",
+        links: [
+          { label: "Public Sector", href: "/public-sector", icon: RiGovernmentLine },
+          { label: "BFSI", href: "/bfsi", icon: RiBankLine },
+          { label: "Media & VFX", href: "/media-vfx", icon: RiMovie2Line },
+          { label: "Healthcare", href: "/healthcare", icon: RiHeartPulseLine },
+          { label: "Defence", href: "/defence", icon: RiShieldStarLine },
+        ],
+      },
+      {
+        heading: "By Tech",
+        links: [
+          { label: "LLM Fine-Tuning", href: "/llm-training", icon: RiBrainLine },
+          { label: "Generative AI", href: "/generative-ai", icon: RiMagicLine },
+          { label: "Agentic Workflows", href: "/agentic-workflow", icon: RiFlowChart },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Pricing",
+    href: "/gpu-pricing",
+    groups: [
+      {
+        heading: "Pricing",
+        links: [
+          { label: "GPU Compute", href: "/gpu-pricing", icon: RiPriceTag3Line },
+          { label: "CPU Compute", href: "/cpu-pricing", icon: RiCoinsLine },
+          { label: "AI Inference", href: "/ai-inference", icon: RiFlashlightLine },
+        ],
+      },
     ],
   },
   {
     label: "Developers",
     href: "/developers",
-    items: [
-      { label: "Developers Hub", href: "/developers" },
-      { label: "Model APIs", href: "/model-api" },
-      { label: "Agentic Workflows", href: "/agentic-workflow" },
-    ],
-  },
-  {
-    label: "Resources",
-    href: "/newsroom",
-    items: [
-      { label: "Newsroom", href: "/newsroom" },
-      { label: "Blogs", href: EXTERNAL_LINKS.blogs },
-      { label: "Events", href: "/events" },
-      { label: "Trust Center", href: "/trust-center" },
-      { label: "NeevCloud Arena", href: "/neevcloud-arena" },
+    groups: [
+      {
+        heading: "Developers",
+        links: [
+          { label: "Developers Hub", href: "/developers", icon: RiCodeSSlashLine },
+          { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
+          { label: "Agentic Workflows", href: "/agentic-workflow", icon: RiFlowChart },
+        ],
+      },
     ],
   },
   {
     label: "Company",
     href: "/about-us",
-    items: [
-      { label: "About Us", href: "/about-us" },
-      { label: "Leadership", href: "/leadership" },
-      { label: "Career", href: "/careers" },
-      { label: "Life at NeevCloud", href: "/life-at-neevcloud" },
-      { label: "Contact Us", href: "/contact-neevcloud" },
+    groups: [
+      {
+        heading: "Company",
+        links: [
+          { label: "About Us", href: "/about-us", icon: RiTeamLine },
+          { label: "Leadership", href: "/leadership", icon: RiUserStarLine },
+          { label: "Career", href: "/careers", icon: RiBriefcase4Line },
+          { label: "Life at NeevCloud", href: "/life-at-neevcloud", icon: RiEmotionHappyLine },
+        ],
+      },
+      {
+        heading: "Resources",
+        links: [
+          { label: "Newsroom", href: "/newsroom", icon: RiNewspaperLine },
+          { label: "Events", href: "/events", icon: RiCalendarEventLine },
+          { label: "Blogs", href: EXTERNAL_LINKS.blogs, icon: RiArticleLine },
+          { label: "Contact Us", href: "/contact-neevcloud#contact-form", icon: RiMailSendLine },
+        ],
+      },
     ],
   },
-  { label: "Pricing", href: "/gpu-pricing" },
 ];
 
 export default function HomeHeader() {
@@ -129,7 +243,7 @@ export default function HomeHeader() {
             className="hidden items-center gap-5 xl:flex"
           >
             {NAV_ITEMS.map((item) =>
-              item.items ? (
+              item.groups ? (
                 <div key={item.label} className="group/nav relative">
                   <Link
                     href={item.href}
@@ -144,23 +258,40 @@ export default function HomeHeader() {
                   </Link>
                   {/* pt-3 bridges the gap so hover isn't lost moving to the panel */}
                   <div className="invisible absolute left-0 top-full z-50 w-max translate-y-1 pt-3 opacity-0 transition-all duration-200 group-hover/nav:visible group-hover/nav:translate-y-0 group-hover/nav:opacity-100 group-focus-within/nav:visible group-focus-within/nav:translate-y-0 group-focus-within/nav:opacity-100">
-                    {/* Legora-style frosted glass panel — compact rows */}
+                    {/* Legora-style frosted glass panel — grouped rows with
+                        section labels + icons, mirroring the site mega-menus */}
                     <div
                       className={cn(
-                        "rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-1.5 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
-                        item.items.length > 6
-                          ? "grid grid-cols-2 gap-x-1"
-                          : "min-w-[210px]",
+                        "rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-2 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
+                        item.groups.length > 1
+                          ? "grid min-w-[440px] grid-cols-2 gap-x-2"
+                          : "min-w-[240px]",
                       )}
                     >
-                      {item.items.map((sub) => (
-                        <Link
-                          key={sub.label}
-                          href={sub.href}
-                          className="block whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-                        >
-                          {sub.label}
-                        </Link>
+                      {item.groups.map((group) => (
+                        <div key={group.heading ?? item.label}>
+                          {group.heading && (
+                            <p className="px-3 pb-1 pt-2.5 text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">
+                              {group.heading}
+                            </p>
+                          )}
+                          {group.links.map((sub) => (
+                            <Link
+                              key={sub.label}
+                              href={sub.href}
+                              className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                            >
+                              {sub.icon && (
+                                <sub.icon
+                                  size={15}
+                                  aria-hidden
+                                  className="shrink-0 text-neev-green/80"
+                                />
+                              )}
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -268,7 +399,7 @@ export default function HomeHeader() {
 
             <ul className="mt-8 flex flex-1 list-none flex-col overflow-y-auto">
               {NAV_ITEMS.map((item) =>
-                item.items ? (
+                item.groups ? (
                   <li key={item.label}>
                     <button
                       type="button"
@@ -299,7 +430,7 @@ export default function HomeHeader() {
                       )}
                     >
                       <ul className="min-h-0 list-none overflow-hidden">
-                        {item.items.map((sub) => (
+                        {flatLinks(item).map((sub) => (
                           <li key={sub.label}>
                             <Link
                               href={sub.href}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { RiCloudLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 
 function NeevMark() {
@@ -23,16 +24,7 @@ function NeevMark() {
 
 function CloudMark() {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      width="15"
-      height="15"
-      fill="#34504B"
-      aria-hidden
-      className="shrink-0"
-    >
-      <path d="M17 7a8 8 0 0 0-15.53 2.7A5.5 5.5 0 0 0 5.5 20H17a6.5 6.5 0 0 0 0-13Zm0 11H5.5a3.5 3.5 0 0 1-.44-6.97l1.44-.18.17-1.44A6 6 0 0 1 18.42 9H17a4.5 4.5 0 0 1 0 9Z" />
-    </svg>
+    <RiCloudLine size={16} aria-hidden className="shrink-0 text-[#34504B]" />
   );
 }
 

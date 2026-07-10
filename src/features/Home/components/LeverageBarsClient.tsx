@@ -45,11 +45,12 @@ function Bar({
 }) {
   return (
     <div className="flex w-full items-center gap-4">
-      <span className="flex w-[160px] shrink-0 items-center gap-2">
+      {/* narrower label + smaller type on mobile so the bars keep room */}
+      <span className="flex w-[118px] shrink-0 items-center gap-2 lg:w-[160px]">
         {tone === "neev" ? <NeevMark /> : <CloudMark />}
         <span
           className={cn(
-            "text-[16px] font-semibold leading-6",
+            "text-[14px] font-semibold leading-6 lg:text-[16px]",
             tone === "neev"
               ? "bg-gradient-to-br from-[#59D8A7] to-[#00A78B] bg-clip-text text-transparent"
               : "text-[#34504B]",

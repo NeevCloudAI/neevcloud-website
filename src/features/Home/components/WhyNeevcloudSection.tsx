@@ -30,7 +30,7 @@ export default function WhyNeevcloudSection() {
           {WHY_FEATURES.map((feature, index) => (
             <li
               key={feature.title}
-              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden text-left sm:flex-col sm:text-center"
+              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden text-left sm:flex-col sm:text-center md:min-w-0 md:basis-0"
             >
               {/* Mobile: compact row — small icon left, text right. Desktop:
                   centred column with the large icon on top. */}

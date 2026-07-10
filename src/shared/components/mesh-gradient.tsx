@@ -13,9 +13,10 @@ const MeshGradient = dynamic(
 );
 
 // Client wrapper around Paper's WebGL MeshGradient shader so it can be dropped
-// into server-component sections. Same props as the Paper design export, plus:
-// the shader is paused (speed 0) while scrolled off-screen and under
-// prefers-reduced-motion, so it doesn't burn GPU/battery when not visible.
+// into server-component sections. The shader is EXPENSIVE (GLSL compile +
+// WebGL context), so it isn't even mounted until the wrapper nears the
+// viewport; once mounted it pauses (speed 0) while off-screen and under
+// prefers-reduced-motion. Keeps ~6s of script eval off the initial load.
 export default function Mesh({
   speed = 1,
   className,
@@ -23,6 +24,7 @@ export default function Mesh({
   ...props
 }: ComponentProps<typeof MeshGradient>) {
   const ref = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
   const [running, setRunning] = useState(false);
 
   useEffect(() => {
@@ -30,8 +32,13 @@ export default function Mesh({
     if (!el) return;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     const io = new IntersectionObserver(
-      ([entry]) => setRunning(entry.isIntersecting && !reduced.matches),
-      { rootMargin: "160px" },
+      ([entry]) => {
+        // display:none ancestors report non-intersecting with zero rects, so
+        // this also keeps the hidden mobile/desktop variants unmounted.
+        if (entry.isIntersecting) setMounted(true);
+        setRunning(entry.isIntersecting && !reduced.matches);
+      },
+      { rootMargin: "300px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -39,11 +46,13 @@ export default function Mesh({
 
   return (
     <div ref={ref} className={cn("relative", className)} style={style}>
-      <MeshGradient
-        {...props}
-        speed={running ? speed : 0}
-        className="h-full w-full"
-      />
+      {mounted && (
+        <MeshGradient
+          {...props}
+          speed={running ? speed : 0}
+          className="h-full w-full"
+        />
+      )}
     </div>
   );
 }

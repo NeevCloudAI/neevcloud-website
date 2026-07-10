@@ -13,7 +13,8 @@ const IMAGE_CLASS: Record<string, string> = {
   gpu: "absolute -bottom-2 left-0 w-full max-w-none lg:bottom-auto lg:left-auto lg:right-0 lg:top-[46%] lg:w-[66%] lg:-translate-y-1/2 lg:translate-x-[4%]",
   memory:
     "absolute bottom-0 right-0 w-[82%] max-w-none lg:left-1/2 lg:right-auto lg:w-[75.6%] lg:-translate-x-1/2",
-  "ai-native": "absolute -left-6 bottom-0 w-[102%] max-w-none translate-y-[4%]",
+  "ai-native":
+    "absolute bottom-0 left-1/2 w-[102%] max-w-none -translate-x-1/2 translate-y-[4%] lg:-left-6 lg:translate-x-0",
   support:
     "absolute bottom-0 left-0 w-full max-w-none lg:-bottom-1 lg:left-auto lg:right-0 lg:w-[58%]",
 };

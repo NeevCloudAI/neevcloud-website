@@ -289,7 +289,7 @@ export default function StackScrollClient() {
             </div>
 
             {/* Accordion (left, lg+) — scroll-driven active tier */}
-            <ul className="relative z-10 hidden w-full list-none flex-col items-start gap-2 lg:flex lg:max-w-[660px]">
+            <ul className="relative z-10 hidden w-full list-none flex-col items-start gap-2 lg:flex lg:max-w-[42%] 1.5xl:max-w-[660px]">
               {items.map((item, index) => {
                 const isOpen = item.id === openId;
                 return (

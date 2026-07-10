@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
+import { RiCheckLine, RiFileCopyLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import {
   DEVELOPER_SECTION,
@@ -43,9 +44,22 @@ function highlight(code: string): ReactNode[] {
 // white/6% panel, separate tab bar with a teal active tab.
 export default function DeveloperTerminalClient() {
   const [activeId, setActiveId] = useState(DEVELOPER_TERMINAL_TABS[0].id);
+  const [copied, setCopied] = useState(false);
+  const copyTimer = useRef<number | undefined>(undefined);
   const active =
     DEVELOPER_TERMINAL_TABS.find((tab) => tab.id === activeId) ??
     DEVELOPER_TERMINAL_TABS[0];
+
+  const copyCode = async () => {
+    try {
+      await navigator.clipboard.writeText(active.code);
+      setCopied(true);
+      window.clearTimeout(copyTimer.current);
+      copyTimer.current = window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // clipboard unavailable (permissions) — silently ignore
+    }
+  };
 
   return (
     <div className="mx-auto w-full max-w-[932px] overflow-hidden rounded-xl bg-[#1E1E1E] shadow-2xl">
@@ -57,9 +71,23 @@ export default function DeveloperTerminalClient() {
             <span className="size-2.5 rounded-full bg-[#febc2e]" />
             <span className="size-2.5 rounded-full bg-[#28c840]" />
           </div>
-          <span className="font-space-mono text-[13px] uppercase tracking-[0.1em] text-[#868686]">
-            {DEVELOPER_SECTION.terminalTitle}
-          </span>
+          <div className="flex items-center gap-4">
+            <span className="font-space-mono text-[13px] uppercase tracking-[0.1em] text-[#868686]">
+              {DEVELOPER_SECTION.terminalTitle}
+            </span>
+            <button
+              type="button"
+              onClick={copyCode}
+              aria-label={copied ? "Copied" : "Copy code"}
+              className="grid size-8 place-items-center rounded-md text-[#868686] transition-colors hover:bg-white/10 hover:text-white"
+            >
+              {copied ? (
+                <RiCheckLine size={16} aria-hidden className="text-neev-green" />
+              ) : (
+                <RiFileCopyLine size={16} aria-hidden />
+              )}
+            </button>
+          </div>
         </div>
 
         <pre

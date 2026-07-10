@@ -19,7 +19,7 @@ export default function LeverageSection() {
         poster="/images/home/compare-bg.jpg"
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
       />
-      <Container className="flex max-w-6xl flex-col gap-10 md:gap-14">
+      <Container className="flex flex-col gap-10 md:gap-14">
         <div className="flex flex-col gap-3">
           <h2
             id="leverage-heading"
@@ -34,19 +34,22 @@ export default function LeverageSection() {
           </p>
         </div>
 
-        <ul className="flex list-none flex-col gap-5">
+        {/* New stats cards (Paper JUD-0): 3-up, stat + two-line title + copy on
+            top, NeevCloud vs Legacy bars pinned at the bottom. */}
+        <ul className="grid list-none gap-4 lg:grid-cols-3">
           {LEVERAGE_ROWS.map((row) => (
             <li
               key={row.stat + row.unit}
-              className="grid gap-6 bg-white p-5 md:grid-cols-2 md:gap-10"
+              className="flex min-h-[380px] flex-col justify-between gap-10 bg-white p-6 lg:min-h-[443px]"
             >
-              <div className="flex flex-col gap-3 md:border-r md:border-cloud-gray md:pr-10">
+              <div className="flex flex-col gap-4">
                 <LeverageStatClient value={Number(row.stat)} unit={row.unit} />
-                <p className="text-[16px] font-medium capitalize leading-6 text-black">
-                  <span className="font-semibold text-[#00A78B]">
-                    {row.highlight}
-                  </span>
-                  <span className="mt-1 block text-black">{row.rest}</span>
+                <p className="text-[20px] font-medium leading-[142%] tracking-[-0.02em]">
+                  <span className="block text-[#01A78B]">{row.titleTeal}</span>
+                  <span className="block text-black">{row.titleRest}</span>
+                </p>
+                <p className="text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black">
+                  {row.description}
                 </p>
               </div>
 

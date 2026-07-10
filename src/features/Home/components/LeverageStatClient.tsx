@@ -58,10 +58,10 @@ export default function LeverageStatClient({
 
   return (
     <p ref={ref} className="flex items-baseline">
-      <span className="text-[60px] font-medium leading-none text-[#00A78B]">
+      <span className="text-[72px] font-normal capitalize leading-[90%] tracking-[-0.01em] text-black">
         {display}
       </span>
-      <span className="text-[60px] font-medium leading-none text-[#00A78B]">
+      <span className="text-[72px] font-normal capitalize leading-[90%] tracking-[-0.01em] text-black">
         {unit}
       </span>
     </p>

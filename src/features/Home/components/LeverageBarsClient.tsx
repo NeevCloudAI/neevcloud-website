@@ -3,8 +3,41 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-type Tone = "neev" | "legacy";
+function NeevMark() {
+  return (
+    <svg
+      viewBox="0 0 21.3 21.3"
+      width="14"
+      height="14"
+      fill="none"
+      aria-hidden
+      className="shrink-0"
+    >
+      <path
+        d="M14.992 3.959V.31c0-.171-.139-.31-.31-.31H6.615c-.171 0-.31.139-.31.31v5.672c0 .151-.106.281-.253.312L.246 7.505A.31.31 0 0 0 0 7.808v13.184c0 .171.139.31.31.31h5.691c.171 0 .309-.139.309-.31V6.54c0-.151.106-.281.253-.312l8.038-1.695a.318.318 0 0 1 .384.312v16.147c0 .171.139.31.31.31h5.691c.171 0 .309-.139.309-.31V3.418a.31.31 0 0 0-.373-.303l-5.546 1.156a.318.318 0 0 1-.384-.312Z"
+        fill="#00A78B"
+      />
+    </svg>
+  );
+}
 
+function CloudMark() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="15"
+      height="15"
+      fill="#34504B"
+      aria-hidden
+      className="shrink-0"
+    >
+      <path d="M17 7a8 8 0 0 0-15.53 2.7A5.5 5.5 0 0 0 5.5 20H17a6.5 6.5 0 0 0 0-13Zm0 11H5.5a3.5 3.5 0 0 1-.44-6.97l1.44-.18.17-1.44A6 6 0 0 1 18.42 9H17a4.5 4.5 0 0 1 0 9Z" />
+    </svg>
+  );
+}
+
+// New stats-card bars (Paper JUD-0): fixed 160px label (icon + name) beside a
+// solid bar that grows to its width the first time the card scrolls into view.
 function Bar({
   label,
   value,
@@ -14,38 +47,38 @@ function Bar({
 }: {
   label: string;
   value: number;
-  tone: Tone;
+  tone: "neev" | "legacy";
   shown: boolean;
   delay: number;
 }) {
   return (
-    <div className="flex items-center gap-4">
-      <span
-        className={
-          tone === "neev"
-            ? "w-32 shrink-0 text-[18px] font-medium leading-tight text-primary-90"
-            : "w-32 shrink-0 text-[18px] leading-tight text-gray-03"
-        }
-      >
-        {label}
-      </span>
-      <div className="h-[18px] flex-1 overflow-hidden rounded-full bg-cloud-gray">
-        <div
+    <div className="flex w-full items-center gap-4">
+      <span className="flex w-[160px] shrink-0 items-center gap-2">
+        {tone === "neev" ? <NeevMark /> : <CloudMark />}
+        <span
           className={cn(
-            "h-full rounded-full transition-[width] duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+            "text-[16px] font-semibold leading-6",
             tone === "neev"
-              ? "bg-gradient-to-r from-primary to-neev-green"
-              : "bg-[#8f949b]",
+              ? "bg-gradient-to-br from-[#59D8A7] to-[#00A78B] bg-clip-text text-transparent"
+              : "text-[#34504B]",
           )}
-          style={{ width: shown ? `${value}%` : "0%", transitionDelay: `${delay}ms` }}
-        />
-      </div>
+        >
+          {label}
+        </span>
+      </span>
+      <div
+        className={cn(
+          "h-4 transition-[width] duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none",
+          tone === "neev"
+            ? "bg-[linear-gradient(126deg,#00A78B_9%,#00A78B_69%,#59D8A7_99%)]"
+            : "bg-[#CADAD7]",
+        )}
+        style={{ width: shown ? `${value}%` : "0%", transitionDelay: `${delay}ms` }}
+      />
     </div>
   );
 }
 
-// Apple Mac-Studio-style reveal: the comparison bars grow from 0 to their
-// value the first time the row scrolls into view.
 export default function LeverageBarsClient({
   neev,
   legacy,
@@ -73,8 +106,8 @@ export default function LeverageBarsClient({
   }, []);
 
   return (
-    <div ref={ref} className="flex flex-col justify-center gap-5">
-      <Bar label="With NeevCloud" value={neev} tone="neev" shown={shown} delay={0} />
+    <div ref={ref} className="flex w-full flex-col gap-4">
+      <Bar label="NeevCloud" value={neev} tone="neev" shown={shown} delay={0} />
       <Bar
         label="Legacy Cloud"
         value={legacy}

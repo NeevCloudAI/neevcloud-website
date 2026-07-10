@@ -7,35 +7,46 @@ export const LEVERAGE_SECTION = {
 export type LeverageRow = {
   stat: string;
   unit: string;
-  highlight: string;
-  rest: string;
+  /** first title line — brand teal */
+  titleTeal: string;
+  /** second title line — black */
+  titleRest: string;
+  description: string;
+  /** bar widths as % of the row (from Paper JUD-0 proportions) */
   neev: number;
   legacy: number;
 };
 
+// Content + bar proportions from Paper "New Stats design" (JUD-0).
 export const LEVERAGE_ROWS: LeverageRow[] = [
   {
     stat: "73",
     unit: "%",
-    highlight: "Cost Reduction - Vs. Hyperscale On-Demand.",
-    rest: "Committed Capacity Plus Idle Reclamation. Your Finance Team Will Notice.",
+    titleTeal: "Cost Reduction",
+    titleRest: "vs. hyperscale on-demand.",
+    description:
+      "Committed capacity plus idle reclamation. Your finance team will notice.",
     neev: 20,
-    legacy: 90,
+    legacy: 55,
   },
   {
     stat: "10",
     unit: "X",
-    highlight: "Throughput. Faster Iteration On Large Runs.",
-    rest: "Deterministic Interconnect Eliminates Straggler Nodes In Distributed Training.",
-    neev: 98,
-    legacy: 15,
+    titleTeal: "Throughput",
+    titleRest: "Faster iteration on large runs",
+    description:
+      "Deterministic interconnect eliminates straggler nodes in distributed training.",
+    neev: 55,
+    legacy: 13,
   },
   {
     stat: "30",
     unit: "%",
-    highlight: "Low Latency. Guaranteed Reduction.",
-    rest: "Removing The Limits Of Geography And Latency To Redefine How AI Is Deployed And Scaled.",
-    neev: 92,
-    legacy: 42,
+    titleTeal: "Low Latency",
+    titleRest: "Guaranteed Reduction",
+    description:
+      "Removing the limits of geography and latency to redefine how AI is deployed and scaled.",
+    neev: 55,
+    legacy: 26,
   },
 ];

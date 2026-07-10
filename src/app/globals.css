@@ -373,6 +373,15 @@ button:not(:disabled) {
   text-wrap: balance;
 }
 
+/* Stack section: tall scroll runway on desktop only (drives the pinned,
+   scroll-linked accordion). Height comes from the --stack-h inline var; a
+   plain CSS rule because Turbopack drops the Tailwind arbitrary-var class. */
+@media (min-width: 1024px) {
+  .stack-runway {
+    height: var(--stack-h);
+  }
+}
+
 /* Smooth cross-fade when switching developer SDK tabs. */
 @keyframes code-swap {
   from {

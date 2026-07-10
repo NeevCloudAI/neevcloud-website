@@ -71,6 +71,25 @@ export default function StackScrollClient() {
   const glideRafRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const itemCount = items.length;
+  // Mobile carousel: its own track + progress bar (the desktop bar is driven
+  // by vertical scroll progress, which doesn't exist on mobile).
+  const mobileTrackRef = useRef<HTMLUListElement>(null);
+  const mobileBarRef = useRef<HTMLDivElement>(null);
+  const mobileRafRef = useRef(0);
+
+  // Bar reads like pagination: first card = 1/n filled, last card = full.
+  const onMobileScroll = () => {
+    if (mobileRafRef.current) return;
+    mobileRafRef.current = requestAnimationFrame(() => {
+      mobileRafRef.current = 0;
+      const el = mobileTrackRef.current;
+      if (!el || !mobileBarRef.current) return;
+      const max = el.scrollWidth - el.clientWidth;
+      const p = max > 0 ? el.scrollLeft / max : 0;
+      const width = ((1 + p * (itemCount - 1)) / itemCount) * 100;
+      mobileBarRef.current.style.width = `${width}%`;
+    });
+  };
 
   useEffect(() => {
     let raf = 0;
@@ -111,6 +130,7 @@ export default function StackScrollClient() {
     return () => {
       if (raf) cancelAnimationFrame(raf);
       if (glideRafRef.current) cancelAnimationFrame(glideRafRef.current);
+      if (mobileRafRef.current) cancelAnimationFrame(mobileRafRef.current);
       glidingRef.current = false;
       document.removeEventListener("scroll", onScroll, { capture: true });
       window.removeEventListener("resize", onScroll);
@@ -195,12 +215,14 @@ export default function StackScrollClient() {
 
       <div
         ref={wrapperRef}
-        className="relative"
-        style={{ height: `${items.length * 60 + 40}vh` }}
+        // The tall scroll runway only exists on lg+ (scroll-driven accordion);
+        // mobile is a normal-height section with a swipe carousel instead.
+        className="stack-runway relative"
+        style={{ "--stack-h": `${items.length * 60 + 40}vh` } as React.CSSProperties}
       >
-        <div className="sticky top-0 flex min-h-screen flex-col justify-center overflow-hidden pb-16">
+        <div className="flex flex-col pb-16 pt-10 lg:sticky lg:top-0 lg:min-h-screen lg:justify-center lg:overflow-hidden lg:pt-0">
           <Container className="flex flex-col gap-8 md:gap-12">
-            <div className="relative flex min-h-[420px] items-center lg:min-h-[560px]">
+            <div className="relative flex items-center lg:min-h-[560px]">
             {/* Mesh shader (right) + horizontal fade overlay on its left edge */}
             <div className="absolute right-0 top-0 hidden h-full w-[min(800px,58%)] overflow-hidden rounded-2xl lg:block">
               <Mesh
@@ -247,60 +269,66 @@ export default function StackScrollClient() {
               })}
             </div>
 
-            {/* Mobile (below lg): scroll-driven like desktop — plate tower on
-                top, full-text caption card below it (Legora behaviour). */}
-            <div className="flex w-full flex-col gap-4 lg:hidden">
-              <div className="relative h-[38vh] min-h-[260px] w-full">
+            {/* Mobile (below lg): swipeable snap carousel — each tier is one
+                self-contained dark card with its own glass plate inside.
+                First card sits in view (silicon tier). */}
+            <div className="flex w-full flex-col gap-5 lg:hidden">
+              <ul
+                ref={mobileTrackRef}
+                onScroll={onMobileScroll}
+                className="-mx-4 flex list-none snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-1 [&::-webkit-scrollbar]:hidden"
+              >
                 {items.map((item, index) => {
                   const platePos = items.length - 1 - index;
-                  const shown = index <= activeIndex;
                   return (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
+                    <li
                       key={item.id}
-                      src={`/images/home/stack/Layer_0${platePos + 1}.png`}
-                      alt=""
-                      aria-hidden
-                      loading="lazy"
-                      decoding="async"
-                      className={cn(
-                        "pointer-events-none absolute left-1/2 w-[64%] max-w-[340px] object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
-                        shown ? "opacity-100" : "opacity-0",
-                      )}
-                      style={{
-                        top: `${4 + platePos * 16}%`,
-                        zIndex: 20 - platePos,
-                        transform: `translateX(-50%) translateY(${shown ? 0 : 36}px)`,
-                      }}
-                    />
+                      className="flex w-[86%] max-w-[420px] shrink-0 snap-center flex-col rounded-2xl bg-black/80 p-4 backdrop-blur-[8px]"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`/images/home/stack/Layer_0${platePos + 1}.png`}
+                        alt=""
+                        aria-hidden
+                        loading="lazy"
+                        decoding="async"
+                        className="pointer-events-none mx-auto h-[170px] w-auto max-w-full object-contain py-2 saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d]"
+                      />
+                      <p className="mt-2 text-[12px] font-medium uppercase tracking-[0.06em] text-neev-green">
+                        {item.label}
+                      </p>
+                      <h3 className="mt-1 text-[15px] font-medium leading-snug text-white">
+                        {item.heading}
+                      </h3>
+                      <ul className="mt-3 flex list-none flex-col gap-2.5">
+                        {item.features.map((feature) => {
+                          const Icon = FEATURE_ICONS[feature.icon];
+                          return (
+                            <li
+                              key={feature.text}
+                              className="flex items-start gap-2.5"
+                            >
+                              <IconTile>
+                                <Icon size={12} />
+                              </IconTile>
+                              <p className="text-[13px] font-normal leading-[142%] text-white/90">
+                                {feature.text}
+                              </p>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
                   );
                 })}
-              </div>
-              <div
-                aria-live="polite"
-                className="rounded-2xl bg-black/80 p-4 backdrop-blur-[8px]"
-              >
-                <p className="text-[12px] font-medium uppercase tracking-[0.06em] text-neev-green">
-                  {items[activeIndex].label}
-                </p>
-                <h3 className="mt-1 text-[15px] font-medium leading-snug text-white">
-                  {items[activeIndex].heading}
-                </h3>
-                <ul className="mt-3 flex list-none flex-col gap-2.5">
-                  {items[activeIndex].features.map((feature) => {
-                    const Icon = FEATURE_ICONS[feature.icon];
-                    return (
-                      <li key={feature.text} className="flex items-start gap-2.5">
-                        <IconTile>
-                          <Icon size={12} />
-                        </IconTile>
-                        <p className="text-[13px] font-normal leading-[142%] text-white/90">
-                          {feature.text}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ul>
+              </ul>
+              {/* Carousel progress (same style as the desktop scroll bar) */}
+              <div className="mx-auto h-1.5 w-40 overflow-hidden rounded-full bg-black/10">
+                <div
+                  ref={mobileBarRef}
+                  className="h-full rounded-full bg-black/50 transition-[width] duration-150 ease-out"
+                  style={{ width: `${100 / itemCount}%` }}
+                />
               </div>
             </div>
 
@@ -376,8 +404,9 @@ export default function StackScrollClient() {
             </ul>
           </div>
 
-          {/* Scroll progress indicator (Legora-style) — width driven via ref */}
-          <div className="mx-auto h-1.5 w-40 overflow-hidden rounded-full bg-black/10">
+          {/* Scroll progress indicator (Legora-style) — width driven via ref.
+              Desktop only: the mobile carousel carries its own bar. */}
+          <div className="mx-auto hidden h-1.5 w-40 overflow-hidden rounded-full bg-black/10 lg:block">
             <div
               ref={barRef}
               className="h-full rounded-full bg-black/50 transition-[width] duration-150 ease-out"

@@ -68,7 +68,6 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       "GPU Pricing",
       "Inference Pricing",
       "CPU Compute Pricing",
-      "Inference Pricing",
       "Cost Efficiency Explained",
     ].map(link),
   },

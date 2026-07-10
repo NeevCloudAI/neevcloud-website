@@ -186,13 +186,27 @@ export default function Footer2026() {
             </div>
           </div>
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/icons/iso.svg"
-            alt="AICPA SOC 2, ISO 9001, ISO 27002 and ISO 27018 certifications"
-            loading="lazy"
-            className="h-[62px] w-auto self-start lg:self-end"
-          />
+          {/* Certification badges — the same six as the live site footer */}
+          <ul className="flex list-none flex-wrap items-center gap-4 self-start lg:flex-nowrap lg:self-end">
+            {[
+              ["neevcloud_soc_light.svg", "AICPA SOC 2"],
+              ["iso-9001-footer-neevcloud-icon-white.svg", "ISO 9001"],
+              ["iso-27001-footer-neevcloud-icon-white.svg", "ISO 27001"],
+              ["iso-27017-footer-neevcloud-icon-white.svg", "ISO 27017"],
+              ["iso-20000-1-footer-neevcloud-icon-white.svg", "ISO 20000-1"],
+              ["iso-27018-footer-neevcloud-icon-white.svg", "ISO 27018"],
+            ].map(([file, label]) => (
+              <li key={file}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/icons/certs/${file}`}
+                  alt={`${label} certification`}
+                  loading="lazy"
+                  className="h-[62px] w-auto"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Giant subtle wordmark watermark, clipped at the bottom edge, with a

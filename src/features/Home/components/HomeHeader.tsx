@@ -191,16 +191,17 @@ export default function HomeHeader() {
             </button>
             {/* pt-2 bridges the button→panel gap so hover isn't lost mid-move */}
             <div className="invisible absolute right-0 top-full z-50 w-max translate-y-1 pt-2 opacity-0 transition-all duration-200 group-hover/login:visible group-hover/login:translate-y-0 group-hover/login:opacity-100 group-focus-within/login:visible group-focus-within/login:translate-y-0 group-focus-within/login:opacity-100">
-              <div className="rounded-md border border-cloud-gray bg-white p-2 shadow-lg">
+              {/* Frosted glass panel — matches the primary nav dropdowns */}
+              <div className="rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-1.5 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl">
                 {LOGIN_OPTIONS.map(({ label, href, icon: LoginIcon }) => (
                   <Link
                     key={label}
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2.5 whitespace-nowrap rounded px-3 py-2 text-[13px] font-medium leading-6 tracking-[-0.02em] text-black transition-colors hover:bg-cloud-gray"
+                    className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
                   >
-                    <LoginIcon size={16} aria-hidden className="text-primary" />
+                    <LoginIcon size={16} aria-hidden className="text-neev-green" />
                     {label}
                   </Link>
                 ))}

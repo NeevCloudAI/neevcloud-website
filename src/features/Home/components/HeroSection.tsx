@@ -34,7 +34,9 @@ export default function HeroSection() {
               id="hero-heading"
               className="hero-in text-[58px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white/75 md:text-[64px] lg:text-[74px] 1.5xl:whitespace-nowrap"
             >
-              {HERO.headline}
+              {/* "AI Native SuperCloud" carries the brand green */}
+              {HERO.headline.split("AI Native SuperCloud")[0]}
+              <span className="text-[#59D9A7]">AI Native SuperCloud</span>
             </h1>
             <p
               className="hero-in text-[20px] font-normal leading-[132%] tracking-[-0.02em] text-white/90 md:text-[22px] xl:whitespace-nowrap"

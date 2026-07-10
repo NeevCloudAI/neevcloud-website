@@ -38,9 +38,9 @@ export default function HeroBgVideoClient() {
       muted
       playsInline
       poster="/images/home/hero-supercloud.jpg"
-      // Mobile: no desktop offsets — crop focuses the chip (right of frame) so
-      // the render is actually visible on tall narrow screens.
-      className="absolute inset-0 h-full w-full origin-center object-cover object-[72%_40%] [mask-image:linear-gradient(to_left,transparent_0%,#000_16%)] md:translate-x-[12%] md:-translate-y-[7%] md:scale-[0.75] md:object-center"
+      // Mobile placement from Paper JW8-0: a 575x490 block bleeding 123px off
+      // the left edge, 238px from the top. Desktop keeps the original framing.
+      className="absolute -left-[123px] top-[238px] h-[490px] w-[575px] max-w-none origin-center object-cover md:inset-0 md:left-0 md:top-0 md:h-full md:w-full md:translate-x-[12%] md:-translate-y-[7%] md:scale-[0.75] md:object-center md:[mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
     >
       {ready && (
         <source src="/images/home/hero-supercloud.mp4" type="video/mp4" />

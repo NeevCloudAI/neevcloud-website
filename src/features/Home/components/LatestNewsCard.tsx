@@ -18,7 +18,7 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
   return (
     <Link
       href={item.href}
-      className="group relative flex h-[440px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] transition-all duration-500 sm:h-[227px] sm:w-[360px] sm:hover:justify-center sm:focus-visible:justify-center lg:w-[412px]"
+      className="group relative flex h-[266px] w-[324px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] transition-all duration-500 sm:h-[227px] sm:w-[360px] sm:hover:justify-center sm:focus-visible:justify-center lg:w-[412px]"
     >
       {/* Same geometry as the old CSS background layer, but served through
           next/image so mobile gets a properly-sized webp instead of raw JPEG. */}
@@ -72,9 +72,11 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
             collapse and reveal on hover (Accenture behaviour). */}
         <div className="grid grid-rows-[1fr] opacity-100 transition-all duration-500 ease-out sm:grid-rows-[0fr] sm:opacity-0 sm:group-hover:grid-rows-[1fr] sm:group-hover:opacity-100 sm:group-focus-visible:grid-rows-[1fr] sm:group-focus-visible:opacity-100">
           <div className="flex flex-col items-start gap-3 overflow-hidden pt-2">
+            {/* Paper mobile card (JXB-0): title + Learn more only — the
+                description appears from sm up. */}
             <p
               className={cn(
-                "text-[13px] font-normal leading-[142%] tracking-[-0.02em]",
+                "hidden text-[13px] font-normal leading-[142%] tracking-[-0.02em] sm:block",
                 isDark ? "text-white/75" : "text-black/70",
               )}
             >

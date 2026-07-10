@@ -344,46 +344,27 @@ body {
   }
 }
 
-/* Kaiko-style headline: a soft band of light sweeps through the letterforms
-   (gradient clipped to text). White words only — the brand-green span keeps
-   its solid colour. */
-.hero-sheen {
-  /* Kaiko-style frosted shimmer: an uneven pattern of brighter and dimmer
-     regions drifts through the letterforms continuously. Ends match so the
-     loop is seamless. */
-  background-image: linear-gradient(
-    100deg,
-    #7c9a91 0%,
-    #ffffff 14%,
-    #b9d6cd 28%,
-    #ffffff 42%,
-    #6e8f85 56%,
-    #ffffff 70%,
-    #a7c8be 84%,
-    #ffffff 94%,
-    #7c9a91 100%
-  );
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #ffffff;
-  animation: hero-sheen-sweep 12s linear infinite;
+/* Kaiko-style headline entrance: the heading appears scaled up and settles
+   down into place while fading in. One-shot on load; styling untouched. */
+.hero-appear {
+  transform-origin: 0% 60%;
+  animation: hero-appear 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes hero-sheen-sweep {
-  0% {
-    background-position: 0% 0;
+@keyframes hero-appear {
+  from {
+    opacity: 0;
+    transform: scale(1.35);
   }
-  100% {
-    background-position: 300% 0;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-sheen {
+  .hero-appear {
     animation: none;
-    -webkit-text-fill-color: currentColor;
   }
 }
 

@@ -107,6 +107,8 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function HomeHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  // which mobile nav group is expanded (Taito-style accordion)
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 w-full border-b border-white/[0.12]">
@@ -232,33 +234,115 @@ export default function HomeHeader() {
         <nav
           id="home-mobile-nav"
           aria-label="Mobile"
-          className="mx-4 flex flex-col gap-1 rounded-xl border border-white/10 bg-black/95 p-3 backdrop-blur xl:hidden"
+          className="fixed inset-0 z-[60] bg-black/50 p-2 xl:hidden"
         >
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              onClick={() => setIsOpen(false)}
-              className={cn(
-                "rounded-md px-3 py-2.5 text-[15px] text-white/90 hover:bg-white/10",
+          {/* Taito-style full-screen card */}
+          <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-[#0d1110] px-5 pb-6 pt-4">
+            <div className="flex items-center justify-between">
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                <Image
+                  src="/icons/logo-white-with-name.svg"
+                  alt="NeevCloud"
+                  width={130}
+                  height={24}
+                  className="h-6 w-auto"
+                />
+              </Link>
+              <button
+                type="button"
+                aria-label="Close menu"
+                onClick={() => setIsOpen(false)}
+                className="grid size-11 place-items-center text-white"
+              >
+                {/* simple X */}
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
+                  <path
+                    d="M6 6l12 12M18 6L6 18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <ul className="mt-8 flex flex-1 list-none flex-col overflow-y-auto">
+              {NAV_ITEMS.map((item) =>
+                item.items ? (
+                  <li key={item.label}>
+                    <button
+                      type="button"
+                      aria-expanded={openGroup === item.label}
+                      onClick={() =>
+                        setOpenGroup((g) =>
+                          g === item.label ? null : item.label,
+                        )
+                      }
+                      className="flex w-full items-center justify-between py-3 text-left text-[26px] font-normal leading-tight text-white"
+                    >
+                      {item.label}
+                      <ChevronDown
+                        size={22}
+                        aria-hidden
+                        className={cn(
+                          "text-white/70 transition-transform duration-200",
+                          openGroup === item.label && "rotate-180",
+                        )}
+                      />
+                    </button>
+                    <div
+                      className={cn(
+                        "grid transition-all duration-300 ease-out",
+                        openGroup === item.label
+                          ? "grid-rows-[1fr]"
+                          : "grid-rows-[0fr]",
+                      )}
+                    >
+                      <ul className="min-h-0 list-none overflow-hidden">
+                        {item.items.map((sub) => (
+                          <li key={sub.label}>
+                            <Link
+                              href={sub.href}
+                              onClick={() => setIsOpen(false)}
+                              className="block py-2 pl-4 text-[16px] text-white/70"
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                ) : (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block py-3 text-[26px] font-normal leading-tight text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
               )}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <div className="mt-2 flex flex-col gap-2 border-t border-white/10 pt-3">
-            <Link
-              href={LOGIN_OPTIONS[0].href}
-              className="rounded-md border border-white/20 px-4 py-2.5 text-center text-[14px] font-medium text-white"
-            >
-              Login
-            </Link>
-            <Link
-              href="/contact-neevcloud"
-              className="rounded-md bg-white px-4 py-2.5 text-center text-[14px] font-medium text-black"
-            >
-              Contact Sales
-            </Link>
+            </ul>
+
+            <div className="mt-6 flex flex-col gap-2">
+              <Link
+                href="/contact-neevcloud"
+                onClick={() => setIsOpen(false)}
+                className="rounded-xl bg-white py-3.5 text-center text-[16px] font-medium text-black"
+              >
+                Contact Sales
+              </Link>
+              <Link
+                href={LOGIN_OPTIONS[0].href}
+                onClick={() => setIsOpen(false)}
+                className="py-2.5 text-center text-[16px] font-medium text-white"
+              >
+                Login
+              </Link>
+            </div>
           </div>
         </nav>
       )}

@@ -24,14 +24,15 @@ export default function ForDevelopersSection() {
         {/* Mobile: mesh spans the whole section from the very top; desktop keeps
             the Paper 800px top-right placement. */}
         <div className="absolute -right-px -top-px h-full w-full sm:h-[800px] sm:max-h-full sm:w-[800px] sm:max-w-full">
+          {/* rotation only from sm: rotating the tall mobile box swings the
+              gradient away from the section top (black band) */}
           <Mesh
             speed={1}
             scale={1}
             distortion={1}
             swirl={0.2}
             colors={["#55D2A2", "#000000"]}
-            className="h-full w-full opacity-50"
-            style={{ transform: "rotate(270deg)" }}
+            className="h-full w-full opacity-50 sm:rotate-[270deg]"
           />
           {/* fade to black — bottom + left */}
           <div className="absolute inset-x-0 bottom-0 h-[252px] bg-gradient-to-b from-transparent to-black" />

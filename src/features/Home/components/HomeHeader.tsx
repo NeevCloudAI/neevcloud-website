@@ -54,11 +54,6 @@ type NavLink = { label: string; href: string; icon?: RemixiconComponentType };
 type NavGroup = { heading?: string; links: NavLink[] };
 type NavItem = { label: string; href: string; groups?: NavGroup[] };
 
-// All dropdown links for a nav item, flattened (used by the mobile menu).
-function flatLinks(item: NavItem): NavLink[] {
-  return item.groups?.flatMap((g) => g.links) ?? [];
-}
-
 const LOGIN_OPTIONS = [
   {
     label: "Login to AI SuperCloud",
@@ -244,7 +239,16 @@ export default function HomeHeader() {
   }, [isOpen]);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 w-full border-b border-white/[0.12]">
+    // Mobile: fixed (sticky) frosted bar so the nav is always reachable;
+    // desktop keeps the transparent absolute bar over the hero.
+    <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-white/[0.12] xl:absolute">
+      {/* Frost lives on an overlay, not the <header> — backdrop-filter on the
+          header would become the containing block for the fixed full-screen
+          mobile menu and trap it inside the bar. */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 bg-[#0d1110]/70 backdrop-blur-xl xl:hidden"
+      />
       <Container className="flex items-center justify-between gap-4 py-4">
         <div className="flex items-center gap-6">
           <Link href="/" className="shrink-0">
@@ -449,19 +453,36 @@ export default function HomeHeader() {
                           : "grid-rows-[0fr]",
                       )}
                     >
-                      <ul className="min-h-0 list-none overflow-hidden">
-                        {flatLinks(item).map((sub) => (
-                          <li key={sub.label}>
-                            <Link
-                              href={sub.href}
-                              onClick={() => setIsOpen(false)}
-                              className="block py-2 pl-4 text-[16px] text-white/70"
-                            >
-                              {sub.label}
-                            </Link>
-                          </li>
+                      {/* grouped like the desktop panels: section label +
+                          icon rows */}
+                      <div className="min-h-0 overflow-hidden">
+                        {item.groups.map((group) => (
+                          <div key={group.heading ?? item.label}>
+                            {group.heading && (
+                              <p className="pb-1 pl-4 pt-3 text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">
+                                {group.heading}
+                              </p>
+                            )}
+                            {group.links.map((sub) => (
+                              <Link
+                                key={sub.label}
+                                href={sub.href}
+                                onClick={() => setIsOpen(false)}
+                                className="flex items-center gap-2.5 py-2 pl-4 text-[16px] text-white/70"
+                              >
+                                {sub.icon && (
+                                  <sub.icon
+                                    size={16}
+                                    aria-hidden
+                                    className="shrink-0 text-neev-green/80"
+                                  />
+                                )}
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   </li>
                 ) : (

@@ -114,7 +114,10 @@ export default function Footer2026() {
                 {column.links.map((item) => (
                   <li key={item.label}>
                     {item.href === "#" ? (
-                      <span className="text-[14px] leading-[142%] text-white/40">
+                      /* page not built yet — same tone as live links so the
+                         columns read uniformly; swaps to <Link> once a URL
+                         exists */
+                      <span className="text-[14px] leading-[142%] text-white/70">
                         {item.label}
                       </span>
                     ) : (

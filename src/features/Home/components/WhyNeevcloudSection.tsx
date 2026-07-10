@@ -30,13 +30,13 @@ export default function WhyNeevcloudSection() {
           {WHY_FEATURES.map((feature, index) => (
             <li
               key={feature.title}
-              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden text-left sm:flex-col sm:text-center md:min-w-0 md:basis-0"
+              className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden border-b border-black/10 pb-5 text-left last:border-b-0 last:pb-0 sm:flex-col sm:border-b-0 sm:pb-0 sm:text-center md:min-w-0 md:basis-0"
             >
               {/* Mobile: compact row — small icon left, text right. Desktop:
                   centred column with the large icon on top. */}
               <div
                 className={cn(
-                  "relative order-1 h-[76px] w-[88px] shrink-0 sm:h-[134px] sm:w-[153px]",
+                  "relative order-1 h-[61px] w-[70px] shrink-0 sm:h-[134px] sm:w-[153px]",
                   index === 0 && "home-why-icon-turntable",
                 )}
               >
@@ -50,12 +50,12 @@ export default function WhyNeevcloudSection() {
                 />
               </div>
               <div className="order-2 flex flex-1 flex-col items-start gap-1 sm:w-full sm:flex-none sm:items-center sm:gap-2">
-                <h3 className="text-[18px] font-medium leading-[120%] tracking-[-0.01em] text-black sm:text-[20px]">
+                <h3 className="text-[14px] font-medium leading-[120%] tracking-[-0.01em] text-black sm:text-[20px]">
                   {feature.title}
                 </h3>
                 {/* max-w in ch + balance keeps every subtext on exactly two
                     even lines on desktop. */}
-                <p className="max-w-[46ch] whitespace-pre-wrap text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance]">
+                <p className="max-w-[46ch] whitespace-pre-wrap text-[11px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance] sm:text-[14px]">
                   {feature.description}
                 </p>
               </div>

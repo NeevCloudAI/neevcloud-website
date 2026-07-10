@@ -19,7 +19,7 @@ export default function HeroSection() {
         className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-forest/40"
       />
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col justify-between gap-14 pb-20 md:gap-24">
+      <div className="relative z-10 flex min-h-[100svh] flex-col justify-between gap-14 pb-10 md:gap-24 md:pb-20">
         <Container className="flex flex-col items-start gap-10 pt-28 md:gap-12 md:pt-[145px]">
           <div className="flex flex-col gap-4 md:gap-6">
             <h1

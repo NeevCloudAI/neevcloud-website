@@ -71,25 +71,9 @@ export default function StackScrollClient() {
   const glideRafRef = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const itemCount = items.length;
-  // Mobile carousel: its own track + progress bar (the desktop bar is driven
-  // by vertical scroll progress, which doesn't exist on mobile).
-  const mobileTrackRef = useRef<HTMLUListElement>(null);
-  const mobileBarRef = useRef<HTMLDivElement>(null);
-  const mobileRafRef = useRef(0);
-
-  // Bar reads like pagination: first card = 1/n filled, last card = full.
-  const onMobileScroll = () => {
-    if (mobileRafRef.current) return;
-    mobileRafRef.current = requestAnimationFrame(() => {
-      mobileRafRef.current = 0;
-      const el = mobileTrackRef.current;
-      if (!el || !mobileBarRef.current) return;
-      const max = el.scrollWidth - el.clientWidth;
-      const p = max > 0 ? el.scrollLeft / max : 0;
-      const width = ((1 + p * (itemCount - 1)) / itemCount) * 100;
-      mobileBarRef.current.style.width = `${width}%`;
-    });
-  };
+  // Mobile: vertical tap-to-open accordion (one tier always open, first by
+  // default) — the desktop version is scroll-driven instead.
+  const [mobileOpen, setMobileOpen] = useState(0);
 
   useEffect(() => {
     let raf = 0;
@@ -130,7 +114,6 @@ export default function StackScrollClient() {
     return () => {
       if (raf) cancelAnimationFrame(raf);
       if (glideRafRef.current) cancelAnimationFrame(glideRafRef.current);
-      if (mobileRafRef.current) cancelAnimationFrame(mobileRafRef.current);
       glidingRef.current = false;
       document.removeEventListener("scroll", onScroll, { capture: true });
       window.removeEventListener("resize", onScroll);
@@ -269,68 +252,86 @@ export default function StackScrollClient() {
               })}
             </div>
 
-            {/* Mobile (below lg): swipeable snap carousel — each tier is one
-                self-contained dark card with its own glass plate inside.
-                First card sits in view (silicon tier). */}
-            <div className="flex w-full flex-col gap-5 lg:hidden">
-              <ul
-                ref={mobileTrackRef}
-                onScroll={onMobileScroll}
-                className="-mx-4 flex list-none snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-1 [&::-webkit-scrollbar]:hidden"
-              >
-                {items.map((item, index) => {
-                  const platePos = items.length - 1 - index;
-                  return (
-                    <li
-                      key={item.id}
-                      className="flex w-[86%] max-w-[420px] shrink-0 snap-center flex-col rounded-2xl bg-black/80 p-4 backdrop-blur-[8px]"
+            {/* Mobile (below lg): vertical tap-to-open accordion in the
+                desktop tiers' styling — closed tiers are label pills with a
+                "+", the open tier reveals heading, features and its glass
+                plate. First tier open. */}
+            <ul className="flex w-full list-none flex-col gap-3 lg:hidden">
+              {items.map((item, index) => {
+                const platePos = items.length - 1 - index;
+                const isOpen = index === mobileOpen;
+                return (
+                  <li
+                    key={item.id}
+                    className="rounded-2xl bg-black/80 p-4 backdrop-blur-[8px]"
+                  >
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      aria-controls={`stack-mobile-panel-${item.id}`}
+                      onClick={() => setMobileOpen(index)}
+                      className="flex w-full items-center justify-between gap-3 text-left"
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={`/images/home/stack/Layer_0${platePos + 1}.png`}
-                        alt=""
-                        aria-hidden
-                        loading="lazy"
-                        decoding="async"
-                        className="pointer-events-none mx-auto h-[170px] w-auto max-w-full object-contain py-2 saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d]"
-                      />
-                      <p className="mt-2 text-[12px] font-medium uppercase tracking-[0.06em] text-neev-green">
+                      <span
+                        className={cn(
+                          isOpen
+                            ? "text-[12px] font-medium uppercase tracking-[0.06em] text-neev-green"
+                            : "text-[16px] font-medium capitalize leading-[120%] tracking-[-0.01em] text-white",
+                        )}
+                      >
                         {item.label}
-                      </p>
-                      <h3 className="mt-1 text-[15px] font-medium leading-snug text-white">
-                        {item.heading}
-                      </h3>
-                      <ul className="mt-3 flex list-none flex-col gap-2.5">
-                        {item.features.map((feature) => {
-                          const Icon = FEATURE_ICONS[feature.icon];
-                          return (
-                            <li
-                              key={feature.text}
-                              className="flex items-start gap-2.5"
-                            >
-                              <IconTile>
-                                <Icon size={12} />
-                              </IconTile>
-                              <p className="text-[13px] font-normal leading-[142%] text-white/90">
-                                {feature.text}
-                              </p>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </li>
-                  );
-                })}
-              </ul>
-              {/* Carousel progress (same style as the desktop scroll bar) */}
-              <div className="mx-auto h-1.5 w-40 overflow-hidden rounded-full bg-black/10">
-                <div
-                  ref={mobileBarRef}
-                  className="h-full rounded-full bg-black/50 transition-[width] duration-150 ease-out"
-                  style={{ width: `${100 / itemCount}%` }}
-                />
-              </div>
-            </div>
+                      </span>
+                      {!isOpen && (
+                        <IconTile>
+                          <RiAddLine size={14} />
+                        </IconTile>
+                      )}
+                    </button>
+                    <div
+                      id={`stack-mobile-panel-${item.id}`}
+                      aria-hidden={!isOpen}
+                      className={cn(
+                        "grid transition-all duration-500 ease-out",
+                        isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                      )}
+                    >
+                      <div className="min-h-0 overflow-hidden">
+                        <h3 className="mt-1 text-[15px] font-medium leading-snug text-white">
+                          {item.heading}
+                        </h3>
+                        <ul className="mt-3 flex list-none flex-col gap-2.5">
+                          {item.features.map((feature) => {
+                            const Icon = FEATURE_ICONS[feature.icon];
+                            return (
+                              <li
+                                key={feature.text}
+                                className="flex items-start gap-2.5"
+                              >
+                                <IconTile>
+                                  <Icon size={12} />
+                                </IconTile>
+                                <p className="text-[13px] font-normal leading-[142%] text-white/90">
+                                  {feature.text}
+                                </p>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={`/images/home/stack/Layer_0${platePos + 1}.png`}
+                          alt=""
+                          aria-hidden
+                          loading="lazy"
+                          decoding="async"
+                          className="pointer-events-none mx-auto mt-4 h-[150px] w-auto max-w-full object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d]"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
 
             {/* Accordion (left, lg+) — scroll-driven active tier */}
             <ul className="relative z-10 hidden w-full list-none flex-col items-start gap-2 lg:flex lg:max-w-[42%] 1.5xl:max-w-[660px]">

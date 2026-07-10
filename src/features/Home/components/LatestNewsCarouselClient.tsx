@@ -55,8 +55,8 @@ export default function LatestNewsCarouselClient() {
         </li>
       ))}
     </ul>
-    {/* Accenture-style scroll indicator (mobile only) */}
-    <div className="mx-auto mt-5 h-1 w-40 overflow-hidden rounded-full bg-white/15 sm:hidden">
+    {/* Accenture-style scroll indicator (mobile only) — sits close under the cards */}
+    <div className="mx-auto mt-2 h-1 w-40 overflow-hidden rounded-full bg-white/15 sm:hidden">
       <div
         className="h-full rounded-full bg-white/70 transition-[width] duration-150 ease-out"
         style={{ width: `${Math.max(8, Math.round(progress * 100))}%` }}

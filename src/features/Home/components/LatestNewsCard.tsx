@@ -20,20 +20,20 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
       href={item.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex h-[266px] w-[324px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] focus-visible:outline-2 focus-visible:outline-neev-green transition-all duration-500 sm:h-[227px] sm:w-[360px] sm:hover:justify-center sm:focus-visible:justify-center lg:w-[412px]"
+      className="group relative flex h-[300px] w-[280px] shrink-0 snap-start flex-col justify-end overflow-hidden rounded-md bg-[#00000099] p-4 outline outline-1 -outline-offset-1 outline-white/[0.12] focus-visible:outline-2 focus-visible:outline-neev-green transition-all duration-500 sm:h-[227px] sm:w-[360px] sm:hover:justify-center sm:focus-visible:justify-center lg:w-[412px]"
     >
-      {/* Same geometry as the old CSS background layer, but served through
-          next/image so mobile gets a properly-sized webp instead of raw JPEG. */}
+      {/* Mobile: image stays in the card's top band, clear of the text.
+          From sm: the Paper background geometry (112%×199%, offset). */}
       <div
         aria-hidden
-        className="absolute left-[46.7%] top-[18.5%] h-[199%] w-[112%] -translate-x-1/2 -translate-y-1/2 overflow-hidden"
+        className="absolute left-0 right-0 top-0 h-[64%] overflow-hidden sm:left-[46.7%] sm:right-auto sm:top-[18.5%] sm:h-[199%] sm:w-[112%] sm:-translate-x-1/2 sm:-translate-y-1/2"
       >
         <Image
           src={item.image}
           alt=""
           fill
           priority={priority}
-          sizes="(max-width: 640px) 320px, 470px"
+          sizes="(max-width: 640px) 280px, 470px"
           className="object-cover object-center"
         />
       </div>
@@ -42,10 +42,12 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
       <div
         aria-hidden
         className={cn(
-          "absolute inset-x-0 bottom-0 top-1/2 transition-opacity duration-500 ease-out group-hover:opacity-0",
+          "absolute inset-x-0 bottom-0 top-[42%] transition-opacity duration-500 ease-out group-hover:opacity-0 sm:top-1/2",
+          // mobile: gradient turns solid before the text area starts, so the
+          // copy sits on a clean theme-colour panel; sm restores the soft fade
           isDark
-            ? "bg-gradient-to-b from-transparent to-black"
-            : "bg-gradient-to-b from-transparent to-[#e9f3f3]",
+            ? "bg-[linear-gradient(to_bottom,transparent_0%,#000_38%,#000_100%)] sm:bg-gradient-to-b sm:from-transparent sm:to-black"
+            : "bg-[linear-gradient(to_bottom,transparent_0%,#e9f3f3_38%,#e9f3f3_100%)] sm:bg-gradient-to-b sm:from-transparent sm:to-[#e9f3f3]",
         )}
       />
       {/* Solid colour fills the whole card on hover, covering the image

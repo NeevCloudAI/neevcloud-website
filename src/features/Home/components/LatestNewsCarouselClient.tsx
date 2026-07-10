@@ -11,6 +11,7 @@ export default function LatestNewsCarouselClient() {
   const ref = useRef<HTMLUListElement>(null);
   const [edges, setEdges] = useState({ left: false, right: true });
   const [masked, setMasked] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const el = ref.current;
@@ -21,6 +22,8 @@ export default function LatestNewsCarouselClient() {
       setEdges((prev) =>
         prev.left === left && prev.right === right ? prev : { left, right },
       );
+      const range = el.scrollWidth - el.clientWidth;
+      setProgress(range > 0 ? el.scrollLeft / range : 0);
       // The edge fade reads as an ugly "blur" on phones — only mask from sm up.
       setMasked(window.innerWidth >= 640);
     };
@@ -40,6 +43,7 @@ export default function LatestNewsCarouselClient() {
   // Full-bleed: the track spans the viewport; padding aligns the first card
   // with the Container's content edge (max-w 1360px, 1536px from 2xl).
   return (
+    <>
     <ul
       ref={ref}
       className="flex w-full list-none snap-x snap-mandatory gap-4 overflow-x-auto pb-1 px-[max(1rem,calc((100%-1360px)/2+1rem))] scroll-pl-[max(1rem,calc((100%-1360px)/2+1rem))] 2xl:px-[max(1rem,calc((100%-1536px)/2+1rem))] 2xl:scroll-pl-[max(1rem,calc((100%-1536px)/2+1rem))] [&::-webkit-scrollbar]:hidden"
@@ -51,5 +55,13 @@ export default function LatestNewsCarouselClient() {
         </li>
       ))}
     </ul>
+    {/* Accenture-style scroll indicator (mobile only) */}
+    <div className="mx-auto mt-5 h-1 w-40 overflow-hidden rounded-full bg-white/15 sm:hidden">
+      <div
+        className="h-full rounded-full bg-white/70 transition-[width] duration-150 ease-out"
+        style={{ width: `${Math.max(8, Math.round(progress * 100))}%` }}
+      />
+    </div>
+    </>
   );
 }

@@ -53,7 +53,7 @@ function BracketButton({ label, href }: { label: string; href: string }) {
             "linear-gradient(126deg, #00A78B 10%, #00A78B 69%, #59D8A7 98%)",
         }}
       >
-        <span className="relative z-10">{label}</span>
+        <span className="relative z-10 text-[14px]">{label}</span>
         <span
           aria-hidden
           className="absolute inset-0 -translate-x-[130%] bg-gradient-to-r from-transparent via-white/60 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-[130%]"

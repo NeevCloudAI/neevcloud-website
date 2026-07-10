@@ -38,7 +38,9 @@ export default function HeroBgVideoClient() {
       muted
       playsInline
       poster="/images/home/hero-supercloud.jpg"
-      className="absolute inset-0 h-full w-full origin-center translate-x-[12%] -translate-y-[7%] scale-[0.75] object-cover object-center [mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
+      // Mobile: no desktop offsets — crop focuses the chip (right of frame) so
+      // the render is actually visible on tall narrow screens.
+      className="absolute inset-0 h-full w-full origin-center object-cover object-[72%_40%] [mask-image:linear-gradient(to_left,transparent_0%,#000_16%)] md:translate-x-[12%] md:-translate-y-[7%] md:scale-[0.75] md:object-center"
     >
       {ready && (
         <source src="/images/home/hero-supercloud.mp4" type="video/mp4" />

@@ -68,7 +68,7 @@ export default function WhyComparisonCards() {
           {LEGACY_CLOUD_ITEMS.map((item) => (
             <li
               key={item}
-              className="flex min-w-0 items-center gap-2 font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-black"
+              className="flex min-w-0 items-center gap-2 text-[14px] leading-[142%] tracking-[-0.02em] text-black"
             >
               <WarningIcon />
               {item}
@@ -98,7 +98,7 @@ export default function WhyComparisonCards() {
           {NEEVCLOUD_ADVANTAGE_ITEMS.map((item) => (
             <li
               key={item}
-              className="flex min-w-0 items-center gap-2 font-instrument-sans text-[14px] leading-[142%] tracking-[-0.02em] text-white md:whitespace-nowrap"
+              className="flex min-w-0 items-center gap-2 text-[14px] leading-[142%] tracking-[-0.02em] text-white md:whitespace-nowrap"
             >
               <CheckIcon />
               {item}

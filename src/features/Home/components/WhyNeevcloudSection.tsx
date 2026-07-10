@@ -32,11 +32,11 @@ export default function WhyNeevcloudSection() {
               key={feature.title}
               className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden text-left sm:flex-col sm:text-center"
             >
-              {/* Mobile: compact row — text left, small icon right. Desktop:
+              {/* Mobile: compact row — small icon left, text right. Desktop:
                   centred column with the large icon on top. */}
               <div
                 className={cn(
-                  "relative order-2 h-[76px] w-[88px] shrink-0 sm:order-1 sm:h-[134px] sm:w-[153px]",
+                  "relative order-1 h-[76px] w-[88px] shrink-0 sm:h-[134px] sm:w-[153px]",
                   index === 0 && "home-why-icon-turntable",
                 )}
               >
@@ -49,13 +49,13 @@ export default function WhyNeevcloudSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="order-1 flex flex-1 flex-col items-start gap-1 sm:order-2 sm:w-full sm:flex-none sm:items-center sm:gap-2">
+              <div className="order-2 flex flex-1 flex-col items-start gap-1 sm:w-full sm:flex-none sm:items-center sm:gap-2">
                 <h3 className="text-[18px] font-medium leading-[120%] tracking-[-0.01em] text-black sm:text-[20px]">
                   {feature.title}
                 </h3>
                 {/* max-w in ch + balance keeps every subtext on exactly two
                     even lines on desktop. */}
-                <p className="max-w-[46ch] whitespace-pre-wrap font-instrument-sans text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance]">
+                <p className="max-w-[46ch] whitespace-pre-wrap text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance]">
                   {feature.description}
                 </p>
               </div>

@@ -276,30 +276,24 @@ export default function StackScrollClient() {
                         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
                       )}
                     >
-                      {/* Features stay mounted and cross-fade with the height
-                          animation — no content pop on open/close. */}
-                      <ul
-                        className={cn(
-                          "flex list-none flex-col gap-4 overflow-hidden px-5 pb-5 pt-7 transition-opacity duration-300 ease-out",
-                          isOpen ? "opacity-100 delay-150" : "opacity-0",
-                        )}
-                      >
-                        {item.features.map((feature) => {
-                          const Icon = FEATURE_ICONS[feature.icon];
-                          return (
-                            <li
-                              key={feature.text}
-                              className="flex items-start gap-3"
-                            >
-                              <IconTile>
-                                <Icon size={13} />
-                              </IconTile>
-                              <p className="text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-white">
-                                {feature.text}
-                              </p>
-                            </li>
-                          );
-                        })}
+                      <ul className="code-swap flex list-none flex-col gap-4 overflow-hidden px-5 [&:not(:empty)]:pb-5 [&:not(:empty)]:pt-7">
+                        {isOpen &&
+                          item.features.map((feature) => {
+                            const Icon = FEATURE_ICONS[feature.icon];
+                            return (
+                              <li
+                                key={feature.text}
+                                className="flex items-start gap-3"
+                              >
+                                <IconTile>
+                                  <Icon size={13} />
+                                </IconTile>
+                                <p className="text-[14px] font-normal leading-[142%] tracking-[-0.02em] text-white">
+                                  {feature.text}
+                                </p>
+                              </li>
+                            );
+                          })}
                       </ul>
                     </div>
                   </li>

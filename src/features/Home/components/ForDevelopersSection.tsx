@@ -21,7 +21,9 @@ export default function ForDevelopersSection() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
-        <div className="absolute -right-px -top-px h-[800px] max-h-full w-[800px] max-w-full">
+        {/* Mobile: mesh spans the whole section from the very top; desktop keeps
+            the Paper 800px top-right placement. */}
+        <div className="absolute -right-px -top-px h-full w-full sm:h-[800px] sm:max-h-full sm:w-[800px] sm:max-w-full">
           <Mesh
             speed={1}
             scale={1}
@@ -33,7 +35,7 @@ export default function ForDevelopersSection() {
           />
           {/* fade to black — bottom + left */}
           <div className="absolute inset-x-0 bottom-0 h-[252px] bg-gradient-to-b from-transparent to-black" />
-          <div className="absolute inset-y-0 left-0 w-[346px] bg-gradient-to-l from-transparent to-black" />
+          <div className="absolute inset-y-0 left-0 w-[120px] bg-gradient-to-l from-transparent to-black sm:w-[346px]" />
         </div>
       </div>
       <Container className="flex flex-col items-center gap-10 md:gap-12">

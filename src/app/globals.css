@@ -353,15 +353,15 @@ body {
      loop is seamless. */
   background-image: linear-gradient(
     100deg,
-    #b8d4cc 0%,
-    #ffffff 12%,
-    #dcefe9 26%,
-    #ffffff 40%,
-    #a9cfc2 54%,
-    #ffffff 68%,
-    #d3eae2 82%,
-    #ffffff 92%,
-    #b8d4cc 100%
+    #7c9a91 0%,
+    #ffffff 14%,
+    #b9d6cd 28%,
+    #ffffff 42%,
+    #6e8f85 56%,
+    #ffffff 70%,
+    #a7c8be 84%,
+    #ffffff 94%,
+    #7c9a91 100%
   );
   background-size: 300% 100%;
   -webkit-background-clip: text;

@@ -180,7 +180,7 @@ export default function StackScrollClient() {
     <section className="bg-cloud-gray">
       {/* Heading scrolls normally (not pinned) — only the stack below sticks,
           matching legora.com. */}
-      <Container className="flex flex-col items-center gap-3 pt-20 text-center md:pt-[120px]">
+      <Container className="flex flex-col items-center gap-3 pt-[34px] text-center md:pt-[120px]">
         <h2
           id="stack-heading"
           className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
@@ -203,7 +203,7 @@ export default function StackScrollClient() {
         className="stack-runway relative"
         style={{ "--stack-h": `${items.length * 60 + 40}vh` } as React.CSSProperties}
       >
-        <div className="flex flex-col pb-16 pt-10 lg:sticky lg:top-0 lg:min-h-screen lg:justify-center lg:overflow-hidden lg:pt-0">
+        <div className="flex flex-col pb-[34px] pt-10 lg:pb-16 lg:sticky lg:top-0 lg:min-h-screen lg:justify-center lg:overflow-hidden lg:pt-0">
           <Container className="flex flex-col gap-8 md:gap-12">
             <div className="relative flex items-center lg:min-h-[560px]">
             {/* Mesh shader (right) + horizontal fade overlay on its left edge */}

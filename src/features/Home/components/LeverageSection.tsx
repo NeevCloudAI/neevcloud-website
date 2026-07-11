@@ -11,7 +11,7 @@ export default function LeverageSection() {
   return (
     <section
       aria-labelledby="leverage-heading"
-      className="relative isolate overflow-hidden bg-cloud-gray py-16 md:py-24"
+      className="relative isolate overflow-hidden bg-cloud-gray py-[34px] md:py-24"
     >
       {/* 3.3MB decorative loop — deferred until the section nears the viewport */}
       <LazyBgVideo

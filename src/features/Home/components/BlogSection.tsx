@@ -22,7 +22,7 @@ export default function BlogSection() {
   return (
     <section
       aria-labelledby="blog-heading"
-      className="bg-gray-light py-16 md:py-24"
+      className="bg-gray-light py-[34px] md:py-24"
     >
       <Container className="flex flex-col gap-10 md:gap-12">
         <div className="flex flex-wrap items-end justify-between gap-4">

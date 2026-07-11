@@ -10,13 +10,13 @@ import {
 // Mobile (<lg): all cards are 300px tall with the copy on top and the visual
 // anchored to the bottom (per the mobile bento design).
 const IMAGE_CLASS: Record<string, string> = {
-  gpu: "absolute -bottom-2 left-0 w-full max-w-none max-h-[50%] object-contain object-bottom lg:max-h-none lg:bottom-auto lg:left-auto lg:right-0 lg:top-[46%] lg:w-[66%] lg:-translate-y-1/2 lg:translate-x-[4%]",
+  gpu: "absolute -bottom-2 left-0 w-full max-w-none max-h-[60%] object-contain object-left-bottom lg:max-h-none lg:bottom-auto lg:left-auto lg:right-0 lg:top-[46%] lg:w-[66%] lg:-translate-y-1/2 lg:translate-x-[4%]",
   memory:
-    "absolute bottom-0 right-0 w-[82%] max-w-none max-h-[50%] object-contain object-right-bottom lg:max-h-none lg:left-1/2 lg:right-auto lg:w-[75.6%] lg:-translate-x-1/2",
+    "absolute bottom-0 left-1/2 w-[82%] max-w-none -translate-x-1/2 max-h-[50%] object-contain object-bottom lg:max-h-none lg:w-[75.6%]",
   "ai-native":
-    "absolute bottom-0 left-1/2 w-[102%] max-w-none -translate-x-1/2 translate-y-[4%] max-h-[50%] object-contain object-bottom lg:max-h-none lg:-left-6 lg:translate-x-0",
+    "absolute bottom-0 left-1/2 w-[102%] max-w-none -translate-x-1/2 translate-y-[-16%] max-h-[58%] object-contain object-bottom lg:max-h-none lg:-left-6 lg:translate-x-0 lg:translate-y-[4%]",
   support:
-    "absolute bottom-0 left-0 w-full max-w-none max-h-[46%] object-contain object-bottom lg:max-h-none lg:-bottom-1 lg:left-auto lg:right-0 lg:w-[58%]",
+    "absolute bottom-0 left-0 w-full max-w-none max-h-[60%] object-contain object-bottom lg:max-h-none lg:-bottom-1 lg:left-auto lg:right-0 lg:w-[58%]",
 };
 
 function BentoCard({ card }: { card: InfraBentoCard }) {
@@ -61,7 +61,7 @@ export default function InfraBentoSection() {
   return (
     <section
       aria-labelledby="infra-bento-heading"
-      className="bg-gray-light py-16 md:py-24"
+      className="bg-gray-light py-[34px] md:py-24"
     >
       <Container className="flex flex-col gap-12 md:gap-16">
         <div className="mx-auto flex max-w-none flex-col items-center gap-4 text-center">

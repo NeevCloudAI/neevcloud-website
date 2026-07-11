@@ -8,7 +8,7 @@ export default function WhyNeevcloudSection() {
   return (
     <section
       aria-labelledby="why-heading"
-      className="bg-cloud-gray px-4 py-16 sm:px-8 md:px-[50px] md:py-20"
+      className="bg-cloud-gray px-4 py-[34px] sm:px-8 md:px-[50px] md:py-20"
     >
       <Container className="flex max-w-[1340px] flex-col gap-12 px-0 2xl:max-w-[1340px]">
         <div className="flex w-full flex-col items-center gap-4 text-center">

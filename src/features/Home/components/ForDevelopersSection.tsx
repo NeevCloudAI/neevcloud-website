@@ -14,7 +14,7 @@ export default function ForDevelopersSection() {
   return (
     <section
       aria-labelledby="developers-heading"
-      className="relative isolate overflow-hidden bg-black py-16 md:py-24"
+      className="relative isolate overflow-hidden bg-black py-[34px] md:py-24"
     >
       {/* Paper MeshGradient shader — 800×800, pinned top-right, with fade overlays */}
       <div

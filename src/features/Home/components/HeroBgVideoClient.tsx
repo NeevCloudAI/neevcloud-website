@@ -42,7 +42,7 @@ export default function HeroBgVideoClient() {
       poster="/images/home/hero-supercloud.jpg"
       // Mobile placement from Paper JW8-0: a 575x490 block bleeding 123px off
       // the left edge, 238px from the top. Desktop keeps the original framing.
-      className="absolute -left-[238px] top-[140px] h-[490px] w-[575px] max-w-none origin-center object-cover [mask-composite:intersect] [mask-image:linear-gradient(to_right,#000_72%,transparent_99%),linear-gradient(to_bottom,#000_68%,transparent_99%)] lg:inset-0 lg:left-0 lg:top-0 lg:h-full lg:w-full lg:translate-x-[12%] lg:-translate-y-[7%] lg:scale-[0.75] lg:object-center lg:[mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
+      className="absolute -left-[152px] top-[189px] h-[490px] w-[575px] max-w-none origin-center object-cover [mask-composite:intersect] [mask-image:linear-gradient(to_right,#000_72%,transparent_99%),linear-gradient(to_bottom,#000_68%,transparent_99%)] lg:inset-0 lg:left-0 lg:top-0 lg:h-full lg:w-full lg:translate-x-[12%] lg:-translate-y-[7%] lg:scale-[0.75] lg:object-center lg:[mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
     >
       {ready && (
         <source src="/images/home/hero-supercloud.mp4" type="video/mp4" />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { RiCheckLine, RiFileCopyLine } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import {
@@ -46,6 +46,8 @@ export default function DeveloperTerminalClient() {
   const [activeId, setActiveId] = useState(DEVELOPER_TERMINAL_TABS[0].id);
   const [copied, setCopied] = useState(false);
   const copyTimer = useRef<number | undefined>(undefined);
+
+  useEffect(() => () => window.clearTimeout(copyTimer.current), []);
   const active =
     DEVELOPER_TERMINAL_TABS.find((tab) => tab.id === activeId) ??
     DEVELOPER_TERMINAL_TABS[0];
@@ -117,7 +119,19 @@ export default function DeveloperTerminalClient() {
               role="tab"
               id={`sdk-tab-${tab.id}`}
               aria-selected={selected}
-              aria-controls={`sdk-panel-${tab.id}`}
+              // only the active panel is rendered, so only its tab may
+              // reference it; inactive tabs are reached with arrow keys
+              aria-controls={selected ? `sdk-panel-${tab.id}` : undefined}
+              tabIndex={selected ? 0 : -1}
+              onKeyDown={(e) => {
+                if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+                e.preventDefault();
+                const dir = e.key === "ArrowRight" ? 1 : -1;
+                const n = DEVELOPER_TERMINAL_TABS.length;
+                const next = DEVELOPER_TERMINAL_TABS[(index + dir + n) % n];
+                setActiveId(next.id);
+                document.getElementById(`sdk-tab-${next.id}`)?.focus();
+              }}
               onClick={() => setActiveId(tab.id)}
               className={cn(
                 "px-1 py-3.5 text-center font-space-mono text-[11px] uppercase tracking-tight transition-colors sm:py-2 sm:px-3 sm:text-[14px] sm:tracking-[0.08em]",

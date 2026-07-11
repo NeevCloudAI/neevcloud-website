@@ -16,7 +16,8 @@ export default function BlogSection() {
     // one card + gap per click
     const card = el.querySelector("li");
     const step = card ? card.getBoundingClientRect().width + 24 : 344;
-    el.scrollBy({ left: dir * step, behavior: "smooth" });
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.scrollBy({ left: dir * step, behavior: reduce ? "auto" : "smooth" });
   };
 
   return (

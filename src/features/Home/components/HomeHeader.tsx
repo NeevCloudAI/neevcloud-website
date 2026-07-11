@@ -264,21 +264,34 @@ export default function HomeHeader() {
   useEffect(() => () => window.clearTimeout(closeTimerRef.current), []);
 
   // While the mobile menu is open: lock the page scroller (body), close on
-  // Escape, and clear any expanded group when it closes.
+  // Escape, move focus into the dialog (restoring it on close), and close
+  // if the viewport grows past xl — otherwise the hidden menu would leave
+  // the body scroll-locked on desktop.
   useEffect(() => {
     if (!isOpen) {
       setOpenGroup(null);
       return;
     }
+    const opener = document.activeElement as HTMLElement | null;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    document
+      .querySelector<HTMLElement>("#home-mobile-nav [aria-label='Close menu']")
+      ?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsOpen(false);
     };
+    const mq = window.matchMedia("(min-width: 1280px)");
+    const onDesktop = () => {
+      if (mq.matches) setIsOpen(false);
+    };
     window.addEventListener("keydown", onKey);
+    mq.addEventListener("change", onDesktop);
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
+      mq.removeEventListener("change", onDesktop);
+      opener?.focus();
     };
   }, [isOpen]);
 
@@ -550,6 +563,9 @@ export default function HomeHeader() {
                     </button>
                     <div
                       aria-hidden={openGroup !== item.label}
+                      // inert keeps the visually-collapsed links out of the
+                      // keyboard tab order and accessibility tree
+                      inert={openGroup !== item.label || undefined}
                       className={cn(
                         "grid transition-all duration-300 ease-out",
                         openGroup === item.label

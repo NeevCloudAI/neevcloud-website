@@ -239,7 +239,7 @@ export default function StackScrollClient() {
                     loading="lazy"
                     decoding="async"
                     className={cn(
-                      "pointer-events-none absolute left-1/2 w-[45.36%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out",
+                      "pointer-events-none absolute left-1/2 w-[45.36%] max-w-none object-contain saturate-[1.3] drop-shadow-[0_16px_34px_#0000003d] transition-all duration-700 ease-out motion-reduce:transition-none",
                       shown ? "opacity-100" : "opacity-0",
                     )}
                     style={{
@@ -291,7 +291,7 @@ export default function StackScrollClient() {
                       id={`stack-mobile-panel-${item.id}`}
                       aria-hidden={!isOpen}
                       className={cn(
-                        "grid transition-all duration-500 ease-out",
+                        "grid transition-all duration-500 ease-out motion-reduce:transition-none",
                         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
                       )}
                     >
@@ -343,7 +343,7 @@ export default function StackScrollClient() {
                     className={cn(
                       // interpolate-size lets the w-auto <-> w-full change tween
                       // natively (Chrome/Edge) instead of snapping — Legora-smooth.
-                      "overflow-hidden rounded-2xl bg-black/80 backdrop-blur-[8px] transition-all duration-500 ease-out [interpolate-size:allow-keywords]",
+                      "overflow-hidden rounded-2xl bg-black/80 backdrop-blur-[8px] transition-all duration-500 ease-out [interpolate-size:allow-keywords] motion-reduce:transition-none",
                       isOpen ? "w-full" : "w-auto",
                     )}
                   >
@@ -375,7 +375,7 @@ export default function StackScrollClient() {
                     <div
                       id={`stack-panel-${item.id}`}
                       className={cn(
-                        "grid transition-all duration-500 ease-out",
+                        "grid transition-all duration-500 ease-out motion-reduce:transition-none",
                         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
                       )}
                     >

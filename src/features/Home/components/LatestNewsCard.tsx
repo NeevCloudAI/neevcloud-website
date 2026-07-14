@@ -42,7 +42,7 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
       <div
         aria-hidden
         className={cn(
-          "absolute inset-x-0 bottom-0 top-[42%] transition-opacity duration-500 ease-out group-hover:opacity-0 sm:top-1/2",
+          "absolute inset-x-0 bottom-0 top-[42%] transition-opacity duration-500 ease-out group-hover:opacity-0 sm:group-focus-visible:opacity-0 sm:top-1/2",
           // mobile: gradient turns solid before the text area starts, so the
           // copy sits on a clean theme-colour panel; sm restores the soft fade
           isDark
@@ -55,7 +55,7 @@ export default function LatestNewsCard({ item, priority }: LatestNewsCardProps) 
       <div
         aria-hidden
         className={cn(
-          "absolute inset-0 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100",
+          "absolute inset-0 opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100 sm:group-focus-visible:opacity-100",
           isDark ? "bg-deep-forest" : "bg-[#e9f3f3]",
         )}
       />

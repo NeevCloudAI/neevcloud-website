@@ -245,20 +245,28 @@ export default function HomeHeader() {
       glideRef.current = false;
       return;
     }
-    const trigger = triggerRefs.current[openNav];
-    const content = contentRefs.current[openNav];
-    if (trigger && content) {
-      setPanelBox({
-        x: trigger.offsetLeft,
-        w: content.offsetWidth,
-        h: content.offsetHeight,
-      });
-    }
+    const measure = () => {
+      const trigger = triggerRefs.current[openNav];
+      const content = contentRefs.current[openNav];
+      if (trigger && content) {
+        setPanelBox({
+          x: trigger.offsetLeft,
+          w: content.offsetWidth,
+          h: content.offsetHeight,
+        });
+      }
+    };
+    measure();
+    // keep the floating panel aligned if the viewport/zoom changes while open
+    window.addEventListener("resize", measure);
     // once the first position/size has painted, later switches animate
     const id = requestAnimationFrame(() => {
       glideRef.current = true;
     });
-    return () => cancelAnimationFrame(id);
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("resize", measure);
+    };
   }, [openNav]);
 
   useEffect(() => () => window.clearTimeout(closeTimerRef.current), []);
@@ -279,7 +287,28 @@ export default function HomeHeader() {
       .querySelector<HTMLElement>("#home-mobile-nav [aria-label='Close menu']")
       ?.focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsOpen(false);
+      if (e.key === "Escape") {
+        setIsOpen(false);
+        return;
+      }
+      // keep Tab cycling inside the full-screen menu (it covers the page)
+      if (e.key !== "Tab") return;
+      const nav = document.getElementById("home-mobile-nav");
+      if (!nav) return;
+      const els = [
+        ...nav.querySelectorAll<HTMLElement>("a[href], button:not([disabled])"),
+      ].filter((el) => !el.closest("[inert]"));
+      if (!els.length) return;
+      const first = els[0];
+      const last = els[els.length - 1];
+      const active = document.activeElement;
+      if (e.shiftKey && (active === first || !nav.contains(active))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (active === last || !nav.contains(active))) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     const mq = window.matchMedia("(min-width: 1280px)");
     const onDesktop = () => {
@@ -346,6 +375,18 @@ export default function HomeHeader() {
                     aria-expanded={openNav === item.label}
                     onPointerEnter={() => openPanel(item.label)}
                     onFocus={() => openPanel(item.label)}
+                    onKeyDown={(e) => {
+                      // ArrowDown steps keyboard focus into the open panel
+                      // (the panel sits after all triggers in DOM order)
+                      if (e.key !== "ArrowDown") return;
+                      e.preventDefault();
+                      openPanel(item.label);
+                      requestAnimationFrame(() => {
+                        contentRefs.current[item.label]
+                          ?.querySelector<HTMLElement>("a")
+                          ?.focus();
+                      });
+                    }}
                     className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
                   >
                     {item.label}
@@ -406,6 +447,8 @@ export default function HomeHeader() {
                     ref={(el) => {
                       contentRefs.current[item.label] = el;
                     }}
+                    aria-hidden={openNav !== item.label}
+                    inert={openNav !== item.label || undefined}
                     className={cn(
                       "absolute left-0 top-0 w-max p-2 transition-opacity duration-200",
                       item.groups.length > 1
@@ -505,6 +548,8 @@ export default function HomeHeader() {
         <nav
           id="home-mobile-nav"
           aria-label="Mobile"
+          role="dialog"
+          aria-modal="true"
           className="fixed inset-0 z-[60] xl:hidden"
         >
           {/* Taito-style full-screen card */}

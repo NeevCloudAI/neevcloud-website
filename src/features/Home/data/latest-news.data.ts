@@ -1,6 +1,34 @@
 import type { LatestNewsItem } from "../types/latest-news.types";
 
 export const LATEST_NEWS_ITEMS: LatestNewsItem[] = [
+  // Cards 1-3: renders pending — placeholder.jpg until final art is supplied
+  {
+    title: "Build Intelligent AI Agents. That Automate Real Work.",
+    description:
+      "Create, orchestrate, and deploy AI agents with built-in tools, memory, and workflows.",
+    href: "https://console.ai.neevcloud.com/ai-agents/overview",
+    image: "/images/home/latest/placeholder.jpg",
+    imageAlt: "Agentic AI on NeevCloud",
+    theme: "dark",
+  },
+  {
+    title: "Connect AI Models. To Your Enterprise Tools.",
+    description:
+      "Securely integrate AI with databases, APIs, applications, and internal systems using MCP.",
+    href: "https://docs.ai.neevcloud.com/getting-started/mcp",
+    image: "/images/home/latest/placeholder.jpg",
+    imageAlt: "MCP server integrations",
+    theme: "dark",
+  },
+  {
+    title: "Dedicated AI Inference Built For Performance",
+    description:
+      "Run production AI models with predictable latency, dedicated resources, and complete control.",
+    href: "https://console.ai.neevcloud.com/ai-inference/overview",
+    image: "/images/home/latest/placeholder.jpg",
+    imageAlt: "Dedicated AI inference",
+    theme: "dark",
+  },
   {
     title: "Full-Stack AI Infrastructure Built to Scale Fearlessly",
     description:
@@ -35,34 +63,6 @@ export const LATEST_NEWS_ITEMS: LatestNewsItem[] = [
     href: "/newsroom",
     image: "/images/home/latest/varuna-cooling.jpg",
     imageAlt: "Varuna liquid immersion cooling facility",
-    theme: "dark",
-  },
-  // Cards 5-7: renders pending — placeholder.jpg until final art is supplied
-  {
-    title: "Build Intelligent AI Agents. That Automate Real Work.",
-    description:
-      "Create, orchestrate, and deploy AI agents with built-in tools, memory, and workflows.",
-    href: "https://console.ai.neevcloud.com/ai-agents/overview",
-    image: "/images/home/latest/placeholder.jpg",
-    imageAlt: "Agentic AI on NeevCloud",
-    theme: "dark",
-  },
-  {
-    title: "Connect AI Models. To Your Enterprise Tools.",
-    description:
-      "Securely integrate AI with databases, APIs, applications, and internal systems using MCP.",
-    href: "https://docs.ai.neevcloud.com/getting-started/mcp",
-    image: "/images/home/latest/placeholder.jpg",
-    imageAlt: "MCP server integrations",
-    theme: "dark",
-  },
-  {
-    title: "Dedicated AI Inference Built For Performance",
-    description:
-      "Run production AI models with predictable latency, dedicated resources, and complete control.",
-    href: "https://console.ai.neevcloud.com/ai-inference/overview",
-    image: "/images/home/latest/placeholder.jpg",
-    imageAlt: "Dedicated AI inference",
     theme: "dark",
   },
 ];

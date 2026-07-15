@@ -1,33 +1,32 @@
 import type { LatestNewsItem } from "../types/latest-news.types";
 
 export const LATEST_NEWS_ITEMS: LatestNewsItem[] = [
-  // Cards 1-3: renders pending — placeholder.jpg until final art is supplied
   {
     title: "Build Intelligent AI Agents. That Automate Real Work.",
     description:
       "Create, orchestrate, and deploy AI agents with built-in tools, memory, and workflows.",
     href: "https://console.ai.neevcloud.com/ai-agents/overview",
-    image: "/images/home/latest/placeholder.jpg",
-    imageAlt: "Agentic AI on NeevCloud",
-    theme: "dark",
+    image: "/images/home/latest/agentic-ai.jpg",
+    imageAlt: "Glass robot agents orchestrated by an AI core",
+    theme: "light",
   },
   {
     title: "Connect AI Models. To Your Enterprise Tools.",
     description:
       "Securely integrate AI with databases, APIs, applications, and internal systems using MCP.",
     href: "https://docs.ai.neevcloud.com/getting-started/mcp",
-    image: "/images/home/latest/placeholder.jpg",
-    imageAlt: "MCP server integrations",
-    theme: "dark",
+    image: "/images/home/latest/mcp-server.jpg",
+    imageAlt: "AI chip hub connected to enterprise systems",
+    theme: "light",
   },
   {
     title: "Dedicated AI Inference Built For Performance",
     description:
       "Run production AI models with predictable latency, dedicated resources, and complete control.",
     href: "https://console.ai.neevcloud.com/ai-inference/overview",
-    image: "/images/home/latest/placeholder.jpg",
-    imageAlt: "Dedicated AI inference",
-    theme: "dark",
+    image: "/images/home/latest/dedicated-inference.jpg",
+    imageAlt: "Dedicated AI chip on a performance gauge",
+    theme: "light",
   },
   {
     title: "Full-Stack AI Infrastructure Built to Scale Fearlessly",

@@ -33,7 +33,6 @@ export const EXTERNAL_LINKS = {
   shamsherAnsariLinkedin: "https://www.linkedin.com/in/shamsheransari/",
   alokPratapSinghLinkedin: "https://www.linkedin.com/in/alokpratapsingh007/",
   rashmeetKaurBediLinkedin: "https://www.linkedin.com/in/rashmeet-kaur-bedi/",
-  sahilAnsariLinkedin: "https://www.linkedin.com/in/sahil-ansari-6b0a3319a/",
   mohitMehroliyaLinkedin:
     "https://www.linkedin.com/in/mohit-mehroliya-humanresource/",
   kushalKothariLinkedin: "https://www.linkedin.com/in/kushal-kothari2807/",
@@ -81,6 +80,7 @@ export const EXTERNAL_LINKS = {
   quickStart:
     "https://docs.ai.neevcloud.com/ai-inference/overview-2/quick-start",
   inferenceOverview: "https://docs.ai.neevcloud.com/ai-inference/overview-1",
+  aiAgentsOverview: "https://console.ai.neevcloud.com/ai-agents/overview",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

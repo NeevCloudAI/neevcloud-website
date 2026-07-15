@@ -81,14 +81,6 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
     linkedinHref: EXTERNAL_LINKS.rashmeetKaurBediLinkedin,
   },
   {
-    name: "Sahil Ansari",
-    title: "Team Lead, Sales",
-    description:
-      "At the frontlines of growth, Sahil connects customer needs with the right cloud and AI solutions. He leads with insight, agility, and a results-driven mindset.",
-    image: "/images/webp/sahil-ansari.webp",
-    linkedinHref: EXTERNAL_LINKS.sahilAnsariLinkedin,
-  },
-  {
     name: "Mohit Mehroliya",
     title: "Senior HR Manager",
     description:

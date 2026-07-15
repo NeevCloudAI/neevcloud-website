@@ -5,7 +5,7 @@ export const DEVELOPERS_HERO = {
   description:
     "OpenAI-compatible APIs, Python and Node SDKs, CLI, Terraform support, and developer-first documentation built for real-world use. From zero to first inference call in under 5 minutes.",
   primaryCta: "Deploy Your Agent Stack",
-  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaRoute: EXTERNAL_LINKS.aiAgentsOverview,
   primaryCtaTarget: "_blank",
   secondaryCta: "Talk to an Engineer",
   secondaryCtaRoute: "/contact-neevcloud#contact-form",

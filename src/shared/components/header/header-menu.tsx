@@ -19,6 +19,8 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type HeaderMenuProps = {
   children: React.ReactNode;
+  /** Light nav text for the transparent homepage-hero header. */
+  transparent?: boolean;
 };
 
 const megaMenuPanelClassName = cn(
@@ -58,7 +60,11 @@ function shouldCloseMegaMenuOnClick(target: EventTarget | null): boolean {
   );
 }
 
-export default function HeaderMenu({ children }: HeaderMenuProps) {
+export default function HeaderMenu({
+  children,
+  transparent = false,
+}: HeaderMenuProps) {
+  const navTextColor = transparent ? "white" : "black";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileExpandedNavId, setMobileExpandedNavId] =
     useState<HeaderNavId | null>(null);
@@ -94,7 +100,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                         href={navItem.href}
                         className={buttonVariants({
                           variant: "ghost",
-                          textColor: "black",
+                          textColor: navTextColor,
                           spacing: "none",
                         })}
                       >
@@ -136,7 +142,11 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
                   }}
                 >
                   <div className={navLinkUnderlineClassName}>
-                    <Button variant="ghost" textColor="black" spacing="none">
+                    <Button
+                      variant="ghost"
+                      textColor={navTextColor}
+                      spacing="none"
+                    >
                       {navItem.label}
                     </Button>
                   </div>
@@ -190,7 +200,7 @@ export default function HeaderMenu({ children }: HeaderMenuProps) {
         <Button
           variant="ghost"
           spacing="none"
-          textColor="black"
+          textColor={navTextColor}
           className="header-company:hidden pr-2"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
           aria-expanded={isMobileMenuOpen}

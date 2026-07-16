@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-instrument-sans: var(--font-instrument-sans);
   --font-space-mono: var(--font-space-mono);
 
   --color-primary: var(--primary);
@@ -102,6 +103,8 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
@@ -151,6 +154,14 @@ body {
   }
   span {
     @apply text-xs sm:text-xs md:text-sm lg:text-base font-normal leading-normal;
+  }
+  /* …but a <span> used inside a heading must not be shrunk by the rule above —
+     it should take the heading's own size/weight (color utilities still win). */
+  :is(h1, h2, h3, h4, h5, h6) span {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
   }
   input {
     background-color: var(--white);
@@ -309,4 +320,144 @@ body {
 
 .text-112px {
   @apply text-[56px] leading-[56px] sm:text-[72px] md:text-[88px] md:leading-[80px] lg:text-[112px];
+}
+
+/* Footer wordmark watermark glow: the mask itself is set inline in
+   footer-2026.tsx (Turbopack drops url() masks from bundled CSS); only the
+   drift animation lives here. */
+.footer-watermark-glow {
+  animation: footer-glow-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes footer-glow-drift {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(320%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-watermark-glow {
+    animation: none;
+  }
+}
+
+/* Tailwind v4 preflight drops cursor:pointer on buttons — restore it. */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* Hero load-in reveal */
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-in {
+  animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Balance homepage headings so a heading never drops a single lonely word
+   onto its own last line (avoids typographic "widows/orphans"). */
+.home-2026 :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+/* Stack section: tall scroll runway on desktop only (drives the pinned,
+   scroll-linked accordion). Height comes from the --stack-h inline var; a
+   plain CSS rule because Turbopack drops the Tailwind arbitrary-var class. */
+@media (min-width: 1024px) {
+  .stack-runway {
+    height: var(--stack-h);
+  }
+}
+
+/* Smooth cross-fade when switching developer SDK tabs. */
+@keyframes code-swap {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.code-swap {
+  animation: code-swap 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .code-swap {
+    animation: none;
+  }
+}
+
+/* Slow turntable motion for the first Why NeevCloud glass icon. */
+.home-why-icon-turntable {
+  perspective: 760px;
+}
+
+.home-why-icon-turntable img {
+  animation: home-why-icon-turntable 16s ease-in-out infinite;
+  filter: drop-shadow(0 14px 24px rgb(0 167 139 / 0.14));
+  transform-origin: 50% 54%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.home-why-icon-turntable::after {
+  animation: home-why-icon-turntable-glow 16s ease-in-out infinite;
+  background: radial-gradient(
+    ellipse,
+    rgb(89 216 167 / 0.16) 0%,
+    rgb(89 216 167 / 0.06) 42%,
+    transparent 72%
+  );
+  border-radius: 9999px;
+  content: "";
+  inset: 20% 14% 8%;
+  pointer-events: none;
+  position: absolute;
+}
+
+@keyframes home-why-icon-turntable {
+  0%,
+  100% {
+    transform: rotateY(-18deg) rotateZ(-0.5deg) scale(0.995);
+  }
+  50% {
+    transform: rotateY(18deg) rotateZ(0.5deg) scale(1.01);
+  }
+}
+
+@keyframes home-why-icon-turntable-glow {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scaleX(0.92);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleX(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-in,
+  .home-why-icon-turntable img,
+  .home-why-icon-turntable::after {
+    animation: none;
+  }
 }

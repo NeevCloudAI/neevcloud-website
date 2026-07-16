@@ -78,10 +78,26 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "AI SuperCloud",
         links: [
-          { label: "Visit the Platform", href: "/visit-platform", icon: RiWindowLine },
-          { label: "Why AI SuperCloud", href: "/why-ai-supercloud", icon: RiCompass3Line },
-          { label: "NeevCloud Arena", href: "/neevcloud-arena", icon: RiTrophyLine },
-          { label: "Trust Center", href: "/trust-center", icon: RiShieldCheckLine },
+          {
+            label: "Visit the Platform",
+            href: "/visit-platform",
+            icon: RiWindowLine,
+          },
+          {
+            label: "Why AI SuperCloud",
+            href: "/why-ai-supercloud",
+            icon: RiCompass3Line,
+          },
+          {
+            label: "NeevCloud Arena",
+            href: "/neevcloud-arena",
+            icon: RiTrophyLine,
+          },
+          {
+            label: "Trust Center",
+            href: "/trust-center",
+            icon: RiShieldCheckLine,
+          },
         ],
       },
     ],
@@ -93,8 +109,16 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "Inference Hub",
         links: [
-          { label: "Serverless Inference", href: "/serverless-inference", icon: RiFlashlightLine },
-          { label: "Model Playground", href: "/model-playground", icon: RiSparkling2Line },
+          {
+            label: "Serverless Inference",
+            href: "/serverless-inference",
+            icon: RiFlashlightLine,
+          },
+          {
+            label: "Model Playground",
+            href: "/model-playground",
+            icon: RiSparkling2Line,
+          },
           { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
           { label: "Model Catalog", href: "/model-catalog", icon: RiBook2Line },
         ],
@@ -115,14 +139,26 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "Storage",
         links: [
-          { label: "High-Performance NVMe", href: "/nvme", icon: RiHardDrive2Line },
-          { label: "Object Storage", href: "/object-storage", icon: RiDatabase2Line },
+          {
+            label: "High-Performance NVMe",
+            href: "/nvme",
+            icon: RiHardDrive2Line,
+          },
+          {
+            label: "Object Storage",
+            href: "/object-storage",
+            icon: RiDatabase2Line,
+          },
         ],
       },
       {
         heading: "Orchestration",
         links: [
-          { label: "Managed Kubernetes", href: "/managed-kubernetes", icon: RiStackLine },
+          {
+            label: "Managed Kubernetes",
+            href: "/managed-kubernetes",
+            icon: RiStackLine,
+          },
         ],
       },
       {
@@ -143,7 +179,11 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "By Industry",
         links: [
-          { label: "Public Sector", href: "/public-sector", icon: RiGovernmentLine },
+          {
+            label: "Public Sector",
+            href: "/public-sector",
+            icon: RiGovernmentLine,
+          },
           { label: "BFSI", href: "/bfsi", icon: RiBankLine },
           { label: "Media & VFX", href: "/media-vfx", icon: RiMovie2Line },
           { label: "Healthcare", href: "/healthcare", icon: RiHeartPulseLine },
@@ -153,9 +193,17 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "By Tech",
         links: [
-          { label: "LLM Fine-Tuning", href: "/llm-training", icon: RiBrainLine },
+          {
+            label: "LLM Fine-Tuning",
+            href: "/llm-training",
+            icon: RiBrainLine,
+          },
           { label: "Generative AI", href: "/generative-ai", icon: RiMagicLine },
-          { label: "Agentic Workflows", href: "/agentic-workflow", icon: RiFlowChart },
+          {
+            label: "Agentic Workflows",
+            href: "/agentic-workflow",
+            icon: RiFlowChart,
+          },
         ],
       },
     ],
@@ -169,7 +217,11 @@ const NAV_ITEMS: NavItem[] = [
         links: [
           { label: "GPU Compute", href: "/gpu-pricing", icon: RiPriceTag3Line },
           { label: "CPU Compute", href: "/cpu-pricing", icon: RiCoinsLine },
-          { label: "AI Inference", href: "/ai-inference", icon: RiFlashlightLine },
+          {
+            label: "AI Inference",
+            href: "/ai-inference",
+            icon: RiFlashlightLine,
+          },
         ],
       },
     ],
@@ -181,9 +233,17 @@ const NAV_ITEMS: NavItem[] = [
       {
         heading: "Developers",
         links: [
-          { label: "Developers Hub", href: "/developers", icon: RiCodeSSlashLine },
+          {
+            label: "Developers Hub",
+            href: "/developers",
+            icon: RiCodeSSlashLine,
+          },
           { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
-          { label: "Agentic Workflows", href: "/agentic-workflow", icon: RiFlowChart },
+          {
+            label: "Agentic Workflows",
+            href: "/agentic-workflow",
+            icon: RiFlowChart,
+          },
         ],
       },
     ],
@@ -198,7 +258,11 @@ const NAV_ITEMS: NavItem[] = [
           { label: "About Us", href: "/about-us", icon: RiTeamLine },
           { label: "Leadership", href: "/leadership", icon: RiUserStarLine },
           { label: "Career", href: "/careers", icon: RiBriefcase4Line },
-          { label: "Life at NeevCloud", href: "/life-at-neevcloud", icon: RiEmotionHappyLine },
+          {
+            label: "Life at NeevCloud",
+            href: "/life-at-neevcloud",
+            icon: RiEmotionHappyLine,
+          },
         ],
       },
       {
@@ -207,7 +271,11 @@ const NAV_ITEMS: NavItem[] = [
           { label: "Newsroom", href: "/newsroom", icon: RiNewspaperLine },
           { label: "Events", href: "/events", icon: RiCalendarEventLine },
           { label: "Blogs", href: EXTERNAL_LINKS.blogs, icon: RiArticleLine },
-          { label: "Contact Us", href: "/contact-neevcloud#contact-form", icon: RiMailSendLine },
+          {
+            label: "Contact Us",
+            href: "/contact-neevcloud#contact-form",
+            icon: RiMailSendLine,
+          },
         ],
       },
     ],
@@ -395,7 +463,7 @@ export default function HomeHeader() {
                       aria-hidden
                       className={cn(
                         "text-white transition-transform duration-200",
-                        openNav === item.label && "rotate-180",
+                        openNav === item.label && "rotate-180"
                       )}
                     />
                   </Link>
@@ -409,7 +477,7 @@ export default function HomeHeader() {
                 >
                   {item.label}
                 </Link>
-              ),
+              )
             )}
 
             {/* Shared floating panel (Stripe-style): pt-3 bridges the hover
@@ -423,7 +491,7 @@ export default function HomeHeader() {
                   : "transition-[translate,opacity,visibility] duration-200",
                 openNav
                   ? "visible translate-y-0 opacity-100"
-                  : "invisible translate-y-1 opacity-0",
+                  : "invisible translate-y-1 opacity-0"
               )}
               style={{ transform: `translateX(${panelBox.x}px)` }}
             >
@@ -432,7 +500,7 @@ export default function HomeHeader() {
                   "relative overflow-hidden rounded-2xl border border-white/10 bg-[#1c1f1e]/70 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
                   glideRef.current
                     ? "transition-[width,height] duration-300 ease-out"
-                    : "transition-none",
+                    : "transition-none"
                 )}
                 style={{
                   width: panelBox.w || undefined,
@@ -440,7 +508,7 @@ export default function HomeHeader() {
                 }}
               >
                 {NAV_ITEMS.filter(
-                  (i): i is NavItem & { groups: NavGroup[] } => !!i.groups,
+                  (i): i is NavItem & { groups: NavGroup[] } => !!i.groups
                 ).map((item) => (
                   <div
                     key={item.label}
@@ -456,7 +524,7 @@ export default function HomeHeader() {
                         : "min-w-[240px]",
                       openNav === item.label
                         ? "opacity-100"
-                        : "pointer-events-none opacity-0",
+                        : "pointer-events-none opacity-0"
                     )}
                   >
                     {item.groups.map((group) => (
@@ -517,7 +585,11 @@ export default function HomeHeader() {
                     rel="noreferrer"
                     className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
                   >
-                    <LoginIcon size={16} aria-hidden className="text-neev-green" />
+                    <LoginIcon
+                      size={16}
+                      aria-hidden
+                      className="text-neev-green"
+                    />
                     {label}
                   </Link>
                 ))}
@@ -591,7 +663,7 @@ export default function HomeHeader() {
                       aria-expanded={openGroup === item.label}
                       onClick={() =>
                         setOpenGroup((g) =>
-                          g === item.label ? null : item.label,
+                          g === item.label ? null : item.label
                         )
                       }
                       className="flex w-full items-center justify-between py-3 text-left text-[26px] font-normal leading-tight text-white"
@@ -602,7 +674,7 @@ export default function HomeHeader() {
                         aria-hidden
                         className={cn(
                           "text-white/70 transition-transform duration-200",
-                          openGroup === item.label && "rotate-180",
+                          openGroup === item.label && "rotate-180"
                         )}
                       />
                     </button>
@@ -615,7 +687,7 @@ export default function HomeHeader() {
                         "grid transition-all duration-300 ease-out",
                         openGroup === item.label
                           ? "grid-rows-[1fr]"
-                          : "grid-rows-[0fr]",
+                          : "grid-rows-[0fr]"
                       )}
                     >
                       {/* grouped like the desktop panels: section label +
@@ -660,7 +732,7 @@ export default function HomeHeader() {
                       {item.label}
                     </Link>
                   </li>
-                ),
+                )
               )}
             </ul>
 

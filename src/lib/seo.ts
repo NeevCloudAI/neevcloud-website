@@ -8,10 +8,10 @@ export const DEFAULT_DESCRIPTION =
   "Full-stack AI infrastructure built to scale fearlessly. Run AI workloads with sovereign control, security, and scalability on India-resident GPU and CPU compute.";
 
 export const DEFAULT_OG_IMAGE = {
-  url: "/images/webp/ai-supercloud.webp",
-  width: 1408,
-  height: 700,
-  alt: "NeevCloud — India's AI SuperCloud",
+  url: "/images/og/neevcloud-og.jpg",
+  width: 1200,
+  height: 630,
+  alt: "NeevCloud — Full Stack AI Native SuperCloud",
 } as const;
 
 export type OgImage = {

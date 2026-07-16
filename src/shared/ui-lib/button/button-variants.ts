@@ -50,6 +50,7 @@ export const buttonVariants = cva(
         outline: "text-cloud-gray",
         blue: "text-gray-02",
         black: "text-black",
+        white: "text-white",
         ghost: "text-white/6",
         gray: "text-gray-80",
       },

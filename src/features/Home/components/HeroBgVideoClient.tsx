@@ -1,0 +1,52 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+// Hero background loop. On desktop the video mounts right away; on mobile it
+// waits until after the load event (+ a beat) so the 1.9MB file stays off the
+// critical path — the poster paints instantly either way.
+export default function HeroBgVideoClient() {
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    // reduced-motion users keep the static poster (WCAG 2.2.2)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      setReady(true);
+      return;
+    }
+    let timer: number | undefined;
+    const arm = () => {
+      timer = window.setTimeout(() => setReady(true), 2500);
+    };
+    if (document.readyState === "complete") {
+      arm();
+    } else {
+      window.addEventListener("load", arm, { once: true });
+    }
+    return () => {
+      window.removeEventListener("load", arm);
+      if (timer) window.clearTimeout(timer);
+    };
+  }, []);
+
+  return (
+    <video
+      // remount when the source appears so the browser picks it up
+      key={ready ? "live" : "poster"}
+      aria-hidden
+      autoPlay
+      loop
+      muted
+      playsInline
+      poster="/images/home/hero-supercloud.jpg"
+      // Mobile placement from Paper JW8-0: a 575x490 block bleeding 123px off
+      // the left edge, 238px from the top. Desktop keeps the original framing.
+      className="absolute -left-[152px] top-[189px] h-[490px] w-[575px] max-w-none origin-center object-cover [mask-composite:intersect] [mask-image:linear-gradient(to_right,#000_72%,transparent_99%),linear-gradient(to_bottom,#000_68%,transparent_99%)] lg:inset-0 lg:left-0 lg:top-0 lg:h-full lg:w-full lg:translate-x-[12%] lg:-translate-y-[7%] lg:scale-[0.75] lg:object-center lg:[mask-image:linear-gradient(to_left,transparent_0%,#000_16%)]"
+    >
+      {ready && (
+        <source src="/images/home/hero-supercloud.mp4" type="video/mp4" />
+      )}
+    </video>
+  );
+}

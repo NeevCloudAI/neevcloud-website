@@ -10,7 +10,7 @@ export const MODEL_PLAYGROUND_HERO = {
   secondaryCtaRoute: EXTERNAL_LINKS.gpuDocs,
   secondaryCtaTarget: "_blank",
   badgeText: "AI SuperCloud Platform",
-  image: "/images/webp/ai-supercloud.webp",
+  image: "/images/og/neevcloud-og.jpg",
   trustBadges: [
     "Data residency in India",
     "DPDP Act compliant",

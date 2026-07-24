@@ -2,7 +2,6 @@ export const INFINIBAND_FEATURES = [
   "PyTorch FSDP",
   "DeepSpeed",
   "Horovod",
-  "NCCL (optimized for InfiniBand)",
 ] as const;
 
 export const AUTOSCALING_FEATURES = [

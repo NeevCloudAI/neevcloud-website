@@ -76,7 +76,7 @@ export const STACK_SECTION_PANELS_RIGHT: StackSectionPanel[] = [
       },
       {
         id: "managed-kubernetes",
-        label: "Managed Kubernetes (NKE)",
+        label: "Managed Kubernetes (NKS)",
         description:
           "Run containerized workloads with managed control planes and production-grade operations.",
       },

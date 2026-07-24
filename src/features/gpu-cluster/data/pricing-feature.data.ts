@@ -1,12 +1,7 @@
 import type { FeatureCardProps } from "@/shared/components/feature-card";
-import { RadioTower, Shield, Star, ClipboardCheck } from "lucide-react";
+import { Shield, Star, ClipboardCheck } from "lucide-react";
 
 export const PRICING_FEATURES: FeatureCardProps[] = [
-  {
-    title: "InfiniBand Networking",
-    description: "High-bandwidth inter-GPU communication",
-    lucideIcon: RadioTower,
-  },
   {
     title: "NVMe-Attached Storage",
     description: "Fast local storage for datasets",

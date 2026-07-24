@@ -19,8 +19,7 @@ export const HEALTHCARE_FAQ_ITEMS: readonly FaqItem[] = [
     id: 3,
     category: "Getting Started",
     question: "What GPUs are available for medical imaging AI?",
-    answer:
-      "H100, H200, and A100 GPUs optimized for deep learning. Single instances or multi-GPU clusters with InfiniBand networking for distributed training.",
+    answer: "H100, H200, and A100 GPUs optimized for deep learning.",
   },
   {
     id: 4,

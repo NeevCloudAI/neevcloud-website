@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Hero background loop. On desktop the video mounts right away; on mobile it
 // waits until after the load event (+ a beat) so the 1.9MB file stays off the
 // critical path — the poster paints instantly either way.
 export default function HeroBgVideoClient() {
+  const ref = useRef<HTMLVideoElement>(null);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -30,10 +31,33 @@ export default function HeroBgVideoClient() {
     };
   }, []);
 
+  // Once ready, the <source> below renders — load() makes the browser pick it
+  // up (a <source> added on its own is ignored by an already-parsed video).
+  useEffect(() => {
+    if (ready) ref.current?.load();
+  }, [ready]);
+
+  // Pause the decode once the hero scrolls out of view and resume if it
+  // scrolls back — otherwise the loop keeps decoding in the background for
+  // as long as the page stays open.
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        el.play().catch(() => {});
+      } else {
+        el.pause();
+      }
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <video
-      // remount when the source appears so the browser picks it up
-      key={ready ? "live" : "poster"}
+      ref={ref}
       aria-hidden
       autoPlay
       loop

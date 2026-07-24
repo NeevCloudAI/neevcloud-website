@@ -16,16 +16,27 @@ export default function LazyBgVideo({
   const ref = useRef<HTMLVideoElement>(null);
   const [near, setNear] = useState(false);
 
+  // Once near, the <source> below renders — load() makes the browser pick it
+  // up (a <source> added on its own is ignored by an already-parsed video).
+  useEffect(() => {
+    if (near) ref.current?.load();
+  }, [near]);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     // reduced-motion users keep the static poster (WCAG 2.2.2)
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // Keep observing (don't disconnect after the first hit) so the video can
+    // also be paused once it scrolls back out of view, and resumed if it
+    // scrolls back in — otherwise the decode runs forever in the background.
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setNear(true);
-          io.disconnect();
+          el.play().catch(() => {});
+        } else {
+          el.pause();
         }
       },
       { rootMargin: "400px" },
@@ -36,8 +47,6 @@ export default function LazyBgVideo({
 
   return (
     <video
-      // remount when the source appears so the browser picks it up
-      key={near ? "live" : "poster"}
       ref={ref}
       aria-hidden
       autoPlay

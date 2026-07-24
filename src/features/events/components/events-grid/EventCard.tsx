@@ -25,7 +25,7 @@ const EventCard = ({ event }: EventCardProps) => {
             "rounded-sm px-2.5 py-1 capitalize",
             isUpcoming
               ? "bg-primary/12 border border-primary/18"
-              : "bg-gray-05/12 border border-gray-05/18",
+              : "bg-gray-05/12 border border-gray-05/18"
           )}
         >
           {event.status}
@@ -53,9 +53,9 @@ const EventCard = ({ event }: EventCardProps) => {
         </div>
       </div>
 
-      <Divider orientation="horizontal" className="bg-gray-01 my-4 md:my-5" />
+      {/* <Divider orientation="horizontal" className="bg-gray-01 my-4 md:my-5" /> */}
 
-      {event.ctaHref && (
+      {/* {event.ctaHref && (
         <LinkComponent
           href={event.ctaHref}
           target={event.ctaTarget}
@@ -66,7 +66,7 @@ const EventCard = ({ event }: EventCardProps) => {
           {event.ctaLabel}
           <ArrowRight size={16} aria-hidden="true" />
         </LinkComponent>
-      )}
+      )} */}
     </article>
   );
 };

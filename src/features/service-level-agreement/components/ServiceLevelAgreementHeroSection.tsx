@@ -11,6 +11,7 @@ const ServiceLevelAgreementHeroSection = () => {
           id="service-level-agreement-hero-heading"
           align="center"
           className="max-w-4xl mt-4 md:mt-6"
+          textColor={"white"}
         >
           {SERVICE_LEVEL_AGREEMENT_HERO.title}
         </Text>

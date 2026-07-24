@@ -6,12 +6,24 @@ const PublicSectorHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
-          Indigenous AI Infrastructure for
-          <Text variant="h1" as="span" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            Indigenous AI Infrastructure for
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor={"primary"}
+          >
             National Priorities
           </Text>
-        </Text>
+        </>
       }
       {...PUBLIC_SECTOR_HERO}
     />

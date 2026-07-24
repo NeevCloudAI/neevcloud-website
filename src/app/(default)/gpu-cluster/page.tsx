@@ -7,9 +7,9 @@ export const metadata = buildPageMetadata({
   path: "/gpu-cluster",
   title: "GPU Cluster | NeevCloud",
   description:
-    "One platform. On-demand, reserved, or spot - all on India-sovereign infrastructure. Every instance includes InfiniBand networking, NVMe-attached storage, and pre-built ML images.",
+    "One platform. On-demand, reserved, or spot - all on India-sovereign infrastructure. Every instance includes NVMe-attached storage, and pre-built ML images.",
   openGraphDescription:
-    "Bare GPU compute on India-sovereign infrastructure with InfiniBand networking, NVMe storage, and pre-built ML images. Live within minutes.",
+    "Bare GPU compute on India-sovereign infrastructure with NVMe storage, and pre-built ML images. Live within minutes.",
 });
 
 const GpuClusterPage = () => {

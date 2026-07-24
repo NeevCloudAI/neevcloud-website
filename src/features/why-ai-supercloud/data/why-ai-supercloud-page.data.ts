@@ -17,7 +17,7 @@ export const WHY_AI_SUPERCLOUD_HERO = {
     "Data never used for training",
     "99.9% uptime SLA",
   ],
-  image: "/images/og/neevcloud-og.jpg",
+  image: "/images/webp/visit-platform.webp",
 } as const;
 
 export const WHY_AI_SUPERCLOUD_FOOTER = {

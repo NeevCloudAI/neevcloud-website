@@ -27,7 +27,6 @@ export const BFSI_AMBITION_ITEMS: readonly AmbitionDetailItem[] = [
     bullets: [
       { id: 1, title: "Sub-ms latency, trading models" },
       { id: 2, title: "Multi-GPU risk simulations" },
-      { id: 3, title: "InfiniBand distributed compute" },
       { id: 4, title: "Spot instances for batch" },
     ],
   },

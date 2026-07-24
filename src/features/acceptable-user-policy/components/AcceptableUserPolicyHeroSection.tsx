@@ -11,6 +11,7 @@ const AcceptableUserPolicyHeroSection = () => {
           id="acceptable-user-policy-hero-heading"
           align="center"
           className="max-w-4xl mt-4 md:mt-6"
+          textColor={"white"}
         >
           {ACCEPTABLE_USER_POLICY_HERO.title}
         </Text>

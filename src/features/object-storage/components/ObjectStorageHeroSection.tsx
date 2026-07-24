@@ -6,17 +6,22 @@ const ObjectStorageHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text
-          as="h1"
-          align="center"
-          textColor="black"
-          className="max-w-4xl mt-4 md:mt-6"
-        >
-          Object Storage That Speaks
-          <Text variant="h1" as="span" textColor="primary">
-            S3
+        <>
+          <Text
+            as="h1"
+            align="center"
+            textColor="white"
+            className="max-w-4xl mt-4 md:mt-6"
+          >
+            Object Storage That
           </Text>
-        </Text>
+          <Text as="h1" align="center" textColor="white" className="max-w-4xl">
+            Speaks
+            <Text variant="h1" as="span" textColor="primary">
+              S3
+            </Text>
+          </Text>
+        </>
       }
       {...OBJECT_STORAGE_HERO}
     />

@@ -27,9 +27,9 @@ export const DEFENCE_SOVEREIGN_SERVICES: readonly ServiceItem[] = [
     id: "network",
     index: "03",
     title: "Network",
-    specs: "Isolated · InfiniBand",
+    specs: "Isolated",
     description:
-      "Isolated networks, InfiniBand clusters, and air-gapped deployments. Custom network architectures.",
+      "Isolated networks, and air-gapped deployments. Custom network architectures.",
     highlight: "400 Gbps",
     highlightSubtext: "FABRIC",
     href: "/gpu-cluster",

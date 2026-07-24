@@ -1,4 +1,4 @@
-export const FOOTER_2026 = {
+export const FOOTER = {
   ctaHeading: "Start Building on NeevCloud Today",
   ctaSubtext:
     "Join thousands of innovators using NeevCloud to train, deploy, and scale AI without barriers.",
@@ -38,6 +38,12 @@ const ROUTE_MAP: Record<string, string> = {
   "Why NeevCloud": "/why-ai-supercloud",
   Leadership: "/leadership",
   "Contact Us": "/contact-neevcloud",
+  "Terms & Conditions": "/terms-condition",
+  "Privacy Policy": "/privacy-policy",
+  "CERT-in Guidelines": "/cert-guidelines",
+  "Acceptable User Policy": "/acceptable-user-policy",
+  "Service Level Agreement": "/service-level-agreement",
+  "Billing Guidelines": "/billing-guidelines",
 };
 
 const link = (label: string): { label: string; href: string } => ({
@@ -102,6 +108,17 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       "Why NeevCloud",
       "Leadership",
       "Contact Us",
+    ].map(link),
+  },
+  {
+    title: "Legal",
+    links: [
+      "Terms & Conditions",
+      "Privacy Policy",
+      "CERT-in Guidelines",
+      "Acceptable User Policy",
+      "Service Level Agreement",
+      "Billing Guidelines",
     ].map(link),
   },
 ];

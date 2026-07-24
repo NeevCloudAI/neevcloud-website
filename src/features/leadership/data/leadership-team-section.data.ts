@@ -12,7 +12,7 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
     name: "Vijayakumar Arumuga Nadar",
     title: "Chief AI Officer (CAIO)",
     description:
-      "Architect of scalable AI systems, Vijayakumar leads the design and evolution of NeevCloud’s AI platforms. He bridges deep engineering with product vision to turn complex ideas into production-ready reality.",
+      "As Chief AI Officer of NeevCloud, Vijayakumar drives the strategy and evolution of India's first AI SuperCloud -  rooted in India, made for the world. He shapes a global platform strategy, building what enterprises, governments, and builders worldwide can rely on. With two decades across cloud, virtualization, and AI at VMware, OVHcloud, and Sify, he bridges deep engineering with product foresight to turn complex ideas into production-ready reality. A passionate advocate for democratizing AI, he believes intelligence should be affordable and accessible to all - a conviction that shapes NeevCloud's global platforms and his work mentoring the next generation of builders.",
     image: "/images/webp/vijayakumar-arumuga-nadar.webp",
     linkedinHref: EXTERNAL_LINKS.vijayakumarArumugaNadarLinkedin,
   },
@@ -82,7 +82,7 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
   },
   {
     name: "Mohit Mehroliya",
-    title: "Senior HR Manager",
+    title: "People & culture",
     description:
       "Champion of people and culture, Mohit builds teams that scale with ambition. He aligns talent strategy with NeevCloud’s fast-growing, innovation-driven environment.",
     image: "/images/webp/mohit-mehroliya.webp",

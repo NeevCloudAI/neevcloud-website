@@ -75,9 +75,6 @@ const GpuClusterWorkloadContent = () => (
         renewable
       </Text>
     </Text>
-    <Text fontFamily="spaceMono" textColor="gray-04" className="mt-4 md:mt-6">
-      # InfiniBand networking configured automatically
-    </Text>
   </>
 );
 

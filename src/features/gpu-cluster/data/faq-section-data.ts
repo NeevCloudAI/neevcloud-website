@@ -13,7 +13,7 @@ export const GPU_CLUSTER_FAQ_ITEMS: FaqItem[] = [
     category: "Getting Started",
     question: "What's included in the hourly price?",
     answer:
-      "GPU compute, vCPU, RAM, InfiniBand networking, DDoS protection, and pre-built ML images. Persistent storage billed separately.",
+      "GPU compute, vCPU, RAM, DDoS protection, and pre-built ML images. Persistent storage billed separately.",
   },
   {
     id: 3,

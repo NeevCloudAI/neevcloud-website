@@ -6,8 +6,7 @@ export const GOVERNMENT_SERVICES: readonly GovernmentServiceItem[] = [
     index: "01",
     title: "GPU AI Service",
     specs: "H100 • H200 • B200 • A100",
-    description:
-      "Single instances or multi-GPU clusters with InfiniBand networking for training and inference.",
+    description: "Single instances for training and inference.",
     highlight: "8x H100",
     highlightSubtext: "from ₹240/hr",
     href: "/gpu-cluster",
@@ -49,9 +48,9 @@ export const GOVERNMENT_SERVICES: readonly GovernmentServiceItem[] = [
     id: "managed-kubernetes",
     index: "05",
     title: "Managed Kubernetes",
-    specs: "GPU-aware • InfiniBand",
+    specs: "GPU-aware",
     description:
-      "Pre-configured device plugins, autoscaling, and InfiniBand networking. Production-ready in 4 minutes.",
+      "Pre-configured device plugins, autoscaling. Production-ready in 4 minutes.",
     highlight: "GPU-aware",
     highlightSubtext: "managed CP",
     href: "/managed-kubernetes",

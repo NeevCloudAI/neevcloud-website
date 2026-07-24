@@ -33,21 +33,21 @@ export const PURPOSE_NODE_POOLS: PurposeFlowNode[] = [
     variant: "pool",
     badge: "H100 Node Pool",
     title: "8x H100 GPUs",
-    details: ["Device Plugin", "NVMe + InfiniBand"],
+    details: ["Device Plugin", "NVMe"],
   },
   {
     id: "h200-pool",
     variant: "pool",
     badge: "H200 Node Pool",
     title: "4x H200 GPUs",
-    details: ["Device Plugin", "NVMe + InfiniBand"],
+    details: ["Device Plugin", "NVMe"],
   },
   {
     id: "a100-pool",
     variant: "pool",
     badge: "A100 Node Pool",
     title: "16x A100 GPUs",
-    details: ["Device Plugin", "NVMe + InfiniBand"],
+    details: ["Device Plugin", "NVMe"],
   },
 ];
 
@@ -75,7 +75,7 @@ export const PURPOSE_FEATURES: PurposeFeatureItem[] = [
   {
     number: "02",
     title: "We Manage",
-    description: "Control plane on our infra (free).",
+    description: "Control plane on our infra.",
   },
   {
     number: "03",

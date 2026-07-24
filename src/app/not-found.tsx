@@ -4,7 +4,7 @@ import FooterComponent from "@/shared/components/footer";
 import HeaderComponent from "@/shared/components/header";
 import { HOME_FOOTER } from "@/features/Home/constants/home.constants";
 import { buildPageMetadata } from "@/lib/seo";
-import { Divider, LinkComponent, Text } from "@/shared/ui-lib";
+import { LinkComponent, Text } from "@/shared/ui-lib";
 
 export const metadata = buildPageMetadata({
   title: "Page Not Found | NeevCloud",
@@ -19,9 +19,7 @@ export const metadata = buildPageMetadata({
 export default function NotFound() {
   return (
     <div className="relative">
-      <AnnouncementSection />
-      <HeaderComponent />
-      <Divider orientation="horizontal" />
+      <HeaderComponent announcement={<AnnouncementSection />} />
       <main>
         <section
           aria-labelledby="not-found-heading"

@@ -6,13 +6,22 @@ const CpuClusterHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" className="max-w-7xl text-center mt-4 md:mt-6 ">
-          The
-          <Text as="span" variant="h1" textColor="primary">
-            Control Plane
+        <>
+          <Text
+            as="h1"
+            className="max-w-7xl text-center mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            The
+            <Text as="span" variant="h1" textColor="primary">
+              Control Plane
+            </Text>
+            for your GPU Cluster.
           </Text>
-          for your GPU Cluster. Everything That Runs Around It.
-        </Text>
+          <Text as="h1" className="max-w-7xl text-center" textColor={"white"}>
+            Everything That Runs Around It.
+          </Text>
+        </>
       }
       {...CPU_CLUSTER_HERO}
     />

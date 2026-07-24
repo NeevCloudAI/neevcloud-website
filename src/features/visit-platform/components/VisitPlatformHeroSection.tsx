@@ -6,12 +6,24 @@ const VisitPlatformHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
-          Your AI Infrastructure,
-          <Text as="span" variant="h1" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl mt-4 md:mt-6"
+            textColor="white"
+          >
+            Your AI Infrastructure,
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor="primary"
+          >
             One Platform
           </Text>
-        </Text>
+        </>
       }
       {...MODEL_PLAYGROUND_HERO}
     />

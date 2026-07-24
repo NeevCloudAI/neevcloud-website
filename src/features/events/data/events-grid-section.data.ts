@@ -21,15 +21,13 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
     id: "kubecon-india-2026",
     category: "conference",
     categoryLabel: "CONFERENCE",
-    status: "upcoming",
+    status: "past",
     title: "KubeCon India 2026",
     description:
       "Meet the NeevCloud team at India's premier Kubernetes and cloud-native conference.",
     date: "18-19 June, 2026",
     location: "Mumbai, India",
     ctaLabel: "Register Now",
-    ctaHref: EXTERNAL_LINKS.kubeconIndia2026,
-    ctaTarget: "_blank",
   },
   {
     id: "india-ai-impact-summit-2026",
@@ -57,7 +55,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
     id: "building-sovereign-ai-webinar",
     category: "webinar",
     categoryLabel: "WEBINAR",
-    status: "upcoming",
+    status: "past",
     title: "Building Sovereign AI Infrastructure in India",
     description:
       "Learn how teams design India-first AI stacks with data residency, GPU scale, and unified APIs.",
@@ -79,7 +77,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
     id: "gpu-infrastructure-deep-dive",
     category: "workshop",
     categoryLabel: "WORKSHOP",
-    status: "upcoming",
+    status: "past",
     title: "GPU Infrastructure Deep-Dive Workshop",
     description:
       "Deep-dive into cluster design, scheduling, and observability for large-scale AI training and inference.",
@@ -123,7 +121,7 @@ export const EVENTS_GRID_ITEMS: readonly EventCardItem[] = [
 
 export function matchesEventFilter(
   event: EventCardItem,
-  filter: EventFilterId,
+  filter: EventFilterId
 ): boolean {
   switch (filter) {
     case "all":

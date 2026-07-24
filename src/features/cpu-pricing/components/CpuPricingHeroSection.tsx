@@ -6,12 +6,24 @@ const CpuPricingHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="mt-4 max-w-5xl md:mt-6">
-          Compute Without Limits,
-          <Text variant="h1" as="span" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-4xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            Compute Without Limits,
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-4xl"
+            textColor={"primary"}
+          >
             Innovate Without Waiting
           </Text>
-        </Text>
+        </>
       }
       {...CPU_PRICING_HERO}
     />

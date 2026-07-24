@@ -74,8 +74,24 @@ export default function StackScrollClient() {
   // Mobile: vertical tap-to-open accordion (one tier always open, first by
   // default) — the desktop version is scroll-driven instead.
   const [mobileOpen, setMobileOpen] = useState(0);
+  // Only attach the (document-wide) scroll listener while the runway is
+  // actually near the viewport — otherwise it'd force a layout read on every
+  // scroll event anywhere on the page for the whole time Home is mounted.
+  const [nearViewport, setNearViewport] = useState(false);
 
   useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => setNearViewport(entry.isIntersecting),
+      { rootMargin: "200px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!nearViewport) return;
     let raf = 0;
     const compute = () => {
       raf = 0;
@@ -118,7 +134,7 @@ export default function StackScrollClient() {
       document.removeEventListener("scroll", onScroll, { capture: true });
       window.removeEventListener("resize", onScroll);
     };
-  }, [itemCount]);
+  }, [itemCount, nearViewport]);
 
   const openId = items[activeIndex]?.id;
   const scrollToItem = (index: number) => {

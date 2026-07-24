@@ -5,24 +5,34 @@ import Image from "next/image";
 
 const AboutUsHeroSection = () => {
   return (
-    <section className="relative bg-white pt-8 md:pt-16 2xl:pt-25">
+    <section className="relative bg-black pt-8 md:pt-16 2xl:pt-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
           textColor="primary-90"
-          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90"
         >
           {ABOUT_US_HERO.badgeText}
         </Text>
 
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
+        <Text
+          as="h1"
+          align="center"
+          className="max-w-5xl mt-4 md:mt-6"
+          textColor={"white"}
+        >
           Building the Foundation
           <Text as="span" variant="h1" textColor="primary">
             for AI
           </Text>
         </Text>
 
-        <Text as="h6" className="mt-2.5 max-w-3xl" align="center">
+        <Text
+          as="h6"
+          className="mt-2.5 max-w-3xl"
+          align="center"
+          textColor={"white"}
+        >
           {ABOUT_US_HERO.description}
         </Text>
 
@@ -36,7 +46,7 @@ const AboutUsHeroSection = () => {
           </LinkComponent>
           <LinkComponent
             href={ABOUT_US_HERO.secondaryCtaRoute ?? ""}
-            variant="outline"
+            variant="outline-primary"
             target={ABOUT_US_HERO.secondaryCtaTarget}
             spacing="lg"
           >
@@ -47,11 +57,11 @@ const AboutUsHeroSection = () => {
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">
           {ABOUT_US_HERO.trustBadges.map((badge, index) => (
             <div key={badge} className="flex items-center gap-3">
-              <span className="text-black text-sm whitespace-nowrap">
+              <span className="text-white text-sm whitespace-nowrap">
                 {badge}
               </span>
               {index < ABOUT_US_HERO.trustBadges.length - 1 && (
-                <span className="text-black text-sm">•</span>
+                <span className="text-white text-sm">•</span>
               )}
             </div>
           ))}

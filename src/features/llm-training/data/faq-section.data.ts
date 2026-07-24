@@ -29,11 +29,4 @@ export const LLM_TRAINING_FAQ_ITEMS: FaqItem[] = [
     answer:
       "Local NVMe delivers 7 GB/s reads. Copy datasets from object storage to local NVMe storage at startup to maximum training throughput.",
   },
-  {
-    id: 5,
-    category: "Scaling",
-    question: "Can I run multi-node training?",
-    answer:
-      "Yes. Launch multi-node clusters with InfiniBand networking (400 Gbps). DeepSpeed and Megatron-LM handle distributed training automatically.",
-  },
 ];

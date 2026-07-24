@@ -6,12 +6,24 @@ const WhyAiSupercloudHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="mt-4 max-w-2xl md:mt-6">
-          Why AI Needs a
-          <Text as="span" variant="h1" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="mt-4 max-w-5xl md:mt-6"
+            textColor="white"
+          >
+            Why AI Needs a
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor="primary"
+          >
             Different Cloud
           </Text>
-        </Text>
+        </>
       }
       {...WHY_AI_SUPERCLOUD_HERO}
     />

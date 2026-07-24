@@ -11,6 +11,7 @@ const PrivacyPolicyHeroSection = () => {
           id="privacy-policy-hero-heading"
           align="center"
           className="max-w-4xl mt-4 md:mt-6"
+          textColor={"white"}
         >
           {PRIVACY_POLICY_HERO.title}
         </Text>

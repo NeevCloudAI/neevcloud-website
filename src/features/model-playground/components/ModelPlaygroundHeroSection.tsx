@@ -6,17 +6,22 @@ const ModelPlaygroundHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text
-          as="h1"
-          align="center"
-          className="max-w-2xl mt-4"
-          textColor="primary"
-        >
-          Experience
-          <Text variant="h1" as="span" textColor="black">
-            AI Models Before You Deploy
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-2xl mt-4"
+            textColor="primary"
+          >
+            Experience
+            <Text variant="h1" as="span" textColor="white">
+              AI Models
+            </Text>
           </Text>
-        </Text>
+          <Text as="h1" align="center" className="max-w-2xl" textColor="white">
+            Before You Deploy
+          </Text>
+        </>
       }
       {...MODEL_PLAYGROUND_HERO}
     />

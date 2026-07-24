@@ -1,8 +1,16 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { RiArrowDownSLine } from "@remixicon/react";
 import Container from "@/shared/components/container";
 import type { FaqItem } from "@/shared/data/faq-section-types";
 import { cn } from "@/lib/utils";
-import FaqAccordionItem from "./faq-accordion-item";
-import FaqSectionHeader from "./faq-section-header";
+
+const FAQ_SECTION_TITLE = "Frequently Asked Questions";
+const FAQ_FOOTER_LEAD = "Can't find an answer to your question?";
+const FAQ_FOOTER_CTA_LABEL = "Get in touch";
+const FAQ_FOOTER_CTA_HREF = "/contact-neevcloud";
 
 type FaqSectionProps = {
   items: readonly FaqItem[];
@@ -10,26 +18,94 @@ type FaqSectionProps = {
   className?: string;
 };
 
+// Open-list FAQ (Craft-style rows, NeevCloud styling): hairline dividers,
+// one question expanded at a time, teal accents.
 export default function FaqSection({
   items,
   description,
   className,
 }: FaqSectionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
     <section
-      aria-labelledby="faq-section-heading"
-      className={cn("bg-black py-8 md:py-16 2xl:py-25", className)}
+      aria-labelledby="faq-heading"
+      // overflow-anchor:none — accordion height changes otherwise trigger the
+      // browser's scroll anchoring, which visibly nudges the page ("dancing").
+      className={cn(
+        "bg-cloud-gray py-[34px] [overflow-anchor:none] md:py-24",
+        className,
+      )}
     >
-      <Container className="flex flex-col items-center justify-center">
-        <FaqSectionHeader id="faq-section-heading" description={description} />
+      <Container className="flex flex-col gap-10 md:gap-14">
+        <div className="flex flex-col gap-3 text-center">
+          <h2
+            id="faq-heading"
+            className="text-[28px] font-normal capitalize leading-[120%] tracking-[-0.01em] text-black sm:text-[36px] md:text-[44px]"
+          >
+            {FAQ_SECTION_TITLE}
+          </h2>
+          {description && (
+            <p className="text-[14px] leading-[150%] text-black/60 md:text-[16px]">
+              {description}
+            </p>
+          )}
+        </div>
 
-        <ul className="mt-4 flex w-full max-w-4xl list-none flex-col gap-4 md:mt-12.5 md:gap-5">
-          {items.map((faq, index) => (
-            <li key={faq.id}>
-              <FaqAccordionItem faq={faq} defaultOpen={index === 0} />
-            </li>
-          ))}
-        </ul>
+        <div className="mx-auto w-full max-w-[960px]">
+          <ul className="list-none border-t border-black/10">
+            {items.map((item, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <li key={item.id} className="border-b border-black/10">
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${item.id}`}
+                    onClick={() => setOpenIndex(isOpen ? null : index)}
+                    className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                  >
+                    <span className="text-[16px] font-medium leading-[132%] tracking-[-0.01em] text-black sm:text-[18px]">
+                      {item.question}
+                    </span>
+                    <RiArrowDownSLine
+                      size={22}
+                      aria-hidden
+                      className={cn(
+                        "shrink-0 text-[#00A78B] transition-transform duration-300",
+                        isOpen && "rotate-180",
+                      )}
+                    />
+                  </button>
+                  <div
+                    id={`faq-panel-${item.id}`}
+                    aria-hidden={!isOpen}
+                    className={cn(
+                      "grid transition-all duration-300 ease-out",
+                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                    )}
+                  >
+                    <div className="min-h-0 overflow-hidden">
+                      <p className="max-w-[70ch] pb-5 text-[14px] font-normal leading-[160%] tracking-[-0.01em] text-black/70">
+                        {item.answer}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+
+          <p className="pt-8 text-center text-[14px] leading-[150%] text-black/60">
+            {FAQ_FOOTER_LEAD}{" "}
+            <Link
+              href={FAQ_FOOTER_CTA_HREF}
+              className="font-medium text-[#00A78B] transition-colors hover:text-primary-90"
+            >
+              {FAQ_FOOTER_CTA_LABEL}
+            </Link>
+          </p>
+        </div>
       </Container>
     </section>
   );

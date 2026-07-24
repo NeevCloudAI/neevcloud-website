@@ -6,12 +6,24 @@ const MediaHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-2xl mt-4 md:mt-6">
-          GPU Cloud Built for
-          <Text as="span" variant="h1" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            GPU Cloud Built for
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor={"primary"}
+          >
             Media & VFX
           </Text>
-        </Text>
+        </>
       }
       {...MEDIA_HERO}
     />

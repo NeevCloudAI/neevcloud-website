@@ -17,12 +17,12 @@ const RecentAnnouncementsSection = () => {
           as="h2"
           id="recent-announcements-section-heading"
           align="center"
-          className="max-w-4xl"
+          className="max-w-4xl mb-4 md:mb-10"
         >
           {RECENT_ANNOUNCEMENTS_SECTION.title}
         </Text>
 
-        <ul className="m-0 mt-4 grid w-full list-none grid-cols-1 gap-4 md:gap-5 p-0 md:mt-12.5 md:grid-cols-2">
+        <ul className="grid w-full list-none grid-cols-1 gap-4 md:gap-5 p-0 md:grid-cols-2">
           {RECENT_ANNOUNCEMENTS_ITEMS.map((announcement) => (
             <li key={announcement.id}>
               <AnnouncementCard announcement={announcement} />

@@ -6,12 +6,18 @@ const GpuClusterHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" className="mt-4 md:mt-5 max-w-4xl text-center">
-          The Right GPU for Every
-          <Text as="span" variant="h1" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            className="mt-4 md:mt-5 max-w-4xl text-center"
+            textColor={"white"}
+          >
+            The Right GPU for Every
+          </Text>
+          <Text as="h1" className="max-w-4xl text-center" textColor={"primary"}>
             AI Workload
           </Text>
-        </Text>
+        </>
       }
       {...GPU_CLUSTER_HERO}
     />

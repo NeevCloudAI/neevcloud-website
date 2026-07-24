@@ -24,7 +24,7 @@ const UseCasePanel = ({
       role="tabpanel"
       aria-labelledby={labelledBy}
       hidden={hidden}
-      className="relative bg-cloud-gray w-full p-4 md:p-12.5 flex flex-col md:flex-row gap-5 overflow-hidden"
+      className="relative bg-cloud-gray w-full p-4 md:p-12.5 flex justify-between flex-col md:flex-row gap-5 overflow-hidden"
     >
       <div>
         <div className="absolute bottom-[-45%] left-0">

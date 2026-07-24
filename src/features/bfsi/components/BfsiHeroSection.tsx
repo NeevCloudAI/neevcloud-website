@@ -6,12 +6,24 @@ const BfsiHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-4xl mt-4 md:mt-6">
-          AI Infrastructure Built for
-          <Text as="span" variant="h1" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            AI Infrastructure Built for
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor={"primary"}
+          >
             Financial Services
           </Text>
-        </Text>
+        </>
       }
       {...BFSI_HERO}
     />

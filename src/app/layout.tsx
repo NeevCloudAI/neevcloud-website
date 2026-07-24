@@ -34,8 +34,6 @@ export default function RootLayout({
         className={`${poppins.variable} ${instrumentSans.variable} ${spaceMono.variable}`}
       >
         {children}
-        {/* GTM + GA + Clarity load on first interaction / post-load idle —
-            keeps ~900KB of tag JS off the critical path */}
         <DeferredAnalytics />
       </body>
     </html>

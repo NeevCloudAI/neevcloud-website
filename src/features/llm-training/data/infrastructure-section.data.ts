@@ -9,7 +9,7 @@ export const LLM_TRAINING_INFRASTRUCTURE_ITEMS: readonly AmbitionDetailItem[] =
       iconAlt: "Multi-GPU configurations",
       title: "Multi-GPU Configurations",
       description:
-        "Single-node to distributed setups for large model fine-tuning. Scale from 1 GPU to 64+ GPU clusters with InfiniBand networking.",
+        "Single-node to distributed setups for large model fine-tuning.",
       bullets: [
         { id: 1, title: "Single GPU (H100, A100, A30)" },
         { id: 2, title: "Multi-GPU nodes (8x H100, 8x A100)" },

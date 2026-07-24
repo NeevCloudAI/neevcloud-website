@@ -323,7 +323,7 @@ body {
 }
 
 /* Footer wordmark watermark glow: the mask itself is set inline in
-   footer-2026.tsx (Turbopack drops url() masks from bundled CSS); only the
+   footer.tsx (Turbopack drops url() masks from bundled CSS); only the
    drift animation lives here. */
 .footer-watermark-glow {
   animation: footer-glow-drift 14s ease-in-out infinite alternate;
@@ -365,12 +365,6 @@ button:not(:disabled) {
 
 .hero-in {
   animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-/* Balance homepage headings so a heading never drops a single lonely word
-   onto its own last line (avoids typographic "widows/orphans"). */
-.home-2026 :is(h1, h2, h3) {
-  text-wrap: balance;
 }
 
 /* Stack section: tall scroll runway on desktop only (drives the pinned,

@@ -6,12 +6,24 @@ const GpuPricingHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="mt-4 max-w-4xl md:mt-6">
-          GPU Compute Designed for AI,
-          <Text variant="h1" as="span" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-6xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            GPU Compute Designed for AI,
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-4xl"
+            textColor={"primary"}
+          >
             Not Just Adapted for It
           </Text>
-        </Text>
+        </>
       }
       {...GPU_PRICING_HERO}
     />

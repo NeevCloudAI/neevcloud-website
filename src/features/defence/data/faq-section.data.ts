@@ -23,7 +23,7 @@ export const DEFENCE_FAQ_ITEMS: readonly FaqItem[] = [
     question:
       "What GPU infrastructure is available for defence AI applications?",
     answer:
-      "H100, H200, and A100 GPUs available as single instances or multi-GPU clusters. InfiniBand networking for distributed training on intelligence, surveillance, and autonomous systems workloads.",
+      "H100, H200, and A100 GPUs available as single instances or multi-GPU clusters.",
   },
   {
     id: 4,

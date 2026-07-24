@@ -7,7 +7,7 @@ export const RENDERING_SERVICES: readonly ServiceItem[] = [
     title: "GPU Compute",
     specs: "H100 • H200 • B200 • A100",
     description:
-      "Rendering-optimized GPUs. Single instances or multi-GPU clusters with NVLink and InfiniBand fabric.",
+      "Rendering-optimized GPUs. Single instances or multi-GPU clusters with NVLink.",
     highlight: "8× NVLink",
     highlightSubtext: "400 Gbps IB",
     href: "/gpu-cluster",

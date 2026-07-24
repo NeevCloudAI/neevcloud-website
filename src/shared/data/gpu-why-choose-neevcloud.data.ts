@@ -52,13 +52,6 @@ export const GPU_WHY_CHOOSE_NEEVCLOUD_SECTION: GpuWhyChooseNeevcloudSectionConte
             "Deploy AI infrastructure rapidly with a plug-and-play architecture that simplifies provisioning, management, and operations while reducing deployment risk, accelerating time-to-value, and minimizing operational complexity from day one.",
         },
         {
-          id: "infiniband",
-          title: "InfiniBand for distributed training",
-          icon: "/icons/infiniband.svg",
-          description:
-            "Power large-scale distributed training with InfiniBand networking, delivering ultra-low latency, predictable scalability, and optimized interconnect performance for synchronized GPU clusters and data-intensive workloads.",
-        },
-        {
           id: "instant-scalability",
           title: "Instant Scalability",
           icon: "/icons/scalability.svg",

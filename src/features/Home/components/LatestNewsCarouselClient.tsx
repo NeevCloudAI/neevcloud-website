@@ -16,7 +16,9 @@ export default function LatestNewsCarouselClient() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    let raf = 0;
     const update = () => {
+      raf = 0;
       const left = el.scrollLeft > 8;
       const right = el.scrollLeft < el.scrollWidth - el.clientWidth - 8;
       setEdges((prev) =>
@@ -27,12 +29,18 @@ export default function LatestNewsCarouselClient() {
       // The edge fade reads as an ugly "blur" on phones — only mask from sm up.
       setMasked(window.innerWidth >= 640);
     };
+    // rAF-throttle so a fast swipe/scroll doesn't fire a state update (and
+    // re-render) on every native scroll event.
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
     update();
-    el.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+    el.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
     return () => {
-      el.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
+      if (raf) cancelAnimationFrame(raf);
+      el.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
     };
   }, []);
 

@@ -6,24 +6,40 @@ import Image from "next/image";
 
 const ContactNeevcloudHeroSection = () => {
   return (
-    <section className="relative bg-white py-8 md:py-16 2xl:py-25">
+    <section className="relative bg-black py-8 md:py-16 2xl:py-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
           textColor="primary-90"
-          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90"
         >
           {CONTACT_NEEVCLOUD_HERO.badgeText}
         </Text>
 
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
+        <Text
+          as="h1"
+          align="center"
+          className="max-w-5xl mt-4 md:mt-6"
+          textColor={"white"}
+        >
           Let&apos;s Build
-          <Text as="span" variant="h1" textColor="primary">
-            Your AI Infrastructure
-          </Text>
         </Text>
 
-        <Text as="h6" className="mt-2.5 max-w-xl" align="center">
+        <Text
+          as="h1"
+          align="center"
+          className="max-w-5xl"
+          textColor={"primary"}
+        >
+          Your AI Infrastructure
+        </Text>
+
+        <Text
+          as="h6"
+          className="mt-2.5 max-w-xl"
+          align="center"
+          textColor={"white"}
+        >
           {CONTACT_NEEVCLOUD_HERO.description}
         </Text>
 
@@ -36,7 +52,7 @@ const ContactNeevcloudHeroSection = () => {
           </LinkComponent>
           <LinkComponent
             href={CONTACT_NEEVCLOUD_HERO.secondaryCtaRoute ?? ""}
-            variant="outline"
+            variant="outline-primary"
             target={CONTACT_NEEVCLOUD_HERO.secondaryCtaTarget}
             spacing="lg"
           >
@@ -48,12 +64,12 @@ const ContactNeevcloudHeroSection = () => {
           {CONTACT_NEEVCLOUD_HERO.trustBadges.map((badge, index) => (
             <div key={badge} className="flex items-center gap-3">
               {CONTACT_NEEVCLOUD_HERO.badgeIcon && <CircleCheck size={16} />}
-              <span className="text-black text-sm whitespace-nowrap">
+              <span className="text-white text-sm whitespace-nowrap">
                 {badge}
               </span>
               {!CONTACT_NEEVCLOUD_HERO.badgeIcon &&
                 index < CONTACT_NEEVCLOUD_HERO.trustBadges.length - 1 && (
-                  <span className="text-black text-sm">•</span>
+                  <span className="text-white text-sm">•</span>
                 )}
             </div>
           ))}
@@ -69,7 +85,12 @@ const ContactNeevcloudHeroSection = () => {
           />
         </div>
 
-        <Text as="h3" weight="medium" className="mt-4 md:mt-12.5 italic">
+        <Text
+          as="h3"
+          weight="medium"
+          className="mt-4 md:mt-12.5 italic"
+          textColor={"white"}
+        >
           Built for ideas that demand scale.
         </Text>
       </Container>

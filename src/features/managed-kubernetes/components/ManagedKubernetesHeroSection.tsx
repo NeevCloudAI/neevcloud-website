@@ -6,18 +6,33 @@ const ManagedKubernetesHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-6xl mt-4 md:mt-6">
-          Kubernetes Built for GPUs.
+        <>
           <Text
-            variant="h1"
-            as="span"
-            textColor="primary"
-            className="mr-0 md:mr-0"
+            as="h1"
+            align="center"
+            className="max-w-6xl mt-4 md:mt-6"
+            textColor={"white"}
           >
-            Managed
+            Kubernetes Built for GPUs.
+            <Text
+              variant="h1"
+              as="span"
+              textColor="primary"
+              className="mr-0 md:mr-0"
+            >
+              Managed
+            </Text>
+            {`,`}
           </Text>
-          {`, So You Don't Have To Be.`}
-        </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-6xl"
+            textColor={"white"}
+          >
+            {`So You Don't Have To Be.`}
+          </Text>
+        </>
       }
       {...MANAGED_KUBERNETES_HERO}
     />

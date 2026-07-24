@@ -350,7 +350,7 @@ export const NVIDIA_B300_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConten
         id: "networking",
         feature: "Networking",
         specification:
-          "8x OSFP ports; Up to 800Gb/s NVIDIA InfiniBand/Ethernet; 2x dual-port QSFP112 NVIDIA BlueField-3 DPU",
+          "8x OSFP ports; Up to 800Gb/s NVIDIA Ethernet; 2x dual-port QSFP112 NVIDIA BlueField-3 DPU",
       },
       {
         id: "storage",

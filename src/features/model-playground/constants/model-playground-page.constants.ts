@@ -7,7 +7,7 @@ export const MODEL_PLAYGROUND_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiInferencePlayground,
   primaryCtaTarget: "_blank",
   secondaryCta: "View ALL Models",
-  secondaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
+  secondaryCtaRoute: EXTERNAL_LINKS.modelApi,
   secondaryCtaTarget: "_blank",
   badgeText: "Test AI Models Free",
   image: "/images/webp/model-playground.webp",

@@ -16,7 +16,7 @@ export const NEEVCLOUD_ARENA_HERO = {
     "Zero Setup",
     "99.9% uptime SLA",
   ],
-  image: "/images/webp/model-api.webp",
+  image: "/images/webp/visit-platform.webp",
 } as const;
 
 export const NEEVCLOUD_ARENA_FOOTER = {

@@ -2,14 +2,14 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 export const GPU_CLUSTER_HERO = {
   description:
-    "One platform. On-demand, reserved, or spot, all on India-sovereign infrastructure. Every instance includes InfiniBand networking, NVMe-attached storage, and pre-built ML images. Live within minutes.",
+    "One platform. On-demand, reserved, all on India-sovereign infrastructure. Every instance includes NVMe-attached storage, and pre-built ML images. Live within minutes.",
   primaryCta: "Configure Now",
   primaryCtaRoute: EXTERNAL_LINKS.deployGpu,
   primaryCtaTarget: "_blank",
   secondaryCta: "Compare GPUs",
   secondaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   secondaryCtaTarget: "_blank",
-  badgeText: "Bare GPU Compute - Billed in INR",
+  badgeText: "Dedicated GPU - Pay as you go - Billed Per Minute",
   image: "/images/webp/gpu-cluster.webp",
 } as const;
 

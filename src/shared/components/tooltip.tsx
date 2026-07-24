@@ -25,7 +25,7 @@ export function Tooltip({
     <span
       className={cn(
         "group/tooltip relative inline-block outline-none",
-        className,
+        className
       )}
       tabIndex={0}
     >
@@ -33,12 +33,12 @@ export function Tooltip({
       <span
         role="tooltip"
         className={cn(
-          "pointer-events-none absolute z-50 w-max max-w-sm rounded-md bg-white p-4 text-sm text-black drop-shadow-lg",
+          "absolute z-50 w-max max-w-sm rounded-md bg-white p-4 text-sm text-black drop-shadow-lg",
           "after:absolute after:left-1/2 after:top-full after:-translate-x-1/2 after:border-x-8 after:border-t-8 after:border-x-transparent after:border-t-white after:content-['']",
           "invisible opacity-0 transition-opacity duration-200",
           "group-hover/tooltip:visible group-hover/tooltip:opacity-100",
           "group-focus-within/tooltip:visible group-focus-within/tooltip:opacity-100",
-          TOOLTIP_SIDE_CLASSES[side],
+          TOOLTIP_SIDE_CLASSES[side]
         )}
       >
         {content}

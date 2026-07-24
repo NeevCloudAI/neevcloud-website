@@ -4,25 +4,22 @@ import WhyNeevcloudSection from "./WhyNeevcloudSection";
 import ForDevelopersSection from "./ForDevelopersSection";
 import LeverageSection from "./LeverageSection";
 import InfraBentoSection from "./InfraBentoSection";
-import BlogSection from "./BlogSection";
-import FaqSection from "./FaqSection";
-import Footer2026 from "@/shared/components/footer-2026";
+import FaqSection from "@/shared/components/faq/faq-section";
+import Footer from "@/shared/components/footer";
+import { FAQ_ITEMS } from "../data/faq.data";
 
-// 2026 homepage — built section by section against the Paper design.
-// TODO: Infra Bento (section 6). Footer2026 is homepage-only for now; roll it
-// out to all pages (swap in every layout) once the design is approved.
 const HomeComponent = () => {
   return (
-    <div className="home-2026">
+    <div>
       <HeroSection />
       <StackSection />
       <WhyNeevcloudSection />
       <ForDevelopersSection />
       <LeverageSection />
       <InfraBentoSection />
-      <BlogSection />
-      <FaqSection />
-      <Footer2026 />
+      {/* <BlogSection /> */}
+      <FaqSection items={FAQ_ITEMS} />
+      <Footer />
     </div>
   );
 };

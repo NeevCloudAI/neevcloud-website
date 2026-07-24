@@ -6,7 +6,12 @@ const NewsroomHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-6xl mt-4 md:mt-6">
+        <Text
+          as="h1"
+          align="center"
+          className="max-w-6xl mt-4 md:mt-6"
+          textColor={"white"}
+        >
           NeevCloud in the
           <Text as="span" variant="h1" textColor="primary">
             Media

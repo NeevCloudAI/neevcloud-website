@@ -99,7 +99,7 @@ export const GPU_INSTANCE_FAMILIES: readonly GpuInstanceFamily[] = [
     number: "02",
     sidebarLabel: "Multi-GPU",
     titleName: "multi-gpu nodes",
-    subtitle: "// NVLink and InfiniBand within node : 8x to 8x GPU density",
+    subtitle: "// NVLink within node : 8x to 8x GPU density",
     footer:
       "// Ideal for large-model fine-tuning, tensor-parallel inference, and single-node distributed training.",
     rows: GPU_MULTI_GPU_PRICING_ROWS,

@@ -6,14 +6,12 @@ export const USE_CASES: UseCaseDefinition[] = [
     tabName: "LLM Training",
     logoAlt: "LLM training on Neevcloud GPU clusters",
     heading: "LLM Training",
-    description:
-      "Train models from scratch on H100 or H200 clusters. Full InfiniBand bandwidth between nodes. PyTorch 2.8 + CUDA 12.9 pre-installed.",
+    description: "Train models from scratch on H100 or H200 clusters.",
     tags: [
       { text: "H100", variant: "primary" },
       { text: "H200", variant: "primary" },
       { text: "PyTorch 2.8", variant: "muted" },
       { text: "CUDA 12.9", variant: "muted" },
-      { text: "InfiniBand", variant: "muted" },
     ],
     summary: [
       {
@@ -24,7 +22,6 @@ export const USE_CASES: UseCaseDefinition[] = [
       {
         label: "RECOMMENDED CLUSTER",
         title: "8x H100/H200",
-        subtitle: "Multi-node InfiniBand",
       },
       {
         label: "STARTING AT",
@@ -135,11 +132,10 @@ export const USE_CASES: UseCaseDefinition[] = [
     logoAlt: "HPC and scientific computing on Neevcloud",
     heading: "HPC / Scientific Computing",
     description:
-      "Parallel scientific workloads on GPU clusters with low-latency InfiniBand fabric. Available in Indore, India.",
+      "Parallel scientific workloads on GPU clusters with low-latency fabric. Available in Indore, India.",
     tags: [
       { text: "H100", variant: "primary" },
       { text: "A100", variant: "primary" },
-      { text: "InfiniBand", variant: "muted" },
       { text: "MPI", variant: "muted" },
       { text: "Batch", variant: "muted" },
     ],
@@ -152,7 +148,6 @@ export const USE_CASES: UseCaseDefinition[] = [
       {
         label: "RECOMMENDED CLUSTER",
         title: "Multi-node fabric",
-        subtitle: "Low-latency InfiniBand",
       },
       {
         label: "STARTING AT",

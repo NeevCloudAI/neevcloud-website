@@ -3,7 +3,6 @@ import ControlPlaneIncludedRow from "./ControlPlaneIncludedRow";
 
 const INCLUDED_ITEMS = [
   { label: "Control plane (API/scheduler/etcd)", price: "₹0" },
-  { label: "InfiniBand between nodes", price: "₹0" },
   { label: "GPU device plugins", price: "₹0" },
   { label: "Autoscaling + Prometheus + Grafana", price: "₹0" },
   { label: "Private registry", price: "₹0" },

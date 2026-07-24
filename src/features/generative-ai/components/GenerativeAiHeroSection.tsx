@@ -6,13 +6,28 @@ const GenerativeAiHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
-          Power Your
-          <Text as="span" variant="h1" textColor="primary">
-            GenAI Products
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            Power Your
+            <Text as="span" variant="h1" textColor="primary">
+              GenAI Products
+            </Text>
+            on
           </Text>
-          on Indian Infrastructure
-        </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor={"white"}
+          >
+            Indian Infrastructure
+          </Text>
+        </>
       }
       {...GENERATIVE_AI_HERO}
     />

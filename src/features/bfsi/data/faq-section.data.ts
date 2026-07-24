@@ -13,7 +13,7 @@ export const BFSI_FAQ_ITEMS: readonly FaqItem[] = [
     category: "Getting Started",
     question: "What GPU infrastructure is available for financial modeling?",
     answer:
-      "H100, H200, A100 GPUs available as single instances or multi-GPU clusters. InfiniBand networking for distributed training and simulations.",
+      "H100, H200, A100 GPUs available as single instances or multi-GPU clusters.",
   },
   {
     id: 3,

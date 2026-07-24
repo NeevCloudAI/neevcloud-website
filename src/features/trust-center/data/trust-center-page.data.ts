@@ -4,7 +4,7 @@ export const TRUST_CENTER_HERO = {
   badgeText: "Trust Center",
   description:
     "Enterprise-grade security, international compliance certifications, and transparent operations for teams building mission-critical AI systems.",
-  primaryCta: "View Certifications",
+  // primaryCta: "View Certifications",
   secondaryCta: "Explore Security",
   secondaryCtaRoute: "/privacy-policy",
   trustBadges: [
@@ -14,7 +14,7 @@ export const TRUST_CENTER_HERO = {
     "Zero Setup",
     "99.9% uptime SLA",
   ],
-  image: "/images/og/neevcloud-og.jpg",
+  image: "/images/webp/visit-platform.webp",
 } as const;
 
 export const TRUST_CENTER_FOOTER = {

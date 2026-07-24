@@ -44,7 +44,7 @@ export const STACK_ACCORDION_ITEMS: StackAccordionItem[] = [
       },
       {
         icon: "kubernetes",
-        text: "Managed Kubernetes (NKE). Run containerized workloads with managed control planes and production-grade operations.",
+        text: "Managed Kubernetes (NKS). Run containerized workloads with managed control planes and production-grade operations.",
       },
     ],
   },

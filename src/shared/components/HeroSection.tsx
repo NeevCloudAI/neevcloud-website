@@ -42,20 +42,25 @@ const HeroSection = ({
 }) => {
   return (
     <section
-      className={`relative bg-white pt-8 md:pt-16 2xl:pt-25 ${className}`}
+      className={`relative bg-black pt-8 md:pt-16 2xl:pt-25 ${className}`}
     >
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
           textColor="primary-90"
-          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90"
         >
           {badgeText}
         </Text>
 
         {title}
 
-        <Text as="h6" className="mt-2.5 max-w-4xl" align="center">
+        <Text
+          as="h6"
+          className="mt-2.5 max-w-3xl"
+          align="center"
+          textColor="white"
+        >
           {description}
         </Text>
 
@@ -77,7 +82,7 @@ const HeroSection = ({
                 variant="outline"
                 target={secondaryCtaTarget}
                 spacing="lg"
-                className="w-full md:w-auto"
+                className="w-full md:w-auto bg-white"
               >
                 {secondaryCta}
               </LinkComponent>
@@ -90,11 +95,11 @@ const HeroSection = ({
             {trustBadges.map((badge, index) => (
               <div key={badge} className="flex items-center gap-3">
                 {badgeIcon && <CircleCheck size={16} />}
-                <span className="text-black text-sm whitespace-nowrap">
+                <span className="text-white text-sm whitespace-nowrap">
                   {badge}
                 </span>
                 {!badgeIcon && index < trustBadges.length - 1 && (
-                  <span className="text-black text-sm">•</span>
+                  <span className="text-white text-sm">•</span>
                 )}
               </div>
             ))}

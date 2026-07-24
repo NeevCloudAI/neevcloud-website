@@ -10,20 +10,20 @@ export const CONVERSATION_SECTION = {
 export const CONTACT_INFO_CARDS: readonly ContactInfoCardItem[] = [
   {
     id: "live-chat",
-    title: "Live Chat With Us",
-    description: "From startups to enterprises,",
+    title: "Book a Meeting",
+    description: "Schedule a guided session with our team",
     icon: "calendar",
   },
   {
     id: "phone",
-    title: "Live Chat With Us",
-    description: "From startups to enterprises,",
+    title: "Call Us",
+    description: "Talk to our experts directly",
     icon: "phone",
   },
   {
     id: "email",
-    title: "Live Chat With Us",
-    description: "From startups to enterprises,",
+    title: "Email Us",
+    description: "Write to us — we reply within one business day.",
     icon: "mail",
   },
 ] as const;

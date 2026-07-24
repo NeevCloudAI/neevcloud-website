@@ -7,24 +7,34 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 const LeaderShipHeroSection = () => {
   return (
-    <section className="relative bg-white pt-8 md:pt-25">
+    <section className="relative bg-black py-8 md:py-25">
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
           textColor="primary-90"
-          className="bg-primary-90/6 p-1 rounded-md border border-primary-90/12"
+          className="bg-primary-90/6 p-1 rounded-md border border-primary-90"
         >
           {LEADERSHIP_HERO.badgeText}
         </Text>
 
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
+        <Text
+          as="h1"
+          align="center"
+          className="max-w-5xl mt-4 md:mt-6"
+          textColor={"white"}
+        >
           The
           <Text as="span" variant="h1" textColor="primary">
             Team
           </Text>
         </Text>
 
-        <Text as="h6" className="mt-2.5 max-w-2xl" align="center">
+        <Text
+          as="h6"
+          className="mt-2.5 max-w-2xl"
+          align="center"
+          textColor={"white"}
+        >
           {LEADERSHIP_HERO.description}
         </Text>
 
@@ -38,7 +48,7 @@ const LeaderShipHeroSection = () => {
           </LinkComponent>
           <LinkComponent
             href={LEADERSHIP_HERO.secondaryCtaRoute ?? ""}
-            variant="outline"
+            variant="outline-primary"
             target={LEADERSHIP_HERO.secondaryCtaTarget}
             spacing="lg"
           >

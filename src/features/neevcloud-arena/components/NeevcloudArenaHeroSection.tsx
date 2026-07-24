@@ -6,12 +6,19 @@ const NeevcloudArenaHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="mt-4 max-w-5xl md:mt-6">
-          Experience AI Infrastructure Before
-          <Text variant="h1" as="span" textColor="primary">
-            You Commit
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="mt-4 max-w-5xl md:mt-6"
+            textColor="white"
+          >
+            Experience AI Infrastructure Before
+            <Text variant="h1" as="span" textColor="primary">
+              You Commit
+            </Text>
           </Text>
-        </Text>
+        </>
       }
       {...NEEVCLOUD_ARENA_HERO}
     />

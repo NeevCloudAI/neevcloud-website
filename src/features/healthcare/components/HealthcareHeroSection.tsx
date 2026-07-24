@@ -6,12 +6,24 @@ const HealthcareHeroSection = () => {
   return (
     <HeroSection
       title={
-        <Text as="h1" align="center" className="max-w-5xl mt-4 md:mt-6">
-          AI Infrastructure for
-          <Text as="span" variant="h1" textColor="primary">
+        <>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl mt-4 md:mt-6"
+            textColor={"white"}
+          >
+            AI Infrastructure for
+          </Text>
+          <Text
+            as="h1"
+            align="center"
+            className="max-w-5xl"
+            textColor={"primary"}
+          >
             Healthcare & Medical Research
           </Text>
-        </Text>
+        </>
       }
       {...HEALTHCARE_HERO}
     />

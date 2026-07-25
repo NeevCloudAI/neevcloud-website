@@ -41,6 +41,7 @@ import {
   MoveLeft,
   MoveRight,
   Network,
+  Pause,
   PenLine,
   Phone,
   Play,
@@ -97,6 +98,7 @@ export {
   Mic,
   MoveLeft,
   MoveRight,
+  Pause,
   PenLine,
   Phone,
   Play,
@@ -124,6 +126,7 @@ export {
   Network,
   ClipboardCheck,
   Router,
+  Users,
 };
 
 export const LUCIDE_ICONS = {

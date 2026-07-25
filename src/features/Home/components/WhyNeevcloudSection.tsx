@@ -6,11 +6,8 @@ import { WHY_FEATURES, WHY_NEEVCLOUD } from "../data/why-neevcloud.data";
 
 export default function WhyNeevcloudSection() {
   return (
-    <section
-      aria-labelledby="why-heading"
-      className="bg-cloud-gray px-4 py-[34px] sm:px-8 md:px-[50px] md:py-20"
-    >
-      <Container className="flex max-w-[1340px] flex-col gap-12 px-0 2xl:max-w-[1340px]">
+    <section aria-labelledby="why-heading" className="bg-cloud-gray p-4">
+      <Container className="flex flex-col gap-12 px-0">
         <div className="flex w-full flex-col items-center gap-4 text-center">
           <h2
             id="why-heading"
@@ -32,12 +29,10 @@ export default function WhyNeevcloudSection() {
               key={feature.title}
               className="flex min-w-[240px] flex-1 basis-[min(100%,441px)] flex-row items-center gap-4 overflow-hidden border-b border-black/10 pb-5 text-left last:border-b-0 last:pb-0 sm:flex-col sm:border-b-0 sm:pb-0 sm:text-center md:min-w-0 md:basis-0"
             >
-              {/* Mobile: compact row — small icon left, text right. Desktop:
-                  centred column with the large icon on top. */}
               <div
                 className={cn(
                   "relative order-1 h-[61px] w-[70px] shrink-0 sm:h-[134px] sm:w-[153px]",
-                  index === 0 && "home-why-icon-turntable",
+                  index === 0 && "home-why-icon-turntable"
                 )}
               >
                 <Image
@@ -53,8 +48,6 @@ export default function WhyNeevcloudSection() {
                 <h3 className="text-[14px] font-medium leading-[120%] tracking-[-0.01em] text-black sm:text-[20px]">
                   {feature.title}
                 </h3>
-                {/* max-w in ch + balance keeps every subtext on exactly two
-                    even lines on desktop. */}
                 <p className="max-w-[46ch] whitespace-pre-wrap text-[11px] font-normal leading-[142%] tracking-[-0.02em] text-black [text-wrap:balance] sm:text-[14px]">
                   {feature.description}
                 </p>

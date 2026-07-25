@@ -49,9 +49,20 @@ import {
   RiNewspaperLine,
   RiArticleLine,
   RiServerLine,
+  RiLayoutGridLine,
+  RiComputerLine,
+  RiRobot2Line,
+  RiCloudLine,
+  RiPieChart2Line,
+  RiNodeTree,
 } from "@remixicon/react";
 
-type NavLink = { label: string; href: string; icon?: RemixiconComponentType };
+type NavLink = {
+  label: string;
+  href: string;
+  icon?: RemixiconComponentType;
+  soon?: boolean;
+};
 type NavGroup = { heading?: string; links: NavLink[] };
 type NavItem = { label: string; href: string; groups?: NavGroup[] };
 
@@ -119,6 +130,11 @@ const NAV_ITEMS: NavItem[] = [
             icon: RiFlashlightLine,
           },
           {
+            label: "Dedicated Inferencing",
+            href: "/dedicated-inferencing",
+            icon: RiServerLine,
+          },
+          {
             label: "Model Playground",
             href: "/model-playground",
             icon: RiSparkling2Line,
@@ -134,15 +150,15 @@ const NAV_ITEMS: NavItem[] = [
     href: "/gpu-cluster",
     groups: [
       {
-        heading: "Compute",
+        heading: "Released",
         links: [
-          { label: "CPU Instance", href: "/cpu-cluster", icon: RiCpuChipLine },
           { label: "GPU AI Service", href: "/gpu-cluster", icon: RiServerLine },
-        ],
-      },
-      {
-        heading: "Storage",
-        links: [
+          { label: "CPU Instance", href: "/cpu-cluster", icon: RiCpuChipLine },
+          {
+            label: "Managed Kubernetes",
+            href: "/managed-kubernetes",
+            icon: RiStackLine,
+          },
           {
             label: "High-Performance NVMe",
             href: "/nvme",
@@ -153,25 +169,36 @@ const NAV_ITEMS: NavItem[] = [
             href: "/object-storage",
             icon: RiDatabase2Line,
           },
-        ],
-      },
-      {
-        heading: "Orchestration",
-        links: [
           {
-            label: "Managed Kubernetes",
-            href: "/managed-kubernetes",
-            icon: RiStackLine,
+            label: "AI Templates",
+            href: "/ai-templates",
+            icon: RiLayoutGridLine,
+          },
+          { label: "VM Service", href: "/vm-service", icon: RiComputerLine },
+          {
+            label: "Agentic Studio",
+            href: "/agentic-studio",
+            icon: RiRobot2Line,
           },
         ],
       },
       {
-        heading: "Available GPUs",
+        heading: "Upcoming",
         links: [
-          { label: "H100", href: "/nvidia-h100", icon: RiCpuChipLine },
-          { label: "H200", href: "/nvidia-h200", icon: RiCpuChipLine },
-          { label: "B200", href: "/nvidia-b200", icon: RiCpuChipLine },
-          { label: "B300", href: "/nvidia-b300", icon: RiCpuChipLine },
+          {
+            label: "Serverless GPU",
+            href: "#",
+            icon: RiCloudLine,
+            soon: true,
+          },
+          { label: "vGPU", href: "#", icon: RiPieChart2Line, soon: true },
+          { label: "GPU Cluster", href: "#", icon: RiNodeTree, soon: true },
+          {
+            label: "Kubernetes (NKS)",
+            href: "#",
+            icon: RiStackLine,
+            soon: true,
+          },
         ],
       },
     ],
@@ -411,23 +438,45 @@ export default function HeaderComponent({
                               {group.heading}
                             </p>
                           )}
-                          {group.links.map((sub) => (
-                            <Link
-                              key={sub.label}
-                              href={sub.href}
-                              tabIndex={openNav === item.label ? 0 : -1}
-                              className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-                            >
-                              {sub.icon && (
-                                <sub.icon
-                                  size={15}
-                                  aria-hidden
-                                  className="shrink-0 text-neev-green/80"
-                                />
-                              )}
-                              {sub.label}
-                            </Link>
-                          ))}
+                          {group.links.map((sub) =>
+                            sub.soon ? (
+                              <div
+                                key={sub.label}
+                                aria-disabled="true"
+                                className="flex cursor-default items-center justify-between gap-4 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/50"
+                              >
+                                <span className="flex items-center gap-2.5">
+                                  {sub.icon && (
+                                    <sub.icon
+                                      size={15}
+                                      aria-hidden
+                                      className="shrink-0 text-white/30"
+                                    />
+                                  )}
+                                  {sub.label}
+                                </span>
+                                <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
+                                  Soon
+                                </span>
+                              </div>
+                            ) : (
+                              <Link
+                                key={sub.label}
+                                href={sub.href}
+                                tabIndex={openNav === item.label ? 0 : -1}
+                                className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                              >
+                                {sub.icon && (
+                                  <sub.icon
+                                    size={15}
+                                    aria-hidden
+                                    className="shrink-0 text-neev-green/80"
+                                  />
+                                )}
+                                {sub.label}
+                              </Link>
+                            )
+                          )}
                         </div>
                       ))}
                     </div>
@@ -484,7 +533,7 @@ export default function HeaderComponent({
             </div>
           </div>
           <Link
-            href="/contact-neevcloud"
+            href="/contact-neevcloud#contact-form"
             className="bg-white px-3 py-1 text-[13px] font-medium leading-6 tracking-[-0.02em] text-[#2D9D80] transition-colors hover:bg-white/90"
           >
             Contact Sales
@@ -587,23 +636,45 @@ export default function HeaderComponent({
                                 {group.heading}
                               </p>
                             )}
-                            {group.links.map((sub) => (
-                              <Link
-                                key={sub.label}
-                                href={sub.href}
-                                onClick={() => setIsOpen(false)}
-                                className="flex items-center gap-2.5 py-2 pl-4 text-[16px] text-white/70"
-                              >
-                                {sub.icon && (
-                                  <sub.icon
-                                    size={16}
-                                    aria-hidden
-                                    className="shrink-0 text-neev-green/80"
-                                  />
-                                )}
-                                {sub.label}
-                              </Link>
-                            ))}
+                            {group.links.map((sub) =>
+                              sub.soon ? (
+                                <div
+                                  key={sub.label}
+                                  aria-disabled="true"
+                                  className="flex items-center justify-between gap-4 py-2 pl-4 pr-2 text-[16px] text-white/40"
+                                >
+                                  <span className="flex items-center gap-2.5">
+                                    {sub.icon && (
+                                      <sub.icon
+                                        size={16}
+                                        aria-hidden
+                                        className="shrink-0 text-white/25"
+                                      />
+                                    )}
+                                    {sub.label}
+                                  </span>
+                                  <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
+                                    Soon
+                                  </span>
+                                </div>
+                              ) : (
+                                <Link
+                                  key={sub.label}
+                                  href={sub.href}
+                                  onClick={() => setIsOpen(false)}
+                                  className="flex items-center gap-2.5 py-2 pl-4 text-[16px] text-white/70"
+                                >
+                                  {sub.icon && (
+                                    <sub.icon
+                                      size={16}
+                                      aria-hidden
+                                      className="shrink-0 text-neev-green/80"
+                                    />
+                                  )}
+                                  {sub.label}
+                                </Link>
+                              )
+                            )}
                           </div>
                         ))}
                       </div>

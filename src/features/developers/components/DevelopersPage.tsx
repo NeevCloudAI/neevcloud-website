@@ -16,14 +16,8 @@ const DevelopersPage = () => {
       <DevelopersDocumentationSection />
       <DevelopersTutorialsSection />
       <DevelopersCommunitySection />
-      <FaqSection
-        items={DEVELOPERS_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
-      <FooterComponent
-        {...DEVELOPERS_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FaqSection items={DEVELOPERS_FAQ_ITEMS} />
+      <FooterComponent {...DEVELOPERS_FOOTER} />
     </>
   );
 };

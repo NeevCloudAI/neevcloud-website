@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/gpu-cluster",
-  title: "GPU Cluster | NeevCloud",
+  title: "GPU Compute for AI Workloads | On-Demand GPU Infrastructure | NeevCloud",
   description:
-    "One platform. On-demand, reserved, or spot - all on India-sovereign infrastructure. Every instance includes NVMe-attached storage, and pre-built ML images.",
-  openGraphDescription:
-    "Bare GPU compute on India-sovereign infrastructure with NVMe storage, and pre-built ML images. Live within minutes.",
+    "High-performance GPU compute built for AI training, fine-tuning, and inference. On-demand access, container-native or full VM deployment, transparent pricing, and zero vendor lock-in.",
 });
 
 const GpuClusterPage = () => {

@@ -15,10 +15,7 @@ const GpuClusterPage = () => {
       <ComputeSection />
       <UseCasesSection />
       <FaqSection items={GPU_CLUSTER_FAQ_ITEMS} />
-      <FooterComponent
-        {...GPU_CLUSTER_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FooterComponent {...GPU_CLUSTER_FOOTER} />
     </>
   );
 };

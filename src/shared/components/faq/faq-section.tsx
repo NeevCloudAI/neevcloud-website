@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const FAQ_SECTION_TITLE = "Frequently Asked Questions";
 const FAQ_FOOTER_LEAD = "Can't find an answer to your question?";
 const FAQ_FOOTER_CTA_LABEL = "Get in touch";
-const FAQ_FOOTER_CTA_HREF = "/contact-neevcloud";
+const FAQ_FOOTER_CTA_HREF = "/contact-neevcloud#contact-form";
 
 type FaqSectionProps = {
   items: readonly FaqItem[];
@@ -34,7 +34,7 @@ export default function FaqSection({
       // browser's scroll anchoring, which visibly nudges the page ("dancing").
       className={cn(
         "bg-cloud-gray py-[34px] [overflow-anchor:none] md:py-24",
-        className,
+        className
       )}
     >
       <Container className="flex flex-col gap-10 md:gap-14">
@@ -73,7 +73,7 @@ export default function FaqSection({
                       aria-hidden
                       className={cn(
                         "shrink-0 text-[#00A78B] transition-transform duration-300",
-                        isOpen && "rotate-180",
+                        isOpen && "rotate-180"
                       )}
                     />
                   </button>
@@ -82,7 +82,7 @@ export default function FaqSection({
                     aria-hidden={!isOpen}
                     className={cn(
                       "grid transition-all duration-300 ease-out",
-                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                     )}
                   >
                     <div className="min-h-0 overflow-hidden">

@@ -16,14 +16,14 @@ const GpuPricingPage = () => {
       <GpuPricingHeroSection />
       <GpuAiSection />
       <GpuModelTransparentPricingSection />
-      <GpuStoragePricingSection />
+      {/* <GpuStoragePricingSection /> */}
       <GpuTransparentPricingSection />
       <GpuDeploymentComparisonSection />
       <GpuCostCalculatorSection />
       <FaqSection items={GPU_PRICING_FAQ_ITEMS} />
       <FooterComponent
         {...GPU_PRICING_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
     </>
   );

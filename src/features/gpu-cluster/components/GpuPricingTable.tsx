@@ -34,7 +34,7 @@ const GpuPricingTable = () => {
         </thead>
         <tbody>
           {GPU_PRICING_TABLE_ROWS.map((row) => (
-            <GpuPricingTableRow key={row.sku} row={row} />
+            <GpuPricingTableRow key={row.config} row={row} />
           ))}
         </tbody>
       </table>

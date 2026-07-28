@@ -19,7 +19,7 @@ export const metadata = buildPageMetadata({
 export default function NotFound() {
   return (
     <div className="relative">
-      <HeaderComponent announcement={<AnnouncementSection />} />
+      <HeaderComponent />
       <main>
         <section
           aria-labelledby="not-found-heading"

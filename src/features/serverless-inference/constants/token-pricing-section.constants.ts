@@ -6,7 +6,6 @@ export const TOKEN_PRICING_TABLE_HEADERS: readonly TokenPricingTableHeader[] = [
   { id: "context", name: "context" },
   { id: "input", name: "input ₹/1M" },
   { id: "output", name: "output ₹/1M" },
-  { id: "free", name: "free tier" },
 ] as const;
 
 export const TOKEN_PRICING_TABLE_CELL_CLASS =

@@ -17,10 +17,10 @@ export const TCO_CALCULATOR_SECTION = {
 } as const;
 
 export const TCO_CALCULATOR_GPU_TYPES: readonly TcoCalculatorGpuType[] = [
-  { id: "h100", label: "H100", memory: "80GB HBM3", ratePerHour: 142 },
-  { id: "h200", label: "H200", memory: "141GB HBM3e", ratePerHour: 165 },
+  { id: "h100", label: "H100", memory: "80GB HBM3", ratePerHour: 192.48 },
+  { id: "h200", label: "H200", memory: "141GB HBM3e", ratePerHour: 231.17 },
   { id: "b100", label: "B100", memory: "192GB HBM3e", ratePerHour: 198 },
-  { id: "a100", label: "A100", memory: "80GB HBM2e", ratePerHour: 98 },
+  { id: "a100", label: "A100", memory: "80GB HBM2e", ratePerHour: 127.68 },
   { id: "mi300x", label: "MI300X", memory: "192GB HBM3", ratePerHour: 130 },
   { id: "l40s", label: "L40S", memory: "48GB GDDR6", ratePerHour: 45 },
 ] as const;
@@ -80,11 +80,7 @@ export const TCO_CALCULATOR_PROVIDERS: readonly TcoCalculatorProvider[] = [
 ] as const;
 
 export const TCO_CALCULATOR_STORAGE_RATES = {
-  localNvmePerGbMonth: 0.5,
   networkStoragePerGbMonth: 0.12,
-  objectStoragePerGbMonth: 0.06,
-  neevcloudDataTransferPerGb: 0,
-  inferencePerMillionTokens: 22.55,
 } as const;
 
 export const TCO_CALCULATOR_GPU_TYPE_BY_ID = Object.fromEntries(

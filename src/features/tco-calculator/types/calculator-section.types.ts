@@ -44,19 +44,13 @@ export type TcoCalculatorConfig = {
   gpuCount: number;
   hoursPerMonth: number;
   commitmentId: TcoCalculatorCommitmentId;
-  localNvmeGb: number;
   networkStorageGb: number;
-  objectStorageGb: number;
-  dataTransferGb: number;
-  inferenceTokensMn: number;
 };
 
 export type TcoCalculatorBreakdown = {
   monthlyTotal: number;
   gpuCompute: number;
   storageTotal: number;
-  inferenceCost: number;
-  dataTransferCost: number;
   summaryLabel: string;
   providerTotals: Record<TcoCalculatorProviderId, number>;
   providerSavings: Record<

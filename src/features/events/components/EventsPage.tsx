@@ -13,7 +13,7 @@ const EventsPage = () => {
       <EventsLatestHighlightSection />
       <EventsGridSection />
       <FaqSection items={EVENTS_FAQ_ITEMS} />
-      <FooterComponent {...EVENTS_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <FooterComponent {...EVENTS_FOOTER} />
     </>
   );
 };

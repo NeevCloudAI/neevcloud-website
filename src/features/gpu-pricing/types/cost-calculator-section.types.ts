@@ -2,9 +2,7 @@ export type GpuCostCalculatorGpuTypeId =
   | "1x-h100"
   | "2x-h100"
   | "4x-h100"
-  | "8x-a100"
-  | "5x-l40s"
-  | "6x-l40s";
+  | "8x-a100";
 
 export type GpuCostCalculatorCommitmentId =
   | "on-demand"

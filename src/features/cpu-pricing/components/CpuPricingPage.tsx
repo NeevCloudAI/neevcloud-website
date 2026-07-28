@@ -19,7 +19,6 @@ const CpuPricingPage = () => {
       <FaqSection items={CPU_PRICING_FAQ_ITEMS} />
       <FooterComponent
         {...CPU_PRICING_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

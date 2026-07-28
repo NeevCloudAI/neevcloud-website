@@ -18,11 +18,9 @@ const ManagedKubernetesPage = () => {
       <ControlPlaneSection />
       <FaqSection
         items={KUBERNETES_CLUSTER_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
         {...MANAGED_KUBERNETES_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

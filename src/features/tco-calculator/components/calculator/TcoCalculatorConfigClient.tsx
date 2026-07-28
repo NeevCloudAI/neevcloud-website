@@ -3,24 +3,16 @@
 import { useCallback, useMemo, useState } from "react";
 import { Text, LinkComponent } from "@/shared/ui-lib";
 import {
-  DATA_TRANSFER_MAX_GB,
   DEFAULT_COMMITMENT_ID,
-  DEFAULT_DATA_TRANSFER_GB,
   DEFAULT_GPU_COUNT,
   DEFAULT_GPU_TYPE_ID,
   DEFAULT_HOURS_PER_MONTH,
-  DEFAULT_INFERENCE_TOKENS_MN,
-  DEFAULT_LOCAL_NVME_GB,
   DEFAULT_NETWORK_STORAGE_GB,
-  DEFAULT_OBJECT_STORAGE_GB,
   GPU_COUNT_MAX,
   GPU_COUNT_MIN,
   HOURS_MAX,
   HOURS_MIN,
-  INFERENCE_TOKENS_MAX_MN,
-  LOCAL_NVME_MAX_GB,
   NETWORK_STORAGE_MAX_GB,
-  OBJECT_STORAGE_MAX_GB,
   PROVIDER_COMPARISON_SECTION_ID,
 } from "../../constants/calculator-section.constants";
 import { TCO_CALCULATOR_SECTION } from "../../data/calculator-section.data";
@@ -30,7 +22,6 @@ import type {
 } from "../../types/calculator-section.types";
 import {
   calculateTcoBreakdown,
-  formatInferenceTokens,
   formatStorageGb,
 } from "../../utils/tco-calculator-utils";
 import TcoCalculatorCommitmentSelector from "./TcoCalculatorCommitmentSelector";
@@ -47,18 +38,8 @@ const TcoCalculatorConfigClient = () => {
   const [commitmentId, setCommitmentId] = useState<TcoCalculatorCommitmentId>(
     DEFAULT_COMMITMENT_ID,
   );
-  const [localNvmeGb, setLocalNvmeGb] = useState(DEFAULT_LOCAL_NVME_GB);
   const [networkStorageGb, setNetworkStorageGb] = useState(
     DEFAULT_NETWORK_STORAGE_GB,
-  );
-  const [objectStorageGb, setObjectStorageGb] = useState(
-    DEFAULT_OBJECT_STORAGE_GB,
-  );
-  const [dataTransferGb, setDataTransferGb] = useState(
-    DEFAULT_DATA_TRANSFER_GB,
-  );
-  const [inferenceTokensMn, setInferenceTokensMn] = useState(
-    DEFAULT_INFERENCE_TOKENS_MN,
   );
 
   const breakdown = useMemo(
@@ -68,23 +49,9 @@ const TcoCalculatorConfigClient = () => {
         gpuCount,
         hoursPerMonth,
         commitmentId,
-        localNvmeGb,
         networkStorageGb,
-        objectStorageGb,
-        dataTransferGb,
-        inferenceTokensMn,
       }),
-    [
-      gpuTypeId,
-      gpuCount,
-      hoursPerMonth,
-      commitmentId,
-      localNvmeGb,
-      networkStorageGb,
-      objectStorageGb,
-      dataTransferGb,
-      inferenceTokensMn,
-    ],
+    [gpuTypeId, gpuCount, hoursPerMonth, commitmentId, networkStorageGb],
   );
 
   const scrollToBreakdown = useCallback(() => {
@@ -141,18 +108,6 @@ const TcoCalculatorConfigClient = () => {
           <div className="mt-8">
             <TcoCalculatorFormSection step={2} title="Storage Requirements">
               <TcoCalculatorSliderField
-                label="Local NVMe"
-                value={localNvmeGb}
-                min={0}
-                max={LOCAL_NVME_MAX_GB}
-                valueLabel={formatStorageGb(localNvmeGb)}
-                minLabel="0TB"
-                maxLabel="20TB"
-                ariaLabel="Local NVMe storage"
-                onChange={setLocalNvmeGb}
-              />
-
-              <TcoCalculatorSliderField
                 label="Network Storage"
                 value={networkStorageGb}
                 min={0}
@@ -162,46 +117,6 @@ const TcoCalculatorConfigClient = () => {
                 maxLabel="50TB"
                 ariaLabel="Network storage"
                 onChange={setNetworkStorageGb}
-              />
-
-              <TcoCalculatorSliderField
-                label="Object Storage"
-                value={objectStorageGb}
-                min={0}
-                max={OBJECT_STORAGE_MAX_GB}
-                valueLabel={formatStorageGb(objectStorageGb)}
-                minLabel="0TB"
-                maxLabel="100TB"
-                ariaLabel="Object storage"
-                onChange={setObjectStorageGb}
-              />
-            </TcoCalculatorFormSection>
-          </div>
-
-          <div className="mt-8">
-            <TcoCalculatorFormSection step={3} title="Additional Services">
-              <TcoCalculatorSliderField
-                label="Data Transfer"
-                value={dataTransferGb}
-                min={0}
-                max={DATA_TRANSFER_MAX_GB}
-                valueLabel={`${formatStorageGb(dataTransferGb)}/mo`}
-                minLabel="0TB"
-                maxLabel="50TB"
-                ariaLabel="Data transfer per month"
-                onChange={setDataTransferGb}
-              />
-
-              <TcoCalculatorSliderField
-                label="Inference Tokens"
-                value={inferenceTokensMn}
-                min={0}
-                max={INFERENCE_TOKENS_MAX_MN}
-                valueLabel={formatInferenceTokens(inferenceTokensMn)}
-                minLabel="0"
-                maxLabel="10B"
-                ariaLabel="Inference tokens per month"
-                onChange={setInferenceTokensMn}
               />
             </TcoCalculatorFormSection>
           </div>

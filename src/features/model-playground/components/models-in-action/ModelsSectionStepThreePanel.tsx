@@ -57,13 +57,13 @@ const ModelsSectionStepThreePanel = () => {
       </div>
 
       <div className="bg-black/80 backdrop-blur-md rounded-xl p-4 md:px-5 md:py-3.75 mt-3.25 space-y-1">
-        <Text fontFamily="spaceMono" textColor="gray-05">
+        <Text fontFamily="spaceMono" textColor="gray-03">
           # one line change
         </Text>
         <Text fontFamily="spaceMono" textColor="white">
           {`base_url="https://api.neevcloud.com/v1"`}
         </Text>
-        <Text fontFamily="spaceMono" textColor="gray-05">
+        <Text fontFamily="spaceMono" textColor="gray-03">
           {`# ↑ that's it. same billing in INR.`}
         </Text>
       </div>

@@ -18,11 +18,9 @@ const NeevcloudArenaPage = () => {
       <ArenaByNumbersSection />
       <FaqSection
         items={NEEVCLOUD_ARENA_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
         {...NEEVCLOUD_ARENA_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

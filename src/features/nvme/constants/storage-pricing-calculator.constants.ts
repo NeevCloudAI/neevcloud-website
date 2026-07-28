@@ -1,6 +1,6 @@
-export const FREE_INCLUDED_GB = 25;
+export const FREE_INCLUDED_GB = 100;
 
-export const PRICE_PER_GB_MONTH = 4.17;
+export const PRICE_PER_GB_MONTH = 2.21;
 
 export const MIN_ADDITIONAL_STORAGE_GB = 0;
 export const MAX_ADDITIONAL_STORAGE_GB = 500;

@@ -29,7 +29,7 @@ const ModelsSection = () => {
           textColor="black/82"
           className="max-w-3xl mt-2.5"
         >
-          From Kimi K2 to Llama 3 405B to GLM 4.5, every model runs on
+          From MiniMax-M3 to DeepSeek-V3.2 to GLM-4.7, every model runs on
           NeevCloud&apos;s GPU clusters in India and is served through a unified
           API. Switch models with a single parameter change.
         </Text>

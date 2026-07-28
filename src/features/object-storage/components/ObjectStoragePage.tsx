@@ -15,11 +15,10 @@ const ObjectStoragePage = () => {
       <CloudStorageSection />
       <MlWorkflowsSection />
       <GettingStartedSection />
-      <TransparentPricingSection />
+      {/* <TransparentPricingSection /> */}
       <FaqSection items={OBJECT_STORAGE_FAQ_ITEMS} />
       <FooterComponent
         {...OBJECT_STORAGE_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

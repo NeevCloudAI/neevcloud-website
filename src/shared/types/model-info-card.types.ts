@@ -7,7 +7,7 @@ export type ModelInfoCardData = {
   id: string;
   name: string;
   provider: string;
-  latency: string;
+  badge: string;
   bestFor: string;
   metrics: ModelMetric[];
   capabilities: readonly string[];

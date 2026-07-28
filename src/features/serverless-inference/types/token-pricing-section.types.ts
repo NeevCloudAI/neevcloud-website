@@ -13,5 +13,4 @@ export type TokenPricingRow = {
   context: string;
   input: string;
   output: string;
-  free: string;
 };

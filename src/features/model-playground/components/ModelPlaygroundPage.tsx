@@ -19,10 +19,7 @@ const ModelPlaygroundPage = () => {
       <ExploreModelsSection />
       <ModelBuilderSection />
       <FaqSection items={PLAYGROUND_FAQ_ITEMS} />
-      <FooterComponent
-        {...MODEL_PLAYGROUND_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FooterComponent {...MODEL_PLAYGROUND_FOOTER} />
     </>
   );
 };

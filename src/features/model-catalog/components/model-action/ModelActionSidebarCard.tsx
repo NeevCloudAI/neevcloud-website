@@ -35,6 +35,14 @@ const ModelActionSidebarCard = ({
       >
         {model.provider} · {model.context} context
       </Text>
+      <Text
+        as="small"
+        fontFamily="spaceMono"
+        textColor="gray-04"
+        className="text-[10px]"
+      >
+        {model.pricing}
+      </Text>
     </Button>
   );
 };

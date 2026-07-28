@@ -16,11 +16,11 @@ const TcoCalculatorPage = () => {
       <ProviderComparisonSection />
       <FaqSection
         items={TCO_CALCULATOR_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
       <FooterComponent
         {...TCO_CALCULATOR_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
     </>
   );

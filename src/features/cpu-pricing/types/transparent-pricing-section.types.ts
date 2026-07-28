@@ -4,8 +4,7 @@ export type CpuInstanceTypeId =
   | "general-purpose"
   | "cpu-optimized"
   | "io-optimized"
-  | "memory-optimized"
-  | "smart-servers";
+  | "memory-optimized";
 
 export type CpuInstanceTypeOption = {
   id: CpuInstanceTypeId;
@@ -18,7 +17,10 @@ export type CpuPricingRow = {
   name: string;
   vcpus: string;
   ram: string;
-  pricePerHour: string;
+  priceOnDemand: string;
+  price3Month?: string;
+  price6Month?: string;
+  price1Year?: string;
   bestFor: string;
 };
 

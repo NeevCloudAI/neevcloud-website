@@ -20,7 +20,7 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
     name: "Radheshyam Dhakad",
     title: "Chief Technology Officer",
     description:
-      "Driving NeevCloud’s core technology strategy, Radheshyam builds resilient, future-ready infrastructure at scale. His leadership ensures performance, reliability, and innovation remain uncompromised.",
+      "As CTO, Radhe define's NeevCloud’s technology direction across sovereign cloud, GPU infrastructure, high-performance networking, and secure platform architecture. His leadership focuses on building scalable, resilient technology foundations for enterprise and AI workloads.",
     image: "/images/webp/radheshyam-dhakad.webp",
     linkedinHref: EXTERNAL_LINKS.radheshyamDhakadLinkedin,
   },
@@ -55,6 +55,14 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
       "Shashwat anchors NeevCloud's growth with strong legal governance and regulatory clarity. He safeguards the company's interests while enabling confident, compliant expansion.",
     image: "/images/webp/shashwat-jain.webp",
     linkedinHref: EXTERNAL_LINKS.shashwatJainLinkedin,
+  },
+  {
+    name: "Dharmjit Singh",
+    title: "Principal Software Engineer",
+    description:
+      "Dharmjit is a Principal Software Engineer at NeevCloud. He builds the high-performance infrastructure that powers scalable AI workloads, with deep expertise in distributed computing and cloud architecture that makes GPU resources efficient, reliable, and accessible.",
+    image: "/images/webp/dharmjit-singh.webp",
+    linkedinHref: EXTERNAL_LINKS.dharmjitSinghLinkedin,
   },
   {
     name: "Shamsher Ansari",

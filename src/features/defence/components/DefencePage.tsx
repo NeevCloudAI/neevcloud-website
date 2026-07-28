@@ -15,7 +15,7 @@ const DefencePage = () => {
       <DefenceApplicationSection />
       <DefenceSovereignSection />
       <FaqSection items={DEFENCE_FAQ_ITEMS} />
-      <FooterComponent {...DEFENCE_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <FooterComponent {...DEFENCE_FOOTER} />
     </>
   );
 };

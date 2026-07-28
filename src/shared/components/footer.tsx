@@ -158,7 +158,7 @@ export default function Footer({
             <BracketButton
               label={primaryCta ?? FOOTER.ctaLabel}
               href={primaryCtaRoute ?? FOOTER.ctaHref}
-              target={primaryCtaTarget}
+              target={primaryCtaTarget ?? FOOTER.ctaTarget}
             />
             {secondaryCta && (
               <SecondaryButton

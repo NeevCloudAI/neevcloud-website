@@ -10,10 +10,12 @@ export type GpuPricingStatus = {
 
 export type GpuPricingRow = {
   sku: string;
+  config: string;
   vram: string;
   cpu: string;
   ram: string;
   hourly: string;
+  oneMonth: GpuPricingCommitment;
   threeMonths: GpuPricingCommitment;
   sixMonths: GpuPricingCommitment;
   oneYear: GpuPricingCommitment;

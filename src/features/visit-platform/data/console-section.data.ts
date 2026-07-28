@@ -70,28 +70,28 @@ export const GPU_DEPLOYMENT_CONTENT = {
 // Tab 3 - Inference Management
 export const INFERENCE_MODELS: InferenceModel[] = [
   {
-    name: "Llama 3.1 70B Instruct",
+    name: "Llama 3.3 70B",
     provider: "Meta",
-    context: "128k context",
-    price: "₹15.20 / 1M",
+    context: "70B · 131k context",
+    price: "₹57.01 / 1M",
   },
   {
-    name: "Qwen 2.5 72B",
-    provider: "Alibaba",
-    context: "72B · 32k context",
-    price: "₹14.10 / 1M",
+    name: "GLM-4.7",
+    provider: "Zhipu AI",
+    context: "4.7B · 200k context",
+    price: "₹57.97 / 1M",
   },
   {
-    name: "Mistral Large 2",
-    provider: "Mistral",
-    context: "123B · 128k context",
-    price: "₹21.40 / 1M",
-  },
-  {
-    name: "DeepSeek Coder V2",
+    name: "DeepSeek-V3.2",
     provider: "DeepSeek",
-    context: "16B · code-tuned",
-    price: "₹10.80 / 1M",
+    context: "671B total · 128k context",
+    price: "₹27.05 / 1M",
+  },
+  {
+    name: "GPT OSS 20B",
+    provider: "OpenAI",
+    context: "20B · 131k context",
+    price: "₹7.25 / 1M",
   },
 ];
 

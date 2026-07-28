@@ -16,11 +16,9 @@ const HealthcarePage = () => {
       <HealthcarePerformanceSection />
       <FaqSection
         items={HEALTHCARE_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
         {...HEALTHCARE_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

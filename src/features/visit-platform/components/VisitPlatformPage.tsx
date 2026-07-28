@@ -19,12 +19,10 @@ const VisitPlatformPage = () => {
       <CompleteAISection />
       <GettingStartedSection />
       <FaqSection
-        items={VISIT_PLATFORM_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        items={VISIT_PLATFORM_FAQ_ITEMS}        
       />
       <FooterComponent
         {...MODEL_PLAYGROUND_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

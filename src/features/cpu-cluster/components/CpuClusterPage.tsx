@@ -19,7 +19,6 @@ const CpuClusterPage = () => {
       <FaqSection items={CPU_CLUSTER_FAQ_ITEMS} />
       <FooterComponent
         {...CPU_CLUSTER_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

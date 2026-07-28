@@ -16,8 +16,8 @@ const BfsiPage = () => {
       <EnterpriseSection />
       <ApplicationSection />
       <PerformanceSection />
-      <FaqSection items={BFSI_FAQ_ITEMS} className="pt-0 md:pt-0 2xl:pt-0" />
-      <FooterComponent {...BFSI_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <FaqSection items={BFSI_FAQ_ITEMS} />
+      <FooterComponent {...BFSI_FOOTER} />
     </>
   );
 };

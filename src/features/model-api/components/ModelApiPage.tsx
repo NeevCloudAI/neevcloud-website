@@ -16,11 +16,9 @@ const ModelApiPage = () => {
       <PaySection />
       <FaqSection
         items={API_GENERAL_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
         {...MODEL_API_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

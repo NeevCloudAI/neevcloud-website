@@ -27,22 +27,10 @@ export const GPU_COST_CALCULATOR_SECTION = {
 
 export const GPU_COST_CALCULATOR_GPU_TYPES: readonly GpuCostCalculatorGpuType[] =
   [
-    { id: "1x-h100", label: "1x H100", ratePerHour: 179.1 },
-    { id: "2x-h100", label: "2x H100", ratePerHour: 358.2 },
-    {
-      id: "4x-h100",
-      label: "4x H100",
-      ratePerHour: 716.4,
-      badge: "+79.5%",
-    },
-    { id: "8x-a100", label: "8x A100", ratePerHour: 468.5 },
-    { id: "5x-l40s", label: "5x L40s", ratePerHour: 465.5 },
-    {
-      id: "6x-l40s",
-      label: "6x L40s",
-      ratePerHour: 558.0,
-      badge: "+20%",
-    },
+    { id: "1x-h100", label: "1x H100", ratePerHour: 192.48 },
+    { id: "2x-h100", label: "2x H100", ratePerHour: 384.96 },
+    { id: "4x-h100", label: "4x H100", ratePerHour: 769.92 },
+    { id: "8x-a100", label: "8x A100", ratePerHour: 1021.44 },
   ] as const;
 
 export const GPU_COST_CALCULATOR_COMMITMENTS: readonly GpuCostCalculatorCommitment[] =

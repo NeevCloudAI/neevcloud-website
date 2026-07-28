@@ -28,13 +28,13 @@ const TransparentPricingTerminal = () => {
         <Divider orientation="horizontal" className="mt-7.25 bg-black/8" />
 
         <TransparentPricingRow
-          label="First 25GB"
+          label="First 100GB"
           value="free"
           valueColor="primary"
         />
         <TransparentPricingRow
           label="Additional storage"
-          value="₹4.17 / GB / hr"
+          value="₹2.21/GB/mo"
         />
         <TransparentPricingRow
           label="Transfer charges"

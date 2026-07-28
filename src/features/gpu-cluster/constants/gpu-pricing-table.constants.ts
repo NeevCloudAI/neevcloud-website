@@ -4,6 +4,7 @@ export const GPU_PRICING_TABLE_HEADERS = [
   "cpu",
   "ram",
   "hourly",
+  "1-month commitment",
   "3-months commitment",
   "6-months commitment",
   "1-year commitment",

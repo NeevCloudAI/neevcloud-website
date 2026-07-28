@@ -20,11 +20,9 @@ const ServerlessInferencePage = () => {
       <InferenceStackSection />
       <FaqSection
         items={INFERENCE_API_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
         {...SERVERLESS_INFERENCE_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

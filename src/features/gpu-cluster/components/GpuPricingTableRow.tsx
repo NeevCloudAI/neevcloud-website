@@ -41,6 +41,20 @@ const GpuPricingTableRow = ({ row }: GpuPricingTableRowProps) => {
       </td>
       <td className={GPU_PRICING_TABLE_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="white">
+          {row.oneMonth.price}
+          <Text
+            as="span"
+            fontFamily="spaceMono"
+            variant="p"
+            textColor="primary-105"
+            className="ml-2 md:ml-5"
+          >
+            {`save upto ${row.oneMonth.savePercent}%`}
+          </Text>
+        </Text>
+      </td>
+      <td className={GPU_PRICING_TABLE_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="white">
           {row.threeMonths.price}
           <Text
             as="span"

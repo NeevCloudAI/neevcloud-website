@@ -26,12 +26,32 @@ const CPUConfigurationTableRow = ({ row }: CPUConfigurationTableRowProps) => {
       </td>
       <td className={CPU_CONFIG_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="gray-80">
-          {row.storage}
+          {row.config}
         </Text>
       </td>
       <td className={CPU_CONFIG_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="white">
-          {row.bestFor}
+          {row.priceOnDemand}
+        </Text>
+      </td>
+      <td className={CPU_CONFIG_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="white">
+          {row.price1Month ?? "—"}
+        </Text>
+      </td>
+      <td className={CPU_CONFIG_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="white">
+          {row.price3Month}
+        </Text>
+      </td>
+      <td className={CPU_CONFIG_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="white">
+          {row.price6Month}
+        </Text>
+      </td>
+      <td className={CPU_CONFIG_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="white">
+          {row.price1Year}
         </Text>
       </td>
     </tr>

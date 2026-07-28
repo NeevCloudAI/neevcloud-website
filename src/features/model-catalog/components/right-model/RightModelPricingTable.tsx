@@ -28,7 +28,7 @@ const RightModelPricingTable = () => {
         {`// fetched ${MODEL_PRICING_SKU_COUNT} SKUs • sorted by input/output tokens • *all price ₹/1M tokens`}
       </Text>
 
-      <div className="mt-7.5 overflow-x-auto">
+      <div className="mt-7.5 overflow-x-auto classy">
         <table className="w-full min-w-272 font-space-mono">
           <caption className="sr-only">Model pricing comparison table</caption>
           <thead>

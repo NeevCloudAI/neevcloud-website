@@ -1,15 +1,20 @@
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
+
 export const FOOTER = {
   ctaHeading: "Start Building on NeevCloud Today",
   ctaSubtext:
     "Join thousands of innovators using NeevCloud to train, deploy, and scale AI without barriers.",
   ctaLabel: "Get Started",
-  ctaHref: "/contact-neevcloud",
+  ctaHref: EXTERNAL_LINKS.aiSupercloudConsole,
   copyright: "© 2026, NeevAI SuperCloud Pvt. Ltd.",
+  ctaTarget: '_blank',
   legal: [
     { label: "Terms of Usage", href: "/terms-condition" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "AUP", href: "/acceptable-user-policy" },
     { label: "SLA", href: "/service-level-agreement" },
+    { label: "CERT-in Guidelines", href: "/cert-guidelines" },
+    { label: "Billing Guidelines", href: "/billing-guidelines" },
   ],
 } as const;
 
@@ -18,107 +23,82 @@ export type FooterColumn = {
   links: { label: string; href: string }[];
 };
 
-const ROUTE_MAP: Record<string, string> = {
-  "GPU AI Service": "/gpu-cluster",
-  "AI Inference": "/ai-inference",
-  "CPU Compute": "/cpu-cluster",
-  Storage: "/object-storage",
-  "Public Sector & National AI": "/public-sector",
-  "GPU Pricing": "/gpu-pricing",
-  "CPU Compute Pricing": "/cpu-pricing",
-  "Cost Efficiency Explained": "/tco-calculator",
-  "API Reference": "/developers",
-  "Status Page": "/trust-center",
-  Blogs: "/newsroom",
-  "Events & Webinar": "/events",
-  "About NeevCloud": "/about-us",
-  "Press & Media": "/newsroom",
-  Careers: "/careers",
-  "Vision & Mission": "/about-us",
-  "Why NeevCloud": "/why-ai-supercloud",
-  Leadership: "/leadership",
-  "Contact Us": "/contact-neevcloud",
-  "Terms & Conditions": "/terms-condition",
-  "Privacy Policy": "/privacy-policy",
-  "CERT-in Guidelines": "/cert-guidelines",
-  "Acceptable User Policy": "/acceptable-user-policy",
-  "Service Level Agreement": "/service-level-agreement",
-  "Billing Guidelines": "/billing-guidelines",
-};
-
-const link = (label: string): { label: string; href: string } => ({
-  label,
-  href: ROUTE_MAP[label] ?? "#",
-});
-
+// Mirrors the header's NAV_ITEMS 1:1 (src/shared/components/header/index.tsx)
+// so the two menus never drift apart. Add/rename a link there first, then
+// mirror it here.
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
-    title: "Products",
-    links: ["GPU AI Service", "AI Inference", "CPU Compute", "Storage"].map(
-      link,
-    ),
+    title: "AI SuperCloud",
+    links: [
+      { label: "Visit the Platform", href: "/visit-platform" },
+      { label: "Why AI SuperCloud", href: "/why-ai-supercloud" },
+      { label: "NeevCloud Arena", href: "/neevcloud-arena" },
+      { label: "Trust Center", href: "/trust-center" },
+    ],
+  },
+  {
+    title: "Inference Hub",
+    links: [
+      { label: "Serverless Inference", href: "/serverless-inference" },
+      { label: "Dedicated Inferencing", href: "/dedicated-inferencing" },
+      { label: "Model Playground", href: "/model-playground" },
+      { label: "Model Catalog", href: "/model-catalog" },
+    ],
+  },
+  {
+    title: "Product",
+    links: [
+      { label: "GPU AI Service", href: "/gpu-cluster" },
+      { label: "CPU Instance", href: "/cpu-cluster" },
+      { label: "Managed Kubernetes", href: "/managed-kubernetes" },
+      { label: "High-Performance NVMe", href: "/nvme" },
+      { label: "Object Storage", href: "/object-storage" },
+      { label: "AI Templates", href: "/ai-templates" },
+      { label: "VM Service", href: "/vm-service" },
+      { label: "Agentic Studio", href: "/agentic-studio" },
+    ],
   },
   {
     title: "Solutions",
     links: [
-      "Research & Academia",
-      "Enterprises",
-      "Startups & Builders",
-      "AI Labs & Model Builders",
-      "Public Sector & National AI",
-    ].map(link),
+      { label: "Public Sector", href: "/public-sector" },
+      { label: "BFSI", href: "/bfsi" },
+      { label: "Media & VFX", href: "/media-vfx" },
+      { label: "Healthcare", href: "/healthcare" },
+      { label: "Defence", href: "/defence" },
+      { label: "LLM Fine-Tuning", href: "/llm-training" },
+      { label: "Generative AI", href: "/generative-ai" },
+      { label: "Agentic Workflows", href: "/agentic-workflow" },
+    ],
   },
   {
     title: "Pricing",
     links: [
-      "GPU Pricing",
-      "Inference Pricing",
-      "CPU Compute Pricing",
-      "Cost Efficiency Explained",
-    ].map(link),
+      { label: "GPU Compute", href: "/gpu-pricing" },
+      { label: "CPU Compute", href: "/cpu-pricing" },
+      { label: "AI Inference", href: "/ai-inference" },
+      { label: "TCO Calculator", href: "/tco-calculator" },
+    ],
   },
   {
     title: "Developers",
     links: [
-      "API Reference",
-      "Documentation",
-      "Status Page",
-      "Examples & Templates",
-      "Quick Start Guides",
-    ].map(link),
-  },
-  {
-    title: "Resources",
-    links: [
-      "Blogs",
-      "Case Studies",
-      "Architecture",
-      "Benchmarks",
-      "Whitepapers",
-      "Events & Webinar",
-    ].map(link),
+      { label: "Developers Hub", href: "/developers" },
+      { label: "Model APIs", href: "/model-api" },
+      { label: "Agentic Workflows", href: "/agentic-workflow" },
+    ],
   },
   {
     title: "Company",
     links: [
-      "About NeevCloud",
-      "Press & Media",
-      "Careers",
-      "Vision & Mission",
-      "Why NeevCloud",
-      "Leadership",
-      "Contact Us",
-    ].map(link),
-  },
-  {
-    title: "Legal",
-    links: [
-      "Terms & Conditions",
-      "Privacy Policy",
-      "CERT-in Guidelines",
-      "Acceptable User Policy",
-      "Service Level Agreement",
-      "Billing Guidelines",
-    ].map(link),
+      { label: "About Us", href: "/about-us" },
+      { label: "Leadership", href: "/leadership" },
+      { label: "Career", href: "/careers" },
+      { label: "Life at NeevCloud", href: "/life-at-neevcloud" },
+      { label: "Newsroom", href: "/newsroom" },
+      { label: "Events", href: "/events" },
+      { label: "Blogs", href: EXTERNAL_LINKS.blogs },
+      { label: "Contact Us", href: "/contact-neevcloud" },
+    ],
   },
 ];

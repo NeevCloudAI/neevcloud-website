@@ -17,7 +17,6 @@ const LlmTrainingPage = () => {
       <FaqSection items={LLM_TRAINING_FAQ_ITEMS} />
       <FooterComponent
         {...LLM_TRAINING_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

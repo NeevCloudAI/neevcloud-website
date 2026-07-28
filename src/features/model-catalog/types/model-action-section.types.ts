@@ -3,7 +3,7 @@ export type ModelActionItem = {
   name: string;
   provider: string;
   context: string;
-  latency: string;
+  pricing: string;
 };
 
 export type ModelActionSidebarCardProps = {

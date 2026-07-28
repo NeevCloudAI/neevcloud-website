@@ -20,8 +20,8 @@ const MediaPage = () => {
       <MediaApplicationSection />
       <PerformanceSection />
       <RenderingSection />
-      <FaqSection items={MEDIA_FAQ_ITEMS} className="pt-0 md:pt-0 2xl:pt-0" />
-      <FooterComponent {...MEDIA_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <FaqSection items={MEDIA_FAQ_ITEMS} />
+      <FooterComponent {...MEDIA_FOOTER} />
     </>
   );
 };

@@ -16,11 +16,9 @@ const WhyAiSupercloudPage = () => {
       <AiSupercloudByNumbersSection />
       <FaqSection
         items={WHY_AI_SUPERCLOUD_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
       <FooterComponent
         {...WHY_AI_SUPERCLOUD_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
     </>
   );

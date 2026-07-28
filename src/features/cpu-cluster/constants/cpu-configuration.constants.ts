@@ -1,11 +1,15 @@
 import type { CpuInstanceFamilyId } from "../types/cpu-configuration.types";
 
 export const CPU_CONFIG_TABLE_HEADERS = [
-  "configuration",
+  "instance",
   "vcpu",
   "ram",
-  "storage",
-  "best for",
+  "config",
+  "on-demand",
+  "1 month",
+  "3 month",
+  "6 month",
+  "1 year",
 ] as const;
 
 export const CPU_CONFIG_CELL_CLASS =

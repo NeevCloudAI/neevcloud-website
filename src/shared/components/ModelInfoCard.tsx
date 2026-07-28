@@ -7,7 +7,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
   const {
     name,
     provider,
-    latency,
+    badge,
     bestFor,
     metrics,
     capabilities,
@@ -32,7 +32,7 @@ const ModelInfoCard = ({ model, className }: ModelInfoCardProps) => {
           as="small"
           className="bg-primary/30 text-primary px-2.5 py-0.75 rounded-full"
         >
-          {latency}
+          {badge}
         </Text>
       </div>
 

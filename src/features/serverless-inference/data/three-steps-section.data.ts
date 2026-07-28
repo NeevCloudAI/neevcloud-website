@@ -51,24 +51,24 @@ export const STEPS: Step[] = [
 
 export const STEP_ONE_MODELS: StepOneModel[] = [
   {
-    name: "Llama 3.1 70B Instruct",
-    meta: "Meta · 128k context",
-    price: "₹15.20 / 1M",
+    name: "Llama 3.3 70B",
+    meta: "Meta · 70B · 131K context",
+    price: "₹57.01 / 1M",
   },
   {
-    name: "Qwen 2.5 72B",
-    meta: "Alibaba · 72B · 32k context",
-    price: "₹14.10 / 1M",
+    name: "GLM-4.7",
+    meta: "Zhipu AI · 4.7B · 200K context",
+    price: "₹57.97 / 1M",
   },
   {
-    name: "Mistral Large 2",
-    meta: "Mistral · 123B · 128k context",
-    price: "₹21.40 / 1M",
+    name: "DeepSeek-V3.2",
+    meta: "DeepSeek · 671B total · 128K context",
+    price: "₹27.05 / 1M",
   },
   {
-    name: "DeepSeek Coder V2",
-    meta: "DeepSeek · 16B · code-tuned",
-    price: "₹10.80 / 1M",
+    name: "GPT OSS 20B",
+    meta: "OpenAI · 20B · 131K context",
+    price: "₹7.25 / 1M",
   },
 ];
 
@@ -78,29 +78,29 @@ export const STEP_TWO_TERMINAL_PATH =
   "console.ai.neevcloud.com/ai-inference/playground";
 
 export const STEP_THREE_BILLING: StepThreeBilling = {
-  title: "December usage · Llama 3.1 70B",
+  title: "December usage · Llama 3.3 70B",
   subtitle: "Billing period · Dec 1 to Dec 31",
   rows: [
     {
       label: "Input tokens",
-      sub: "14.2M @ ₹15.20 / 1M",
-      value: "₹2,158.40",
+      sub: "14.2M @ ₹57.01 / 1M",
+      value: "₹809.84",
       neg: false,
     },
     {
       label: "Output tokens",
-      sub: "9.8M @ ₹45.60 / 1M",
-      value: "₹4,468.80",
+      sub: "9.8M @ ₹76.33 / 1M",
+      value: "₹748.03",
       neg: false,
     },
     {
       label: "Volume discount",
       sub: "auto-applied above 10M",
-      value: "-₹1,490.16",
+      value: "-₹350.32",
       neg: true,
     },
   ],
-  total: "₹5,137.04",
+  total: "₹1,207.55",
   totalLabel: "DECEMBER TOTAL",
-  totalSub: "~₹0.0002 per call · paid in INR · no surprises",
+  totalSub: "~₹0.00005 per call · paid in INR · no surprises",
 };

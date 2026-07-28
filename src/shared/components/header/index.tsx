@@ -139,7 +139,7 @@ const NAV_ITEMS: NavItem[] = [
             href: "/model-playground",
             icon: RiSparkling2Line,
           },
-          { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
+          // { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
           { label: "Model Catalog", href: "/model-catalog", icon: RiBook2Line },
         ],
       },
@@ -318,9 +318,7 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
-export default function HeaderComponent({
-  announcement,
-}: HeaderComponentProps = {}) {
+export default function HeaderComponent() {
   const [isOpen, setIsOpen] = useState(false);
   // which mobile nav group is expanded (Taito-style accordion)
   const [openGroup, setOpenGroup] = useState<string | null>(null);
@@ -344,7 +342,6 @@ export default function HeaderComponent({
 
   return (
     <header className="z-50 w-full bg-black">
-      {announcement}
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[#0d1110]/70 backdrop-blur-xl xl:hidden"

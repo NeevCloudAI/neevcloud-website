@@ -19,7 +19,7 @@ const GenerativeAiPage = () => {
       <FaqSection items={GENERATIVE_AI_FAQ_ITEMS} />
       <FooterComponent
         {...GENERATIVE_AI_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
     </>
   );

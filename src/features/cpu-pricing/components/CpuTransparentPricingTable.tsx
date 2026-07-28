@@ -18,7 +18,7 @@ const CpuTransparentPricingTable = ({
       id={`${activeType}-panel`}
       role="tabpanel"
       aria-labelledby={`${activeType}-tab`}
-      className="bg-gray-80/18 p-4 md:p-5 rounded-md border border-white/12 h-94 w-full"
+      className="bg-gray-80/18 p-4 md:p-5 rounded-md border border-white/12 h-120 w-full min-w-0"
     >
       <div className="flex items-start gap-3.5">
         <ArrowRight size={18} className="text-primary mt-0.75" />
@@ -29,7 +29,7 @@ const CpuTransparentPricingTable = ({
 
       <div className="mt-5 overflow-x-auto classy">
         <table
-          className="min-w-4xl w-full border-collapse"
+          className="min-w-6xl w-full border-collapse"
           aria-label={`${activeLabel} CPU instance pricing`}
         >
           <thead>

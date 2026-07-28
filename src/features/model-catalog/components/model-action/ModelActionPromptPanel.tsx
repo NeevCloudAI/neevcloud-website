@@ -24,7 +24,7 @@ const ModelActionPromptPanel = ({
           </Text>
           <Text as="small" fontFamily="spaceMono" textColor="gray-04">
             {selectedModel.provider} · {selectedModel.context} context ·{" "}
-            {selectedModel.latency}
+            {selectedModel.pricing}
           </Text>
         </div>
 

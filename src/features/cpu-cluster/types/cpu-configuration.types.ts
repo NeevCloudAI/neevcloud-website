@@ -7,8 +7,12 @@ export type CpuConfigurationRow = {
   configuration: string;
   vcpu: string;
   ram: string;
-  storage: string;
-  bestFor: string;
+  config: string;
+  priceOnDemand: string;
+  price1Month?: string;
+  price3Month: string;
+  price6Month: string;
+  price1Year: string;
 };
 
 export type CpuInstanceFamily = {

@@ -8,7 +8,7 @@ export default function DarkLayout({
 }>) {
   return (
     <div className="relative">
-      <HeaderComponent announcement={<AnnouncementSection />} />
+      <HeaderComponent />
       <main>{children}</main>
     </div>
   );

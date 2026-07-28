@@ -37,15 +37,6 @@ const TokenPricingTableRow = ({ row }: TokenPricingTableRowProps) => {
           {row.output}
         </Text>
       </td>
-      <td className={TOKEN_PRICING_TABLE_CELL_CLASS}>
-        <Text
-          as="h6"
-          fontFamily="spaceMono"
-          textColor={row.free ? "yellow" : "white"}
-        >
-          {row.free || "-"}
-        </Text>
-      </td>
     </tr>
   );
 };

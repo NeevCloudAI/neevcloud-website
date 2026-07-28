@@ -15,12 +15,11 @@ const NvmePage = () => {
       <StoragePerformanceSection />
       <MetricsSection />
       <DeployStorageSection />
-      <TransparentPricingSection />
+      {/* <TransparentPricingSection /> */}
       <FaqSection
         items={NVME_INSTANCE_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
       />
-      <FooterComponent {...NVME_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <FooterComponent {...NVME_FOOTER} />
     </>
   );
 };

@@ -43,14 +43,6 @@ export function formatStorageGb(valueGb: number): string {
   return `${valueGb.toLocaleString("en-IN")} GB`;
 }
 
-export function formatInferenceTokens(mn: number): string {
-  if (mn >= 1000) {
-    return `${(mn / 1000).toFixed(mn % 1000 === 0 ? 0 : 1)} Bn/mo`;
-  }
-
-  return `${mn.toLocaleString("en-IN")} Mn/mo`;
-}
-
 export function calculateTcoBreakdown(
   config: TcoCalculatorConfig,
 ): TcoCalculatorBreakdown {
@@ -62,18 +54,9 @@ export function calculateTcoBreakdown(
     config.gpuCount * gpuType.ratePerHour * config.hoursPerMonth;
   const gpuCompute = gpuSubtotal * (1 - commitment.discountPercent / 100);
 
-  const storageTotal =
-    config.localNvmeGb * rates.localNvmePerGbMonth +
-    config.networkStorageGb * rates.networkStoragePerGbMonth +
-    config.objectStorageGb * rates.objectStoragePerGbMonth;
+  const storageTotal = config.networkStorageGb * rates.networkStoragePerGbMonth;
 
-  const dataTransferCost =
-    config.dataTransferGb * rates.neevcloudDataTransferPerGb;
-  const inferenceCost =
-    config.inferenceTokensMn * rates.inferencePerMillionTokens;
-
-  const monthlyTotal =
-    gpuCompute + storageTotal + dataTransferCost + inferenceCost;
+  const monthlyTotal = gpuCompute + storageTotal;
 
   const providerTotals = TCO_CALCULATOR_PROVIDERS.reduce(
     (acc, provider) => {
@@ -100,8 +83,6 @@ export function calculateTcoBreakdown(
     monthlyTotal,
     gpuCompute,
     storageTotal,
-    inferenceCost,
-    dataTransferCost,
     summaryLabel: `${config.gpuCount}x ${gpuType.label} • ${config.hoursPerMonth}H/MO`,
     providerTotals,
     providerSavings,

@@ -1,4 +1,3 @@
-import AnnouncementSection from "@/shared/components/AnnouncementSection";
 import HeaderComponent from "@/shared/components/header";
 
 export default function DefaultLayout({
@@ -8,7 +7,6 @@ export default function DefaultLayout({
 }>) {
   return (
     <div className="relative">
-      <AnnouncementSection />
       <HeaderComponent />
       <main>{children}</main>
     </div>

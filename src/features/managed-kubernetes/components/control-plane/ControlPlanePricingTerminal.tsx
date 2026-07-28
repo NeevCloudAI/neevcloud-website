@@ -59,7 +59,7 @@ const ControlPlanePricingTerminal = () => {
             Persistent storage
           </Text>
           <Text fontFamily="spaceMono" textColor="pulse-red" as="h6">
-            ₹8.35/GB/mo
+            ₹2.21/GB/mo
           </Text>
         </div>
         <Divider orientation="horizontal" className="my-5 bg-white/12" />

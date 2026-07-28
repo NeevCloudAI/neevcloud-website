@@ -17,7 +17,7 @@ const AgenticWorkflowPage = () => {
       <FaqSection items={AGENTIC_WORKFLOW_FAQ_ITEMS} />
       <FooterComponent
         {...AGENTIC_WORKFLOW_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
     </>
   );

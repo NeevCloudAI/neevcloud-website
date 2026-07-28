@@ -13,7 +13,7 @@ const AboutUsPage = () => {
       <InfrastructureSection />
       <PrinciplesSection />
       <FaqSection items={ABOUT_US_FAQ_ITEMS} />
-      <FooterComponent {...ABOUT_US_FOOTER} className="pt-0 md:pt-0 2xl:pt-0" />
+      <FooterComponent {...ABOUT_US_FOOTER} />
     </>
   );
 };

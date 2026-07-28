@@ -17,13 +17,9 @@ const PublicSectorPage = () => {
       <GovernmentApplicationSection />
       <GovernmentSection />
       <FaqSection
-        items={GOVERNMENT_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+        items={GOVERNMENT_FAQ_ITEMS} />
       <FooterComponent
-        {...PUBLIC_SECTOR_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+        {...PUBLIC_SECTOR_FOOTER} />
     </>
   );
 };

@@ -16,22 +16,15 @@ export const GPU_SINGLE_GPU_PRICING_ROWS: readonly GpuPricingRow[] = [
     id: "h100",
     gpuType: "H100",
     memory: "80GB",
-    pricePerHour: "₹179.1",
+    pricePerHour: "₹192.48",
     typicalWorkload: "70B model inference, LoRA fine-tuning",
   },
   {
     id: "a100",
     gpuType: "A100",
     memory: "80GB",
-    pricePerHour: "₹110.22",
+    pricePerHour: "₹127.68",
     typicalWorkload: "13B-70B training, production inference",
-  },
-  {
-    id: "l40s",
-    gpuType: "L40S",
-    memory: "48GB",
-    pricePerHour: "₹85.5",
-    typicalWorkload: "Visual AI, rendering, graphics",
   },
 ] as const;
 
@@ -40,22 +33,15 @@ export const GPU_MULTI_GPU_PRICING_ROWS: readonly GpuPricingRow[] = [
     id: "8x-h100",
     gpuType: "8x H100",
     memory: "640GB",
-    pricePerHour: "₹1,432.8",
+    pricePerHour: "₹1,539.84",
     typicalWorkload: "70B+ full fine-tuning, large-scale inference",
   },
   {
     id: "8x-a100",
     gpuType: "8x A100",
     memory: "640GB",
-    pricePerHour: "₹881.76",
+    pricePerHour: "₹1,021.44",
     typicalWorkload: "Distributed training, multi-model serving",
-  },
-  {
-    id: "8x-l40s",
-    gpuType: "8x L40S",
-    memory: "384GB",
-    pricePerHour: "₹684.0",
-    typicalWorkload: "Batch rendering, visual AI pipelines",
   },
 ] as const;
 
@@ -64,14 +50,14 @@ export const GPU_MULTI_NODE_PRICING_ROWS: readonly GpuPricingRow[] = [
     id: "16x-h100",
     gpuType: "16x H100",
     memory: "1.28TB",
-    pricePerHour: "₹2,865.6",
+    pricePerHour: "₹3,079.68",
     typicalWorkload: "Multi-node pretraining, RLHF at scale",
   },
   {
     id: "32x-h100",
     gpuType: "32x H100",
     memory: "2.56TB",
-    pricePerHour: "₹5,731.2",
+    pricePerHour: "₹6,159.36",
     typicalWorkload: "Foundation model training clusters",
   },
   {

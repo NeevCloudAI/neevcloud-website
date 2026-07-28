@@ -25,7 +25,7 @@ const ConfigurationOptionsSection = () => {
           requirements.
         </Text>
 
-        <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-4 md:mt-12.5 list-none p-0 m-0">
+        <ul className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 mt-4 md:mt-12.5 list-none p-0 m-0">
           {DEDICATED_INFERENCING_CONFIGURATION_ITEMS.map((item) => (
             <li key={item.title}>
               <FeatureCard {...item} theme="light" />

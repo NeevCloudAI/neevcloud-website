@@ -1,4 +1,4 @@
-export type GpuModelFamilyId = "h100" | "a100" | "l40s";
+export type GpuModelFamilyId = "h100" | "a100";
 
 export type GpuModelFamilyOption = {
   id: GpuModelFamilyId;

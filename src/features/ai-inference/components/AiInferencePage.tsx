@@ -14,15 +14,15 @@ const AiInferencePage = () => {
       <AiInferenceHeroSection />
       <AiInferenceCapabilitiesSection />
       <AiInferenceScenariosSection />
-      <AiInferenceTransparentPricingSection />
+      {/* <AiInferenceTransparentPricingSection /> */}
       <AiInferenceDeploymentSection />
       <FaqSection
         items={AI_INFERENCE_FAQ_ITEMS}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
       <FooterComponent
         {...AI_INFERENCE_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
+        
       />
     </>
   );

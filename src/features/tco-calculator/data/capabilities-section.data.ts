@@ -15,7 +15,6 @@ export const TCO_CALCULATOR_CAPABILITIES_ITEMS: readonly AmbitionDetailItem[] =
         { id: 1, title: "GPU type and quantity" },
         { id: 2, title: "Monthly usage hours" },
         { id: 3, title: "Storage requirements" },
-        { id: 4, title: "Inference token volume" },
       ],
     },
     {
@@ -41,13 +40,7 @@ export const TCO_CALCULATOR_CAPABILITIES_ITEMS: readonly AmbitionDetailItem[] =
       iconAlt: "Storage cost modeling",
       size: "small",
       title: "Storage Cost Modeling",
-      description:
-        "NVMe, network storage, and object storage are all included.",
-      bullets: [
-        { id: 1, title: "Local NVMe (per GB/hour)" },
-        { id: 2, title: "Network block storage (per GB/month)" },
-        { id: 3, title: "Object storage (per GB/month)" },
-        { id: 4, title: "Data transfer costs" },
-      ],
+      description: "Network storage costs are fully modeled.",
+      bullets: [{ id: 1, title: "Network block storage (per GB/month)" }],
     },
   ] as const;

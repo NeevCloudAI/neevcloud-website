@@ -14,6 +14,7 @@ import GpuFooterSection from "@/shared/components/gpu-footer-section";
 import GpuTechnicalSpecsSection from "@/shared/components/gpu-technical-specs-section";
 import { NVIDIA_A6000_SE_FOOTER_SECTION } from "@/shared/data/gpu-footer.data";
 import { NVIDIA_A6000_SE_TECHNICAL_SPECS_SECTION } from "@/shared/data/gpu-technical-specs-section.data";
+import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 
 const NvidiaA6000Se = () => {
   return (
@@ -24,7 +25,7 @@ const NvidiaA6000Se = () => {
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />
       <GpuUseCasesSection {...NVIDIA_A6000_SE_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_A6000_SE_TECHNICAL_SPECS_SECTION} />
-      {/* <GpuOtherGpusSection excludeId="nvidia-a6000se" /> */}
+      <GpuOtherGpusSection excludeId="nvidia-a6000se" />
       <FaqSection items={NVIDIA_A6000_SE_FAQ} description="Get Clarity Here!" />
       <GpuFooterSection {...NVIDIA_A6000_SE_FOOTER_SECTION} />
     </>

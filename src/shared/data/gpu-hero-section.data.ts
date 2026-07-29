@@ -14,7 +14,7 @@ export const NVIDIA_A100_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$1.32/GPU/h.",
+  pricingAmount: "₹127.68/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -32,7 +32,7 @@ export const NVIDIA_A30_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$0.61/GPU/h.",
+  pricingAmount: "₹77.38/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -86,7 +86,7 @@ export const NVIDIA_H200_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$2.39/GPU/h.",
+  pricingAmount: "₹231.17/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -104,7 +104,7 @@ export const NVIDIA_H100_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$1.99/GPU/h.",
+  pricingAmount: "₹192.48/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -122,7 +122,7 @@ export const NVIDIA_RTX_3090_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$0.54/GPU/h.",
+  pricingAmount: "₹52.23/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -140,7 +140,7 @@ export const NVIDIA_A6000_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$0.54/GPU/h.",
+  pricingAmount: "₹81.25/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -158,7 +158,7 @@ export const NVIDIA_RTX_5090_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$0.54/GPU/h.",
+  pricingAmount: "₹94.79/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -176,7 +176,7 @@ export const NVIDIA_A6000_SE_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$1.54/GPU/h.",
+  pricingAmount: "₹148.95/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 
@@ -186,7 +186,7 @@ export const NVIDIA_TESLA_T4_HERO: GpuHeroSectionContent = {
   titleHighlight: "Nvidia Tesla T4",
   titleSuffix: "GPU On-Demand",
   description:
-    "Optimized for production AI inference and cost-effective deep learning deployment, now accessible through our enterprise cloud platform with pay-per-hour pricing. Explore NVIDIA T4 GPU specs, memory and price. Nvidia T4 gpu on rent in India and USA. Learn about Tesla T4 performance, Tensor Cores, and T4 GPU benchmarks. Get started with T4 rental at $0.29 today!",
+    "Optimized for production AI inference and cost-effective deep learning deployment, now accessible through our enterprise cloud platform with pay-per-hour pricing. Explore NVIDIA T4 GPU specs, memory and price. Nvidia T4 gpu on rent in India and USA. Learn about Tesla T4 performance, Tensor Cores, and T4 GPU benchmarks. Get started with T4 rental at ₹28.05 today!",
   bulletPoints: [
     "Delivering up to 260 TOPS of INT8 inference performance in a 70W power envelope",
     "16GB GDDR6 memory with multi-precision Tensor Core support",
@@ -194,7 +194,7 @@ export const NVIDIA_TESLA_T4_HERO: GpuHeroSectionContent = {
   ],
   features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
   pricingPrefix: "Pricing start at",
-  pricingAmount: "$1.54/GPU/h.",
+  pricingAmount: "₹28.05/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
 

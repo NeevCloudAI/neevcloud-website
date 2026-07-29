@@ -3,6 +3,7 @@ import HeroBgVideoClient from "./HeroBgVideoClient";
 import HeroGetStartedButton from "./HeroGetStartedButton";
 import LatestNewsCarouselClient from "./LatestNewsCarouselClient";
 import { HERO } from "../constants/hero.constants";
+import { Text } from "@/shared/ui-lib";
 
 export default function HeroSection() {
   return (
@@ -22,14 +23,24 @@ export default function HeroSection() {
       <div className="relative z-10 flex min-h-[100svh] flex-col justify-between gap-14 pb-10 md:gap-24 md:pb-20">
         <Container className="flex flex-col items-start gap-10 pt-28 md:gap-12 md:pt-[145px]">
           <div className="flex flex-col gap-4 md:gap-6">
-            <h1
+            <Text
               id="hero-heading"
-              className="hero-in text-[58px] font-normal capitalize leading-[110%] tracking-[-0.01em] text-white md:text-[64px] lg:text-[74px] 1.5xl:whitespace-nowrap"
+              as="h1"
+              textColor={"white"}
+              weight={"normal"}
+              className="md:text-[64px] lg:text-[74px]"
             >
-              {/* "AI Native SuperCloud" carries the brand green */}
               {HERO.headline.split("AI Native SuperCloud")[0]}
-              <span className="text-[#59D9A7]">AI Native SuperCloud</span>
-            </h1>
+              <Text
+                as="span"
+                variant={"h1"}
+                textColor={"primary"}
+                weight={"normal"}
+                className="mx-0 md:mx-0 md:text-[64px] lg:text-[74px]"
+              >
+                AI Native SuperCloud
+              </Text>
+            </Text>
             <p
               className="hero-in text-[20px] font-normal leading-[132%] tracking-[-0.02em] text-white/90 md:text-[22px] xl:whitespace-nowrap"
               style={{ animationDelay: "0.12s" }}

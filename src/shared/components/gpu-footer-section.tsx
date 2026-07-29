@@ -19,7 +19,7 @@ const GpuFooterSection = ({
 }: GpuFooterSectionContent) => {
   return (
     <section
-      className="bg-black pb-8 md:pb-25"
+      className="bg-black py-8 md:py-25"
       aria-labelledby="gpu-footer-section-heading"
     >
       <Container className="flex flex-col items-center justify-center">

@@ -413,7 +413,7 @@ export const NVIDIA_TESLA_T4_USE_CASES_SECTION: GpuUseCasesSectionContent = {
       imageSrc: "/images/webp/cost-effective-ai-inference.webp",
       imageAlt: "Cost-effective AI inference for production on NVIDIA Tesla T4",
       description:
-        "Rent NVIDIA T4 GPU cloud instances starting from $0.34/hr for deploying production AI models at scale. T4 delivers 40X faster inference than CPUs in a power-efficient 70W form factor. Multi-precision Tensor Cores support INT8, FP16, and mixed precision, accelerating conversational AI, recommendation engines, NLP, and computer vision for enterprise applications.",
+        "Rent NVIDIA T4 GPU cloud instances starting from ₹28.05/hr for deploying production AI models at scale. T4 delivers 40X faster inference than CPUs in a power-efficient 70W form factor. Multi-precision Tensor Cores support INT8, FP16, and mixed precision, accelerating conversational AI, recommendation engines, NLP, and computer vision for enterprise applications.",
     },
     {
       id: "intelligent-video-analytics",

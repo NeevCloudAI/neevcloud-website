@@ -27,6 +27,12 @@ export const GPU_COST_CALCULATOR_SECTION = {
 
 export const GPU_COST_CALCULATOR_GPU_TYPES: readonly GpuCostCalculatorGpuType[] =
   [
+    {
+      id: "1x-rtxpro6000",
+      label: "1x RTX PRO 6000",
+      ratePerHour: 148.95,
+      badge: "Popular",
+    },
     { id: "1x-h100", label: "1x H100", ratePerHour: 192.48 },
     { id: "2x-h100", label: "2x H100", ratePerHour: 384.96 },
     { id: "4x-h100", label: "4x H100", ratePerHour: 769.92 },

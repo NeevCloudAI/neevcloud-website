@@ -14,6 +14,7 @@ import GpuFooterSection from "@/shared/components/gpu-footer-section";
 import GpuTechnicalSpecsSection from "@/shared/components/gpu-technical-specs-section";
 import { NVIDIA_TESLA_T4_FOOTER_SECTION } from "@/shared/data/gpu-footer.data";
 import { NVIDIA_TESLA_T4_TECHNICAL_SPECS_SECTION } from "@/shared/data/gpu-technical-specs-section.data";
+import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 
 const NvidiaTeslaT4 = () => {
   return (
@@ -24,7 +25,7 @@ const NvidiaTeslaT4 = () => {
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />
       <GpuUseCasesSection {...NVIDIA_TESLA_T4_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_TESLA_T4_TECHNICAL_SPECS_SECTION} />
-      {/* <GpuOtherGpusSection excludeId="nvidia-teslat4" /> */}
+      <GpuOtherGpusSection excludeId="nvidia-teslat4" />
       <FaqSection items={NVIDIA_TESLA_T4_FAQ} description="Get Clarity Here!" />
       <GpuFooterSection {...NVIDIA_TESLA_T4_FOOTER_SECTION} />
     </>

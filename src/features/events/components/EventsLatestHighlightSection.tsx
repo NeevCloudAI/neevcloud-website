@@ -61,14 +61,14 @@ const EventsLatestHighlightSection = () => {
               >
                 {LATEST_HIGHLIGHT_SECTION.primaryCta}
               </LinkComponent>
-              <LinkComponent
+              {/* <LinkComponent
                 href={LATEST_HIGHLIGHT_SECTION.secondaryCtaRoute}
                 variant="outline"
                 target={LATEST_HIGHLIGHT_SECTION.secondaryCtaTarget}
                 spacing="lg"
               >
                 {LATEST_HIGHLIGHT_SECTION.secondaryCta}
-              </LinkComponent>
+              </LinkComponent> */}
             </div>
           </div>
 

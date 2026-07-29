@@ -6,9 +6,8 @@ export const AI_TEMPLATES_HERO = {
   primaryCta: "Browse Templates",
   primaryCtaRoute: EXTERNAL_LINKS.templates,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Pricing",
-  secondaryCtaRoute: "/gpu-pricing",
   badgeText: "AI Templates",
+  image: "/images/webp/ai-templates.webp",
   trustBadges: [
     "20+ Pre-Built Templates",
     "< 20s Launch Time",
@@ -24,6 +23,4 @@ export const AI_TEMPLATES_FOOTER = {
   primaryCta: "Browse Templates",
   primaryCtaRoute: EXTERNAL_LINKS.templates,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Pricing",
-  secondaryCtaRoute: "/gpu-pricing",
 } as const;

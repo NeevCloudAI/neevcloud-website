@@ -10,10 +10,11 @@ import Container from "./container";
 import { FOOTER, FOOTER_COLUMNS } from "../data/footer.data";
 import { FOOTER_SOCIAL_LINKS } from "../data/footer-data";
 import type { FooterCtaContent } from "../data/footer-types";
+import { Text } from "../ui-lib";
 
 // Prefilled "explore NeevCloud with your preferred LLM" prompt (V7-style).
 const LLM_PROMPT = encodeURIComponent(
-  "Tell me about NeevCloud (https://neevcloud.com), India's AI SuperCloud. What GPU infrastructure, inference services, and AI cloud products do they offer, and how could I use them for my AI workloads?"
+  "Tell me about NeevCloud (https://neevcloud.com), India's AI SuperCloud. What GPU infrastructure, inference services, and AI cloud products do they offer, and how could I use them for my AI workloads?",
 );
 
 const LLM_LINKS = [
@@ -49,7 +50,9 @@ function renderHighlightedTitle(text: string) {
   return (
     <>
       {text.slice(0, idx)}
-      <span className="text-[#59D9A7]">NeevCloud</span>
+      <Text as="span" textColor={"primary"}>
+        NeevCloud
+      </Text>
       {text.slice(idx + "NeevCloud".length)}
     </>
   );
@@ -143,7 +146,7 @@ export default function Footer({
       <Container
         className={cn(
           "relative z-10 flex flex-col gap-14 pb-8 pt-16 md:gap-20 md:pt-20",
-          className
+          className,
         )}
       >
         {/* CTA band */}

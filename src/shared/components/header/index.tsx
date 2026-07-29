@@ -55,6 +55,7 @@ import {
   RiCloudLine,
   RiPieChart2Line,
   RiNodeTree,
+  RiCpuLine,
 } from "@remixicon/react";
 
 type NavLink = {
@@ -160,16 +161,6 @@ const NAV_ITEMS: NavItem[] = [
             icon: RiStackLine,
           },
           {
-            label: "High-Performance NVMe",
-            href: "/nvme",
-            icon: RiHardDrive2Line,
-          },
-          {
-            label: "Object Storage",
-            href: "/object-storage",
-            icon: RiDatabase2Line,
-          },
-          {
             label: "AI Templates",
             href: "/ai-templates",
             icon: RiLayoutGridLine,
@@ -198,6 +189,41 @@ const NAV_ITEMS: NavItem[] = [
             href: "#",
             icon: RiStackLine,
             soon: true,
+          },
+        ],
+      },
+      {
+        heading: "Storage",
+        links: [
+          {
+            label: "High-Performance NVMe",
+            href: "/nvme",
+            icon: RiHardDrive2Line,
+          },
+          {
+            label: "Object Storage",
+            href: "/object-storage",
+            icon: RiDatabase2Line,
+          },
+        ],
+      },
+      {
+        heading: "Available GPU's",
+        links: [
+          {
+            label: "H100",
+            href: "/nvidia-h100",
+            icon: RiCpuLine,
+          },
+          {
+            label: "H200",
+            href: "/nvidia-h100",
+            icon: RiCpuLine,
+          },
+          {
+            label: "A100",
+            href: "/nvidia-a100",
+            icon: RiCpuLine,
           },
         ],
       },
@@ -400,7 +426,7 @@ export default function HeaderComponent() {
                       aria-hidden
                       className={cn(
                         "text-white transition-transform duration-200",
-                        openNav === item.label && "rotate-180"
+                        openNav === item.label && "rotate-180",
                       )}
                     />
                   </Link>
@@ -417,63 +443,81 @@ export default function HeaderComponent() {
                       "absolute left-0 top-full z-50 pt-3 transition-[opacity,visibility] duration-200",
                       openNav === item.label
                         ? "visible opacity-100"
-                        : "invisible pointer-events-none opacity-0"
+                        : "invisible pointer-events-none opacity-0",
                     )}
                   >
                     <div
                       className={cn(
-                        "w-max overflow-hidden rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-2 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
+                        "overflow-hidden rounded-2xl border border-white/10 bg-[#1c1f1e]/70 p-2 shadow-[0_24px_60px_#00000059] backdrop-blur-2xl",
                         item.groups.length > 1
-                          ? "grid min-w-[440px] grid-cols-2 gap-x-2"
-                          : "min-w-[240px]"
+                          ? "flex w-max min-w-[440px] gap-x-2"
+                          : "w-max min-w-[240px]",
                       )}
                     >
-                      {item.groups.map((group) => (
-                        <div key={group.heading ?? item.label}>
-                          {group.heading && (
-                            <p className="px-3 pb-1 pt-2.5 text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">
-                              {group.heading}
-                            </p>
+                      {/* Two independent flex columns (even/odd groups) so a
+                          short right column isn't pushed down by a taller
+                          left column sharing a grid row. */}
+                      {(item.groups.length > 1
+                        ? [
+                            item.groups.filter((_, i) => i % 2 === 0),
+                            item.groups.filter((_, i) => i % 2 === 1),
+                          ]
+                        : [item.groups]
+                      ).map((column, colIndex) => (
+                        <div
+                          key={colIndex}
+                          className={cn(
+                            item.groups!.length > 1 && "flex flex-1 flex-col",
                           )}
-                          {group.links.map((sub) =>
-                            sub.soon ? (
-                              <div
-                                key={sub.label}
-                                aria-disabled="true"
-                                className="flex cursor-default items-center justify-between gap-4 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/50"
-                              >
-                                <span className="flex items-center gap-2.5">
-                                  {sub.icon && (
-                                    <sub.icon
-                                      size={15}
-                                      aria-hidden
-                                      className="shrink-0 text-white/30"
-                                    />
-                                  )}
-                                  {sub.label}
-                                </span>
-                                <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
-                                  Soon
-                                </span>
-                              </div>
-                            ) : (
-                              <Link
-                                key={sub.label}
-                                href={sub.href}
-                                tabIndex={openNav === item.label ? 0 : -1}
-                                className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-                              >
-                                {sub.icon && (
-                                  <sub.icon
-                                    size={15}
-                                    aria-hidden
-                                    className="shrink-0 text-neev-green/80"
-                                  />
-                                )}
-                                {sub.label}
-                              </Link>
-                            )
-                          )}
+                        >
+                          {column.map((group) => (
+                            <div key={group.heading ?? item.label}>
+                              {group.heading && (
+                                <p className="px-3 pb-1 pt-2.5 text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">
+                                  {group.heading}
+                                </p>
+                              )}
+                              {group.links.map((sub) =>
+                                sub.soon ? (
+                                  <div
+                                    key={sub.label}
+                                    aria-disabled="true"
+                                    className="flex cursor-default items-center justify-between gap-4 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/50"
+                                  >
+                                    <span className="flex items-center gap-2.5">
+                                      {sub.icon && (
+                                        <sub.icon
+                                          size={15}
+                                          aria-hidden
+                                          className="shrink-0 text-white/30"
+                                        />
+                                      )}
+                                      {sub.label}
+                                    </span>
+                                    <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
+                                      Soon
+                                    </span>
+                                  </div>
+                                ) : (
+                                  <Link
+                                    key={sub.label}
+                                    href={sub.href}
+                                    tabIndex={openNav === item.label ? 0 : -1}
+                                    className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                                  >
+                                    {sub.icon && (
+                                      <sub.icon
+                                        size={15}
+                                        aria-hidden
+                                        className="shrink-0 text-neev-green/80"
+                                      />
+                                    )}
+                                    {sub.label}
+                                  </Link>
+                                ),
+                              )}
+                            </div>
+                          ))}
                         </div>
                       ))}
                     </div>
@@ -488,7 +532,7 @@ export default function HeaderComponent() {
                 >
                   {item.label}
                 </Link>
-              )
+              ),
             )}
           </nav>
         </div>
@@ -596,7 +640,7 @@ export default function HeaderComponent() {
                       aria-expanded={openGroup === item.label}
                       onClick={() =>
                         setOpenGroup((g) =>
-                          g === item.label ? null : item.label
+                          g === item.label ? null : item.label,
                         )
                       }
                       className="flex w-full items-center justify-between py-3 text-left text-[26px] font-normal leading-tight text-white"
@@ -607,7 +651,7 @@ export default function HeaderComponent() {
                         aria-hidden
                         className={cn(
                           "text-white/70 transition-transform duration-200",
-                          openGroup === item.label && "rotate-180"
+                          openGroup === item.label && "rotate-180",
                         )}
                       />
                     </button>
@@ -620,7 +664,7 @@ export default function HeaderComponent() {
                         "grid transition-all duration-300 ease-out",
                         openGroup === item.label
                           ? "grid-rows-[1fr]"
-                          : "grid-rows-[0fr]"
+                          : "grid-rows-[0fr]",
                       )}
                     >
                       {/* grouped like the desktop panels: section label +
@@ -670,7 +714,7 @@ export default function HeaderComponent() {
                                   )}
                                   {sub.label}
                                 </Link>
-                              )
+                              ),
                             )}
                           </div>
                         ))}
@@ -687,7 +731,7 @@ export default function HeaderComponent() {
                       {item.label}
                     </Link>
                   </li>
-                )
+                ),
               )}
             </ul>
 

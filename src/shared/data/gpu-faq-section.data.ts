@@ -156,7 +156,7 @@ export const NVIDIA_H200_FAQ: readonly FaqItem[] = [
     category: "Pricing",
     question: "What is the H200 GPU pricing and rental cost?",
     answer:
-      "The H200 GPU is available on NeevCloud for just $1.99/hr (limited-time offer), making it one of the most cost-effective options for high-performance AI. You can also explore H200 GPU rent price over time, on-demand H200 pricing, and hourly rental options tailored for both short-term experiments and long-term production workloads.",
+      "The H200 GPU is available on NeevCloud starting at ₹231.17/hr on-demand, making it one of the most cost-effective options for high-performance AI. You can also explore H200 GPU rent price over time, on-demand H200 pricing, and hourly rental options tailored for both short-term experiments and long-term production workloads.",
   },
   {
     id: 4,

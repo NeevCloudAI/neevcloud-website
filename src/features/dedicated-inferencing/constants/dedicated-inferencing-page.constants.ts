@@ -6,9 +6,8 @@ export const DEDICATED_INFERENCING_HERO = {
   primaryCta: "Deploy Now",
   primaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Pricing",
-  secondaryCtaRoute: "/gpu-pricing",
   badgeText: "Dedicated Inferencing",
+  image: "/images/webp/dedicated-inerencing.webp",
   trustBadges: [
     "Always On Warm Endpoint",
     "Zero Cold Starts",
@@ -24,6 +23,4 @@ export const DEDICATED_INFERENCING_FOOTER = {
   primaryCta: "Deploy Now",
   primaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Pricing",
-  secondaryCtaRoute: "/gpu-pricing",
 } as const;

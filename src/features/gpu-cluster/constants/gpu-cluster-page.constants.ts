@@ -10,7 +10,7 @@ export const GPU_CLUSTER_HERO = {
   secondaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   secondaryCtaTarget: "_blank",
   badgeText: "Dedicated GPU - Pay as you go - Billed Per Minute",
-  image: "/images/webp/gpu-cluster.webp",
+  image: "/images/webp/gpu-ai-service.webp",
 } as const;
 
 export const GPU_CLUSTER_FOOTER = {

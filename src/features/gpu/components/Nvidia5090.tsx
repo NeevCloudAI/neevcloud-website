@@ -14,6 +14,7 @@ import GpuFooterSection from "@/shared/components/gpu-footer-section";
 import GpuTechnicalSpecsSection from "@/shared/components/gpu-technical-specs-section";
 import { NVIDIA_RTX_5090_FOOTER_SECTION } from "@/shared/data/gpu-footer.data";
 import { NVIDIA_RTX_5090_TECHNICAL_SPECS_SECTION } from "@/shared/data/gpu-technical-specs-section.data";
+import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 
 const Nvidia5090 = () => {
   return (
@@ -24,12 +25,8 @@ const Nvidia5090 = () => {
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />
       <GpuUseCasesSection {...NVIDIA_RTX_5090_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_RTX_5090_TECHNICAL_SPECS_SECTION} />
-      {/* <GpuOtherGpusSection excludeId="nvidia-rtx-5090" /> */}
-      <FaqSection
-        items={NVIDIA_RTX_5090_FAQ}
-        description="Get Clarity Here!"
-        // className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <GpuOtherGpusSection excludeId="nvidia-rtx-5090" />
+      <FaqSection items={NVIDIA_RTX_5090_FAQ} description="Get Clarity Here!" />
       <GpuFooterSection {...NVIDIA_RTX_5090_FOOTER_SECTION} />
     </>
   );

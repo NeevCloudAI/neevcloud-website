@@ -1,4 +1,5 @@
 export type GpuCostCalculatorGpuTypeId =
+  | "1x-rtxpro6000"
   | "1x-h100"
   | "2x-h100"
   | "4x-h100"

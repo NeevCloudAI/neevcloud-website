@@ -24,7 +24,6 @@ const NvidiaNvl72 = () => {
       <GpuWhyChooseNeevcloudSection {...GPU_WHY_CHOOSE_NEEVCLOUD_SECTION} />
       <GpuUseCasesSection {...NVIDIA_NVL72_USE_CASES_SECTION} />
       <GpuTechnicalSpecsSection {...NVIDIA_NVL72_TECHNICAL_SPECS_SECTION} />
-      {/* <GpuOtherGpusSection excludeId="nvidia-nvl72" /> */}
       <FaqSection items={NVIDIA_NVL72_FAQ} description="Get Clarity Here!" />
       <GpuFooterSection {...NVIDIA_NVL72_FOOTER_SECTION} />
     </>

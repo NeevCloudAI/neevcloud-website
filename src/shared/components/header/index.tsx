@@ -217,7 +217,7 @@ const NAV_ITEMS: NavItem[] = [
           },
           {
             label: "H200",
-            href: "/nvidia-h100",
+            href: "/nvidia-h200",
             icon: RiCpuLine,
           },
           {

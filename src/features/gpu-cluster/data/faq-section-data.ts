@@ -3,21 +3,21 @@ import type { FaqItem } from "@/shared/data/faq-section-types";
 export const GPU_CLUSTER_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Networking",
+    category: "Getting Started",
     question: "How quickly can I launch a GPU instance?",
     answer:
       "Available GPUs deploy within 2–5 minutes. Select your GPU, configure storage, and launch. Instances are ready when status shows 'Running'.",
   },
   {
     id: 2,
-    category: "Getting Started",
+    category: "Billing",
     question: "What's included in the hourly price?",
     answer:
-      "GPU compute, vCPU, RAM, DDoS protection, and pre-built ML images. Persistent storage billed separately.",
+      "GPU compute, vCPU, RAM, InfiniBand networking, DDoS protection, and pre-built ML images. Persistent storage billed separately.",
   },
   {
     id: 3,
-    category: "Getting Started",
+    category: "General",
     question: "Can I switch between GPUs?",
     answer:
       "Yes. Stop your current instance, launch a new one with a different GPU, and attach your persistent storage to continue work.",
@@ -31,7 +31,7 @@ export const GPU_CLUSTER_FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: 5,
-    category: "Scaling",
+    category: "Compliance",
     question: "Is data kept within India?",
     answer:
       "Yes. All infrastructure operates within India. Your data never leaves Indian data centers unless you explicitly transfer it out.",

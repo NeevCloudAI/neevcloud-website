@@ -1,6 +1,6 @@
 export type FaqItem = {
   id: number;
-  category: string;
+  category?: string;
   question: string;
   answer: string;
 };

@@ -3,37 +3,37 @@ import type { FaqItem } from "@/shared/data/faq-section-types";
 export const PLAYGROUND_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Networking",
-    question: "Do I need an account to use the Playground?",
+    category: "Getting Started",
+    question: "Do I need an account to use the playground?",
     answer:
-      "No. The Playground is open to everyone without signing up. Just visit and start testing models immediately.",
+      "No. The playground is completely free and requires no signup. Open it in your browser and start testing models immediately.",
   },
   {
     id: 2,
-    category: "Getting Started",
-    question: "Are my test inputs stored or shared?",
+    category: "Privacy",
+    question: "Are my prompts and data stored?",
     answer:
-      "No. We don't store your inputs, outputs, or uploaded files beyond the active session. Your test data remains private.",
+      "No. The playground runs in your browser. Prompts and responses are not logged or stored by NeevCloud. Your experiments remain private.",
   },
   {
     id: 3,
-    category: "Getting Started",
-    question: "What's the daily usage limit?",
+    category: "General",
+    question: "Can I use playground models in production?",
     answer:
-      "Free access includes 100 requests per day per model category and 50 file uploads daily. Create an account for higher limits.",
+      "The playground is for testing only. For production use, deploy models to AI Inference endpoints with API access and SLA guarantees.",
   },
   {
     id: 4,
-    category: "Billing",
-    question: "How do I move from Playground to production?",
+    category: "API",
+    question: "How do I move from playground to production?",
     answer:
-      "Request API access to use the same models in your applications. The Playground helps you test before integrating through our API.",
+      "Click \"Deploy to Production\" on any model. You'll get an API endpoint instantly. Copy your working prompts and integrate using our SDKs.",
   },
   {
     id: 5,
-    category: "Scaling",
-    question: "Can I compare multiple models at once?",
+    category: "General",
+    question: "Are there usage limits in the playground?",
     answer:
-      "Yes. The Playground supports side-by-side testing, allowing you to compare performance and quality across different models.",
+      "Light rate limits apply to prevent abuse. For unlimited access, use AI Inference API with your account. Playground is designed for experimentation, not production workloads.",
   },
 ];

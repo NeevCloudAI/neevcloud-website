@@ -451,7 +451,27 @@ button:not(:disabled) {
 @media (prefers-reduced-motion: reduce) {
   .hero-in,
   .home-why-icon-turntable img,
-  .home-why-icon-turntable::after {
+  .home-why-icon-turntable::after,
+  .latest-news-track {
     animation: none;
+  }
+}
+
+/* Latest-news marquee: track renders the list twice back-to-back and slides
+   left by exactly half its width, so the loop point is invisible. */
+.latest-news-track {
+  animation: latest-news-scroll 40s linear infinite;
+}
+
+.latest-news-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes latest-news-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }

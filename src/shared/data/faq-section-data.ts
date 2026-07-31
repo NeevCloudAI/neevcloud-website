@@ -17,7 +17,7 @@ export const CPU_CLUSTER_FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: 3,
-    category: "Getting Started",
+    category: "General",
     question: "Can I resize instances after launch?",
     answer:
       "Yes. Stop the instance, change the instance type, and restart. Your data on persistent storage remains intact.",

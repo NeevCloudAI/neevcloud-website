@@ -3,40 +3,37 @@ import type { FaqItem } from "@/shared/data/faq-section-types";
 export const DEFENCE_FAQ_ITEMS: readonly FaqItem[] = [
   {
     id: 1,
-    category: "Networking",
-    question:
-      "What compliance and sovereignty guarantees apply to defence workloads?",
+    category: "Compliance",
+    question: "Is infrastructure completely sovereign?",
     answer:
-      "Infrastructure operates exclusively within India under Indian jurisdiction. ISO 27001, SOC 2 Type II, and Uptime Institute Tier III certified. Designed for strategic and classified workload requirements.",
+      "Yes. 100% Indian-owned infrastructure operating within India under Indian jurisdiction. No foreign dependencies or cross-border data transmission.",
   },
   {
     id: 2,
-    category: "Getting Started",
-    question:
-      "Can infrastructure be deployed air-gapped for classified workloads?",
+    category: "Security",
+    question: "Can we deploy air-gapped environments?",
     answer:
-      "Yes. Network-isolated clusters with dedicated physical infrastructure, custom security architectures, and on-site deployment support for maximum segregation.",
+      "Yes. Fully air-gapped deployments with complete network isolation available. Dedicated physical infrastructure with no internet connectivity.",
   },
   {
     id: 3,
-    category: "Getting Started",
-    question:
-      "What GPU infrastructure is available for defence AI applications?",
+    category: "Compliance",
+    question: "What certifications does NeevCloud hold?",
     answer:
-      "H100, H200, and A100 GPUs available as single instances or multi-GPU clusters.",
+      "ISO 27001, SOC 2 Type II, Uptime Institute Tier III, GDPR compliance. Security documentation available for procurement and compliance review.",
   },
   {
     id: 4,
-    category: "Billing",
-    question: "How is strategic and classified data secured?",
+    category: "General",
+    question: "What GPU infrastructure is available?",
     answer:
-      "AES-256 encryption at rest, TLS 1.3 in transit, role-based access controls, network isolation, and comprehensive audit logging. SOC 2 Type II certified sovereign infrastructure.",
+      "H100, H200, A100 GPUs as single instances, multi-GPU clusters, or dedicated infrastructure. Custom configurations for specific requirements.",
   },
   {
     id: 5,
-    category: "Scaling",
-    question: "What engagement models are available for government agencies?",
+    category: "General",
+    question: "How do we engage for defence applications?",
     answer:
-      "On-demand hourly billing, reserved capacity, and dedicated sovereign deployments. Custom agreements for defence research institutions and strategic programmes.",
+      "Contact us directly for requirements discussion. We work with defence organizations, research institutions, and strategic sector entities under appropriate agreements.",
   },
 ];

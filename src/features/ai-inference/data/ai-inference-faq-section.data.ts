@@ -3,37 +3,37 @@ import type { FaqItem } from "@/shared/data/faq-section-types";
 export const AI_INFERENCE_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Networking",
-    question: "Is KYC required to use NeevCloud?",
+    category: "General",
+    question: "Can I deploy custom fine-tuned models?",
     answer:
-      "Blender, Maya, Houdini, Cinema 4D, Unreal Engine, and any renderer that runs on Linux. Bring your own licenses or use open-source tools.",
+      "Yes. Upload your fine-tuned weights (HuggingFace format, LoRA adapters, GGUF) and we'll deploy them as managed endpoints. Same API, your custom model.",
   },
   {
     id: 2,
-    category: "Getting Started",
-    question: "What operating systems are available?",
+    category: "Billing",
+    question: "How does pricing compare to OpenAI?",
     answer:
-      "High-bandwidth network transfers with rsync, cloud storage sync (S3-compatible), or direct uploads. NVMe storage handles large asset libraries efficiently.",
+      "Competitive pricing in INR with transparent token-based billing. Free tier: 2,00,000 tokens/day. Volume discounts above 10M tokens/month. No hidden fees.",
   },
   {
     id: 3,
-    category: "Getting Started",
-    question: "Can I attach multiple storage volumes?",
+    category: "Performance",
+    question: "What's the latency for inference?",
     answer:
-      "Yes. Spot instances offer up to 60% savings for batch renders. Jobs checkpoint automatically and resume on new instances if preempted.",
+      "Sub-50ms time to first token for most models. Optimized GPU serving with vLLM or TGI backends. Auto-scaling maintains performance under load.",
   },
   {
     id: 4,
-    category: "Billing",
-    question: "How does networking work with GPU instances?",
+    category: "Compliance",
+    question: "Where are inference requests processed?",
     answer:
-      "GPUs excel at parallel processing, making them 5–10× faster for path tracing and real-time rendering. CPUs handle general tasks and can be cost-effective for simpler scenes.",
+      "All inference happens on India-resident infrastructure. Model weights, requests, and responses never leave Indian servers. DPDP Act compliant.",
   },
   {
     id: 5,
-    category: "Scaling",
-    question: "Can NeevCloud access my stored data?",
+    category: "General",
+    question: "Can I switch between models?",
     answer:
-      "Per-second billing for GPU instances. Only charged while rendering-no cost for idle time. Storage billed monthly per GB.",
+      "Yes. Deploy multiple models with separate endpoints. Route requests dynamically or A/B test models. Change models anytime without code changes.",
   },
 ];

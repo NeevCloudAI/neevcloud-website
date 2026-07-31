@@ -60,14 +60,14 @@ export default function HeroSection() {
           className="hero-in flex w-full flex-col gap-4"
           style={{ animationDelay: "0.36s" }}
         >
-          <Container>
+          {/* <Container>
             <h2
               id="latest-news-heading"
               className="text-[14px] font-normal leading-[132%] tracking-[-0.02em] text-white"
             >
               Latest at NeevCloud
             </h2>
-          </Container>
+          </Container> */}
           <LatestNewsCarouselClient />
         </section>
       </div>

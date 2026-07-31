@@ -182,14 +182,14 @@ const NAV_ITEMS: NavItem[] = [
             icon: RiCloudLine,
             soon: true,
           },
-          { label: "vGPU", href: "#", icon: RiPieChart2Line, soon: true },
+          // { label: "vGPU", href: "#", icon: RiPieChart2Line, soon: true },
           { label: "GPU Cluster", href: "#", icon: RiNodeTree, soon: true },
-          {
-            label: "Kubernetes (NKS)",
-            href: "#",
-            icon: RiStackLine,
-            soon: true,
-          },
+          // {
+          //   label: "Kubernetes (NKS)",
+          //   href: "#",
+          //   icon: RiStackLine,
+          //   soon: true,
+          // },
         ],
       },
       {
@@ -216,8 +216,18 @@ const NAV_ITEMS: NavItem[] = [
             icon: RiCpuLine,
           },
           {
+            label: "RTX 5090",
+            href: "/nvidia-5090",
+            icon: RiCpuLine,
+          },
+          {
             label: "A100",
             href: "/nvidia-a100",
+            icon: RiCpuLine,
+          },
+          {
+            label: "A30",
+            href: "/nvidia-a30",
             icon: RiCpuLine,
           },
           {

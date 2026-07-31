@@ -74,34 +74,38 @@ export const NVIDIA_A30_FAQ: readonly FaqItem[] = [
 export const NVIDIA_B200_FAQ: readonly FaqItem[] = [
   {
     id: 1,
-    category: "Overview",
-    question: "What is the NVIDIA B200 GPU and what workloads is it ideal for?",
+    category: "Use Cases",
+    question: "What models can run on a single B200?",
     answer:
-      "The NVIDIA B200, built on the Blackwell HGX architecture, is designed for high-performance computing (HPC) and AI workloads. It excels in large language models, recommender systems, chatbots, and generative AI, offering businesses the power to accelerate AI transformation and scale demanding computational tasks efficiently.",
+      "Single B200 handles models up to 1T parameters with optimized quantization. For larger models, use multi-GPU clusters with model parallelism.",
   },
   {
     id: 2,
-    category: "Specifications",
-    question:
-      "What are the key features and specifications of the NVIDIA B200 GPU?",
+    category: "Comparison",
+    question: "How does B200 compare to H200?",
     answer:
-      "The B200 leverages 12-high memory stacks, reaching up to 288GB, and provides 8 TB/s memory bandwidth with an advanced NVLink interface for seamless connectivity. It delivers 5X AI inferencing performance over previous generations, making it ideal for data-intensive AI and HPC applications.",
+      "B200 delivers 2.5x faster AI training with 36% more memory (192GB vs 141GB), 67% higher bandwidth, and 5th-generation Tensor Cores.",
   },
   {
     id: 3,
-    category: "Deployment",
-    question:
-      "How can I deploy the NVIDIA B200 in the cloud for AI and HPC workloads?",
+    category: "Overview",
+    question: "When will B200 instances be available?",
     answer:
-      "NeevCloud offers pre-configured B200 GPU instances optimized for cloud and hybrid deployments. You can scale quickly across virtual workstations, enterprise AI projects, or HPC clusters, ensuring maximum performance while avoiding the complexity of managing on-premise GPU infrastructure.",
+      "B200 instances launch Q1 2026. Join the waitlist to receive notification when capacity becomes available.",
   },
   {
     id: 4,
     category: "Pricing",
-    question:
-      "What is the NVIDIA B200 price and how can I access it on NeevCloud?",
+    question: "What's included in the hourly price?",
     answer:
-      "The NVIDIA B200 price depends on the instance type and rental duration. By renting B200 GPUs on NeevCloud, you gain cost-effective access to high-performance AI and HPC compute, eliminating large upfront hardware expenses. Check NeevCloud to view the latest nvidia b200 price and flexible rental options.",
+      "GPU compute, 24 vCPU cores, 256GB RAM, ephemeral NVMe storage, InfiniBand networking, and DDoS protection. Persistent storage billed separately.",
+  },
+  {
+    id: 5,
+    category: "Pricing",
+    question: "Do you offer reserved pricing for B200?",
+    answer:
+      "Yes. Reserved plans available for 3, 6, or 12 month commitments with significant discounts. Contact sales for custom enterprise pricing and multi-GPU cluster rates.",
   },
 ] as const;
 
@@ -139,32 +143,38 @@ export const NVIDIA_B300_FAQ: readonly FaqItem[] = [
 export const NVIDIA_H200_FAQ: readonly FaqItem[] = [
   {
     id: 1,
-    category: "Overview",
-    question: "What is the H200 GPU and why is it important for AI workloads?",
+    category: "Use Cases",
+    question: "What models can run on a single H200?",
     answer:
-      "The NVIDIA H200 Tensor Core GPU is the latest evolution in accelerated computing, designed to handle the most computationally intensive AI workloads. With up to 30% faster processing than the H100, enhanced energy efficiency, and advanced AI capabilities, it excels at AI training, inference, deep learning, and LLM workloads. Whether you're scaling a single GPU or a multi-GPU AI SuperCluster, the H200 delivers unmatched performance for cloud-based AI.",
+      "Single H200 handles models up to 405B parameters without model parallelism. The 141GB memory fits what requires multiple H100s.",
   },
   {
     id: 2,
-    category: "Deployment",
-    question: "How can I pre-reserve or rent an H200 GPU on NeevCloud?",
+    category: "Comparison",
+    question: "How does H200 compare to H100?",
     answer:
-      "NeevCloud offers flexible H200 GPU rental options on a pay-as-you-go basis. By pre-reserving, you can lock in guaranteed access to H200 GPUs, ensuring your AI workloads run without delays. Pre-reservation also provides attractive early pricing, making it easy to scale AI experiments, deep learning, or LLM training efficiently.",
+      "H200 has 76% more memory (141GB vs 80GB) and 43% higher bandwidth (4.8 TB/s vs 3.35 TB/s). Same Tensor Core architecture, more capacity.",
   },
   {
     id: 3,
-    category: "Pricing",
-    question: "What is the H200 GPU pricing and rental cost?",
+    category: "Comparison",
+    question: "Why choose H200 over H100?",
     answer:
-      "The H200 GPU is available on NeevCloud starting at ₹231.17/hr on-demand, making it one of the most cost-effective options for high-performance AI. You can also explore H200 GPU rent price over time, on-demand H200 pricing, and hourly rental options tailored for both short-term experiments and long-term production workloads.",
+      "Choose H200 for 405B models, long-context processing, or large batch inference. Choose H100 for 70B models or cost optimization.",
   },
   {
     id: 4,
-    category: "Use Cases",
-    question:
-      "What makes the H200 GPU ideal for AI, deep learning, and cloud deployments?",
+    category: "Pricing",
+    question: "What's included in the hourly price?",
     answer:
-      "The H200 GPU is optimized for cloud-based AI workloads, offering unmatched scalability, inference throughput, and advanced GPU interconnects. It's perfect for AI training, deep learning, LLMs, and rendering tasks, enabling organizations to maximize performance while minimizing costs. Renting an H200 GPU from NeevCloud gives you instant access to enterprise-grade GPU power without the overhead of physical infrastructure.",
+      "GPU compute, 20 vCPU cores, 192GB RAM, ephemeral NVMe storage, InfiniBand networking, and DDoS protection. Persistent storage billed separately.",
+  },
+  {
+    id: 5,
+    category: "Pricing",
+    question: "Do you offer reserved pricing for H200?",
+    answer:
+      "Yes. Reserved plans available for 3, 6, or 12 month commitments with significant discounts. Contact sales for custom enterprise pricing and multi-GPU cluster rates.",
   },
 ] as const;
 
@@ -398,37 +408,37 @@ export const NVIDIA_NVL72_FAQ: readonly FaqItem[] = [
 export const NVIDIA_H100_FAQ: readonly FaqItem[] = [
   {
     id: 1,
-    category: "Overview",
-    question: "What is an NVIDIA HGX H100 GPU Cluster?",
+    category: "Use Cases",
+    question: "What models can run on a single H100?",
     answer:
-      "A high-performance AI supercomputing platform built for large-scale LLM training, GenAI, and HPC workloads with ultra-fast NVLink interconnect.",
+      "Single H100 handles models up to 70B parameters with quantization. For 405B models, use multi-GPU clusters with model parallelism.",
   },
   {
     id: 2,
-    category: "Use Cases",
-    question: "Why is H100 ideal for training LLMs?",
+    category: "Comparison",
+    question: "How does H100 compare to A100?",
     answer:
-      "Its 4th-Gen Tensor Cores and massive memory bandwidth accelerate trillion-parameter models with minimal latency.",
+      "H100 delivers 3x faster training than A100 with 80GB HBM3 (vs 80GB HBM2e), 4th-gen Tensor Cores, and higher memory bandwidth.",
   },
   {
     id: 3,
-    category: "Infrastructure",
-    question: "How does HGX H100 improve distributed AI training?",
+    category: "Use Cases",
+    question: "Can I use H100 for inference?",
     answer:
-      "NVSwitch and NVLink enable GPUs to function as one massive GPU, dramatically reducing communication overhead.",
+      "Yes. H100 excels at high-throughput inference serving. Handle 1000+ concurrent requests with sub-50ms latency using vLLM or Triton.",
   },
   {
     id: 4,
-    category: "Use Cases",
-    question: "Can HGX H100 run scientific HPC workloads?",
+    category: "Pricing",
+    question: "What's included in the hourly price?",
     answer:
-      "Yes. It is widely used for simulations, genomics, climate modeling, and financial analytics.",
+      "GPU compute, 20 vCPU cores, 125GB RAM, ephemeral NVMe storage, InfiniBand networking, and DDoS protection. Persistent storage billed separately.",
   },
   {
     id: 5,
-    category: "NeevCloud",
-    question: "Can I deploy H100 on NeevCloud?",
+    category: "Pricing",
+    question: "Do you offer reserved pricing for H100?",
     answer:
-      "Yes. NeevCloud provides fully managed, scalable HGX H100 clusters for AI training, inference, and HPC.",
+      "Yes. Reserved plans available for 3, 6, or 12 month commitments with significant discounts. Contact sales for custom enterprise pricing and multi-GPU cluster rates.",
   },
 ] as const;

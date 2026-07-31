@@ -3,37 +3,37 @@ import type { FaqItem } from "@/shared/data/faq-section-types";
 export const INFERENCE_API_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Networking",
-    question: "What models are available?",
+    category: "Getting Started",
+    question: "How do I get started with the API?",
     answer:
-      "20+ open-source models across chat, code, vision, and embeddings. New models are added regularly. View the full list at /models.",
+      "Sign up at console.ai.neevcloud.com, create an API key, and make your first request. Free tier includes 2,00,000 tokens/day.",
   },
   {
     id: 2,
-    category: "Getting Started",
-    question: "Is this OpenAI-compatible?",
+    category: "API",
+    question: "Is this compatible with OpenAI SDKs?",
     answer:
-      "Yes. Fully compatible with /v1/chat/completions, /v1/embeddings, and /v1/images/generations. One-line switch from OpenAI SDK.",
+      "Yes. Change base_url to https://api.neevcloud.com/v1 in your OpenAI SDK configuration. All standard parameters work identically.",
   },
   {
     id: 3,
-    category: "Getting Started",
-    question: "Is my data used for training?",
+    category: "Compliance",
+    question: "Where is my data processed?",
     answer:
-      "No. NeevCloud does not use your API requests or outputs to train or fine-tune any model.",
+      "Every API request is processed on infrastructure within India. Your prompts and responses never leave Indian infrastructure.",
   },
   {
     id: 4,
     category: "Billing",
     question: "How is billing calculated?",
     answer:
-      "Per token, input and output are billed separately in INR. Usage tracked in real time. Set spend alerts in the console.",
+      "Per token—input and output billed separately in INR. Usage tracked in real time. Set spend alerts in the console.",
   },
   {
     id: 5,
-    category: "Scaling",
-    question: "Can I pin a model version?",
+    category: "API",
+    question: "What happens if I hit rate limits?",
     answer:
-      "Yes. Use model@version syntax to pin to a specific version and avoid unexpected changes.",
+      "API returns 429 with retry headers. Implement exponential backoff. Upgrade your plan or request a limit increase for higher quotas.",
   },
 ];

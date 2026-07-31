@@ -10,7 +10,7 @@ export const MODEL_CATALOG_HERO = {
   secondaryCta: "Get API Access",
   secondaryCtaRoute: EXTERNAL_LINKS.apiKeys,
   secondaryCtaTarget: "_blank",
-  image: "/images/webp/model-api.webp",
+  image: "/images/webp/model-catalog.webp",
   trustBadges: [
     "Sub-100ms Latency",
     "RESTful APIs",

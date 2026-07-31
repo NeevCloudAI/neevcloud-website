@@ -10,7 +10,7 @@ export const GENERATIVE_AI_HERO = {
   secondaryCta: "See GenAI Templates",
   secondaryCtaRoute: EXTERNAL_LINKS.templates,
   secondaryCtaTarget: "_blank",
-  image: "/images/webp/model-api.webp",
+  // image: "/images/webp/model-api.webp",
   trustBadges: [
     "One-click deployment",
     "Production inference",

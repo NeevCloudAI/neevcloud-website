@@ -4,43 +4,36 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
     category: "General",
-    question: "What is NeevCloud's AI SuperCloud?",
+    question: "What is NeevCloud?",
     answer:
-      "A full-stack AI cloud built in India: on-demand GPU and CPU compute, managed Kubernetes, high-performance storage, and a complete inference platform (serverless endpoints, model APIs, and a playground) — everything you need to train, fine-tune, and serve models from one console, CLI, or API.",
+      "NeevCloud is India's Sovereign AI Supercloud, offering sovereign, scalable, and AI-native infrastructure to build, train, and deploy AI applications.",
   },
   {
     id: 2,
     category: "General",
-    question: "Which GPUs can I get, and how fast?",
+    question: "How is NeevCloud different from traditional cloud providers?",
     answer:
-      "NVIDIA B200, H200, H100, A100 and more, from single instances to multi-node clusters with high-bandwidth interconnect. Single instances spin up in minutes from the console or CLI; dedicated clusters are provisioned in days, not months.",
+      "NeevCloud is purpose-built for AI, providing on-demand GPU access, transparent pricing, data sovereignty, and zero vendor lock-in.",
   },
   {
     id: 3,
-    category: "Billing",
-    question: "How does pricing work?",
+    category: "Compliance",
+    question: "Does NeevCloud offer data sovereignty and compliance?",
     answer:
-      "Transparent per-hour rates with committed-capacity discounts for reserved clusters. What you see is what you pay — no hidden egress fees or surprise line items. Idle reclamation on committed capacity keeps effective costs well below hyperscale on-demand rates.",
+      "Yes. Your data remains within India with full residency controls, enterprise-grade security, and compliance-ready infrastructure.",
   },
   {
     id: 4,
-    category: "Compliance",
-    question: "Where does my data live? Is it sovereign?",
+    category: "Getting Started",
+    question: "How quickly can I access GPU resources on NeevCloud?",
     answer:
-      "Your data stays in India, in facilities operating under strict global standards — AICPA SOC 2, ISO 9001, ISO 27002 and ISO 27018. You keep complete control over data residency and compliance, which matters for BFSI, healthcare, defence, and the public sector.",
+      "GPU resources can be provisioned in minutes, enabling teams to start training and deploying AI workloads without delays.",
   },
   {
     id: 5,
-    category: "Migration",
-    question: "Can I migrate from AWS, GCP, or Azure?",
+    category: "General",
+    question: "Can NeevCloud support both startups and enterprises?",
     answer:
-      "Yes — and back out again if you ever want to. NeevCloud is built on open standards: Kubernetes orchestration, S3-compatible object storage, and typed SDKs for every major runtime. No vendor lock-in, no walled gardens.",
-  },
-  {
-    id: 6,
-    category: "Support",
-    question: "What support comes with the platform?",
-    answer:
-      "24x7 support from the engineers who built the platform — not a ticket queue. Every plan includes responsive engineering support, and dedicated clusters come with a named team that knows your workloads.",
+      "Yes. Whether you're building your first AI model or scaling enterprise-grade workloads, NeevCloud provides infrastructure that grows with your needs.",
   },
 ];

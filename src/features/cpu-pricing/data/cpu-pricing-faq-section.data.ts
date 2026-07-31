@@ -3,37 +3,37 @@ import type { FaqItem } from "@/shared/data/faq-section-types";
 export const CPU_PRICING_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
-    category: "Networking",
+    category: "Compliance",
     question: "Is KYC required to use NeevCloud?",
     answer:
-      "Blender, Maya, Houdini, Cinema 4D, Unreal Engine, and any renderer that runs on Linux. Bring your own licenses or use open-source tools.",
+      "Yes. Verification is required for regulatory compliance. Complete KYC during account registration to activate services.",
   },
   {
     id: 2,
     category: "Getting Started",
     question: "What operating systems are available?",
     answer:
-      "High-bandwidth network transfers with rsync, cloud storage sync (S3-compatible), or direct uploads. NVMe storage handles large asset libraries efficiently.",
+      "Ubuntu, CentOS/Rocky Linux, Debian, Fedora, Red Hat, Windows Server, and custom images. Full list available in instance creation dashboard.",
   },
   {
     id: 3,
-    category: "Getting Started",
+    category: "Storage",
     question: "Can I attach multiple storage volumes?",
     answer:
-      "Yes. Spot instances offer up to 60% savings for batch renders. Jobs checkpoint automatically and resume on new instances if preempted.",
+      "Yes. Attach multiple persistent volumes per instance for separate storage needs. Configure during instance creation or add later.",
   },
   {
     id: 4,
-    category: "Billing",
+    category: "Networking",
     question: "How does networking work with GPU instances?",
     answer:
-      "GPUs excel at parallel processing, making them 5–10× faster for path tracing and real-time rendering. CPUs handle general tasks and can be cost-effective for simpler scenes.",
+      "CPU and GPU instances in the same region share a private network. No bandwidth charges for inter-instance traffic. Perfect for preprocessing pipelines and API gateways.",
   },
   {
     id: 5,
-    category: "Scaling",
+    category: "Privacy",
     question: "Can NeevCloud access my stored data?",
     answer:
-      "Per-second billing for GPU instances. Only charged while rendering-no cost for idle time. Storage billed monthly per GB.",
+      "No. Your data remains private unless explicit access is granted or legally required. Full control over access permissions and encryption.",
   },
 ];

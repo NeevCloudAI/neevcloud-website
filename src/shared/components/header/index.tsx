@@ -281,11 +281,11 @@ const NAV_ITEMS: NavItem[] = [
         links: [
           { label: "GPU Compute", href: "/gpu-pricing", icon: RiPriceTag3Line },
           { label: "CPU Compute", href: "/cpu-pricing", icon: RiCoinsLine },
-          {
-            label: "AI Inference",
-            href: "/ai-inference",
-            icon: RiFlashlightLine,
-          },
+          // {
+          //   label: "AI Inference",
+          //   href: "/ai-inference",
+          //   icon: RiFlashlightLine,
+          // },
           {
             label: "TCO Calculator",
             href: "/tco-calculator",

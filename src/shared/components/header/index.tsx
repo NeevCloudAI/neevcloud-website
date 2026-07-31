@@ -414,6 +414,7 @@ export default function HeaderComponent() {
                     aria-expanded={openNav === item.label}
                     onPointerEnter={() => openPanel(item.label)}
                     onFocus={() => openPanel(item.label)}
+                    onClick={() => setOpenNav(null)}
                     onKeyDown={(e) => {
                       // ArrowDown steps keyboard focus into the open panel
                       if (e.key !== "ArrowDown") return;
@@ -510,6 +511,7 @@ export default function HeaderComponent() {
                                     key={sub.label}
                                     href={sub.href}
                                     tabIndex={openNav === item.label ? 0 : -1}
+                                    onClick={() => setOpenNav(null)}
                                     className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
                                   >
                                     {sub.icon && (

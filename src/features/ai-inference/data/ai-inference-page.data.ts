@@ -7,8 +7,8 @@ export const AI_INFERENCE_HERO = {
   primaryCta: "Deploy Your Model",
   primaryCtaRoute: EXTERNAL_LINKS.aiInferenceDedicatedModel,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Inference Pricing",
-  secondaryCtaRoute: "/ai-inference#ai-inference-transparent-pricing-section",
+  // secondaryCta: "View Inference Pricing",
+  // secondaryCtaRoute: "/ai-inference#ai-inference-transparent-pricing-section",
   trustBadges: [
     "OpenAI-compatible API",
     "Managed infrastructure",

@@ -120,7 +120,7 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Inference Hub",
-    href: "/ai-inference",
+    href: "/serverless-inference",
     groups: [
       {
         heading: "Inference Hub",

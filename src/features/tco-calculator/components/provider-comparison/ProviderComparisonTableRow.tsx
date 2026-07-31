@@ -45,7 +45,7 @@ const ProviderComparisonTableRow = ({
           <Text
             as="h6"
             fontFamily="spaceMono"
-            textColor={row.isPrimary ? "pulse-red" : "white"}
+            textColor={row.isPrimary ? "primary" : "white"}
           >
             {row.total}
           </Text>

@@ -7,7 +7,7 @@ export const VM_SERVICE_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiSuperCloudVM,
   primaryCtaTarget: "_blank",
   badgeText: "VM Service",
-
+  image: "/images/webp/vm-service.webp",
   trustBadges: [
     "One Unified Platform",
     "Optional GPU Attachment",

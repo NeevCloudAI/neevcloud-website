@@ -1,6 +1,7 @@
 import { Instrument_Sans, Poppins, Space_Mono } from "next/font/google";
 import { defaultMetadata } from "@/lib/seo";
 import DeferredAnalytics from "@/shared/components/analytics/DeferredAnalytics";
+import RouteProgressBar from "@/shared/components/route-progress-bar";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${instrumentSans.variable} ${spaceMono.variable}`}
       >
+        <RouteProgressBar />
         {children}
         <DeferredAnalytics />
       </body>

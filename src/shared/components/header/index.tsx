@@ -211,19 +211,26 @@ const NAV_ITEMS: NavItem[] = [
         heading: "Available GPU's",
         links: [
           {
-            label: "H100",
-            href: "/nvidia-h100",
-            icon: RiCpuLine,
-          },
-          {
-            label: "H200",
-            href: "/nvidia-h200",
+            label: "RTX A6000",
+            href: "/nvidia-a6000",
             icon: RiCpuLine,
           },
           {
             label: "A100",
             href: "/nvidia-a100",
             icon: RiCpuLine,
+          },
+          {
+            label: "H100",
+            href: "/nvidia-h100",
+            icon: RiCpuLine,
+            soon: true,
+          },
+          {
+            label: "H200",
+            href: "/nvidia-h200",
+            icon: RiCpuLine,
+            soon: true,
           },
         ],
       },

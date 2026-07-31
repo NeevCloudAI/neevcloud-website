@@ -8,7 +8,7 @@ export const AGENTIC_WORKFLOW_HERO = {
   primaryCtaRoute: EXTERNAL_LINKS.aiAgentsOverview,
   secondaryCta: "Talk to an Engineer",
   secondaryCtaRoute: "/contact-neevcloud#contact-form",
-  image: "/images/webp/model-api.webp",
+  image: "/images/webp/agentic-studio.webp",
   trustBadges: [
     "Container-native",
     "Long-running workloads",

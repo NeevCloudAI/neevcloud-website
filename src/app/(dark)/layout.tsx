@@ -7,7 +7,7 @@ export default function DarkLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="relative">
+    <div className="relative bg-black">
       <HeaderComponent />
       <main>{children}</main>
     </div>

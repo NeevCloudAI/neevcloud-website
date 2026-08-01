@@ -1,3 +1,5 @@
+"use client";
+
 import { Text, LinkComponent } from "@/shared/ui-lib";
 import { CONTACT_NEEVCLOUD_HERO } from "../data/contact-neevcloud-page.data";
 import Container from "@/shared/components/container";
@@ -47,6 +49,11 @@ const ContactNeevcloudHeroSection = () => {
           <LinkComponent
             href={CONTACT_NEEVCLOUD_HERO.primaryCtaRoute ?? ""}
             spacing="lg"
+            onClick={() => {
+              document
+                .getElementById("contact-form")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             {CONTACT_NEEVCLOUD_HERO.primaryCta}
           </LinkComponent>

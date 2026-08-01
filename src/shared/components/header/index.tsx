@@ -384,11 +384,11 @@ export default function HeaderComponent() {
   };
 
   return (
-    <header className="z-50 w-full bg-black">
-      <div
+    <header className="z-50 w-full bg-black/90 sticky top-0">
+      {/* <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[#0d1110]/70 backdrop-blur-xl xl:hidden"
-      />
+      /> */}
       <Container className="flex items-center justify-between gap-4 py-4">
         <div className="flex items-center gap-6">
           <Link href="/" className="shrink-0">

@@ -7,7 +7,7 @@ export const FOOTER = {
   ctaLabel: "Get Started",
   ctaHref: EXTERNAL_LINKS.aiSupercloudConsole,
   copyright: "© 2026, NeevAI SuperCloud Pvt. Ltd.",
-  ctaTarget: '_blank',
+  ctaTarget: "_blank",
   legal: [
     { label: "Terms of Usage", href: "/terms-condition" },
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -76,7 +76,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     links: [
       { label: "GPU Compute", href: "/gpu-pricing" },
       { label: "CPU Compute", href: "/cpu-pricing" },
-      { label: "AI Inference", href: "/ai-inference" },
+      // { label: "AI Inference", href: "/ai-inference" },
       { label: "TCO Calculator", href: "/tco-calculator" },
     ],
   },

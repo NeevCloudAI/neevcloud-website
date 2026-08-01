@@ -48,20 +48,22 @@ export default function LatestNewsCarouselClient() {
 
   return (
     <div className="w-full">
-      <Container className="mb-4 flex justify-start gap-2">
+      <Container className="mb-4 flex justify-end gap-2">
         <Button
+          variant="ghost"
           spacing="none"
           borderRadius="full"
-          className="size-11 inline-flex items-center justify-center"
+          className="size-11 inline-flex items-center justify-center border border-white/15 text-white/70"
           aria-label="Scroll latest news left"
           onClick={() => scrollByDirection("left")}
         >
           <ChevronLeft size={20} aria-hidden />
         </Button>
         <Button
+          variant="ghost"
           spacing="none"
           borderRadius="full"
-          className="size-11 inline-flex items-center justify-center"
+          className="size-11 inline-flex items-center justify-center border border-white/15 text-white/70"
           aria-label="Scroll latest news right"
           onClick={() => scrollByDirection("right")}
         >

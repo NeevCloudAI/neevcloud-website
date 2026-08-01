@@ -3,6 +3,17 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
+// globals.css makes <body> overflow-y-auto with a fixed height, so it (not
+// the window/documentElement) is often the real scroller — same quirk
+// StackScrollClient works around. Find whichever element actually scrolls.
+function getScroller(): Element {
+  return (
+    [document.scrollingElement, document.body].find(
+      (s): s is Element => !!s && s.scrollHeight - s.clientHeight > 1,
+    ) ?? document.documentElement
+  );
+}
+
 /**
  * Top-of-page loading bar. Starts a trickle on internal link clicks (Next
  * resolves the new page asynchronously, so the click itself has no signal
@@ -23,8 +34,15 @@ export default function RouteProgressBar() {
         return;
 
       const url = new URL(anchor.href, window.location.href);
-      if (url.origin !== window.location.origin || url.pathname === pathname)
+      if (url.origin !== window.location.origin) return;
+
+      if (url.pathname === pathname) {
+        // Same page: Next won't navigate, so usePathname's effect below
+        // never re-fires. Scroll manually, unless the link targets a hash
+        // (that scroll is its own job).
+        if (!url.hash) getScroller().scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
         return;
+      }
 
       window.clearInterval(intervalRef.current);
       setProgress(15);
@@ -42,6 +60,15 @@ export default function RouteProgressBar() {
     setProgress((p) => (p > 0 ? 100 : 0));
     const hide = window.setTimeout(() => setProgress(0), 300);
     return () => window.clearTimeout(hide);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
+  useEffect(() => {
+    // A link to a #hash target handles its own scroll — don't fight it.
+    // Next's built-in scroll-to-top on navigation no-ops when <body> is the
+    // real scroller (see getScroller), so reset it ourselves.
+    if (window.location.hash) return;
+    getScroller().scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 

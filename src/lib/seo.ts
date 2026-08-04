@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const SITE_URL = "https://neevcloud.com";
 export const SITE_NAME = "NeevCloud";
 
-export const DEFAULT_TITLE = "NeevCloud | India's AI SuperCloud";
+export const DEFAULT_TITLE = "NeevCloud | AI Supercloud for the world";
 export const DEFAULT_DESCRIPTION =
   "Full-stack AI infrastructure built to scale fearlessly. Run AI workloads with sovereign control, security, and scalability on India-resident GPU and CPU compute.";
 

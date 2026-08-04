@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/",
-  title: "NeevCloud | India's AI SuperCloud",
+  title: "NeevCloud | AI Supercloud for the world",
   description:
     "Full-stack AI infrastructure built to scale fearlessly. Run AI workloads with sovereign control, security, and scalability on India-resident GPU and CPU compute.",
 });

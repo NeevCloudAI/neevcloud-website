@@ -10,7 +10,7 @@ export const OBJECT_STORAGE_HERO = {
   secondaryCtaRoute: EXTERNAL_LINKS.zataAiPricing,
   secondaryCtaTarget: "_blank",
   badgeText: "S3 Compatible Object Storage",
-  image: "/images/nvme.png",
+  // image: "/images/nvme.png",
   trustBadges: [
     "Full S3 API compatibility",
     "MLOps-ready",

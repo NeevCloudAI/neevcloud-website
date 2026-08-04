@@ -14,7 +14,7 @@ import { Text } from "../ui-lib";
 
 // Prefilled "explore NeevCloud with your preferred LLM" prompt (V7-style).
 const LLM_PROMPT = encodeURIComponent(
-  "Tell me about NeevCloud (https://neevcloud.com), India's AI SuperCloud. What GPU infrastructure, inference services, and AI cloud products do they offer, and how could I use them for my AI workloads?",
+  "Tell me about NeevCloud (https://neevcloud.com), AI Supercloud for the world. What GPU infrastructure, inference services, and AI cloud products do they offer, and how could I use them for my AI workloads?",
 );
 
 const LLM_LINKS = [

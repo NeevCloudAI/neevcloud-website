@@ -11,7 +11,7 @@ const GpuPricingTableRow = ({ row }: GpuPricingTableRowProps) => {
     <tr className="border-b border-white/6">
       <td className={GPU_PRICING_TABLE_CELL_CLASS}>
         <LinkComponent
-          href={row.link}
+          href={row.link ?? "#"}
           variant="ghost"
           spacing="none"
           textColor="primary"

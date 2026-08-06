@@ -1,41 +1,25 @@
 "use client";
 
-import { Text } from "@/shared/ui-lib";
-import { useEffect, useState } from "react";
-
-const HEADINGS = [
-  "Reserve the NVIDIA B200 at lowest price for steady throughput, lower TCO, and reliable production workloads.",
-  "Sign up in 60 seconds. $200 in compute credits, no commitment.",
-];
+import { LinkComponent, Text } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 
 export default function AnnouncementSection() {
-  const [i, setI] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => setI((n) => (n + 1) % HEADINGS.length), 3000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <section
-      className="bg-deep-blue py-2.5 text-center text-white"
+      className="bg-primary py-2.5 text-white flex flex-row items-center justify-center"
       aria-label="Announcement"
     >
-      <span
-        className="inline-block h-lh overflow-hidden align-middle"
-        aria-live="polite"
+      <Text>
+        Sign up today and get ₹15,000 free CPU Cloud credits, valid for 10 days
+      </Text>
+      <LinkComponent
+        variant="link"
+        href={EXTERNAL_LINKS.signup}
+        target="/blank"
+        className="hover:shadow-none py-0 px-2"
       >
-        <span
-          className="flex flex-col transition-transform duration-300 ease-out"
-          style={{ transform: `translateY(-${i}lh)` }}
-        >
-          {HEADINGS.map((text) => (
-            <Text as="span" key={text}>
-              {text}
-            </Text>
-          ))}
-        </span>
-      </span>
+        Click here
+      </LinkComponent>
     </section>
   );
 }

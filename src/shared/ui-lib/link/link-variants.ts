@@ -17,7 +17,7 @@ export const linkVariants = cva(
         "white-outline": `border border-white text-white hover:shadow-lg`,
         ghost: `bg-transparent`,
         gray: "bg-cloud-gray hover:shadow-lg",
-        link: "decoration cursor-pointer inline hover:shadow-lg",
+        link: "underline cursor-pointer inline hover:shadow-lg",
       },
       size: {
         default: "text-sm",

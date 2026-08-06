@@ -57,6 +57,14 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
     linkedinHref: EXTERNAL_LINKS.shashwatJainLinkedin,
   },
   {
+    name: "Raviteja Garimella",
+    title: "Head - Strategy and Finance",
+    description:
+      "Anchoring NeevCloud's financial and strategic direction, Ravi Teja leads capital raising, investor relations, treasury, and corporate development. He brings 15+ years of experience across power, manufacturing, oil & gas, chemicals, and mobility, along with strong relationships among fund managers, bankers, and industry experts across India and the APAC region.",
+    image: "/images/webp/raviteja.webp",
+    linkedinHref: EXTERNAL_LINKS.ravitejaLinkedin,
+  },
+  {
     name: "Dharmjit Singh",
     title: "Principal Software Engineer",
     description:
@@ -95,13 +103,5 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
       "Champion of people and culture, Mohit builds teams that scale with ambition. He aligns talent strategy with NeevCloud’s fast-growing, innovation-driven environment.",
     image: "/images/webp/mohit-mehroliya.webp",
     linkedinHref: EXTERNAL_LINKS.mohitMehroliyaLinkedin,
-  },
-  {
-    name: "Kushal Kothari",
-    title: "Product Manager, ZATA",
-    description:
-      "Kushal ensures ZATA’s initiatives move from vision to execution seamlessly. He drives cross-functional alignment to deliver projects on time, at scale, and with precision.",
-    image: "/images/webp/kushal-kothari.webp",
-    linkedinHref: EXTERNAL_LINKS.kushalKothariLinkedin,
   },
 ];

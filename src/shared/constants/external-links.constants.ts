@@ -30,6 +30,7 @@ export const EXTERNAL_LINKS = {
   noelVargheseLinkedin: "https://www.linkedin.com/in/noelvarghese/",
   dineshMaheshwariLinkedin: "https://www.linkedin.com/in/dinesh-ji-089ab1106/",
   shashwatJainLinkedin: "https://www.linkedin.com/in/shashwat-jain-b56627187/",
+  ravitejaLinkedin: "https://www.linkedin.com/in/ravitejagarimella/",
   dharmjitSinghLinkedin: "www.linkedin.com/in/dharmjit",
   shamsherAnsariLinkedin: "https://www.linkedin.com/in/shamsheransari/",
   alokPratapSinghLinkedin: "https://www.linkedin.com/in/alokpratapsingh007/",

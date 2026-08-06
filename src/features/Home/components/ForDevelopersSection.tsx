@@ -75,6 +75,7 @@ export default function ForDevelopersSection() {
         </ul>
 
         <HeroGetStartedButton
+          target="_self"
           label={DEVELOPER_SECTION.ctaLabel}
           href={DEVELOPER_SECTION.ctaHref}
         />

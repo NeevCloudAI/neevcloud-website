@@ -364,13 +364,14 @@ export const NVIDIA_A6000_USE_CASES_SECTION: GpuUseCasesSectionContent = {
 
 export const NVIDIA_A6000_SE_USE_CASES_SECTION: GpuUseCasesSectionContent = {
   titlePrefix: "Use Cases of",
-  titleHighlight: "Nvidia RTX PRO 6000 SE",
+  titleHighlight: "Nvidia RTX 6000 PRO Blackwell SE Se",
   cards: [
     {
       id: "enterprise-generative-ai",
       title: "Enterprise Generative AI Deployment",
       imageSrc: "/images/webp/enterprise-generative-ai.webp",
-      imageAlt: "Enterprise generative AI deployment on NVIDIA RTX PRO 6000 SE",
+      imageAlt:
+        "Enterprise generative AI deployment on Nvidia RTX 6000 PRO Blackwell SE Se",
       description:
         "Rent NVIDIA RTX PRO 6000 Blackwell Server GPU cloud instances for deploying generative AI models in enterprise environments. Enhanced Tensor Cores accelerate text-to-image generation, AI code assistants, and content creation tools with enterprise-grade reliability. Deploy cloud-based RTX PRO 6000 for running large language models and diffusion models with data center security.",
     },
@@ -379,7 +380,7 @@ export const NVIDIA_A6000_SE_USE_CASES_SECTION: GpuUseCasesSectionContent = {
       title: "Cloud-Based Professional Visualization Services",
       imageSrc: "/images/webp/professional-visualization-services.webp",
       imageAlt:
-        "Cloud-based professional visualization services on NVIDIA RTX PRO 6000 SE",
+        "Cloud-based professional visualization services on Nvidia RTX 6000 PRO Blackwell SE Se",
       description:
         "Access RTX PRO 6000 Server GPU cloud rental for powering cloud rendering services for distributed creative teams. Blackwell architecture provides real-time ray tracing and AI-accelerated rendering for remote workflows. Rent cloud-based RTX PRO 6000 for professional 3D artists, enabling high-performance graphics and compute access from any location with enterprise-grade infrastructure.",
     },
@@ -387,7 +388,8 @@ export const NVIDIA_A6000_SE_USE_CASES_SECTION: GpuUseCasesSectionContent = {
       id: "digital-twin-simulation",
       title: "AI-Powered Digital Twin Simulation",
       imageSrc: "/images/webp/ai-powered-digital-twin-simulation.webp",
-      imageAlt: "AI-powered digital twin simulation on NVIDIA RTX PRO 6000 SE",
+      imageAlt:
+        "AI-powered digital twin simulation on Nvidia RTX 6000 PRO Blackwell SE Se",
       description:
         "Deploy RTX PRO 6000 Server GPU cloud rental for real-time simulation and visualization of industrial digital twins. RT Cores for physics-accurate rendering and Tensor Cores for AI inference power predictive maintenance and operational optimization. Rent instances for NVIDIA Omniverse applications in manufacturing, infrastructure planning, and smart city development requiring graphics and AI.",
     },
@@ -396,9 +398,9 @@ export const NVIDIA_A6000_SE_USE_CASES_SECTION: GpuUseCasesSectionContent = {
       title: "Professional Visualization as a Service (VaaS)",
       imageSrc: "/images/webp/professional-visualization-as-a-service.webp",
       imageAlt:
-        "Professional visualization as a service on NVIDIA RTX PRO 6000 SE",
+        "Professional visualization as a service on Nvidia RTX 6000 PRO Blackwell SE Se",
       description:
-        "Rent NVIDIA RTX PRO 6000 Server cloud GPUs for delivering desktop-class graphics in data center environments. vGPU technology serves multiple concurrent users with GPU-accelerated applications. Deploy cloud-based instances for CAD, visualization, and design software, enabling remote workers to access professional graphics capabilities through virtual desktop infrastructure without hardware investment.",
+        "Rent Nvidia RTX 6000 PRO Blackwell SE Server cloud GPUs for delivering desktop-class graphics in data center environments. vGPU technology serves multiple concurrent users with GPU-accelerated applications. Deploy cloud-based instances for CAD, visualization, and design software, enabling remote workers to access professional graphics capabilities through virtual desktop infrastructure without hardware investment.",
     },
   ],
 };

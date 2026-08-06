@@ -49,7 +49,11 @@ export default function HeroSection() {
             </p>
           </div>
           <div className="hero-in" style={{ animationDelay: "0.24s" }}>
-            <HeroGetStartedButton label={HERO.ctaLabel} href={HERO.ctaHref} />
+            <HeroGetStartedButton
+              target="_blank"
+              label={HERO.ctaLabel}
+              href={HERO.ctaHref}
+            />
           </div>
         </Container>
 

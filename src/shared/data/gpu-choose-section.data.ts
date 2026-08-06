@@ -314,7 +314,7 @@ export const NVIDIA_A6000_CHOOSE_SECTION: GpuChooseSectionContent = {
 
 export const NVIDIA_A6000_SE_CHOOSE_SECTION: GpuChooseSectionContent = {
   titlePrefix: "Choose Your",
-  titleHighlight: "Nvidia RTX PRO 6000 SE Configuration",
+  titleHighlight: "Nvidia RTX 6000 PRO Blackwell SE Configuration",
   description:
     "Fully-integrated pricing optimized for the most challenging AI workloads in budget.",
   terminalTitle: "~ nvidia-rtx-pro-6000se-pricing - bash - 80x24",
@@ -330,7 +330,7 @@ export const NVIDIA_A6000_SE_CHOOSE_SECTION: GpuChooseSectionContent = {
   rows: [
     {
       id: "nvidia-a6000se",
-      sku: "Nvidia RTX Pro 6000 SE",
+      sku: "Nvidia RTX 6000 PRO Blackwell SE",
       skuSubtitle: "1x GPU, 64vCPUs, 112GB RAM, 96GB vRAM",
       hourly: "₹148.95",
       threeMonthPrice: "₹142.18",
@@ -343,7 +343,7 @@ export const NVIDIA_A6000_SE_CHOOSE_SECTION: GpuChooseSectionContent = {
   ],
   footerComment:
     "// reserved plans bill for full window · run `gpu calc <sku> --hours=N` to estimate",
-  terminalAriaLabel: "Nvidia RTX PRO 6000 SE pricing terminal",
+  terminalAriaLabel: "Nvidia RTX 6000 PRO Blackwell SE pricing terminal",
 };
 
 export const NVIDIA_TESLA_T4_CHOOSE_SECTION: GpuChooseSectionContent = {

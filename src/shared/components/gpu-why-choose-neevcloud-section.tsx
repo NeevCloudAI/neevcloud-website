@@ -12,9 +12,6 @@ const GpuWhyChooseNeevcloudSection = ({
   buttonTarget,
   className,
 }: GpuWhyChooseNeevcloudSectionProps) => {
-  const roiPrimaryCards = roi.cards.slice(0, 3);
-  const roiSecondaryCards = roi.cards.slice(3);
-
   return (
     <section
       className={cn("relative bg-black py-8 md:py-16 2xl:py-25", className)}
@@ -72,8 +69,8 @@ const GpuWhyChooseNeevcloudSection = ({
           </Text>
         ) : null}
 
-        <ul className="m-0 mt-4 grid w-full list-none grid-cols-1 gap-5 p-0 md:mt-12.5 md:grid-cols-3">
-          {roiPrimaryCards.map((card) => (
+        <ul className="m-0 mt-4 grid w-full list-none grid-cols-1 gap-5 p-0 md:mt-12.5 md:grid-cols-2">
+          {roi.cards.map((card) => (
             <li key={card.id}>
               <GpuWhyChooseNeevcloudCard
                 title={card.title}
@@ -84,7 +81,7 @@ const GpuWhyChooseNeevcloudSection = ({
           ))}
         </ul>
 
-        {roiSecondaryCards.length > 0 ? (
+        {/* {roiSecondaryCards.length > 0 ? (
           <ul className="m-0 mt-5 grid w-full max-w-4xl list-none grid-cols-1 gap-5 p-0 md:grid-cols-2">
             {roiSecondaryCards.map((card) => (
               <li key={card.id}>
@@ -96,7 +93,7 @@ const GpuWhyChooseNeevcloudSection = ({
               </li>
             ))}
           </ul>
-        ) : null}
+        ) : null} */}
 
         <LinkComponent
           href={buttonLink}

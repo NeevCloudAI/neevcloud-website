@@ -87,7 +87,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "RTX PRO 6000 SE",
-    link: "nvidia-rtx-pro-6000-se",
+    link: "nvidia-rtx-pro-6000",
     config: "gpu-rtxpro6000-96g-14cpu-56g",
     vram: "96GB",
     cpu: "14",
@@ -115,7 +115,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "RTX PRO 6000 SE",
-    link: "nvidia-rtx-pro-6000-se",
+    link: "nvidia-rtx-pro-6000",
     config: "gpu-rtxpro6000-96g-24cpu-112g",
     vram: "96GB",
     cpu: "24",
@@ -129,7 +129,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "RTX PRO 6000 SE",
-    link: "nvidia-rtx-pro-6000-se",
+    link: "nvidia-rtx-pro-6000",
     config: "gpu-rtxpro6000-96g-64cpu-112g",
     vram: "96GB",
     cpu: "64",

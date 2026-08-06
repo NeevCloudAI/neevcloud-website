@@ -3,7 +3,7 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 export const ABOUT_US_HERO = {
   badgeText: "About Us",
   description:
-    "NeevCloud is india's first AI SuperCloud, infrastructure designed from the ground up to make advanced AI computing accessible to anyone with the ambition to build.",
+    "NeevCloud is an AI Native SuperCloud built to accelerate AI innovation at scale. Designed from the ground up, it makes advanced AI computing accessible to developers, startups, and enterprises with the ambition to build and scale AI. ",
   primaryCta: "Get started",
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",

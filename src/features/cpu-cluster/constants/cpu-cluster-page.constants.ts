@@ -6,8 +6,9 @@ export const CPU_CLUSTER_HERO = {
   primaryCta: "Deploy Instance",
   primaryCtaRoute: EXTERNAL_LINKS.signup,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Pricing",
-  secondaryCtaRoute: "/cpu-cluster#cpu-workload-section",
+  secondaryCta: "View Documentation",
+  secondaryCtaTarget: "_blank",
+  secondaryCtaRoute: EXTERNAL_LINKS.neevcloudDocs,
   badgeText: "CPU Compute for AI Infrastructure",
   image: "/images/webp/cpu-cluster.webp",
 } as const;
@@ -19,6 +20,7 @@ export const CPU_CLUSTER_FOOTER = {
   primaryCta: "Configure Now",
   primaryCtaRoute: EXTERNAL_LINKS.signup,
   primaryCtaTarget: "_blank",
-  secondaryCta: "Talk to Our Team",
-  secondaryCtaRoute: "/contact-neevcloud#contact-form",
+  secondaryCta: "View Documentation",
+  secondaryCtaTarget: "_blank",
+  secondaryCtaRoute: EXTERNAL_LINKS.neevcloudDocs,
 } as const;

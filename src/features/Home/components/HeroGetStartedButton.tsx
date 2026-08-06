@@ -3,6 +3,7 @@ import Link from "next/link";
 type HeroGetStartedButtonProps = {
   label: string;
   href: string;
+  target: string;
 };
 
 // Teal gradient CTA: shine-sweep on hover + four "targeting bracket" corners
@@ -10,10 +11,12 @@ type HeroGetStartedButtonProps = {
 export default function HeroGetStartedButton({
   label,
   href,
+  target,
 }: HeroGetStartedButtonProps) {
   return (
     <Link
       href={href}
+      target={target}
       aria-label={label}
       className="group relative inline-flex w-fit p-1.5"
     >

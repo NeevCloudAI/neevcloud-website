@@ -416,7 +416,7 @@ export const NVIDIA_A6000_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
 
 export const NVIDIA_A6000_SE_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
   titlePrefix: "Accelerate Your AI Journey with",
-  titleHighlight: "Nvidia RTX PRO 6000 SE",
+  titleHighlight: "Nvidia RTX 6000 PRO Blackwell SE",
   titleSuffix: "GPUs",
   description:
     "NVIDIA's RTX PRO 6000 SE instances deliver up to 4000 TOPS of AI compute and 96 GB GDDR7 memory in a secure, on-demand GPU cloud environment—ideal for fine-tuning large language models, real-time ray tracing, and complex simulations. The RTX PRO 6000 SE is built on NVIDIA Blackwell architecture and is ready to deploy on NeevCloud.",
@@ -465,7 +465,7 @@ export const NVIDIA_A6000_SE_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
   buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
   buttonTarget: "_blank",
   imageSrc: "/images/webp/nvidia-rtx-pro-6000-se-gpu.webp",
-  imageAlt: "NVIDIA RTX PRO 6000 SE GPU",
+  imageAlt: "Nvidia RTX 6000 PRO Blackwell SE GPU",
 };
 
 export const NVIDIA_TESLA_T4_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {

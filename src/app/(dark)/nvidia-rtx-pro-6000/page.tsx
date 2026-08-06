@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/nvidia-rtx-pro-6000",
-  title: "NVIDIA RTX PRO 6000 SE | NeevCloud",
+  title: "Nvidia RTX 6000 PRO Blackwell SE | NeevCloud",
   description:
-    "Rent NVIDIA RTX PRO 6000 SE GPUs on-demand for enterprise generative AI deployment, professional visualization, digital twin simulation, and Blackwell-powered AI workloads with 96GB GDDR7 memory.",
+    "Rent Nvidia RTX 6000 PRO Blackwell SE GPUs on-demand for enterprise generative AI deployment, professional visualization, digital twin simulation, and Blackwell-powered AI workloads with 96GB GDDR7 memory.",
 });
 
 const NvidiaA6000SeRoutePage = () => {

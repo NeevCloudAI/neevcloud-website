@@ -20,7 +20,7 @@ export const CONTACT_INFO_CARDS: readonly ContactInfoCardItem[] = [
     title: "Call Us",
     description: "Talk to our experts directly",
     icon: "phone",
-    href: "tel:+919993092798",
+    href: "tel:1800-309-1433",
   },
   {
     id: "email",

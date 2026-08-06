@@ -186,14 +186,7 @@ const NAV_ITEMS: NavItem[] = [
             icon: RiCloudLine,
             soon: true,
           },
-          // { label: "vGPU", href: "#", icon: RiPieChart2Line, soon: true },
           { label: "GPU Cluster", href: "#", icon: RiNodeTree, soon: true },
-          // {
-          //   label: "Kubernetes (NKS)",
-          //   href: "#",
-          //   icon: RiStackLine,
-          //   soon: true,
-          // },
         ],
       },
       {
@@ -215,6 +208,11 @@ const NAV_ITEMS: NavItem[] = [
         heading: "Available GPU's",
         links: [
           {
+            label: "RTX 6000 PRO Blackwell SE",
+            href: "/nvidia-rtx-pro-6000",
+            icon: RiCpuLine,
+          },
+          {
             label: "RTX A6000",
             href: "/nvidia-rtx-a6000",
             icon: RiCpuLine,
@@ -222,11 +220,6 @@ const NAV_ITEMS: NavItem[] = [
           {
             label: "RTX 5090",
             href: "/nvidia-rtx-5090",
-            icon: RiCpuLine,
-          },
-          {
-            label: "A100",
-            href: "/nvidia-a100",
             icon: RiCpuLine,
           },
           {

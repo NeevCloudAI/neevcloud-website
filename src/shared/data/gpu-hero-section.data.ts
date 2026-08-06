@@ -163,9 +163,9 @@ export const NVIDIA_RTX_5090_HERO: GpuHeroSectionContent = {
 };
 
 export const NVIDIA_A6000_SE_HERO: GpuHeroSectionContent = {
-  badgeText: "Nvidia RTX PRO 6000 SE",
+  badgeText: "Nvidia RTX 6000 PRO Blackwell SE",
   titlePrefix: "Rent",
-  titleHighlight: "Nvidia RTX PRO 6000 SE",
+  titleHighlight: "Nvidia RTX 6000 PRO Blackwell SE",
   titleSuffix: "GPU On-Demand",
   description:
     "Enterprise-grade solution for AI deployment and professional visualization as a service, now accessible through our Blackwell-powered data center infrastructure. Organizations can rent RTX Pro 6000 on-demand for high-performance workloads, enabling scalable and efficient AI and visualization projects.",

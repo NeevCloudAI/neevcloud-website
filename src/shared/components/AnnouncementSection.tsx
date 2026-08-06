@@ -6,10 +6,10 @@ import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 export default function AnnouncementSection() {
   return (
     <section
-      className="bg-primary py-2.5 text-white flex flex-row items-center justify-center"
+      className="bg-primary p-2.5 text-white flex flex-col md:flex-row items-center justify-center"
       aria-label="Announcement"
     >
-      <Text>
+      <Text align="center">
         Sign up today and get ₹15,000 free CPU Cloud credits, valid for 10 days
       </Text>
       <LinkComponent

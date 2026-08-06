@@ -20,7 +20,7 @@ const MANIFEST_ICONS: MetadataRoute.Manifest["icons"] = [
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: `${SITE_NAME} | AI Supercloud for the world`,
+    name: `${SITE_NAME} | AI Supercloud for the World`,
     short_name: SITE_NAME,
     description: DEFAULT_DESCRIPTION,
     start_url: "/",

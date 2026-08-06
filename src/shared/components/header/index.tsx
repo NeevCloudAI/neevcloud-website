@@ -148,12 +148,16 @@ const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Product",
-    href: "/gpu-cluster",
+    href: "/gpu-ai-service",
     groups: [
       {
         heading: "Released",
         links: [
-          { label: "GPU AI Service", href: "/gpu-cluster", icon: RiServerLine },
+          {
+            label: "GPU AI Service",
+            href: "/gpu-ai-service",
+            icon: RiServerLine,
+          },
           { label: "CPU Instance", href: "/cpu-cluster", icon: RiCpuChipLine },
           {
             label: "Managed Kubernetes",
@@ -212,12 +216,12 @@ const NAV_ITEMS: NavItem[] = [
         links: [
           {
             label: "RTX A6000",
-            href: "/nvidia-a6000",
+            href: "/nvidia-rtx-a6000",
             icon: RiCpuLine,
           },
           {
             label: "RTX 5090",
-            href: "/nvidia-5090",
+            href: "/nvidia-rtx-5090",
             icon: RiCpuLine,
           },
           {

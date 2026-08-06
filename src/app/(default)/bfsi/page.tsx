@@ -7,9 +7,7 @@ export const metadata = buildPageMetadata({
   path: "/bfsi",
   title: "AI Infrastructure for BFSI | NeevCloud",
   description:
-    "From fraud detection to risk modeling, BFSI workloads demand infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute and AI infrastructure designed for banking, fintech, and insurance.",
-  openGraphDescription:
-    "Secure, compliant GPU compute for banking, fintech, and insurance. Fraud detection, risk modeling, and AI analytics on India-resident infrastructure.",
+    "Secure AI infrastructure for banking, fintech, and insurance. Fraud detection, risk modeling, compliance-ready. SOC 2 certified.",
 });
 
 const BFSIPage = () => {

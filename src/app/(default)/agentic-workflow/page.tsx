@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/agentic-workflow",
-  title: "Agentic Workflow | NeevCloud",
+  title: "AI Agents Infrastructure - GPU Compute | NeevCloud",
   description:
-    "Run multi-step, multi-model agent pipelines on reliable, low-latency GPU compute. Container-native, Kubernetes-backed infrastructure for autonomous AI agents in India.",
-  openGraphDescription:
-    "Deploy autonomous AI agents with API-accessible inference, managed Kubernetes, and observability-ready GPU infrastructure on NeevCloud.",
+    "Run autonomous AI agents on GPU infrastructure. Multi-step reasoning, tool use, persistent compute. Kubernetes-native orchestration.",
 });
 
 const AgenticWorkflowPage = () => {

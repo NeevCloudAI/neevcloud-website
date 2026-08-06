@@ -10,7 +10,7 @@ export const RENDERING_SERVICES: readonly ServiceItem[] = [
       "Rendering-optimized GPUs. Single instances or multi-GPU clusters with NVLink.",
     highlight: "8× NVLink",
     highlightSubtext: "400 Gbps IB",
-    href: "/gpu-cluster",
+    href: "/gpu-ai-service",
   },
   {
     id: "storage",

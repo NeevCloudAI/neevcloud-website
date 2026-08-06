@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/nvidia-h100",
-  title: "NVIDIA H100 | NeevCloud",
+  title: "NVIDIA H100 GPU - High-Performance AI | NeevCloud",
   description:
-    "NVIDIA H100 is a Hopper-architecture GPU designed for trillion-parameter LLM training and enterprise AI workloads at scale.",
+    "Deploy NVIDIA H100 GPUs for LLM training, inference, and HPC. 80GB HBM3, NVLink connectivity, India infrastructure. Available now.",
 });
 
 const NvidiaH100RoutePage = () => {

@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/contact-neevcloud",
-  title: "Contact NeevCloud | NeevCloud",
+  title: "Contact NeevCloud | Get in Touch",
   description:
-    "Whether you're scaling AI, exploring the cloud, or need expert guidance, our team is here to help you move forward.",
+    "Connect with NeevCloud for AI cloud solutions, GPU access, and enterprise support. Let's build your next big idea.",
 });
 
 const ContactNeevcloudRoutePage = () => {

@@ -1,8 +1,8 @@
 import HeroSection from "@/shared/components/HeroSection";
 import { Text } from "@/shared/ui-lib";
-import { GPU_CLUSTER_HERO } from "../constants/gpu-cluster-page.constants";
+import { GPU_AI_SERVICE_HERO } from "../constants/gpu-ai-service-page.constants";
 
-const GpuClusterHeroSection = () => {
+const GpuAiServiceHeroSection = () => {
   return (
     <HeroSection
       title={
@@ -19,9 +19,9 @@ const GpuClusterHeroSection = () => {
           </Text>
         </>
       }
-      {...GPU_CLUSTER_HERO}
+      {...GPU_AI_SERVICE_HERO}
     />
   );
 };
 
-export default GpuClusterHeroSection;
+export default GpuAiServiceHeroSection;

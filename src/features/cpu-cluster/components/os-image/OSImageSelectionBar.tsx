@@ -1,5 +1,6 @@
-import { Button, Text } from "@/shared/ui-lib";
+import { Button, LinkComponent, Text } from "@/shared/ui-lib";
 import type { OsImageCard } from "../../types/os-image-section.types";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 type OSImageSelectionBarProps = {
   selectedImage: OsImageCard | undefined;
@@ -22,7 +23,7 @@ const OSImageSelectionBar = ({ selectedImage }: OSImageSelectionBarProps) => {
           No Image selected, pick one to continue
         </Text>
       )}
-      <Button
+      {/* <Button
         weight="semibold"
         spacing="lg"
         className="w-full md:w-auto"
@@ -30,7 +31,14 @@ const OSImageSelectionBar = ({ selectedImage }: OSImageSelectionBarProps) => {
         aria-disabled={!selectedImage}
       >
         Continue &nbsp; &rarr;
-      </Button>
+      </Button> */}
+      <LinkComponent
+        className={selectedImage ? "" : "pointer-events-none"}
+        href={EXTERNAL_LINKS.signup}
+        target="/blank"
+      >
+        Continue &nbsp; &rarr;
+      </LinkComponent>
     </div>
   );
 };

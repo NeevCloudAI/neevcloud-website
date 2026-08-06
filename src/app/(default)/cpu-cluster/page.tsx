@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/cpu-cluster",
-  title: "CPU Cluster | NeevCloud",
+  title: "CPU Compute - Supporting AI Infrastructure | NeevCloud",
   description:
-    "Model API gateways, data pipelines, orchestration control planes, and monitoring stacks - every AI deployment needs CPU alongside its GPUs. NeevCloud CPU instances are co-located with GPU clusters in the same private network.",
-  openGraphDescription:
-    "Deploy CPU instances co-located with GPU clusters on the same private network. No egress charges between CPU and GPU workloads in India datacenters.",
+    "CPU instances for AI workloads. API gateways, data pipelines, orchestration. Co-located with GPU clusters, no egress charges.",
 });
 
 const CpuClusterPage = () => {

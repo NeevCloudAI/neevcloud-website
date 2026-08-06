@@ -3,9 +3,9 @@ export const GPU_PRICING_HERO = {
   description:
     "H100, A100, and L40S instances on-demand, in India, with two deployment modes built around how your team actually works.",
   primaryCta: "View GPU Configs",
-  primaryCtaRoute: "/gpu-cluster",
+  primaryCtaRoute: "/gpu-ai-service",
   secondaryCta: "Compare Service Types",
-  secondaryCtaRoute: "/gpu-cluster",
+  secondaryCtaRoute: "/gpu-ai-service",
   trustBadges: [
     "H100, A100, L40S available",
     "Container or VM modes",
@@ -20,7 +20,7 @@ export const GPU_PRICING_FOOTER = {
   description:
     "H100, A100, and L40S instances ready to launch. Choose container-native or full VM deployment. Per-second billing, commitment discounts available.",
   primaryCta: "View GPU Configs",
-  primaryCtaRoute: "/gpu-cluster",
+  primaryCtaRoute: "/gpu-ai-service",
   secondaryCta: "Compare Service Types",
-  secondaryCtaRoute: "/gpu-cluster",
+  secondaryCtaRoute: "/gpu-ai-service",
 } as const;

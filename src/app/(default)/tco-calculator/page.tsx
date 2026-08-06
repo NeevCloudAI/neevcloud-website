@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/tco-calculator",
-  title: "TCO Calculator | NeevCloud",
+  title: "TCO Calculator - Compare GPU Cloud Costs | NeevCloud",
   description:
-    "Compare your GPU cloud infrastructure spend against NeevCloud in under two minutes. Side-by-side cost breakdown vs AWS, GCP, Azure, and Lambda Labs with full line-item transparency.",
-  openGraphDescription:
-    "Know your GPU cloud cost before you commit. Compare providers with no signup required and exportable results.",
+    "Compare GPU infrastructure costs in 2 minutes. NeevCloud vs AWS, GCP, Azure. Full transparency, no signup required. Calculate now.",
 });
 
 const TcoCalculatorRoutePage = () => {

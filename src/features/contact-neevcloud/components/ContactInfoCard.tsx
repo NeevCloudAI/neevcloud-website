@@ -14,9 +14,15 @@ type ContactInfoCardProps = {
 
 const ContactInfoCard = ({ card }: ContactInfoCardProps) => {
   const Icon = CONTACT_INFO_ICONS[card.icon];
+  const isExternal = card.href.startsWith("http");
 
   return (
-    <article className="border border-primary-105 bg-white p-4 md:p-9 w-full">
+    <a
+      href={card.href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
+      className="block border border-primary-105 bg-white p-4 md:p-9 w-full transition-colors hover:border-primary"
+    >
       <div className="flex flex-col">
         <Icon className="size-9 text-primary" strokeWidth={1.75} />
         <Text as="h3" weight="semibold" className="mt-4">
@@ -26,7 +32,7 @@ const ContactInfoCard = ({ card }: ContactInfoCardProps) => {
           {card.description}
         </Text>
       </div>
-    </article>
+    </a>
   );
 };
 

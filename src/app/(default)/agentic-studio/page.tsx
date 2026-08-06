@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/agentic-studio",
-  title: "Agentic Studio | NeevCloud",
+  title: "Agentic Studio - Secure Sandboxes for AI Agents | NeevCloud",
   description:
-    "Launch secure, isolated sandboxes for AI agents and code execution with NeevCloud Agentic Studio. Fast launch times, built-in snapshots, and pausable state, ready in seconds.",
-  openGraphDescription:
-    "Fully managed sandbox environments for AI agents and untrusted code — isolated by default, with snapshots and pause/resume built in.",
+    "Give your AI agents somewhere safe to act. Isolated, on-demand sandboxes and ready-to-run coding agents provisioned in seconds, fully controllable, and hosted in India.",
 });
 
 const AgenticStudioPage = () => {

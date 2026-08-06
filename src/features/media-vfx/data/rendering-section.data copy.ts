@@ -10,7 +10,7 @@ export const DEFENCE_SOVEREIGN_SERVICES: readonly ServiceItem[] = [
       "Single instances, multi-GPU clusters, or dedicated infrastructure with complete isolation.",
     highlight: "Complete",
     highlightSubtext: "ISOLATION",
-    href: "/gpu-cluster",
+    href: "/gpu-ai-service",
   },
   {
     id: "storage",
@@ -32,7 +32,7 @@ export const DEFENCE_SOVEREIGN_SERVICES: readonly ServiceItem[] = [
       "Isolated networks, and air-gapped deployments. Custom network architectures.",
     highlight: "400 Gbps",
     highlightSubtext: "FABRIC",
-    href: "/gpu-cluster",
+    href: "/gpu-ai-service",
   },
   {
     id: "dedicated-environments",

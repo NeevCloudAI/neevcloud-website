@@ -13,17 +13,20 @@ export const CONTACT_INFO_CARDS: readonly ContactInfoCardItem[] = [
     title: "Book a Meeting",
     description: "Schedule a guided session with our team",
     icon: "calendar",
+    href: "https://calendly.com/neevcloud/new-meeting",
   },
   {
     id: "phone",
     title: "Call Us",
     description: "Talk to our experts directly",
     icon: "phone",
+    href: "tel:+919993092798",
   },
   {
     id: "email",
     title: "Email Us",
     description: "Write to us — we reply within one business day.",
     icon: "mail",
+    href: "mailto:sales@neevcloud.com",
   },
 ] as const;

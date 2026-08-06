@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/life-at-neevcloud",
-  title: "Life at NeevCloud | NeevCloud",
+  title: "Life at NeevCloud | Culture, Team & Workplace",
   description:
-    "At NeevCloud, we're building a culture where ideas move fast, teams grow together, and every day feels dynamic. Discover what it's like to work on AI infrastructure that matters.",
+    "Explore life at NeevCloud. A workplace built on innovation, collaboration, and celebrations that bring our team together.",
 });
 
 const LifeAtNeevcloudRoutePage = () => {

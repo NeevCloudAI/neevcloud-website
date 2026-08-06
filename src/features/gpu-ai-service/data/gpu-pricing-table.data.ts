@@ -3,6 +3,7 @@ import type { GpuPricingRow } from "../types/gpu-pricing-table.types";
 export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   {
     sku: "Tesla T4",
+    link: "nvidia-tesla-t4",
     config: "gpu-t4-16g-12cpu-128g",
     vram: "16GB",
     cpu: "12",
@@ -16,6 +17,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "RTX 3090",
+    link: "nvidia-3090",
     config: "gpu-rtx3090-24g-24cpu-112g",
     vram: "24GB",
     cpu: "24",
@@ -29,6 +31,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "A30",
+    link: "nvidia-a30",
     config: "gpu-a30-24g-24cpu-192g",
     vram: "24GB",
     cpu: "24",
@@ -42,6 +45,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "A6000",
+    link: "nvidia-rtx-a6000",
     config: "gpu-a6000-48g-48cpu-128g",
     vram: "48GB",
     cpu: "48",
@@ -55,6 +59,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "RTX 5090",
+    link: "nvidia-rtx-5090",
     config: "gpu-rtx5090-32g-16cpu-96g",
     vram: "32GB",
     cpu: "16",
@@ -68,6 +73,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "RTX 3090",
+    link: "nvidia-3090",
     config: "gpu-rtx3090-24g-48cpu-128g",
     vram: "24GB",
     cpu: "48",
@@ -80,7 +86,8 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
     status: { text: "·ready", textVariant: "primary" },
   },
   {
-    sku: "RTX PRO 6000",
+    sku: "RTX PRO 6000 SE",
+    link: "nvidia-rtx-pro-6000-se",
     config: "gpu-rtxpro6000-96g-14cpu-56g",
     vram: "96GB",
     cpu: "14",
@@ -94,6 +101,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "A100",
+    link: "nvidia-a100",
     config: "gpu-a100-80g-12cpu-125g",
     vram: "80GB",
     cpu: "12",
@@ -106,7 +114,8 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
     status: { text: "·ready", textVariant: "primary" },
   },
   {
-    sku: "RTX PRO 6000",
+    sku: "RTX PRO 6000 SE",
+    link: "nvidia-rtx-pro-6000-se",
     config: "gpu-rtxpro6000-96g-24cpu-112g",
     vram: "96GB",
     cpu: "24",
@@ -119,7 +128,8 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
     status: { text: "·ready", textVariant: "primary" },
   },
   {
-    sku: "RTX PRO 6000",
+    sku: "RTX PRO 6000 SE",
+    link: "nvidia-rtx-pro-6000-se",
     config: "gpu-rtxpro6000-96g-64cpu-112g",
     vram: "96GB",
     cpu: "64",
@@ -133,6 +143,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "H100",
+    link: "nvidia-h100",
     config: "gpu-h100-80g-20cpu-125g",
     vram: "80GB",
     cpu: "20",
@@ -146,6 +157,7 @@ export const GPU_PRICING_TABLE_ROWS: GpuPricingRow[] = [
   },
   {
     sku: "H200",
+    link: "nvidia-h200",
     config: "gpu-h200-141g-20cpu-192g",
     vram: "141GB",
     cpu: "20",

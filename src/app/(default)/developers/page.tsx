@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/developers",
-  title: "Developers | NeevCloud",
+  title: "Developer Platform - APIs, SDKs & Docs | NeevCloud",
   description:
-    "OpenAI-compatible APIs, Python and Node SDKs, CLI, Terraform support, and developer-first documentation. From zero to first inference call in under 5 minutes.",
-  openGraphDescription:
-    "Everything you need to build and scale AI. OpenAI-compatible APIs, SDKs, CLI, Terraform, and complete docs for real-world use.",
+    "Build, train, and deploy faster with OpenAI-compatible APIs, SDKs, CLI, and Terraform support. Complete documentation designed for developers.",
 });
 
 const DevelopersPage = () => {

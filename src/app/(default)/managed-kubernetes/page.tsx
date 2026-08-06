@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/managed-kubernetes",
-  title: "Managed Kubernetes | NeevCloud",
+  title: "Managed Kubernetes - GPU-Aware K8s | NeevCloud",
   description:
-    "Deploy inference servers, training pipelines, and multi-tenant ML platforms on GPU-aware Kubernetes. Device plugins pre-installed. Autoscaling included.",
-  openGraphDescription:
-    "GPU-aware Kubernetes for inference servers, training pipelines, and ML platforms. Device plugins, and autoscaling included.",
+    "Deploy GPU workloads on managed Kubernetes. Pre-configured device plugins, InfiniBand networking, autoscaling. H100, H200, A100 ready.",
 });
 
 const ManagedKubernetesPage = () => {

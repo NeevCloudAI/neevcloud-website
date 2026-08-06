@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/neevcloud-arena",
-  title: "NeevCloud Arena | NeevCloud",
+  title: "NeevCloud ARENA - Experience AI Infrastructure",
   description:
-    "NeevCloud ARENA lets you test models, run workloads, and validate performance on production infrastructure, before making decisions.",
+    "Try AI models, build workloads, and see real use cases. Experience NeevCloud infrastructure hands-on before you commit.",
 });
 
 const NeevcloudArenaRoutePage = () => {

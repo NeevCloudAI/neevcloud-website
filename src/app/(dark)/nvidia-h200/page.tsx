@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/nvidia-h200",
-  title: "NVIDIA H200 | NeevCloud",
+  title: "NVIDIA HGX H200 GPU by NeevCloud| High-Performance GPU",
   description:
-    "NVIDIA H200 is a Hopper-architecture GPU with 141GB HBM3e memory, designed for trillion-parameter LLM training and memory-intensive AI workloads at scale.",
+    "Deploy NVIDIA H200 GPUs with 141GB HBM3e memory. Faster than H100 for LLM training, inference, and HPC",
 });
 
 const NvidiaH200RoutePage = () => {

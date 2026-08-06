@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/why-ai-supercloud",
-  title: "Why AI SuperCloud | NeevCloud",
+  title: "Why AI Supercloud - Built for AI | NeevCloud",
   description:
-    "Traditional cloud was built for general computing, and later adapted for AI. AI Supercloud is purpose-built for machine learning from the ground up.",
+    "AI Supercloud vs traditional cloud. Purpose-built infrastructure with instant access, transparent pricing, and data sovereignty.",
 });
 
 const WhyAiSupercloudRoutePage = () => {

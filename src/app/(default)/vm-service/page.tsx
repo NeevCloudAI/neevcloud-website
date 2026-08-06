@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/vm-service",
-  title: "VM Service | NeevCloud",
+  title: "GPU & CPU Virtual Machines for AI/ML | NeevCloud",
   description:
-    "Deploy general-purpose Linux VMs alongside GPU infrastructure with NeevCloud VM Service. Shared networking, storage, and security policies, with optional GPU attachment and per-minute billing.",
-  openGraphDescription:
-    "General-purpose Linux VMs on the same platform as your GPU workloads, with optional GPU attachment and per-minute billing.",
+    "On-demand GPU and CPU VMs built for AI/ML. Provision in minutes, attach a pre-built AI template, and connect via SSH. NVIDIA H100, H200, RTX PRO 6000 & more hosted in India.",
 });
 
 const VmServicePage = () => {

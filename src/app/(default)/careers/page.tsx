@@ -11,9 +11,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/careers",
-  title: "Careers | NeevCloud",
+  title: "Careers at NeevCloud - Join Our Team",
   description:
-    "Join NeevCloud in creating systems that remove traditional barriers of cost, access, and control. Make world-class AI computing available to anyone with an idea worth building.",
+    "Build infrastructure that matters. Join NeevCloud's team working on AI cloud systems at scale. View open positions and apply today.",
 });
 
 const CareersRoutePage = () => {

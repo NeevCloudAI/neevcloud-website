@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/nvidia-b200",
-  title: "NVIDIA DGX B200 | NeevCloud",
+  title: "NVIDIA HGX B200 GPU by NeevCloud| High-Performance GPU",
   description:
-    "NVIDIA DGX B200 is a Blackwell-powered GPU designed for next-generation AI reasoning and trillion-parameter foundation models.",
+    "Deploy NVIDIA B200 GPUs with Blackwell architecture. 2.5x faster than H200 for LLM training and inference. ",
 });
 
 const NvidiaB200RoutePage = () => {

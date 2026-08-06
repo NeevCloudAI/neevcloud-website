@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/trust-center",
-  title: "Trust Center | NeevCloud",
+  title: "Trust Center - Security & Compliance | NeevCloud",
   description:
-    "Enterprise-grade security, international compliance certifications, and transparent operations for teams building mission-critical AI systems.",
+    "Enterprise-grade security, compliance certifications, and transparent operations. Built for teams requiring data sovereignty and trust.",
 });
 
 const TrustCenterRoutePage = () => {

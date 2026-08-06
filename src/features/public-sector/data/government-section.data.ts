@@ -9,7 +9,7 @@ export const GOVERNMENT_SERVICES: readonly GovernmentServiceItem[] = [
     description: "Single instances for training and inference.",
     highlight: "8x H100",
     highlightSubtext: "from ₹240/hr",
-    href: "/gpu-cluster",
+    href: "/gpu-ai-service",
   },
   {
     id: "ai-inference",

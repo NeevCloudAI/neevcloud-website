@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/generative-ai",
-  title: "Generative AI | NeevCloud",
+  title: "Generative AI Infrastructure - GPU Compute | NeevCloud",
   description:
-    "Power your GenAI products on Indian infrastructure. One-click deployment, RAG-ready architecture, and elastic scaling for text, image, and multimodal applications.",
-  openGraphDescription:
-    "Build and scale GenAI products with production inference, RAG pipelines, and India-native data on H100 and A100 GPU infrastructure.",
+    "Build and scale GenAI products on India infrastructure. RAG pipelines, multimodal apps, production inference. No minimum commitment.",
 });
 
 const GenerativeAiPage = () => {

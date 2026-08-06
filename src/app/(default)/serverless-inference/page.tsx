@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/serverless-inference",
-  title: "Serverless Inference | NeevCloud",
+  title: "Inference APIs - OpenAI-Compatible | NeevCloud",
   description:
-    "NeevCloud Serverless Inference gives you instant API access to 20+ production-ready open-source models. OpenAI-compatible, sub-50ms latency, billed in INR, with every request processed in India.",
-  openGraphDescription:
-    "Instant API access to 20+ production-ready open-source models. OpenAI-compatible, sub-50ms latency, billed in INR on India-resident infrastructure.",
+    "OpenAI-compatible inference API built for seamless integration. Run in India with transparent pricing. Switch with a single line of code. Start free today.",
 });
 
 const ServerlessInferencePage = () => {

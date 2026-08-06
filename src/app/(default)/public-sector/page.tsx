@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/public-sector",
-  title: "Public Sector | NeevCloud",
+  title: "Public Sector AI Infrastructure | NeevCloud",
   description:
-    "Public sector AI initiatives require infrastructure that respects data sovereignty, meets compliance standards, and supports strategic autonomy. NeevCloud provides Indian-built infrastructure designed for government and public sector requirements.",
-  openGraphDescription:
-    "Indian-built AI infrastructure for government and public sector with data sovereignty, compliance standards, and strategic autonomy.",
+    "Indigenous AI infrastructure for government. Data sovereignty, compliance-ready, aligned with India AI Mission. Support national priorities.",
 });
 
 const PublicSectorPage = () => {

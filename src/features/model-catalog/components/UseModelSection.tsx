@@ -18,14 +18,14 @@ const UseModelSection = () => {
           className="max-w-4xl"
         >
           Three ways
-          <Text as="span" variant="h2" textColor="black">
+          <Text as="span" variant="h2" textColor="white">
             to use these models.
           </Text>
         </Text>
         <Text
           as="h6"
           align="center"
-          textColor="black/82"
+          textColor="white"
           className="max-w-2xl mt-2.5"
         >
           Pick the integration style that matches your stack. All three hit the

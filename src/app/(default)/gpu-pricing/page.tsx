@@ -5,11 +5,10 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/gpu-pricing",
-  title: "GPU Pricing | NeevCloud",
+  title:
+    "GPU Compute for AI Workloads | On-Demand GPU Infrastructure | NeevCloud",
   description:
-    "General-purpose, compute-optimized, and memory-optimized GPU instances on-demand in India. Container or VM modes with on-demand and reserved plans and per-second billing.",
-  openGraphDescription:
-    "GPU compute designed for AI infrastructure. Transparent pricing for general-purpose and optimized instances in India datacenters.",
+    "High-performance GPU compute built for AI training, fine-tuning, and inference. On-demand access, container-native or full VM deployment, transparent pricing, and zero vendor lock-in.",
 });
 
 const GpuPricingRoutePage = () => {

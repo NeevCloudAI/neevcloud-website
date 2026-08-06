@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/llm-training",
-  title: "LLM Fine-Tuning | NeevCloud",
+  title: "LLM Fine-Tuning - GPU Infrastructure | NeevCloud",
   description:
-    "Purpose-built GPU infrastructure for domain adaptation, instruction tuning, and RLHF. H100 and A100 clusters with framework-agnostic fine-tuning in India.",
-  openGraphDescription:
-    "Fine-tune LLMs at scale on H100 and A100 clusters. LoRA, QLoRA, RLHF, and multi-modal training with India-resident compute.",
+    "Fine-tune LLMs on H100 and A100 GPUs. Multi-node setups, framework agnostic, fast NVMe storage. India-resident infrastructure.",
 });
 
 const LlmTrainingPage = () => {

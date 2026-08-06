@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/newsroom",
-  title: "Newsroom | NeevCloud",
+  title: "Press & Media - NeevCloud News and Resources",
   description:
-    "News, updates, and resources for media and press covering NeevCloud.",
-  openGraphDescription:
-    "Download the NeevCloud media kit and find press resources, company news, and updates for journalists and media professionals.",
+    "Press releases, media resources, and brand assets for NeevCloud. Contact our media team for inquiries and interview requests.",
 });
 
 const NewsroomPage = () => {

@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/dedicated-inferencing",
-  title: "Dedicated Inferencing | NeevCloud",
+  title: "Dedicated Inferencing - Reserved GPUs for Your Models | NeevCloud",
   description:
-    "Reserve a GPU instance just for your deployment with NeevCloud Dedicated Inferencing. Always-on endpoints, zero cold starts, full VRAM isolation, and simple hourly billing.",
-  openGraphDescription:
-    "Reserved GPU inference with no cold starts, full VRAM isolation, and hourly billing on India-resident infrastructure.",
+    "Reserve a GPU instance just for your model. No sharing, no cold starts, full VRAM isolation, and predictable latency. Deploy from the catalogue or bring your own Hugging Face model. Hourly billing.",
 });
 
 const DedicatedInferencingPage = () => {

@@ -15,6 +15,7 @@ export type GpuPricingRow = {
   cpu: string;
   ram: string;
   hourly: string;
+  link?: string;
   oneMonth: GpuPricingCommitment;
   threeMonths: GpuPricingCommitment;
   sixMonths: GpuPricingCommitment;

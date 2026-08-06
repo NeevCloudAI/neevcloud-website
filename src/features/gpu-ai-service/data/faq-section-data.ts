@@ -1,6 +1,6 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const GPU_CLUSTER_FAQ_ITEMS: FaqItem[] = [
+export const GPU_AI_SERVICE_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
     category: "Getting Started",

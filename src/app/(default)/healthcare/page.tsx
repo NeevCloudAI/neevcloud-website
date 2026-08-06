@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/healthcare",
-  title: "Healthcare | NeevCloud",
+  title: "AI Cloud for Healthcare & Medical Research | NeevCloud",
   description:
-    "From medical imaging to drug discovery, healthcare AI requires infrastructure that's secure, compliant, and performant. NeevCloud provides GPU compute designed for medical workloads with certifications healthcare organizations need.",
-  openGraphDescription:
-    "Secure, compliant GPU compute for medical imaging, drug discovery, and healthcare AI workloads on India-resident infrastructure.",
+    "Secure AI infrastructure for medical imaging, diagnostics, and research. HIPAA-aligned, ISO 27001 certified. GPU compute for healthcare.",
 });
 
 const HealthcarePage = () => {

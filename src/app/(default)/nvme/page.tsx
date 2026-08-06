@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/nvme",
-  title: "NVMe Storage | NeevCloud",
+  title: "High-Performance NVMe Storage | NeevCloud",
   description:
-    "Eliminate I/O bottlenecks with local NVMe disks that keep your GPUs saturated, not waiting. Training large models and running data-intensive inference pipelines demands storage that can keep pace.",
-  openGraphDescription:
-    "High-performance NVMe storage with sub-millisecond latency and high sequential throughput. Keep your GPUs saturated during training and inference workloads.",
+    "Local NVMe storage for AI workloads. Sub-millisecond latency, high throughput. Keep GPUs saturated, not waiting. ₹4.17/GB/hour.",
 });
 
 const NvmePage = () => {

@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/model-catalog",
-  title: "Model Catalog | NeevCloud",
+  title: "Model Catalog - Browse AI Models | NeevCloud",
   description:
-    "Browse, filter, and test language, vision, and audio models. Every model is production-ready, OpenAI-compatible, and runs on infrastructure within India.",
+    "Browse 20+ production-ready AI models. View performance, pricing, and capabilities. Test instantly or deploy via API.",
 });
 
 const ModelCatalogPage = () => {

@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
-  path: "/nvidia-nvl72",
+  path: "/nvidia-gb200-nvl72",
   title: "NVIDIA GB200 NVL72 | NeevCloud",
   description:
     "NVIDIA GB200 NVL72 powers massive AI workloads with Blackwell architecture, NVLink interconnect, and hyperscale training and inference for next-generation AI factories and datacenters.",

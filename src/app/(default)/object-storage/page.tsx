@@ -5,11 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/object-storage",
-  title: "Object Storage | NeevCloud",
+  title: "S3 Compatible Object Storage | NeevCloud",
   description:
-    "Durable, scalable cloud storage with zero API migration friction, works with every tool you already use. Move datasets, model artifacts, and application data without changing a single line of code.",
-  openGraphDescription:
-    "S3-compatible object storage with full API compatibility, MLOps-ready workflows, India-resident storage, and 99.999% durability.",
+    "Durable object storage with full S3 API compatibility. Store datasets, models, artifacts. India-resident. ₹8.35/GB/month.",
 });
 
 const ObjectStoragePage = () => {

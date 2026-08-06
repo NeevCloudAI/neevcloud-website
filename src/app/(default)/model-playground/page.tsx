@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/model-playground",
-  title: "Model Playground | NeevCloud",
+  title: "Model Playground - Test AI Models Free | NeevCloud",
   description:
-    "Test and explore production-ready AI models through an interactive interface. No code required, no setup needed - just instant access to see what's possible.",
+    "Test AI models instantly in browser. No signup, no setup. Compare outputs, validate use cases. Try LLMs and image models free.",
 });
 
 const ModelPlaygroundPage = () => {

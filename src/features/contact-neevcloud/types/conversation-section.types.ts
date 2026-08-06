@@ -5,4 +5,5 @@ export type ContactInfoCardItem = {
   title: string;
   description: string;
   icon: ContactInfoCardIcon;
+  href: string;
 };

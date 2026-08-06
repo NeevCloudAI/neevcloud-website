@@ -126,7 +126,7 @@ body {
   body {
     background-color: var(--white);
     color: var(--black);
-    @apply w-full h-dvh overflow-x-hidden overflow-y-auto;
+    @apply w-full overflow-x-hidden;
   }
   h1 {
     @apply text-[36px] leading-[44px] sm:text-[42px] md:text-[48px] md:leading-[70px] lg:text-[60px] font-semibold;

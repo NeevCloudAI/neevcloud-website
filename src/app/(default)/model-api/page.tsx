@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/model-api",
-  title: "Model API | NeevCloud",
+  title: "Model API - Production AI Models | NeevCloud",
   description:
-    "Integrate modern AI models into your applications with clean, well-documented APIs. From prototype to production in minutes, not weeks.",
+    "Integrate state-of-the-art AI models through simple APIs. From language to vision, deploy in minutes with transparent pricing.",
 });
 
 const ModelApiPage = () => {

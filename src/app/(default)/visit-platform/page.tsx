@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 export const metadata = buildPageMetadata({
   path: "/visit-platform",
-  title: "AI SuperCloud Platform | NeevCloud",
+  title: "Platform - AI Supercloud Console | NeevCloud",
   description:
-    "Deploy GPUs, manage inference, control storage, and monitor workloads through a unified console. Everything you need to build AI, accessible in one place.",
+    "Access the NeevCloud console. Deploy GPUs, manage inference, and control your AI infrastructure. Start building in minutes.",
 });
 
 const VisitPlatformPage = () => {

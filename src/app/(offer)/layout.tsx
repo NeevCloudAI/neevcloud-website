@@ -25,7 +25,7 @@ export default function OfferLayout({
           <LinkComponent
             href={EXTERNAL_LINKS.signup}
             target="_blank"
-            spacing="sm"
+            spacing="lg"
             size="sm"
           >
             Login

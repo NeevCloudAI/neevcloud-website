@@ -1,11 +1,10 @@
-import FooterComponent from "@/shared/components/footer";
 import FaqSection from "@/shared/components/faq/faq-section";
 import { Text, LinkComponent } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
-import OffersAiSection from "./OffersAiSection";
-import CpuArchitectureSection from "@/features/cpu-pricing/components/CpuArchitectureSection";
-import CpuTransparentPricingSection from "@/features/cpu-pricing/components/CpuTransparentPricingSection";
-import CpuPricingDeploymentSection from "@/features/cpu-pricing/components/CpuPricingDeploymentSection";
+import TheOfferSection from "./TheOfferSection";
+import OffersArchitectureSection from "./OffersArchitectureSection";
+import OffersPricingSection from "./OffersPricingSection";
+import OffersDeploymentSection from "./OffersDeploymentSection";
 import { CPU_PRICING_FAQ_ITEMS } from "@/features/cpu-pricing/data/cpu-pricing-faq-section.data";
 import { OFFERS_HERO } from "../data/offers-page.data";
 import Image from "next/image";
@@ -68,13 +67,24 @@ const OffersPage = () => {
             </LinkComponent>
           </div>
 
-          <div className="mt-4 md:mt-12.5"></div>
+          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">
+            {OFFERS_HERO.trustBadges.map((badge, index) => (
+              <div key={badge} className="flex items-center gap-3">
+                <span className="text-white text-sm whitespace-nowrap">
+                  {badge}
+                </span>
+                {index < OFFERS_HERO.trustBadges.length - 1 && (
+                  <span className="text-white text-sm">•</span>
+                )}
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
-      <OffersAiSection />
-      <CpuArchitectureSection />
-      <CpuTransparentPricingSection />
-      <CpuPricingDeploymentSection />
+      <OffersArchitectureSection />
+      <OffersPricingSection />
+      <OffersDeploymentSection />
+      <TheOfferSection />
       <FaqSection items={CPU_PRICING_FAQ_ITEMS} />
     </>
   );

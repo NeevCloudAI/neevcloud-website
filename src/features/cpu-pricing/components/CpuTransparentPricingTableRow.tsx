@@ -1,4 +1,5 @@
-import { Text } from "@/shared/ui-lib";
+import { LinkComponent, Text } from "@/shared/ui-lib";
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 import { CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS } from "../constants/transparent-pricing-section.constants";
 import type { CpuTransparentPricingTableRowProps } from "../types/transparent-pricing-section.types";
 
@@ -23,29 +24,9 @@ const CpuTransparentPricingTableRow = ({
         </Text>
       </td>
       <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="primary">
-          {row.priceOnDemand}
-        </Text>
-      </td>
-      <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
-          {row.price3Month ?? "—"}
-        </Text>
-      </td>
-      <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
-          {row.price6Month ?? "—"}
-        </Text>
-      </td>
-      <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
-          {row.price1Year ?? "—"}
-        </Text>
-      </td>
-      <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
-        <Text as="h6" fontFamily="spaceMono" textColor="white">
-          {row.bestFor}
-        </Text>
+        <LinkComponent href={EXTERNAL_LINKS.signup} target="_blank">
+          Deploy
+        </LinkComponent>
       </td>
     </tr>
   );

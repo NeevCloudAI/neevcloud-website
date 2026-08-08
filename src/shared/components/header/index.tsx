@@ -178,33 +178,6 @@ const NAV_ITEMS: NavItem[] = [
         ],
       },
       {
-        heading: "Upcoming",
-        links: [
-          {
-            label: "Serverless GPU",
-            href: "#",
-            icon: RiCloudLine,
-            soon: true,
-          },
-          { label: "GPU Cluster", href: "#", icon: RiNodeTree, soon: true },
-        ],
-      },
-      {
-        heading: "Storage",
-        links: [
-          {
-            label: "High-Performance NVMe",
-            href: "/nvme",
-            icon: RiHardDrive2Line,
-          },
-          {
-            label: "Object Storage",
-            href: "/object-storage",
-            icon: RiDatabase2Line,
-          },
-        ],
-      },
-      {
         heading: "Available GPU's",
         links: [
           {
@@ -227,6 +200,33 @@ const NAV_ITEMS: NavItem[] = [
             href: "/nvidia-a30",
             icon: RiCpuLine,
           },
+        ],
+      },
+      {
+        heading: "Storage",
+        links: [
+          {
+            label: "High-Performance NVMe",
+            href: "/nvme",
+            icon: RiHardDrive2Line,
+          },
+          {
+            label: "Object Storage",
+            href: "/object-storage",
+            icon: RiDatabase2Line,
+          },
+        ],
+      },
+      {
+        heading: "Upcoming",
+        links: [
+          {
+            label: "Serverless GPU",
+            href: "#",
+            icon: RiCloudLine,
+            soon: true,
+          },
+          { label: "GPU Cluster", href: "#", icon: RiNodeTree, soon: true },
           {
             label: "H100",
             href: "/nvidia-h100",

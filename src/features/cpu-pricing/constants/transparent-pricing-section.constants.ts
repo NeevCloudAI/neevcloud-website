@@ -4,11 +4,7 @@ export const CPU_TRANSPARENT_PRICING_TABLE_HEADERS = [
   "Instance",
   "vCPUs",
   "RAM",
-  "On-demand",
-  "3 Month",
-  "6 Month",
-  "1 Year",
-  "Best For",
+  "",
 ] as const;
 
 export const CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS =

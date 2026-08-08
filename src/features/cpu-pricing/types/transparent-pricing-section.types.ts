@@ -17,11 +17,6 @@ export type CpuPricingRow = {
   name: string;
   vcpus: string;
   ram: string;
-  priceOnDemand: string;
-  price3Month?: string;
-  price6Month?: string;
-  price1Year?: string;
-  bestFor: string;
 };
 
 export type CpuTransparentPricingTerminalHeaderProps = {

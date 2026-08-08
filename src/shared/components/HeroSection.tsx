@@ -21,6 +21,7 @@ const HeroSection = ({
   secondaryCtaRoute,
   secondaryCtaTarget,
   badgeText,
+  badgeColor = "primary-90",
   image,
   badgeIcon,
   className,
@@ -35,6 +36,7 @@ const HeroSection = ({
   secondaryCtaRoute?: string;
   secondaryCtaTarget?: "_blank" | "_self" | "_parent" | "_top";
   badgeText: string;
+  badgeColor?: "primary-90" | "saffron";
   image?: string;
   badgeIcon?: boolean;
   className?: string;
@@ -47,7 +49,7 @@ const HeroSection = ({
       <Container className="flex flex-col items-center justify-center">
         <Text
           as="small"
-          textColor="primary-90"
+          textColor={badgeColor}
           className="bg-primary-90/6 p-1 rounded-md border border-primary-90"
         >
           {badgeText}

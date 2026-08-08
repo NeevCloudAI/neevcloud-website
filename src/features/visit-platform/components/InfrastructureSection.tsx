@@ -21,7 +21,7 @@ const PurposeSection = () => {
         <Text
           as="h2"
           id="purpose-section-heading"
-          textColor="black"
+          textColor="white"
           align="center"
           className="max-w-2xl"
         >
@@ -34,7 +34,7 @@ const PurposeSection = () => {
         <Text
           as="h6"
           align="center"
-          textColor="black/82"
+          textColor="white"
           className="max-w-3.5xl mt-2.5"
         >
           All services connect through high-speed private networking. Deploy GPU

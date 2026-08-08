@@ -20,5 +20,11 @@
 <!-- 11. Replace .php routes -->
 <!-- 12. add ravi teja -->
 <!-- 13. add robots.txt -->
+<!-- 14. change product header gpu -->
+<!-- 15. Add /offer page -->
 
-1. mi300x
+1. Add mi300x
+2. super cluster
+3. /blogs and /models
+4. add schema markup
+5. Change CPU pricing: Remove pricing and add deploy now button

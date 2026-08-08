@@ -55,6 +55,7 @@ export const textVariants = cva("", {
       "primary-105": "text-primary-105",
       "primary-gradient": "text-gradient-to-r from-[#59D8A7] to-[#022C3C]",
       yellow: "text-yellow",
+      saffron: "text-saffron",
       "primary-85": "text-primary-85",
       "primary-230": "text-primary-230/20",
     },

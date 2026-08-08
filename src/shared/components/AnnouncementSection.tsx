@@ -10,12 +10,12 @@ export default function AnnouncementSection() {
       aria-label="Announcement"
     >
       <Text align="center">
-        Sign up today and get ₹15,000 free CPU Cloud credits, valid for 10 days
+        This Independence Day, claim ₹15,000 in free CPU Cloud credits, valid
+        for 10 days. Sign up today.
       </Text>
       <LinkComponent
         variant="link"
-        href={EXTERNAL_LINKS.signup}
-        target="/blank"
+        href="/offers"
         className="hover:shadow-none py-0 px-2"
       >
         Click here

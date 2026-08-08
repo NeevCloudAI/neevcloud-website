@@ -13,10 +13,7 @@ const VmServicePage = () => {
       <WhyVmServiceSection />
       <BuiltForStackSection />
       <FaqSection items={VM_SERVICE_FAQ_ITEMS} />
-      <FooterComponent
-        {...VM_SERVICE_FOOTER}
-        className="pt-0 md:pt-0 2xl:pt-0"
-      />
+      <FooterComponent {...VM_SERVICE_FOOTER} />
     </>
   );
 };

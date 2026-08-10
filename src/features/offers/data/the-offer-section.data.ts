@@ -5,9 +5,9 @@ export const THE_OFFER_SECTION = {
   description:
     "Independence Day is about the freedom to build on your own terms. So we are giving you ₹15,000 in CPU Cloud credits to spend across any instance family, valid for 10 days from sign-up, on infrastructure that keeps your data resident in India from end to end.",
   howToClaim: [
-    "Sign up and complete KYC verification.",
-    "Credits are applied to your account automatically.",
-    "Deploy CPU instances and build. The clock starts on your first sign-up.",
+    "New NeevCloud accounts, signed up any time before 31st August",
+    "One credit grant per verified account",
+    "Get flexible access across available CPU Cloud instances",
   ],
   primaryCta: "Sign Up Today and Get ₹15,000 Free",
   primaryCtaRoute: EXTERNAL_LINKS.signup,

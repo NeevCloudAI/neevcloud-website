@@ -2,6 +2,7 @@ import FaqSection from "@/shared/components/faq/faq-section";
 import { Text, LinkComponent } from "@/shared/ui-lib";
 import Container from "@/shared/components/container";
 import TheOfferSection from "./TheOfferSection";
+import BonusRewardSection from "./BonusRewardSection";
 import OffersArchitectureSection from "./OffersArchitectureSection";
 import OffersPricingSection from "./OffersPricingSection";
 import OffersDeploymentSection from "./OffersDeploymentSection";
@@ -12,15 +13,15 @@ import Image from "next/image";
 const OffersPage = () => {
   return (
     <>
-      <section className="relative bg-black py-8 md:py-16 2xl:py-40 overflow-hidden">
+      <section className="relative bg-black py-8 md:py-16 2xl:py-40 overflow-hidden h-full min-h-screen border border-red">
         <Image
           src={"/images/webp/independence-day.webp"}
           alt="Gradient Background"
           fill
-          className="object-cover blur-[6px]"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/55" />
+        {/* <div className="absolute inset-0 bg-black/55" /> */}
         <Container className="relative flex flex-col items-center justify-center">
           <Text
             as="small"
@@ -85,6 +86,7 @@ const OffersPage = () => {
       <OffersPricingSection />
       <OffersDeploymentSection />
       <TheOfferSection />
+      <BonusRewardSection />
       <FaqSection items={CPU_PRICING_FAQ_ITEMS} />
     </>
   );

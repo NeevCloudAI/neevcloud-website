@@ -49,11 +49,10 @@ const OffersPricingSection = () => {
           align="center"
           className="mt-2.5 max-w-3xl"
         >
-          No hidden fees. Use your free credit, then pay only for what you
-          use.
+          No hidden fees. Use your free credit, then pay only for what you use.
         </Text>
 
-        <div className="mt-4 grid w-full grid-cols-2 gap-4 md:mt-12.5 md:grid-cols-4">
+        <div className="mt-4 grid w-full grid-cols-2 gap-4 md:mt-12.5 md:grid-cols-3">
           {OFFERS_PRICING_SECTION_ITEMS.map((item) => (
             <OffersPricingItem key={item.id} item={item} />
           ))}

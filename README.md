@@ -22,9 +22,11 @@
 <!-- 13. add robots.txt -->
 <!-- 14. change product header gpu -->
 <!-- 15. Add /offer page -->
+<!-- 16. Change CPU pricing: Remove pricing and add deploy now button -->
 
 1. Add mi300x
 2. super cluster
 3. /blogs and /models
 4. add schema markup
-5. Change CPU pricing: Remove pricing and add deploy now button
+5. all logins are not available on mobile screen
+6. offer page

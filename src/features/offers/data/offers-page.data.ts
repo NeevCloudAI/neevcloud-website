@@ -9,12 +9,7 @@ export const OFFERS_HERO = {
   primaryCta: "Sign up today and get ₹15,000 free",
   primaryCtaRoute: EXTERNAL_LINKS.signup,
   primaryCtaTarget: "_blank",
-  trustBadges: [
-    "Deploy in 60 seconds",
-    "Pay per hour",
-    "Scale instantly",
-    "Linux & Windows",
-  ],
+  trustBadges: ["Deploy in 60 seconds", "Scale instantly", "Linux & Windows"],
 } as const;
 
 export const OFFERS_FOOTER = {

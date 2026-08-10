@@ -6,12 +6,6 @@ export const OFFERS_PRICING_SECTION_ITEMS = [
     label: "Free signup credit",
   },
   {
-    id: "billing",
-    icon: "clock",
-    value: "Pay-as-you-go",
-    label: "Billed hourly after credit",
-  },
-  {
     id: "hidden-fees",
     icon: "protected",
     value: "Zero",

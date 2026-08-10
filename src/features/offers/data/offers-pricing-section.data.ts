@@ -14,7 +14,7 @@ export const OFFERS_PRICING_SECTION_ITEMS = [
   {
     id: "validity",
     icon: "zap",
-    value: "30 Days",
+    value: "10 Days",
     label: "Credit validity",
   },
 ] as const;

@@ -659,7 +659,7 @@ export default function HeaderComponent() {
                           g === item.label ? null : item.label,
                         )
                       }
-                      className="flex w-full items-center justify-between py-3 text-left text-[26px] font-normal leading-tight text-white"
+                      className="flex w-full items-center justify-between py-3 text-left text-[18px] font-normal leading-tight text-white"
                     >
                       {item.label}
                       <ChevronDown
@@ -759,13 +759,52 @@ export default function HeaderComponent() {
               >
                 Contact Sales
               </Link>
-              <Link
-                href={LOGIN_OPTIONS[0].href}
-                onClick={() => setIsOpen(false)}
-                className="py-2.5 text-center text-[16px] font-medium text-white"
+              <button
+                type="button"
+                aria-expanded={openGroup === "Login"}
+                onClick={() =>
+                  setOpenGroup((g) => (g === "Login" ? null : "Login"))
+                }
+                className="flex items-center justify-center gap-1 py-2.5 text-[16px] font-medium text-white"
               >
                 Login
-              </Link>
+                <ChevronDown
+                  size={16}
+                  aria-hidden
+                  className={cn(
+                    "transition-transform duration-200",
+                    openGroup === "Login" && "rotate-180",
+                  )}
+                />
+              </button>
+              <div
+                aria-hidden={openGroup !== "Login"}
+                inert={openGroup !== "Login" || undefined}
+                className={cn(
+                  "grid transition-all duration-300 ease-out",
+                  openGroup === "Login" ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                )}
+              >
+                <div className="min-h-0 overflow-hidden">
+                  {LOGIN_OPTIONS.map(({ label, href, icon: LoginIcon }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center justify-center gap-2.5 py-2 text-[16px] text-white/70"
+                    >
+                      <LoginIcon
+                        size={16}
+                        aria-hidden
+                        className="shrink-0 text-neev-green/80"
+                      />
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </nav>

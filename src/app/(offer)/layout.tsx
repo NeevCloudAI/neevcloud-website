@@ -12,7 +12,7 @@ export default function OfferLayout({
   return (
     <div className="relative bg-black">
       <header className="z-50 w-full bg-black/90 sticky top-0">
-        <div className="max-w-screen-2xl mx-auto w-full flex items-center justify-between py-4">
+        <div className="max-w-screen-2xl mx-auto w-full flex items-center justify-between p-4">
           <Link href="/" className="shrink-0">
             <Image
               src="/icons/logo-white-with-name.svg"

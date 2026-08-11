@@ -16,25 +16,23 @@ type FaqSectionProps = {
   items: readonly FaqItem[];
   description?: string;
   className?: string;
+  showFooter?: boolean;
 };
 
-// Open-list FAQ (Craft-style rows, NeevCloud styling): hairline dividers,
-// one question expanded at a time, teal accents.
 export default function FaqSection({
   items,
   description,
   className,
+  showFooter = true,
 }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section
       aria-labelledby="faq-heading"
-      // overflow-anchor:none — accordion height changes otherwise trigger the
-      // browser's scroll anchoring, which visibly nudges the page ("dancing").
       className={cn(
         "bg-cloud-gray py-[34px] [overflow-anchor:none] md:py-24",
-        className
+        className,
       )}
     >
       <Container className="flex flex-col gap-10 md:gap-14">
@@ -73,7 +71,7 @@ export default function FaqSection({
                       aria-hidden
                       className={cn(
                         "shrink-0 text-[#00A78B] transition-transform duration-300",
-                        isOpen && "rotate-180"
+                        isOpen && "rotate-180",
                       )}
                     />
                   </button>
@@ -82,7 +80,7 @@ export default function FaqSection({
                     aria-hidden={!isOpen}
                     className={cn(
                       "grid transition-all duration-300 ease-out",
-                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
                     )}
                   >
                     <div className="min-h-0 overflow-hidden">
@@ -96,15 +94,17 @@ export default function FaqSection({
             })}
           </ul>
 
-          <p className="pt-8 text-center text-[14px] leading-[150%] text-black/60">
-            {FAQ_FOOTER_LEAD}{" "}
-            <Link
-              href={FAQ_FOOTER_CTA_HREF}
-              className="font-medium text-[#00A78B] transition-colors hover:text-primary-90"
-            >
-              {FAQ_FOOTER_CTA_LABEL}
-            </Link>
-          </p>
+          {showFooter && (
+            <p className="pt-8 text-center text-[14px] leading-[150%] text-black/60">
+              {FAQ_FOOTER_LEAD}{" "}
+              <Link
+                href={FAQ_FOOTER_CTA_HREF}
+                className="font-medium text-[#00A78B] transition-colors hover:text-primary-90"
+              >
+                {FAQ_FOOTER_CTA_LABEL}
+              </Link>
+            </p>
+          )}
         </div>
       </Container>
     </section>

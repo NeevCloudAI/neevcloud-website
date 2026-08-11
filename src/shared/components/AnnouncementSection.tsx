@@ -10,8 +10,8 @@ export default function AnnouncementSection() {
       aria-label="Announcement"
     >
       <Text align="center">
-        🇮🇳 This Independence Day, claim ₹15,000 in free CPU Cloud credits,
-        valid for 10 days. Sign up today.
+        🇮🇳 This Independence Day, claim ₹15,000 in free CPU Cloud credits, valid
+        for 10 days. Sign up today.
       </Text>
       <LinkComponent
         variant="link"

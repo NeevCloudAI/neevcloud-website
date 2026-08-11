@@ -21,7 +21,6 @@ const OffersPage = () => {
           className="object-cover"
           priority
         />
-        {/* <div className="absolute inset-0 bg-black/55" /> */}
         <Container className="relative flex flex-col items-center justify-center">
           <Text
             as="small"
@@ -87,7 +86,7 @@ const OffersPage = () => {
       <OffersDeploymentSection />
       <TheOfferSection />
       <BonusRewardSection />
-      <FaqSection items={CPU_PRICING_FAQ_ITEMS} />
+      <FaqSection items={CPU_PRICING_FAQ_ITEMS} showFooter={false} />
     </>
   );
 };

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Container from "@/shared/components/container";
 import { LinkComponent } from "@/shared/ui-lib";
 import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 

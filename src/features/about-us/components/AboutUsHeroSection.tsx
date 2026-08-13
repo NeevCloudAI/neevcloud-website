@@ -44,14 +44,6 @@ const AboutUsHeroSection = () => {
           >
             {ABOUT_US_HERO.primaryCta}
           </LinkComponent>
-          <LinkComponent
-            href={ABOUT_US_HERO.secondaryCtaRoute ?? ""}
-            variant="outline-primary"
-            target={ABOUT_US_HERO.secondaryCtaTarget}
-            spacing="lg"
-          >
-            {ABOUT_US_HERO.secondaryCta}
-          </LinkComponent>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-4 md:mt-12.5 w-full">

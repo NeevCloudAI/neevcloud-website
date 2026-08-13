@@ -30,11 +30,11 @@ const PrivateNetworkSection = () => {
         <Text as="h6" align="center" textColor="black/82" className="mt-2.5">
           Boot in seconds with curated stacks, or upload your own ISO.
         </Text>
-        <div className="w-full mt-4 md:mt-12.5 flex flex-col items-stretch justify-between md:flex-row">
+        {/* <div className="w-full mt-4 md:mt-12.5 flex flex-col items-stretch justify-between md:flex-row">
           <ComputeInstanceCard {...COMPUTE_INSTANCES[0]} />
           <NetworkFlowSummary />
           <ComputeInstanceCard {...COMPUTE_INSTANCES[1]} />
-        </div>
+        </div> */}
         <Text
           as="h3"
           weight="semibold"
@@ -55,7 +55,7 @@ const PrivateNetworkSection = () => {
             </li>
           ))}
         </ul>
-        <ZeroEgressCallout />
+        {/* <ZeroEgressCallout /> */}
       </Container>
     </section>
   );

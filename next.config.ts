@@ -27,12 +27,36 @@ const nextConfig: NextConfig = {
       "nvidia-a30",
       "nvidia-rtx-5090",
       "nvidia-rtx-a6000",
+      "nvidia-h100",
     ];
-    return legacyPhpPages.map((slug) => ({
-      source: `/${slug}.php`,
-      destination: `/${slug}`,
-      permanent: true,
-    }));
+    return [
+      ...legacyPhpPages.map((slug) => ({
+        source: `/${slug}.php`,
+        destination: `/${slug}`,
+        permanent: true,
+      })),
+      { source: "/h200-gpu-cluster/", destination: "/nvidia-h200", permanent: true },
+      { source: "/h200-gpu-cluster", destination: "/nvidia-h200", permanent: true },
+      { source: "/h100-gpu-cluster/", destination: "/nvidia-h100", permanent: true },
+      { source: "/h100-gpu-cluster", destination: "/nvidia-h100", permanent: true },
+      { source: "/nvidia-gb300-nvl72.php", destination: "/nvidia-gb200-nvl72", permanent: true },
+      { source: "/pricing.php", destination: "/gpu-pricing", permanent: true },
+      { source: "/careers.php", destination: "/careers", permanent: true },
+      { source: "/terms-and-conditions.php", destination: "/terms-condition", permanent: true },
+      { source: "/about-narendra-sen.php", destination: "/leadership", permanent: true },
+      { source: "/news.php", destination: "/newsroom", permanent: true },
+      { source: "/kubernetes.php", destination: "/managed-kubernetes", permanent: true },
+      { source: "/events.php", destination: "/events", permanent: true },
+      { source: "/smart-servers.php", destination: "/", permanent: true },
+      { source: "/ai-colocation.php", destination: "/", permanent: true },
+      { source: "/deploy-avatar.php", destination: "/", permanent: true },
+      { source: "/marketplace.html", destination: "/", permanent: true },
+      { source: "/ai-supercloud.php", destination: "/why-ai-supercloud", permanent: true },
+      { source: "/ai-supercloud/ai-labs", destination: "/agentic-studio", permanent: true },
+      { source: "/inquiry-for-career.php", destination: "/careers", permanent: true },
+      { source: "/jd-full-stack-developer.php", destination: "/careers", permanent: true },
+      { source: "/neevai-Internship-program.html", destination: "/careers", permanent: true },
+    ];
   },
 };
 

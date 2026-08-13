@@ -2,7 +2,7 @@ import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
 
 export const CPU_CLUSTER_HERO = {
   description:
-    "Model API gateways, data pipelines, orchestration control planes, and monitoring stacks, every AI deployment needs CPU alongside its GPUs. NeevCloud CPU instances are co-located with GPU clusters in the same private network. No egress charges between them.",
+    "Model API gateways, data pipelines, orchestration control planes, and monitoring stacks, every AI deployment needs CPU alongside its GPUs.",
   primaryCta: "Deploy Instance",
   primaryCtaRoute: EXTERNAL_LINKS.signup,
   primaryCtaTarget: "_blank",

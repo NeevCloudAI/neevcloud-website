@@ -4,9 +4,11 @@ export const MANAGED_KUBERNETES_HERO = {
   description:
     "Deploy inference servers, training pipelines, and multi-tenant ML platforms on GPU-aware Kubernetes. Device plugins pre-installed. Autoscaling included. You deploy pods, we handle the rest.",
   primaryCta: "Deploy Your Cluster",
-  primaryCtaRoute: EXTERNAL_LINKS.signup,
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
   badgeText: "GPU-Aware Kubernetes",
   image: "/images/webp/managed-kubernetes.webp",
   trustBadges: [
@@ -22,7 +24,9 @@ export const MANAGED_KUBERNETES_FOOTER = {
   description:
     "Create your first cluster with H100, H200, or A100 node pools. Device plugins, and autoscaling are included. The control plane is free.",
   primaryCta: "Create Cluster",
-  primaryCtaRoute: EXTERNAL_LINKS.signup,
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
   secondaryCta: "View Documentation",
+  secondaryCtaRoute: EXTERNAL_LINKS.documentation,
+  secondaryCtaTarget: "_blank",
 } as const;

@@ -18,8 +18,7 @@ export const EXTERNAL_LINKS = {
   templates: "https://console.ai.neevcloud.com/templates",
   modelApi: "https://console.ai.neevcloud.com/ai-inference/model-api",
   tutorials: "https://docs.ai.neevcloud.com/tutorials",
-  discord:
-    "https://discord.com/channels/1425007450792136776/1425019774726967356",
+  discord: "https://discord.gg/65Gzk7x2p",
   github: "https://github.com/neevcloud",
   neevcloudLinkedin: "https://in.linkedin.com/company/neevcloud-india",
   narendraSenLinkedin: "https://www.linkedin.com/in/narendrasen/",
@@ -32,7 +31,7 @@ export const EXTERNAL_LINKS = {
   shashwatJainLinkedin: "https://www.linkedin.com/in/shashwat-jain-b56627187/",
   ravitejaLinkedin: "https://www.linkedin.com/in/ravitejagarimella/",
   neevcloudDocs: "https://docs.neevcloud.com/",
-  dharmjitSinghLinkedin: "www.linkedin.com/in/dharmjit",
+  dharmjitSinghLinkedin: "https://www.linkedin.com/in/dharmjit",
   shamsherAnsariLinkedin: "https://www.linkedin.com/in/shamsheransari/",
   alokPratapSinghLinkedin: "https://www.linkedin.com/in/alokpratapsingh007/",
   rashmeetKaurBediLinkedin: "https://www.linkedin.com/in/rashmeet-kaur-bedi/",

@@ -25,6 +25,12 @@
 <!-- 16. Change CPU pricing: Remove pricing and add deploy now button -->
 <!-- 17. offer page -->
 <!-- 18. all logins are not available on mobile screen -->
+<!-- 6. Redirection URLS
+   https://www.neevcloud.com/h200-gpu-cluster/
+   https://www.neevcloud.com/h100-gpu-cluster/
+   https://neevcloud.com/nvidia-gb300-nvl72.php - product page
+   https://neevcloud.com/pricing.php -->
+<!-- 5. Add cpu pricing for ubuntu and windows -->
 
 1. Add mi300x
 2. super cluster

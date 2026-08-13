@@ -5,7 +5,11 @@ import type { CpuTransparentPricingTableRowProps } from "../types/transparent-pr
 
 const CpuTransparentPricingTableRow = ({
   row,
+  os,
 }: CpuTransparentPricingTableRowProps) => {
+  const price =
+    os === "linux" ? row.linuxPriceMonthly : row.windowsPriceMonthly;
+
   return (
     <tr className="border-b border-white/12">
       <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
@@ -21,6 +25,16 @@ const CpuTransparentPricingTableRow = ({
       <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
         <Text as="h6" fontFamily="spaceMono" textColor="white">
           {row.ram}
+        </Text>
+      </td>
+      <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="white">
+          {row.storage}
+        </Text>
+      </td>
+      <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>
+        <Text as="h6" fontFamily="spaceMono" textColor="primary">
+          {`${price.toFixed(2)} INR/Monthly`}
         </Text>
       </td>
       <td className={CPU_TRANSPARENT_PRICING_TABLE_CELL_CLASS}>

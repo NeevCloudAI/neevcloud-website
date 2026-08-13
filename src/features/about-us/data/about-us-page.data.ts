@@ -7,9 +7,6 @@ export const ABOUT_US_HERO = {
   primaryCta: "Get started",
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Infrastructure",
-  secondaryCtaRoute: "",
-  secondaryCtaTarget: "",
   trustBadges: [
     "Indian-owned",
     "Full-stack control",
@@ -26,7 +23,4 @@ export const ABOUT_US_FOOTER = {
   primaryCta: "Request API Access",
   primaryCtaRoute: EXTERNAL_LINKS.apiKeys,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Documentation",
-  secondaryCtaRoute: EXTERNAL_LINKS.firstInferenceCall,
-  secondaryCtaTarget: "_blank",
 } as const;

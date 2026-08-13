@@ -23,6 +23,7 @@ export type OgImage = {
 
 export const SITE_ICONS = {
   icon: [
+    { url: "/favicon.ico", sizes: "48x48" },
     {
       url: "/icons/logo-black.svg",
       type: "image/svg+xml",
@@ -34,7 +35,7 @@ export const SITE_ICONS = {
       media: "(prefers-color-scheme: dark)",
     },
   ],
-  shortcut: "/icons/logo-black.svg",
+  shortcut: "/favicon.ico",
   apple: "/icons/logo-black.svg",
 } satisfies Metadata["icons"];
 

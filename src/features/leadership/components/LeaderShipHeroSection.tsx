@@ -46,14 +46,6 @@ const LeaderShipHeroSection = () => {
           >
             {LEADERSHIP_HERO.primaryCta}
           </LinkComponent>
-          <LinkComponent
-            href={LEADERSHIP_HERO.secondaryCtaRoute ?? ""}
-            variant="outline-primary"
-            target={LEADERSHIP_HERO.secondaryCtaTarget}
-            spacing="lg"
-          >
-            {LEADERSHIP_HERO.secondaryCta}
-          </LinkComponent>
         </div>
 
         <div className=" mt-6 md:mt-20 rounded-lg bg-linear-to-r from-[#c8ebe4] via-[#e9efef] to-[#eef2f2] flex flex-col gap-8 md:gap-20 md:flex-row items-center justify-center shadow-lg">

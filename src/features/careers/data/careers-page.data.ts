@@ -4,8 +4,6 @@ export const CAREERS_HERO = {
     "Join us in creating systems that remove traditional barriers of cost, access, and control. Make world-class computing available to anyone with an idea worth building.",
   primaryCta: "View Current Openings",
   primaryCtaRoute: "/careers#current-openings",
-  secondaryCta: "Apply Now",
-  secondaryCtaRoute: "/careers#current-openings",
   trustBadges: [
     "Work that matters",
     "Team events",
@@ -22,4 +20,5 @@ export const CAREERS_FOOTER = {
   primaryCta: "View Current Openings",
   primaryCtaRoute: "/careers#current-openings",
   secondaryCta: "Email your Resume",
+  secondaryCtaRoute: "mailto:careers@neevcloud.com",
 } as const;

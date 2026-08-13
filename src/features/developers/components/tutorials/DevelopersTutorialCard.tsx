@@ -14,13 +14,7 @@ const DevelopersTutorialCard = ({ card }: DevelopersTutorialCardProps) => {
         <Text as="h5" weight="semibold">
           {card.title}
         </Text>
-        <Text textColor="gray-03" weight="medium">
-          {card.duration}
-        </Text>
       </div>
-      <Text as="h6" textColor="gray-05" className="mt-2.5">
-        {card.difficulty}
-      </Text>
       <LinkComponent
         href={card.ctaHref}
         target={card.ctaTarget}

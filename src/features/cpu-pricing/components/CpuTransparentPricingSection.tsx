@@ -1,8 +1,20 @@
+"use client";
+
+import { useCallback, useState } from "react";
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
+import { DEFAULT_CPU_OS_TYPE } from "../constants/transparent-pricing-section.constants";
+import type { CpuOsType } from "../types/transparent-pricing-section.types";
+import CpuTransparentPricingOsToggle from "./CpuTransparentPricingOsToggle";
 import CpuTransparentPricingPanel from "./CpuTransparentPricingPanel";
 
 const CpuTransparentPricingSection = () => {
+  const [os, setOs] = useState<CpuOsType>(DEFAULT_CPU_OS_TYPE);
+
+  const handleOsSelect = useCallback((nextOs: CpuOsType) => {
+    setOs(nextOs);
+  }, []);
+
   return (
     <section
       className="relative bg-black py-8 md:py-16 2xl:py-25"
@@ -17,13 +29,14 @@ const CpuTransparentPricingSection = () => {
           as="h2"
           id="cpu-transparent-pricing-section-heading"
           align="center"
-          textColor="primary"
+          textColor="white"
           className="max-w-4xl"
         >
-          Transparent
-          <Text as="span" variant="h2" textColor="white">
-            CPU Pricing
+          Every Workload
+          <Text as="span" variant="h2" textColor="primary">
+            Flat rate.
           </Text>
+          Unmetered.
         </Text>
         <Text
           as="h6"
@@ -31,16 +44,17 @@ const CpuTransparentPricingSection = () => {
           align="center"
           className="mt-2.5 max-w-3xl"
         >
-          All instances billed per hour. No hidden fees. Pay only for what you
-          use.
+          Commit and Save. The Longer the Plan, the Lower the Rate.
         </Text>
+
+        <CpuTransparentPricingOsToggle os={os} onOsSelect={handleOsSelect} />
 
         <div
           className="mt-4 w-full rounded-lg border border-white/12 bg-white/6 font-mono shadow-sm backdrop-blur-md md:mt-12.5"
           role="region"
           aria-label="Transparent CPU pricing terminal"
         >
-          <CpuTransparentPricingPanel />
+          <CpuTransparentPricingPanel os={os} />
         </div>
       </Container>
     </section>

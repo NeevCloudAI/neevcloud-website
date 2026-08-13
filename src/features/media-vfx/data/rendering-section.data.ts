@@ -21,7 +21,7 @@ export const RENDERING_SERVICES: readonly ServiceItem[] = [
       "NVMe storage for project assets, textures, and rendered frames. Fast read/write for large scene files.",
     highlight: "NVMe Gen4",
     highlightSubtext: "PB capacity",
-    href: "/storage",
+    href: "/object-storage",
   },
   {
     id: "network transfer",
@@ -32,22 +32,11 @@ export const RENDERING_SERVICES: readonly ServiceItem[] = [
       "High-bandwidth uploads and downloads. No egress charges within India region.",
     highlight: "40 Gbps in/out",
     highlightSubtext: "₹0 egress · IN",
-    href: "/network-transfer",
-  },
-  {
-    id: "rendering software",
-    index: "04",
-    title: "Rendering Software",
-    specs: "Blender · Maya · Unreal",
-    description:
-      "Pre-configured environments for industry-standard renderers. Custom container images supported.",
-    highlight: "Pre-baked images",
-    highlightSubtext: "BYO licenses",
-    href: "/rendering-software",
+    href: "/cpu-cluster",
   },
   {
     id: "managed tools",
-    index: "05",
+    index: "04",
     title: "Managed Tools",
     specs: "CLI · API · Web console",
     description:

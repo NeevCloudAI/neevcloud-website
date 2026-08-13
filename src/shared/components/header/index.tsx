@@ -61,11 +61,17 @@ import {
 type NavLink = {
   label: string;
   href: string;
+  target?: string;
   icon?: RemixiconComponentType;
   soon?: boolean;
 };
 type NavGroup = { heading?: string; links: NavLink[] };
-type NavItem = { label: string; href: string; groups?: NavGroup[] };
+type NavItem = {
+  label: string;
+  href: string;
+  target?: string;
+  groups?: NavGroup[];
+};
 
 type HeaderComponentProps = {
   /** Optional banner (e.g. AnnouncementSection) rendered above the nav row, inside the same fixed/absolute box so it scrolls with the header as one unit. */
@@ -288,11 +294,6 @@ const NAV_ITEMS: NavItem[] = [
         links: [
           { label: "GPU Compute", href: "/gpu-pricing", icon: RiPriceTag3Line },
           { label: "CPU Compute", href: "/cpu-pricing", icon: RiCoinsLine },
-          // {
-          //   label: "AI Inference",
-          //   href: "/ai-inference",
-          //   icon: RiFlashlightLine,
-          // },
           {
             label: "TCO Calculator",
             href: "/tco-calculator",
@@ -313,6 +314,12 @@ const NAV_ITEMS: NavItem[] = [
             label: "Developers Hub",
             href: "/developers",
             icon: RiCodeSSlashLine,
+          },
+          {
+            label: "Documentation",
+            href: EXTERNAL_LINKS.documentation,
+            target: "_blank",
+            icon: RiBook2Line,
           },
           { label: "Model APIs", href: "/model-api", icon: RiTerminalBoxLine },
           {
@@ -423,7 +430,6 @@ export default function HeaderComponent() {
                     onFocus={() => openPanel(item.label)}
                     onClick={() => setOpenNav(null)}
                     onKeyDown={(e) => {
-                      // ArrowDown steps keyboard focus into the open panel
                       if (e.key !== "ArrowDown") return;
                       e.preventDefault();
                       openPanel(item.label);
@@ -517,6 +523,7 @@ export default function HeaderComponent() {
                                   <Link
                                     key={sub.label}
                                     href={sub.href}
+                                    target={sub.target}
                                     tabIndex={openNav === item.label ? 0 : -1}
                                     onClick={() => setOpenNav(null)}
                                     className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"

@@ -35,7 +35,7 @@ const CPUWorkloadSection = () => {
           align="center"
           className="max-w-3xl mt-2.5"
         >
-          Commit and Save. The Longer the Plan, the Lower the Rate.
+          Commit and Save. Commit and save. Choose the plan that fits.
         </Text>
 
         <div

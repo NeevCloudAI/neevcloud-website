@@ -1,8 +1,12 @@
+import { EXTERNAL_LINKS } from "@/shared/constants/external-links.constants";
+
 export const MEDIA_HERO = {
   badgeText: "Media & VFX",
   description:
     "From 3D animation to cinematic effects, media workflows demand massive compute on tight deadlines. NeevCloud provides GPU infrastructure that scales with your production, so you can render faster, iterate in real time, and deliver on schedule.",
   primaryCta: "Start Rendering",
+  primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
+  primaryCtaTarget: "/blank",
   secondaryCta: "Talk to Sales",
   secondaryCtaRoute: "/contact-neevcloud#contact-form",
   image: "/images/webp/media-vfx.webp",

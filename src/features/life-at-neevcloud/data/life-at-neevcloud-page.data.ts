@@ -23,4 +23,5 @@ export const LIFE_AT_NEEVCLOUD_FOOTER = {
   primaryCta: "View Current Openings",
   primaryCtaRoute: "/careers#current-openings",
   secondaryCta: "Email your Resume",
+  secondaryCtaRoute: "mailto:careers@neevcloud.com",
 } as const;

@@ -7,9 +7,6 @@ export const LEADERSHIP_HERO = {
   primaryCta: "Get started",
   primaryCtaRoute: EXTERNAL_LINKS.aiSupercloudConsole,
   primaryCtaTarget: "_blank",
-  secondaryCta: "View Infrastructure",
-  secondaryCtaRoute: "",
-  secondaryCtaTarget: "",
 } as const;
 
 export const LEADERSHIP_FOOTER = {

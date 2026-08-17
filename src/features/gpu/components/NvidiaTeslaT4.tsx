@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,30 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const NvidiaTeslaT4 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia Tesla T4",
+          description:
+            "Optimized for production AI inference and cost-effective deep learning deployment, now accessible through our enterprise cloud platform with pay-per-hour pricing.",
+          path: "/nvidia-tesla-t4",
+          model: "Tesla T4",
+          price: "28.05",
+          priceCurrency: "INR",
+          specs: [
+            { name: "GPU Architecture", value: "NVIDIA Turing" },
+            { name: "CUDA Cores", value: "2,560" },
+            { name: "Tensor Cores", value: "320" },
+            { name: "GPU Memory", value: "16 GB GDDR6" },
+            { name: "ECC Support", value: "Yes" },
+            { name: "FP32 (Single Precision)", value: "8.1 TFLOPS" },
+            { name: "Interconnect Bandwidth", value: "32 GB/sec" },
+            { name: "Memory Bandwidth", value: "300 GB/sec" },
+            { name: "Compute APIs", value: "CUDA, NVIDIA TensorRT™, ONNX" },
+            { name: "Virtualization (vGPU) Support", value: "Yes" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_TESLA_T4_FAQ])} />
       <GpuHeroSection {...NVIDIA_TESLA_T4_HERO} />
       <GpuChooseSection {...NVIDIA_TESLA_T4_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_TESLA_T4_WHY_CHOOSE_SECTION} />

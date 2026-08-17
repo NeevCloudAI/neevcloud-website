@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,30 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const NvidiaH200 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia H200",
+          description:
+            "Built for frontier AI research and memory-intensive workloads requiring massive compute power on our high-performance cloud GPU infrastructure with flexible scaling.",
+          path: "/nvidia-h200",
+          model: "H200",
+          price: "231.17",
+          priceCurrency: "INR",
+          specs: [
+            { name: "GPU", value: "NVIDIA H200 Tensor Core GPU" },
+            { name: "Base Architecture", value: "Hopper (H100 Family)" },
+            { name: "GPU Count (HGX H200)", value: "8 GPUs per server node" },
+            { name: "Total GPU Memory (Per Node)", value: "1.13 TB (8 x 141 GB)" },
+            { name: "Memory Type", value: "HBM3e (High Bandwidth Memory)" },
+            { name: "GPU Interconnect", value: "NVIDIA NVSwitch (Fully Connected Mesh)" },
+            { name: "Host Interface", value: "PCIe Gen 5" },
+            { name: "AI Performance (FP8)", value: "Up to 32 PFLOPS per HGX System" },
+            { name: "Power Efficiency", value: "Optimized for energy-efficient AI compute" },
+            { name: "Deployment Options", value: "On-Prem, Private Cloud, and NeevCloud AI SuperCloud" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_H200_FAQ])} />
       <GpuHeroSection {...NVIDIA_H200_HERO} />
       <GpuChooseSection {...NVIDIA_H200_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_H200_WHY_CHOOSE_SECTION} />

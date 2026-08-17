@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,29 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const Nvidia3090 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia RTX 3090",
+          description:
+            "Ideal for professional video production, 3D modeling, and machine learning prototyping with 24GB of blazing-fast memory on NeevCloud.",
+          path: "/nvidia-3090",
+          model: "RTX 3090",
+          price: "52.23",
+          priceCurrency: "INR",
+          specs: [
+            { name: "GPU Architecture", value: "Ampere" },
+            { name: "Tensor Cores", value: "3rd Generation" },
+            { name: "GPU Memory", value: "24 GB GDDR6X" },
+            { name: "NVIDIA CUDA® Cores", value: "10496" },
+            { name: "NVIDIA NVLink™ (SLI-Ready)", value: "Yes" },
+            { name: "Supplementary Power Connectors", value: "Yes" },
+            { name: "Graphics Card Power", value: "350W" },
+            { name: "Form Factor", value: "Scalable data center platform" },
+            { name: "Power Efficiency", value: "Optimized for maximum throughput per watt" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_RTX_3090_FAQ])} />
       <GpuHeroSection {...NVIDIA_RTX_3090_HERO} />
       <GpuChooseSection {...NVIDIA_RTX_3090_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_RTX_3090_WHY_CHOOSE_SECTION} />

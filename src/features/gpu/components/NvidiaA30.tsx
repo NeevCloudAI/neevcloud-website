@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,27 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const NvidiaA30 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia A30",
+          description:
+            "Designed for mainstream AI inference and virtualized multi-tenant deployments on NeevCloud's cloud platform with Multi-Instance GPU technology.",
+          path: "/nvidia-a30",
+          model: "A30",
+          price: "77.38",
+          priceCurrency: "INR",
+          specs: [
+            { name: "GPU Memory", value: "24GB HBM2" },
+            { name: "Memory Bandwidth", value: "933GB/s" },
+            { name: "TF32 Tensor Core Performance", value: "Up to 165 teraFLOPS" },
+            { name: "Interconnect", value: "PCIe Gen4 (64GB/s), Third-gen NVLINK (200GB/s)" },
+            { name: "Form Factor", value: "Dual-slot, full-height, full-length (FHFL)" },
+            { name: "Max TDP", value: "165W" },
+            { name: "Multi-Instance GPU (MIG)", value: "4 instances@ 6GB, 2 instances@ 12GB, 1 instance@ 24GB" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_A30_FAQ])} />
       <GpuHeroSection {...NVIDIA_A30_HERO} />
       <GpuChooseSection {...NVIDIA_A30_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_A30_WHY_CHOOSE_SECTION} />

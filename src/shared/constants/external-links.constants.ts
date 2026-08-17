@@ -84,6 +84,7 @@ export const EXTERNAL_LINKS = {
   inferenceOverview: "https://docs.ai.neevcloud.com/ai-inference/overview-1",
   aiAgentsOverview: "https://console.ai.neevcloud.com/ai-agents/overview",
   aiSuperCloudVM: "https://console.ai.neevcloud.com/vms",
+  requestFeature: "https://feedback.neevcloud.com/",
 } as const;
 
 export type ExternalLinkKey = keyof typeof EXTERNAL_LINKS;

@@ -31,8 +31,8 @@
    https://neevcloud.com/nvidia-gb300-nvl72.php - product page
    https://neevcloud.com/pricing.php -->
 <!-- 5. Add cpu pricing for ubuntu and windows -->
+<!-- 4. add schema markup -->
 
 1. Add mi300x
 2. super cluster
 3. /blogs and /models
-4. add schema markup

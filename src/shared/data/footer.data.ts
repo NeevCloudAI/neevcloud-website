@@ -9,7 +9,7 @@ export const FOOTER = {
   copyright: "© 2026, NeevAI SuperCloud Pvt. Ltd.",
   ctaTarget: "_blank",
   legal: [
-    { label: "Terms of Usage", href: "/terms-condition" },
+    { label: "Terms of Usage", href: "/terms-and-conditions" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "AUP", href: "/acceptable-user-policy" },
     { label: "SLA", href: "/service-level-agreement" },
@@ -20,7 +20,7 @@ export const FOOTER = {
 
 export type FooterColumn = {
   title: string;
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; target?: "_blank" }[];
 };
 
 // Mirrors the header's NAV_ITEMS 1:1 (src/shared/components/header/index.tsx)
@@ -86,6 +86,11 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
       { label: "Developers Hub", href: "/developers" },
       { label: "Model APIs", href: "/model-api" },
       { label: "Agentic Workflows", href: "/agentic-workflow" },
+      {
+        label: "Request Feature",
+        href: EXTERNAL_LINKS.requestFeature,
+        target: "_blank",
+      },
     ],
   },
   {

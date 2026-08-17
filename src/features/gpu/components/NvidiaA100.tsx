@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,29 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const NvidiaA100 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia A100",
+          description:
+            "Industry-leading platform for large-scale AI training, high-performance computing, and GPU-accelerated analytics on NeevCloud's enterprise-grade cloud infrastructure.",
+          path: "/nvidia-a100",
+          model: "A100",
+          price: "127.68",
+          priceCurrency: "INR",
+          specs: [
+            { name: "GPU Architecture", value: "NVIDIA Ampere" },
+            { name: "GPU Count per Node", value: "Up to 8x NVIDIA A100 Tensor Core GPUs" },
+            { name: "GPU Memory", value: "40GB / 80GB HBM2e per GPU" },
+            { name: "NVLink Bandwidth", value: "600 GB/s total bidirectional bandwidth" },
+            { name: "Interconnect", value: "NVIDIA NVSwitch for full GPU-to-GPU bandwidth" },
+            { name: "Compute Performance", value: "Up to 5 petaFLOPS of AI performance" },
+            { name: "Supported Workloads", value: "AI Training, Deep Learning, HPC, Inference" },
+            { name: "Form Factor", value: "Scalable data center platform" },
+            { name: "Power Efficiency", value: "Optimized for maximum throughput per watt" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_A100_FAQ])} />
       <GpuHeroSection {...NVIDIA_A100_HERO} />
       <GpuChooseSection {...NVIDIA_A100_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_A100_WHY_CHOOSE_SECTION} />

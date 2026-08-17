@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,28 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const Nvidia5090 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia RTX 5090",
+          description:
+            "Ultimate solution for 8K rendering, professional content creation, and AI-powered video editing on our high-performance cloud gaming platform.",
+          path: "/nvidia-rtx-5090",
+          model: "RTX 5090",
+          price: "94.79",
+          priceCurrency: "INR",
+          specs: [
+            { name: "GPU", value: "NVIDIA RTX 5090" },
+            { name: "Architecture", value: "Blackwell Next-Gen" },
+            { name: "GPU Memory", value: "32 GB GDDR7" },
+            { name: "Memory Bandwidth", value: "1.7 TB/s" },
+            { name: "CUDA Cores", value: "21760" },
+            { name: "Tensor Cores", value: "Advanced 5th-gen for enhanced AI workloads" },
+            { name: "Ray Tracing Cores", value: "4th-gen RT cores for accelerated computation" },
+            { name: "Power Consumption", value: "575W (Cloud-optimized configurations)" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_RTX_5090_FAQ])} />
       <GpuHeroSection {...NVIDIA_RTX_5090_HERO} />
       <GpuChooseSection {...NVIDIA_RTX_5090_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_RTX_5090_WHY_CHOOSE_SECTION} />

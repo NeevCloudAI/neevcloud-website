@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -19,6 +21,29 @@ import GpuOtherGpusSection from "@/shared/components/gpu-other-gpus-section";
 const NvidiaB200 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "Nvidia DGX B200",
+          description:
+            "Revolutionary dual-chip architecture for next-generation AI reasoning and trillion-parameter foundation models on NeevCloud's Blackwell-powered cloud infrastructure.",
+          path: "/nvidia-b200",
+          model: "DGX B200",
+          price: "5.00",
+          priceCurrency: "USD",
+          specs: [
+            { name: "GPU", value: "8x NVIDIA Blackwell GPUs" },
+            { name: "GPU Memory", value: "1,440 GB total, 64 TB/s HBM3e bandwidth" },
+            { name: "Performance", value: "FP4 Tensor Core: 144 PFLOPS | 72 PFLOPS*\nFP8 Tensor Core: 72 PFLOPS**" },
+            { name: "NVIDIA NVSwitch", value: "2X" },
+            { name: "NVIDIA NVLink Bandwidth", value: "14.4 TB/s aggregate bandwidth" },
+            { name: "System Power Usage", value: "~14.3 kW max" },
+            { name: "CPU", value: "2 Intel® Xeon® Platinum 8570 Processors\n112 Cores total, 2.1 GHz (Base), 4 GHz (Max Boost)" },
+            { name: "System Memory", value: "2 TB, configurable to 4 TB" },
+            { name: "Rack Units (RU)", value: "10 RU" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_B200_FAQ])} />
       <GpuHeroSection {...NVIDIA_B200_HERO} />
       <GpuChooseSection {...NVIDIA_B200_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_B200_WHY_CHOOSE_SECTION} />

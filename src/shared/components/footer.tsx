@@ -7,6 +7,7 @@ import {
 } from "@remixicon/react";
 import { cn } from "@/lib/utils";
 import Container from "./container";
+import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 import { FOOTER, FOOTER_COLUMNS } from "../data/footer.data";
 import { FOOTER_SOCIAL_LINKS } from "../data/footer-data";
 import type { FooterCtaContent } from "../data/footer-types";
@@ -193,6 +194,8 @@ export default function Footer({
                     ) : (
                       <Link
                         href={item.href}
+                        target={item.target}
+                        rel={item.target === "_blank" ? "noreferrer" : undefined}
                         className="text-[14px] leading-[142%] text-white/70 transition-colors hover:text-neev-green"
                       >
                         {item.label}
@@ -224,6 +227,30 @@ export default function Footer({
                     {label}
                   </a>
                 ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <h3 className="text-[14px] font-medium text-white/40">
+                Feedback
+              </h3>
+              <div className="flex gap-4">
+                <a
+                  href={EXTERNAL_LINKS.requestFeature}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-fit items-center gap-3 border border-white/15 px-4 py-3 text-[15px] text-white/60 transition-colors hover:border-white/35 hover:text-white"
+                >
+                  Share Feedback
+                </a>
+                <a
+                  href={EXTERNAL_LINKS.requestFeature}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-fit items-center gap-3 border border-white/15 px-4 py-3 text-[15px] text-white/60 transition-colors hover:border-white/35 hover:text-white"
+                >
+                  Request Feature
+                </a>
               </div>
             </div>
 

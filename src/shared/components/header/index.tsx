@@ -56,6 +56,7 @@ import {
   RiPieChart2Line,
   RiNodeTree,
   RiCpuLine,
+  RiLightbulbLine,
 } from "@remixicon/react";
 
 type NavLink = {
@@ -326,6 +327,12 @@ const NAV_ITEMS: NavItem[] = [
             label: "Agentic Workflows",
             href: "/agentic-workflow",
             icon: RiFlowChart,
+          },
+          {
+            label: "Request Feature",
+            href: EXTERNAL_LINKS.requestFeature,
+            target: "_blank",
+            icon: RiLightbulbLine,
           },
         ],
       },

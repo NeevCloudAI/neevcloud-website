@@ -42,7 +42,7 @@ const PrivacyPolicyContentSection = () => {
           and the Services and to reach out to us to deactivate your Customer
           Account (as defined in the NeevCloud terms of Services accessible at
           <LinkComponent
-            href="/terms-condition"
+            href="/terms-and-conditions"
             variant="link"
             textColor="primary"
             spacing="xxs"

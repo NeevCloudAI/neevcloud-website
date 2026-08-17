@@ -1,3 +1,5 @@
+import JsonLd from "@/shared/components/JsonLd";
+import { buildFaqSchema, buildProductSchema } from "@/lib/seo";
 import FaqSection from "@/shared/components/faq/faq-section";
 import GpuChooseSection from "@/shared/components/gpu-choose-section";
 import GpuHeroSection from "@/shared/components/gpu-hero-section";
@@ -18,6 +20,25 @@ import { NVIDIA_NVL72_TECHNICAL_SPECS_SECTION } from "@/shared/data/gpu-technica
 const NvidiaNvl72 = () => {
   return (
     <>
+      <JsonLd
+        data={buildProductSchema({
+          name: "NVIDIA GB200 NVL72",
+          description:
+            "NVIDIA GB200 NVL72 is built to power massive AI workloads with breakthrough performance, enabling enterprises to scale training and inference across large, interconnected GPU systems.",
+          path: "/nvidia-gb200-nvl72",
+          model: "GB200 NVL72",
+          price: "5.00",
+          priceCurrency: "USD",
+          specs: [
+            { name: "Architecture", value: "NVIDIA Blackwell Architecture" },
+            { name: "Configuration", value: "NVL72 System" },
+            { name: "GPU Interconnect", value: "NVLink" },
+            { name: "Performance", value: "High-performance AI training & inference" },
+            { name: "Deployment", value: "Large-scale AI clusters & datacenters" },
+          ],
+        })}
+      />
+      <JsonLd data={buildFaqSchema([...NVIDIA_NVL72_FAQ])} />
       <GpuHeroSection {...NVIDIA_NVL72_HERO} />
       <GpuChooseSection {...NVIDIA_NVL72_CHOOSE_SECTION} />
       <GpuWhyChooseSection {...NVIDIA_NVL72_WHY_CHOOSE_SECTION} />

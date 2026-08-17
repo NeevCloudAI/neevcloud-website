@@ -1,6 +1,7 @@
 import { Instrument_Sans, Poppins, Space_Mono } from "next/font/google";
-import { defaultMetadata } from "@/lib/seo";
+import { buildOrganizationSchema, defaultMetadata } from "@/lib/seo";
 import DeferredAnalytics from "@/shared/components/analytics/DeferredAnalytics";
+import JsonLd from "@/shared/components/JsonLd";
 import RouteProgressBar from "@/shared/components/route-progress-bar";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${instrumentSans.variable} ${spaceMono.variable}`}
       >
+        <JsonLd data={buildOrganizationSchema()} />
         <RouteProgressBar />
         {children}
         <DeferredAnalytics />

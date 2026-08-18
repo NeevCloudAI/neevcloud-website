@@ -182,6 +182,75 @@ export function buildServiceSchema({
   };
 }
 
+type BreadcrumbItem = { name: string; path: string };
+
+export function buildBreadcrumbSchema(items: BreadcrumbItem[]): JsonLdSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.path}`,
+    })),
+  };
+}
+
+type BlogPostingSchemaOptions = {
+  title: string;
+  description: string;
+  path: string;
+  image: string;
+  datePublished: string;
+  authorName?: string;
+};
+
+export function buildBlogPostingSchema({
+  title,
+  description,
+  path,
+  image,
+  datePublished,
+  authorName,
+}: BlogPostingSchemaOptions): JsonLdSchema {
+  const author = authorName ?? SITE_NAME;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    image: image.startsWith("http") ? image : `${SITE_URL}${image}`,
+    datePublished,
+    author: {
+      "@type": authorName ? "Person" : "Organization",
+      name: author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+    },
+    mainEntityOfPage: `${SITE_URL}${path}`,
+  };
+}
+
+type HowToStepSchema = { name: string; text: string };
+
+export function buildHowToSchema(name: string, steps: HowToStepSchema[]): JsonLdSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    step: steps.map((step) => ({
+      "@type": "HowToStep",
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
 type ProductSpec = { name: string; value: string };
 
 type ProductSchemaOptions = {

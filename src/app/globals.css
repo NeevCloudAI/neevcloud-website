@@ -104,6 +104,7 @@
 }
 
 body {
+  color-scheme: light;
   background: var(--white);
   color: var(--black);
   font-family: var(--font-poppins);

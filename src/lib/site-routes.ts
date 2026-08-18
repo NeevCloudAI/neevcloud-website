@@ -10,7 +10,11 @@ function collectPageRoutes(dir: string, urlPath = ""): string[] {
   const routes: string[] = [];
 
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith("_") || entry.name.startsWith(".")) {
+    if (
+      entry.name.startsWith("_") ||
+      entry.name.startsWith(".") ||
+      entry.name.startsWith("[")
+    ) {
       continue;
     }
 

@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   ChevronDown,
   Menu,
@@ -360,7 +361,7 @@ const NAV_ITEMS: NavItem[] = [
         links: [
           { label: "Newsroom", href: "/newsroom", icon: RiNewspaperLine },
           { label: "Events", href: "/events", icon: RiCalendarEventLine },
-          { label: "Blogs", href: EXTERNAL_LINKS.blogs, icon: RiArticleLine },
+          { label: "Blogs", href: "/blog", icon: RiArticleLine },
           {
             label: "Contact Us",
             href: "/contact-neevcloud",
@@ -372,7 +373,21 @@ const NAV_ITEMS: NavItem[] = [
   },
 ];
 
+// Visible keyboard-focus ring — the header has none of Tailwind's default
+// focus outline (removed by the reset), so without this, tabbing through
+// nav links, buttons, and menu items leaves no visible indicator of focus.
+const FOCUS_RING =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neev-green";
+
+function isNavItemActive(item: NavItem, pathname: string) {
+  if (item.href !== "#" && pathname === item.href) return true;
+  return item.groups?.some((group) =>
+    group.links.some((link) => link.href !== "#" && link.href === pathname),
+  );
+}
+
 export default function HeaderComponent() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   // which mobile nav group is expanded (Taito-style accordion)
   const [openGroup, setOpenGroup] = useState<string | null>(null);
@@ -383,6 +398,17 @@ export default function HeaderComponent() {
   const [openNav, setOpenNav] = useState<string | null>(null);
   const closeTimerRef = useRef(0);
   const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  // Lock background scroll while the full-screen mobile nav is open, so
+  // touch-scrolling the overlay doesn't also scroll the page behind it.
+  useEffect(() => {
+    if (!isOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
 
   const openPanel = (label: string) => {
     window.clearTimeout(closeTimerRef.current);
@@ -426,13 +452,15 @@ export default function HeaderComponent() {
               }
             }}
           >
-            {NAV_ITEMS.map((item) =>
-              item.groups ? (
+            {NAV_ITEMS.map((item) => {
+              const active = isNavItemActive(item, pathname);
+              return item.groups ? (
                 <div key={item.label} className="relative">
                   <Link
                     href={item.href}
                     aria-haspopup="true"
                     aria-expanded={openNav === item.label}
+                    aria-current={active ? "page" : undefined}
                     onPointerEnter={() => openPanel(item.label)}
                     onFocus={() => openPanel(item.label)}
                     onClick={() => setOpenNav(null)}
@@ -446,7 +474,11 @@ export default function HeaderComponent() {
                           ?.focus();
                       });
                     }}
-                    className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
+                    className={cn(
+                      "flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] transition-opacity hover:opacity-70",
+                      active ? "text-neev-green" : "text-white",
+                      FOCUS_RING,
+                    )}
                   >
                     {item.label}
                     <ChevronDown
@@ -532,8 +564,13 @@ export default function HeaderComponent() {
                                     href={sub.href}
                                     target={sub.target}
                                     tabIndex={openNav === item.label ? 0 : -1}
+                                    aria-current={sub.href === pathname ? "page" : undefined}
                                     onClick={() => setOpenNav(null)}
-                                    className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                                    className={cn(
+                                      "flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] transition-colors hover:bg-white/10 hover:text-white",
+                                      sub.href === pathname ? "text-white" : "text-white/90",
+                                      FOCUS_RING,
+                                    )}
                                   >
                                     {sub.icon && (
                                       <sub.icon
@@ -557,13 +594,18 @@ export default function HeaderComponent() {
                 <Link
                   key={item.label}
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   onPointerEnter={scheduleClose}
-                  className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] text-white transition-opacity hover:opacity-70"
+                  className={cn(
+                    "flex items-center gap-1 whitespace-nowrap text-[13px] font-medium leading-6 tracking-[-0.02em] transition-opacity hover:opacity-70",
+                    active ? "text-neev-green" : "text-white",
+                    FOCUS_RING,
+                  )}
                 >
                   {item.label}
                 </Link>
-              ),
-            )}
+              );
+            })}
           </nav>
         </div>
 
@@ -571,7 +613,10 @@ export default function HeaderComponent() {
           <div className="group/login relative">
             <button
               type="button"
-              className="flex items-center gap-1 bg-[#FFFFFF29] px-3 py-1 text-[13px] font-medium leading-6 tracking-[-0.02em] text-white outline outline-1 -outline-offset-1 outline-white transition-colors hover:bg-white/25"
+              className={cn(
+                "flex items-center gap-1 bg-[#FFFFFF29] px-3 py-1 text-[13px] font-medium leading-6 tracking-[-0.02em] text-white outline outline-1 -outline-offset-1 outline-white transition-colors hover:bg-white/25",
+                FOCUS_RING,
+              )}
             >
               Login
               <ChevronDown
@@ -590,7 +635,10 @@ export default function HeaderComponent() {
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                    className={cn(
+                      "flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white",
+                      FOCUS_RING,
+                    )}
                   >
                     <LoginIcon
                       size={16}
@@ -605,7 +653,10 @@ export default function HeaderComponent() {
           </div>
           <Link
             href="/contact-neevcloud#contact-form"
-            className="bg-white px-3 py-1 text-[13px] font-medium leading-6 tracking-[-0.02em] text-[#2D9D80] transition-colors hover:bg-white/90"
+            className={cn(
+              "bg-white px-3 py-1 text-[13px] font-medium leading-6 tracking-[-0.02em] text-[#2D9D80] transition-colors hover:bg-white/90",
+              FOCUS_RING,
+            )}
           >
             Contact Sales
           </Link>
@@ -617,7 +668,10 @@ export default function HeaderComponent() {
           aria-expanded={isOpen}
           aria-controls="home-mobile-nav"
           onClick={() => setIsOpen((v) => !v)}
-          className="-m-2 grid size-11 place-items-center text-white xl:hidden"
+          className={cn(
+            "-m-2 grid size-11 place-items-center text-white xl:hidden",
+            FOCUS_RING,
+          )}
         >
           <Menu size={24} aria-hidden />
         </button>
@@ -647,7 +701,7 @@ export default function HeaderComponent() {
                 type="button"
                 aria-label="Close menu"
                 onClick={() => setIsOpen(false)}
-                className="grid size-11 place-items-center text-white"
+                className={cn("grid size-11 place-items-center text-white", FOCUS_RING)}
               >
                 {/* simple X */}
                 <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
@@ -662,18 +716,24 @@ export default function HeaderComponent() {
             </div>
 
             <ul className="mt-8 flex flex-1 list-none flex-col overflow-y-auto overscroll-contain">
-              {NAV_ITEMS.map((item) =>
-                item.groups ? (
+              {NAV_ITEMS.map((item) => {
+                const active = isNavItemActive(item, pathname);
+                return item.groups ? (
                   <li key={item.label}>
                     <button
                       type="button"
                       aria-expanded={openGroup === item.label}
+                      aria-current={active ? "page" : undefined}
                       onClick={() =>
                         setOpenGroup((g) =>
                           g === item.label ? null : item.label,
                         )
                       }
-                      className="flex w-full items-center justify-between py-3 text-left text-[18px] font-normal leading-tight text-white"
+                      className={cn(
+                        "flex w-full items-center justify-between py-3 text-left text-[18px] font-normal leading-tight",
+                        active ? "text-neev-green" : "text-white",
+                        FOCUS_RING,
+                      )}
                     >
                       {item.label}
                       <ChevronDown
@@ -732,8 +792,13 @@ export default function HeaderComponent() {
                                 <Link
                                   key={sub.label}
                                   href={sub.href}
+                                  aria-current={sub.href === pathname ? "page" : undefined}
                                   onClick={() => setIsOpen(false)}
-                                  className="flex items-center gap-2.5 py-2 pl-4 text-[16px] text-white/70"
+                                  className={cn(
+                                    "flex items-center gap-2.5 py-2 pl-4 text-[16px]",
+                                    sub.href === pathname ? "text-neev-green" : "text-white/70",
+                                    FOCUS_RING,
+                                  )}
                                 >
                                   {sub.icon && (
                                     <sub.icon
@@ -755,21 +820,29 @@ export default function HeaderComponent() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
+                      aria-current={active ? "page" : undefined}
                       onClick={() => setIsOpen(false)}
-                      className="block py-3 text-[26px] font-normal leading-tight text-white"
+                      className={cn(
+                        "block py-3 text-[26px] font-normal leading-tight",
+                        active ? "text-neev-green" : "text-white",
+                        FOCUS_RING,
+                      )}
                     >
                       {item.label}
                     </Link>
                   </li>
-                ),
-              )}
+                );
+              })}
             </ul>
 
             <div className="mt-6 flex flex-col gap-2">
               <Link
                 href="/contact-neevcloud"
                 onClick={() => setIsOpen(false)}
-                className="rounded-xl bg-white py-3.5 text-center text-[16px] font-medium text-black"
+                className={cn(
+                  "rounded-xl bg-white py-3.5 text-center text-[16px] font-medium text-black",
+                  FOCUS_RING,
+                )}
               >
                 Contact Sales
               </Link>
@@ -779,7 +852,10 @@ export default function HeaderComponent() {
                 onClick={() =>
                   setOpenGroup((g) => (g === "Login" ? null : "Login"))
                 }
-                className="flex items-center justify-center gap-1 py-2.5 text-[16px] font-medium text-white"
+                className={cn(
+                  "flex items-center justify-center gap-1 py-2.5 text-[16px] font-medium text-white",
+                  FOCUS_RING,
+                )}
               >
                 Login
                 <ChevronDown
@@ -807,7 +883,10 @@ export default function HeaderComponent() {
                       target="_blank"
                       rel="noreferrer"
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-center gap-2.5 py-2 text-[16px] text-white/70"
+                      className={cn(
+                        "flex items-center justify-center gap-2.5 py-2 text-[16px] text-white/70",
+                        FOCUS_RING,
+                      )}
                     >
                       <LoginIcon
                         size={16}

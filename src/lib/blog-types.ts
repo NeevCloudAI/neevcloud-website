@@ -11,6 +11,7 @@ export type BlogType =
 export type BlogFaq = { question: string; answer: string };
 export type BlogHowToStep = { name: string; text: string };
 export type BlogAuthor = { name: string; title?: string; url?: string };
+export type BlogHeading = { id: string; text: string };
 
 export type BlogPost = {
   slug: string;
@@ -31,7 +32,15 @@ export type BlogPost = {
 
 export type BlogCardPost = Pick<
   BlogPost,
-  "slug" | "title" | "excerpt" | "image" | "date" | "type" | "featured" | "readingMinutes"
+  | "slug"
+  | "title"
+  | "excerpt"
+  | "image"
+  | "date"
+  | "type"
+  | "featured"
+  | "readingMinutes"
+  | "authorInfo"
 >;
 
 export const BLOG_TYPE_LABELS: Record<BlogType, string> = {

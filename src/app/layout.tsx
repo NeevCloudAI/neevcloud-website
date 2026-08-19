@@ -1,4 +1,4 @@
-import { Instrument_Sans, Poppins, Space_Mono } from "next/font/google";
+import { Instrument_Sans, Poppins, Roboto, Space_Mono } from "next/font/google";
 import { buildOrganizationSchema, defaultMetadata } from "@/lib/seo";
 import DeferredAnalytics from "@/shared/components/analytics/DeferredAnalytics";
 import JsonLd from "@/shared/components/JsonLd";
@@ -23,6 +23,15 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
+// Blog reading typeface — kept scoped to blog content rather than the
+// global sans UI (Poppins/Instrument Sans).
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata = defaultMetadata;
 
 export default function RootLayout({
@@ -33,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${instrumentSans.variable} ${spaceMono.variable}`}
+        className={`${poppins.variable} ${instrumentSans.variable} ${spaceMono.variable} ${roboto.variable}`}
       >
         <JsonLd data={buildOrganizationSchema()} />
         <RouteProgressBar />

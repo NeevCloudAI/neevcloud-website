@@ -3,6 +3,7 @@
 @theme inline {
   --font-instrument-sans: var(--font-instrument-sans);
   --font-space-mono: var(--font-space-mono);
+  --font-blog: var(--font-roboto);
 
   --color-primary: var(--primary);
   --color-primary-85: var(--primary-85);

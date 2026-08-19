@@ -1,10 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { slugifyHeading } from "./slugify";
 import type {
   BlogAuthor,
   BlogCardPost,
   BlogFaq,
+  BlogHeading,
   BlogHowToStep,
   BlogPost,
   BlogType,
@@ -35,8 +37,8 @@ function estimateReadingMinutes(content: string): number {
 }
 
 function toCardPost(post: BlogPost): BlogCardPost {
-  const { slug, title, excerpt, image, date, type, featured, readingMinutes } = post;
-  return { slug, title, excerpt, image, date, type, featured, readingMinutes };
+  const { slug, title, excerpt, image, date, type, featured, readingMinutes, authorInfo } = post;
+  return { slug, title, excerpt, image, date, type, featured, readingMinutes, authorInfo };
 }
 
 export function getAllBlogSlugs(): string[] {
@@ -88,6 +90,17 @@ export function getFeaturedPosts(): BlogCardPost[] {
     .filter((post) => post.featured > 0)
     .sort((a, b) => a.featured - b.featured)
     .slice(0, 3);
+}
+
+export function extractHeadings(content: string): BlogHeading[] {
+  return [...content.matchAll(/^##\s+(.+)$/gm)].map((match) => {
+    const text = match[1]
+      .replace(/\*\*(.*?)\*\*/g, "$1")
+      .replace(/`(.*?)`/g, "$1")
+      .replace(/\[(.*?)\]\(.*?\)/g, "$1")
+      .trim();
+    return { id: slugifyHeading(text), text };
+  });
 }
 
 export function getRelatedPosts(slug: string, type: BlogType, limit = 3): BlogCardPost[] {

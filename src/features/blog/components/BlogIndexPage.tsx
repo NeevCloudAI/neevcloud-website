@@ -1,53 +1,34 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import { getAllBlogCards, getFeaturedPosts } from "@/lib/blog.server";
+import { getAllBlogCards } from "@/lib/blog.server";
 import BlogCard from "./BlogCard";
 
 export default function BlogIndexPage() {
-  const featured = getFeaturedPosts();
   const posts = getAllBlogCards();
 
   return (
-    <div className="bg-white">
-      <section className="bg-cloud-gray py-16 md:py-24">
-        <Container className="flex flex-col items-center gap-4 text-center">
-          <Text as="h1" variant="h1" textColor="black">
+    <div className="bg-[#0a0d0c]">
+      <section className="border-b border-white/10 py-16 md:py-24">
+        <Container size="narrow" className="flex flex-col items-center gap-4 text-center">
+          <h1 className="font-blog text-[40px] font-bold leading-[112%] tracking-tight text-white md:text-[56px]">
             The NeevCloud Blog
-          </Text>
-          <Text as="p" textColor="black/60" className="max-w-[640px]">
+          </h1>
+          <Text as="p" textColor="white/60">
             Engineering notes, product updates, and guides on running AI workloads at scale.
           </Text>
         </Container>
       </section>
 
-      {featured.length > 0 && (
-        <section className="py-12 md:py-16">
-          <Container className="flex flex-col gap-6">
-            <Text as="h2" variant="h4" weight="semibold" textColor="black">
-              Featured
-            </Text>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              {featured.map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
-            </div>
-          </Container>
-        </section>
-      )}
-
       <section className="pb-16 md:pb-24">
-        <Container className="flex flex-col gap-6">
-          <Text as="h2" variant="h4" weight="semibold" textColor="black">
-            Latest
-          </Text>
+        <Container>
           {posts.length > 0 ? (
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
-                <BlogCard key={post.slug} post={post} />
+                <BlogCard key={post.slug} post={post} variant="tile" />
               ))}
             </div>
           ) : (
-            <Text as="p" textColor="black/60">
+            <Text as="p" textColor="white/60" className="py-16 text-center">
               New posts are on the way.
             </Text>
           )}

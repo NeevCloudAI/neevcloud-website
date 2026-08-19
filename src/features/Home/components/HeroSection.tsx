@@ -38,7 +38,7 @@ export default function HeroSection() {
                 weight={"normal"}
                 className="mx-0 md:mx-0 md:text-[64px] lg:text-[74px]"
               >
-                AI Native SuperCloud
+                AI SuperCloud
               </Text>
             </Text>
             <p

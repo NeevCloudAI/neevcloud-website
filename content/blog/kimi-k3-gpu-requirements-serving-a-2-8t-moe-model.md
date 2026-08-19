@@ -111,7 +111,7 @@ This is the 160GB margin made concrete. Fits on paper if you misread it as 1.4TB
 
 These are the working topologies. Pick by what silicon you can actually get.
 
-* **8x B300, single node (2,304GB):** The cleanest option. Native FP4 support, 2,304GB holds the 1.56TB checkpoint with room for cache. vLLM day-0 guidance floors K3 at one 8x B300 node ([Runpod](https://www.runpod.io/articles/guides/kimi-k3-technical-faq)).
+* **8x B300, single node (2,304GB):** The cleanest option. Native FP4 support, and at [288GB of HBM3e per Blackwell Ultra card](https://blog.neevcloud.com/nvidia-b300-gpu-for-ai-inference-specs-and-pricing/), 2,304GB holds the 1.56TB checkpoint with room for cache. vLLM day-0 guidance floors K3 at one 8x B300 node ([Runpod](https://www.runpod.io/articles/guides/kimi-k3-technical-faq)).
 * **16x B200, two nodes (3,072GB):** The standard Blackwell fallback when B300 supply is tight. Needs high-bandwidth interconnect between nodes ([Runpod](https://www.runpod.io/articles/guides/kimi-k3-technical-faq)).
 * **32x H200, four nodes (4,512GB):** The Hopper route, using W4A16 dequantization. More GPUs, more interconnect, but H200 supply is deep ([Spheron](https://www.spheron.network/blog/deploy-kimi-k3-gpu-cloud/)).
 * **GB200 NVL72:** For production scale, the rack links 72 Blackwell GPUs and 36 Grace CPUs with 13.4TB of HBM3e and 130 TB/s of NVLink ([NVIDIA](https://www.nvidia.com/en-us/data-center/gb200-nvl72/)). One coherent fabric for the whole model plus heavy concurrency.

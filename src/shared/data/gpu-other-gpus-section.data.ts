@@ -87,17 +87,6 @@ export const GPU_OTHER_GPUS_CATALOG_A100: readonly GpuOtherGpuCard[] = [
       comparisonMultiplierLabel: "1.8x",
     },
   },
-  {
-    id: "nvidia-rtx-3090",
-    title: "Nvidia RTX 3090",
-    description:
-      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
-    flipDetails: {
-      baselineMultiplierLabel: "2x",
-      comparisonCardName: "RTX 3090",
-      comparisonMultiplierLabel: "1.2x",
-    },
-  },
 ];
 
 export const GPU_OTHER_GPUS_CATALOG_A30: readonly GpuOtherGpuCard[] = [
@@ -192,18 +181,6 @@ export const GPU_OTHER_GPUS_CATALOG_A30: readonly GpuOtherGpuCard[] = [
       baselineMultiplierLabel: "2x",
       comparisonCardName: "RTX 5090",
       comparisonMultiplierLabel: "3.2x",
-    },
-  },
-  {
-    id: "nvidia-rtx-3090",
-    title: "Nvidia RTX 3090",
-    description:
-      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
-    flipDetails: {
-      baselineCardName: "A30",
-      baselineMultiplierLabel: "2x",
-      comparisonCardName: "RTX 3090",
-      comparisonMultiplierLabel: "2.1x",
     },
   },
 ];
@@ -302,18 +279,6 @@ export const GPU_OTHER_GPUS_CATALOG_B200: readonly GpuOtherGpuCard[] = [
       comparisonMultiplierLabel: "1.2x",
     },
   },
-  {
-    id: "nvidia-rtx-3090",
-    title: "Nvidia RTX 3090",
-    description:
-      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
-    flipDetails: {
-      baselineCardName: "B200",
-      baselineMultiplierLabel: "2x",
-      comparisonCardName: "RTX 3090",
-      comparisonMultiplierLabel: "0.8x",
-    },
-  },
 ];
 
 export const GPU_OTHER_GPUS_CATALOG_B300: readonly GpuOtherGpuCard[] = [
@@ -408,18 +373,6 @@ export const GPU_OTHER_GPUS_CATALOG_B300: readonly GpuOtherGpuCard[] = [
       baselineMultiplierLabel: "2x",
       comparisonCardName: "RTX 5090",
       comparisonMultiplierLabel: "1.2x",
-    },
-  },
-  {
-    id: "nvidia-rtx-3090",
-    title: "Nvidia RTX 3090",
-    description:
-      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
-    flipDetails: {
-      baselineCardName: "B300",
-      baselineMultiplierLabel: "2x",
-      comparisonCardName: "RTX 3090",
-      comparisonMultiplierLabel: "0.8x",
     },
   },
 ];
@@ -519,18 +472,6 @@ export const GPU_OTHER_GPUS_CATALOG_H200: readonly GpuOtherGpuCard[] = [
       comparisonMultiplierLabel: "0.65x",
     },
   },
-  {
-    id: "nvidia-rtx-3090",
-    title: "Nvidia RTX 3090",
-    description:
-      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
-    flipDetails: {
-      baselineCardName: "H200",
-      baselineMultiplierLabel: "2x",
-      comparisonCardName: "RTX 3090",
-      comparisonMultiplierLabel: "0.4x",
-    },
-  },
 ];
 
 export const GPU_OTHER_GPUS_CATALOG_H100: readonly GpuOtherGpuCard[] = [
@@ -628,22 +569,7 @@ export const GPU_OTHER_GPUS_CATALOG_H100: readonly GpuOtherGpuCard[] = [
       comparisonMultiplierLabel: "0.35x",
     },
   },
-  {
-    id: "nvidia-rtx-3090",
-    title: "Nvidia RTX 3090",
-    description:
-      "Nvidia RTX 3090 GPU for high-fidelity rendering, deep learning prototyping.",
-    flipDetails: {
-      baselineCardName: "H100",
-      baselineMultiplierLabel: "2x",
-      comparisonCardName: "RTX 3090",
-      comparisonMultiplierLabel: "0.3x",
-    },
-  },
 ];
-
-export const GPU_OTHER_GPUS_CATALOG_RTX_3090: readonly GpuOtherGpuCard[] =
-  GPU_OTHER_GPUS_CATALOG_H100;
 
 export const GPU_OTHER_GPUS_CATALOG_RTX_5090: readonly GpuOtherGpuCard[] =
   GPU_OTHER_GPUS_CATALOG_H100;
@@ -673,7 +599,6 @@ export const GPU_OTHER_GPUS_CATALOG_BY_PAGE: Record<
   "nvidia-h100": GPU_OTHER_GPUS_CATALOG_H100,
   "nvidia-h200": GPU_OTHER_GPUS_CATALOG_H200,
   "nvidia-nvl72": GPU_OTHER_GPUS_CATALOG_NVL72,
-  "nvidia-rtx-3090": GPU_OTHER_GPUS_CATALOG_RTX_3090,
   "nvidia-rtx-5090": GPU_OTHER_GPUS_CATALOG_RTX_5090,
   "nvidia-teslat4": GPU_OTHER_GPUS_CATALOG_TESLA_T4,
 };

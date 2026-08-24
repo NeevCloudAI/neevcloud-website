@@ -166,6 +166,11 @@ const NAV_ITEMS: NavItem[] = [
             href: "/gpu-ai-service",
             icon: RiServerLine,
           },
+          {
+            label: "AI Supercluster",
+            href: "/ai-superclusters",
+            icon: RiNodeTree,
+          },
           { label: "CPU Instance", href: "/cpu-cluster", icon: RiCpuChipLine },
           {
             label: "Managed Kubernetes",
@@ -182,11 +187,6 @@ const NAV_ITEMS: NavItem[] = [
             label: "Agentic Studio",
             href: "/agentic-studio",
             icon: RiRobot2Line,
-          },
-          {
-            label: "AI Superclusters",
-            href: "/ai-superclusters",
-            icon: RiNodeTree,
           },
         ],
       },
@@ -213,26 +213,6 @@ const NAV_ITEMS: NavItem[] = [
             href: "/nvidia-a30",
             icon: RiCpuLine,
           },
-        ],
-      },
-      {
-        heading: "Storage",
-        links: [
-          {
-            label: "High-Performance NVMe",
-            href: "/nvme",
-            icon: RiHardDrive2Line,
-          },
-          {
-            label: "Object Storage",
-            href: "/object-storage",
-            icon: RiDatabase2Line,
-          },
-        ],
-      },
-      {
-        heading: "Upcoming",
-        links: [
           {
             label: "H100",
             href: "/nvidia-h100",
@@ -256,6 +236,21 @@ const NAV_ITEMS: NavItem[] = [
             href: "/amd-mi300x",
             icon: RiCpuLine,
             soon: true,
+          },
+        ],
+      },
+      {
+        heading: "Storage",
+        links: [
+          {
+            label: "High-Performance NVMe",
+            href: "/nvme",
+            icon: RiHardDrive2Line,
+          },
+          {
+            label: "Object Storage",
+            href: "/object-storage",
+            icon: RiDatabase2Line,
           },
         ],
       },
@@ -371,7 +366,12 @@ const NAV_ITEMS: NavItem[] = [
         links: [
           { label: "Newsroom", href: "/newsroom", icon: RiNewspaperLine },
           { label: "Events", href: "/events", icon: RiCalendarEventLine },
-          { label: "Blogs", href: "/blog", icon: RiArticleLine },
+          {
+            label: "Blogs",
+            href: EXTERNAL_LINKS.blogs,
+            target: "_blank",
+            icon: RiArticleLine,
+          },
           {
             label: "Contact Us",
             href: "/contact-neevcloud",
@@ -773,6 +773,7 @@ export default function HeaderComponent() {
                               <Link
                                 key={sub.label}
                                 href={sub.href}
+                                target={sub.target}
                                 aria-current={
                                   sub.href === pathname ? "page" : undefined
                                 }

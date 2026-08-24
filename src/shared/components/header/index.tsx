@@ -183,6 +183,11 @@ const NAV_ITEMS: NavItem[] = [
             href: "/agentic-studio",
             icon: RiRobot2Line,
           },
+          {
+            label: "AI Superclusters",
+            href: "/ai-superclusters",
+            icon: RiNodeTree,
+          },
         ],
       },
       {
@@ -229,13 +234,6 @@ const NAV_ITEMS: NavItem[] = [
         heading: "Upcoming",
         links: [
           {
-            label: "Serverless GPU",
-            href: "#",
-            icon: RiCloudLine,
-            soon: true,
-          },
-          { label: "GPU Cluster", href: "#", icon: RiNodeTree, soon: true },
-          {
             label: "H100",
             href: "/nvidia-h100",
             icon: RiCpuLine,
@@ -244,6 +242,18 @@ const NAV_ITEMS: NavItem[] = [
           {
             label: "H200",
             href: "/nvidia-h200",
+            icon: RiCpuLine,
+            soon: true,
+          },
+          {
+            label: "B300",
+            href: "/nvidia-b300",
+            icon: RiCpuLine,
+            soon: true,
+          },
+          {
+            label: "MI300X",
+            href: "/amd-mi300x",
             icon: RiCpuLine,
             soon: true,
           },
@@ -537,41 +547,25 @@ export default function HeaderComponent() {
                                   {group.heading}
                                 </p>
                               )}
-                              {group.links.map((sub) =>
-                                sub.soon ? (
-                                  <div
-                                    key={sub.label}
-                                    aria-disabled="true"
-                                    className="flex cursor-default items-center justify-between gap-4 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] text-white/50"
-                                  >
-                                    <span className="flex items-center gap-2.5">
-                                      {sub.icon && (
-                                        <sub.icon
-                                          size={15}
-                                          aria-hidden
-                                          className="shrink-0 text-white/30"
-                                        />
-                                      )}
-                                      {sub.label}
-                                    </span>
-                                    <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
-                                      Soon
-                                    </span>
-                                  </div>
-                                ) : (
-                                  <Link
-                                    key={sub.label}
-                                    href={sub.href}
-                                    target={sub.target}
-                                    tabIndex={openNav === item.label ? 0 : -1}
-                                    aria-current={sub.href === pathname ? "page" : undefined}
-                                    onClick={() => setOpenNav(null)}
-                                    className={cn(
-                                      "flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] transition-colors hover:bg-white/10 hover:text-white",
-                                      sub.href === pathname ? "text-white" : "text-white/90",
-                                      FOCUS_RING,
-                                    )}
-                                  >
+                              {group.links.map((sub) => (
+                                <Link
+                                  key={sub.label}
+                                  href={sub.href}
+                                  target={sub.target}
+                                  tabIndex={openNav === item.label ? 0 : -1}
+                                  aria-current={
+                                    sub.href === pathname ? "page" : undefined
+                                  }
+                                  onClick={() => setOpenNav(null)}
+                                  className={cn(
+                                    "flex items-center justify-between gap-4 whitespace-nowrap rounded-lg px-3 py-1.5 text-[14px] font-normal leading-5 tracking-[-0.02em] transition-colors hover:bg-white/10 hover:text-white",
+                                    sub.href === pathname
+                                      ? "text-white"
+                                      : "text-white/90",
+                                    FOCUS_RING,
+                                  )}
+                                >
+                                  <span className="flex items-center gap-2.5">
                                     {sub.icon && (
                                       <sub.icon
                                         size={15}
@@ -580,9 +574,14 @@ export default function HeaderComponent() {
                                       />
                                     )}
                                     {sub.label}
-                                  </Link>
-                                ),
-                              )}
+                                  </span>
+                                  {sub.soon && (
+                                    <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
+                                      Soon
+                                    </span>
+                                  )}
+                                </Link>
+                              ))}
                             </div>
                           ))}
                         </div>
@@ -701,7 +700,10 @@ export default function HeaderComponent() {
                 type="button"
                 aria-label="Close menu"
                 onClick={() => setIsOpen(false)}
-                className={cn("grid size-11 place-items-center text-white", FOCUS_RING)}
+                className={cn(
+                  "grid size-11 place-items-center text-white",
+                  FOCUS_RING,
+                )}
               >
                 {/* simple X */}
                 <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>
@@ -767,39 +769,23 @@ export default function HeaderComponent() {
                                 {group.heading}
                               </p>
                             )}
-                            {group.links.map((sub) =>
-                              sub.soon ? (
-                                <div
-                                  key={sub.label}
-                                  aria-disabled="true"
-                                  className="flex items-center justify-between gap-4 py-2 pl-4 pr-2 text-[16px] text-white/40"
-                                >
-                                  <span className="flex items-center gap-2.5">
-                                    {sub.icon && (
-                                      <sub.icon
-                                        size={16}
-                                        aria-hidden
-                                        className="shrink-0 text-white/25"
-                                      />
-                                    )}
-                                    {sub.label}
-                                  </span>
-                                  <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
-                                    Soon
-                                  </span>
-                                </div>
-                              ) : (
-                                <Link
-                                  key={sub.label}
-                                  href={sub.href}
-                                  aria-current={sub.href === pathname ? "page" : undefined}
-                                  onClick={() => setIsOpen(false)}
-                                  className={cn(
-                                    "flex items-center gap-2.5 py-2 pl-4 text-[16px]",
-                                    sub.href === pathname ? "text-neev-green" : "text-white/70",
-                                    FOCUS_RING,
-                                  )}
-                                >
+                            {group.links.map((sub) => (
+                              <Link
+                                key={sub.label}
+                                href={sub.href}
+                                aria-current={
+                                  sub.href === pathname ? "page" : undefined
+                                }
+                                onClick={() => setIsOpen(false)}
+                                className={cn(
+                                  "flex items-center justify-between gap-4 py-2 pl-4 pr-2 text-[16px]",
+                                  sub.href === pathname
+                                    ? "text-neev-green"
+                                    : "text-white/70",
+                                  FOCUS_RING,
+                                )}
+                              >
+                                <span className="flex items-center gap-2.5">
                                   {sub.icon && (
                                     <sub.icon
                                       size={16}
@@ -808,9 +794,14 @@ export default function HeaderComponent() {
                                     />
                                   )}
                                   {sub.label}
-                                </Link>
-                              ),
-                            )}
+                                </span>
+                                {sub.soon && (
+                                  <span className="rounded-full bg-neev-green/15 px-2 py-0.5 text-[11px] font-medium tracking-[-0.01em] text-neev-green">
+                                    Soon
+                                  </span>
+                                )}
+                              </Link>
+                            ))}
                           </div>
                         ))}
                       </div>

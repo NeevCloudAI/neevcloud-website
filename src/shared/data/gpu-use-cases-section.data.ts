@@ -485,3 +485,46 @@ export const NVIDIA_NVL72_USE_CASES_SECTION: GpuUseCasesSectionContent = {
     },
   ],
 };
+
+export const AMD_MI300X_USE_CASES_SECTION: GpuUseCasesSectionContent = {
+  titlePrefix: "Use Cases of",
+  titleHighlight: "AMD MI300X",
+  cards: [
+    {
+      id: "unified-multi-node-orchestration",
+      title: "Unified Multi-Node Model Orchestration",
+      // TODO: placeholder image — swap for the real AMD MI300X asset.
+      imageSrc: "/images/webp/cost-effective-ai-inference.webp",
+      imageAlt: "Unified multi-node model orchestration on AMD MI300X",
+      description:
+        "Coordinate and run a single AI model seamlessly across multiple tightly coupled GPUs as if operating on one system. MI300X's AMD Infinity Fabric enables synchronized compute and memory sharing across GPUs, eliminating fragmentation and unlocking true system-level performance.",
+    },
+    {
+      id: "high-concurrency-inference",
+      title: "Inference for High-Concurrency Applications",
+      // TODO: placeholder image — swap for the real AMD MI300X asset.
+      imageSrc: "/images/webp/intelligent-video-analytics.webp",
+      imageAlt: "High-concurrency inference applications on AMD MI300X",
+      description:
+        "Support millions of simultaneous inference requests with consistent performance under heavy load. Designed for environments where uptime and responsiveness are critical, MI300X ensures stable, high-throughput execution even during peak demand.",
+    },
+    {
+      id: "memory-intensive-model-execution",
+      title: "Memory-Intensive Model Execution",
+      // TODO: placeholder image — swap for the real AMD MI300X asset.
+      imageSrc: "/images/webp/virtual-desktop-vdi.webp",
+      imageAlt: "Memory-intensive model execution on AMD MI300X",
+      description:
+        "Run extremely large models that exceed the limits of most GPUs by leveraging MI300X's 192GB of HBM3 memory. MI300X allows enterprises to execute larger, more sophisticated models without performance degradation.",
+    },
+    {
+      id: "cross-node-data-synchronization",
+      title: "High-Speed Cross-Node Data Synchronization",
+      // TODO: placeholder image — swap for the real AMD MI300X asset.
+      imageSrc: "/images/webp/cloud-gaming-streaming.webp",
+      imageAlt: "High-speed cross-node data synchronization on AMD MI300X",
+      description:
+        "Enable real-time data exchange across distributed compute nodes with minimal latency. MI300X is optimized for workloads that depend on rapid synchronization, such as iterative model updates, parallel processing, and continuous data streaming.",
+    },
+  ],
+};

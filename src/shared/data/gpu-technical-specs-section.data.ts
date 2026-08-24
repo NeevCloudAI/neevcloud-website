@@ -1222,3 +1222,37 @@ export const NVIDIA_NVL72_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionConte
       },
     ],
   };
+
+export const AMD_MI300X_TECHNICAL_SPECS_SECTION: GpuTechnicalSpecsSectionContent =
+  {
+    buttonCta: "Reserve Now",
+    buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+    buttonTarget: "_blank",
+    rows: [
+      {
+        id: "architecture",
+        feature: "Architecture",
+        specification: "AMD CDNA 3 Architecture",
+      },
+      {
+        id: "configuration",
+        feature: "Configuration",
+        specification: "Instinct MI300X Accelerator",
+      },
+      {
+        id: "gpu-interconnect",
+        feature: "GPU Interconnect",
+        specification: "AMD Infinity Fabric",
+      },
+      {
+        id: "performance",
+        feature: "Performance",
+        specification: "High-performance AI training & inference",
+      },
+      {
+        id: "deployment",
+        feature: "Deployment",
+        specification: "Large-scale AI clusters & datacenters",
+      },
+    ],
+  };

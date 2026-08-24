@@ -442,3 +442,47 @@ export const NVIDIA_H100_FAQ: readonly FaqItem[] = [
       "Yes. Reserved plans available for 3, 6, or 12 month commitments with significant discounts. Contact sales for custom enterprise pricing and multi-GPU cluster rates.",
   },
 ] as const;
+
+export const AMD_MI300X_FAQ: readonly FaqItem[] = [
+  {
+    id: 1,
+    category: "Overview",
+    question: "What is AMD MI300X designed for?",
+    answer:
+      "It is designed for large-scale AI training and inference across hyperscale environments.",
+  },
+  {
+    id: 2,
+    category: "Overview",
+    question: "What architecture powers AMD MI300X?",
+    answer: "It is based on AMD CDNA 3 architecture.",
+  },
+  {
+    id: 3,
+    category: "Infrastructure",
+    question: "How does AMD MI300X enable scalability?",
+    answer:
+      "It uses high-speed AMD Infinity Fabric interconnect to support large, distributed GPU clusters.",
+  },
+  {
+    id: 4,
+    category: "Infrastructure",
+    question: "Is AMD MI300X suitable for AI datacenters?",
+    answer:
+      "Yes, it is optimized for AI factories and next-generation datacenters.",
+  },
+  {
+    id: 5,
+    category: "Use Cases",
+    question: "What type of workloads can it handle?",
+    answer:
+      "It supports high-performance AI workloads, including training and inference.",
+  },
+  {
+    id: 6,
+    category: "Overview",
+    question: "How does the AMD MI300X compare to other data center GPUs?",
+    answer:
+      "The AMD MI300X outperforms traditional data center GPUs with higher memory capacity, faster processing, and better efficiency. Its advanced architecture delivers improved scalability and a more cost-effective price for large workloads.",
+  },
+] as const;

@@ -127,7 +127,7 @@ export const NVIDIA_NVL72_FOOTER_SECTION: GpuFooterSectionContent = {
   titleHighlight: "NVIDIA GB200 NVL72",
   titleSuffix: "Redefining HPC and AI Workloads",
   description:
-    "Leveraging the NVIDIA Blackwell Cloud GPU architecture, HGX B200 can handle diverse workloads, including large language models, recommender systems, and chatbots making it ideal for businesses looking to accelerate their AI transformation.",
+    "Leveraging the NVIDIA Blackwell Cloud GPU architecture, GB200 NVL72 can handle diverse workloads, including large language models, recommender systems, and chatbots making it ideal for businesses looking to accelerate their AI transformation.",
   buttonCta: "Reserve Now",
   buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
   buttonTarget: "_blank",
@@ -140,6 +140,18 @@ export const NVIDIA_H100_FOOTER_SECTION: GpuFooterSectionContent = {
   titleSuffix: "The Next Generation of AI Computing Power",
   description:
     "NeevCloud is proud to offer the latest and greatest in GPU cloud hosting power - the NVIDIA H100 Tensor Core GPU. Built with advanced AI capabilities, the H100 delivers incredible performance for machine learning, data analytics, and scientific computing workloads.",
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
+};
+
+export const AMD_MI300X_FOOTER_SECTION: GpuFooterSectionContent = {
+  gpuName: "MI300X",
+  titlePrefix: "",
+  titleHighlight: "AMD MI300X",
+  titleSuffix: "Redefining HPC and AI Workloads",
+  description:
+    "Leveraging AMD's CDNA 3 architecture, MI300X can handle diverse workloads, including large language models, recommender systems, and chatbots, making it ideal for businesses looking to accelerate their AI transformation.",
   buttonCta: "Reserve Now",
   buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
   buttonTarget: "_blank",

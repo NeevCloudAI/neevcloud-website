@@ -215,3 +215,21 @@ export const NVIDIA_NVL72_HERO: GpuHeroSectionContent = {
   pricingAmount: "$5.00/GPU/h.",
   pricingFooter: "No credit card required · Deploy in 60 seconds",
 };
+
+export const AMD_MI300X_HERO: GpuHeroSectionContent = {
+  badgeText: "AMD Instinct MI300X",
+  titlePrefix: "Driving Next-Gen AI Infra with",
+  titleHighlight: "AMD MI300X",
+  titleSuffix: "",
+  description:
+    "AMD MI300X is built to power massive AI workloads with breakthrough performance, enabling enterprises to scale training and inference across large, memory-intensive GPU deployments. For those reviewing MI300X specs, the platform offers CDNA 3 architecture, industry-leading memory capacity, and enterprise-grade efficiency at competitive prices. Compared to traditional AI servers, it delivers superior scalability, higher memory bandwidth, and advanced architecture—making it a more efficient choice for next-generation AI platforms, especially for those evaluating MI300X specs and pricing.",
+  bulletPoints: [
+    "Massive-Scale AI Compute: Designed to support large-scale AI training and inference workloads with high-performance GPU architecture",
+    "High-Speed Interconnect: AMD Infinity Fabric connectivity enables seamless communication across GPUs for distributed computing",
+    "Optimized for AI Factories: Built for next-generation AI data centers handling complex, high-throughput workloads",
+  ],
+  features: ["40% Lower Than Others", "Sub-15ms Latency", "100% India-Hosted"],
+  pricingPrefix: "Pricing start at",
+  pricingAmount: "$5.00/GPU/h.",
+  pricingFooter: "No credit card required · Deploy in 60 seconds",
+};

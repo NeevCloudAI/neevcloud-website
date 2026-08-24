@@ -411,3 +411,35 @@ export const NVIDIA_NVL72_CHOOSE_SECTION: GpuChooseSectionContent = {
     "// reserved plans bill for full window · run `gpu calc <sku> --hours=N` to estimate",
   terminalAriaLabel: "Nvidia GB200 NVL72 pricing terminal",
 };
+
+export const AMD_MI300X_CHOOSE_SECTION: GpuChooseSectionContent = {
+  titlePrefix: "Choose Your",
+  titleHighlight: "AMD MI300X Configuration",
+  description:
+    "Fully-integrated pricing optimized for the most demanding LLM training and inference workloads.",
+  terminalTitle: "~ amd-mi300x-pricing - bash - 80x24",
+  pricingCommand: "> --pricing --currency=INR",
+  pricingComment: "// sorted by hourly rate",
+  tableHeaders: [
+    "sku",
+    "hourly",
+    "3-months commitment",
+    "6-months commitment",
+    "1-year commitment",
+  ],
+  rows: [
+    {
+      id: "amd-mi300x",
+      sku: "AMD Instinct MI300X",
+      skuSubtitle: "(Location - Global)",
+      hourly: "₹48.60",
+      threeMonthPrice: "₹48.60",
+      threeMonthSavings: "save upto 2%",
+      sixMonthCommitment: "Based upon availability",
+      oneYearCommitment: "Based upon availability",
+    },
+  ],
+  footerComment:
+    "// reserved plans bill for full window · run `gpu calc <sku> --hours=N` to estimate",
+  terminalAriaLabel: "AMD Instinct MI300X pricing terminal",
+};

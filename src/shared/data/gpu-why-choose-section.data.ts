@@ -557,3 +557,42 @@ export const NVIDIA_NVL72_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
   imageSrc: "/images/webp/nvidia-b200-gpu.webp",
   imageAlt: "NVIDIA GB200 NVL72",
 };
+
+export const AMD_MI300X_WHY_CHOOSE_SECTION: GpuWhyChooseSectionContent = {
+  titlePrefix: "Accelerate Your AI Journey with",
+  titleHighlight: "AMD MI300X",
+  titleSuffix: "",
+  description:
+    "An AI Accelerator for the Era of Generative Intelligence. Built on AMD CDNA 3 architecture, MI300X delivers industry-leading memory capacity for hyperscale AI training, inference, and next-generation datacenter workloads.",
+  features: [
+    {
+      id: "extreme-ai-performance",
+      title: "Extreme AI Performance:",
+      description:
+        "Built for demanding AI workloads requiring high compute density and efficiency.",
+    },
+    {
+      id: "advanced-architecture",
+      title: "Advanced Architecture:",
+      description:
+        "Combines CDNA 3 compute with 192GB of HBM3 memory for faster processing.",
+    },
+    {
+      id: "high-throughput",
+      title: "High Throughput:",
+      description:
+        "Enables faster model training and inference across large datasets.",
+    },
+    {
+      id: "scalable-infrastructure",
+      title: "Scalable Infrastructure:",
+      description:
+        "Designed to support large AI clusters and hyperscale deployments.",
+    },
+  ],
+  buttonCta: "Reserve Now",
+  buttonLink: EXTERNAL_LINKS.aiSupercloudConsole,
+  buttonTarget: "_blank",
+  imageSrc: "/images/webp/amd-mi300x.webp",
+  imageAlt: "AMD Instinct MI300X placeholder image",
+};

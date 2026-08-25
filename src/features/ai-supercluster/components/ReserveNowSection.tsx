@@ -1,7 +1,7 @@
 import Container from "@/shared/components/container";
 import { LinkComponent, Text } from "@/shared/ui-lib";
 import { SquareCheck } from "@/shared/icons/lucide-icon-map";
-import { AI_SUPERCLUSTERS_CALENDLY_URL } from "../constants/ai-superclusters-page.constants";
+import { AI_SUPERCLUSTER_CALENDLY_URL } from "../constants/ai-supercluster-page.constants";
 
 const RESERVE_NOW_POINTS = [
   {
@@ -51,7 +51,7 @@ const ReserveNowSection = () => {
           </div>
 
           <LinkComponent
-            href={AI_SUPERCLUSTERS_CALENDLY_URL}
+            href={AI_SUPERCLUSTER_CALENDLY_URL}
             target="_blank"
             size="full"
             className="mt-6 text-center"

@@ -243,7 +243,7 @@ export const NVIDIA_RTX_5090_FAQ: readonly FaqItem[] = [
     category: "Infrastructure",
     question: "Can I deploy GPU clusters for research?",
     answer:
-      "Yes. NeevCloud supports RTX 5090 clusters and AI superclusters for training and enterprise AI.",
+      "Yes. NeevCloud supports RTX 5090 clusters and AI supercluster for training and enterprise AI.",
   },
   {
     id: 5,

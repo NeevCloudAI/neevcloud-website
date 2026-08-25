@@ -4,31 +4,31 @@ import { type CSSProperties, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Text } from "@/shared/ui-lib";
 import {
-  AI_SUPERCLUSTERS_DEFAULT_DURATION_ID,
-  AI_SUPERCLUSTERS_DEFAULT_GPU_ID,
-  AI_SUPERCLUSTERS_DEFAULT_INTERCONNECT_ID,
-  AI_SUPERCLUSTERS_DEFAULT_NODES,
-  AI_SUPERCLUSTERS_DEFAULT_STORAGE_ID,
-  AI_SUPERCLUSTERS_DURATIONS,
-  AI_SUPERCLUSTERS_GPU_TYPES,
-  AI_SUPERCLUSTERS_INTERCONNECTS,
-  AI_SUPERCLUSTERS_STORAGE_OPTIONS,
+  AI_SUPERCLUSTER_DEFAULT_DURATION_ID,
+  AI_SUPERCLUSTER_DEFAULT_GPU_ID,
+  AI_SUPERCLUSTER_DEFAULT_INTERCONNECT_ID,
+  AI_SUPERCLUSTER_DEFAULT_NODES,
+  AI_SUPERCLUSTER_DEFAULT_STORAGE_ID,
+  AI_SUPERCLUSTER_DURATIONS,
+  AI_SUPERCLUSTER_GPU_TYPES,
+  AI_SUPERCLUSTER_INTERCONNECTS,
+  AI_SUPERCLUSTER_STORAGE_OPTIONS,
 } from "../../data/configurator.data";
-import type { AiSuperclustersConfig } from "../../types/ai-superclusters.types";
+import type { AiSuperclusterConfig } from "../../types/ai-supercluster.types";
 import {
   buildConfigSummary,
   getGpuTotal,
   nodesToSlider,
   sliderToNodes,
-} from "../../utils/ai-superclusters-configurator-utils";
-import AiSuperclustersHubspotForm from "./AiSuperclustersHubspotForm";
+} from "../../utils/ai-supercluster-configurator-utils";
+import AiSuperclusterHubspotForm from "./AiSuperclusterHubspotForm";
 
-const DEFAULT_CONFIG: AiSuperclustersConfig = {
-  gpuId: AI_SUPERCLUSTERS_DEFAULT_GPU_ID,
-  nodes: AI_SUPERCLUSTERS_DEFAULT_NODES,
-  interconnectId: AI_SUPERCLUSTERS_DEFAULT_INTERCONNECT_ID,
-  storageId: AI_SUPERCLUSTERS_DEFAULT_STORAGE_ID,
-  durationId: AI_SUPERCLUSTERS_DEFAULT_DURATION_ID,
+const DEFAULT_CONFIG: AiSuperclusterConfig = {
+  gpuId: AI_SUPERCLUSTER_DEFAULT_GPU_ID,
+  nodes: AI_SUPERCLUSTER_DEFAULT_NODES,
+  interconnectId: AI_SUPERCLUSTER_DEFAULT_INTERCONNECT_ID,
+  storageId: AI_SUPERCLUSTER_DEFAULT_STORAGE_ID,
+  durationId: AI_SUPERCLUSTER_DEFAULT_DURATION_ID,
 };
 
 const chipClassName = (isActive: boolean) =>
@@ -39,8 +39,8 @@ const chipClassName = (isActive: boolean) =>
       : "border-white/12 bg-white/6 hover:border-primary",
   );
 
-export default function AiSuperclustersConfiguratorClient() {
-  const [config, setConfig] = useState<AiSuperclustersConfig>(DEFAULT_CONFIG);
+export default function AiSuperclusterConfiguratorClient() {
+  const [config, setConfig] = useState<AiSuperclusterConfig>(DEFAULT_CONFIG);
   const [view, setView] = useState<"config" | "form">("config");
 
   const gpuTotal = useMemo(() => getGpuTotal(config), [config]);
@@ -79,7 +79,7 @@ export default function AiSuperclustersConfiguratorClient() {
             Fill in your details — a NeevCloud GPU architect will respond within 4
             hours with your tailored cluster proposal.
           </Text>
-          <AiSuperclustersHubspotForm config={config} />
+          <AiSuperclusterHubspotForm config={config} />
         </div>
       </div>
     );
@@ -100,7 +100,7 @@ export default function AiSuperclustersConfiguratorClient() {
             1. GPU Type
           </Text>
           <div className="grid grid-cols-3 gap-1.5">
-            {AI_SUPERCLUSTERS_GPU_TYPES.map((gpuType) => (
+            {AI_SUPERCLUSTER_GPU_TYPES.map((gpuType) => (
               <button
                 key={gpuType.id}
                 type="button"
@@ -148,7 +148,7 @@ export default function AiSuperclustersConfiguratorClient() {
             3. Interconnect
           </Text>
           <div className="flex flex-col gap-1.5" role="group" aria-label="Interconnect">
-            {AI_SUPERCLUSTERS_INTERCONNECTS.map((option) => (
+            {AI_SUPERCLUSTER_INTERCONNECTS.map((option) => (
               <button
                 key={option.id}
                 type="button"
@@ -176,12 +176,12 @@ export default function AiSuperclustersConfiguratorClient() {
             onChange={(event) =>
               setConfig((prev) => ({
                 ...prev,
-                storageId: event.target.value as AiSuperclustersConfig["storageId"],
+                storageId: event.target.value as AiSuperclusterConfig["storageId"],
               }))
             }
             className="w-full rounded-md border border-white/12 bg-white/6 px-3 py-2.5 text-sm font-medium text-white cursor-pointer"
           >
-            {AI_SUPERCLUSTERS_STORAGE_OPTIONS.map((option) => (
+            {AI_SUPERCLUSTER_STORAGE_OPTIONS.map((option) => (
               <option key={option.id} value={option.id} className="text-black">
                 {option.label}
               </option>
@@ -194,7 +194,7 @@ export default function AiSuperclustersConfiguratorClient() {
             5. Duration
           </Text>
           <div className="grid grid-cols-5 gap-1.5">
-            {AI_SUPERCLUSTERS_DURATIONS.map((option) => (
+            {AI_SUPERCLUSTER_DURATIONS.map((option) => (
               <button
                 key={option.id}
                 type="button"

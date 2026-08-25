@@ -1,11 +1,11 @@
-import type { AiSuperclustersLineupItem } from "../types/ai-superclusters.types";
+import type { AiSuperclusterLineupItem } from "../types/ai-supercluster.types";
 
-export const AI_SUPERCLUSTERS_GPU_LINEUP: readonly AiSuperclustersLineupItem[] = [
+export const AI_SUPERCLUSTER_GPU_LINEUP: readonly AiSuperclusterLineupItem[] = [
   {
     id: "gb300",
     name: "GB300 NVL72",
     tier: "Flagship",
-    image: "/images/ai-superclusters/nvidia-gb300-nvl72.jpg",
+    image: "/images/ai-supercluster/nvidia-gb300-nvl72.jpg",
     badge: "NEW",
     availability: "Reserve now · Q2 2026",
     architecture: "Blackwell Ultra",
@@ -20,7 +20,7 @@ export const AI_SUPERCLUSTERS_GPU_LINEUP: readonly AiSuperclustersLineupItem[] =
     id: "gb200",
     name: "GB200 NVL72",
     tier: "Flagship",
-    image: "/images/ai-superclusters/nvidia-gb200-nvl72.jpg",
+    image: "/images/ai-supercluster/nvidia-gb200-nvl72.jpg",
     badge: "HOT",
     availability: "Reserve now · Q2 2026",
     architecture: "Blackwell",
@@ -35,7 +35,7 @@ export const AI_SUPERCLUSTERS_GPU_LINEUP: readonly AiSuperclustersLineupItem[] =
     id: "b300",
     name: "B300",
     tier: "Performance",
-    image: "/images/ai-superclusters/nvidia-b300.jpg",
+    image: "/images/ai-supercluster/nvidia-b300.jpg",
     availability: "Reserve now",
     architecture: "Blackwell Ultra",
     vram: "288 GB HBM3e",

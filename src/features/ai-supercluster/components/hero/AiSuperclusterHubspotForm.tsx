@@ -3,17 +3,17 @@
 import { Loader } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {
-  AI_SUPERCLUSTERS_DURATIONS,
-  AI_SUPERCLUSTERS_GPU_TYPES,
-  AI_SUPERCLUSTERS_INTERCONNECTS,
-  AI_SUPERCLUSTERS_STORAGE_OPTIONS,
+  AI_SUPERCLUSTER_DURATIONS,
+  AI_SUPERCLUSTER_GPU_TYPES,
+  AI_SUPERCLUSTER_INTERCONNECTS,
+  AI_SUPERCLUSTER_STORAGE_OPTIONS,
 } from "../../data/configurator.data";
-import type { AiSuperclustersConfig } from "../../types/ai-superclusters.types";
-import { getGpuTotal } from "../../utils/ai-superclusters-configurator-utils";
+import type { AiSuperclusterConfig } from "../../types/ai-supercluster.types";
+import { getGpuTotal } from "../../utils/ai-supercluster-configurator-utils";
 
 const SCRIPT_ID = "hubspot-forms-v2";
 const SCRIPT_SRC = "https://js-na2.hsforms.net/forms/embed/v2.js";
-const FORM_TARGET_ID = "ai-superclusters-hubspot-form";
+const FORM_TARGET_ID = "ai-supercluster-hubspot-form";
 const PORTAL_ID = "46035440";
 const FORM_ID = "8ab662a3-3491-4665-b9ec-7ceaafd3341f";
 const FIND_FORM_MAX_ATTEMPTS = 20;
@@ -68,18 +68,18 @@ function setExclusiveCheckbox(
 
 function applyConfigToForm(
   form: HTMLFormElement,
-  config: AiSuperclustersConfig,
+  config: AiSuperclusterConfig,
 ) {
-  const gpuType = AI_SUPERCLUSTERS_GPU_TYPES.find(
+  const gpuType = AI_SUPERCLUSTER_GPU_TYPES.find(
     (gpu) => gpu.id === config.gpuId,
   );
-  const interconnect = AI_SUPERCLUSTERS_INTERCONNECTS.find(
+  const interconnect = AI_SUPERCLUSTER_INTERCONNECTS.find(
     (option) => option.id === config.interconnectId,
   );
-  const storage = AI_SUPERCLUSTERS_STORAGE_OPTIONS.find(
+  const storage = AI_SUPERCLUSTER_STORAGE_OPTIONS.find(
     (option) => option.id === config.storageId,
   );
-  const duration = AI_SUPERCLUSTERS_DURATIONS.find(
+  const duration = AI_SUPERCLUSTER_DURATIONS.find(
     (option) => option.id === config.durationId,
   );
   if (!gpuType || !interconnect || !storage || !duration) return;
@@ -92,13 +92,13 @@ function applyConfigToForm(
   setDropdown(form, "commitment", duration.hubspotValue);
 }
 
-type AiSuperclustersHubspotFormProps = {
-  config: AiSuperclustersConfig;
+type AiSuperclusterHubspotFormProps = {
+  config: AiSuperclusterConfig;
 };
 
-export default function AiSuperclustersHubspotForm({
+export default function AiSuperclusterHubspotForm({
   config,
-}: AiSuperclustersHubspotFormProps) {
+}: AiSuperclusterHubspotFormProps) {
   const [isLoading, setIsLoading] = useState(true);
   const formElRef = useRef<HTMLFormElement | null>(null);
 

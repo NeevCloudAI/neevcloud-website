@@ -84,6 +84,11 @@ const nextConfig: NextConfig = {
       { source: "/deploy-avatar.php", destination: "/", permanent: true },
       { source: "/marketplace.html", destination: "/", permanent: true },
       {
+        source: "/ai-superclusters",
+        destination: "/ai-supercluster",
+        permanent: true,
+      },
+      {
         source: "/ai-supercloud.php",
         destination: "/why-ai-supercloud",
         permanent: true,

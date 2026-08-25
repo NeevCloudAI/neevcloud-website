@@ -1,11 +1,11 @@
-export type AiSuperclustersStep = {
+export type AiSuperclusterStep = {
   number: string;
   title: string;
   description: string;
   tag: string;
 };
 
-export const AI_SUPERCLUSTERS_STEPS: readonly AiSuperclustersStep[] = [
+export const AI_SUPERCLUSTER_STEPS: readonly AiSuperclusterStep[] = [
   {
     number: "01",
     title: "Configure",

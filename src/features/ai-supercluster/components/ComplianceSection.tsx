@@ -1,6 +1,6 @@
 import Container from "@/shared/components/container";
 import { Text } from "@/shared/ui-lib";
-import { AI_SUPERCLUSTERS_COMPLIANCE_TILES } from "../data/compliance.data";
+import { AI_SUPERCLUSTER_COMPLIANCE_TILES } from "../data/compliance.data";
 
 const ComplianceSection = () => {
   return (
@@ -24,7 +24,7 @@ const ComplianceSection = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-2.5">
-          {AI_SUPERCLUSTERS_COMPLIANCE_TILES.map((tile) => (
+          {AI_SUPERCLUSTER_COMPLIANCE_TILES.map((tile) => (
             <div
               key={tile.title}
               className="rounded-md border border-white/12 bg-white/6 p-4 backdrop-blur-md"

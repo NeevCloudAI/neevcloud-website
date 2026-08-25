@@ -12,7 +12,7 @@ export const GPU_WHY_CHOOSE_NEEVCLOUD_SECTION: GpuWhyChooseNeevcloudSectionConte
           title: "57% Savings on GPU Cloud",
           icon: "/icons/saving.svg",
           description:
-            "Achieve up to 57% lower total cost while accelerating machine learning with AI superclusters delivering predictable pricing, long-term efficiency, and consistently higher performance than traditional GPU cloud instances.",
+            "Achieve up to 57% lower total cost while accelerating machine learning with AI supercluster delivering predictable pricing, long-term efficiency, and consistently higher performance than traditional GPU cloud instances.",
         },
         {
           id: "support",

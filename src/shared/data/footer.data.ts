@@ -49,7 +49,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Product",
     links: [
       { label: "GPU AI Service", href: "/gpu-ai-service" },
-      { label: "AI Supercluster", href: "/ai-superclusters" },
+      { label: "AI Supercluster", href: "/ai-supercluster" },
       { label: "CPU Instance", href: "/cpu-cluster" },
       { label: "Managed Kubernetes", href: "/managed-kubernetes" },
       { label: "High-Performance NVMe", href: "/nvme" },

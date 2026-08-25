@@ -168,7 +168,7 @@ const NAV_ITEMS: NavItem[] = [
           },
           {
             label: "AI Supercluster",
-            href: "/ai-superclusters",
+            href: "/ai-supercluster",
             icon: RiNodeTree,
           },
           { label: "CPU Instance", href: "/cpu-cluster", icon: RiCpuChipLine },

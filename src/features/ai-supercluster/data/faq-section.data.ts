@@ -1,6 +1,6 @@
 import type { FaqItem } from "@/shared/data/faq-section-types";
 
-export const AI_SUPERCLUSTERS_FAQ_ITEMS: FaqItem[] = [
+export const AI_SUPERCLUSTER_FAQ_ITEMS: FaqItem[] = [
   {
     id: 1,
     category: "General",
@@ -11,9 +11,9 @@ export const AI_SUPERCLUSTERS_FAQ_ITEMS: FaqItem[] = [
   {
     id: 2,
     category: "General",
-    question: "Where are AI Superclusters deployed?",
+    question: "Where are AI Supercluster deployed?",
     answer:
-      "AI Superclusters are deployed at the NeevCloud AI Gigacampus in Raipur, Central India — a purpose-built facility designed for 1K–16K GPU superpods with liquid-cooled racks, renewable-backed power, and InfiniBand XDR fabric.",
+      "AI Supercluster are deployed at the NeevCloud AI Gigacampus in Raipur, Central India — a purpose-built facility designed for 1K–16K GPU superpods with liquid-cooled racks, renewable-backed power, and InfiniBand XDR fabric.",
   },
   {
     id: 3,

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { LinkComponent, Text } from "@/shared/ui-lib";
-import { AI_SUPERCLUSTERS_CALENDLY_URL } from "../../constants/ai-superclusters-page.constants";
-import type { AiSuperclustersLineupItem } from "../../types/ai-superclusters.types";
+import { AI_SUPERCLUSTER_CALENDLY_URL } from "../../constants/ai-supercluster-page.constants";
+import type { AiSuperclusterLineupItem } from "../../types/ai-supercluster.types";
 
 type GpuLineupCardProps = {
-  gpu: AiSuperclustersLineupItem;
+  gpu: AiSuperclusterLineupItem;
 };
 
 const GpuLineupCard = ({ gpu }: GpuLineupCardProps) => {
@@ -101,7 +101,7 @@ const GpuLineupCard = ({ gpu }: GpuLineupCardProps) => {
       </div>
 
       <LinkComponent
-        href={AI_SUPERCLUSTERS_CALENDLY_URL}
+        href={AI_SUPERCLUSTER_CALENDLY_URL}
         target="_blank"
         size="full"
         className="mt-5 text-center"

@@ -1,7 +1,7 @@
 import { Brain, Eye, FlaskConical, ImageIcon, ShieldCheck, Zap } from "@/shared/icons/lucide-icon-map";
 import type { FeatureCardProps } from "@/shared/components/feature-card";
 
-export const AI_SUPERCLUSTERS_USE_CASES: readonly FeatureCardProps[] = [
+export const AI_SUPERCLUSTER_USE_CASES: readonly FeatureCardProps[] = [
   {
     title: "Foundation Model Training",
     description:

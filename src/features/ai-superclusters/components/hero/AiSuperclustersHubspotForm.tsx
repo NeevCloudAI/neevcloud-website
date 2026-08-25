@@ -20,7 +20,9 @@ const FIND_FORM_MAX_ATTEMPTS = 20;
 const FIND_FORM_RETRY_MS = 250;
 
 function setDropdown(form: HTMLFormElement, name: string, matchValue: string) {
-  const select = form.querySelector<HTMLSelectElement>(`select[name="${name}"]`);
+  const select = form.querySelector<HTMLSelectElement>(
+    `select[name="${name}"]`,
+  );
   if (!select) return;
 
   const target = matchValue.toLowerCase().trim();
@@ -64,8 +66,13 @@ function setExclusiveCheckbox(
     });
 }
 
-function applyConfigToForm(form: HTMLFormElement, config: AiSuperclustersConfig) {
-  const gpuType = AI_SUPERCLUSTERS_GPU_TYPES.find((gpu) => gpu.id === config.gpuId);
+function applyConfigToForm(
+  form: HTMLFormElement,
+  config: AiSuperclustersConfig,
+) {
+  const gpuType = AI_SUPERCLUSTERS_GPU_TYPES.find(
+    (gpu) => gpu.id === config.gpuId,
+  );
   const interconnect = AI_SUPERCLUSTERS_INTERCONNECTS.find(
     (option) => option.id === config.interconnectId,
   );
@@ -160,7 +167,7 @@ export default function AiSuperclustersHubspotForm({
 
   return (
     <div className="relative min-h-[220px]">
-      {isLoading && (
+      {/* {isLoading && (
         <div
           className="absolute inset-0 flex items-center justify-center gap-2"
           aria-busy="true"
@@ -168,7 +175,7 @@ export default function AiSuperclustersHubspotForm({
           <Loader size={20} className="animate-spin text-primary" aria-hidden="true" />
           <span className="text-xs text-white/60">Loading form…</span>
         </div>
-      )}
+      )} */}
       <div id={FORM_TARGET_ID} />
     </div>
   );

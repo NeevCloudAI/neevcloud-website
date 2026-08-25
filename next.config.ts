@@ -74,6 +74,11 @@ const nextConfig: NextConfig = {
       },
       { source: "/news.php", destination: "/newsroom", permanent: true },
       {
+        source: "/india-AI-impact-summit-2026.php",
+        destination: "/events",
+        permanent: true,
+      },
+      {
         source: "/kubernetes.php",
         destination: "/managed-kubernetes",
         permanent: true,

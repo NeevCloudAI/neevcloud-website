@@ -6,7 +6,7 @@ import { EXTERNAL_LINKS } from "../constants/external-links.constants";
 export default function AnnouncementSection() {
   return (
     <section
-      className="p-2.5 text-black font-semibold flex flex-col md:flex-row items-center justify-center gap-1 bg-gray-01"
+      className="p-2.5 text-white font-semibold flex flex-col md:flex-row items-center justify-center gap-1 bg-primary"
       aria-label="Announcement"
     >
       <Text align="center">

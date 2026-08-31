@@ -60,7 +60,17 @@ const nextConfig: NextConfig = {
         destination: "/nvidia-gb200-nvl72",
         permanent: true,
       },
+      {
+        source: "/nvidia-nvl72",
+        destination: "/nvidia-gb200-nvl72",
+        permanent: true,
+      },
       { source: "/pricing.php", destination: "/gpu-pricing", permanent: true },
+      {
+        source: "/billing-guidelines.php",
+        destination: "/billing-guidelines",
+        permanent: true,
+      },
       { source: "/careers.php", destination: "/careers", permanent: true },
       {
         source: "/terms-and-conditions.php",

@@ -71,6 +71,11 @@ const nextConfig: NextConfig = {
         destination: "/billing-guidelines",
         permanent: true,
       },
+      {
+        source: "/billing-guidelines.phpi",
+        destination: "/billing-guidelines",
+        permanent: true,
+      },
       { source: "/careers.php", destination: "/careers", permanent: true },
       {
         source: "/terms-and-conditions.php",

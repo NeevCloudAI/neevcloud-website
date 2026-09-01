@@ -40,6 +40,19 @@ AI data center vs traditional data center is usually treated as a question of sc
 
 A traditional data center houses servers, storage, and networking to run many workloads predictably. An AI data center, often called an AI factory, is engineered around one output: models serving tokens. The building can look similar; the design constraints do not.
 
+| Dimension | Traditional data center | AI data center (AI factory) |
+|--|--|--|
+| Primary purpose | Run many mixed workloads predictably | Serve models and produce tokens |
+| Unit you sell | Capacity: VM, container, or rack, by time | Token production inside a latency target |
+| Scored on | Uptime, latency SLOs, cost per VM or container, PUE | Time-to-train, tokens per second, inference cost per outcome, GPU idle time |
+| Average rack power | ~17kW | 120 to 130kW (GB200 NVL72) |
+| Cooling method | Air, adequate to ~20kW | Direct-to-chip liquid, required past ~20kW |
+| GPU network | North-south Ethernet, client to server | East-west NVLink and InfiniBand between GPUs |
+
+Sources: [Solidigm](https://www.solidigm.com/products/technology/ai-factory-vs-data-center.html) for output and scoring metrics, [Network World](https://www.networkworld.com/article/4149069/why-ai-rack-densities-make-liquid-cooling-nonnegotiable.html) for rack power and cooling thresholds.
+
+Read down the columns and the pattern holds: each row where a traditional facility was tuned for predictable, mixed tenancy is a row an AI factory re-tunes for token output. The rest of this post takes the three physical rows, power, cooling, and network, then the economic one that ties them together.
+
 ### What Is an AI Factory Data Center?
 
 An AI factory is an integrated stack of hardware, software, and operational processes engineered to ingest and curate data, train and fine-tune models repeatedly, and serve them at scale ([Solidigm](https://www.solidigm.com/products/technology/ai-factory-vs-data-center.html)). A traditional data center, by contrast, is a general-purpose facility that houses servers, storage, and networking to run mixed workloads predictably ([Solidigm](https://www.solidigm.com/products/technology/ai-factory-vs-data-center.html)). The difference is the output. NVIDIA puts it plainly: in an AI factory, "intelligence isn't a byproduct but the primary one," measured by AI token throughput ([NVIDIA](https://blogs.nvidia.com/blog/ai-factory)). That output is getting more expensive to produce, too. Test-time reasoning, the long-thinking step behind modern agents, can consume up to 100x more compute than traditional inference ([NVIDIA](https://blogs.nvidia.com/blog/ai-factory)).
@@ -92,7 +105,7 @@ Clearing all three walls at once, power, cooling, and fabric, plus the serving s
 
 ### Full-Stack Build vs Repurposed Legacy Capacity
 
-NeevCloud's documentation describes building and controlling every layer of its infrastructure, from data centers to orchestration software ([NeevCloud docs](https://docs.ai.neevcloud.com/)). That stack is split across the group: RackBank Datacenters delivers the liquid-cooled, high-density facility and GPU capacity layer, and NeevCloud runs GPU compute and serving on top. The clusters are configured specifically for machine learning workloads, and the production inference endpoints add automatic scaling, monitoring, and load balancing ([NeevCloud docs](https://docs.ai.neevcloud.com/)). The result is purpose-built high-density capacity, not a retrofit built for sub-20kW racks.
+Group companies own the stack from the facility to the orchestration layer, which turns a density upgrade into an engineering decision rather than a vendor negotiation. RackBank Datacenters delivers the liquid-cooled, high-density facility and GPU capacity layer, and NeevCloud runs GPU compute and model serving on top of it. The clusters are configured specifically for machine learning workloads, and the production inference endpoints add automatic scaling, monitoring, and load balancing ([NeevCloud docs](https://docs.ai.neevcloud.com/)). The result is purpose-built high-density capacity, not a retrofit built for sub-20kW racks.
 
 * **GPU compute sized to the model,** not the spec sheet, on [NeevCloud GPU compute](/gpu-ai-service).
 * **Rack-scale capacity** for trillion-parameter and long-context serving that spills past a single node, via the [AI Supercluster](/ai-supercluster).

@@ -34,11 +34,11 @@ authorInfo:
 >
 > * **Cold start is the serverless tax.** Loading a large model onto a fresh GPU scales with model size and can cost tens of seconds on the first request.
 >
-> * **Reserved capacity buys predictable p99** and is where fine-tuned, LoRA-adapter, and custom-architecture models live.
+> * **Reserved capacity buys predictable p99** and is where fine-tuned, low-rank adaptation (LoRA) adapter, and custom-architecture models live.
 
 Picking a serving mode for large language model (LLM) inference is really one question: does your traffic arrive in bursts or in a steady stream? Serverless GPU inference and a dedicated endpoint both serve the same model and return the same tokens. What differs is how they bill and how they behave under load, and the wrong choice shows up as either a surprise invoice or a p99 latency your users feel. This guide models the cost-per-token crossover against your traffic curve, your latency service-level agreement (SLA), and scale-to-zero, so you choose on economics instead of a spec sheet.
 
-## The Real Question: Is Your Inference Traffic Bursty or Steady?
+## Is Your Inference Traffic Bursty or Steady?
 
 Before comparing modes, plot your requests per minute over a full week. Almost every workload lands in one of three shapes, and the shape decides the mode.
 
@@ -52,13 +52,13 @@ Feature lists make serverless and dedicated look like different products. Econom
 
 Serverless GPU inference bills per request or per token and scales the underlying GPU pool to zero when no one is calling, so you stop paying for idle silicon. The platform assigns a GPU when a request arrives, runs the model, and releases the capacity when traffic drains. The cost of that convenience is a per-token rate above raw GPU-hour math, plus a cold start the first time a model loads.
 
-Scale-to-zero is the whole appeal. In a Kubernetes-native setup it's standard autoscaler behavior: Knative scales a revision to zero replicas with no traffic, and a `min-scale` annotation is what you set to keep replicas warm instead ([Knative docs](https://knative.dev/docs/serving/autoscaling/scale-bounds/)). The provider carries the risk of keeping GPUs ready for your spikes, and the per-token price reflects it. For bursty traffic that markup is a bargain against paying a full GPU-hour to serve a few minutes of requests. For steady traffic the same markup compounds every hour and becomes the reason to leave.
+Scale-to-zero is the whole appeal. In a Kubernetes-native setup it's standard autoscaler behavior. The provider carries the risk of keeping GPUs ready for your spikes, and the per-token price reflects it. For bursty traffic that markup is a bargain against paying a full GPU-hour to serve a few minutes of requests. For steady traffic the same markup compounds every hour and becomes the reason to leave.
 
 ### The Cold-Start Tax: Loading a Large Model Takes Time
 
-Cold start is the first-request penalty when a serverless platform assigns a fresh GPU and has to load the model before it can answer. The dominant cost is loading weights. Research on serverless LLM serving traces the latency directly to the size of model checkpoints and the overhead of initializing GPU resources ([ServerlessLLM, arXiv:2411.15664](https://arxiv.org/abs/2411.15664)). The loading phase "scales linearly with model size" ([Tangram, arXiv:2512.01357](https://arxiv.org/abs/2512.01357)), so bigger models cost more cold-start time.
+Cold start is the first-request penalty when a serverless platform assigns a fresh GPU and has to load the model before it can answer. The dominant cost is loading weights. Research on serverless LLM serving traces the latency directly to the size of model checkpoints and the overhead of initializing GPU resources ([ServerlessLLM, arXiv:2411.15664](https://arxiv.org/abs/2411.15664)). The loading phase scales roughly linearly with model size ([Tangram, arXiv:2512.01357](https://arxiv.org/abs/2512.01357)), so bigger models cost more cold-start time.
 
-Put numbers on it from first principles. A 70-billion-parameter model at FP16 is 140GB of weights (70 billion times 2 bytes). Reading 140GB from local NVMe at a few gigabytes per second takes tens of seconds before the endpoint answers at all, which is why cold starts dominate serverless latency rather than per-token decode speed. Platforms fight it (ServerlessLLM's multi-tier checkpoint loading reports a 6 to 8 times reduction in startup times over existing methods, per [arXiv:2411.15664](https://arxiv.org/abs/2411.15664)), but the one guaranteed fix is to stop scaling to zero, keep a replica warm, and pay for the always-on GPU, which is dedicated economics wearing a serverless label.
+Put numbers on it from first principles. A 70-billion-parameter model at FP16 (16-bit floating point) is 140GB of weights (70 billion times 2 bytes). Reading 140GB from local NVMe (non-volatile memory express) storage at a few gigabytes per second takes tens of seconds before the endpoint answers at all, which is why cold starts dominate serverless latency rather than per-token decode speed. Platforms fight it (ServerlessLLM's multi-tier checkpoint loading reports a 6 to 8 times reduction in startup times over existing methods, per [arXiv:2411.15664](https://arxiv.org/abs/2411.15664)), but the one guaranteed fix is to stop scaling to zero, keep a replica warm, and pay for the always-on GPU, which is dedicated economics wearing a serverless label.
 
 ## When a Dedicated Endpoint Beats Serverless GPU Inference on Cost per Token
 
@@ -82,7 +82,7 @@ The pattern is the point. At 30 percent utilization the effective cost is more t
 
 ### Reserved Capacity Buys Predictable p99, Plus Fine-Tuned and LoRA Models
 
-Cost isn't the only axis. A dedicated endpoint runs on reserved GPUs, so there's no cold start after idle, no noisy-neighbor contention, and a p99 latency you can put in an SLA. Continuous batching keeps those GPUs busy, which is how a serving engine like vLLM reaches "state-of-the-art serving throughput" by managing attention key and value memory efficiently ([vLLM docs](https://docs.vllm.ai/en/latest/)).
+Cost isn't the only axis. A dedicated endpoint runs on reserved GPUs, so there's no cold start after idle, no noisy-neighbor contention, and a p99 latency you can put in an SLA.
 
 Reserved capacity is also where non-standard models live. Serverless catalogs expose a shared set of popular open models; a dedicated endpoint is where you serve a fine-tuned checkpoint, a LoRA adapter, or a custom architecture. If your model is large or long-context, the node-count math that sizes it is the same covered in [serving a 2.8T MoE model](/blog/kimi-k3-gpu-requirements-serving-a-2-8t-moe-model), and the per-GPU economics feed the crossover, as laid out in the [B300 inference specs](/blog/nvidia-b300-gpu-for-ai-inference-specs-and-pricing).
 
@@ -120,7 +120,7 @@ NeevCloud AI Inference exposes both modes under the same OpenAI-compatible Model
 * **[Serverless Inference](/serverless-inference)** is the pay-per-use mode for the spiky and baseline-plus-spikes curves. The docs describe production endpoints with automatic scaling, monitoring, load balancing, and infrastructure tuned for fast response times ([NeevCloud docs](https://docs.ai.neevcloud.com/)). It's the right default until your utilization is high enough to cross over.
 * **[Dedicated Inferencing](/dedicated-inferencing)** reserves capacity for steady, high-volume traffic and for fine-tuned, LoRA, or custom models that need an always-resident endpoint. For genuinely steady 24/7 load above the crossover, or for the largest and longest-context models where cold-start and node-count realities rule out scale-to-zero, this is where you move off serverless.
 
-The Model Playground offers interactive testing and quick validation ([NeevCloud docs](https://docs.ai.neevcloud.com/)) so you can measure a model before picking a mode. Exact per-token and hourly figures aren't quoted here because prices move; model the crossover with your own numbers and confirm rates on the pricing pages. To weigh the utilization math against total cost, the [TCO calculator](/tco-calculator) beats a spreadsheet.
+Exact per-token and hourly figures aren't quoted here because prices move; model the crossover with your own numbers and confirm rates on the pricing pages. To weigh the utilization math against total cost of ownership (TCO), the [TCO calculator](/tco-calculator) beats a spreadsheet.
 
 Start with the load curve, find the utilization where a reserved GPU's per-token cost drops below your serverless rate, and let that number choose the mode. [Talk to our team](/contact-neevcloud) to size an endpoint against your real traffic.
 

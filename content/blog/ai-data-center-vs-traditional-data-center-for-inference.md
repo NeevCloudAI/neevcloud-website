@@ -20,7 +20,7 @@ faqs:
   - question: "Can a traditional data center run AI inference?"
     answer: "It can run light inference on air-cooled racks, but modern accelerator racks draw far past what air cooling and legacy power distribution support. Serving large models economically needs direct-to-chip liquid cooling and a high-bandwidth GPU fabric most legacy sites lack."
   - question: "What rack power density do AI factories need?"
-    answer: "General-purpose racks average around 17kW, while a single NVIDIA GB200 NVL72 rack pulls 120 to 130kW. AI factories are designed for 100kW-plus densities, which forces mandatory liquid cooling rather than air."
+    answer: "AI factories are designed for 100kW-plus densities, which forces mandatory liquid cooling rather than air."
 authorInfo:
   name: "Radheshyam Dhakad"
   title: "Chief Technology Officer, NeevCloud"
@@ -45,7 +45,6 @@ A traditional data center houses servers, storage, and networking to run many wo
 | Primary purpose | Run many mixed workloads predictably | Serve models and produce tokens |
 | Unit you sell | Capacity: VM, container, or rack, by time | Token production inside a latency target |
 | Scored on | Uptime, latency SLOs, cost per VM or container, PUE | Time-to-train, tokens per second, inference cost per outcome, GPU idle time |
-| Average rack power | ~17kW | 120 to 130kW (GB200 NVL72) |
 | Cooling method | Air, adequate to ~20kW | Direct-to-chip liquid, required past ~20kW |
 | GPU network | North-south Ethernet, client to server | East-west NVLink and InfiniBand between GPUs |
 
@@ -55,7 +54,7 @@ Read down the columns and the pattern holds: each row where a traditional facili
 
 ### What Is an AI Factory Data Center?
 
-An AI factory is an integrated stack of hardware, software, and operational processes engineered to ingest and curate data, train and fine-tune models repeatedly, and serve them at scale ([Solidigm](https://www.solidigm.com/products/technology/ai-factory-vs-data-center.html)). A traditional data center, by contrast, is a general-purpose facility that houses servers, storage, and networking to run mixed workloads predictably ([Solidigm](https://www.solidigm.com/products/technology/ai-factory-vs-data-center.html)). The difference is the output. NVIDIA puts it plainly: in an AI factory, "intelligence isn't a byproduct but the primary one," measured by AI token throughput ([NVIDIA](https://blogs.nvidia.com/blog/ai-factory)). That output is getting more expensive to produce, too. Test-time reasoning, the long-thinking step behind modern agents, can consume up to 100x more compute than traditional inference ([NVIDIA](https://blogs.nvidia.com/blog/ai-factory)).
+The difference is the output. NVIDIA puts it plainly: in an AI factory, "intelligence isn't a byproduct but the primary one," measured by AI token throughput ([NVIDIA](https://blogs.nvidia.com/blog/ai-factory)). That output is getting more expensive to produce, too. Test-time reasoning, the long-thinking step behind modern agents, can consume up to 100x more compute than traditional inference ([NVIDIA](https://blogs.nvidia.com/blog/ai-factory)).
 
 ### Capacity Rental vs Token Output: The Business Model Flips
 
@@ -97,7 +96,7 @@ When the output is tokens, performance per watt becomes revenue per watt. Every 
 
 ### Worked Logic: Fewer Nodes, Lower Cost per Million Tokens
 
-The mechanism is node count. A larger, denser accelerator holds a big model's weights in fewer nodes, and fewer nodes means less cross-node interconnect and coordination overhead per token. Kimi K3, a 2.8T-parameter mixture-of-experts (MoE) model ([Hugging Face](https://huggingface.co/moonshotai/Kimi-K3)), is the clean example: on the memory math it spills across multiple B200 nodes but consolidates onto fewer, denser B300 nodes. Serving the same tokens on fewer nodes cuts cross-node overhead and lowers cost per million tokens. We ran the full sizing exercise in our [Kimi K3 GPU requirements guide](/blog/kimi-k3-gpu-requirements-serving-a-2-8t-moe-model), and a [TCO calculation](/tco-calculator) makes the trade concrete for a given model.
+The mechanism is node count. A larger, denser accelerator holds a big model's weights in fewer nodes, and fewer nodes means less cross-node interconnect and coordination overhead per token. Serving the same tokens on fewer nodes cuts cross-node overhead and lowers cost per million tokens. We ran the full sizing exercise in our [Kimi K3 GPU requirements guide](/blog/kimi-k3-gpu-requirements-serving-a-2-8t-moe-model), and a [TCO calculation](/tco-calculator) makes the trade concrete for a given model.
 
 ## Silicon to Endpoint: Owning the Full Inference Stack
 
@@ -105,7 +104,7 @@ Clearing all three walls at once, power, cooling, and fabric, plus the serving s
 
 ### Full-Stack Build vs Repurposed Legacy Capacity
 
-Group companies own the stack from the facility to the orchestration layer, which turns a density upgrade into an engineering decision rather than a vendor negotiation. RackBank Datacenters delivers the liquid-cooled, high-density facility and GPU capacity layer, and NeevCloud runs GPU compute and model serving on top of it. The clusters are configured specifically for machine learning workloads, and the production inference endpoints add automatic scaling, monitoring, and load balancing ([NeevCloud docs](https://docs.ai.neevcloud.com/)). The result is purpose-built high-density capacity, not a retrofit built for sub-20kW racks.
+Group companies own the stack from the facility to the orchestration layer, which turns a density upgrade into an engineering decision rather than a vendor negotiation. RackBank Datacenters delivers the liquid-cooled, high-density facility and GPU capacity layer, and NeevCloud runs GPU compute and model serving on top of it. The result is purpose-built high-density capacity, not a retrofit built for sub-20kW racks.
 
 * **GPU compute sized to the model,** not the spec sheet, on [NeevCloud GPU compute](/gpu-ai-service).
 * **Rack-scale capacity** for trillion-parameter and long-context serving that spills past a single node, via the [AI Supercluster](/ai-supercluster).

@@ -56,7 +56,7 @@ Scale-to-zero is the whole appeal. In a Kubernetes-native setup it's standard au
 
 ### The Cold-Start Tax: Loading a Large Model Takes Time
 
-Cold start is the first-request penalty when a serverless platform assigns a fresh GPU and has to load the model before it can answer. The dominant cost is loading weights. Research on serverless LLM serving traces the latency directly to the size of model checkpoints and the overhead of initializing GPU resources ([ServerlessLLM, arXiv:2411.15664](https://arxiv.org/abs/2411.15664)). The loading phase scales roughly linearly with model size ([Tangram, arXiv:2512.01357](https://arxiv.org/abs/2512.01357)), so bigger models cost more cold-start time.
+Cold start is the first-request penalty when a serverless platform assigns a fresh GPU and has to load the model before it can answer. The dominant cost is loading weights. The loading phase scales roughly linearly with model size ([Tangram, arXiv:2512.01357](https://arxiv.org/abs/2512.01357)), so bigger models cost more cold-start time.
 
 Put numbers on it from first principles. A 70-billion-parameter model at FP16 (16-bit floating point) is 140GB of weights (70 billion times 2 bytes). Reading 140GB from local NVMe (non-volatile memory express) storage at a few gigabytes per second takes tens of seconds before the endpoint answers at all, which is why cold starts dominate serverless latency rather than per-token decode speed. Platforms fight it (ServerlessLLM's multi-tier checkpoint loading reports a 6 to 8 times reduction in startup times over existing methods, per [arXiv:2411.15664](https://arxiv.org/abs/2411.15664)), but the one guaranteed fix is to stop scaling to zero, keep a replica warm, and pay for the always-on GPU, which is dedicated economics wearing a serverless label.
 
@@ -107,7 +107,7 @@ An overnight document-processing job that peaks during business hours and drops 
 
 ### Always-On Chatbot at Scale: Dedicated Wins on Cost per Token
 
-A production assistant serving a global user base holds steady, high utilization around the clock, which is where reserved capacity pays off. Above the crossover, the dedicated GPU's fixed hourly cost spreads across enough tokens to beat any per-token serverless rate, and continuous batching keeps it near full throughput. A reserved endpoint also delivers the predictable p99 a user-facing chat product needs, with no cold-start spikes when a conversation resumes after a lull.
+A production assistant serving a global user base holds steady, high utilization around the clock, which is where reserved capacity pays off. Above the crossover, the dedicated GPU's fixed hourly cost spreads across enough tokens to beat any per-token serverless rate. A reserved endpoint also delivers the predictable p99 a user-facing chat product needs, with no cold-start spikes when a conversation resumes after a lull.
 
 ### Many Small or Custom Models: Mix, or a Private Per-Token Endpoint
 

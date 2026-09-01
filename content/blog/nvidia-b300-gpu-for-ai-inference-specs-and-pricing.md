@@ -65,7 +65,7 @@ The B300 delivers 15 PFLOPS of dense NVFP4 compute against the standard Blackwel
 
 ### **The Power and Cooling Tax: 1,100 to 1,400W per GPU**
 
-The B300 draws up to 1,400W per chip in the GB300 NVL72 rack configuration and caps at about 1,100W in an air/liquid hybrid HGX B300 server ([barrack.ai](https://blog.barrack.ai/nvidia-b300-1400w-data-center-requirements/)). That is a real constraint, not a footnote. There is no air-cooled GB300 NVL72; direct-to-chip liquid cooling is a hard requirement, and a full rack pulls 132 to 140kW under normal operation ([barrack.ai](https://blog.barrack.ai/nvidia-b300-1400w-data-center-requirements/)). If you are buying B300 capacity in the cloud, this tax is already priced into the hourly rate and the reason self-hosting one is harder than it looks.
+The B300 draws up to 1,400W per chip in the GB300 NVL72 rack configuration and caps at about 1,100W in an air/liquid hybrid HGX B300 server ([barrack.ai](https://blog.barrack.ai/nvidia-b300-1400w-data-center-requirements/)). That is a real constraint, not a footnote. There is no air-cooled GB300 NVL72; direct-to-chip liquid cooling is a hard requirement, and a full rack pulls 132 to 140kW under normal operation ([barrack.ai](https://blog.barrack.ai/nvidia-b300-1400w-data-center-requirements/)). If you are buying B300 capacity in the cloud, this tax is already priced into the hourly rate and the reason self-hosting one is harder than it looks: a 132kW rack needs the [power density and liquid cooling of a purpose-built AI data center rather than a traditional one](/blog/ai-data-center-vs-traditional-data-center-for-inference).
 
 ## **B300 vs B200 vs H200: Throughput per Dollar**
 

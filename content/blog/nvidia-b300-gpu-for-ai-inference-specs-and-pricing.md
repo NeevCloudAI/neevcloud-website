@@ -124,7 +124,7 @@ Standing up B300 capacity in-house means sourcing scarce Blackwell Ultra silicon
 NeevCloud runs on-demand H200, B200, B300, and GB200-class nodes with the interconnect these models need, transparent usage-based pricing, and no egress traps. You provision the cluster; we own every layer from silicon to endpoint.
 
 * **Right-size the node:** Single 8x B300 for trillion-parameter and long-context serving, B200 or H200 when the model fits cheaper, provisioned in minutes on [NeevCloud GPU compute](https://docs.ai.neevcloud.com/).
-* **Skip self-hosting if you want:** Our [Model APIs and Playground](https://docs.ai.neevcloud.com/) run frontier open models on managed, pay-per-token endpoints, so you can test before you reserve a full node.
+* **Skip self-hosting if you want:** Our [Model APIs and Playground](https://docs.ai.neevcloud.com/) run frontier open models on managed, pay-per-token endpoints, so you can test before you reserve a full node; if you're weighing that against a dedicated B300 node, see [how to choose between serverless and dedicated GPU inference](/blog/serverless-vs-dedicated-inference-how-to-choose).
 * **Book ahead of the backlog:** Blackwell supply is tight through the first half of 2026, and the same shortage dynamics we covered in [managing the GPU shortage](/blog/how-can-we-manage-the-gpu-shortage-in-the-era-of-artificial-intelligence) make early reservations the difference between shipping and waiting.
 
 ## **Conclusion**

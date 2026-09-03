@@ -44,7 +44,7 @@ Every credible sandbox enforces four separations: **filesystem** (scoped storage
 
 ### Why Sandboxing Alone Doesn't Stop Prompt Injection
 
-Isolation is a blast-radius control, not a behavior control. An agent prompt-injected into reading a customer's private files can still read everything inside its own scope and hand it to the attacker; nothing left the boundary, so the sandbox sees nothing wrong. The [2026 OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026), built with input from more than 100 security experts, treats sandboxing as one of five control families, alongside per-agent identity and continuous behavioral monitoring.
+Isolation is a blast-radius control, not a behavior control. An agent prompt-injected into reading a customer's private files can still read everything inside its own scope and hand it to the attacker; nothing left the boundary, so the sandbox sees nothing wrong.
 
 ## Container, gVisor, or MicroVM: Isolation Technology as a Buying Criterion
 
@@ -55,7 +55,6 @@ Standard containers share the host kernel, so [a single kernel vulnerability can
 | Isolation technology | Kernel sharing | GPU access | Overhead |
 |---|---|---|---|
 | Standard container | Shares host kernel | Direct, no GPU isolation | Lowest |
-| gVisor | User-space kernel, syscalls intercepted | Via nvproxy, driver versions must match | ~10-30% on I/O-heavy loads |
 | Firecracker microVM | Own virtualized kernel | Not supported (excluded by design) | Low; ~125ms boot |
 | Kata + Cloud Hypervisor | Own virtualized kernel | VFIO passthrough, needs nested virtualization | Higher than Firecracker |
 

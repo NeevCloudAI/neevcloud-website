@@ -30,7 +30,11 @@ export default function RouteProgressBar() {
       if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)
         return;
       const anchor = (e.target as HTMLElement)?.closest("a");
-      if (!anchor || anchor.target === "_blank" || anchor.hasAttribute("download"))
+      if (
+        !anchor ||
+        anchor.target === "_blank" ||
+        anchor.hasAttribute("download")
+      )
         return;
 
       const url = new URL(anchor.href, window.location.href);
@@ -40,7 +44,11 @@ export default function RouteProgressBar() {
         // Same page: Next won't navigate, so usePathname's effect below
         // never re-fires. Scroll manually, unless the link targets a hash
         // (that scroll is its own job).
-        if (!url.hash) getScroller().scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+        if (!url.hash)
+          getScroller().scrollTo({
+            top: 0,
+            behavior: "instant" as ScrollBehavior,
+          });
         return;
       }
 

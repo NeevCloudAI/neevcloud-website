@@ -20,7 +20,7 @@ export const LEADERSHIP_TEAM: readonly LeadershipTeamMember[] = [
     name: "Radheshyam Dhakad",
     title: "Chief Technology Officer",
     description:
-      "As CTO, Radhe define's NeevCloud’s technology direction across sovereign cloud, GPU infrastructure, high-performance networking, and secure platform architecture. His leadership focuses on building scalable, resilient technology foundations for enterprise and AI workloads.",
+      "As CTO, Radhe defines NeevCloud’s technology direction across sovereign cloud, GPU infrastructure, high-performance networking, and secure platform architecture. His leadership focuses on building scalable, resilient technology foundations for enterprise and AI workloads.",
     image: "/images/webp/radheshyam-dhakad.webp",
     linkedinHref: EXTERNAL_LINKS.radheshyamDhakadLinkedin,
   },

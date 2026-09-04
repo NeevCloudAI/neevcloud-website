@@ -34,8 +34,8 @@ export const CPU_GENERAL_PURPOSE_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "2",
     ram: "2 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 739,
-    windowsPriceMonthly: 1139,
+    linuxPriceMonthly: 699,
+    windowsPriceMonthly: 1099,
   },
   {
     id: "nanoboost",
@@ -43,8 +43,8 @@ export const CPU_GENERAL_PURPOSE_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "2",
     ram: "4 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 939,
-    windowsPriceMonthly: 1339,
+    linuxPriceMonthly: 899,
+    windowsPriceMonthly: 1299,
   },
   {
     id: "stellarsurge",
@@ -52,8 +52,8 @@ export const CPU_GENERAL_PURPOSE_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "4",
     ram: "16 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 1900,
-    windowsPriceMonthly: 2700,
+    linuxPriceMonthly: 1860,
+    windowsPriceMonthly: 2660,
   },
   {
     id: "megafuse",
@@ -61,8 +61,8 @@ export const CPU_GENERAL_PURPOSE_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "4",
     ram: "8 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 1420,
-    windowsPriceMonthly: 2220,
+    linuxPriceMonthly: 1380,
+    windowsPriceMonthly: 2180,
   },
   {
     id: "velocityvortex",
@@ -70,8 +70,8 @@ export const CPU_GENERAL_PURPOSE_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "8",
     ram: "16 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 2700,
-    windowsPriceMonthly: 4300,
+    linuxPriceMonthly: 2660,
+    windowsPriceMonthly: 4260,
   },
 ] as const;
 
@@ -82,8 +82,8 @@ export const CPU_OPTIMIZED_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "16",
     ram: "32 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 5260,
-    windowsPriceMonthly: 8400,
+    linuxPriceMonthly: 5220,
+    windowsPriceMonthly: 8420,
   },
   {
     id: "nebulanucleus",
@@ -91,8 +91,8 @@ export const CPU_OPTIMIZED_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "32",
     ram: "64 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 10380,
-    windowsPriceMonthly: 16780,
+    linuxPriceMonthly: 10340,
+    windowsPriceMonthly: 16740,
   },
 ] as const;
 
@@ -103,8 +103,8 @@ export const CPU_MEMORY_OPTIMIZED_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "2",
     ram: "8 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 739,
-    windowsPriceMonthly: 1739,
+    linuxPriceMonthly: 1299,
+    windowsPriceMonthly: 1699,
   },
   {
     id: "turbonebula",
@@ -112,8 +112,8 @@ export const CPU_MEMORY_OPTIMIZED_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "2",
     ram: "32 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 939,
-    windowsPriceMonthly: 3600,
+    linuxPriceMonthly: 2820,
+    windowsPriceMonthly: 3620,
   },
   {
     id: "infinityignition",
@@ -121,8 +121,8 @@ export const CPU_MEMORY_OPTIMIZED_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "8",
     ram: "32 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 1900,
-    windowsPriceMonthly: 6260,
+    linuxPriceMonthly: 3620,
+    windowsPriceMonthly: 5220,
   },
   {
     id: "titanthunder",
@@ -130,8 +130,8 @@ export const CPU_MEMORY_OPTIMIZED_PRICING_ROWS: readonly CpuPricingRow[] = [
     vcpus: "16",
     ram: "64 GB",
     storage: "20 GB",
-    linuxPriceMonthly: 1420,
-    windowsPriceMonthly: 10380,
+    linuxPriceMonthly: 7140,
+    windowsPriceMonthly: 10340,
   },
 ] as const;
 

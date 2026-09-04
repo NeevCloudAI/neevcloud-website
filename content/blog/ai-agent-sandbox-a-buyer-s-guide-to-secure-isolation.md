@@ -32,74 +32,77 @@ authorInfo:
 > * Firecracker and Kata microVMs give each agent a dedicated guest kernel, the standard for untrusted, autonomous code execution.
 > * A sandbox alone doesn't stop prompt injection or goal hijacking; it only limits what a compromised agent can reach once it has a foothold.
 
-An AI agent that writes and runs its own code, calls arbitrary tools and decides its next step is a different security problem than a chatbot that only returns text. Choosing an AI agent sandbox means picking how much of that autonomy to isolate, and at what cost to speed and GPU access. This is a buying checklist, not a tutorial on one SDK.
+An AI agent that writes and runs its own code, calls arbitrary tools, and decides its next step is a different security problem than a chatbot that only returns text. Choosing an AI agent sandbox means picking how much of that autonomy to isolate, at what cost to speed and GPU access. This is a buying checklist, not a tutorial on one SDK.
 
 ## What an AI Agent Sandbox Actually Isolates (and What It Doesn't)
 
-An AI agent sandbox isolates the compute an agent uses to execute code and call tools, typically a filesystem, process space, and network path scoped to one agent or task, separate from the host and other agents' sandboxes. It limits the blast radius if an agent runs malicious or buggy code. It does not decide what the agent chooses to run.
+An AI agent sandbox isolates the compute an agent uses to execute code and call tools: a filesystem, process space, and network path scoped to one agent, separate from the host and other agents' sandboxes. It limits the blast radius of malicious or buggy code; it doesn't decide what the agent chooses to run.
 
-### The threat model: untrusted code, tool calls, and credential blast radius
+### The Threat Model: Untrusted Code, Tool Calls, and Credential Blast Radius
 
-A framework like LangGraph, CrewAI or the Claude Agent SDK can generate shell commands or invoke a code interpreter on the fly, unreviewed. OWASP's Top 10 for Agentic Applications, published December 2025 and peer-reviewed by more than 100 security researchers, names this "Unexpected Code Execution" as risk ASI05: agents executing generated code unsafely through shell commands or eval statements, opening a path to remote code execution ([OWASP Gen AI Security Project](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/)). As the report puts it: "Once AI began taking actions, the nature of security changed forever." If that code shares the orchestrator's credentials, one bad tool call becomes a much larger breach.
+Agent frameworks like LangGraph, CrewAI, or the Claude Agent SDK can generate shell commands or invoke a code interpreter unreviewed, exactly what OWASP's Top 10 for Agentic Applications calls "Unexpected Code Execution," risk ASI05, in its December 2025 release ([OWASP Gen AI Security Project](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/)). As the report puts it: "Once AI began taking actions, the nature of security changed forever." Share the orchestrator's own credentials with that code, and one bad tool call becomes a much larger breach.
 
-### What a sandbox does not solve on its own (prompt injection, goal hijacking)
+### What a Sandbox Does Not Solve on Its Own (Prompt Injection, Goal Hijacking)
 
-Isolation controls what an agent can reach once compromised, not whether it gets compromised. Prompt injection, where untrusted content in a document or tool result rewrites the agent's instructions, and goal hijacking, where an attacker steers a multi-step plan toward its own ends, both happen before any code reaches the sandbox. Sandboxing is the last line of defense, not the first.
+Isolation controls what an agent can reach once compromised, not whether it gets compromised. Prompt injection (content that rewrites the agent's instructions) and goal hijacking (an attacker steering a multi-step plan) both happen before any code reaches the sandbox. A sandbox is the last line of defense, not the first.
 
 ## Container, gVisor, or MicroVM: Isolation Technology as a Buying Criterion
 
-The three mainstream options are standard Linux containers, gVisor's user-space kernel, and Firecracker- or Kata-style microVMs. Each trades startup speed and I/O throughput for a stronger boundary against the host kernel, and picking one is the hardest part of the evaluation to change later.
+Standard Linux containers, gVisor's user-space kernel, and Firecracker- or Kata-style microVMs each trade startup speed and I/O throughput for a stronger boundary against the host kernel. Picking one is the hardest choice to reverse later.
 
-### Standard containers: fast, shared kernel, wrong for untrusted code
+### Standard Containers: Fast, Shared Kernel, Wrong for Untrusted Code
 
-Standard containers (Docker, runc) share the host kernel with every other container on the box. That shared kernel is also the attack surface: a container escape gives an attacker roughly the access a host-level exploit would. Containers suit reviewed code your team controls, not code an agent wrote a moment ago.
+Standard containers (Docker, runc) share the host kernel with every other container on the box, so a container escape gives an attacker roughly the access a host-level exploit would. Containers suit reviewed code your team controls, not code an agent wrote a moment ago.
 
-### gVisor: a user-space kernel between the agent and the host
+### gVisor: A User-Space Kernel Between the Agent and the Host
 
-gVisor intercepts a sandboxed process's system calls and handles them itself inside a user-space kernel, so the sandboxed code never talks to the real host kernel directly ([gVisor architecture guide](https://gvisor.dev/docs/architecture_guide/performance/)). That interception is the security win and the performance cost of the same mechanism: its own performance guide notes small, syscall-heavy operations carry the largest relative overhead versus native runc.
+gVisor intercepts a sandboxed process's system calls inside a user-space kernel, so the code never talks to the host kernel directly ([gVisor architecture guide](https://gvisor.dev/docs/architecture_guide/performance/)). That interception is both the win and the cost: its performance guide notes small, syscall-heavy operations carry the largest relative overhead versus native runc.
 
-### Firecracker and Kata microVMs: a dedicated kernel per agent
+### Firecracker and Kata MicroVMs: A Dedicated Kernel Per Agent
 
-Firecracker, the open-source microVM technology AWS built for Lambda and Fargate, gives every sandbox its own guest kernel instead of sharing the host's, with a minimal device model that shrinks the attack surface. AWS's own figures put a Firecracker microVM's boot time under 125 milliseconds with less than 5 MiB of memory overhead per microVM on an i3.metal instance, launching up to 150 microVMs per second on a single host ([AWS Open Source Blog](https://aws.amazon.com/blogs/opensource/firecracker-open-source-secure-fast-microvm-serverless/)). Kata Containers applies the same idea behind a Kubernetes-native pod interface.
+Firecracker, AWS's open-source microVM technology for Lambda and Fargate, gives every sandbox its own guest kernel with a minimal device model that shrinks attack surface: boot time under 125 milliseconds, with less than 5 MiB of memory overhead per microVM on an i3.metal instance ([AWS Open Source Blog](https://aws.amazon.com/blogs/opensource/firecracker-open-source-secure-fast-microvm-serverless/)). Kata Containers applies the same idea behind a Kubernetes-native pod interface.
 
 | Isolation | Kernel exposure | Startup | Best fit |
 |---|---|---|---|
-| Standard container (runc) | Shared host kernel | Milliseconds | Reviewed, trusted code only |
-| gVisor (runsc) | User-space kernel intercepts syscalls | Fast; syscall-heavy I/O adds overhead | Semi-trusted code, moderate risk tolerance |
-| Firecracker / Kata microVM | Dedicated guest kernel per sandbox | Under 125ms per microVM (Firecracker) | Untrusted, autonomous agent code execution |
+| Standard container (runc) | Shared host kernel | Milliseconds | Reviewed, trusted code |
+| gVisor (runsc) | User-space kernel intercepts syscalls | Fast; syscall-heavy I/O adds overhead | Semi-trusted code |
+| Firecracker / Kata microVM | Dedicated guest kernel per sandbox | Under 125ms per microVM (Firecracker) | Untrusted, autonomous code |
 
 Sources: [AWS Firecracker](https://aws.amazon.com/blogs/opensource/firecracker-open-source-secure-fast-microvm-serverless/), [gVisor](https://gvisor.dev/docs/architecture_guide/performance/)
-
-Match the row to the code path each agent takes, not the most conservative default.
 
 ## The AI Agent Sandbox Security Checklist: GPU Access, Tool Policy, Audit Trail, Teardown
 
 Once isolation technology is settled, four operational questions decide whether a sandbox is deployable: how the agent reaches a GPU, what it can call, what gets logged, and whether teardown provably cleans up.
 
-### GPU access: inside the sandbox or via a separate inference endpoint?
+### GPU Access: Inside the Sandbox or Via a Separate Inference Endpoint?
 
-Most agent sandboxes are CPU, memory, and disk compute; the GPU work an agent triggers, inference, image generation, embedding, usually runs on a separate endpoint the sandbox calls over the network. Ask a vendor whether "GPU access" means a passthrough device inside the sandbox or a call to a dedicated endpoint elsewhere, since the answer changes your isolation boundary and cost model.
+Most agent sandboxes are CPU, memory, and disk compute; GPU work usually runs on a separate endpoint called over the network. Ask whether "GPU access" means a passthrough device inside the sandbox or a call to a dedicated endpoint; the answer changes your isolation boundary and cost model.
 
-### Tool and network policy: what the agent is allowed to call
+### Tool and Network Policy: What the Agent Is Allowed to Call
 
-A sandbox with unrestricted egress lets a compromised agent exfiltrate data as easily as it calls your own API. Ask for an explicit allowlist: which domains, tools, and internal services a sandbox can reach, and whether that policy is enforced at the network layer or only trusted to the agent framework's own guardrails.
+Unrestricted egress lets a compromised agent exfiltrate data as easily as it calls your own API. Ask for an explicit allowlist of domains, tools, and internal services, and whether that policy is enforced at the network layer or only trusted to the agent framework's own guardrails.
 
-### Audit trail: what gets logged and for how long
+### Audit Trail: What Gets Logged and for How Long
 
-Every tool call, file write and network request an agent makes should be attributable to a specific run, with retention long enough for an incident review weeks later, not just a live debugging console. Ask what's captured, shell history, tool invocations, network destinations, and how long it's kept before rotation.
+Every tool call, file write, and network request should be attributable to a specific run, with retention long enough for an incident review weeks later, not just live debugging. Ask what's captured, and how long it's kept before rotation.
 
-### Teardown guarantees: pause, snapshot, and provable cleanup
+### Teardown Guarantees: Pause, Snapshot, and Provable Cleanup
 
-A sandbox that "shuts down" isn't the same as one that provably stops billing, revokes credentials and leaves a reviewable snapshot behind. Look for pause and resume with state intact, filesystem snapshots for rollback, and a clear answer on what happens to disk and memory contents once a sandbox is torn down.
+A sandbox that "shuts down" isn't the same as one that provably stops billing, revokes credentials, and leaves a reviewable snapshot behind. Look for pause and resume with state intact, filesystem snapshots for rollback, and a clear answer on what happens to disk and memory once torn down.
 
 ## When You Need a Sandbox vs When You Don't
 
-An agent that only reads from a fixed, reviewed toolset and never executes generated code may not need microVM-grade isolation; a well-scoped container with tight egress is proportionate. The calculus changes the moment an agent can write and run its own code, install a package at runtime, or execute anything from an untrusted document, the exact scenario OWASP's ASI05 describes.
+Match the isolation tier to the workload, not to the most conservative default:
+
+* **Fixed-toolset retrieval agent.** Reading only from a reviewed vector store or fixed read-only APIs, never executing generated code: a container with tight egress, not a microVM.
+* **Code-generation assistant running tests.** A single-tenant, low-concurrency agent running pytest or a linter against its own code: gVisor as a middle tier.
+* **Autonomous agent installing packages at runtime.** Model-generated shell commands or runtime dependency installs, the ASI05 pattern OWASP describes: a dedicated-kernel microVM regardless of how trusted the framework feels.
+* **Multi-tenant platform, concurrent sessions.** Mixed-trust users on shared hardware: microVM isolation plus per-tenant teardown guarantees, not just per-agent ones.
 
 ## Where Agentic Studio Fits a Governed-Execution Checklist
 
-NeevCloud's Agentic Studio and its Agent Sandbox answer several rows directly. Each agent gets its own sandbox with its own filesystem, memory, and process space, a fresh one live in seconds through the API or the Agentic Studio UI, with pause and resume plus filesystem snapshots for rollback, a direct answer to the teardown-guarantee question above ([NeevCloud Agent Sandbox](https://blog.neevcloud.com/neevcloud-agent-sandbox-giving-ai-agents-a-secure-place-to-execute-code)). Multi-agent workloads can assign separate sandboxes to planning, execution, validation, and reporting steps.
+NeevCloud's Agentic Studio and its Agent Sandbox answer several rows directly. We give each agent its own sandbox, with its own filesystem, memory, and process space, live in seconds through the API or the UI ([NeevCloud Agent Sandbox](https://blog.neevcloud.com/neevcloud-agent-sandbox-giving-ai-agents-a-secure-place-to-execute-code)). Pause and resume with state intact, plus filesystem snapshots for rollback, answer the teardown question directly; multi-agent pipelines get per-agent compute per step.
 
-Two rows need a direct question rather than an assumption from marketing copy. NeevCloud's own documentation describes sandboxes as CPU, memory, and disk compute; GPU-powered inference calls a separately configured dedicated endpoint through [Model APIs](/model-api) or [Serverless Inference](/serverless-inference) rather than reaching a GPU inside the sandbox ([NeevCloud docs](https://docs.ai.neevcloud.com/)). Public materials also don't spell out audit-log retention windows or a tool-permission allowlist model in the detail this checklist demands, so confirm those specifics before a regulated workload.
+Two rows deserve a direct question rather than an assumption from marketing copy. Public material doesn't fully specify whether GPU-heavy tool calls reach a passthrough device inside the sandbox or a separately configured endpoint through [Model APIs](/model-api) or [Serverless Inference](/serverless-inference); ask before assuming either. Audit-log retention windows and a tool-permission allowlist model aren't published in this depth either, so confirm both before a regulated workload; a trust center page is a fast check on retention and certifications ([NeevCloud's Trust Center](/trust-center)).
 
-Run this checklist against [Agentic Studio](/agentic-studio) and any other sandbox on your shortlist, then [talk to NeevCloud's team](/contact-neevcloud) about the tool policy and audit requirements your workload needs.
+Run this checklist against [Agentic Studio](/agentic-studio) and any other sandbox on your shortlist, then [talk to our team](/contact-neevcloud) about the tool policy and audit requirements your workload needs.

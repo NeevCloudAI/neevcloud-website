@@ -1,3 +1,3 @@
-category,low_kw,high_kw
-Traditional enterprise rack,5,15
-GB200 NVL72 AI factory rack,120,140
+category,multiplier
+GPU TDP (Hopper to Blackwell),1.75
+Rack power density (NVLink domain scaled to 72 GPUs),3.4

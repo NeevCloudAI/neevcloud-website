@@ -1,0 +1,5 @@
+facility_class,value_kw,range_label,source
+Legacy enterprise DC,15,10-15 kW,techplustrends.com
+H100-generation AI rack,45,35-45 kW,techplustrends.com
+Industry average 2025-2026,27,16-27 kW,AFCOM via Upsite
+RackBank Varuna immersion rack,150,150 kW+,RackBank

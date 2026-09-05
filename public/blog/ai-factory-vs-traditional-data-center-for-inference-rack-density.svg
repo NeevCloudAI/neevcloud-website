@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<title>Rack power density by facility class, in kilowatts per rack</title>
+<rect x="0" y="0" width="1000" height="560" fill="#000000"/>
+<text x="260" y="36" font-family="Poppins, Arial, sans-serif" font-size="22" font-weight="700" fill="#EAF4F4">Rack power density: legacy vs AI facility classes</text>
+<text x="260" y="58" font-family="Poppins, Arial, sans-serif" font-size="14" fill="#BEC9CC">Power draw per rack, in kilowatts (kW)</text>
+<line x1="260.0" y1="70" x2="260.0" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="260.0" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">0</text>
+<line x1="341.2" y1="70" x2="341.2" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="341.2" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">20</text>
+<line x1="422.5" y1="70" x2="422.5" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="422.5" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">40</text>
+<line x1="503.8" y1="70" x2="503.8" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="503.8" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">60</text>
+<line x1="585.0" y1="70" x2="585.0" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="585.0" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">80</text>
+<line x1="666.2" y1="70" x2="666.2" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="666.2" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">100</text>
+<line x1="747.5" y1="70" x2="747.5" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="747.5" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">120</text>
+<line x1="828.8" y1="70" x2="828.8" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="828.8" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">140</text>
+<line x1="910.0" y1="70" x2="910.0" y2="490" stroke="#222222" stroke-width="1"/>
+<text x="910.0" y="514" font-family="Poppins, Arial, sans-serif" font-size="12" fill="#BEC9CC" text-anchor="middle">160</text>
+<text x="585.0" y="544" font-family="Poppins, Arial, sans-serif" font-size="13" fill="#BEC9CC" text-anchor="middle">kW per rack</text>
+<rect x="260.0" y="109.2" width="60.9" height="56" fill="#005150" rx="3"/>
+<text x="244" y="142.2" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#EAF4F4" text-anchor="end">Legacy enterprise DC</text>
+<text x="332.9" y="142.2" font-family="Poppins, Arial, sans-serif" font-size="15" font-weight="700" fill="#EAF4F4">10-15 kW</text>
+<rect x="260.0" y="204.4" width="182.8" height="56" fill="#00A78B" rx="3"/>
+<text x="244" y="237.4" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#EAF4F4" text-anchor="end">H100-generation AI rack</text>
+<text x="454.8" y="237.4" font-family="Poppins, Arial, sans-serif" font-size="15" font-weight="700" fill="#EAF4F4">35-45 kW</text>
+<rect x="260.0" y="299.6" width="109.7" height="56" fill="#6E7C83" rx="3"/>
+<text x="244" y="332.6" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#EAF4F4" text-anchor="end">Industry average 2025-2026</text>
+<text x="381.7" y="332.6" font-family="Poppins, Arial, sans-serif" font-size="15" font-weight="700" fill="#EAF4F4">16-27 kW</text>
+<rect x="260.0" y="394.8" width="609.4" height="56" fill="#59D8A7" rx="3"/>
+<text x="244" y="427.8" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#EAF4F4" text-anchor="end">RackBank Varuna immersion rack</text>
+<text x="881.4" y="427.8" font-family="Poppins, Arial, sans-serif" font-size="15" font-weight="700" fill="#EAF4F4">150 kW+</text>
+</svg>

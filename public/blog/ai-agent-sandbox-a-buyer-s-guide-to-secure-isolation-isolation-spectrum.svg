@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="Poppins, Arial, sans-serif">
+  <title>The agent sandbox isolation spectrum: shared-kernel containers, gVisor's user-space kernel, and Firecracker or Kata microVMs, ordered from thinnest to strongest boundary</title>
+  <rect x="0" y="0" width="1200" height="500" fill="#000000"/>
+
+  <!-- Axis line -->
+  <line x1="100" y1="440" x2="1100" y2="440" stroke="#515F66" stroke-width="2"/>
+  <text x="100" y="470" fill="#A0ADB2" font-size="18">Thinner boundary</text>
+  <text x="900" y="470" fill="#A0ADB2" font-size="18">Stronger boundary</text>
+
+  <!-- Container box -->
+  <rect x="120" y="220" width="260" height="140" rx="8" fill="none" stroke="#6E7C83" stroke-width="2"/>
+  <text x="250" y="200" fill="#EAF4F4" font-size="20" font-weight="600" text-anchor="middle">Shared-kernel container</text>
+  <text x="250" y="280" fill="#BEC9CC" font-size="16" text-anchor="middle">Docker / OCI</text>
+  <text x="250" y="305" fill="#BEC9CC" font-size="16" text-anchor="middle">Shares host kernel</text>
+  <text x="250" y="330" fill="#59D8A7" font-size="15" text-anchor="middle">Fastest start</text>
+
+  <!-- gVisor box -->
+  <rect x="470" y="190" width="260" height="170" rx="8" fill="none" stroke="#00A78B" stroke-width="2.5"/>
+  <text x="600" y="170" fill="#EAF4F4" font-size="20" font-weight="600" text-anchor="middle">gVisor (runsc)</text>
+  <text x="600" y="250" fill="#BEC9CC" font-size="16" text-anchor="middle">Sentry: user-space</text>
+  <text x="600" y="275" fill="#BEC9CC" font-size="16" text-anchor="middle">kernel intercepts syscalls</text>
+  <text x="600" y="300" fill="#BEC9CC" font-size="16" text-anchor="middle">Gofer mediates filesystem</text>
+  <text x="600" y="335" fill="#59D8A7" font-size="15" text-anchor="middle">Container-like ergonomics</text>
+
+  <!-- microVM box -->
+  <rect x="820" y="160" width="260" height="200" rx="8" fill="none" stroke="#59D8A7" stroke-width="3"/>
+  <text x="950" y="140" fill="#EAF4F4" font-size="20" font-weight="600" text-anchor="middle">Firecracker / Kata microVM</text>
+  <text x="950" y="230" fill="#BEC9CC" font-size="16" text-anchor="middle">Hardware VT-x/VT-d</text>
+  <text x="950" y="255" fill="#BEC9CC" font-size="16" text-anchor="middle">virtualization boundary</text>
+  <text x="950" y="280" fill="#BEC9CC" font-size="16" text-anchor="middle">Dedicated guest kernel</text>
+  <text x="950" y="305" fill="#BEC9CC" font-size="16" text-anchor="middle">per sandbox</text>
+  <text x="950" y="335" fill="#59D8A7" font-size="15" text-anchor="middle">Strongest isolation</text>
+
+  <!-- Arrow -->
+  <line x1="100" y1="410" x2="1100" y2="410" stroke="#59D8A7" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#59D8A7"/>
+    </marker>
+  </defs>
+</svg>

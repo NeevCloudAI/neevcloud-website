@@ -55,7 +55,7 @@ That jump to NVLink 5 (NVIDIA's proprietary GPU-to-GPU interconnect), twice H100
 
 FP8 was Hopper's ceiling, with no FP4 datapath to fall back to. B200 adds native FP4 and FP6 Tensor Core support on a second-generation Transformer Engine, a format H100 cannot run in hardware ([Civo](https://www.civo.com/blog/comparing-nvidia-b200-and-h100)). Using the dense FP8 figures in the table above, 1,979 TFLOPS on H100 against roughly 4,500 TFLOPS on B200, that works out to close to a 2.3x jump in per-GPU throughput between the two architectures, with sparse FP4 reaching up to 18 PFLOPS on B200, a datapath Hopper has no equivalent to at all ([Civo](https://www.civo.com/blog/comparing-nvidia-b200-and-h100)).
 
-NVIDIA states the GB200 NVL72 delivers "30x faster real-time LLM inference performance for trillion-parameter language models" against an equivalent H100 InfiniBand-scaled cluster, measured at a 32,768-input, 1,024-output token profile ([NVIDIA](https://www.nvidia.com/en-us/data-center/gb200-nvl72/)). Treat that as a ceiling tied to one workload shape, not a multiplier that transfers to a single B200 card.
+NVIDIA states the GB200 NVL72 delivers "30x faster real-time LLM inference performance for trillion-parameter language models" ([NVIDIA](https://www.nvidia.com/en-us/data-center/gb200-nvl72/)). Treat that as a ceiling tied to one workload shape, not a multiplier that transfers to a single B200 card.
 
 ## B200 vs H100 TCO: Cost-Per-Token Beats the Sticker Price
 

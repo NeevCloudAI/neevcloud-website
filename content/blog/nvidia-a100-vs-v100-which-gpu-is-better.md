@@ -146,7 +146,7 @@ The A100 GPU has enjoyed widespread adoption since its release, powering AI infr
 
 * **Upgrade Path to H100 and H200**:
 
-    * The H100 and H200 GPUs offer significant performance gains, but their high cost and [availability constraints](/blog/how-can-we-manage-the-gpu-shortage-in-the-era-of-artificial-intelligence) may make them impractical for many organizations in the short term. Companies can continue leveraging A100 infrastructure while planning phased upgrades to **HGX H100** or **HGX H200** platforms as prices stabilize.
+    * The H100 and H200 GPUs offer significant performance gains, but their high cost and [availability constraints](/blog/how-can-we-manage-the-gpu-shortage-in-the-era-of-artificial-intelligence) may make them impractical for many organizations in the short term. Companies can continue leveraging A100 infrastructure while planning phased upgrades to **HGX H100** or **HGX H200** platforms as prices stabilize. When that upgrade finally happens, the next fork in the road is whether to land on H100 or jump straight to Blackwell's B200, a decision we break down in [B200 vs H100: Choosing a GPU Generation for AI Workloads](/blog/b200-vs-h100-choosing-a-gpu-generation-for-ai-workloads).
 
 * **AI and Cloud Trends**:
 

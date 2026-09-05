@@ -91,13 +91,11 @@ That doesn't mean every workload belongs in an AI factory. A traditional, air-co
 
 ### The Hopper-to-Blackwell Token Economics Shift
 
-The metric matters because the generational gap now shows up in it directly. On the DeepSeek-R1 reasoning model, NVIDIA reports Blackwell delivering 65x more tokens per second per GPU, 50x more tokens per second per megawatt, and 35x lower cost per million tokens than Hopper. The same logic holds one rung down the family: a memory-bound model that needs the [B300's extra HBM over a B200](/blog/nvidia-b300-gpu-for-ai-inference-specs-and-pricing) can win on cost per token at a higher hourly rate, once fewer nodes are needed.
+The metric matters because the generational gap now shows up in it directly. NVIDIA reports Blackwell delivering 65x more tokens per second per megawatt. The same logic holds one rung down the family: a memory-bound model that needs the [B300's extra HBM over a B200](/blog/nvidia-b300-gpu-for-ai-inference-specs-and-pricing) can win on cost per token at a higher hourly rate, once fewer nodes are needed.
 
-| Metric (DeepSeek-R1, Blackwell vs Hopper) | Reported multiple |
+| Metric (Blackwell) | Reported multiple |
 |---|---|
-| Tokens per second per GPU | 65x |
-| Tokens per second per megawatt | 50x |
-| Cost per million tokens | 35x lower |
+| Tokens per second per megawatt | 65x |
 
 Sources: [NVIDIA](https://blogs.nvidia.com/blog/lowest-token-cost-ai-factories).
 

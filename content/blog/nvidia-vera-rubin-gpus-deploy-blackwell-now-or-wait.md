@@ -35,17 +35,17 @@ If you're holding a Blackwell purchase order and NVIDIA just announced its next-
 
 ## NVIDIA's Next-Generation GPU Roadmap 2026: Where Vera Rubin Fits Between Blackwell and Rubin Ultra
 
-NVIDIA now ships a new architecture roughly once a year: Blackwell in 2025, Rubin in the second half of 2026, Rubin Ultra in the second half of 2027, and Feynman slated for 2028 ([Tom's Hardware](https://www.tomshardware.com/pc-components/gpus/nvidia-announces-rubin-gpus-in-2026-rubin-ultra-in-2027-feynam-after)). Vera Rubin pairs the Rubin GPU with NVIDIA's Vera CPU, sitting between the Blackwell fleet most buyers run today and what NVIDIA has already confirmed comes next.
+Vera Rubin pairs the Rubin GPU with NVIDIA's Vera CPU, sitting between the Blackwell fleet most buyers run today and what NVIDIA has already confirmed comes next.
 
 Allocation, not architecture, decides who deploys next. NVIDIA's Chief Financial Officer (CFO) Colette Kress disclosed roughly $500 billion in combined Blackwell and Rubin bookings visibility through 2026 ([InvestingLive](https://investinglive.com/stocks/nvidia-sees-500bn-chip-pipeline-through-2026-but-china-sales-hit-by-geopolitics-20251119/)). By GTC (GPU Technology Conference) 2026, Jensen Huang raised that to roughly $1 trillion in orders through 2027 ([The Motley Fool](https://www.fool.com/investing/2026/04/10/nvda-jensen-huang-1-trillion-sales-only-half-story/)).
 
 ### What "Full Production" Actually Means for Availability
 
-"Full production" is a manufacturing milestone, not a purchase order. NVIDIA announced Vera Rubin's ramp into full production at GTC Taipei on May 31, 2026, with shipments beginning this fall ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory)). No date for broad enterprise availability has been published.
+"Full production" is a manufacturing milestone, not a purchase order. Vera Rubin shipments are set to begin this fall ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory)). No date for broad enterprise availability has been published.
 
 ### Who Gets Rubin First: A Partner List That Isn't a Buying Queue
 
-NVIDIA names partners by technology, not shipment priority. CoreWeave, Lambda, and Oracle Cloud Infrastructure are "among the first ecosystem partners and adopters" of the Spectrum-X Ethernet photonics shipping with Rubin ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory)). A longer list, including Microsoft Azure and Nebius, is adopting NVIDIA Confidential Computing on Rubin. Neither list states who gets GPU allocation first.
+NVIDIA names partners by technology, not shipment priority. CoreWeave, Lambda, and Oracle Cloud Infrastructure are "among the first ecosystem partners and adopters" of the Spectrum-X Ethernet photonics shipping with Rubin ([NVIDIA Newsroom](https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory)). A longer list, including Microsoft Azure and Nebius, is adopting NVIDIA Confidential Computing. Neither list states who gets GPU allocation first.
 
 ### The Blackwell Precedent: Sold Out in Weeks, Enterprise Bought Last
 
